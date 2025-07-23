@@ -1,6 +1,6 @@
 from docling.document_converter import DocumentConverter
 
-source = "C:/PF/Projects/Hackrx-backend/ICIHLIP22012V012223.pdf"  # document per local path or URL
+source = "Test_pdfs\\BAJHLIP23020V012223.pdf"  # document per local path or URL
 converter = DocumentConverter()
 result = converter.convert(source)
 markdown_content = result.document.export_to_markdown()

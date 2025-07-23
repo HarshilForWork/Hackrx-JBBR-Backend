@@ -1,0 +1,3460 @@
+--- Page 1 ---
+
+Shri Vile Parle Kelavani Mandal’s
+Dwarkadas J. Sanghvi College of Engineering
+(Autonomous College Affiliated to the University of Mumbai)
+Scheme and detailed syllabus (DJS23)
+First Year B.Tech
+Common For All Programs
+(Semester I and II)
+Revision: 3 (2023)
+With effect from the Academic Year: 2023-2024
+1st September 2023
+
+--- Page 2 ---
+
+Proposed scheme for First Year B.Tech Program (All Programs) : Semester I
+(Academic Year 2023-2024)
+Teaching Scheme (hrs.) Continuous Assessment Semester End Assessment (B) (marks)
+Total
+Sr. Course Code Course Total Time Total (A+B)
+Th P T Credits Th T/W Th / Cb O P O & P Credits
+CA (A) (hrs.) SEA (B)
+Compulsory courses offered to all the Programs
+DJS23FCBS101 Mathematics - I 3 -- -- 3 40 -- 40 2 60 -- -- -- 60 100
+1 4
+DJS23FTBS101 Mathematics - I Tutorial -- -- 1 1 -- 25 25 -- -- -- -- -- -- 25
+DJS23FCES101 Structured Programming using C 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+2 3
+DJS23FLES101 Structured Programming using C Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- 25 25 50
+Total 5 2 1 7 80 50 130 4 120 0 0 25 145 275 7
+Courses offered in Group A
+DJS23FCBS102 Physics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+1 4
+DJS23FLBS102 Physics Laboratory & Tutorial -- 2 1 2 -- 50 50 -- -- -- -- -- -- 50
+DJS23FCES102 Computational Engineering Mechanics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+2 3
+DJS23FLES102 Computational Engineering Mechanics Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25
+DJS23FCES103 Basic Electrical Engineering & Digital Electronics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+3 4
+DJS23FLES103 Basic Electrical Engineering & Digital Electronics Labo--ratory & T2utorial 1 2 -- 50 50 -- -- -- -- -- -- 50
+4 DJS23FTLL101 Liberal Learning -- -- 2 2 -- 25 25 -- 25 -- -- 25 50 2
+Total 6 6 4 13 120 150 270 6 180 25 0 0 205 475 13
+Courses offered in Group B
+DJS23FCBS103 Chemistry 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+1 4
+DJS23FLBS103 Chemistry Laboratory & Tutorial -- 2 1 2 -- 50 50 -- -- -- -- -- -- 50
+DJS23FCES104* Engineering Graphics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+2 3
+DJS23FLES104 Engineering Graphics Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25
+DJS23FCHS101 Effective Communication Skills 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+3 3
+DJS23FLHS101 Effective Communication Skills Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25
+4 DJS23FLVS101 Workshop Practices -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25 1
+5 DJS23FTHS102 Indian Knowledge System -- -- 2 2 -- 25 25 -- -- 25 -- -- 25 50 2
+Total 6 8 3 13 120 150 270 6 180 25 0 0 205 475 13
+Learners will be offered compulsory courses and courses in either Group A or Group B.
+* Computer based assessment in the college premises only.
+Course Code Course Category Sem I Sem II Total
+DJS23FCBS1xx Basic Science Courses 8 8 16
+DJS23FCES1xx Engineering Science Courses 10 6 16
+DJS23FTLL1xx Liberal Learning Courses 2 0 2
+DJS23FCHS1xx Humanities Social Science and Management 0 5 5
+DJS23FLVS1xx Vocational and Skill Enhancement Courses 1 0 1
+DJS23FCPC2xx Program Core Courses () 0 2 2
+Total credits 21 21 42
+
+Table 1:
+Sr.  Course Code  Course  Teaching Scheme (hrs.)        Continuous Assessment      Semester End Assessment (B) (marks)            (A+B)  Total
+Credits
+      Th  P  T  Credits  Th  T/W  Total
+CA (A)  Time
+(hrs.)  Th / Cb  O  P  O & P  Total
+SEA (B)    
+Compulsory courses offered to all the Programs                                  
+1  DJS23FCBS101  Mathematics - I  3  --  --  3  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FTBS101  Mathematics - I Tutorial  --  --  1  1  --  25  25  --  --  --  --  --  --  25  
+2  DJS23FCES101  Structured Programming using C  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLES101  Structured Programming using C Laboratory  --  2  --  1  --  25  25  --  --  --  --  25  25  50  
+    Total  5  2  1  7  80  50  130  4  120  0  0  25  145  275  7
+Courses offered in Group A                                  
+1  DJS23FCBS102  Physics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FLBS102  Physics Laboratory & Tutorial  --  2  1  2  --  50  50  --  --  --  --  --  --  50  
+2  DJS23FCES102  Computational Engineering Mechanics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLES102  Computational Engineering Mechanics Laboratory  --  2  --  1  --  25  25  --  --  --  --  --  --  25  
+3  DJS23FCES103  Basic Electrical Engineering & Digital Electronics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FLES103  Basic Electrical Engineering & Digital Electronics  Labo--rator  y & T2utori  al 1  2  --  50  50  --  --  --  --  --  --  50  
+4  DJS23FTLL101  Liberal Learning  --  --  2  2  --  25  25    --  25  --  --  25  50  2
+    Total  6  6  4  13  120  150  270  6  180  25  0  0  205  475  13
+Courses offered in Group B                                  
+1  DJS23FCBS103  Chemistry  2  --  --  2  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FLBS103  Chemistry Laboratory & Tutorial  --  2  1  2  --  50  50  --  --  --  --  --  --  50  
+2  DJS23FCES104*  Engineering Graphics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLES104  Engineering Graphics Laboratory  --  2  --  1  --  25  25  --  --  --  --  --  --  25  
+3  DJS23FCHS101  Effective Communication Skills  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLHS101  Effective Communication Skills Laboratory  --  2  --  1  --  25  25  --  --  --  --  --  --  25  
+4  DJS23FLVS101  Workshop Practices  --  2  --  1  --  25  25  --  --  --  --  --  --  25  1
+5  DJS23FTHS102  Indian Knowledge System  --  --  2  2  --  25  25  --  --  25  --  --  25  50  2
+    Total  6  8  3  13  120  150  270  6  180  25  0  0  205  475  13
+
+
+Table 2:
+Course Code  Course Category  Sem I  Sem II  Total
+DJS23FCBS1xx  Basic Science Courses  8  8  16
+DJS23FCES1xx  Engineering Science Courses  10  6  16
+DJS23FTLL1xx  Liberal Learning Courses  2  0  2
+DJS23FCHS1xx  Humanities Social Science and Management  0  5  5
+DJS23FLVS1xx  Vocational and Skill Enhancement Courses  1  0  1
+DJS23FCPC2xx  Program Core Courses ()  0  2  2
+  Total credits  21  21  42
+
+
+--- Page 3 ---
+
+Proposed scheme for First Year B.Tech Program (All Programs) : Semester II
+(Academic Year 2023-2024)
+Continuous
+Teaching Scheme (hrs.) Assessment (A) Semester End Assessment (B) (marks)
+Sr. Course Code Course (marks) (A+B) Total
+Credits
+Total T ime Th / Total
+Th P T Credits Th T/W O P O & P
+CA (A) (hrs.) Cb SEA (B)
+Compulsory courses offered to all the Programs
+DJS23FCBS201 Mathematics - II 3 -- -- 3 40 -- 40 2 60 -- -- -- 60 100
+1 4
+DJS23FTBS201 Mathematics - II Tutorial -- -- 1 1 -- 25 25 -- -- -- -- -- -- 25
+DJS23FCES201 Object Oriented Programming using Java 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+2 3
+DJS23FLES201 Object Oriented Programming using Java Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- 25 25 50
+DJS23FCPC2EC Electrical Networks
+DJS23FCPC2IT Foundation of Information Technology
+DJS23FCPC2CE Foundation of Computing Technologies
+DJS23FCPC2ME Elements of Mechanical Engineering
+3 DJS23FCPC2DS Fundamentals of Data Analysis 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100 2
+DJS23FCPC2AM Fundamentals of AI & ML
+DJS23FCPC2AD Fundamentals of AI & DS
+DJS23FCPC2IC Fundamentals of Sensor and Secured Technologies
+Total 7 2 1 9 120 50 170 6 180 0 0 25 205 375 9
+Courses offered in Group A
+DJS23FCBS102 Physics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+1 4
+DJS23FLBS102 Physics Laboratory & Tutorial -- 2 1 2 -- 50 50 -- -- -- -- -- -- 50
+DJS23FCES102 Computational Engineering Mechanics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+2 3
+DJS23FLES102 Computational Engineering Mechanics Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25
+DJS23FCES103 Basic Electrical Engineering & Digital Electronics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+3 4
+DJS23FLES103 Basic Electrical Engineering & Digital Electronics Laboratory & Tutorial -- 2 1 2 -- 50 50 -- -- -- -- -- -- 50
+4 DJS23FTLL101 Liberal Learning -- -- 2 2 -- 25 25 -- 25 -- -- 25 50 2
+Total 6 6 4 13 120 150 270 6 180 25 0 0 205 475 13
+Courses offered in Group B
+DJS23FCBS103 Chemistry 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+1 4
+DJS23FLBS103 Chemistry Laboratory & Tutorial -- 2 1 2 -- 50 50 -- -- -- -- -- -- 50
+DJS23FCES104* Engineering Graphics 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+2 3
+DJS23FLES104 Engineering Graphics Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25
+DJS23FCHS101 Effective Communication Skills 2 -- -- 2 40 -- 40 2 60 -- -- -- 60 100
+3 3
+DJS23FLHS101 Effective Communication Skills Laboratory -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25
+4 DJS23FLVS101 Workshop Practices -- 2 -- 1 -- 25 25 -- -- -- -- -- -- 25 1
+5 DJS23FTHS102 Indian Knowledge System -- -- 2 2 -- 25 25 -- -- 25 -- -- 25 50 2
+Total 6 8 3 13 120 150 270 6 180 25 0 0 205 475 13
+Learners who were offered Group A in Sem I will be offered Group B in Sem II and vice versa.
+* Computer based assessment in the college premises only.
+Course Code Course Category Sem ISem II Total Program Course
+DJS23FCBS2xx Basic Science Courses 8 8 16 EXTC Electrical Networks
+DJS23FCES2xx Engineering Science Courses 10 6 16 IT Foundation of Information Technology
+DJS23FTLL1xx Liberal Learning Courses 2 0 2 Computer Foundation of Computing Technologies
+DJS23FCHS1xx Humanities Social Science and Management 0 5 5 Mechanical Elements of Mechanical Engineering
+DJS23FLVS1xx Vocational and Skill Enhancement Courses 1 0 1 CSE(DS) Fundamentals of Data Analysis
+DJS23FCPC2xx Program Core Courses () 0 2 2 AI_ML Fundamentals of AI & ML
+Total credits 21 21 42 AI_DS Fundamentals of AI & DS
+CSE(ICB) Fundamentals of Sensor and Secured Technologies
+
+Table 1:
+Sr.  Course Code  Course  Teaching Scheme (hrs.)        Continuous
+Assessment (A)
+(marks)      Semester End Assessment (B) (marks)            (A+B)  Total
+Credits
+      Th  P  T  Credits  Th  T/W  Total
+CA (A)  T ime
+(hrs.)  Th /
+Cb  O  P  O & P  Total
+SEA (B)    
+Compulsory courses offered to all the Programs                                  
+1  DJS23FCBS201  Mathematics - II  3  --  --  3  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FTBS201  Mathematics - II Tutorial  --  --  1  1  --  25  25  --  --  --  --  --  --  25  
+2  DJS23FCES201  Object Oriented Programming using Java  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLES201  Object Oriented Programming using Java Laboratory  --  2  --  1  --  25  25  --  --  --  --  25  25  50  
+3  DJS23FCPC2EC
+DJS23FCPC2IT
+DJS23FCPC2CE
+DJS23FCPC2ME
+DJS23FCPC2DS
+DJS23FCPC2AM
+DJS23FCPC2AD
+DJS23FCPC2IC  Electrical Networks
+Foundation of Information Technology
+Foundation of Computing Technologies
+Elements of Mechanical Engineering
+Fundamentals of Data Analysis
+Fundamentals of AI & ML
+Fundamentals of AI & DS
+Fundamentals of Sensor and Secured Technologies  2  --  --  2  40  --  40  2  60  --  --  --  60  100  2
+    Total  7  2  1  9  120  50  170  6  180  0  0  25  205  375  9
+Courses offered in Group A                                  
+1  DJS23FCBS102  Physics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FLBS102  Physics Laboratory & Tutorial  --  2  1  2  --  50  50  --  --  --  --  --  --  50  
+2  DJS23FCES102  Computational Engineering Mechanics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLES102  Computational Engineering Mechanics Laboratory  --  2  --  1  --  25  25  --  --  --  --  --  --  25  
+3  DJS23FCES103  Basic Electrical Engineering & Digital Electronics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FLES103  Basic Electrical Engineering & Digital Electronics Laboratory & Tutorial  --  2  1  2  --  50  50  --  --  --  --  --  --  50  
+4  DJS23FTLL101  Liberal Learning  --  --  2  2  --  25  25    --  25  --  --  25  50  2
+    Total  6  6  4  13  120  150  270  6  180  25  0  0  205  475  13
+Courses offered in Group B                                  
+1  DJS23FCBS103  Chemistry  2  --  --  2  40  --  40  2  60  --  --  --  60  100  4
+  DJS23FLBS103  Chemistry Laboratory & Tutorial  --  2  1  2  --  50  50  --  --  --  --  --  --  50  
+2  DJS23FCES104*  Engineering Graphics  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLES104  Engineering Graphics Laboratory  --  2  --  1  --  25  25  --  --  --  --  --  --  25  
+3  DJS23FCHS101  Effective Communication Skills  2  --  --  2  40  --  40  2  60  --  --  --  60  100  3
+  DJS23FLHS101  Effective Communication Skills Laboratory  --  2  --  1  --  25  25  --  --  --  --  --  --  25  
+4  DJS23FLVS101  Workshop Practices  --  2  --  1  --  25  25  --  --  --  --  --  --  25  1
+5  DJS23FTHS102  Indian Knowledge System  --  --  2  2  --  25  25  --  --  25  --  --  25  50  2
+    Total  6  8  3  13  120  150  270  6  180  25  0  0  205  475  13
+
+
+Table 2:
+Course Code  Course Category  Sem I  Sem II  Total
+DJS23FCBS2xx  Basic Science Courses  8  8  16
+DJS23FCES2xx  Engineering Science Courses  10  6  16
+DJS23FTLL1xx  Liberal Learning Courses  2  0  2
+DJS23FCHS1xx  Humanities Social Science and Management  0  5  5
+DJS23FLVS1xx  Vocational and Skill Enhancement Courses  1  0  1
+DJS23FCPC2xx  Program Core Courses ()  0  2  2
+  Total credits  21  21  42
+
+
+Table 3:
+Program    Course
+EXTC    Electrical Networks
+IT    Foundation of Information Technology
+Computer    Foundation of Computing Technologies
+Mechanical    Elements of Mechanical Engineering
+CSE(DS)    Fundamentals of Data Analysis
+AI_ML    Fundamentals of AI & ML
+AI_DS    Fundamentals of AI & DS
+CSE(ICB)    Fundamentals of Sensor and Secured Technologies
+
+
+--- Page 4 ---
+
+Continuous Assessment (A):
+Course Assessment Tools Marks Time (mins)
+a. Term Test 1 (based on 40 % syllabus) 15 45
+b. Term Test 2 (on next 40 % syllabus) 15 45
+Theory
+c. Assignment / course project / group discussion /
+10 --
+presentation / quiz/ any other.
+Total marks (a + b + c) 40 --
+Performance in the assignments / quiz / power point
+Audit
+presentation / poster presentation / group project / any --
+course
+other tool.
+As
+Laboratory Performance in the laboratory and documentation. 25
+applicable
+Tutorial Performance in each tutorial & / assignment. 25
+Laboratory
+Performance in the laboratory and tutorial. 50
+&Tutorial
+The final certification and acceptance of term work will be subject to satisfactory performance upon fulfilling
+minimum passing criteria in the term work / completion of audit course.
+Semester End Assessment (B):
+Course Assessment Tools Marks Time (hrs.)
+Theory / Written paper based on the entire syllabus.
+*Computer 60 2
+based *Computer based assessment in the college premises.
+Oral Questions based on the entire syllabus. 25 As applicable
+Performance of the practical assigned during the examination
+Practical 25 2
+and the output / results obtained.
+Project based courses - Performance of the practical assigned
+Oral &
+during the examination and the output / results obtained. As per the
+Practical 2
+Based on the practical performed during the examination and scheme
+on the entire syllabus.
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+Course  Assessment Tools  Marks  Time (mins)
+Theory  a. Term Test 1 (based on 40 % syllabus)  15  45
+  b. Term Test 2 (on next 40 % syllabus)  15  45
+  c. Assignment / course project / group discussion /
+presentation / quiz/ any other.  10  --
+  Total marks (a + b + c)  40  --
+Audit
+course  Performance in the assignments / quiz / power point
+presentation / poster presentation / group project / any
+other tool.  --  As
+applicable
+Laboratory  Performance in the laboratory and documentation.  25  
+Tutorial  Performance in each tutorial & / assignment.  25  
+Laboratory
+&Tutorial  Performance in the laboratory and tutorial.  50  
+
+
+Table 2:
+Course  Assessment Tools  Marks  Time (hrs.)
+Theory /
+*Computer
+based  Written paper based on the entire syllabus.  60  2
+  *Computer based assessment in the college premises.    
+Oral  Questions based on the entire syllabus.  25  As applicable
+Practical  Performance of the practical assigned during the examination
+and the output / results obtained.  25  2
+Oral &
+Practical  Project based courses - Performance of the practical assigned
+during the examination and the output / results obtained.
+Based on the practical performed during the examination and
+on the entire syllabus.  As per the
+scheme  2
+
+
+--- Page 5 ---
+
+Shri Vile Parle Kelavani Mandal’s
+Dwarkadas J. Sanghvi College of Engineering
+(Autonomous College Affiliated to the University of Mumbai)
+Course Structure and Syllabus
+of
+First Year (Semester I) B. Tech.
+(Common for all Programs)
+Prepared by: - Board of Studies for FE
+Recommended by: - Academic Council of D. J. Sanghvi College of Engineering
+Approved by: - Governing Body of D. J. Sanghvi College of Engineering
+Revision: 3 (DJS23)
+With effect from the Academic Year: 2023-2024
+
+--- Page 6 ---
+
+Shri Vile Parle Kelavani Mandal’s
+Dwarkadas J. Sanghvi College of Engineering
+(Autonomous College Affiliated to the University of Mumbai)
+Course Structure and Syllabus
+of
+First Year (Semester II) B. Tech.
+(Common for all Programs)
+Prepared by: - Board of Studies for FE
+Recommended by: - Academic Council of D. J. Sanghvi College of Engineering
+Approved by: - Governing Body of D. J. Sanghvi College of Engineering
+Revision: 3 (DJS23)
+With effect from the Academic Year: 2023-2024
+
+--- Page 7 ---
+
+Program: Common for all Programs F.Y. B. Tech Semester: I
+Course: Mathematics - I (DJS23FCBS101)
+Course: Mathematics - I Tutorial (DJS23FTBS101)
+Pre-requisite: -- Knowledge of
+1. Inverse of a matrix, addition, multiplication and transpose of a matrix.
+2. Algebra of Complex Numbers. Cartesian, polar and exponential form of complex numbers.
+Objectives:
+1. To develop the basic Mathematical skills of engineering students that are imperative for
+effective understanding of engineering subjects. The topics introduced will serve as basic tools
+for specialized studies in many fields of engineering and technology.
+2. To provide hands on experience using SciLab software to handle real life problems.
+Outcomes: On completion of the course, the learner will be able to:
+1. Apply principles of basic operations of matrices to find rank and echelon form of matrices to
+solve system of simultaneous equations.
+2. Illustrate the basic concepts of Complex numbers and apply the knowledge of complex
+numbers to solve problems in hyperbolic functions and logarithmic functions.
+3. Illustrate the knowledge Expansion of functions.
+4. Illustrate the basic principles of Partial differentiation and its application to find maxima and
+minima.
+5. Illustrate SciLab programming techniques to the solution of linear and simultaneous algebraic
+equations.
+Mathematics - I (DJS23FCBS101)
+Unit Description Duration
+1 Matrices: 07
+1.1. Types of Matrices: Symmetric, Skew‐ Symmetric, Hermitian, Skew-Hermitian, Unitary,
+Orthogonal Matrices. Rank of a matrix using Echelon form.
+1.2. System of homogeneous and non–homogeneous equations, their consistency and
+solutions. Linear dependent and independent vectors.
+2 Complex Numbers, Hyperbolic function and Logarithm of Complex Numbers: 11
+2.1. Review statement of D’Moivre’s Theorem.
+2.2. Application of D’Moivre’s Theorem: Find expansion of sinnθ,cosnθ in terms of sines
+and cosines of multiples of θ, expansion of sin nθ, cos nθ in powers of sin θ, cos θ and to find
+sum of the trigonometric series.
+2.3. Roots of complex number.
+2.4. Circular functions of complex number and Hyperbolic functions. Inverse Circular and
+Inverse Hyperbolic functions. Separation of real and imaginary parts of all types of functions.
+2.5. Logarithmic functions, Separation of real and Imaginary parts of Logarithmic functions.
+3 Expansion of Function: 04
+3.1. Taylor’s Theorem (Statement only), Taylor’s series and Maclaurin’s series (Statement
+only). Expansion of standard functions.
+
+Table 1:
+Mathematics - I (DJS23FCBS101)    
+Unit  Description  Duration
+1  Matrices:
+1.1. Types of Matrices: Symmetric, Skew‐ Symmetric, Hermitian, Skew-Hermitian, Unitary,
+Orthogonal Matrices. Rank of a matrix using Echelon form.
+1.2. System of homogeneous and non–homogeneous equations, their consistency and
+solutions. Linear dependent and independent vectors.  07
+2  Complex Numbers, Hyperbolic function and Logarithm of Complex Numbers:
+2.1. Review statement of D’Moivre’s Theorem.
+2.2. Application of D’Moivre’s Theorem: Find expansion of sinnθ,cosnθ in terms of sines
+and cosines of multiples of θ, expansion of sin nθ, cos nθ in powers of sin θ, cos θ and to find
+sum of the trigonometric series.
+2.3. Roots of complex number.
+2.4. Circular functions of complex number and Hyperbolic functions. Inverse Circular and
+Inverse Hyperbolic functions. Separation of real and imaginary parts of all types of functions.
+2.5. Logarithmic functions, Separation of real and Imaginary parts of Logarithmic functions.  11
+3  Expansion of Function:
+3.1. Taylor’s Theorem (Statement only), Taylor’s series and Maclaurin’s series (Statement
+only). Expansion of standard functions.  04
+
+
+--- Page 8 ---
+
+4 Partial Differentiation: 09
+4.1. Partial Differentiation: Function of several variables, Partial derivatives of first and
+higher order, Differentiation of composite function, Total differentials and Implicit functions.
+4.2. Euler’s Theorem on Homogeneous functions with two and three independent variables
+(with proof). Deductions from Euler’s theorem.
+5 Applications of Partial Differentiation: 04
+5.1. Maxima and Minima of a function of two independent variables.
+5.2. Jacobian’s of two and three independent variables.
+6 Numerical Solutions of Transcendental Equations, System of Linear Algebraic 04
+Equations, Curve fitting:
+6.1. Solution of Algebraic and Transcendental Equations by: Newton Raphson Method
+6.2. Solution of system of linear algebraic equations by Gauss Seidal Iteration Method.
+6.3. Curve fitting: Fitting a straight line, Quadratic curve.
+Total 39
+Mathematics - I Tutorial (DJS23FTBS101)
+Tut. Suggested Tutorials (including SciLab programs)
+1 Matrices.
+2 Matrices (SciLab)
+3 Complex Numbers.
+4 Hyperbolic and Logarithm of complex no.
+5 Expansion of Function.
+6 Partial Differentiation.
+7 Application of Partial Differentiation.
+8 Solution of Transcendental Equations by Newton Raphson Method.
+9 Solution of system of linear algebraic equations by Gauss Seidal Iteration Method.
+10 Curve Fitting.
+Minimum eight tutorials (including SciLab programs) from the above suggested list or any other
+experiment based on syllabus will be included, which would help the learner to apply the concept learnt.
+
+Table 1:
+4  Partial Differentiation:
+4.1. Partial Differentiation: Function of several variables, Partial derivatives of first and
+higher order, Differentiation of composite function, Total differentials and Implicit functions.
+4.2. Euler’s Theorem on Homogeneous functions with two and three independent variables
+(with proof). Deductions from Euler’s theorem.  09
+5  Applications of Partial Differentiation:
+5.1. Maxima and Minima of a function of two independent variables.
+5.2. Jacobian’s of two and three independent variables.  04
+6  Numerical Solutions of Transcendental Equations, System of Linear Algebraic
+Equations, Curve fitting:
+6.1. Solution of Algebraic and Transcendental Equations by: Newton Raphson Method
+6.2. Solution of system of linear algebraic equations by Gauss Seidal Iteration Method.
+6.3. Curve fitting: Fitting a straight line, Quadratic curve.  04
+  Total  39
+
+
+Table 2:
+Mathematics - I Tutorial (DJS23FTBS101)  
+Tut.  Suggested Tutorials (including SciLab programs)
+1  Matrices.
+2  Matrices (SciLab)
+3  Complex Numbers.
+4  Hyperbolic and Logarithm of complex no.
+5  Expansion of Function.
+6  Partial Differentiation.
+7  Application of Partial Differentiation.
+8  Solution of Transcendental Equations by Newton Raphson Method.
+9  Solution of system of linear algebraic equations by Gauss Seidal Iteration Method.
+10  Curve Fitting.
+
+
+--- Page 9 ---
+
+Books Recommended:
+Text books:
+1. Higher Engineering Mathematics, Dr. B. S. Grewal, Khanna Publication.
+2. Advanced Engineering Mathematics, Dennis G. Zill, Warren S. Wright.
+Reference Books:
+1. Foundations of Complex Analysis, S. Ponnusamy, Narosa Publications.
+2. Advanced Engineering Mathematics, Erwin Kreyszig, Wiley Eastern Limited, 9th Ed.
+3. Advanced Engineering Mathematics by H. K. Dass, 28th edition, S. Chand 2010.
+4. Introductory Methods of Numerical Analysis, S.S. Sastry, Eastern Economy Edition.
+5. Numerical Methods, M. K. Jain, R. K. Jain, S. R. K. Iyengar, New Age International Publishers.
+6. Matrices, Shanti Narayan, S. Chand publication.
+7. Applied Numerical Methods with MATLAB for Engineers and Scientists by Steven Chapra,
+McGraw Hill.
+8. Elementary Linear Algebra with Application by Howard Anton and Christ Rorres, 6th edition, John
+Wiley & Sons, INC.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 10 ---
+
+Program: Common for all Programs F. Y B.Tech Semester: I
+Course: Structured Programming using C (DJS23FCES101)
+Course: Structured Programming using C Laboratory (DJS23FLES101)
+Pre-requisite: None
+Objectives:
+1. To familiarize with the logic of Computer Programming.
+2. To provide exposure in developing algorithm, flowchart and thereby writing efficient
+codes for user defined problem.
+Outcomes: On completion of the course, the learner will be able to:
+1. Implement the programs in C.
+2. Debug the C programs
+Structured Programming using C (DJS23FCES101)
+Unit Description Duration
+1 Introduction to Computer, Algorithm and Flowchart:
+1.1 The turing machine architecture, the von Neumann architecture, Number system
+03
+1.2 Introduction to operating sytsem components
+1.3 System and application software
+1.4 Algorithm & Flowchart:
+Three constructs of Algorithm and flowchart: Sequence, Decision (Selection) and
+Repetition, Compilation process: Syntax and semantic errors,
+2 Fundamentals of C-Programming:
+2.1 Character Set, Identifiers and keywords, Data types, Constants, Variables.
+2.2 Operators-Arithmetic, Relational and logical, Assignment, Unary, Conditional, Bitwise,
+Comma, and other operators. Expression, statements, Library Functions, Preprocessor.
+2.3 Data Input and Output – getchar (), putchar (), scanf (), printf (), gets (), 04
+puts (), Structure of C program.
+3 Control Structures:
+3.1 Decision making with Branching - If statement, If-else Statement, Switch case
+statement
+05
+3.2 Looping – while, do-while, for
+3.3 Nested control structure
+3.4 Continue statement, Break statement, goto statement.
+4 Functions and Parameter:
+4.1 Function -Introduction of Function, defining a Function, accessing a Function, Function
+Prototype, Passing Arguments to a Function, Designing Recursive function
+03
+4.2 Storage Classes –Auto, Extern, Static, Register
+5 Arrays, String, Structure:
+5.1 Array-Concepts, Declaration, Definition, accessing array element, One- dimensional
+and Multidimensional array, Passing Arrays to Function
+5.2 String- Basics of String, Functions in string.h, user defined function for string handling
+5.3 Structure- Declaration, Initialization, structure within structure, Operation on structures, 07
+Array of Structure, Structure padding.
+
+Table 1:
+Structured Programming using C (DJS23FCES101)    
+Unit  Description  Duration
+1  Introduction to Computer, Algorithm and Flowchart:
+1.1 The turing machine architecture, the von Neumann architecture, Number system
+1.2 Introduction to operating sytsem components
+1.3 System and application software
+1.4 Algorithm & Flowchart:
+Three constructs of Algorithm and flowchart: Sequence, Decision (Selection) and
+Repetition, Compilation process: Syntax and semantic errors,  03
+2  Fundamentals of C-Programming:
+2.1 Character Set, Identifiers and keywords, Data types, Constants, Variables.
+2.2 Operators-Arithmetic, Relational and logical, Assignment, Unary, Conditional, Bitwise,
+Comma, and other operators. Expression, statements, Library Functions, Preprocessor.
+2.3 Data Input and Output – getchar (), putchar (), scanf (), printf (), gets (),
+puts (), Structure of C program.  04
+3  Control Structures:
+3.1 Decision making with Branching - If statement, If-else Statement, Switch case
+statement
+3.2 Looping – while, do-while, for
+3.3 Nested control structure
+3.4 Continue statement, Break statement, goto statement.  05
+4  Functions and Parameter:
+4.1 Function -Introduction of Function, defining a Function, accessing a Function, Function
+Prototype, Passing Arguments to a Function, Designing Recursive function
+4.2 Storage Classes –Auto, Extern, Static, Register  03
+5  Arrays, String, Structure:
+5.1 Array-Concepts, Declaration, Definition, accessing array element, One- dimensional
+and Multidimensional array, Passing Arrays to Function
+5.2 String- Basics of String, Functions in string.h, user defined function for string handling
+5.3 Structure- Declaration, Initialization, structure within structure, Operation on structures,
+Array of Structure, Structure padding.  07
+
+
+--- Page 11 ---
+
+6 Pointers:
+6.1 Introduction, Definition and uses of Pointers, Address Operator, Pointer Variables
+6.2 Pointer Arithmetic
+04
+6.3 Call by value, call by Reference
+Total 26
+Structured Programming using C Laboratory (DJS23FLES101)
+Exp. Suggested experiments
+1 Write a program to swap two variables values with and without using third variables. Write algorithm
+and draw flowchart for the same.
+2 Write a program to check odd or even number:
+(a) using modulus operator (b) using conditional operator.
+3 Design and develop a C program to read a year as an input and find whether it is leap year or not.
+Also consider the end of the centuries. Write algorithm and draw flowchart for the same.
+4 Write a C program to find the sum of individual digits of a 3-digit number.
+5 Design and develop a flowchart or an algorithm that takes three coefficients (a, b, and c) of a
+Quadratic equation (ax2 +bx+c=0) as input and compute all possible roots. Implement a C program
+for the developed flowchart/algorithm and execute the same to output the possible roots for a given
+set of coefficients with appropriate messages.
+6 Write a program to count the number of digits in a given integer.
+7 Write a menu driven program to perform simple arithmetic operations based on the user's choice. The
+user will indicate the operation to be performed using the signs e.g. + for addition, etc. Write an
+algorithm and draw flowchart for same.
+8 Write a program to read a number of more than one digit, reverse the number and display the sum of
+digits of numbers. Write algorithm and draw flowchart for the same.
+9 Write programs to display each of the following patterns.
+A) 1 B) A
+2 1 ABA
+3 2 1 ABCBA
+4 3 2 1 ABCDCBA
+5 4 3 2 1 ABCDEDCBA
+10 Write a C program to find maximum and minimum between two numbers using functions. Write
+algorithm and draw flowchart for the same.
+11 Write C program to find GCD of two integers by using recursive function.
+12 Write a C program to find both the largest and smallest number in a list of integers. Write algorithm
+and draw flowchart for the same.
+13 Develop, implement and execute a C program that reads two matrices A (m x n) and B (p x q) and
+Compute product of matrices A and B. Read matrix A and matrix B in row major order and in column
+
+Table 1:
+6  Pointers:
+6.1 Introduction, Definition and uses of Pointers, Address Operator, Pointer Variables
+6.2 Pointer Arithmetic
+6.3 Call by value, call by Reference  04
+  Total  26
+
+
+Table 2:
+Structured Programming using C Laboratory (DJS23FLES101)  
+Exp.  Suggested experiments
+1  Write a program to swap two variables values with and without using third variables. Write algorithm
+and draw flowchart for the same.
+2  Write a program to check odd or even number:
+(a) using modulus operator (b) using conditional operator.
+3  Design and develop a C program to read a year as an input and find whether it is leap year or not.
+Also consider the end of the centuries. Write algorithm and draw flowchart for the same.
+4  Write a C program to find the sum of individual digits of a 3-digit number.
+5  Design and develop a flowchart or an algorithm that takes three coefficients (a, b, and c) of a
+Quadratic equation (ax2 +bx+c=0) as input and compute all possible roots. Implement a C program
+for the developed flowchart/algorithm and execute the same to output the possible roots for a given
+set of coefficients with appropriate messages.
+6  Write a program to count the number of digits in a given integer.
+7  Write a menu driven program to perform simple arithmetic operations based on the user's choice. The
+user will indicate the operation to be performed using the signs e.g. + for addition, etc. Write an
+algorithm and draw flowchart for same.
+8  Write a program to read a number of more than one digit, reverse the number and display the sum of
+digits of numbers. Write algorithm and draw flowchart for the same.
+9  Write programs to display each of the following patterns.
+A) 1 B) A
+2 1 ABA
+3 2 1 ABCBA
+4 3 2 1 ABCDCBA
+5 4 3 2 1 ABCDEDCBA
+10  Write a C program to find maximum and minimum between two numbers using functions. Write
+algorithm and draw flowchart for the same.
+11  Write C program to find GCD of two integers by using recursive function.
+12  Write a C program to find both the largest and smallest number in a list of integers. Write algorithm
+and draw flowchart for the same.
+13  Develop, implement and execute a C program that reads two matrices A (m x n) and B (p x q) and
+Compute product of matrices A and B. Read matrix A and matrix B in row major order and in column
+
+
+--- Page 12 ---
+
+major order respectively. Print both the input matrices and resultant matrix with suitable headings and
+output should be in matrix format only.
+14 Write a Program for deletion of an element from the specified location from Array.
+15 Write a C program using user defined functions to determine whether the given string is palindrome
+or not.
+16 Write C program to count the number of lines, words and characters in a given text.
+17 Write a program to swap two numbers using a function. Pass the values to be swapped to this function
+using the call-by-value method and call-by-reference method.
+18 Write a C program to find the length of the string using Pointer.
+19 Write a program to copy one array to another using pointer.
+20 Write a program to compare two strings using pointers.
+Books Recommended:
+Books Recommended:
+Textbooks:
+1. MASTERING C” by K.R.Venugopal and Sudeep R.Prasad , Tata McGraw-Hill
+Publications.
+2. “A Computer Science –Structure Programming Approaches using C”, by Behrouz
+Forouzan, Cengage Learning.
+3. Schaum’s outlines “Programming with C”, by Byron S. Gottfried, Tata McGraw-Hill
+Publications.
+Reference Books:
+1. “Basics of Computer Science”, by BehrouzForouzan , Cengage Learning.
+2. “Programming Techniques through C”, by M. G. Venkateshmurthy, Pearson
+Publication.
+3. “Programming in ANSI C”, by E. Balaguruswamy, Tata McGraw-Hill Education.
+4. “Programming in C”, by Pradeep Day and Manas Gosh, Oxford University Press.
+5. “Let Us C”, by Yashwant Kanetkar, BPB Publication.
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+  major order respectively. Print both the input matrices and resultant matrix with suitable headings and
+output should be in matrix format only.
+14  Write a Program for deletion of an element from the specified location from Array.
+15  Write a C program using user defined functions to determine whether the given string is palindrome
+or not.
+16  Write C program to count the number of lines, words and characters in a given text.
+17  Write a program to swap two numbers using a function. Pass the values to be swapped to this function
+using the call-by-value method and call-by-reference method.
+18  Write a C program to find the length of the string using Pointer.
+19  Write a program to copy one array to another using pointer.
+20  Write a program to compare two strings using pointers.
+
+
+--- Page 13 ---
+
+Program: Common for all Programs Group A F. Y B. Tech SEM I/II
+Course: Physics (DJS23FCBS102)
+Course: Physics Laboratory & Tutorial (DJS23FLBS102)
+Pre-requisite:
+Foundations of physics and mathematics till HSc or equivalent is necessary to comprehend
+engineering physics curriculum effectively.
+Objectives:
+1. Identify and understand the fundamental physical principles underlying engineering
+technologies—a prerequisite to become successful engineer.
+2. To provide inclusive knowledge of fundamental physical principles encouraging
+engineering students to venture in the research field.
+Outcomes: On completion of the course, the learner will be able to:
+CO1. Relate the scope and foundation of quantum mechanics & quantum computing and its
+role in development of modern technology.
+CO2. Apply the foundations of Optics and Photonics in precision measurements indispensable
+for the development of modern communication technology.
+CO3. Assimilate the concepts of Electrodynamics, which are prerequisite in modern
+developments for signal communications, Antenna Theory etc.
+CO4. Explore basic sensing techniques for physical measurements in modern instrumentation.
+Physics (DJS23FCBS102)
+Unit Description Duration
+1 QUANTUM PHYSICS & COMPUTING 5 hrs
+(Prerequisites: Origin of Quantum mechanics and its comparison with classical mechanics, Dual
+nature of radiation, Photoelectric effect, Davisson-Germer experiment, single slit experiment)
+• Introduction (Matter waves, De Broglie hypothesis, Wave Packet).
+• Concept of Phase velocity and group velocity and relation with particle velocity.
+• Heisenberg Uncertainty Principle.
+• Wave function; Physical interpretation of wave function.
+• Schrodinger’s time dependent wave equation; time independent wave equation; Particle trapped
+in one dimensional infinite potential well.
+• Fundamentals of Quantum Computing (Difference between classical computing & quantum
+computing, Qubits, Quantum Superposition theorem, Quantum Entanglement theorem)
+
+Table 1:
+Physics (DJS23FCBS102)    
+Unit  Description  Duration
+1  QUANTUM PHYSICS & COMPUTING
+(Prerequisites: Origin of Quantum mechanics and its comparison with classical mechanics, Dual
+nature of radiation, Photoelectric effect, Davisson-Germer experiment, single slit experiment)
+• Introduction (Matter waves, De Broglie hypothesis, Wave Packet).
+• Concept of Phase velocity and group velocity and relation with particle velocity.
+• Heisenberg Uncertainty Principle.
+• Wave function; Physical interpretation of wave function.
+• Schrodinger’s time dependent wave equation; time independent wave equation; Particle trapped
+in one dimensional infinite potential well.
+• Fundamentals of Quantum Computing (Difference between classical computing & quantum
+computing, Qubits, Quantum Superposition theorem, Quantum Entanglement theorem)  5 hrs
+
+
+--- Page 14 ---
+
+2 OPTICS FOR ENGINEERS 7 hrs
+(Prerequisites: Wavefront and Huygens’s principle, reflection, refraction, interference, Young’s
+double slit experiment, diffraction)
+• Thin Film Interference: Introduction (division of amplitude & Stoke’s relation) Interference in
+thin film of constant thickness in reflected light, Formation of colors in thin film (point source &
+extended source); Interference in Wedge shaped film in reflected light; Formation of Newton’s
+rings; Applications (Antireflecting & High reflecting films)
+• Diffraction: Introduction (distinguish between interference & diffraction), Fresnel & Fraunhofer
+diffraction, Fraunhofer diffraction at single slit & double slit (qualitative), Diffraction Grating,
+Absent spectra, Resolving power & Dispersive power of a grating (qualitative), Applications.
+3 PHOTONICS & FIBRE OPTICS 6 hrs
+(Prerequisites: Absorption, recombination, energy bands of p-n junction, refractive index of a material,
+Snell’s law, Total internal reflection)
+• Laser: Spontaneous emission and Stimulated emission; Einstein’s coefficients, Metastable state,
+Resonant cavity, Population inversion, three & four level lasers, types of pumping, Helium Neon
+laser; Nd:YAG laser, Applications.
+• Fiber optics: Structure of an optical fiber, Types: Single mode & Multimode, Step index &
+Graded index, Numerical Aperture for step index fiber, Modes of propagation, V number,
+Attenuation, Applications (Optical fibre Transmission).
+4 ELECTRODYNAMICS 4 hrs
+(Prerequisites: Coulomb's law-force between two-point charges, electric field due to a point charge,
+electric field due to a dipole, Gauss’s law for electrostatics & magneto statics, Faraday’s Law,
+Ampere’s circuital law)
+• Scalar and Vector fields, Physical significance of gradient, divergence, and curl in Cartesian co-
+ordinate system.
+• Divergence theorem, Stokes theorem.
+• Maxwell’s equations (Free space and time varying fields) & Significance.
+5 PHYSICS OF SENSORS 4 hrs
+(Prerequisites: Transducer concept, meaning of calibration, piezoelectric effect, IR waves)
+• Ultrasonic sensors: Concept of inverse piezoelectricity, Ultrasonic transducer as distance meter,
+Applications
+• Light sensors: Photodiode & LDR (Principle, working & Applications)
+• Hall sensor: (Principle of Hall effect, working & Applications)
+• IR sensor: (Principle, working & Applications)
+Total 26 hrs
+
+Table 1:
+2  OPTICS FOR ENGINEERS
+(Prerequisites: Wavefront and Huygens’s principle, reflection, refraction, interference, Young’s
+double slit experiment, diffraction)
+• Thin Film Interference: Introduction (division of amplitude & Stoke’s relation) Interference in
+thin film of constant thickness in reflected light, Formation of colors in thin film (point source &
+extended source); Interference in Wedge shaped film in reflected light; Formation of Newton’s
+rings; Applications (Antireflecting & High reflecting films)
+• Diffraction: Introduction (distinguish between interference & diffraction), Fresnel & Fraunhofer
+diffraction, Fraunhofer diffraction at single slit & double slit (qualitative), Diffraction Grating,
+Absent spectra, Resolving power & Dispersive power of a grating (qualitative), Applications.  7 hrs
+3  PHOTONICS & FIBRE OPTICS
+(Prerequisites: Absorption, recombination, energy bands of p-n junction, refractive index of a material,
+Snell’s law, Total internal reflection)
+• Laser: Spontaneous emission and Stimulated emission; Einstein’s coefficients, Metastable state,
+Resonant cavity, Population inversion, three & four level lasers, types of pumping, Helium Neon
+laser; Nd:YAG laser, Applications.
+• Fiber optics: Structure of an optical fiber, Types: Single mode & Multimode, Step index &
+Graded index, Numerical Aperture for step index fiber, Modes of propagation, V number,
+Attenuation, Applications (Optical fibre Transmission).  6 hrs
+4  ELECTRODYNAMICS
+(Prerequisites: Coulomb's law-force between two-point charges, electric field due to a point charge,
+electric field due to a dipole, Gauss’s law for electrostatics & magneto statics, Faraday’s Law,
+Ampere’s circuital law)
+• Scalar and Vector fields, Physical significance of gradient, divergence, and curl in Cartesian co-
+ordinate system.
+• Divergence theorem, Stokes theorem.
+• Maxwell’s equations (Free space and time varying fields) & Significance.  4 hrs
+5  PHYSICS OF SENSORS
+(Prerequisites: Transducer concept, meaning of calibration, piezoelectric effect, IR waves)
+• Ultrasonic sensors: Concept of inverse piezoelectricity, Ultrasonic transducer as distance meter,
+Applications
+• Light sensors: Photodiode & LDR (Principle, working & Applications)
+• Hall sensor: (Principle of Hall effect, working & Applications)
+• IR sensor: (Principle, working & Applications)  4 hrs
+  Total  26 hrs
+
+
+--- Page 15 ---
+
+Physics Laboratory & Tutorial (DJS23FLBS102)
+Exp. Suggested experiments
+1 Determination of Planck’s constant using LED.
+2 Determination of wavelength using Diffraction grating and Hg source.
+3 Determination of wavelength using Diffraction grating and Na source.
+4 Determination of width of a slit using single slit diffraction experiment (laser source).
+5 Determination of width of a double slit using (laser source).
+6 Study of I-V characteristics of Photo diode.
+7 Study of ultrasonic distance meter/ interferometer.
+8 Determination of radius of curvature of a lens using Newton’s ring set up.
+9 Determination of grating element & no. of lines/cm using Ruler.
+10 Simulation experiments on sensors.
+11 Determination of grating element or wavelength using Diffraction grating (Laser source).
+12 Study of divergence of laser beam.
+13 Determination of diameter of wire/hair or thickness of paper using Wedge shape film method.
+14 Determination of grating element & no. of lines/cm using CD.
+15 Determination of Numerical Aperture of an optical fiber.
+Minimum 8 experiments as laboratory work from the above suggested list or any other experiment based
+on syllabus should be conducted batch wise to develop a rational temperament for scientific observations
+which lead to constructive inferences essential for technology studies.
+Tutorials:
+A minimum of 8 tutorial sessions on topics covering the entire syllabus should be conducted batchwise
+for effective interactive sessions focusing on better understanding of the subject.
+Books Recommended:
+Textbooks:
+1. A textbook of Engineering Physics-Avadhanulu & Kshirsagar, S. Chand
+2. Problems in Engineering Physics- Avadhanulu & Kshirsagar, S. Chand
+3. A textbook of Engineering Physics, S. O. Pillai, New Age International Publishers.
+4. A textbook of Optics - N. Subramanyam and Brijlal, S. Chand
+5. Quantum Mechanics: Theory & Applications-Ajoy Ghotak & S. Lokanathan
+6. Modern Engineering Physics – Vasudeva, S. Chand.
+7. Engineering Physics- Wiley.
+
+Table 1:
+Physics Laboratory & Tutorial (DJS23FLBS102)  
+Exp.  Suggested experiments
+1  Determination of Planck’s constant using LED.
+2  Determination of wavelength using Diffraction grating and Hg source.
+3  Determination of wavelength using Diffraction grating and Na source.
+4  Determination of width of a slit using single slit diffraction experiment (laser source).
+5  Determination of width of a double slit using (laser source).
+6  Study of I-V characteristics of Photo diode.
+7  Study of ultrasonic distance meter/ interferometer.
+8  Determination of radius of curvature of a lens using Newton’s ring set up.
+9  Determination of grating element & no. of lines/cm using Ruler.
+10  Simulation experiments on sensors.
+11  Determination of grating element or wavelength using Diffraction grating (Laser source).
+12  Study of divergence of laser beam.
+13  Determination of diameter of wire/hair or thickness of paper using Wedge shape film method.
+14  Determination of grating element & no. of lines/cm using CD.
+15  Determination of Numerical Aperture of an optical fiber.
+
+
+--- Page 16 ---
+
+8. Engineering Physics – R K Gaur & S L Gupta, Dhanpat Rai Publications.
+9. Engineering Physics – Shatendra Sharma & Jyotsna Sharma, Pearson publications.
+10. Engineering Physics – D. K. Bhattacharya & Poonam Tandon, Oxford publications.
+11. Engineering Physics – V Rajendran, McGraw Hill Educations.
+12. Optics - Ajay Ghatak, Tata Mc Graw Hill.
+13. Electronic Instrumentation –H.S. Kalsi, Tata Mc Graw-Hill Education.
+Reference Books:
+1. Introduction to Quantum Mechanics- David. J. Griffiths, Cambridge University Press.
+2. An Introduction to Quantum Computing Phillip Kaye Oxford Press.
+3. Quantum Computing for everyone Chris Bernhardt the MIT Press.
+4. Fundamentals of optics by Jenkins and White, McGraw Hill.
+5. Concepts of Modern Physics- Arther Beiser, Tata McGraw Hill.
+6. Introduction to Electrodynamics- D. J. Griffiths, Pearson publication.
+7. Instrumentation & Measurement Techniques by Albert D. Helfrick & William D. Cooper (PHI).
+8. Handbook of Modern Sensors Physics design and application- Jacob Fraden, Springer, AIP press.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 17 ---
+
+Program: Common for all Programs Group A F.Y B.Tech Semester: I
+Course: Computational Engineering Mechanics (DJS23FCES102)
+Course: Computational Engineering Mechanics Laboratory (DJS23FLES102)
+Pre-requisite: --
+1. Basics of Trigonometry and Matrices.
+2. Newton’s Laws of motion.
+Objectives:
+1. To acquaint learners with the concept of equilibrium.
+2. To familiarize learners to analyze the motion of moving objects/bodies.
+Outcomes: On completion of the course, the learner will be able to:
+1 Illustrate the effect of force and moment to determine the resultant of force system
+2 Apply the concept of equilibrium systems with the help of free body diagram.
+3 Correlate real life application to friction and estimate the Power transmitted by the belt.
+4 Apply the concept of geometric transformations to find the transformed position of an
+element/object.
+5 Analyze general plane motion of rigid bodies.
+Computational Engineering Mechanics (DJS23FCES102)
+Unit Description Duration
+1 Computation and analysis of System of Forces (Co-planar): 06
+Concept of force, Principle of transmissibility, Composition and resolution of forces. Moment
+of force about a point, Varignon’s Theorem. Various systems of forces. Couples. Force couple
+system, Resultant of coplanar force system.
+**Introduction to programming software packages (Python/Matlab/Scilab or any other
+suitable software), Application of software packages for determination of Resultant.
+2 Computation and analysis of Equilibrium Systems: 06
+Conditions of static equilibrium. Free body diagram. Various types of supports and
+support reactions. Equilibrium of Connected Bodies.
+Types of Beams and various types of loads. Determination of reactions at supports for
+beams.
+** Application of software packages for analysis of bodies in equilibrium.
+3 Computation and analysis of Frictional force : 04
+Concept of Static Friction and Dynamic/ Kinetic Friction, Laws of dry friction, Coefficient
+of Friction, Angle of Friction, Concept of Cone of friction. Angle of Repose.
+Belt friction, Power transmitted by flat belt drives. (Numericals on Block, Wedge and Ladder
+friction excluded.)
+** Application of software packages for analysis and computation of friction forces.
+4 Robot Kinematics (Part-I): Geometric Transformations 05
+2D transformations: Translation, Scaling, Rotation, Shear and Reflection; Matrix
+representation and Homogeneous Coordinates; Composite transformation.
+Introduction to 3D Transformations: Translation, Rotation, Scaling and Reflection
+(Numerical on 3D transformations excluded).
+** Programming for transformations of basic geometric 2D elements/objects.
+
+Table 1:
+Computational Engineering Mechanics (DJS23FCES102)    
+Unit  Description  Duration
+1  Computation and analysis of System of Forces (Co-planar):
+Concept of force, Principle of transmissibility, Composition and resolution of forces. Moment
+of force about a point, Varignon’s Theorem. Various systems of forces. Couples. Force couple
+system, Resultant of coplanar force system.
+**Introduction to programming software packages (Python/Matlab/Scilab or any other
+suitable software), Application of software packages for determination of Resultant.  06
+2  Computation and analysis of Equilibrium Systems:
+Conditions of static equilibrium. Free body diagram. Various types of supports and
+support reactions. Equilibrium of Connected Bodies.
+Types of Beams and various types of loads. Determination of reactions at supports for
+beams.
+** Application of software packages for analysis of bodies in equilibrium.  06
+3  Computation and analysis of Frictional force :
+Concept of Static Friction and Dynamic/ Kinetic Friction, Laws of dry friction, Coefficient
+of Friction, Angle of Friction, Concept of Cone of friction. Angle of Repose.
+Belt friction, Power transmitted by flat belt drives. (Numericals on Block, Wedge and Ladder
+friction excluded.)
+** Application of software packages for analysis and computation of friction forces.  04
+4  Robot Kinematics (Part-I): Geometric Transformations
+2D transformations: Translation, Scaling, Rotation, Shear and Reflection; Matrix
+representation and Homogeneous Coordinates; Composite transformation.
+Introduction to 3D Transformations: Translation, Rotation, Scaling and Reflection
+(Numerical on 3D transformations excluded).
+** Programming for transformations of basic geometric 2D elements/objects.  05
+
+
+--- Page 18 ---
+
+5 Robot Kinematics (part-II): 05
+General Plane motion of Rigid body. The concept of instantaneous center of rotation
+(ICR) for the velocity. Velocity analysis of rigid body using ICR.
+Introduction to Forward Kinematics and Inverse Kinematics. Applications of
+Mechanics in Robotics, Machine Learning and AI.
+** Application of software packages for simulating Kinematics of Rigid Body.
+Total 26
+Computational Engineering Mechanics (DJS23FLES102)
+Exp. List of Lab experiments
+1 Verification of Polygon law of coplanar forces.
+2 Verification of law of Moment using Bell crank lever.
+3 Determination of Support reaction for beam.
+4 Determination of coefficient of friction using Inclined plane.
+5 Verification of Lami’s theorem using Jib crane.
+6 Resultant of non-concurrent non-parallel coplanar force system.
+7 Determination of coefficient of restitution for Collision of elastic bodies (Law of conservation of
+momentum).
+**List of Programming Exercises
+8 Programming exercises on determination of Resultant of Coplanar Force System.
+9 Programming exercises on determination of Support Reaction.
+10 Programming exercises on Friction.
+11 Plotting of Motion Curves.
+12 Programming exercises on transformations of basic geometric 2D elements.
+13 Simulating Kinematics of Rigid Body.
+Laboratory work should contain total 8 experiments/exercises (Any five from 1 to 7 and any
+three from 8 to 13).
+Books Recommended:
+Text books:
+1. A. K. Tayal, Engineering Mechanics, 14th Edn., Umesh Publication, 2011.
+2. S. Ramamrutham, Engineering Mechanics, Dhanpat Rai Publishing company, 2016.
+Reference Books:
+1. R. C. Hibbeler, Enginering Mechanics, Pearson education, 12th Edn., 2010.
+2. Rajasekaran S and Sankarasubramanian G., “Engineering Mechanics Statics and Dynamics”, 3rd
+Edn., Vikas Publishing House Pvt. Ltd., 2005.
+3. Beer, F. P. & Johnston, E. R., Vector Mechanics for Engineers - Statics and Dynamics, 3rd Edn.,
+Tata McGraw Hill Publishing Company, 2001.
+4. Bhattacharya B., Engineering Mechanics, 3rd Edn., Oxford University press, 2008.
+5. Ramkumar Agarwal, Engineering Mechanics, 1st Edn., Agarwal Education Centre: Self Publication,
+2021.
+6. Nelson and Mc Lean, Engineering Mechanics, 5th Edn., Tata McGraw Hill, 1997.
+
+Table 1:
+5  Robot Kinematics (part-II):
+General Plane motion of Rigid body. The concept of instantaneous center of rotation
+(ICR) for the velocity. Velocity analysis of rigid body using ICR.
+Introduction to Forward Kinematics and Inverse Kinematics. Applications of
+Mechanics in Robotics, Machine Learning and AI.
+** Application of software packages for simulating Kinematics of Rigid Body.  05
+  Total  26
+
+
+Table 2:
+Computational Engineering Mechanics (DJS23FLES102)  
+Exp.  List of Lab experiments
+1  Verification of Polygon law of coplanar forces.
+2  Verification of law of Moment using Bell crank lever.
+3  Determination of Support reaction for beam.
+4  Determination of coefficient of friction using Inclined plane.
+5  Verification of Lami’s theorem using Jib crane.
+6  Resultant of non-concurrent non-parallel coplanar force system.
+7  Determination of coefficient of restitution for Collision of elastic bodies (Law of conservation of
+momentum).
+  **List of Programming Exercises
+8  Programming exercises on determination of Resultant of Coplanar Force System.
+9  Programming exercises on determination of Support Reaction.
+10  Programming exercises on Friction.
+11  Plotting of Motion Curves.
+12  Programming exercises on transformations of basic geometric 2D elements.
+13  Simulating Kinematics of Rigid Body.
+
+
+--- Page 19 ---
+
+7. Harsh Bhasin, Python For Beginners, 1st Edn., New Age International Publishers, 2018.
+8. M. Groover, CAD/CAM: Computer-Aided Design and Manufacturing, 1st Edn., Pearson Education
+India, 2013.
+9. Rudra Pratap, Getting Started with MATLAB: A Quick Introduction for Scientists & Engineers, 1st
+Edn., Oxford University Press, 2010.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 20 ---
+
+Program: Common for all Programs Group: A/B F.Y B.Tech Semester: I/II
+Course: Basic Electrical Engineering & Digital Electronics (DJS23FCES103)
+Course: Basic Electrical Engineering & Digital Electronics Laboratory & Tutorial (DJS23FLES103)
+Pre-requisite:
+1. Knowledge of basic physics.
+2. Knowledge of basic mathematics.
+Objectives:
+1. To develop basic understanding of concepts of DC and AC circuits and analyse their operations
+using various techniques.
+2. To get an insight of digital electronics.
+Outcomes: On completion of the course, the learner will be able to:
+1. Apply the knowledge of theorems/laws to analyse the DC circuits.
+2. Analyse single phase AC circuits.
+3. Demonstrate knowledge of basic number system, logic gates and sequential circuits.
+Basic Electrical Engineering & Digital Electronics (DJS23FCES103)
+Unit Description Duration
+1 DC Circuits
+• Introduction to ideal and practical voltage and current sources
+• Kirchhoff’s current and voltage laws
+05
+• Mesh and Nodal analysis
+• Supernode and Supermesh analysis
+2 DC Network Theorems
+• Source Transformation
+• Star – Delta Transformation
+• Superposition Theorem 06
+• Thevenin’s Theorem
+• Maximum Power Transfer Theorem
+3 AC Circuits
+• Generation and representation of alternating voltage and currents
+• RMS and Average value
+• Phasor representation 10
+• AC through resistance, inductance and capacitance
+• R-L-C series, parallel circuits
+• Calculation of power and power factor
+4 Number Systems and Logic Gates
+• Review of number system
+• Decimal, Binary, Binary coded decimal, Octal, and Hexadecimal number systems
+and conversions
+04
+• Basic gates
+• Universal gates
+• Boolean algebra
+• De Morgan’s Laws
+
+Table 1:
+Basic Electrical Engineering & Digital Electronics (DJS23FCES103)    
+Unit  Description  Duration
+1  DC Circuits
+• Introduction to ideal and practical voltage and current sources
+• Kirchhoff’s current and voltage laws
+• Mesh and Nodal analysis
+• Supernode and Supermesh analysis  05
+2  DC Network Theorems
+• Source Transformation
+• Star – Delta Transformation
+• Superposition Theorem
+• Thevenin’s Theorem
+• Maximum Power Transfer Theorem  06
+3  AC Circuits
+• Generation and representation of alternating voltage and currents
+• RMS and Average value
+• Phasor representation
+• AC through resistance, inductance and capacitance
+• R-L-C series, parallel circuits
+• Calculation of power and power factor  10
+4  Number Systems and Logic Gates
+• Review of number system
+• Decimal, Binary, Binary coded decimal, Octal, and Hexadecimal number systems
+and conversions
+• Basic gates
+• Universal gates
+• Boolean algebra
+• De Morgan’s Laws  04
+
+
+--- Page 21 ---
+
+5 Latches and Flip flops
+• Introduction to Latches
+03
+• Flip-flops: RS, JK, T, D flip-flops
+Total 28
+Basic Electrical Engineering & Digital Electronics Laboratory & Tutorial (DJS23FLES103)
+Exp. Suggested experiments
+1 Study of basic laboratory instruments. (compulsory)
+2 Mesh and Nodal analysis.
+3 Verification of Superposition Theorem.
+4 Verification of Thevenin / Maximum Power Transfer Theorem.
+5 Study of R-L and R-C series circuits.
+6 R-L-C series resonance circuit.
+7 Verification of truth table for gates.
+8 Implementing a given logic function using basic gates/SSI ICs.
+9 Implementation of basic gates using universal gates.
+Batchwise laboratory work of minimum eight experiments from the above suggested list or any other
+experiment based on syllabus will be included, which would help the learner to apply the concept learnt.
+Batchwise tutorial sessions are to be conducted on topics which would help the learner to
+identify/analyze the problem and to apply problem solving techniques learnt.
+Books Recommended:
+Text Books:
+1. B. R. Patil, “Basic Electrical Engineering”, Oxford Higher Education, 2016.
+2. R. R. Singh, “Network Analysis and Synthesis”, McGraw Hill, 2nd Edition, 2019.
+3. R. S. Sedha, “A textbook of Electronic Devices and Circuits”, S. Chand, 2002.
+4. R. P. Jain, “Modern Digital Electronics”, McGraw Hill, 2011.
+Reference Books:
+1. D. P. Kothari and I. J. Nagrath, “Basic Electrical Engineering”, Tata McGraw Hill, 2010.
+2. D. C. Kulshreshtha, “Basic Electrical Engineering”, McGraw Hill, 2009.
+3. E. Hughes, “Electrical and Electronics Technology”, Pearson, 2010.
+4. V. D. Toro, “Electrical Engineering Fundamentals”, Prentice Hall India, 1989.
+5. M. Morris Mano, “Digital design”, Prentice Hall India.
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+5  Latches and Flip flops
+• Introduction to Latches
+• Flip-flops: RS, JK, T, D flip-flops  03
+  Total  28
+
+
+Table 2:
+Basic Electrical Engineering & Digital Electronics Laboratory & Tutorial (DJS23FLES103)  
+Exp.  Suggested experiments
+1  Study of basic laboratory instruments. (compulsory)
+2  Mesh and Nodal analysis.
+3  Verification of Superposition Theorem.
+4  Verification of Thevenin / Maximum Power Transfer Theorem.
+5  Study of R-L and R-C series circuits.
+6  R-L-C series resonance circuit.
+7  Verification of truth table for gates.
+8  Implementing a given logic function using basic gates/SSI ICs.
+9  Implementation of basic gates using universal gates.
+
+
+--- Page 22 ---
+
+Program: Common for all Programs F. Y B. Tech Semester: I & II
+Course: Liberal Learning Group-A
+Health and Wellness- Mind and Body Management (DJS23FTLL101)
+Objectives:
+1. To acquaint learners with the basic concept of Health and wellbeing.
+2. To develop healthy lifestyle habits for good health.
+3. To understand emotional & mental well-being.
+4. To impart strategies to maintain Good Health.
+Outcomes: On completion of the course, the learner will be able to:
+1. Implement the knowledge of Health and wellness in daily lives.
+2. Apply appropriate & innovative methods to avoid risks from harmful habits.
+3. Employ personal development (both physical & emotional) strategies for better living.
+4. Create a plan for good health through a positive mindset.
+Health And Wellness (DJS23FTLL101)
+No of
+Unit Suggested Description of Tutorial Activities
+Assignments
+1 Fundamentals of Good Health 1
+1. Divide the students into small groups and assign each group a specific
+lifestyle choice (Healthy or Unhealthy) to explore.
+• Ask them to discuss the potential effects on health and present their
+findings to the class.
+2 The Basics of Health 2
+1. Create a Personalized Health Goal Plan
+2. Role-play techniques to promote awareness regarding health and disease
+prevention.
+Select a Relevant Topic: Choose a specific health-related topic such as hygiene practices,
+vaccination, or mental health.
+Script Development: Develop a script that combines informative content with creative
+elements.
+Include key messages, facts, and practical tips related to the health issue.
+Use humor, drama, and relatable scenarios to capture the audience's attention.
+Characterization: Each character should have a distinct personality and contribute to the
+overall message of the play.
+3 Yoga for Mind and Body (Any 2) 2
+1. Mindfulness and Meditation Session
+2. Written assignment on the Role of Yoga in enhancing concentration.
+3. Stress Awareness Discussion Group
+
+Table 1:
+Health And Wellness (DJS23FTLL101)    
+Unit  Suggested Description of Tutorial Activities  No of
+Assignments
+1  Fundamentals of Good Health
+1. Divide the students into small groups and assign each group a specific
+lifestyle choice (Healthy or Unhealthy) to explore.
+• Ask them to discuss the potential effects on health and present their
+findings to the class.  1
+2  The Basics of Health
+1. Create a Personalized Health Goal Plan
+2. Role-play techniques to promote awareness regarding health and disease
+prevention.
+Select a Relevant Topic: Choose a specific health-related topic such as hygiene practices,
+vaccination, or mental health.
+Script Development: Develop a script that combines informative content with creative
+elements.
+Include key messages, facts, and practical tips related to the health issue.
+Use humor, drama, and relatable scenarios to capture the audience's attention.
+Characterization: Each character should have a distinct personality and contribute to the
+overall message of the play.  2
+3  Yoga for Mind and Body (Any 2)
+1. Mindfulness and Meditation Session
+2. Written assignment on the Role of Yoga in enhancing concentration.
+3. Stress Awareness Discussion Group  2
+
+
+--- Page 23 ---
+
+• Create a safe and supportive space for students to discuss and share
+their stressors.
+• Organize a stress awareness discussion group where students can
+openly express their concerns, challenges, and coping strategies.
+• Facilitate meaningful conversations on stress management
+techniques.
+• Provide resources for support (such as counseling services) and
+encourage peer support within the group.
+4 1. Emotional Intelligence and Mind Management (Any 2) 2
+1. Role-Play on Conflict Resolution:
+a) Find a partner: Choose a friend who is willing to participate in this role-
+play activity with you.
+b) Select a scenario: Together with your partner, select a conflict scenario to
+role-play. It could be a common situation that often leads to conflicts, such
+as a disagreement over how to divide household chores, a difference of
+opinion on a project at work, or a conflict over limited resources.
+c) Assign roles: Decide who will play each role in the conflict scenario. One
+person will take on the role of one party involved in the conflict, and the
+other person will take on the role of the other party.
+d) Practice conflict resolution techniques: Use the conflict resolution
+techniques you have learned, such as active listening, expressing feelings
+using "I" statements, seeking common ground, and brainstorming solutions.
+e) Reflect and switch roles: After the initial role-play, take a moment to
+reflect on the experience. Discuss what worked well and areas that could be
+improved. Then, switch roles and repeat the role-play, allowing each
+participant to experience the situation from the perspective of the other
+party involved in the conflict.
+• Remember, the purpose of the activity is not to "win" the conflict but rather
+to practice and develop the skills necessary for constructive conflict
+resolution.
+• Approach the role-play with an open mind, a willingness to learn, and a
+commitment to respectful communication.
+2. Self-Assessment and Reflection (Mood O Meter chart activity)
+• Begin the tutorial by facilitating self-assessment activities that encourage
+students to reflect on their emotions, thoughts, and behaviors.
+• Provide questionnaires or reflective exercises that prompt students to
+identify their strengths, areas for improvement, and triggers for stress or
+negative emotions.
+3. Case Study discussion based on Emotional Intelligence
+5 Self-Reflection and Wellness Goal Setting 1
+
+Table 1:
+  • Create a safe and supportive space for students to discuss and share
+their stressors.
+• Organize a stress awareness discussion group where students can
+openly express their concerns, challenges, and coping strategies.
+• Facilitate meaningful conversations on stress management
+techniques.
+• Provide resources for support (such as counseling services) and
+encourage peer support within the group.  
+4  1. Emotional Intelligence and Mind Management (Any 2)
+1. Role-Play on Conflict Resolution:
+a) Find a partner: Choose a friend who is willing to participate in this role-
+play activity with you.
+b) Select a scenario: Together with your partner, select a conflict scenario to
+role-play. It could be a common situation that often leads to conflicts, such
+as a disagreement over how to divide household chores, a difference of
+opinion on a project at work, or a conflict over limited resources.
+c) Assign roles: Decide who will play each role in the conflict scenario. One
+person will take on the role of one party involved in the conflict, and the
+other person will take on the role of the other party.
+d) Practice conflict resolution techniques: Use the conflict resolution
+techniques you have learned, such as active listening, expressing feelings
+using "I" statements, seeking common ground, and brainstorming solutions.
+e) Reflect and switch roles: After the initial role-play, take a moment to
+reflect on the experience. Discuss what worked well and areas that could be
+improved. Then, switch roles and repeat the role-play, allowing each
+participant to experience the situation from the perspective of the other
+party involved in the conflict.
+• Remember, the purpose of the activity is not to "win" the conflict but rather
+to practice and develop the skills necessary for constructive conflict
+resolution.
+• Approach the role-play with an open mind, a willingness to learn, and a
+commitment to respectful communication.
+2. Self-Assessment and Reflection (Mood O Meter chart activity)
+• Begin the tutorial by facilitating self-assessment activities that encourage
+students to reflect on their emotions, thoughts, and behaviors.
+• Provide questionnaires or reflective exercises that prompt students to
+identify their strengths, areas for improvement, and triggers for stress or
+negative emotions.
+3. Case Study discussion based on Emotional Intelligence  2
+5  Self-Reflection and Wellness Goal Setting  1
+
+
+--- Page 24 ---
+
+Gratitude journaling: Have students maintain a gratitude journal where they write down
+three things, they are grateful for each day on the following indicators:
+• How did it feel to write in the gratitude journal?
+• Did you find it challenging or easy to identify things to be grateful for?
+• What positive emotions or thoughts arose while writing the journal?
+• Do you think maintaining a gratitude journal can have a positive impact on your
+well-being as an engineering student?
+Mini Project – Community Health and Wellness Initiative
+1. Research and Assess Community Needs:
+• Conduct surveys or interviews to assess the health and wellness needs of your community.
+• Identify specific areas where improvements can be made, such as physical fitness, mental
+health, social connections, or access to healthcare resources.
+2. Fitness and Recreation Events:
+• Arrange fitness events, such as community walks or runs, group exercise classes, yoga
+sessions, or sports tournaments.
+3. Health Education Campaigns:
+• Launch health education campaigns to raise awareness about specific health issues relevant to
+your community.
+• This could include distributing informational pamphlets, organizing educational talks, or
+Creating Social Media Campaigns to share important health messages.
+• Develop a plan to sustain the project beyond its initial phase.
+OR
+Health and Wellness Advocacy Project
+• Choose a health issue you are passionate about and design a health and wellness advocacy
+project.
+• Students can create a Persuasive Video, Infographic or Social Media Campaign to
+raise awareness and mobilize support for their chosen cause.
+Assessment Scheme for Proposed Course on “Health and Wellness- Mind and Body
+Management”, Course Code: DJS23FTLL101
+Assessment Scheme- Total 50 Marks
+Term Work 25 Marks
+Mini Project 25 Marks
+
+Table 1:
+  Gratitude journaling: Have students maintain a gratitude journal where they write down
+three things, they are grateful for each day on the following indicators:
+• How did it feel to write in the gratitude journal?
+• Did you find it challenging or easy to identify things to be grateful for?
+• What positive emotions or thoughts arose while writing the journal?
+• Do you think maintaining a gratitude journal can have a positive impact on your
+well-being as an engineering student?  
+
+
+Table 2:
+Term Work  25 Marks
+Mini Project  25 Marks
+
+
+--- Page 25 ---
+
+Term Work shall consist of a minimum of five tutorial assignments from the above-mentioned list.
+Suggested Reference books
+1. Physical Activity and Health by Claude Bouchard, Steven N. Blair, William L. Haskell.
+2. Mental Health Workbook by Emily Attached & Marzia Fernandez, 2021.
+3. Mental Health Workbook for Women: Exercises to Transform Negative Thoughts and
+Improve Well-Being by Nashay Lorick, 2022
+4. Lifestyle Diseases: Lifestyle Disease Management, by C. Nyambichu & Jeff Lumiri, 2018.
+5. Physical Activity and Mental Health by Angela Clow & Sarah Edmunds, 2013
+6. Yoga for Beginners: A Practical Guide" by Iyengar B.K.S ,Dorling Kindersley,2006
+7. Emotional Intelligence: Why It Can Matter More Than IQ By Daniel Goleman,Bantam,
+2006
+8. Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by
+James Clear, Penguin,2018
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+8. Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by
+James Clear, Penguin,2018
+
+
+--- Page 26 ---
+
+Semester:
+Program: Common for all Programs Group B F.Y B.Tech
+I/II
+Course: Chemistry (DJS23FCBS103)
+Course: Chemistry Laboratory & Tutorial (DJS23FLBS103)
+Pre-requisite: --
+1. Properties of light and spectrum, wavelength and wave number.
+2. Basic process of polymerization and its properties and types.
+Objectives:
+1. To obtain a strong hold on basic concepts of Chemistry that form fundamental principles of
+technology.
+2. To give exposure to recent material development in the field of engineering.
+Outcomes: On completion of the course, the learner will be able to:
+1. Recognize new approaches of chemical analysis, which are more convenient, less hazardous
+and sustainable to perform.
+2. Describe applications based on nanomaterials and modern polymers in engineering techniques.
+3. Analyze the quality of fuel for energy efficiency.
+4. Recognize properties of materials and alloys with phase transformation.
+5. Identify the parameters responsible for water pollution using suitable methods of water
+treatment.
+Chemistry (DJS23FCBS103)
+Unit Description Duration
+1 Sustainable approach to Chemistry 8
+(A) Spectroscopic Techniques and Applications:
+ Introduction: Electromagnetic spectrum, its origin, properties and applications.
+Numericals based on energy of photon.
+ Spectroscopy: Principle, classification and types.
+ Relation between electromagnetic spectrum, spectroscopy types and energy
+changes.
+ Flame Photometry: Principle, Instrumentation, working, applications, interferences,
+advantages and disadvantages.
+ Jablonski diagram, Introduction to florescence and phosphorescence.
+ Applications of fluorescence.
+(B) Green Chemistry
+ Introduction: Definition, significance.
+ Twelve Principles of green chemistry.
+ Conventional and green synthesis of :
+ (i) Carbaryl (ii) Indigo (iii) Adipic acid (iv) Acrylamide
+ Percentage atom economy (Numericals).
+ Green solvent: Supercritical CO
+2
+
+Table 1:
+Chemistry (DJS23FCBS103)    
+Unit  Description  Duration
+1  Sustainable approach to Chemistry
+(A) Spectroscopic Techniques and Applications:
+ Introduction: Electromagnetic spectrum, its origin, properties and applications.
+Numericals based on energy of photon.
+ Spectroscopy: Principle, classification and types.
+ Relation between electromagnetic spectrum, spectroscopy types and energy
+changes.
+ Flame Photometry: Principle, Instrumentation, working, applications, interferences,
+advantages and disadvantages.
+ Jablonski diagram, Introduction to florescence and phosphorescence.
+ Applications of fluorescence.
+(B) Green Chemistry
+ Introduction: Definition, significance.
+ Twelve Principles of green chemistry.
+ Conventional and green synthesis of :
+ (i) Carbaryl (ii) Indigo (iii) Adipic acid (iv) Acrylamide
+ Percentage atom economy (Numericals).
+ Green solvent: Supercritical CO
+2  8
+
+
+--- Page 27 ---
+
+2 Engineering Materials 5
+(A) Nanomaterials:
+ Introduction to nanomaterials.
+ Fullerenes: Properties and applications.
+ Carbon nanotubes: Types, Properties, Method of preparation (Laser, CVD),
+Applications.
+(B) Polymers
+ Compounding of plastic, Fabrication of plastic by Compression, Injection, Transfer
+and Extrusion moulding.
+ Effect of heat on polymers (glass transition temperature), Viscoelasticity.
+ Conducting Polymers and applications.
+3 Fuels and Combustion 5
+ Introduction: Definition, classification, characteristics of a good fuel.
+ Calorific value: Definition, Units, Gross or Higher calorific value & Net or lower
+calorific value, Dulong’s formula & numerical for calculations of Gross and Net
+calorific values.
+ Analysis of coal- Proximate and Ultimate Analysis (theory and numericals).
+ Combustion: Calculations for requirement of oxygen and air (by weight and by
+volume) for given fuels.
+ Power alcohol.
+ Green fuel: Biodiesel (Synthesis and advantages).
+4 Phase Rule and Applications 4
+ Phase Rule-Gibb’s Phase Rule, Terms involved with examples.
+ One Component System (Water).
+ General characteristics of two component system.
+ Reduced Phase Rule.
+ Two Component System (Pb- Ag).
+ Eutectic system: Applications and Numericals.
+ Advantages and Limitations of Phase Rule.
+5 Water Technology 4
+ Introduction - Impurities in water.
+ Hardness of water- units, types and numericals.
+ Determination of hardness of water by EDTA method and numericals.
+ Softening of water by Ion Exchange process and numericals.
+ BOD, COD- Definition, significance and numericals.
+Total 26
+
+Table 1:
+2  Engineering Materials
+(A) Nanomaterials:
+ Introduction to nanomaterials.
+ Fullerenes: Properties and applications.
+ Carbon nanotubes: Types, Properties, Method of preparation (Laser, CVD),
+Applications.
+(B) Polymers
+ Compounding of plastic, Fabrication of plastic by Compression, Injection, Transfer
+and Extrusion moulding.
+ Effect of heat on polymers (glass transition temperature), Viscoelasticity.
+ Conducting Polymers and applications.  5
+3  Fuels and Combustion
+ Introduction: Definition, classification, characteristics of a good fuel.
+ Calorific value: Definition, Units, Gross or Higher calorific value & Net or lower
+calorific value, Dulong’s formula & numerical for calculations of Gross and Net
+calorific values.
+ Analysis of coal- Proximate and Ultimate Analysis (theory and numericals).
+ Combustion: Calculations for requirement of oxygen and air (by weight and by
+volume) for given fuels.
+ Power alcohol.
+ Green fuel: Biodiesel (Synthesis and advantages).  5
+4  Phase Rule and Applications
+ Phase Rule-Gibb’s Phase Rule, Terms involved with examples.
+ One Component System (Water).
+ General characteristics of two component system.
+ Reduced Phase Rule.
+ Two Component System (Pb- Ag).
+ Eutectic system: Applications and Numericals.
+ Advantages and Limitations of Phase Rule.  4
+5  Water Technology
+ Introduction - Impurities in water.
+ Hardness of water- units, types and numericals.
+ Determination of hardness of water by EDTA method and numericals.
+ Softening of water by Ion Exchange process and numericals.
+ BOD, COD- Definition, significance and numericals.  4
+  Total  26
+
+
+--- Page 28 ---
+
+Chemistry Laboratory & Tutorial (DJS23FLBS103)
+Exp. Suggested experiments
+1 To determine Chloride content of water by Mohr’s Method.
+2 To determine total, temporary, and permanent hardness of water sample by EDTA method.
+3 To determine pH of different solutions using pH meter.
+4 Determination of percent of Zn/Cu in brass.
+5 Molecular weight determination of polymers by Oswald Viscometer.
+6 Synthesis of UF, PF, Nylon 66.
+7 Determination of COD.
+8 Determination of surface Tension of a given liquid at room temperature using Stalgmometer
+by drop number method.
+9 Determination of percent of Fe in Plain carbon steel.
+10 Determination of Moisture content of coal.
+1 1 Determination of Ash content of coal.
+12 Saponification value of oil.
+13 Acid value of oil.
+14 To estimate the emf of Cu-Zn system by Potentiometry.
+15 To determine λ of a given solution by using UV Spectrophotometer.
+max
+16 To validate Beer-Lambert law using UV Spectrophotometer/ colorimeter.
+17 To determine metal ion concentration using colorimeter.
+18 Determination of strength of a given solution (Acid/Base) by using conductometric titration.
+19 Construction of concentration cell and determination of emf by potentiometry.
+Minimum eight experiments from the above suggested list or any other experiment based on syllabus
+will be included, which would help the learner to apply the concept learnt.
+
+Table 1:
+Chemistry Laboratory & Tutorial (DJS23FLBS103)  
+Exp.  Suggested experiments
+1  To determine Chloride content of water by Mohr’s Method.
+2  To determine total, temporary, and permanent hardness of water sample by EDTA method.
+3  To determine pH of different solutions using pH meter.
+4  Determination of percent of Zn/Cu in brass.
+5  Molecular weight determination of polymers by Oswald Viscometer.
+6  Synthesis of UF, PF, Nylon 66.
+7  Determination of COD.
+8  Determination of surface Tension of a given liquid at room temperature using Stalgmometer
+by drop number method.
+9  Determination of percent of Fe in Plain carbon steel.
+10  Determination of Moisture content of coal.
+1 1  Determination of Ash content of coal.
+12  Saponification value of oil.
+13  Acid value of oil.
+14  To estimate the emf of Cu-Zn system by Potentiometry.
+15  To determine λ of a given solution by using UV Spectrophotometer.
+max
+16  To validate Beer-Lambert law using UV Spectrophotometer/ colorimeter.
+17  To determine metal ion concentration using colorimeter.
+18  Determination of strength of a given solution (Acid/Base) by using conductometric titration.
+19  Construction of concentration cell and determination of emf by potentiometry.
+
+
+--- Page 29 ---
+
+Tutorials:
+Minimum eight tutorials based on syllabus will be conducted. Mini project relevant to the subject may
+be included, which would help the learner to apply the concept learnt.
+Books Recommended:
+Text books:
+1. Engineering Chemistry - Jain & Jain (DhanpatRai)
+2. Engineering Chemistry – Dara &Dara (S Chand)
+3. Elementary Organic Spectroscopy-Y.R. Sharma (S Chand)
+4. An introductory text on green chemistry: for undergraduate students/Indu Tucker
+Sidhwani, Rakesh Kumar Sharma (Wiley)
+5. Nanomaterials/ A.K. Bandyopadhyay (New Age Publishers)
+Reference Books:
+1. Engineering Chemistry - Wiley India (ISBN – 9788126519880)
+2. A Text Book of Engineering Chemistry – Shashi Chawla (DhanpatRai)
+3. Concise Inorganic Chemistry – J D LEE
+4. Essentials of Physical Chemistry—B S Bahl, Arun Bahl, G D Tuli.
+5. Fundamentals of molecular spectroscopy- Colin N. Banwell (Tata McGraw-Hill Publications)
+6. Green Chemistry-V.K. Ahluwalia (Narosa Publications)
+7. Basic Atomic and Molecular Spectroscopy/J. Michael Hollas (Royal Society of
+Chemistry)
+8. Nanotechnology: An Introduction to Synthesis, Properties and Applications of
+Nanomaterials/ Thomas Varghese & K.M. Balakrishna (Atlantic)
+Prepared by Checked by Head of the Department Principal
+
+--- Page 30 ---
+
+Program: Common for all Programs Group B F.Y B.Tech Semester: I and II
+Course: Engineering Graphics (DJS23FCES104)
+Course: Engineering Graphics Laboratory (DJS23FLES104)
+Pre-requisite: --
+1. Basics of geometrical constructions
+Objectives:
+1. Students should be able to visualize the objects.
+2. They should be able to understand and read drawing.
+3. To impart and inculcate proper understanding of the theory of projection.
+4. They should be able to present the same.
+Outcomes: On completion of the course, the learner will be able to:
+1. Recognize the value of engineering graphics, as a language of engineers.
+2. Construct orthographic views of basic shapes of solids.
+3. Interpret and sketch orthographic and sectional orthographic views of various machine
+components.
+4. Visualize objects, and draw isometric views.
+5. Build 2D sketches using Auto CAD.
+Engineering Graphics (DJS23FCES104)
+Unit Description Duration
+1 Introduction to Engineering Drawing. Types of Lines, Dimensioning Systems as per IS 02
+conventions, Types of Projections.
+**Introduction to Auto CAD: - Basic Drawing and Editing Commands. Knowledge of
+setting up layers, Dimensioning, Hatching, plotting and Printing
+2 Orthographic projections:- 05
+• Different views of simple machine parts as per the first angle projection method
+recommended by I.S.
+• Full Sectional views of Simple Machine parts.
+**Drawing of orthographic projections using Auto CAD.
+3 Sectional Orthographic projections:- 05
+• Concept of sectioning and drawing section lines,
+• Need for drawing sectional views
+• Section of simple geometrical solids-cases involving different types of cutting
+planes.
+**Drawing of Sectional orthographic projections using Auto CAD.
+4 Isometric Views:- Isometric Views/Drawings of blocks (plain and cylindrical, excluding 06
+spheres).
+**Drawing of Isometric Views using Auto CAD.
+
+Table 1:
+Engineering Graphics (DJS23FCES104)    
+Unit  Description  Duration
+1  Introduction to Engineering Drawing. Types of Lines, Dimensioning Systems as per IS
+conventions, Types of Projections.
+**Introduction to Auto CAD: - Basic Drawing and Editing Commands. Knowledge of
+setting up layers, Dimensioning, Hatching, plotting and Printing  02
+2  Orthographic projections:-
+• Different views of simple machine parts as per the first angle projection method
+recommended by I.S.
+• Full Sectional views of Simple Machine parts.
+**Drawing of orthographic projections using Auto CAD.  05
+3  Sectional Orthographic projections:-
+• Concept of sectioning and drawing section lines,
+• Need for drawing sectional views
+• Section of simple geometrical solids-cases involving different types of cutting
+planes.
+**Drawing of Sectional orthographic projections using Auto CAD.  05
+4  Isometric Views:- Isometric Views/Drawings of blocks (plain and cylindrical, excluding
+spheres).
+**Drawing of Isometric Views using Auto CAD.  06
+
+
+--- Page 31 ---
+
+5 Projection of Solids: - (Prism, Pyramid, Cylinder & Cone only) 08
+Projections of Solids with the axis inclined to HP and VP. (Exclude Spheres, Composite,
+Hollow solids and frustum). Use change of position or Auxiliary plane method.
+**Drawing of Projection of Solid using Auto CAD.
+Total 26
+** Should be covered during Auto CAD Practical.
+Engineering Graphics Laboratory (DJS23FLES104)
+Exe. Suggested exercise
+1 Orthographic Projections model 1 Using Auto CAD.
+2 Orthographic Projections model 2 Using Auto CAD.
+3 Sectional Orthographic Projections model 1 Using Auto CAD.
+4 Sectional Orthographic Projections model 2 Using Auto CAD.
+5 Sectional Orthographic Projections model 3 Using Auto CAD.
+6 Isometric Views model 1 Using Auto CAD.
+7 Isometric Views model 2 Using Auto CAD.
+8 Isometric Views model 3 Using Auto CAD.
+9 Projection of solids (Prism and Pyramid only) model 1 Using Auto CAD.
+10 Projection of solids (Prism and Pyramid only) model 2 Using Auto CAD.
+11 Layout Planning using AutoCAD for PCB.
+12 Layout Planning using AutoCAD for Motherboard.
+Motherboard drawing using Auto CAD
+Minimum eight exercises from the above suggested list covering all the topics or any other experiment
+based on syllabus will be included, which would help the learner to apply the concept learnt.
+Books Recommended:
+Text books:
+1. N. D. Bhatt, ‘Engineering Drawing’, Charotar Publishing House.
+2. M. B. Shah & B. C. Rana ‘Engineering Drawing’, Pearson Education.
+3. Basant Agrawal, C M Agrawal, ‘Engineering Drawing’,Third Edidtion, Tata McGraw Hill Education
+Private Limited.
+Reference Books:
+1. K. Venugopal (2007), ‘Engineering Drawing and Graphics + AutoCAD’, New Age International
+Publishers.
+2. M. L. Dabhade (2008), ‘Engineering Drawing’, Vision Publications.
+3. Dhananjay A. Jolhe, ‘Engineering Drawing with an Introduction to AutoCAD’, Tata McGraw Hill
+Education Private Limited.
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+5  Projection of Solids: - (Prism, Pyramid, Cylinder & Cone only)
+Projections of Solids with the axis inclined to HP and VP. (Exclude Spheres, Composite,
+Hollow solids and frustum). Use change of position or Auxiliary plane method.
+**Drawing of Projection of Solid using Auto CAD.  08
+  Total  26
+
+
+Table 2:
+Engineering Graphics Laboratory (DJS23FLES104)  
+Exe.  Suggested exercise
+1  Orthographic Projections model 1 Using Auto CAD.
+2  Orthographic Projections model 2 Using Auto CAD.
+3  Sectional Orthographic Projections model 1 Using Auto CAD.
+4  Sectional Orthographic Projections model 2 Using Auto CAD.
+5  Sectional Orthographic Projections model 3 Using Auto CAD.
+6  Isometric Views model 1 Using Auto CAD.
+7  Isometric Views model 2 Using Auto CAD.
+8  Isometric Views model 3 Using Auto CAD.
+9  Projection of solids (Prism and Pyramid only) model 1 Using Auto CAD.
+10  Projection of solids (Prism and Pyramid only) model 2 Using Auto CAD.
+11  Layout Planning using AutoCAD for PCB.
+12  Layout Planning using AutoCAD for Motherboard.
+Motherboard drawing using Auto CAD
+
+
+--- Page 32 ---
+
+Semester:
+Program: Common for all Programs Group B F.Y B.Tech
+I&II
+Course: Effective Communication Skills (DJS23FCHS101)
+Course: Effective Communication Skills Laboratory (DJS23FLHS101)
+Pre-requisite:
+Basic proficiency in English Language
+Objectives:
+1. To acquaint learners with the basics of communication with a focus on LSRW
+2. To develop the learner’s proficiency in public speaking skills
+3. To enable learners to use the principles of business writing for effective communication
+4. To impart strategies for personal development
+Outcomes: On completion of the course, the learner will be able to:
+1. Use skills related to the various aspects of communication to express ideas with greater clarity
+2. Apply appropriate verbal/non-verbal cues in social and workplace situations and overcome the
+barriers to communication
+3. Employ personal development strategies for self-assessment, goal setting and maintaining a
+professional persona online
+Effective Communication Skills (DJS23FCHS101)
+Unit Description Duration
+1 10
+FUNDAMENTALS OF COMMUNICATION
+1.1. Introduction to Theory of Communication
+• Definition
+• Objectives
+• The Process of Communication
+1.2. Methods of Communication
+• Verbal Communication
+• Non-verbal Communication
+1.3. Barriers to Communication
+• Physical/Environmental
+• Mechanical
+• Linguistic
+• Psychological
+• Socio-Cultural
+1.4 Channels of communication in an organization
+• Formal (Upward, Downward and Horizontal)
+• Informal (Grapevine)
+
+Table 1:
+Effective Communication Skills (DJS23FCHS101)    
+Unit  Description  Duration
+1  FUNDAMENTALS OF COMMUNICATION
+1.1. Introduction to Theory of Communication
+• Definition
+• Objectives
+• The Process of Communication
+1.2. Methods of Communication
+• Verbal Communication
+• Non-verbal Communication
+1.3. Barriers to Communication
+• Physical/Environmental
+• Mechanical
+• Linguistic
+• Psychological
+• Socio-Cultural
+1.4 Channels of communication in an organization
+• Formal (Upward, Downward and Horizontal)
+• Informal (Grapevine)  10
+
+
+--- Page 33 ---
+
+2 SPEAKING SKILLS 2
+2.1. Developing Verbal Aptitude
+• Meaning of Words in Context
+• Synonyms & Antonyms
+• Identifying Common Errors
+• Subject - Verb Agreement
+• One Word Substitution
+• Pairs of Confused Words
+• Articles
+• Prepositions
+2.2. Public Speaking
+• Planning your speech
+• Delivery of speech (Vocalics and Body Language)
+• Dealing with stage fear
+3 READING SKILLS 3
+3.1 Mechanics of Reading
+3.2 Undesirable Reading Habits
+3.3 Types of Reading
+3.4 Guidelines for Improving Reading Skills
+3.5 Reading Comprehension
+3.6 Summarization Techniques
+4 LISTENING SKILLS 2
+4.1 Purpose of Listening
+4.2 Process of Listening
+4.3 Barriers to Listening
+4.4 Techniques for Improving Listening Skills
+5 WRITING SKILLS 6
+5.1. Professional Letter writing
+• Seven Cs of Business Correspondence
+• Parts of a Formal Letter
+• Complete Block Format
+• Types of Letters (Request, Grievance and Sales)
+5.2. Email communication
+• Popularity of Email
+
+Table 1:
+    
+2  SPEAKING SKILLS
+2.1. Developing Verbal Aptitude
+• Meaning of Words in Context
+• Synonyms & Antonyms
+• Identifying Common Errors
+• Subject - Verb Agreement
+• One Word Substitution
+• Pairs of Confused Words
+• Articles
+• Prepositions
+2.2. Public Speaking
+• Planning your speech
+• Delivery of speech (Vocalics and Body Language)
+• Dealing with stage fear  2
+3  READING SKILLS
+3.1 Mechanics of Reading
+3.2 Undesirable Reading Habits
+3.3 Types of Reading
+3.4 Guidelines for Improving Reading Skills
+3.5 Reading Comprehension
+3.6 Summarization Techniques  3
+4  LISTENING SKILLS
+4.1 Purpose of Listening
+4.2 Process of Listening
+4.3 Barriers to Listening
+4.4 Techniques for Improving Listening Skills  2
+5  WRITING SKILLS
+5.1. Professional Letter writing
+• Seven Cs of Business Correspondence
+• Parts of a Formal Letter
+• Complete Block Format
+• Types of Letters (Request, Grievance and Sales)
+5.2. Email communication
+• Popularity of Email  6
+
+
+--- Page 34 ---
+
+• Problems in Email Communication
+• Techniques for Writing Effective Emails
+• Email etiquette
+6 PERSONAL DEVELOPMENT PLANNING 3
+6.1 Self- Assessment strategies (SWOT Analysis)
+6.2 Digital Footprints-Maintaining a Professional Persona
+6.3 Goal Setting
+Total 26
+Effective Communication Skills Laboratory (DJS23FLHS101)
+Laboratory (conducted batch wise) will comprise of activities and assignments based on the syllabus
+Books Recommended:
+1. Hemphill, P. D., McCormick, D. W., & Hemphill, R. D. (2001). Business Communication with
+Writing Improvement Exercises. Upper Saddle River, NJ: Prentice Hall.
+2. Locker, Kitty O. Kaczmarek, Stephen Kyo. (2019). Business Communication: Building Critical
+Skills. Place of publication not identified: Mcgraw-hill.
+3. Murphy, H. (1999). Effective Business Communication. Place of publication not identified:
+Mcgraw-Hill.
+4. Raman, M., & Sharma, S. (2016). Technical Communication: Principles and Practice. New
+Delhi: Oxford University Press.
+5. Kaul, A. (2015). Effective Business Communication. Place of publication not identified:
+Prentice-Hall of India.
+6. Rizvi, A. M. (2010). Effective Technical Communication: A guide for scientists and engineers.
+New Delhi: Tata McGraw Hill.
+7. Lewis, N. (2014). Word Power Made Easy. Random House USA.
+8. Sanjay Kumar & Pushp Lata (2018). Communication skills with CD. New Delhi: Oxford
+University Press.
+9. Mathew, Shirley (2022). Professional Communication and Ethics-I. Technical Publication.
+10. Koneru, A. (2018). Professional Communication. McGraw Hill.
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+  • Problems in Email Communication
+• Techniques for Writing Effective Emails
+• Email etiquette  
+6  PERSONAL DEVELOPMENT PLANNING
+6.1 Self- Assessment strategies (SWOT Analysis)
+6.2 Digital Footprints-Maintaining a Professional Persona
+6.3 Goal Setting  3
+  Total  26
+
+
+--- Page 35 ---
+
+Program: Common for all Programs Group B F.Y B.Tech Semester: I & II
+Course: Workshop Practices (DJS23FLVS101)
+Pre-requisite: Basic Science
+Objectives:
+1. To explain the concepts of industrial safety and the importance of working safely.
+2. To identify tools, work material and measuring instruments useful for fitting, welding,
+carpentry, sheet metal, plumbing, PCB and house wiring practice.
+3. To comprehend various fabrication processes and machine protocols.
+4. To handle tools and instruments and use them to prepare joints/jobs of specific shape and size.
+5. To be familiar with the basic concept and structure of computer hardware and networking.
+6. To know how to use the basic work tools of house wiring & house wiring connections etc.
+Outcomes: On completion of the course, learner will be able to:
+1. Get oriented to an engineering workshop environment and learn to conduct oneself adhering to
+the safety norms and set procedures.
+2. Get familiarized with various methods of commonly used fabrication techniques and the type
+of hand tools /power tools required to perform such of these techniques.
+3. Get acquainted with the production of simple jobs like joints, component of simple shape etc.
+as per component drawings with reasonable degree of tolerance.in fitting, carpentry, sheet
+metal, plumbing, welding, machining, 3D printing, electrical and electronic trades.
+Workshop Practices (DJS23FLVS101)
+Duration
+Trade Description
+(Hrs.)
+Group A
+1 Fabrication Processes
+Use and setting of fitting tools for chipping, cutting, filing, marking, center
+punching, drilling, tapping and finishing.
+12
+Edge preparation for welding jobs. Arc welding for different jobs like, Lap
+welding of two plates, butt welding of plates with simple cover, arc welding to
+join plates at right angles.
+2 PCB
+Design, Layout drawing, Positive and negative film making, PCB etching and
+12
+drilling, Tinning and soldering technique, component mounting and circuit
+testing.
+3 House Wiring
+Electrical safety in the workplace and safe work practices. Protective
+equipment, measures and tools. Introduction to house wiring, different types of
+12
+cables. types of power supply, distribution of power supply, electrical wiring
+symbols. Wiring for two lamps (bulbs) with independent switch controls with
+or without looping, wiring for staircase lamp.
+
+Table 1:
+Workshop Practices (DJS23FLVS101)    
+Trade  Description  Duration
+(Hrs.)
+Group A    
+1  Fabrication Processes
+Use and setting of fitting tools for chipping, cutting, filing, marking, center
+punching, drilling, tapping and finishing.
+Edge preparation for welding jobs. Arc welding for different jobs like, Lap
+welding of two plates, butt welding of plates with simple cover, arc welding to
+join plates at right angles.  12
+2  PCB
+Design, Layout drawing, Positive and negative film making, PCB etching and
+drilling, Tinning and soldering technique, component mounting and circuit
+testing.  12
+3  House Wiring
+Electrical safety in the workplace and safe work practices. Protective
+equipment, measures and tools. Introduction to house wiring, different types of
+cables. types of power supply, distribution of power supply, electrical wiring
+symbols. Wiring for two lamps (bulbs) with independent switch controls with
+or without looping, wiring for staircase lamp.  12
+
+
+--- Page 36 ---
+
+4 Computer Hardware and Networking:
+Disassembly of a Personal Computer (PC), Identification of Components of a
+PC such as power supply, motherboard, processor, hard disk, memory (RAM,
+ROM), CMOS battery, CD drive, monitor, keyboard, mouse, printer, scanner,
+pen drives, disk drives etc. Assembling of PC, Installation of Operating System
+12
+(Any one) and Device drivers, Boot-up sequence. Installation of application
+software (at least one). Basic troubleshooting and maintenance. Identification
+of network components: LAN card, wireless card, switch, hub, router, different
+types of network cables (straight cables, crossover cables, rollover cables).
+Basic networking and crimping.
+Group B
+5 Sheet Metal
+Introduction to primary technology processes involving bending, punching and 08
+drawing, various sheet metal joints, development of joints.
+6 Pipe Fitting
+Use of plumbing tools, spanners, wrenches, threading dies, demonstration of
+08
+preparation of a domestic line involving fixing of a water tap and use of
+coupling, elbow, tee, and union etc.
+7 CNC Machines
+Introduction of CNC machine tools, working principle, classification,
+constructional features of CNC machines, CNC controller, types of motion 08
+controls in CNC machines, applications of CNC machines. Manual part
+programming for turning and milling.
+8 3D Printing
+Introduction to Additive Manufacturing Technologies for engineering
+08
+applications. 3D printing of a simple custom object using FDM, SLA and SLS
+technologies.
+9 Drone:
+Introduction to drone and its applications. Fabrication and testing of mini 08
+drones.
+List of Laboratory Experiments:
+1. To study various types fitting tools and make a Square joint, V joint, T joint, half
+round joint, dovetail joint from the given two M.S pieces (Any one joint).
+2. To study various welding techniques and make a V-butt joint or Lap-joint, using the
+given mild steel pieces by arc welding.
+3. To make printed circuit board as per the given circuit drawing.
+4. To make connection to two lights controlled by one switch in series or one light,
+controlled by two-way switches.
+5. To study computer hardware and operating system.
+6. To study various types of sheet metal tools and make square or rectangular tray.
+7. To study various types of plumbing tools and make one job containing various pipe
+fitting.
+
+Table 1:
+4  Computer Hardware and Networking:
+Disassembly of a Personal Computer (PC), Identification of Components of a
+PC such as power supply, motherboard, processor, hard disk, memory (RAM,
+ROM), CMOS battery, CD drive, monitor, keyboard, mouse, printer, scanner,
+pen drives, disk drives etc. Assembling of PC, Installation of Operating System
+(Any one) and Device drivers, Boot-up sequence. Installation of application
+software (at least one). Basic troubleshooting and maintenance. Identification
+of network components: LAN card, wireless card, switch, hub, router, different
+types of network cables (straight cables, crossover cables, rollover cables).
+Basic networking and crimping.  12
+Group B    
+5  Sheet Metal
+Introduction to primary technology processes involving bending, punching and
+drawing, various sheet metal joints, development of joints.  08
+6  Pipe Fitting
+Use of plumbing tools, spanners, wrenches, threading dies, demonstration of
+preparation of a domestic line involving fixing of a water tap and use of
+coupling, elbow, tee, and union etc.  08
+7  CNC Machines
+Introduction of CNC machine tools, working principle, classification,
+constructional features of CNC machines, CNC controller, types of motion
+controls in CNC machines, applications of CNC machines. Manual part
+programming for turning and milling.  08
+8  3D Printing
+Introduction to Additive Manufacturing Technologies for engineering
+applications. 3D printing of a simple custom object using FDM, SLA and SLS
+technologies.  08
+9  Drone:
+Introduction to drone and its applications. Fabrication and testing of mini
+drones.  08
+
+
+--- Page 37 ---
+
+8. To study various operations of a CNC machining centre and make one simple job on
+CNC turning.
+9. To study various 3D printing techniques and make a simple object using any of this
+technique.
+10. To study, fabricate and test mini drones.
+Any other experiment based on syllabus may be included, which would help the
+learner to understand topic/concept.
+Books Recommended:
+Text books:
+1. Mechanical Workshop Practice, 2nd Edition, K.C. John, PHI Learning Pvt.Ltd.2014.
+2. Manufacturing Technology-Vol I, 4th Edition, P.N. Rao, Tata McGraw Hill, 2014.
+3. Printed Circuit Boards: Design, fabrication, assembly and testing, 1st Edition, R.S.
+Khandpur, Tata McGraw Hill, 2005.
+Reference Books:
+1. Manufacturing Processes and Systems,9th Edition, P.F.Ostwald, John Willy &Sons
+INC. UK, 2008.
+2. Electrical Workshop: Safety, Commissioning, maintenance and testing of electrical
+equipment, 3rd Edition, R. P. Singh, IK International Publishing House Pvt. Ltd. 2012.
+Evaluation Scheme:
+Laboratory: (Term work)
+Term work shall consist of minimum one main job and two group jobs.
+The distribution of marks for term work shall be as follows:
+Laboratory work
+Any one Job from Group A (Main Job) : 15 marks
+Any two Jobs from Group B (Group Job) : 10 marks
+Total Marks : 25 marks
+The final certification and acceptance of term work will be subject to satisfactory
+performance of laboratory work and upon fulfilling minimum passing criteria in the
+term work.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 38 ---
+
+Program: Common for all Programs F.Y. B. Tech
+Course: Indian Knowledge System (DJS23FTHS102)
+Pre-requisite: --
+1. NIL
+Objectives:
+1. To impart knowledge about basic principles of thought process, reasoning, and inferencing.
+2. To make students aware of Indian Traditional knowledge Systems connecting society and
+nature.
+3. To acquaint students with holistic lifestyle of yogic science and wisdom in modern society
+with rapid technological advancements and societal disruptions.
+Outcomes: On completion of the course, the learner will be able to:
+CO1 Understand the history of Indian education system.
+CO2 Learn about Indian Scientists and their inventions.
+CO3 Understand and appreciate the various art forms and architecture in India.
+CO4 Illustrate the classic literature written in Indian languages.
+CO5 Know the various religions followed in India and their philosophies.
+Indian Knowledge System (DJS23FTHS102)
+Unit Description Duration
+1 Indian Education System 4
+1.1. Gurukul system
+1.2. Ancient Universities (Nalanda, Takshashila,Vikramshila,Vallabhi,Nagarjuna,etc.)
+2 Indian Scientists and Their inventions 6
+2.1. Patanjali, Aryabhatta, Bhaskaracharya, Charaka, Brahmagupta, Varahmitra,
+Sushruta, Kanada, Baudhyana, etc.
+3 Indian art and architecture 6
+3.1 Mughal Paintings, Tanjore Paintings, Madhubani Paintings, Warli Paintings, etc.
+3.2 Harrappa and Mohenjo-Daro Civilization
+3.3 Temples and other religious places
+3.4 Buddhist stupas
+3.5 Forts and monuments
+4 Indian Classic Literature 6
+4.1. Puranas
+4.2. Epics (Ramayana, Mahabharata, Shakuntala, Meghdoota, Arthashastra,Sangam
+Literature, Malavikagnimitram etc.)
+5 Religion and Philosophy 4
+5.1. Vedas
+5.2. Buddhism
+5.3. Jainism and other religions
+Total 26
+
+Table 1:
+Indian Knowledge System (DJS23FTHS102)    
+Unit  Description  Duration
+1  Indian Education System
+1.1. Gurukul system
+1.2. Ancient Universities (Nalanda, Takshashila,Vikramshila,Vallabhi,Nagarjuna,etc.)  4
+2  Indian Scientists and Their inventions
+2.1. Patanjali, Aryabhatta, Bhaskaracharya, Charaka, Brahmagupta, Varahmitra,
+Sushruta, Kanada, Baudhyana, etc.  6
+3  Indian art and architecture
+3.1 Mughal Paintings, Tanjore Paintings, Madhubani Paintings, Warli Paintings, etc.
+3.2 Harrappa and Mohenjo-Daro Civilization
+3.3 Temples and other religious places
+3.4 Buddhist stupas
+3.5 Forts and monuments  6
+4  Indian Classic Literature
+4.1. Puranas
+4.2. Epics (Ramayana, Mahabharata, Shakuntala, Meghdoota, Arthashastra,Sangam
+Literature, Malavikagnimitram etc.)  6
+5  Religion and Philosophy
+5.1. Vedas
+5.2. Buddhism
+5.3. Jainism and other religions  4
+  Total  26
+
+
+--- Page 39 ---
+
+List of Tutorials/Assignments
+1. Indian Education System
+i. Group discussions/debates on various education systems.
+2. Indian Scientists and Their inventions
+i. Group presentations on various Indian scientists
+ii. An assignment on different inventions by Indians and their impact on world.
+3. Indian art and architecture
+i. Group Poster project on different painting forms and Harappa and Mohenjo-Daro
+civilization.
+ii. Group presentation on different archaeological structures in India
+4. Indian Classic Literature
+i. An assignment on review of any one of the Indian classic literatures.
+ii. Group discussion/Debate on the importance of the Indian classic literature in
+spreading the awareness about the importance of Indian culture and traditions.
+OR
+iii. Dramatic Adaptations:
+ Ask students to adapt a scene or act from Indian classical literature into a dramatic
+performance.
+ They can write scripts, create props and costumes, and rehearse their adaptations.
+ Encourage creativity while staying true to the essence of the original work.
+ Students can perform their adaptations for the class or in a larger setting.
+5. Religion and Philosophy
+i. A group discussion/debate on the various religions and their philosophies
+Suggested Text/Reference Books
+1. B. Mahadevan, V. R. Bhat, Nagendra Pavana, ‘Introduction to Indian Knowledge Systems:
+Concepts and Applications’, PHI Learning Publications, Delhi, 2022.
+2. Satishchandra Chaterjee, Dheerendramohan Datta, An Introduction to Indian Philosophy,
+Motilal Banarsidass Publishing House, New Delhi, 2016
+3. V.Sivaramakrishnan (Ed.), ‘Cultural Heritage of India-course materia’l, Bharatiya
+Vidya Bhavan, Mumbai. 5 th Edition,2014
+
+Table 1:
+B. Mahadevan, V. R. Bhat, Nagendra Pavana, ‘Introduction to Indian Knowledge Systems:
+Concepts and Applications’, PHI Learning Publications, Delhi, 2022.
+Satishchandra Chaterjee, Dheerendramohan Datta, An Introduction to Indian Philosophy,
+Motilal Banarsidass Publishing House, New Delhi, 2016
+
+
+--- Page 40 ---
+
+Evaluation Scheme
+Tutorials (Term work)
+Term work shall consist of 8 tutorials/assignments and a mini project presentation.
+The distribution of marks for term work shall be as follows:
+Tutorials/Assignments ……………………………………. (25) Marks
+Mini project Report Presentation…………………………. (25) Marks
+TOTAL: …………………………………………………... (50) Marks
+The final certification and acceptance of term work will be subject to satisfactory performance of
+tutorials/assignments and upon fulfilling minimum passing criteria in the term work.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 41 ---
+
+Program: Common for all Programs F.Y B.Tech Semester: II
+Course: Mathematics - II (DJS23FCBS201)
+Course: Mathematics - II Tutorial (DJS23FTBS201).
+Pre-requisite: -- Knowledge of
+1. Methods of integration.
+2. Methods of differentiation.
+3. Basics of differential equations.
+Objectives:
+1. The course is aimed to develop the Mathematical and basic Statistical skills of engineering
+students that are imperative for effective understanding of engineering subjects. The topics
+introduced will serve as basic tools for specialized studies in many fields of engineering and
+technology.
+2. To provide hands on experience in using SciLab software to handle real life problems.
+Outcomes: On completion of the course, the learner will be able to:
+1. Illustrate the concepts of Beta and Gamma function, DUIS and rectification of plane curves.
+2. Solve Multiple integrals.
+3. Apply the concepts of Multiple Integrals to find Area, Volume, and mass of lamina.
+4. Solve various types of First Order and Higher Order differential equations.
+5. Apply the principles of Numerical Method for solving differential equation and numerical
+integration analytically and using SciLab.
+Mathematics - II (DJS23FCBS201)
+Unit Description Duration
+1 Beta and Gamma Function, Differentiation under Integral sign and Rectification: 12
+1.1 Beta and Gamma functions and its properties.
+1.2 Differentiation under integral sign with constant limits of integration.
+1.3. Tracing of curves: Cardioid, Strophoid, Bernoulli’s Lemniscate, Astroid, and Cycloid.
+3D Solids - Sphere, Cone, Cylinder, Paraboloid, Ellipsoid.
+1.4 Rectification of plane curves in Cartesian form.
+1.5. Rectification of curve in Parametric and Polar forms.
+2 Multiple Integrals: 7
+Double Integration:
+2.1. Introduction, Evaluation of Double Integrals. (Cartesian & Polar).
+2.2. Evaluation of double integrals by changing the order of integration.
+2.3. Evaluation of double integrals over the given region. (Cartesian & Polar).
+2.4. Evaluation of double integrals by changing to polar coordinates (using Jacobian).
+Triple Integration:
+2.5. Introduction and evaluation of Triple Integrals using Cartesian coordinate system.
+2.6. Evaluation of triple integrals using cylindrical and spherical coordinate systems.
+3 Application Multiple Integrals: 04
+3.1. Application of double integrals to compute Area and Mass.
+3.2. Application of triple integrals to compute Volume.
+
+Table 1:
+Mathematics - II (DJS23FCBS201)    
+Unit  Description  Duration
+1  Beta and Gamma Function, Differentiation under Integral sign and Rectification:
+1.1 Beta and Gamma functions and its properties.
+1.2 Differentiation under integral sign with constant limits of integration.
+1.3. Tracing of curves: Cardioid, Strophoid, Bernoulli’s Lemniscate, Astroid, and Cycloid.
+3D Solids - Sphere, Cone, Cylinder, Paraboloid, Ellipsoid.
+1.4 Rectification of plane curves in Cartesian form.
+1.5. Rectification of curve in Parametric and Polar forms.  12
+2  Multiple Integrals:
+Double Integration:
+2.1. Introduction, Evaluation of Double Integrals. (Cartesian & Polar).
+2.2. Evaluation of double integrals by changing the order of integration.
+2.3. Evaluation of double integrals over the given region. (Cartesian & Polar).
+2.4. Evaluation of double integrals by changing to polar coordinates (using Jacobian).
+Triple Integration:
+2.5. Introduction and evaluation of Triple Integrals using Cartesian coordinate system.
+2.6. Evaluation of triple integrals using cylindrical and spherical coordinate systems.  7
+3  Application Multiple Integrals:
+3.1. Application of double integrals to compute Area and Mass.
+3.2. Application of triple integrals to compute Volume.  04
+
+
+--- Page 42 ---
+
+4 Differential Equations of First Order and First Degree: 05
+3.1 Exact differential Equations, Equations reducible to exact form by using four rules of
+integrating factors.
+3.2 Linear differential equations (Review), equation reducible to linear form, Bernoulli’s
+equation.
+5 Higher Order Linear Differential Equations with Constant Coefficients and Variable 07
+Coefficients:
+4.1. Linear Differential Equation with constant coefficient: complementary function,
+particular integrals of differential equation of the type f(D)y = X, where X is
+eax , sin(ax+b) , cos(ax+b) , xm , xmsinax , xmcosax , eaxV , xV .
+4.2. Method of variation of parameters (upto 3rd order).
+4.3. Cauchy’s homogeneous linear differential equation.
+6 Numerical solution of ordinary differential equations of first order and first degree, 04
+Numerical Integration:
+6.1. Numerical solution of ordinary differential equation using: (a) Taylor series method (b)
+Runge‐Kutta method of order four.
+6.2. Numerical integration by (a) Trapezoidal rule (b) Simpson’s 1/3rd rule (c) Simpson’s
+3/8th rule (all without proof).
+Total 39
+Mathematics - II Tutorial (DJS23FTBS201).
+Tut. Suggested Tutorials (including SciLab programs)
+1 Beta and Gamma Functions, DUIS and Rectification.
+2 Double integration
+3 Triple Integration
+4 Application of multiple integrals.
+5 Differential Equation of First Order and First Degree.
+6 Higher Order Differential Equation.
+8 Curve Tracing.
+9 Numerical Integration by Trapezoidal rule.
+10 Numerical Integration by Simpson’s 1/3rd rule.
+11 Numerical Integration by Simpson’s 3/8th rule.
+12 Numerical Solution of Ordinary Differential Equations of first order and first degree.
+15 Numerical Solution of Ordinary Differential Equations using Runge‐Kutta fourth order method.
+
+Table 1:
+4  Differential Equations of First Order and First Degree:
+3.1 Exact differential Equations, Equations reducible to exact form by using four rules of
+integrating factors.
+3.2 Linear differential equations (Review), equation reducible to linear form, Bernoulli’s
+equation.  05
+5  Higher Order Linear Differential Equations with Constant Coefficients and Variable
+Coefficients:
+4.1. Linear Differential Equation with constant coefficient: complementary function,
+particular integrals of differential equation of the type f(D)y = X, where X is
+eax , sin(ax+b) , cos(ax+b) , xm , xmsinax , xmcosax , eaxV , xV .
+4.2. Method of variation of parameters (upto 3rd order).
+4.3. Cauchy’s homogeneous linear differential equation.  07
+6  Numerical solution of ordinary differential equations of first order and first degree,
+Numerical Integration:
+6.1. Numerical solution of ordinary differential equation using: (a) Taylor series method (b)
+Runge‐Kutta method of order four.
+6.2. Numerical integration by (a) Trapezoidal rule (b) Simpson’s 1/3rd rule (c) Simpson’s
+3/8th rule (all without proof).  04
+  Total  39
+
+
+Table 2:
+Mathematics - II Tutorial (DJS23FTBS201).  
+Tut.  Suggested Tutorials (including SciLab programs)
+1  Beta and Gamma Functions, DUIS and Rectification.
+2  Double integration
+3  Triple Integration
+4  Application of multiple integrals.
+5  Differential Equation of First Order and First Degree.
+6  Higher Order Differential Equation.
+8  Curve Tracing.
+9  Numerical Integration by Trapezoidal rule.
+10  Numerical Integration by Simpson’s 1/3rd rule.
+11  Numerical Integration by Simpson’s 3/8th rule.
+12  Numerical Solution of Ordinary Differential Equations of first order and first degree.
+15  Numerical Solution of Ordinary Differential Equations using Runge‐Kutta fourth order method.
+
+
+--- Page 43 ---
+
+Minimum eight tutorials (including SciLab programs) from the above suggested list or any other
+experiment based on syllabus will be included, which would help the learner to apply the concept
+learnt.
+Books Recommended:
+Text Books:
+1. Higher Engineering Mathematics, Dr. B. S. Grewal, Khanna Publication.
+2. Advanced Engineering Mathematics, Dennis G. Zill, Warren S. Wright.
+Reference Books:
+1. Calculus, Thomas and Finney, Pearson Education.
+2. Advanced Engineering Mathematics, Erwin Kreyszig, Wiley Eastern Limited, 9th Ed.
+3. Advanced Engineering Mathematics by H. K. Dass, 28th edition, S. Chand 2010.
+4. Applied Numerical Methods with MATLAB for Engineers and Scientists by Steven Chapra,
+McGraw Hill.
+5. A First Course in Differential Equations with Modelling Applications, Dennis G. Zill.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 44 ---
+
+Program: Common for all Programs F. Y B.Tech Semester: II
+Course: Object Oriented Programming using Java (DJS23FCES201)
+Course: Object Oriented Programming using Java Laboratory (DJS23FLES201)
+Pre-requisite: --
+1. Basics of Programming
+Objective: The objective of this course is
+1. To make students familiar with basic and Object-Oriented features of Java.
+2. To expose students to analyze a problem statement, develop suitable logic and implement it in
+Java.
+3. To enable students to design and develop GUI applications.
+Outcomes: On completion of the course, the learner will be able to:
+1. Develop programs by applying Object-Oriented concepts of JAVA to solve real-world
+problems.
+2. Achieve Robustness and Concurrency while developing programs (Exception Handling and
+Multithreading ).
+3. Design Graphical User Interface using swing.
+Object Oriented Programming using Java (DJS23FCES201)
+Unit Description Duration
+1 Introduction to Java as Object Oriented Programming Language 04
+Fundamentals of Java Programming: Overview of procedure and object-oriented
+programming, Features of Java, Java Virtual Machine
+Principles of OOP: Object, Class, Encapsulation, Abstraction, Inheritance, Polymorphism
+Basic Constructs: Constants, variables and data types, Wrapper classes, Operators and
+Expressions
+Input & Output in Java: command line arguments, BufferedReader class and Scanner class
+2 Branching and Looping 04
+Branching and looping: if, if-else, nested if-else, if-else-if ladder, switch-case, break,
+continue, for loop, while loop, and do-while loop
+Arrays, Strings and Collection Types
+Arrays, Strings (String and StringBuffer classes)
+Collections: ArrayList, Vectors
+3 Classes and Objects 06
+Access specifiers, static and non-static members, Passing and returning variables and
+references, Method Overloading, Recursion, Array of Objects
+Constructors
+Constructors: Default, Parameterized Constructors, copy constructor and Constructor
+overloading
+
+Table 1:
+Object Oriented Programming using Java (DJS23FCES201)    
+Unit  Description  Duration
+1  Introduction to Java as Object Oriented Programming Language
+Fundamentals of Java Programming: Overview of procedure and object-oriented
+programming, Features of Java, Java Virtual Machine
+Principles of OOP: Object, Class, Encapsulation, Abstraction, Inheritance, Polymorphism
+Basic Constructs: Constants, variables and data types, Wrapper classes, Operators and
+Expressions
+Input & Output in Java: command line arguments, BufferedReader class and Scanner class  04
+2  Branching and Looping
+Branching and looping: if, if-else, nested if-else, if-else-if ladder, switch-case, break,
+continue, for loop, while loop, and do-while loop
+Arrays, Strings and Collection Types
+Arrays, Strings (String and StringBuffer classes)
+Collections: ArrayList, Vectors  04
+3  Classes and Objects
+Access specifiers, static and non-static members, Passing and returning variables and
+references, Method Overloading, Recursion, Array of Objects
+Constructors
+Constructors: Default, Parameterized Constructors, copy constructor and Constructor
+overloading  06
+
+
+--- Page 45 ---
+
+4 Inheritance, Interfaces and packages 06
+Inheritance and its types, Role of Constructors in inheritance, Method Overriding, super
+keyword, abstract class and abstract method, final keyword, Static and dynamic binding in
+Java, finalize method.
+Interfaces: Implementing multiple inheritance and extending interfaces
+Packages: explore predefined packages, creating user defined packages and importing the
+same
+5 Exception Handling and Multithreading (Robustness and Concurrency) 04
+Error vs Exception, try, catch, finally, throw, throws, creating custom exceptions
+Multithreading: Need of Multithreading, Thread lifecycle, methods of Thread class, creating
+threads using Runnable interface and Thread class, Thread synchronization
+6 GUI programming in JAVA 02
+SWING Programming: Swing Components and Containers, Swing Packages, A Simple
+Swing Application, Designing Swing GUI Application and Event handling
+Total 26
+Object Oriented Programming using Java (DJS23FLES201)
+Suggested experiments
+1. Program to demonstrate input using Scanner, BufferedReader and command line arguments.
+2. Programs to demonstrate different decision-making statements.
+3. Program to implement Arrays (1D, 2D).
+4. Program on String and String Buffer.
+5. Program on Collections (ArrayList/ Vectors)
+6. Program to create class with members and methods.
+7. Programs on static, non-static, recursive and overloaded methods.
+8. Program on constructor and constructor overloading.
+9. Program on passing and returning object as argument.
+10. Program on creating user defined package.
+11. Programs on single, multilevel, and hierarchical inheritance.
+12. Program to demonstrate multiple inheritance using interfaces (Use super keyword).
+13. Program on abstract class
+14. Program on dynamic method dispatch using base class and interface reference.
+15. Program to demonstrate try, catch, throw, throws and finally.
+16. Program to implement user defined exception.
+17. Program to demonstrate concept of multithreading.
+18. Java programs to understand GUI designing and event handling.
+Minimum 10-15 experiments from the above suggested list or any other experiment based on syllabus
+will be included, which would help the learner to apply the concept learnt.
+
+Table 1:
+4  Inheritance, Interfaces and packages
+Inheritance and its types, Role of Constructors in inheritance, Method Overriding, super
+keyword, abstract class and abstract method, final keyword, Static and dynamic binding in
+Java, finalize method.
+Interfaces: Implementing multiple inheritance and extending interfaces
+Packages: explore predefined packages, creating user defined packages and importing the
+same  06
+5  Exception Handling and Multithreading (Robustness and Concurrency)
+Error vs Exception, try, catch, finally, throw, throws, creating custom exceptions
+Multithreading: Need of Multithreading, Thread lifecycle, methods of Thread class, creating
+threads using Runnable interface and Thread class, Thread synchronization  04
+6  GUI programming in JAVA
+SWING Programming: Swing Components and Containers, Swing Packages, A Simple
+Swing Application, Designing Swing GUI Application and Event handling  02
+  Total  26
+
+
+Table 2:
+Object Oriented Programming using Java (DJS23FLES201)  
+  Suggested experiments
+  1. Program to demonstrate input using Scanner, BufferedReader and command line arguments.
+2. Programs to demonstrate different decision-making statements.
+3. Program to implement Arrays (1D, 2D).
+4. Program on String and String Buffer.
+5. Program on Collections (ArrayList/ Vectors)
+6. Program to create class with members and methods.
+7. Programs on static, non-static, recursive and overloaded methods.
+8. Program on constructor and constructor overloading.
+9. Program on passing and returning object as argument.
+10. Program on creating user defined package.
+11. Programs on single, multilevel, and hierarchical inheritance.
+12. Program to demonstrate multiple inheritance using interfaces (Use super keyword).
+13. Program on abstract class
+14. Program on dynamic method dispatch using base class and interface reference.
+15. Program to demonstrate try, catch, throw, throws and finally.
+16. Program to implement user defined exception.
+17. Program to demonstrate concept of multithreading.
+18. Java programs to understand GUI designing and event handling.
+
+
+--- Page 46 ---
+
+Books Recommended:
+Textbook Books:
+1. Herbert Schildt, “Java-The Complete Reference”, 11th Edition, Tata McGraw Hill Publication,
+2018.
+2. E. Balguruswamy, “Programming with Java: A Primer”, Fifth edition, Tata McGraw Hill
+Publication, 2017.
+3. Sachin Malhotra and Saurabh Chaudhary, “Programming in Java”, Oxford University Press, 2010.
+Reference Books:
+1. D.T. Editorial Services, “Java 8 Programming Black Book”, Dreamtech Press, 2015.
+2. H. M. Deitel, P. J. Deitel, S. E. Santry, “Advanced Java 2 Platform How to Program”, 11th Edition,
+Prentice Hall, 2017.
+3. Scrip tDemics, “Learn to Master JAVA”, from Star EDU solutions, 2017.
+4. Ivor Horton, “Beginning JAVA‟, Wiley India.
+Digital Material:
+1. www.nptelvideos.in
+2. www.w3schools.com
+3. http://spoken-tutorial.org
+4. www.staredusolutions.org
+Prepared by Checked by Head of the Department Principal
+
+--- Page 47 ---
+
+Program: Electronics and Telecommunication Engineering F.Y B.Tech Semester: II
+Course: Electrical Networks (DJS23FCPC2EC)
+Pre-requisite:
+1. Basic Electrical Engineering and Digital Electronics
+2. Mathematics - I
+Objectives:
+1. To analyse the circuits in time domain.
+2. To study network topology, network functions, two port network.
+3. To synthesize passive network by various methods
+Outcomes: On completion of the course, the learner will be able to:
+1. Apply the time-domain method for analysis of circuits.
+2. Find the various parameters of two port network.
+3. Apply network topology for analyzing the circuit
+4. Synthesize the network using passive elements.
+Electrical Networks (DJS23FCPC2EC)
+Unit Description Duration
+1 Graph Theory 06
+Objectives of graph theory, Linear Oriented Graphs, graph terminologies, Matrix
+representation of a graph: Incidence matrix, Circuit matrix, Cut-set matrix, reduced
+incident matrix, tieset matrix, f-cutset matrix. KVL & KCL using matrix, solution of
+resistive networks and principle of duality.
+2 Time domain analysis 06
+Transient Analysis of circuits containing R, L and C, Time domain analysis of R-L, R-C
+and R-L-C Circuits, Forced and natural response.
+3 Network functions 04
+Network functions for the one port and two port networks, driving point and transfer
+functions, Poles and Zeros of Network functions, necessary condition for driving point
+functions, necessary condition for transfer functions, Hurwitz Criterion.
+4 Network Synthesis 07
+Concept of positive real function, testing for necessary and sufficient conditions for
+Positive Real Functions, Synthesis of LC, RC & RL Circuits: properties of LC, RC & RL
+driving point functions, LC, RC & RL network Synthesis in Cauer-I & Cauer-II, Foster-
+I & Foster-II forms.
+5 Two port Network 05
+Parameters: Open Circuits, Short Circuit, Transmission and Hybrid parameters,
+relationship among parameters, conditions for reciprocity and symmetry (without
+dependent sources)
+Total 28
+
+Table 1:
+Electrical Networks (DJS23FCPC2EC)    
+Unit  Description  Duration
+1  Graph Theory
+Objectives of graph theory, Linear Oriented Graphs, graph terminologies, Matrix
+representation of a graph: Incidence matrix, Circuit matrix, Cut-set matrix, reduced
+incident matrix, tieset matrix, f-cutset matrix. KVL & KCL using matrix, solution of
+resistive networks and principle of duality.  06
+2  Time domain analysis
+Transient Analysis of circuits containing R, L and C, Time domain analysis of R-L, R-C
+and R-L-C Circuits, Forced and natural response.  06
+3  Network functions
+Network functions for the one port and two port networks, driving point and transfer
+functions, Poles and Zeros of Network functions, necessary condition for driving point
+functions, necessary condition for transfer functions, Hurwitz Criterion.  04
+4  Network Synthesis
+Concept of positive real function, testing for necessary and sufficient conditions for
+Positive Real Functions, Synthesis of LC, RC & RL Circuits: properties of LC, RC & RL
+driving point functions, LC, RC & RL network Synthesis in Cauer-I & Cauer-II, Foster-
+I & Foster-II forms.  07
+5  Two port Network
+Parameters: Open Circuits, Short Circuit, Transmission and Hybrid parameters,
+relationship among parameters, conditions for reciprocity and symmetry (without
+dependent sources)  05
+  Total  28
+
+
+--- Page 48 ---
+
+Books Recommended:
+Text books:
+1. Franklin F Kuo, “Network Analysis and Synthesis”, Wiley, 2nd.ed. 1966
+2. M E Van Valkenburg, “Network Analysis”, Prentice-Hall of India Pvt Ltd, New Delhi, 26th
+Indian Reprint, 2000.
+3. Ravish Singh, “Circuit Theory and Networks”, Tata McGraw-Hill education, 2e, 2016.
+Reference Books:
+1. A Chakrabarti, “Circuit Theory”, Dhanpat Rai & Co., Delhi, 6th Edition.
+2. Sudhakar, Shyammohan S. Palli “Circuits and Networks”, Tata McGraw-Hill education.
+3. Smarajit Ghosh, “Network Theory Analysis & Synthesis”, PHI learning.
+4. K.S. Suresh Kumar, “Electric Circuit Analysis”, Pearson (2013)
+5. D Roy Choudhury, Networks and Systems, New Age International 1998.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 49 ---
+
+Program: Information Technology F. Y B.Tech Semester: II
+Course: Foundation of Information Technology (DJS23FCPC2IT)
+Pre-requisite: --
+1. Computer Fundamentals
+Course Objective: The objective of the course is to introduce the learner to the basics of computers,
+viz., the architecture, computer arithmetic, operating system and network basics. The course will also
+abreast the learner of the basics of computer security.
+Course Outcomes: On completion of the course, the learner will be able to:
+1. Understand the organization of a computer system and networking.
+2. Understand the basics of computer security.
+Foundation of Information Technology (DJS23FCPC2IT)
+Unit Description Duration
+1 Introduction to Computers and its Architecture: Von Neumann model, Input-Output 03
+Devices, Memory Hierarchy-Cache Memory, Internal Memory, External Memory, Primary
+Vs Secondary Storage, Data Storage & retrieval methods. Primary Storage: RAM ROM,
+PROM, EPROM, EEPROM. Secondary Storage: HDD, SSD
+2 The Central Processing Unit: The ALU, Integer Representation, Integer Arithmetic, 05
+Floating Point Representation, Floating-Point Arithmetic, Machine Instruction
+Characteristics, Types of Operations – Data Transfer, Arithmetic, Logical, Conversion,
+Input/Output, Addressing Modes – Immediate, Direct, Indirect, Register, Register Indirect,
+Register Organization, Instruction Cycle
+3 Computer Arithmetic: Introduction to number systems-Binary number systems, octal, 06
+hexadecimal and their operations, conversion, 1’s and 2’s complement, Binary Arithmetic
+using complements – addition, subtraction, signed and unsigned integers.
+4 Operating System: Functions, Measuring System Performance, Batch Processing, 05
+Multiprogramming, Multi-Tasking, Multiprocessing, Time Sharing, DOS, Windows,
+Unix/Linux.
+5 Data Communication and Networks: Communication Process, Data Transmission speed, 04
+Communication Types (modes), Network Devices, Types of Networks, LAN Topologies,
+compression and its types-Lossy and Lossless.
+Fundamentals of cloud computing-SaaS, PaaS, IaaS, applications
+6 Attacks on Computers and Computer Security: Introduction, Need for Security, Security 03
+Approaches, Principles of Security, Types of Attacks
+Total 26
+
+Table 1:
+Foundation of Information Technology (DJS23FCPC2IT)    
+Unit  Description  Duration
+1  Introduction to Computers and its Architecture: Von Neumann model, Input-Output
+Devices, Memory Hierarchy-Cache Memory, Internal Memory, External Memory, Primary
+Vs Secondary Storage, Data Storage & retrieval methods. Primary Storage: RAM ROM,
+PROM, EPROM, EEPROM. Secondary Storage: HDD, SSD  03
+2  The Central Processing Unit: The ALU, Integer Representation, Integer Arithmetic,
+Floating Point Representation, Floating-Point Arithmetic, Machine Instruction
+Characteristics, Types of Operations – Data Transfer, Arithmetic, Logical, Conversion,
+Input/Output, Addressing Modes – Immediate, Direct, Indirect, Register, Register Indirect,
+Register Organization, Instruction Cycle  05
+3  Computer Arithmetic: Introduction to number systems-Binary number systems, octal,
+hexadecimal and their operations, conversion, 1’s and 2’s complement, Binary Arithmetic
+using complements – addition, subtraction, signed and unsigned integers.  06
+4  Operating System: Functions, Measuring System Performance, Batch Processing,
+Multiprogramming, Multi-Tasking, Multiprocessing, Time Sharing, DOS, Windows,
+Unix/Linux.  05
+5  Data Communication and Networks: Communication Process, Data Transmission speed,
+Communication Types (modes), Network Devices, Types of Networks, LAN Topologies,
+compression and its types-Lossy and Lossless.
+Fundamentals of cloud computing-SaaS, PaaS, IaaS, applications  04
+6  Attacks on Computers and Computer Security: Introduction, Need for Security, Security
+Approaches, Principles of Security, Types of Attacks  03
+  Total  26
+
+
+--- Page 50 ---
+
+Books Recommended:
+Textbook Books:
+1. “Introduction to Computer Science”, ITL Education Solutions Limited, 2nd Edition, Pearson, 2011.
+2. Atul Kahate, “Cryptography and Network Security”, 4th Edition, McGraw-Hill, 2019.
+3. R. P. Jain, “Modern Digital Electronics”, 4th Edition, Tata McGraw Hill, 2009.
+4. M. Morris Mano, “Digital Logic and computer Design”, 1st Edition, Pearson Education India, 2016.
+Reference Books:
+1. Anand Kumar, “Fundamentals of Digital Circuits”, 4th Edition, Prentice Hall India, 2003.
+2. Donald P Leach, Albert Paul Malvino, “Digital Principles and Applications”, 8th Edition, Tata
+McGraw Hill, 2014.
+3. Behrouz A. Forouzan, “Cryptography & Network Security”, 3rd Edition, Tata McGraw Hill, 2015.
+4. William Stallings, “Computer Organization and Architecture: Designing for Performance”, 10th
+Edition, Pearson, 2015.
+Prepared by Checked by Head of the Department Principal
+
+--- Page 51 ---
+
+Program: SFeicrsotn dY eYaera rC Coommppuutteerr EEnnggiinneeeerirningg Semester : II
+Course: Foundation of Computing Technologies (DJS23FCPC2CE)
+Prerequisite: Computer Basics
+Foundation of Computing Technologies (DJS23FCPC2CE)
+Unit Description Duration
+1 Introduction to Computer Fundamentals 05
+Introduction to Computers: Characteristics, Components, Advantages & Limitations,
+Classification of computers, Software- Classification & Application
+Introduction to Computer Architecture & Organization:
+Introduction, Basic organization of computer architecture; Von Neumann model and
+Harvard architecture; Data Representation and Arithmetic Algorithms- Addition,
+Subtraction, Multiplication - unsigned multiplication, Booth’s algorithm (Signed
+multiplication), Division of integers - restoring division, non-restoring division., Types of
+RAM (SRAM, DRAM, SDRAM, DDR, SSD) and ROM
+2 Data Communication and Networking 04
+Communication concepts: Characteristics of Signal (Amplitude, Frequency, Period,
+Wavelength). Channel Capacity for noiseless channel (Nyquist Law) and noisy channel
+(Shannon’s Law). Data Rate versus Baud Rate, Error detection: Parity –based, CRC-based,
+Wired Networks: Goals and applications of networks. LAN, MAN & WAN Architectures,
+Concept of WAN subnet, Overview of existing networks. Need for a Protocol Architecture,
+OSI Reference Model Architecture, FCS Computation. Error Control and recovery
+techniques, Concept of ARQ standard and its versions.
+Wireless Networks: Bluetooth, Wi-Fi, Li-Fi
+3 Data Base Management Systems 03
+Introduction to Database: History, Characteristics, Users and Advantages, Classification
+of Database, Data Models, Schemas & Instances, Three Schema Architecture & Data
+Independence. DBMS Languages & Interfaces, Conceptual Data modeling using ER Model,
+Relational Data Model Concepts: Domains, Attributes, Tuples, Relations & their
+characteristics. Relational Data Model Constraints-Entity Integrity, Referential Integrity,
+Foreign Keys and other Relational Database design using ER to Relational Mapping
+4 Fundamentals of Operating System 03
+Definition of Operating System Objectives, types, and functions of Operating Systems,
+Architecture of Operating System, Internal and External Commands, Batch Files, Types of
+O.S- Windows, Linux, RTOS, Android, iOS, etc.
+
+Table 1:
+Foundation of Computing Technologies (DJS23FCPC2CE)    
+Unit  Description  Duration
+1  Introduction to Computer Fundamentals
+Introduction to Computers: Characteristics, Components, Advantages & Limitations,
+Classification of computers, Software- Classification & Application
+Introduction to Computer Architecture & Organization:
+Introduction, Basic organization of computer architecture; Von Neumann model and
+Harvard architecture; Data Representation and Arithmetic Algorithms- Addition,
+Subtraction, Multiplication - unsigned multiplication, Booth’s algorithm (Signed
+multiplication), Division of integers - restoring division, non-restoring division., Types of
+RAM (SRAM, DRAM, SDRAM, DDR, SSD) and ROM  05
+2  Data Communication and Networking
+Communication concepts: Characteristics of Signal (Amplitude, Frequency, Period,
+Wavelength). Channel Capacity for noiseless channel (Nyquist Law) and noisy channel
+(Shannon’s Law). Data Rate versus Baud Rate, Error detection: Parity –based, CRC-based,
+Wired Networks: Goals and applications of networks. LAN, MAN & WAN Architectures,
+Concept of WAN subnet, Overview of existing networks. Need for a Protocol Architecture,
+OSI Reference Model Architecture, FCS Computation. Error Control and recovery
+techniques, Concept of ARQ standard and its versions.
+Wireless Networks: Bluetooth, Wi-Fi, Li-Fi  04
+3  Data Base Management Systems
+Introduction to Database: History, Characteristics, Users and Advantages, Classification
+of Database, Data Models, Schemas & Instances, Three Schema Architecture & Data
+Independence. DBMS Languages & Interfaces, Conceptual Data modeling using ER Model,
+Relational Data Model Concepts: Domains, Attributes, Tuples, Relations & their
+characteristics. Relational Data Model Constraints-Entity Integrity, Referential Integrity,
+Foreign Keys and other Relational Database design using ER to Relational Mapping  03
+4  Fundamentals of Operating System
+Definition of Operating System Objectives, types, and functions of Operating Systems,
+Architecture of Operating System, Internal and External Commands, Batch Files, Types of
+O.S- Windows, Linux, RTOS, Android, iOS, etc.  03
+
+
+--- Page 52 ---
+
+5 Introduction to Computer Security: 03
+Basics of Security: Security Trends, CIA Trial, Threats, attacks, Vulnerability,
+Cryptography and its types, Security mechanisms
+Introduction to Cyber Security: Hacking, Data Theft, Cyber Terrorism, Virus & Worm’s,
+Email Bombing, Pornography, online gambling, Forgery, Web Defacements, Web Jacking,
+Illegal online Selling, Cyber Defamation, Software Piracy, Electronics/ Digital Signature,
+Phishing, Password Cracking
+6 Introduction to Advanced Computing Technology: 08
+Big data: Introduction, Characteristics of big data, Big data case studies,
+Data Science: Introduction to data science concept, Data Science Profile, The Data Science
+Process
+Data analytics: Overview, Importance of data analytics, Types of data analytics, Advantages
+of data analytics
+Data warehousing and Mining: Introduction to Data Warehouse and Dimensional
+modelling, Data Mining Task and Techniques, KDD process, Issues in Data Mining,
+Applications of Data Mining
+Data Engineering: Introduction to Data Engineering, Data cleansing, data transformation
+Block chain Technology: Introduction, Bitcoin, Ethereum, Consensus algorithms, Smart
+contract
+Textbooks:
+1. William Stallings, “Computer Organization & Architecture- Designing for Performance”, Pearson 11th
+Edition, 2022.
+2. Andrew Tanenbaum, David Wetherall, “Computer Networks”, Pearson 5th Edition, 2010.
+3. Abraham Silberschatz, Henry F. Korth, S. Sudarshan, “Database System concepts”, TMH 7th Edition, 2021.
+4. Abraham Silberschatz, Peter Galvin, “Operating System Concept”, Wiley 9th Edition, 2018.
+5. Behrouz Forouzan, Depdeep Mukhopadhyay, “Cryptography and Network Security”, TMH 3rd Edition,
+2015.
+6. Nilakshi Jain, Ramesh Menon, “Cyber Security and Cyber Laws”, Wiley 1st Edition, 2020.
+7. Neeraj Kumar, N. Gayathri, Md Arafatur Rahman, B. Balamurugan, “Blockchain, Big Data and Machine
+Learning: Trends and Applications”, CRC Press 1st Edition, 2020
+Reference Books:
+1. Mano M Morris, “Computer System Architecture”, Pearson 3rd Edition, 2017.
+2. Behrouz Forouzan, “Data Communications and Networking with TCPIP Protocol”, Mc Graw Hill 6th
+Edition, 2022.
+3. Elmasri Ramez, Navathe Shamkant, “Fundamentals of Database System”, Pearson 7th edition, 2017.
+4. Achyut Godbole, Atul Kahate, “Operating Systems”, Mc Graw Hill 3rd Edition, 2017.
+5. William Stallings, Lawrie Brown, “Computer Security - Principles and Practice”, Pearson 4th Edition, 2019.
+6. Nina Godbole, Sunit Belapure, “Cyber Security- Understanding Cyber Crimes, Computer Forensics and
+Legal Perspective”, Wiley 1st Edition, 2011.
+7. Gerard Cardoso, Marialena Zinopoulou, Stylianos Kampakis, Theodosis Mourouzis, “Business Models in
+Emerging Technologies: Data Science, AI, and Blockchain”, Business Expert Press, 2022
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+5  Introduction to Computer Security:
+Basics of Security: Security Trends, CIA Trial, Threats, attacks, Vulnerability,
+Cryptography and its types, Security mechanisms
+Introduction to Cyber Security: Hacking, Data Theft, Cyber Terrorism, Virus & Worm’s,
+Email Bombing, Pornography, online gambling, Forgery, Web Defacements, Web Jacking,
+Illegal online Selling, Cyber Defamation, Software Piracy, Electronics/ Digital Signature,
+Phishing, Password Cracking  03
+6  Introduction to Advanced Computing Technology:
+Big data: Introduction, Characteristics of big data, Big data case studies,
+Data Science: Introduction to data science concept, Data Science Profile, The Data Science
+Process
+Data analytics: Overview, Importance of data analytics, Types of data analytics, Advantages
+of data analytics
+Data warehousing and Mining: Introduction to Data Warehouse and Dimensional
+modelling, Data Mining Task and Techniques, KDD process, Issues in Data Mining,
+Applications of Data Mining
+Data Engineering: Introduction to Data Engineering, Data cleansing, data transformation
+Block chain Technology: Introduction, Bitcoin, Ethereum, Consensus algorithms, Smart
+contract  08
+
+
+--- Page 53 ---
+
+Program: Mechanical Engineering Group A & B F.Y B. Tech Semester: II
+Course: Elements of Mechanical Engineering (DJS23FCPC2ME)
+Objectives:
+1. To acquaint learners with the basics of thermodynamics and energy conversion devices.
+2. To familiarize learners with the machine elements.
+3. To impart the knowledge of materials, manufacturing processes and machine tools.
+Outcomes: On completion of the course, the learner will be able to:
+1. Understand the scope of mechanical engineering and fundamentals of thermodynamics.
+2. Understand working principle of various energy conversion devices.
+3. Identify various machine elements for different applications.
+4. Understand various additive and subtractive manufacturing processes, chip less and chip
+removal processes.
+5. Describe various types of conventional machine tools and CNC machines, with machining
+operations to generate cylindrical, and planar components.
+Elements of Mechanical Engineering (DJS23FCPC2ME)
+Unit Description Duration
+1 Introduction to Mechanical Engineering (Overview only): Role of Mechanical 06
+Engineering in Industry and Society - Emerging Trends and Technologies in different
+sectors, such as Energy, Manufacturing, Automotive, Aerospace and Marine sectors.
+Thermodynamics Thermodynamic work, p-dV work in various processes, p-V
+representation of various thermodynamic processes and cycles, Ideal gas equation,
+Properties of pure substance, Statements of First and Second law of thermodynamics and
+their applications. Carnot cycle for Heat engine, Refrigerator and Heat pump.
+2 Energy Conversion Devices (Theoretical study and applications) 05
+Steam generation process, Boiler: Mountings and accessories, Fire tube and Water tube
+boiler, Construction and working of Babcock & Wilcox, Cochran boiler, Introduction and
+Working principle of Steam Turbines, Gas turbine, Hydraulic turbines: Working of Pelton
+wheel and Francis turbine, Reciprocating Compressor, Reciprocating Pump, Working of
+Reciprocating I.C. engines (2 Stroke and 4 stroke), Study of household refrigerator and air
+conditioner.
+3 Machine elements (Theoretical study and applications) 05
+Power transmission shafts, axles, keys (Types and its applications).
+Bearings: Purpose, Classification, sliding contact bearing: Solid journal bearing, Bush
+bearing, rolling contact bearing: Ball bearing, Roller bearings.
+Power Transmission Devices (Basic elements and its applications): Belt drives, Gear drives
+and Couplings: Types and its applications.
+Introduction to machine design process.
+
+Table 1:
+Elements of Mechanical Engineering (DJS23FCPC2ME)    
+Unit  Description  Duration
+1  Introduction to Mechanical Engineering (Overview only): Role of Mechanical
+Engineering in Industry and Society - Emerging Trends and Technologies in different
+sectors, such as Energy, Manufacturing, Automotive, Aerospace and Marine sectors.
+Thermodynamics Thermodynamic work, p-dV work in various processes, p-V
+representation of various thermodynamic processes and cycles, Ideal gas equation,
+Properties of pure substance, Statements of First and Second law of thermodynamics and
+their applications. Carnot cycle for Heat engine, Refrigerator and Heat pump.  06
+2  Energy Conversion Devices (Theoretical study and applications)
+Steam generation process, Boiler: Mountings and accessories, Fire tube and Water tube
+boiler, Construction and working of Babcock & Wilcox, Cochran boiler, Introduction and
+Working principle of Steam Turbines, Gas turbine, Hydraulic turbines: Working of Pelton
+wheel and Francis turbine, Reciprocating Compressor, Reciprocating Pump, Working of
+Reciprocating I.C. engines (2 Stroke and 4 stroke), Study of household refrigerator and air
+conditioner.  05
+3  Machine elements (Theoretical study and applications)
+Power transmission shafts, axles, keys (Types and its applications).
+Bearings: Purpose, Classification, sliding contact bearing: Solid journal bearing, Bush
+bearing, rolling contact bearing: Ball bearing, Roller bearings.
+Power Transmission Devices (Basic elements and its applications): Belt drives, Gear drives
+and Couplings: Types and its applications.
+Introduction to machine design process.  05
+
+
+--- Page 54 ---
+
+4 Materials and Manufacturing Processes 05
+Introduction to Engineering materials and material selection criteria.
+Classification of manufacturing process based on additive and subtractive process, chip-less
+and chip-removal process.
+Additive Manufacturing process (Liquid based, Solid based & Powder based processes).
+Casting, Forging, Extrusion, Rolling, Sheet metal forming/cutting, Metal joining processes.
+5 Machine Tools 05
+Conventional machine tools required to generate cylindrical and planar components.
+Introduction to Numerical Control (NC) and Computer Numerical Controlled (CNC)
+machines.
+• Introduction to various non-conventional machining processes, classification based on
+Thermal, Electrical, Chemical and Mechanical energy.
+Total 26
+Books Recommended:
+Text Book:
+1. R. K. Rajput, “Elements of Mechanical Engineering”, Laxmi Publications Pvt Ltd, 2017.
+2. B. Y. Patil and H. G. Patil, “Elements of Mechanical Engineering”, John Wiley & Sons, 2020.
+3. Mahesh Kumar, “Elements of Mechanical Engineering”, John Wiley & Sons, 2019.
+4. N. R. Babapurmath and V. S. Yalliwal, “Basic Mechanical Engineering”, Vikas Publishing,
+2014.
+Reference Books:
+1. P. K. Nag, “Engineering Thermodynamics”, Tata McGraw-Hill Publishing Co. Ltd, 2018.
+2. Yunus A. Cengel and Boles, “Thermodynamics: An Engineering Approach “, Tata McGraw-
+Hill Publishing Co. Ltd., 2019.
+3. Arora and Domkundwar, “Thermal Engineering”, Dhanpat Rai and Sons, 2009.
+4. V. B Bhandari, “Design of machine elements”, Tata McGraw Hill, 2017.
+5. W. A. J. Chapman, “Workshop Technology Part 1 & 2”, fifth edition, Routledge, Taylor &
+Francis Group, 2019.
+6. Serope Kalpakjian and Steven R. Schmid “Manufacturing Processes for Engineering
+Materials”, Pearson, Sixth Edition, 2017.
+7. Mikell P. Groover, “Fundamentals of Modern Manufacturing, Materials, Processes and
+Systems”, John Wiley & Sons, Inc, Seventh Edition, 2020.
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+4  Materials and Manufacturing Processes
+Introduction to Engineering materials and material selection criteria.
+Classification of manufacturing process based on additive and subtractive process, chip-less
+and chip-removal process.
+Additive Manufacturing process (Liquid based, Solid based & Powder based processes).
+Casting, Forging, Extrusion, Rolling, Sheet metal forming/cutting, Metal joining processes.  05
+5
+•  Machine Tools
+Conventional machine tools required to generate cylindrical and planar components.
+Introduction to Numerical Control (NC) and Computer Numerical Controlled (CNC)
+machines.
+Introduction to various non-conventional machining processes, classification based on
+Thermal, Electrical, Chemical and Mechanical energy.  05
+  Introduction to various non-conventional machining processes, classification based on  
+  Thermal, Electrical, Chemical and Mechanical energy.  
+  Total  26
+
+
+Table 2:
+  1. R. K. Rajput, “Elements of Mechanical Engineering”, Laxmi Publications Pvt Ltd, 2017.
+  2. B. Y. Patil and H. G. Patil, “Elements of Mechanical Engineering”, John Wiley & Sons, 2020.
+  3. Mahesh Kumar, “Elements of Mechanical Engineering”, John Wiley & Sons, 2019.
+  4. N. R. Babapurmath and V. S. Yalliwal, “Basic Mechanical Engineering”, Vikas Publishing,
+  2014.
+  
+
+
+--- Page 55 ---
+
+Program: Computer Science and Engineering (Data Science) F.Y B.Tech Semester: II
+Course: Fundamentals of Data Analysis (DJS23FCPC2DS)
+Prerequisite: Basic Mathematics and Data Interpretation.
+Objectives:
+To develop skills of data analysis techniques for data modelling.
+Outcomes: On completion of the course, learner will be able:
+1. Understand data properties.
+2. Apply statistical methods for data analysis.
+3. Articulate various techniques to improve quality of data.
+Fundamentals of Data Analysis (DJS23FCPC2DS)
+Unit Description Duration
+1. Data:
+Data objects and attributes: nominal, binary, ordinal, numeric, discrete, continuous;
+04
+Characteristics of datasets: dimensionality, sparsity, resolution; Types of data sets: record data,
+data matrix, graph-based data, sequential data, sequence data, time-series data, spatial data.
+2. Data and Text Visualization:
+Seven Stages of Data Visualization, Types of charts (comparison, distribution, composition,
+relationship), Structured Data: bar chart, pie chart, histogram, stacked bar graph, box plot, scatter 04
+plot, heat map, line chart, Node-link, dual axis chart. Unstructured Data: word count, bar chart,
+word tree, line chart diagrams, Word clouds.
+3. Descriptive Statistics:
+Population Vs Sample;
+Measure of Central Tendency: arithmetic mean, weighted mean, median, mode, grouped and
+ungrouped data, empirical relationship between mean, median and mode, geometric mean,
+harmonic mean and outliers;
+06
+Measure of Dispersion: Range, quartile deviation, mean deviation, standard deviation, variance,
+empirical relationship between measures of dispersion, absolute and relative dispersion,
+skewness, kurtosis and histogram;
+Measure of Position: Quartiles, interquartile range, semi interquartile range, percentile, percentile
+rank, box and whisker plot.
+4. Data Preprocessing:
+Need of Data Pre-processing;
+Data Cleaning: Handling missing values and noisy data;
+Data Transformation: Smoothing, attribute construction, aggregation, normalization; 07
+Data Discretization: Binning and Histogram analysis;
+Outlier Detection: Types of outliers, challenges, statistical method (z-score), proximity-based
+method (K-NN and LOF).
+5. Feature Engineering: 05
+
+Table 1:
+Fundamentals of Data Analysis (DJS23FCPC2DS)    
+Unit  Description  Duration
+1.  Data:
+Data objects and attributes: nominal, binary, ordinal, numeric, discrete, continuous;
+Characteristics of datasets: dimensionality, sparsity, resolution; Types of data sets: record data,
+data matrix, graph-based data, sequential data, sequence data, time-series data, spatial data.  04
+2.  Data and Text Visualization:
+Seven Stages of Data Visualization, Types of charts (comparison, distribution, composition,
+relationship), Structured Data: bar chart, pie chart, histogram, stacked bar graph, box plot, scatter
+plot, heat map, line chart, Node-link, dual axis chart. Unstructured Data: word count, bar chart,
+word tree, line chart diagrams, Word clouds.  04
+3.  Descriptive Statistics:
+Population Vs Sample;
+Measure of Central Tendency: arithmetic mean, weighted mean, median, mode, grouped and
+ungrouped data, empirical relationship between mean, median and mode, geometric mean,
+harmonic mean and outliers;
+Measure of Dispersion: Range, quartile deviation, mean deviation, standard deviation, variance,
+empirical relationship between measures of dispersion, absolute and relative dispersion,
+skewness, kurtosis and histogram;
+Measure of Position: Quartiles, interquartile range, semi interquartile range, percentile, percentile
+rank, box and whisker plot.  06
+4.  Data Preprocessing:
+Need of Data Pre-processing;
+Data Cleaning: Handling missing values and noisy data;
+Data Transformation: Smoothing, attribute construction, aggregation, normalization;
+Data Discretization: Binning and Histogram analysis;
+Outlier Detection: Types of outliers, challenges, statistical method (z-score), proximity-based
+method (K-NN and LOF).  07
+5.  Feature Engineering:  05
+
+
+--- Page 56 ---
+
+Curse of Dimensionality, Feature Selection: Univariate methods (Pearson Correlation, Chi-
+square) and Multivariate methods (Forward Selection, Backward Selection and Stepwise
+Selection).
+Books Recommended:
+Text Books:
+1. Sharada Sringeswara, Purvi Tiwari, U. Dinesh Kumar, Data Visualization Storytelling using Data, 1st
+Edition, Wiley, 2022.
+2. Data Mining Concepts and Techniques, Han, Kamber, Morgan Kaufmann Elsevier, 2022.
+3. Fundamentals of Mathematical Statistics, S.C.Gupta and V.K.Kapoor, Sultan Chand Publisher, 2020
+Reference Books:
+1. Data Preparation for Machine Learning, Jason Browniee, ebook by Machine Learning Mastry. 2020
+2. Best Practices in Data Cleaning: A Complete Guide to Everything you Need to Do Before and After
+Collecting Your Data, Jason Osborne, Sage Publication, 2012.
+4. Bad Data Handbook: Cleaning Up the Data so you can get back to work, Ethan McCallum, O’Reilly,
+2012
+5. Feature Engineering and Selection: A practical Approach for Predictive Models, Max Kuhn and
+Keijell Johnson, CRC Press, 2020
+Prepared by Checked by Head of the Department Principal
+2
+
+Table 1:
+  Curse of Dimensionality, Feature Selection: Univariate methods (Pearson Correlation, Chi-
+square) and Multivariate methods (Forward Selection, Backward Selection and Stepwise
+Selection).  
+
+
+--- Page 57 ---
+
+Program: Artificial Intelligence & Machine Learning F.Y B.Tech Semester: II
+Course: Fundamentals of Artificial Intelligence & Machine Learning (DJS23FCPC2AM)
+Pre-requisite: --
+1. Basic knowledge of computers
+Objectives:
+1. To familiarize the fundamentals of Artificial Intelligence and Machine Learning
+Outcomes: On completion of the course, the learner will be able to:
+1. Understand the basics of Artificial Intelligence and its applications
+2. Apply problem-solving techniques for problem formulation
+3. Understand the fundamentals of Data Processing and Machine Learning
+Fundamentals of Artificial Intelligence & Machine Learning (DJS23FCPC2AM)
+Unit Description Duration
+1 Introduction to Artificial Intelligence: 05
+Introduction, History of Artificial Intelligence, Types of AI, Intelligent Systems:
+Categorization of Intelligent System, Components of AI Program, Applications of AI
+(Robotics, Healthcare, Industry), Current trends in AI.
+Intelligent Agents: Agents and Environments, The concept of rationality, The nature of
+environment, PEAS representation, The structure of Agents, Types of Agents, and Learning
+Agent.
+2 Problem solving and Searching Techniques: 05
+Problem Solving Agent, Formulating Problems: steps problem solving in AI, Example
+Problems: Vacuum world state space graph, 8 Puzzle Problem, 4 queen and 8 Queen Problem.
+Introduction to searching techniques in AI.
+3 Knowledge Representation: 05
+A Knowledge Based Agent, Overview of Propositional Logic, First Order Predicate Logic,
+Introduction to PROLOG, Case Study
+4 Expert Systems: 05
+
+Table 1:
+Fundamentals of Artificial Intelligence & Machine Learning (DJS23FCPC2AM)    
+Unit  Description  Duration
+1  Introduction to Artificial Intelligence:
+Introduction, History of Artificial Intelligence, Types of AI, Intelligent Systems:
+Categorization of Intelligent System, Components of AI Program, Applications of AI
+(Robotics, Healthcare, Industry), Current trends in AI.
+Intelligent Agents: Agents and Environments, The concept of rationality, The nature of
+environment, PEAS representation, The structure of Agents, Types of Agents, and Learning
+Agent.  05
+2  Problem solving and Searching Techniques:
+Problem Solving Agent, Formulating Problems: steps problem solving in AI, Example
+Problems: Vacuum world state space graph, 8 Puzzle Problem, 4 queen and 8 Queen Problem.
+Introduction to searching techniques in AI.  05
+3  Knowledge Representation:
+A Knowledge Based Agent, Overview of Propositional Logic, First Order Predicate Logic,
+Introduction to PROLOG, Case Study  05
+4  Expert Systems:  05
+
+
+--- Page 58 ---
+
+Introduction, Phases in building Expert Systems, Expert system Architecture, Case Study on
+Expert System. Applications of Expert Systems. How to achieve AI in practical: Introduction
+to Machine and Deep Learning, Introduction to No code AI tools.
+5 Introduction to Machine Learning 06
+History of Machine Learning, Life cycle of Machine learning, Classification of Machine
+Learning, Introduction to Data warehouse and data mining, Data preprocessing overview,
+Case study. Applications of Machine Learning.
+Total 26
+Books Recommended:
+Text books:
+1. Stuart J. Russell and Peter Norvig, "Artificial Intelligence A Modern Approach”, Fourth
+Edition, Pearson Education, 2022
+2. Saroj Kaushik “Artificial Intelligence”, First Edition, Cengage Learning, 2011
+3. George F Luger “Artificial Intelligence” Low Price Edition, Pearson Education., Fifth
+edition, 2005
+4. Deepak Khemani.” A First Course in Artificial Intelligence”, McGraw Hill Education
+(India), Sixth reprint 2018 edition (1 July 2017).
+Reference Books:
+1. Ivan Bratko “PROLOG Programming for Artificial Intelligence”, Addison-Wesley, 4th
+edition, 2011
+2. Elaine Rich and Kevin Knight “Artificial Intelligence” Third Edition, 2017
+3. Davis E. Goldberg, “Genetic Algorithms: Search, Optimization and Machine Learning”,
+Addison Wesley, N.Y., 1989.
+4. Patrick Henry Winston, “Artificial Intelligence”, Addison-Wesley, Third Edition, 1992
+5. Han Kamber, “Data Mining Concepts and Techniques”, Morgan Kaufmann Publishers,
+3rd edition, 2011
+6. N.P. Padhy, “Artificial Intelligence and Intelligent Systems”, Oxford University Press,
+Online References:
+1. https://onlinecourses.swayam2.ac.in/aic20_sp06/preview
+2. https://onlinecourses.swayam2.ac.in/arp19_ap79/preview
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+  Introduction, Phases in building Expert Systems, Expert system Architecture, Case Study on
+Expert System. Applications of Expert Systems. How to achieve AI in practical: Introduction
+to Machine and Deep Learning, Introduction to No code AI tools.  
+5  Introduction to Machine Learning
+History of Machine Learning, Life cycle of Machine learning, Classification of Machine
+Learning, Introduction to Data warehouse and data mining, Data preprocessing overview,
+Case study. Applications of Machine Learning.  06
+  Total  26
+
+
+--- Page 59 ---
+
+Program: First Year B.Tech. in Artificial Intelligence & Data Science Semester: II
+Course: Fundamentals of Artificial Intelligence & Data Science (DJS23FCPC2AD)
+Pre-requisite: --
+1. Basic knowledge of computers
+Objectives:
+1. To familiarize the fundamentals of Artificial Intelligence and Data Science
+Outcomes: On completion of the course, the learner will be able to:
+1. Understand the basics of Artificial Intelligence and its applications
+2. Apply problem-solving techniques for problem formulation
+3. Understand the fundamentals of Data Science
+Fundamentals of Artificial Intelligence & data Science (DJS23FCPC2AD)
+Unit Description Duration
+1 Introduction to Artificial Intelligence: 06
+Introduction, History of Artificial Intelligence, Types of AI, Intelligent Systems:
+Categorization of Intelligent System, Components of AI Program, Applications of
+AI (Robotics, Healthcare, Industry), Current trends in AI.
+Intelligent Agents: Agents and Environments, The concept of rationality, The
+nature of environment, PEAS representation, The structure of Agents, Types of
+Agents, and Learning Agent.
+2 Problem solving and Searching Techniques: 06
+Problem Solving Agent, Formulating Problems: Steps problem solving in AI,
+Example Problems: Vacuum world state space graph, 8 Puzzle Problem, 4 queen
+and 8 Queen Problem. Introduction to searching techniques in AI.
+3 Expert Systems: 06
+Introduction, Phases in building Expert Systems, Expert system Architecture,
+Case Study on Expert System. Applications of Expert Systems. How to achieve
+
+Table 1:
+Fundamentals of Artificial Intelligence & data Science (DJS23FCPC2AD)    
+Unit  Description  Duration
+1  Introduction to Artificial Intelligence:
+Introduction, History of Artificial Intelligence, Types of AI, Intelligent Systems:
+Categorization of Intelligent System, Components of AI Program, Applications of
+AI (Robotics, Healthcare, Industry), Current trends in AI.
+Intelligent Agents: Agents and Environments, The concept of rationality, The
+nature of environment, PEAS representation, The structure of Agents, Types of
+Agents, and Learning Agent.  06
+2  Problem solving and Searching Techniques:
+Problem Solving Agent, Formulating Problems: Steps problem solving in AI,
+Example Problems: Vacuum world state space graph, 8 Puzzle Problem, 4 queen
+and 8 Queen Problem. Introduction to searching techniques in AI.  06
+3  Expert Systems:
+Introduction, Phases in building Expert Systems, Expert system Architecture,
+Case Study on Expert System. Applications of Expert Systems. How to achieve  06
+
+
+--- Page 60 ---
+
+AI in practical: Introduction to Machine and Deep Learning, Introduction to No
+code AI tools.
+4 Fundamentals of Data Science: 08
+Introduction to data lake, Data Lake frameworks, Data Pre-Processing An
+Overview, Cleaning, Data Integration, data reduction, Data Transformation and
+Data discretization. Exploratory Data Analysis (EDA): Philosophy of EDA - The
+Data Science Process
+Total 26
+Books Recommended:
+Text books:
+1. Stuart J. Russell and Peter Norvig, "Artificial Intelligence A Modern Approach”, Fourth
+Edition, Pearson Education, 2022
+2. Saroj Kaushik “Artificial Intelligence”, First Edition, Cengage Learning, 2011
+3. George F Luger “Artificial Intelligence” Low Price Edition, Pearson Education., Fifth
+edition, 2005
+4. Deepak Khemani.” A First Course in Artificial Intelligence”, McGraw Hill Education
+(India), Sixth reprint 2018 edition (1 July 2017).
+Reference Books:
+1. Ivan Bratko “PROLOG Programming for Artificial Intelligence”, Addison-Wesley, 4th
+edition, 2011
+2. Elaine Rich and Kevin Knight “Artificial Intelligence” Third Edition, 2017
+3. Davis E. Goldberg, “Genetic Algorithms: Search, Optimization and Machine Learning”,
+Addison Wesley, N.Y., 1989.
+4. Patrick Henry Winston, “Artificial Intelligence”, Addison-Wesley, Third Edition, 1992
+5. Han Kamber, “Data Mining Concepts and Techniques”, Morgan Kaufmann Publishers,
+3rd edition, 2011
+6. N.P. Padhy, “Artificial Intelligence and Intelligent Systems”, Oxford University Press,
+Online References:
+1. https://onlinecourses.swayam2.ac.in/aic20_sp06/preview
+2. https://onlinecourses.swayam2.ac.in/arp19_ap79/preview
+Prepared by Checked by Head of the Department Principal
+
+Table 1:
+  AI in practical: Introduction to Machine and Deep Learning, Introduction to No
+code AI tools.  
+4  Fundamentals of Data Science:
+Introduction to data lake, Data Lake frameworks, Data Pre-Processing An
+Overview, Cleaning, Data Integration, data reduction, Data Transformation and
+Data discretization. Exploratory Data Analysis (EDA): Philosophy of EDA - The
+Data Science Process  08
+  Total  26
+
+
+--- Page 61 ---
+
+Program: First Year B.Tech. in Computer Science & Engineering (IoT and
+Semester : II
+Cybersecurity with Blockchain technology)
+Course : Fundamentals of Sensor and Secured Technologies (DJS23FCPC2IC)
+Prerequisite: Computer Fundamentals
+Objectives:
+1. To explore the role of sensors and actuators.
+2. To introduce security fundamentals, security principles and security control mechanisms.
+3. To understand emerging Blockchain Technology and its relevance with cryptography.
+Outcomes: On completion of the course, learner will be able to:
+1. Gain the foundational knowledge of Internet of Things.
+2. Understand the interfacing of Arduino Uno with sensors
+3. Explore system security concepts
+4. Understand fundamentals of Cyber Security and its significance in digital world
+5. Acquire basic knowledge of Blockchain technology
+6. Apply methods for securing Blockchain networks
+Fundamentals of Sensor and Secured Technologies (DJS23FCPC2IC)
+Unit Description Duration
+1 Fundamentals of IoT
+05
+Introduction of IoT, Definition and Characteristics of IoT,History of IoT,
+Importance of IoT, Real time Examples of IOT,IoT standards, IoT enabling
+technologies, IoT physical entities, IoT Building blocks – Architecture,
+Study of existing IoT platforms
+2 Introduction to Arduino uno and Sensors 04
+Overview, Board description, Installation, Pin configuration and architecture
+of Arduino uno. Introduction to Sensors, Actuators, Sensor Characteristics,
+Classification of Sensors. Study of Humidity Sensor, Temperature Sensor,
+PIR Sensor, Ultrasonic Sensor
+3 Overview of Security 04
+
+Table 1:
+Fundamentals of Sensor and Secured Technologies (DJS23FCPC2IC)    
+Unit  Description  Duration
+1  Fundamentals of IoT
+Introduction of IoT, Definition and Characteristics of IoT,History of IoT,
+Importance of IoT, Real time Examples of IOT,IoT standards, IoT enabling
+technologies, IoT physical entities, IoT Building blocks – Architecture,
+Study of existing IoT platforms  05
+2  Introduction to Arduino uno and Sensors
+Overview, Board description, Installation, Pin configuration and architecture
+of Arduino uno. Introduction to Sensors, Actuators, Sensor Characteristics,
+Classification of Sensors. Study of Humidity Sensor, Temperature Sensor,
+PIR Sensor, Ultrasonic Sensor  04
+3  Overview of Security  04
+
+
+--- Page 62 ---
+
+Introduction, Security goals, Security services and mechanisms, Security
+models, Threats , Types of attacks, CIA Triad: Confidentiality, Integrity, and
+Availability
+4 Introduction to Cyber Security 03
+Need of Cyber Security, Types of Cyberattacks: CyberAttacks against
+individuals, CyberAttacks against organization, CyberAttacks against
+Society
+5 Blockchain Fundamentals 05
+Traditional N/W Vs Blockchain, Centralize Vs Decentralized N/W,
+Terminologies of Blockchain, Properties of Blockchain, Generic elements
+of Blockchain, Structure of Block,Types of Blockchain and Usage
+6 Cryptocurrency and Bitcoin 05
+The Evolution of Cryptocurrencies: Design Goals for Cryptocurrency
+Development, Cryptocurrency wallets: Hot and cold wallets,
+Cryptocurrency usage
+Bitcoin: Introduction to Bitcoin, Bitcoin common terminologies, Bitcoin
+block, bitcoin P2P network, transactions, Bitcoin mining
+Total 26
+Books Recommended:
+Text Books:
+1. Raj Kamal, INTERNET OF THINGS (IOT)- Architecture and Design Principles,
+McGrawHills, 2nd Edition, 2022.
+2. "Computer Security: Principles and Practice" by William Stallings and Lawrie Brown, 4th
+Edition, Pearson Publication, 2021
+3. Cryptography and Network Security – Principles and Practice by William Stallings,
+Pearson 2017
+4. Cyber Security Understanding Cyber Crimes, Computer Forensics and Legal Perspectives
+by Sumit Belapure and Nina Godbole, Wiley India Pvt. Ltd,1st Edition,2011
+5. Imran Bashir , Mastering Blockchain: A deep dive into distributed ledgers, consensus
+protocols, smart contracts, DApps, cryptocurrencies, Ethereum, and more, 3rd Edition,
+Packt Publishing, 2020, ISBN: 9781839213199,
+6. Kumar Saurabh, Ashutosh Saxena, Blockchain Technology: Concepts and Applications ,
+1st Edition, Wiley Publication, 2020, ISBN:978-81-265-5766-0
+
+Table 1:
+  Introduction, Security goals, Security services and mechanisms, Security
+models, Threats , Types of attacks, CIA Triad: Confidentiality, Integrity, and
+Availability  
+4  Introduction to Cyber Security
+Need of Cyber Security, Types of Cyberattacks: CyberAttacks against
+individuals, CyberAttacks against organization, CyberAttacks against
+Society  03
+5  Blockchain Fundamentals
+Traditional N/W Vs Blockchain, Centralize Vs Decentralized N/W,
+Terminologies of Blockchain, Properties of Blockchain, Generic elements
+of Blockchain, Structure of Block,Types of Blockchain and Usage  05
+6  Cryptocurrency and Bitcoin
+The Evolution of Cryptocurrencies: Design Goals for Cryptocurrency
+Development, Cryptocurrency wallets: Hot and cold wallets,
+Cryptocurrency usage
+Bitcoin: Introduction to Bitcoin, Bitcoin common terminologies, Bitcoin
+block, bitcoin P2P network, transactions, Bitcoin mining  05
+  Total  26
+
+
+--- Page 63 ---
+
+Reference Books:
+1. Internet of Things (IOT) & Its Applications, Prof. Satish Jain, Shashi Singh , BPB
+Publications, 2020.
+2. Network Security Essentials: Applications and Standards" by William Stallings,6th
+Edition, Pearson Publication,2018
+3. Nina Godbole, Information Systems Security, Wiley India, New Delhi
+4. Antony Lewis, Basics of Bitcoins and Blockchain, Mango Publishing, 2021
+5. Blockchain Basics, A non Technical Introduction in 25 Steps, Daniel Drescher, Apress.
+Web resources:
+1. IoT For All - https://www.iotforall.com/
+2. IoT World Today -https://www.iotworldtoday.com/
+3. SecurityFocus, https://www.securityfocus.com/
+4. Cybersecurity Resource Center, https://csrc.nist.gov/
+5. Blockchain Guide for Beginners,https://blockgeeks.com/guides/what-is-blockchain-
+technology/
+6. Bitcoin,https://bitcoin.org/
+Online Courses: NPTEL / Swayam
+1. Introduction To Internet Of Things, By Prof. Sudip Misra, IIT Kharagpur,
+https://onlinecourses.nptel.ac.in/noc22_cs53/preview
+2. Cyber Security, By Dr.G.PADMAVATHI, Avinashilingam Institute for Home Science &
+Higher Education for Women,Coimbatore
+https://onlinecourses.swayam2.ac.in/cec23_cs16/preview
+3. Cyber Security and Privacy, By Prof. Saji K Mathew, IIT Madras,
+https://onlinecourses.nptel.ac.in/noc23_cs127/preview
+4. Blockchain and its Applications, By Prof. Sandip Chakraborty, Prof. Shamik Sural IIT
+Kharagpur, https://onlinecourses.nptel.ac.in/noc23_cs47/preview
+Prepared by Checked by Head of the Department Principal
+
