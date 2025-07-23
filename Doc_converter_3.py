@@ -58,7 +58,7 @@ class DocumentProcessor:
             return []
     
     def extract_from_pdf(self, file_path: str) -> List[DocumentChunk]:
-        """Extract text from PDF using pdfplumber with no chunking"""
+        """Extract text from PDF using pdfplumber with no chunking or processing"""
         chunks = []
         
         try:
@@ -70,8 +70,8 @@ class DocumentProcessor:
                     text = page.extract_text(
                         x_tolerance=3,
                         y_tolerance=3,
-                        layout=False,
-                        x_density=7.25,
+                        layout=True,
+                        x_density=6,
                         y_density=13
                     )
                     
@@ -270,7 +270,7 @@ class DocumentProcessor:
 
 def main():
     # Path to the document you want to process
-    file_path = "Test_pdfs\\DJS 23 - Course Structure & Syllabus.pdf"
+    file_path = "Test_pdfs\\ICIHLIP22012V012223.pdf"
     
     # Create processor and process the document
     processor = DocumentProcessor()

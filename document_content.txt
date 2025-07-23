@@ -873,7 +873,7 @@ policy
 
 
 Table 2:
-Annual SP um
+Annual S um
 Insured  Accumulated
 Cumulative
 bonus/
