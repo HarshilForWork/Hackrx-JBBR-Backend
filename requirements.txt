@@ -1,0 +1,5 @@
+# Simple PDF Parsing Pipeline Requirements
+# Core PDF parsing libraries
+pdfplumber
+PyMuPDF==1.23.22
+pandas
