@@ -1,5 +1,9 @@
-# Simple PDF Parsing Pipeline Requirements
-# Core PDF parsing libraries
+# Insurance Document Query System Requirements
 pdfplumber
-PyMuPDF==1.23.22
+PyMuPDF
 pandas
+sentence-transformers
+pinecone
+google-generativeai
+streamlit
+psutil
