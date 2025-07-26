@@ -11,7 +11,7 @@ def test_hybrid_parsing():
     print("=" * 50)
     
     # Find PDF files
-    docs_dir = 'docs'
+    docs_dir = 'Test_pdfs'
     if not os.path.exists(docs_dir):
         print(f"Directory '{docs_dir}' not found!")
         return
@@ -66,12 +66,45 @@ def test_hybrid_parsing():
                     f.write(f"Method: {method}\n")
                     f.write(f"Paragraphs: {len(paragraphs)}\n")
                     f.write(f"Tables: {len(tables)}\n\n")
-                    f.write("=== PARAGRAPHS ===\n")
-                    for i, para in enumerate(paragraphs, 1):
-                        f.write(f"\n[{i}] {para}\n")
-                    f.write("\n=== TABLES ===\n")
-                    for i, table in enumerate(tables, 1):
-                        f.write(f"\n[{i}] {table}\n")
+                    
+                    # Use the new order-based approach
+                    order = result.get("order", [])
+                    
+                    if order and len(order) > 0:
+                        f.write("=== CONTENT IN DOCUMENT ORDER ===\n\n")
+                        
+                        # Keep copies of paragraphs and tables that we can pop from
+                        paras_copy = paragraphs.copy()
+                        tables_copy = tables.copy()
+                        
+                        for i, item_type in enumerate(order, 1):
+                            if item_type == 'P' and paras_copy:
+                                f.write(f"\n[P{i}] {paras_copy.pop(0)}\n")
+                                f.write("-" * 40 + "\n")
+                            elif item_type == 'T' and tables_copy:
+                                f.write(f"\n[T{i}] {tables_copy.pop(0)}\n")
+                                f.write("-" * 40 + "\n")
+                    
+                    # Fallback to legacy format if no order info
+                    elif not order:
+                        # Check if we have elements for backward compatibility
+                        elements = result.get("elements", [])
+                        if elements:
+                            f.write("=== CONTENT IN DOCUMENT ORDER ===\n")
+                            for i, element in enumerate(elements, 1):
+                                if element["type"] == "paragraph":
+                                    f.write(f"\n[P{i}] {element['content']}\n")
+                                elif element["type"] == "table":
+                                    f.write(f"\n[T{i}] {element['content']}\n")
+                                f.write("-" * 40 + "\n")
+                        else:
+                            # Legacy output format as last resort
+                            f.write("=== PARAGRAPHS ===\n")
+                            for i, para in enumerate(paragraphs, 1):
+                                f.write(f"\n[{i}] {para}\n")
+                            f.write("\n=== TABLES ===\n")
+                            for i, table in enumerate(tables, 1):
+                                f.write(f"\n[{i}] {table}\n")
                 
                 print(f"💾 Saved to: {output_file}")
         
