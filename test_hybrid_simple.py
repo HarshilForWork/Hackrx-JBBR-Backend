@@ -10,8 +10,8 @@ def test_hybrid_parsing():
     print("Testing PDFplumber + PyMuPDF Hybrid Parsing")
     print("=" * 50)
     
-    # Find PDF files
-    docs_dir = 'Test_pdfs'
+    # Find PDF files in docs directory
+    docs_dir = 'docs'
     if not os.path.exists(docs_dir):
         print(f"Directory '{docs_dir}' not found!")
         return
