@@ -1,9 +1,33 @@
 # Insurance Document Query System Requirements
-pdfplumber
-PyMuPDF
-pandas
-sentence-transformers
-pinecone
-google-generativeai
-streamlit
-psutil
+# Core PDF processing
+pdfplumber>=0.9.0
+PyMuPDF>=1.23.0
+pandas>=2.0.0
+
+# Machine Learning and NLP
+sentence-transformers>=2.2.0
+torch>=2.0.0
+transformers>=4.30.0
+
+# Vector Database and Search
+pinecone-client>=3.0.0
+
+# LLM Integration
+google-generativeai>=0.3.0
+
+# LangChain for Advanced Chunking
+langchain>=0.1.0
+langchain-experimental>=0.0.50
+langchain-huggingface>=0.0.2
+
+# Cross-encoder for Re-ranking
+cross-encoder>=1.2.0
+
+# Web Interface
+streamlit>=1.28.0
+
+# System Monitoring (optional)
+psutil>=5.9.0
+
+# Utilities
+python-dotenv>=1.0.0

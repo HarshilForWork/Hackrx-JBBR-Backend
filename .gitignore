@@ -133,6 +133,23 @@ output/
 *.pdf
 *.log
 
+# Document registry and caches
+indexed_documents.json
+document_registry.json
+*.pickle
+*.pkl
+
+# Temporary app files
+app_backup.py
+app_simple.py
+debug_*.py
+test_*.py
+
+# Model caches
+.cache/
+models/
+*.model
+
 # Keep requirements.txt
 !requirements.txt
 

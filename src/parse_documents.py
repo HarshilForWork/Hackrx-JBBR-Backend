@@ -4,7 +4,7 @@ Functionality: Hybrid PDF parsing using PDFplumber + PyMuPDF.
 """
 import os
 import re
-from typing import List, Dict
+from typing import List, Dict, Optional
 import pdfplumber
 import fitz  # PyMuPDF
 import pandas as pd
@@ -118,3 +118,28 @@ def load_and_parse_documents(document_paths: List[str]) -> List[Dict]:
         })
     
     return parsed_docs
+
+def load_and_parse_from_folder(docs_folder: str, file_filter: Optional[List[str]] = None) -> List[Dict]:
+    """
+    Load and parse documents from a folder, optionally filtering by filenames.
+    
+    Args:
+        docs_folder: Folder containing PDF documents
+        file_filter: Optional list of filenames to process. If None, processes all PDFs.
+    """
+    if not os.path.exists(docs_folder):
+        return []
+    
+    # Get all PDF files in folder
+    all_files = [f for f in os.listdir(docs_folder) if f.lower().endswith('.pdf')]
+    
+    # Apply filter if provided
+    if file_filter:
+        files_to_process = [f for f in all_files if f in file_filter]
+    else:
+        files_to_process = all_files
+    
+    # Create full paths
+    document_paths = [os.path.join(docs_folder, filename) for filename in files_to_process]
+    
+    return load_and_parse_documents(document_paths)

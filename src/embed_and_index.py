@@ -1,11 +1,13 @@
 """
 Module: embed_and_index.py
-Functionality: Optimized embedding generation and vector indexing.
+Functionality: Optimized embedding generation and vector indexing with smart document management.
 """
-from typing import List, Dict, Optional, Callable
+from typing import List, Dict, Optional, Callable, Any
 from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone, ServerlessSpec
 import time
+import os
+from .document_registry import DocumentRegistry
 
 # Global model cache to avoid reloading
 _model_cache = None
@@ -164,4 +166,118 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
         progress_callback("Indexing complete!", 100)
     
     print(f"Successfully indexed {len(chunks)} chunks into Pinecone index '{index_name}'.")
-    return len(chunks) 
+    return {"success": True, "indexed_count": len(chunks)}
+
+def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', progress_callback: Optional[Callable] = None) -> Dict[str, Any]:
+    """
+    Smart indexing - only processes new or changed documents
+    """
+    registry = DocumentRegistry()
+    
+    # Check document status
+    status = registry.get_document_status(docs_folder)
+    files_to_process = registry.get_files_to_process(docs_folder)
+    
+    # Count status
+    status_counts = {
+        'indexed': len([f for f, s in status.items() if s == 'indexed']),
+        'new': len([f for f, s in status.items() if s == 'new']),
+        'changed': len([f for f, s in status.items() if s == 'changed']),
+        'missing': len([f for f, s in status.items() if s == 'missing'])
+    }
+    
+    if progress_callback:
+        progress_callback(f"📊 Status: {status_counts['indexed']} indexed, {status_counts['new']} new, {status_counts['changed']} changed", 10)
+    
+    if not files_to_process:
+        if progress_callback:
+            progress_callback("🎉 All documents are already indexed and up-to-date!", 100)
+        return {
+            "status": "up_to_date",
+            "processed_files": 0,
+            "skipped_files": status_counts['indexed'],
+            "total_time": 0,
+            "status_counts": status_counts
+        }
+    
+    # Process only new/changed files
+    start_time = time.time()
+    processed_files = []
+    
+    # Import here to avoid circular imports
+    from .chunk_documents import chunk_documents
+    
+    total_files = len(files_to_process)
+    
+    for i, filename in enumerate(files_to_process):
+        file_path = os.path.join(docs_folder, filename)
+        
+        if progress_callback:
+            progress_callback(f"🔄 Processing {filename} ({i+1}/{total_files})...", 20 + (i / total_files) * 60)
+        
+        try:
+            # Parse single document
+            from .parse_documents import load_and_parse_from_folder
+            parsed_docs = load_and_parse_from_folder(docs_folder, file_filter=[filename])
+            
+            if parsed_docs:
+                # Chunk document
+                chunks = chunk_documents(parsed_docs)
+                
+                # Index chunks
+                result = index_chunks_in_pinecone(chunks, pinecone_api_key, index_name)
+                
+                if result.get('success', False):
+                    # Mark as indexed
+                    registry.mark_document_indexed(filename, file_path, len(chunks))
+                    processed_files.append(filename)
+                    
+                    if progress_callback:
+                        progress_callback(f"✅ {filename}: {len(chunks)} chunks indexed", 20 + ((i+1) / total_files) * 60)
+                else:
+                    if progress_callback:
+                        progress_callback(f"❌ Failed to index {filename}", 20 + ((i+1) / total_files) * 60)
+            
+        except Exception as e:
+            if progress_callback:
+                progress_callback(f"❌ Error processing {filename}: {str(e)}", 20 + ((i+1) / total_files) * 60)
+    
+    end_time = time.time()
+    processing_time = end_time - start_time
+    
+    if progress_callback:
+        progress_callback(f"🎉 Smart indexing complete! Processed {len(processed_files)} files in {processing_time:.1f}s", 100)
+    
+    return {
+        "status": "completed",
+        "processed_files": len(processed_files),
+        "skipped_files": status_counts['indexed'],
+        "total_time": processing_time,
+        "files_processed": processed_files,
+        "status_counts": status_counts
+    }
+
+def force_reindex_all(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', progress_callback: Optional[Callable] = None) -> Dict[str, Any]:
+    """
+    Force reindex all documents (clears registry and processes everything)
+    """
+    registry = DocumentRegistry()
+    
+    if progress_callback:
+        progress_callback("🔄 Force re-indexing: clearing registry and index...", 5)
+    
+    # Clear registry
+    registry.clear_registry()
+    
+    # Clear Pinecone index
+    try:
+        clear_result = clear_pinecone_index(pinecone_api_key, index_name)
+        if progress_callback:
+            progress_callback(f"🗑️ Cleared {clear_result} vectors from index", 10)
+    except Exception as e:
+        if progress_callback:
+            progress_callback(f"❌ Failed to clear index: {str(e)}", 10)
+        return {"status": "failed", "error": f"Could not clear index: {str(e)}"}
+    
+    # Process all documents
+    return smart_index_documents(docs_folder, pinecone_api_key, index_name, progress_callback) 

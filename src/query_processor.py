@@ -5,7 +5,8 @@ Functionality: Complete query processing pipeline with LLM integration.
 import json
 import re
 import time
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
+import numpy as np
 
 try:
     from pinecone import Pinecone
@@ -18,6 +19,12 @@ try:
     GENAI_AVAILABLE = True
 except ImportError:
     GENAI_AVAILABLE = False
+
+try:
+    from sentence_transformers import CrossEncoder
+    CROSS_ENCODER_AVAILABLE = True
+except ImportError:
+    CROSS_ENCODER_AVAILABLE = False
 
 from .embed_and_index import get_embedding_model
 
@@ -44,6 +51,19 @@ class QueryProcessor:
         
         # Use cached embedding model for consistency and performance
         self.model = get_embedding_model()
+        
+        # Initialize Cross-Encoder for re-ranking
+        self.reranker = None
+        if CROSS_ENCODER_AVAILABLE:
+            try:
+                print("🔄 Loading cross-encoder for re-ranking...")
+                self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+                print("✅ Cross-encoder loaded successfully!")
+            except Exception as e:
+                print(f"⚠️ Could not load cross-encoder: {e}")
+                self.reranker = None
+        else:
+            print("⚠️ Cross-encoder not available - using similarity-only ranking")
         
         # Initialize Gemini
         if GENAI_AVAILABLE and gemini_api_key and gemini_api_key != 'dummy':
@@ -336,6 +356,259 @@ class QueryProcessor:
         
         return entities
     
+    def semantic_search_with_reranking(self, query: str, initial_k: int = 50, final_k: int = 3) -> List[Dict]:
+        """
+        Advanced two-stage retrieval with re-ranking:
+        1. Retrieve top 50-100 candidates using vector similarity
+        2. Re-rank using cross-encoder for semantic relevance
+        3. Return top 2-3 most relevant chunks with context expansion
+        """
+        if not self.index:
+            print("❌ Pinecone index not available")
+            return []
+        
+        try:
+            # Stage 1: Initial broad retrieval
+            print(f"🔍 Stage 1: Retrieving top {initial_k} candidates...")
+            query_embedding = self.model.encode(query).tolist()
+            
+            response = self.index.query(
+                vector=query_embedding,
+                top_k=initial_k,
+                include_metadata=True
+            )
+            
+            # Format initial results
+            candidates = []
+            for match in response.matches:
+                candidates.append({
+                    "id": match.id,
+                    "vector_score": match.score,
+                    "text": match.metadata.get("text", ""),
+                    "document_name": match.metadata.get("document_name", ""),
+                    "page_number": match.metadata.get("page_number", 1),
+                    "chunk_index": match.metadata.get("chunk_index", 0)
+                })
+            
+            if not candidates:
+                print("⚠️ No candidates found in initial retrieval")
+                return []
+            
+            print(f"✅ Retrieved {len(candidates)} candidates")
+            
+            # Stage 2: Re-ranking with cross-encoder
+            if self.reranker and len(candidates) > final_k:
+                print(f"🎯 Stage 2: Re-ranking with cross-encoder...")
+                
+                # Prepare query-text pairs for cross-encoder
+                query_text_pairs = [(query, candidate["text"]) for candidate in candidates]
+                
+                # Get cross-encoder scores
+                cross_scores = self.reranker.predict(query_text_pairs)
+                
+                # Add cross-encoder scores to candidates
+                for i, candidate in enumerate(candidates):
+                    candidate["cross_score"] = float(cross_scores[i])
+                
+                # Sort by cross-encoder score (higher is better)
+                candidates.sort(key=lambda x: x["cross_score"], reverse=True)
+                print(f"✅ Re-ranked using cross-encoder")
+                
+                # Take top final_k after re-ranking
+                final_candidates = candidates[:final_k]
+                
+            else:
+                # Fallback: just use vector similarity scores
+                print("⚠️ Using vector similarity only (no re-ranking)")
+                final_candidates = candidates[:final_k]
+            
+            # Stage 3: Context expansion
+            print(f"📄 Stage 3: Expanding context for {len(final_candidates)} chunks...")
+            expanded_results = self._expand_context(final_candidates)
+            
+            # Add ranking metadata
+            for i, result in enumerate(expanded_results):
+                result["final_rank"] = i + 1
+                result["ranking_method"] = "cross_encoder" if self.reranker else "vector_similarity"
+            
+            self._print_ranking_summary(query, expanded_results)
+            
+            return expanded_results
+            
+        except Exception as e:
+            print(f"❌ Advanced search error: {e}")
+            # Fallback to simple search
+            return self.semantic_search_fallback(query, final_k)
+    
+    def _expand_context(self, candidates: List[Dict], context_chars: int = 500) -> List[Dict]:
+        """Expand context around selected chunks by retrieving adjacent chunks."""
+        expanded_results = []
+        
+        for candidate in candidates:
+            try:
+                doc_name = candidate["document_name"]
+                chunk_index = candidate.get("chunk_index", 0)
+                
+                # Try to get adjacent chunks for context
+                adjacent_chunks = self._get_adjacent_chunks(doc_name, chunk_index, context_chars)
+                
+                if adjacent_chunks:
+                    # Combine with context
+                    expanded_text = self._combine_chunks_with_context(
+                        candidate["text"], 
+                        adjacent_chunks,
+                        context_chars
+                    )
+                    candidate["text"] = expanded_text
+                    candidate["context_expanded"] = True
+                    candidate["adjacent_chunks_count"] = len(adjacent_chunks)
+                else:
+                    candidate["context_expanded"] = False
+                    candidate["adjacent_chunks_count"] = 0
+                
+                expanded_results.append(candidate)
+                
+            except Exception as e:
+                print(f"⚠️ Context expansion failed for chunk: {e}")
+                candidate["context_expanded"] = False
+                expanded_results.append(candidate)
+        
+        return expanded_results
+    
+    def _get_adjacent_chunks(self, doc_name: str, chunk_index: int, max_chars: int) -> List[Dict]:
+        """Retrieve adjacent chunks from the same document using namespace query."""
+        try:
+            if not self.index:
+                return []
+            
+            # Create a dummy vector for metadata-only search
+            dummy_vector = [0.0] * 384
+            
+            # Query for all chunks from the same document
+            response = self.index.query(
+                vector=dummy_vector,
+                top_k=200,  # Get more chunks to find adjacent ones
+                include_metadata=True
+            )
+            
+            # Filter and find adjacent chunks manually
+            same_doc_chunks = []
+            for match in response.matches:
+                metadata = match.metadata or {}
+                if metadata.get("document_name") == doc_name:
+                    same_doc_chunks.append({
+                        "text": metadata.get("text", ""),
+                        "chunk_index": metadata.get("chunk_index", 0),
+                        "chunk_id": match.id,
+                        "score": match.score
+                    })
+            
+            # Sort by chunk index to find adjacent chunks
+            same_doc_chunks.sort(key=lambda x: x["chunk_index"])
+            
+            # Find chunks adjacent to our target
+            adjacent = []
+            target_found = False
+            
+            for i, chunk in enumerate(same_doc_chunks):
+                if chunk["chunk_index"] == chunk_index:
+                    target_found = True
+                    # Get previous chunks
+                    for j in range(max(0, i-2), i):
+                        prev_chunk = same_doc_chunks[j]
+                        adjacent.append({
+                            "text": prev_chunk["text"],
+                            "chunk_index": prev_chunk["chunk_index"],
+                            "position": "before"
+                        })
+                    
+                    # Get next chunks
+                    for j in range(i+1, min(len(same_doc_chunks), i+3)):
+                        next_chunk = same_doc_chunks[j]
+                        adjacent.append({
+                            "text": next_chunk["text"],
+                            "chunk_index": next_chunk["chunk_index"],
+                            "position": "after"
+                        })
+                    break
+            
+            if not target_found:
+                print(f"⚠️ Target chunk {chunk_index} not found in document {doc_name}")
+                # Fallback: just get some chunks from the same document
+                for chunk in same_doc_chunks[:4]:
+                    if chunk["chunk_index"] != chunk_index:
+                        adjacent.append({
+                            "text": chunk["text"],
+                            "chunk_index": chunk["chunk_index"],
+                            "position": "context"
+                        })
+            
+            print(f"🔍 Found {len(adjacent)} adjacent chunks for {doc_name} chunk {chunk_index}")
+            return adjacent[:4]  # Limit to prevent too much context
+            
+        except Exception as e:
+            print(f"⚠️ Could not retrieve adjacent chunks: {e}")
+            import traceback
+            traceback.print_exc()
+            return []
+    
+    def _combine_chunks_with_context(self, main_text: str, adjacent_chunks: List[Dict], max_chars: int) -> str:
+        """Intelligently combine main chunk with context from adjacent chunks."""
+        # Start with main text
+        result = main_text
+        chars_used = len(main_text)
+        remaining_chars = max_chars
+        
+        # Add before context
+        before_chunks = [c for c in adjacent_chunks if c["position"] == "before"]
+        before_chunks.sort(key=lambda x: x["chunk_index"], reverse=True)  # Closest first
+        
+        before_context = ""
+        for chunk in before_chunks:
+            chunk_text = chunk["text"]
+            if len(before_context) + len(chunk_text) <= remaining_chars // 2:
+                before_context = chunk_text + " ... " + before_context
+        
+        # Add after context
+        after_chunks = [c for c in adjacent_chunks if c["position"] == "after"]
+        after_chunks.sort(key=lambda x: x["chunk_index"])  # Closest first
+        
+        after_context = ""
+        for chunk in after_chunks:
+            chunk_text = chunk["text"]
+            if len(after_context) + len(chunk_text) <= remaining_chars // 2:
+                after_context = after_context + " ... " + chunk_text
+        
+        # Combine all parts
+        if before_context:
+            result = f"[CONTEXT] {before_context} [MAIN] {main_text}"
+        if after_context:
+            result = result + f" [CONTINUED] {after_context}"
+        
+        return result
+    
+    def _print_ranking_summary(self, query: str, results: List[Dict]):
+        """Print detailed ranking summary for debugging."""
+        print(f"\n📊 Advanced RAG Results Summary:")
+        print(f"Query: '{query}'")
+        print(f"Final results: {len(results)}")
+        
+        for i, result in enumerate(results, 1):
+            vector_score = result.get("vector_score", 0)
+            cross_score = result.get("cross_score", 0)
+            doc_name = result.get("document_name", "Unknown")
+            context_expanded = result.get("context_expanded", False)
+            
+            print(f"  {i}. Doc: {doc_name}")
+            print(f"     Vector: {vector_score:.3f} | Cross: {cross_score:.3f} | Context: {'✅' if context_expanded else '❌'}")
+            print(f"     Text: {result['text'][:100]}...")
+            print()
+    
+    def semantic_search_fallback(self, query: str, top_k: int = 5) -> List[Dict]:
+        """Fallback to simple semantic search if advanced search fails."""
+        print("🔄 Using fallback semantic search...")
+        return self.semantic_search(query, top_k)
+    
     def semantic_search(self, query: str, top_k: int = 5) -> List[Dict]:
          """Perform semantic search in Pinecone."""
          if not self.index:
@@ -541,19 +814,37 @@ class QueryProcessor:
         }
     
     def process_query(self, query: str) -> Dict[str, Any]:
-        """Complete query processing pipeline with API status information."""
+        """Complete query processing pipeline with advanced RAG and re-ranking."""
         try:
             # Get API status for debugging
             api_status = self.get_api_status()
             
             # Step 1: Extract entities
+            print("🔍 Step 1: Extracting entities...")
             entities = self.extract_entities(query)
             
-            # Step 2: Semantic search
-            search_results = self.semantic_search(query, top_k=5)
+            # Step 2: Advanced semantic search with re-ranking
+            print("🔍 Step 2: Advanced semantic search with re-ranking...")
+            search_results = self.semantic_search_with_reranking(
+                query, 
+                initial_k=50,  # Retrieve top 50 candidates initially
+                final_k=3      # Re-rank and return top 3
+            )
+            
+            # Fallback to simple search if advanced search fails
+            if not search_results:
+                print("🔄 Falling back to simple semantic search...")
+                search_results = self.semantic_search(query, top_k=5)
             
             # Step 3: Evaluate claim
+            print("🔍 Step 3: Evaluating claim with enhanced context...")
             evaluation = self.evaluate_claim(query, entities, search_results)
+            
+            # Add advanced RAG information
+            evaluation['search_method'] = 'advanced_rag_with_reranking'
+            evaluation['reranker_available'] = self.reranker is not None
+            evaluation['total_candidates_retrieved'] = 50 if search_results else 0
+            evaluation['final_chunks_used'] = len(search_results)
             
             # Add fallback information to evaluation if needed
             if not self.llm:
