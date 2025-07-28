@@ -21,18 +21,12 @@ except ImportError:
     GENAI_AVAILABLE = False
 
 try:
-    # Try to import BGE Reranker (BAAI)
+    # Import BGE Reranker (BAAI) - required, no fallbacks
     from FlagEmbedding import FlagReranker
     BGE_RERANKER_AVAILABLE = True
 except ImportError:
-    try:
-        # Fallback to sentence-transformers CrossEncoder
-        from sentence_transformers import CrossEncoder
-        CROSS_ENCODER_AVAILABLE = True
-        BGE_RERANKER_AVAILABLE = False
-    except ImportError:
-        CROSS_ENCODER_AVAILABLE = False
-        BGE_RERANKER_AVAILABLE = False
+    BGE_RERANKER_AVAILABLE = False
+    print("❌ BGE Reranker not available. Install with: pip install FlagEmbedding")
 
 from .embed_and_index import get_embedding_model
 
@@ -60,59 +54,15 @@ class QueryProcessor:
         # Use cached embedding model for consistency and performance
         self.model = get_embedding_model()
         
-    def _encode_query(self, query: str) -> List[float]:
-        """Encode query using the appropriate embedding model."""
-        try:
-            if isinstance(self.model, str) and self.model == "llama-text-embed-v2":
-                # Use Llama Text Embed v2 API
-                from .embed_and_index import generate_embeddings_llama
-                embeddings = generate_embeddings_llama([query])
-                return embeddings[0] if embeddings else [0.0] * 384
-            else:
-                # Use sentence-transformers model
-                return self.model.encode(query).tolist()
-        except Exception as e:
-            print(f"⚠️ Query encoding error: {e}")
-            # Return zero vector as fallback
-            return [0.0] * 384
-        
-        # Initialize Advanced Re-ranker (BGE Reranker v2 M3 or fallback)
-        self.reranker = None
+        # Initialize BGE Reranker v2 M3 (BAAI) - required, no fallbacks
         if BGE_RERANKER_AVAILABLE:
-            try:
-                print("🔄 Loading BGE Reranker v2 M3 (BAAI) for advanced re-ranking...")
-                # Note: This would typically require the model to be downloaded or API access
-                self.reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
-                print("✅ BGE Reranker v2 M3 loaded successfully!")
-                self.reranker_type = "bge-reranker-v2-m3"
-            except Exception as e:
-                print(f"⚠️ Could not load BGE Reranker: {e}")
-                # Fallback to CrossEncoder
-                if CROSS_ENCODER_AVAILABLE:
-                    try:
-                        print("🔄 Falling back to CrossEncoder...")
-                        self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
-                        print("✅ CrossEncoder loaded as fallback!")
-                        self.reranker_type = "cross-encoder"
-                    except Exception as e2:
-                        print(f"⚠️ Could not load fallback reranker: {e2}")
-                        self.reranker = None
-                        self.reranker_type = "none"
-                else:
-                    self.reranker = None
-                    self.reranker_type = "none"
-        elif CROSS_ENCODER_AVAILABLE:
-            try:
-                print("🔄 Loading CrossEncoder for re-ranking...")
-                self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
-                print("✅ CrossEncoder loaded successfully!")
-                self.reranker_type = "cross-encoder"
-            except Exception as e:
-                print(f"⚠️ Could not load CrossEncoder: {e}")
-                self.reranker = None
-                self.reranker_type = "none"
+            print("🔄 Loading BGE Reranker v2 M3 (BAAI) for advanced re-ranking...")
+            self.reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
+            print("✅ BGE Reranker v2 M3 loaded successfully!")
+            self.reranker_type = "bge-reranker-v2-m3"
         else:
-            print("⚠️ No re-ranker available - using similarity-only ranking")
+            print("❌ BGE Reranker not available. System will not function without it.")
+            self.reranker = None
             self.reranker_type = "none"
         
         # Initialize Gemini
@@ -168,6 +118,42 @@ class QueryProcessor:
                 self.fallback_reason = "Using dummy API key for testing"
             else:
                 self.fallback_reason = "API key not provided"
+    
+    def _encode_query(self, query: str) -> List[float]:
+        """Encode query using the appropriate embedding model."""
+        try:
+            if isinstance(self.model, str) and self.model == "llama-text-embed-v2":
+                # Use Llama Text Embed v2 API
+                from .embed_and_index import generate_embeddings_llama
+                embeddings = generate_embeddings_llama([query])
+                return embeddings[0] if embeddings else [0.0] * 384
+            else:
+                # Use sentence-transformers model
+                embedding = self.model.encode(query)
+                
+                # Convert to list safely
+                try:
+                    # Try the most common case (numpy array)
+                    import numpy as np
+                    if isinstance(embedding, np.ndarray):
+                        return embedding.tolist()
+                    # If it's already a list
+                    elif isinstance(embedding, list):
+                        return [float(x) for x in embedding]  # Ensure float type
+                    # If it has tolist method
+                    elif hasattr(embedding, 'tolist'):
+                        return embedding.tolist()  # type: ignore
+                    else:
+                        # Last resort conversion
+                        return list(map(float, embedding))
+                except Exception as convert_error:
+                    print(f"⚠️ Conversion error: {convert_error}")
+                    return [0.0] * 384
+                    
+        except Exception as e:
+            print(f"⚠️ Query encoding error: {e}")
+            # Return zero vector as fallback (using proper dimension)
+            return [0.0] * 384
     
     def get_api_status(self) -> Dict[str, Any]:
         """Get current API status and recommendations."""
@@ -260,17 +246,34 @@ class QueryProcessor:
         return None
 
     def extract_entities(self, query: str) -> Dict[str, Any]:
-        """Extract structured entities from natural language query."""
+        """Extract structured entities from natural language query using Gemini only."""
         if self.llm:
             return self._llm_entity_extraction(query)
         else:
-            return self._fallback_entity_extraction(query)
+            print("❌ No LLM available for entity extraction")
+            return {
+                "age": None,
+                "gender": None,
+                "procedure": None,
+                "location": None,
+                "policy_duration": None,
+                "policy_type": None,
+                "amount": None
+            }
     
     def _llm_entity_extraction(self, query: str) -> Dict[str, Any]:
-        """Use LLM for entity extraction with quota-aware error handling."""
+        """Use LLM for entity extraction - no fallbacks."""
         if not self.llm:
-            print("🔍 LLM not available, using fallback entity extraction")
-            return self._fallback_entity_extraction(query)
+            print("❌ LLM not available for entity extraction")
+            return {
+                "age": None,
+                "gender": None,
+                "procedure": None,
+                "location": None,
+                "policy_duration": None,
+                "policy_type": None,
+                "amount": None
+            }
             
         prompt = f"""
         Extract the following entities from this insurance/medical query: "{query}"
@@ -289,122 +292,36 @@ class QueryProcessor:
         Only return the JSON, no other text.
         """
         
-        # Use new robust request method
+        # Use robust request method
         response_text = self._make_llm_request_with_retry(prompt)
         if not response_text:
-            print("🔍 No response from LLM, using fallback entity extraction")
-            return self._fallback_entity_extraction(query)
+            print("❌ No response from LLM for entity extraction")
+            return {
+                "age": None,
+                "gender": None,
+                "procedure": None,
+                "location": None,
+                "policy_duration": None,
+                "policy_type": None,
+                "amount": None
+            }
         
-        # Use new robust JSON extraction
+        # Extract JSON from response
         entities = self._extract_json_from_response(response_text, "entity extraction")
         if entities:
             print("✅ Successfully extracted entities using LLM")
             return entities
         else:
-            print("🔍 JSON extraction failed, using fallback entity extraction")
-            return self._fallback_entity_extraction(query)
-    
-    def _fallback_entity_extraction(self, query: str) -> Dict[str, Any]:
-        """Enhanced fallback entity extraction with better pattern matching."""
-        entities: Dict[str, Any] = {
-             "age": None,
-             "gender": None,
-             "procedure": None,
-             "location": None,
-             "policy_duration": None,
-             "policy_type": None,
-             "amount": None
-         }
-        
-        query_lower = query.lower()
-        
-        # Extract age - improved patterns
-        age_patterns = [
-            r'(\d+)\s*(?:year|yr|y)\s*(?:old|male|female|m|f)',
-            r'(\d+)\s*(?:male|female|m|f)',
-            r'(\d+)\s*(?:year|yr|y)',
-            r'(\d+)(?=\s*(?:male|female|m|f))'
-        ]
-        for pattern in age_patterns:
-            age_match = re.search(pattern, query_lower)
-            if age_match:
-                age_val = int(age_match.group(1))
-                if 0 < age_val < 120:  # Reasonable age range
-                    entities["age"] = age_val
-                    break
-        
-        # Extract gender - improved patterns
-        gender_patterns = [
-            (r'\b(?:male|m)\b(?!\w)', "M"),
-            (r'\b(?:female|f)\b(?!\w)', "F"),
-            (r'\b(?:man|boy)\b', "M"),
-            (r'\b(?:woman|girl)\b', "F")
-        ]
-        for pattern, gender in gender_patterns:
-            if re.search(pattern, query_lower):
-                entities["gender"] = gender
-                break
-        
-        # Extract procedures - expanded list
-        procedures = [
-            "knee surgery", "heart surgery", "eye surgery", "brain surgery",
-            "dental surgery", "plastic surgery", "bypass surgery",
-            "cataract surgery", "appendectomy", "hernia repair",
-            "surgery", "operation", "procedure", "treatment",
-            "dental treatment", "dental", "orthodontic",
-            "physiotherapy", "chemotherapy", "dialysis",
-            "consultation", "checkup", "scan", "mri", "ct scan"
-        ]
-        for proc in procedures:
-            if proc in query_lower:
-                entities["procedure"] = proc
-                break
-        
-        # Extract locations - expanded list
-        locations = [
-            "pune", "mumbai", "delhi", "bangalore", "chennai", "hyderabad",
-            "kolkata", "ahmedabad", "jaipur", "lucknow", "kanpur", "nagpur",
-            "indore", "thane", "bhopal", "visakhapatnam", "pimpri", "patna",
-            "vadodara", "ghaziabad", "ludhiana", "agra", "nashik", "faridabad"
-        ]
-        for loc in locations:
-            if loc in query_lower:
-                entities["location"] = loc.title()
-                break
-        
-        # Extract policy duration - improved patterns
-        duration_patterns = [
-            r'(\d+)\s*(?:month|months|month old|months old)',
-            r'(\d+)\s*(?:year|years|year old|years old)',
-            r'(\d+)\s*(?:day|days|day old|days old)',
-            r'(\d+-month)',
-            r'(\d+-year)'
-        ]
-        for pattern in duration_patterns:
-            duration_match = re.search(pattern, query_lower)
-            if duration_match:
-                full_match = duration_match.group(0)
-                entities["policy_duration"] = full_match
-                break
-        
-        # Extract amounts - look for currency patterns
-        amount_patterns = [
-            r'₹\s*(\d+(?:,\d+)*(?:\.\d{2})?)',
-            r'rs\.?\s*(\d+(?:,\d+)*(?:\.\d{2})?)',
-            r'rupees?\s*(\d+(?:,\d+)*(?:\.\d{2})?)',
-            r'(\d+(?:,\d+)*(?:\.\d{2})?)\s*(?:rupees?|rs\.?|₹)'
-        ]
-        for pattern in amount_patterns:
-            amount_match = re.search(pattern, query_lower)
-            if amount_match:
-                amount_str = amount_match.group(1).replace(',', '')
-                try:
-                    entities["amount"] = float(amount_str)
-                    break
-                except ValueError:
-                    continue
-        
-        return entities
+            print("❌ JSON extraction failed from LLM response")
+            return {
+                "age": None,
+                "gender": None,
+                "procedure": None,
+                "location": None,
+                "policy_duration": None,
+                "policy_type": None,
+                "amount": None
+            }
     
     def semantic_search_with_reranking(self, query: str, initial_k: int = 50, final_k: int = 3) -> List[Dict]:
         """
@@ -446,33 +363,17 @@ class QueryProcessor:
             
             print(f"✅ Retrieved {len(candidates)} candidates")
             
-            # Stage 2: Advanced Re-ranking with BGE Reranker v2 M3 or CrossEncoder
+            # Stage 2: BGE Reranker v2 M3 Re-ranking (no fallbacks)
             if self.reranker and len(candidates) > final_k:
-                print(f"🎯 Stage 2: Re-ranking with {self.reranker_type}...")
+                print(f"🎯 Stage 2: Re-ranking with BGE Reranker v2 M3...")
                 
-                if self.reranker_type == "bge-reranker-v2-m3":
-                    # Use BGE Reranker v2 M3 (BAAI)  
-                    try:
-                        # BGE Reranker expects list of [query, passage] pairs
-                        pairs = [[query, candidate["text"]] for candidate in candidates]
-                        cross_scores = self.reranker.compute_score(pairs, normalize=True)
-                        
-                        # Handle single score or list of scores
-                        if not isinstance(cross_scores, list):
-                            cross_scores = [cross_scores]
-                            
-                    except Exception as e:
-                        print(f"⚠️ BGE Reranker error: {e}, falling back to basic scoring")
-                        cross_scores = [0.5] * len(candidates)  # Neutral scores
-                    
-                elif self.reranker_type == "cross-encoder":
-                    # Use traditional CrossEncoder
-                    query_text_pairs = [(query, candidate["text"]) for candidate in candidates]
-                    cross_scores = self.reranker.predict(query_text_pairs)
+                # BGE Reranker expects list of [query, passage] pairs
+                pairs = [[query, candidate["text"]] for candidate in candidates]
+                cross_scores = self.reranker.compute_score(pairs, normalize=True)
                 
-                else:
-                    # Fallback - shouldn't reach here
-                    cross_scores = [0.0] * len(candidates)
+                # Handle single score or list of scores
+                if not isinstance(cross_scores, list):
+                    cross_scores = [cross_scores]
                 
                 # Add re-ranker scores to candidates
                 for i, candidate in enumerate(candidates):
@@ -480,15 +381,14 @@ class QueryProcessor:
                 
                 # Sort by re-ranker score (higher is better)
                 candidates.sort(key=lambda x: x["cross_score"], reverse=True)
-                print(f"✅ Re-ranked using {self.reranker_type}")
+                print(f"✅ Re-ranked using BGE Reranker v2 M3")
                 
                 # Take top final_k after re-ranking
                 final_candidates = candidates[:final_k]
                 
             else:
-                # Fallback: just use vector similarity scores
-                print("⚠️ Using vector similarity only (no re-ranking)")
-                final_candidates = candidates[:final_k]
+                print("❌ BGE Reranker not available - cannot perform re-ranking")
+                return []
             
             # Stage 3: Context expansion
             print(f"📄 Stage 3: Expanding context for {len(final_candidates)} chunks...")
@@ -505,8 +405,8 @@ class QueryProcessor:
             
         except Exception as e:
             print(f"❌ Advanced search error: {e}")
-            # Fallback to simple search
-            return self.semantic_search_fallback(query, final_k)
+            # No fallback - return empty results
+            return []
     
     def _expand_context(self, candidates: List[Dict], context_chars: int = 500) -> List[Dict]:
         """Expand context around selected chunks by retrieving adjacent chunks."""
@@ -672,19 +572,14 @@ class QueryProcessor:
             print(f"     Text: {result['text'][:100]}...")
             print()
     
-    def semantic_search_fallback(self, query: str, top_k: int = 5) -> List[Dict]:
-        """Fallback to simple semantic search if advanced search fails."""
-        print("🔄 Using fallback semantic search...")
-        return self.semantic_search(query, top_k)
-    
     def semantic_search(self, query: str, top_k: int = 5) -> List[Dict]:
          """Perform semantic search in Pinecone."""
          if not self.index:
              return []
          
          try:
-             # Generate query embedding
-             query_embedding = self.model.encode(query).tolist()
+             # Generate query embedding using helper method
+             query_embedding = self._encode_query(query)
              
              # Search in Pinecone (returns a QueryResponse)
              response = self.index.query(
@@ -710,18 +605,33 @@ class QueryProcessor:
              return []
     
     def evaluate_claim(self, query: str, entities: Dict, search_results: List[Dict]) -> Dict[str, Any]:
-        """Use LLM to evaluate claim based on retrieved context."""
+        """Use LLM to evaluate claim based on retrieved context - no fallbacks."""
         
         if self.llm:
             return self._llm_evaluation(query, entities, search_results)
         else:
-            return self._fallback_evaluation(query, entities, search_results)
+            print("❌ No LLM available for claim evaluation")
+            return {
+                "decision": "error",
+                "amount": None,
+                "confidence": 0.0,
+                "justification": "LLM not available for claim evaluation.",
+                "relevant_clauses": [],
+                "reasoning": "System requires LLM for claim evaluation"
+            }
     
     def _llm_evaluation(self, query: str, entities: Dict, search_results: List[Dict]) -> Dict[str, Any]:
-        """Use LLM for claim evaluation with quota-aware error handling."""
+        """Use LLM for claim evaluation - no fallbacks."""
         if not self.llm:
-            print("🔍 LLM not available, using fallback evaluation")
-            return self._fallback_evaluation(query, entities, search_results)
+            print("❌ LLM not available for evaluation")
+            return {
+                "decision": "error",
+                "amount": None,
+                "confidence": 0.0,
+                "justification": "LLM not available for claim evaluation.",
+                "relevant_clauses": [],
+                "reasoning": "System requires LLM for claim evaluation"
+            }
             
         # Prepare context from search results
         context = "\n\n".join([
@@ -760,126 +670,34 @@ class QueryProcessor:
         Only return the JSON, no other text.
         """
         
-        # Use new robust request method
+        # Use robust request method
         response_text = self._make_llm_request_with_retry(prompt)
         if not response_text:
-            print("🔍 No response from LLM, using fallback evaluation")
-            return self._fallback_evaluation(query, entities, search_results)
+            print("❌ No response from LLM for evaluation")
+            return {
+                "decision": "error",
+                "amount": None,
+                "confidence": 0.0,
+                "justification": "No response from LLM.",
+                "relevant_clauses": [],
+                "reasoning": "LLM did not respond"
+            }
         
-        # Use new robust JSON extraction
+        # Extract JSON from response
         evaluation = self._extract_json_from_response(response_text, "claim evaluation")
         if evaluation:
             print("✅ Successfully completed claim evaluation using LLM")
             return evaluation
         else:
-            print("🔍 JSON extraction failed, using fallback evaluation")
-            return self._fallback_evaluation(query, entities, search_results)
-    
-    def _fallback_evaluation(self, query: str, entities: Dict, search_results: List[Dict]) -> Dict[str, Any]:
-        """Enhanced rule-based evaluation fallback."""
-        
-        # Default values
-        decision = "needs_review"
-        confidence = 0.6
-        justification = "Automated rule-based evaluation (LLM unavailable due to quota limits)."
-        relevant_clauses = []
-        reasoning = "Using enhanced pattern matching and keyword analysis."
-        amount = entities.get('amount')
-        
-        # Check if we have relevant search results
-        if search_results:
-            # Combine text from top search results
-            combined_text = " ".join([r.get('text', '') for r in search_results[:3]]).lower()
-            
-            procedure = entities.get('procedure', '').lower()
-            age = entities.get('age')
-            policy_duration = entities.get('policy_duration', '').lower()
-            
-            # Enhanced keyword analysis
-            coverage_keywords = ['covered', 'eligible', 'benefits', 'included', 'payable']
-            exclusion_keywords = ['excluded', 'not covered', 'not eligible', 'not payable', 'waiting period']
-            approval_keywords = ['approved', 'allowed', 'permitted', 'authorized']
-            rejection_keywords = ['rejected', 'denied', 'prohibited', 'restricted']
-            
-            coverage_score = sum(1 for kw in coverage_keywords if kw in combined_text)
-            exclusion_score = sum(1 for kw in exclusion_keywords if kw in combined_text)
-            approval_score = sum(1 for kw in approval_keywords if kw in combined_text)
-            rejection_score = sum(1 for kw in rejection_keywords if kw in combined_text)
-            
-            # Procedure-specific analysis
-            procedure_mentioned = procedure and procedure in combined_text
-            
-            # Age-based analysis
-            age_restrictions = False
-            if age:
-                age_keywords = [f"{age}", "age limit", "minimum age", "maximum age"]
-                age_mentions = sum(1 for kw in age_keywords if kw in combined_text)
-                if age_mentions > 0:
-                    age_restrictions = True
-            
-            # Policy duration analysis
-            waiting_period_issue = False
-            if policy_duration and ('month' in policy_duration or 'day' in policy_duration):
-                waiting_keywords = ['waiting period', 'waiting time', 'grace period', 'cooling period']
-                if any(kw in combined_text for kw in waiting_keywords):
-                    waiting_period_issue = True
-            
-            # Decision logic
-            if procedure_mentioned:
-                if coverage_score > exclusion_score and not waiting_period_issue:
-                    decision = "approved"
-                    confidence = min(0.8, 0.6 + (coverage_score * 0.1))
-                    justification = f"Procedure '{procedure}' appears to be covered based on policy document analysis."
-                elif exclusion_score > coverage_score:
-                    decision = "rejected"
-                    confidence = min(0.8, 0.6 + (exclusion_score * 0.1))
-                    justification = f"Procedure '{procedure}' appears to be excluded from coverage."
-                elif waiting_period_issue:
-                    decision = "rejected"
-                    confidence = 0.7
-                    justification = "Potential waiting period violation for recent policy."
-                else:
-                    decision = "needs_review"
-                    confidence = 0.5
-                    justification = "Unclear coverage status - manual review recommended."
-            else:
-                if approval_score > rejection_score:
-                    decision = "approved"
-                    confidence = 0.6
-                    justification = "General approval indicators found in policy documents."
-                elif rejection_score > approval_score:
-                    decision = "rejected"
-                    confidence = 0.6
-                    justification = "General rejection indicators found in policy documents."
-            
-            # Generate relevant clauses
-            relevant_clauses = [
-                f"Analysis from {r['document_name']}: {r['text'][:100]}..."
-                for r in search_results[:2]
-            ]
-            
-            # Enhanced reasoning
-            reasoning_parts = [
-                f"Analyzed {len(search_results)} relevant policy documents.",
-                f"Coverage indicators: {coverage_score}, Exclusion indicators: {exclusion_score}",
-                f"Procedure mentioned: {procedure_mentioned}",
-                f"Age considerations: {age_restrictions}",
-                f"Waiting period concerns: {waiting_period_issue}"
-            ]
-            reasoning = " ".join(reasoning_parts)
-        
-        else:
-            justification = "No relevant policy documents found for analysis."
-            reasoning = "Unable to perform document-based analysis due to lack of relevant search results."
-        
-        return {
-            "decision": decision,
-            "amount": amount,
-            "confidence": confidence,
-            "justification": justification,
-            "relevant_clauses": relevant_clauses,
-            "reasoning": reasoning
-        }
+            print("❌ JSON extraction failed from LLM evaluation response")
+            return {
+                "decision": "error",
+                "amount": None,
+                "confidence": 0.0,
+                "justification": "Failed to parse LLM response.",
+                "relevant_clauses": [],
+                "reasoning": "JSON extraction failed"
+            }
     
     def process_query(self, query: str) -> Dict[str, Any]:
         """Complete query processing pipeline with advanced RAG and re-ranking."""
@@ -901,8 +719,8 @@ class QueryProcessor:
             
             # Fallback to simple search if advanced search fails
             if not search_results:
-                print("🔄 Falling back to simple semantic search...")
-                search_results = self.semantic_search(query, top_k=5)
+                print("❌ Advanced search failed and no fallback available")
+                search_results = []
             
             # Step 3: Evaluate claim
             print("🔍 Step 3: Evaluating claim with enhanced context...")
@@ -916,9 +734,7 @@ class QueryProcessor:
             
             # Add fallback information to evaluation if needed
             if not self.llm:
-                evaluation['note'] = "⚠️ Analysis performed using fallback methods due to LLM unavailability"
-                if self.quota_exceeded:
-                    evaluation['note'] += " (Gemini API quota exceeded)"
+                evaluation['note'] = "❌ Analysis performed without LLM (required for full functionality)"
             
             # Combine all results
             result = {
