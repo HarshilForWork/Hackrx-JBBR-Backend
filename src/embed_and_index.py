@@ -31,7 +31,7 @@ def get_embedding_model():
             print(f"⚠️ Falling back to SentenceTransformer: {e}")
     return _model_cache
 
-def generate_embeddings_llama(texts: List[str], api_key: str = None) -> List[List[float]]:
+def generate_embeddings_llama(texts: List[str], api_key: Optional[str] = None) -> List[List[float]]:
     """
     Generate embeddings using NVIDIA-hosted Llama Text Embed v2.
     
@@ -50,7 +50,13 @@ def generate_embeddings_llama(texts: List[str], api_key: str = None) -> List[Lis
         # For now, fall back to sentence-transformers
         from sentence_transformers import SentenceTransformer
         model = SentenceTransformer('all-MiniLM-L6-v2')
-        embeddings = model.encode(texts).tolist()
+        embeddings_raw = model.encode(texts)
+        
+        # Convert to list safely
+        if hasattr(embeddings_raw, 'tolist'):
+            embeddings = embeddings_raw.tolist()
+        else:
+            embeddings = [list(map(float, emb)) for emb in embeddings_raw]
         
         print(f"✅ Generated {len(embeddings)} embeddings using Llama Text Embed v2")
         return embeddings
@@ -60,7 +66,13 @@ def generate_embeddings_llama(texts: List[str], api_key: str = None) -> List[Lis
         # Fallback to sentence-transformers
         from sentence_transformers import SentenceTransformer
         model = SentenceTransformer('all-MiniLM-L6-v2')
-        return model.encode(texts).tolist()
+        embeddings_raw = model.encode(texts)
+        
+        # Convert to list safely
+        if hasattr(embeddings_raw, 'tolist'):
+            return embeddings_raw.tolist()
+        else:
+            return [list(map(float, emb)) for emb in embeddings_raw]
 
 def clear_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index'):
     """
@@ -173,7 +185,13 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
         embeddings = generate_embeddings_llama(texts)
     else:
         # Fallback to sentence-transformers
-        embeddings = model.encode(texts, batch_size=32, show_progress_bar=False)
+        embeddings_raw = model.encode(texts, batch_size=32, show_progress_bar=False)
+        
+        # Convert to list safely
+        if hasattr(embeddings_raw, 'tolist'):
+            embeddings = embeddings_raw.tolist()
+        else:
+            embeddings = [list(map(float, emb)) for emb in embeddings_raw]
     
     if progress_callback:
         progress_callback("Preparing vectors for indexing...", 60)
@@ -187,7 +205,17 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
             'page_number': chunk['page_number'],
             'chunk_id': chunk['chunk_id']
         }
-        vectors.append((chunk['chunk_id'], embedding.tolist(), meta))
+        
+        # Convert embedding to list safely (handle both numpy arrays and already-converted lists)
+        if isinstance(embedding, list):
+            embedding_list = embedding
+        elif hasattr(embedding, 'tolist'):
+            embedding_list = embedding.tolist()  # type: ignore
+        else:
+            # Last resort conversion
+            embedding_list = list(map(float, embedding))
+        
+        vectors.append((chunk['chunk_id'], embedding_list, meta))
     
     if progress_callback:
         progress_callback("Upserting to Pinecone...", 70)
