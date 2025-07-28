@@ -5,8 +5,21 @@ Functionality: Complete query processing pipeline with LLM integration.
 import json
 import re
 import time
+import warnings
 from typing import Dict, List, Any, Optional, Tuple
 import numpy as np
+
+# Suppress specific tokenizer warnings for BGE Reranker
+warnings.filterwarnings(
+    "ignore", 
+    message=".*XLMRobertaTokenizerFast.*__call__.*method is faster.*", 
+    category=UserWarning
+)
+warnings.filterwarnings(
+    "ignore",
+    message=".*fast tokenizer.*__call__.*method is faster.*",
+    category=UserWarning
+)
 
 try:
     from pinecone import Pinecone
@@ -57,6 +70,7 @@ class QueryProcessor:
         # Initialize BGE Reranker v2 M3 (BAAI) - required, no fallbacks
         if BGE_RERANKER_AVAILABLE:
             print("🔄 Loading BGE Reranker v2 M3 (BAAI) for advanced re-ranking...")
+            # Initialize with standard settings
             self.reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
             print("✅ BGE Reranker v2 M3 loaded successfully!")
             self.reranker_type = "bge-reranker-v2-m3"
@@ -367,17 +381,30 @@ class QueryProcessor:
             if self.reranker and len(candidates) > final_k:
                 print(f"🎯 Stage 2: Re-ranking with BGE Reranker v2 M3...")
                 
-                # BGE Reranker expects list of [query, passage] pairs
-                pairs = [[query, candidate["text"]] for candidate in candidates]
+                # BGE Reranker expects list of (query, passage) tuples
+                pairs = [(query, candidate["text"]) for candidate in candidates]
                 cross_scores = self.reranker.compute_score(pairs, normalize=True)
                 
                 # Handle single score or list of scores
                 if not isinstance(cross_scores, list):
                     cross_scores = [cross_scores]
                 
-                # Add re-ranker scores to candidates
+                # Add re-ranker scores to candidates with safe conversion
                 for i, candidate in enumerate(candidates):
-                    candidate["cross_score"] = float(cross_scores[i]) if i < len(cross_scores) else 0.0
+                    if i < len(cross_scores):
+                        score = cross_scores[i]
+                        # Safely convert score to float
+                        try:
+                            if hasattr(score, 'item'):  # numpy scalar
+                                candidate["cross_score"] = float(score.item())
+                            elif score is not None:
+                                candidate["cross_score"] = float(score)
+                            else:
+                                candidate["cross_score"] = 0.0
+                        except (ValueError, TypeError, AttributeError):
+                            candidate["cross_score"] = 0.0
+                    else:
+                        candidate["cross_score"] = 0.0
                 
                 # Sort by re-ranker score (higher is better)
                 candidates.sort(key=lambda x: x["cross_score"], reverse=True)

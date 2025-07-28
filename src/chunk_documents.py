@@ -1,185 +1,265 @@
 """
 Module: chunk_documents.py
-Functionality: Advanced semantic chunking using LangChain with MiniLM embeddings.
+Functionality: Semantic chunking using LangChain with MiniLM embeddings for intelligent text splitting.
 """
-from typing import List, Dict, Optional, Callable
+from typing import List, Dict, Optional, Callable, Any
 import hashlib
+import time
+import os
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_huggingface import HuggingFaceEmbeddings
 
-# Cache for the semantic splitter to avoid reloading
-_semantic_splitter_cache = None
-
 def get_semantic_splitter():
-    """Get cached LangChain semantic splitter with Llama Text Embed v2 embeddings."""
-    global _semantic_splitter_cache
-    if _semantic_splitter_cache is None:
-        try:
-            # Try to use Llama Text Embed v2 for semantic chunking
-            # For now, fall back to HuggingFace embeddings as placeholder
-            from langchain_huggingface import HuggingFaceEmbeddings
-            
-            # Note: In production, this would use the actual Llama Text Embed v2 API
-            embeddings = HuggingFaceEmbeddings(
-                model_name='sentence-transformers/all-MiniLM-L6-v2',  # Placeholder
-                model_kwargs={'device': 'cpu'},
-                encode_kwargs={'normalize_embeddings': True}
-            )
-            
-            print("✅ Semantic chunker initialized with Llama-compatible embeddings")
-            
-        except Exception as e:
-            print(f"⚠️ Falling back to standard embeddings: {e}")
-            from langchain_huggingface import HuggingFaceEmbeddings
-            embeddings = HuggingFaceEmbeddings(
-                model_name='sentence-transformers/all-MiniLM-L6-v2',
-                model_kwargs={'device': 'cpu'},
-                encode_kwargs={'normalize_embeddings': True}
-            )
-        
-        # Create semantic chunker
-        _semantic_splitter_cache = SemanticChunker(
-            embeddings=embeddings,
-            breakpoint_threshold_type="percentile",  # Split at semantic breaks
-            breakpoint_threshold_amount=95,  # Only split at top 5% of semantic boundaries
-        )
+    """Get LangChain semantic splitter with MiniLM embeddings."""
+    # Use MiniLM for semantic chunking embeddings
+    embeddings = HuggingFaceEmbeddings(
+        model_name="all-MiniLM-L6-v2",
+        model_kwargs={'device': 'cpu'},
+        encode_kwargs={'normalize_embeddings': True}
+    )
     
-    return _semantic_splitter_cache
-
-def get_fallback_splitter():
-    """Get fallback recursive character splitter for when semantic splitting fails."""
-    return RecursiveCharacterTextSplitter(
-        chunk_size=800,
-        chunk_overlap=100,
-        length_function=len,
-        separators=["\n\n", "\n", ".", "!", "?", ";", " ", ""],
-        is_separator_regex=False,
+    return SemanticChunker(
+        embeddings=embeddings,
+        breakpoint_threshold_type="percentile",
+        breakpoint_threshold_amount=95
     )
 
-def chunk_documents(parsed_docs: List[Dict], progress_callback: Optional[Callable] = None) -> List[Dict]:
+def generate_chunk_id(doc_name: str, content: str, chunk_index: int) -> str:
+    """Generate a unique chunk ID based on document name, content hash, and index."""
+    content_hash = hashlib.md5(content.encode('utf-8')).hexdigest()[:8]
+    return f"{doc_name}_{chunk_index}_{content_hash}"
+
+def save_parsed_text_file_ordered(doc_name: str, ordered_content: List[Dict], output_dir: str):
+    """Save ordered parsed text to file for inspection."""
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Remove file extension and add suffix
+    base_name = doc_name.rsplit('.', 1)[0] if '.' in doc_name else doc_name
+    output_path = os.path.join(output_dir, f"{base_name}_parsed_ORDERED.txt")
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(f"=== ORDERED PARSED CONTENT: {doc_name} ===\n")
+        f.write(f"Total items: {len(ordered_content)}\n")
+        f.write("=" * 50 + "\n\n")
+        
+        for i, item in enumerate(ordered_content, 1):
+            content_type = item.get('type', 'text').upper()
+            page_num = item.get('page', 1)
+            item_content = item.get('content', '')
+            
+            f.write(f"[ITEM {i}] {content_type} (Page {page_num})\n")
+            f.write(f"{item_content}\n")
+            f.write("-" * 40 + "\n\n")
+    
+    print(f"📄 Saved ordered parsed text: {output_path}")
+
+def chunk_documents(
+    parsed_content: List[Dict[str, Any]], 
+    use_semantic: bool = True,
+    chunk_size: int = 1000,
+    chunk_overlap: int = 150,
+    save_parsed_text: bool = False,
+    output_dir: str = "output"
+) -> List[Dict[str, Any]]:
     """
-    Advanced semantic chunking using LangChain with MiniLM embeddings.
+    Chunk documents using LangChain semantic splitter with MiniLM.
     
     Args:
-        parsed_docs: List of parsed document dictionaries
-        progress_callback: Optional callback for progress updates
+        parsed_content: List of parsed document dictionaries
+        use_semantic: Whether to use semantic chunking (True) or basic recursive (False)
+        chunk_size: Maximum chunk size for recursive splitter
+        chunk_overlap: Overlap between chunks
+        save_parsed_text: Whether to save parsed text files
+        output_dir: Directory to save parsed text files
         
     Returns:
-        List of chunk dictionaries: {text, document_name, page_number, chunk_id}
+        List of chunked document dictionaries
     """
-    all_chunks = []
-    total_docs = len(parsed_docs)
+    if not parsed_content:
+        return []
     
-    if progress_callback:
-        progress_callback("Initializing LangChain semantic splitter...", 0)
+    print(f"🔄 Starting document chunking with {'semantic' if use_semantic else 'recursive'} splitter...")
     
-    # Get the semantic splitter (cached)
-    try:
-        semantic_splitter = get_semantic_splitter()
-        fallback_splitter = get_fallback_splitter()
-        splitter_type = "semantic"
+    chunked_docs = []
+    
+    # Choose splitter based on preference
+    if use_semantic:
+        print("📊 Using LangChain SemanticChunker with MiniLM embeddings...")
+        splitter = get_semantic_splitter()
+    else:
+        print("📝 Using LangChain RecursiveCharacterTextSplitter...")
+        splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
+            length_function=len,
+            separators=["\n\n", "\n", ". ", " ", ""]
+        )
+    
+    for doc_data in parsed_content:
+        doc_name = doc_data.get('document_name', 'unknown')
+        content = doc_data.get('content', '')
         
-        if progress_callback:
-            progress_callback("✅ Semantic splitter loaded successfully", 5)
+        if not content.strip():
+            print(f"⚠️ Skipping empty document: {doc_name}")
+            continue
             
-    except Exception as e:
-        print(f"⚠️ Warning: Could not load semantic splitter ({e}). Using fallback.")
-        semantic_splitter = None
-        fallback_splitter = get_fallback_splitter()
-        splitter_type = "fallback"
-        
-        if progress_callback:
-            progress_callback("⚠️ Using fallback splitter", 5)
-    
-    for doc_idx, doc in enumerate(parsed_docs):
-        doc_name = doc['document_name']
-        parsed_output = doc['parsed_output']
-        
-        # Check for parsing errors
-        if 'error' in parsed_output:
-            print(f"⚠️ Skipping {doc_name}: {parsed_output['error']}")
-            continue
-        
-        # Combine paragraphs and tables into text
-        text_parts = []
-        
-        # Add paragraphs
-        if 'paragraphs' in parsed_output:
-            text_parts.extend(parsed_output['paragraphs'])
-        
-        # Add tables
-        if 'tables' in parsed_output:
-            for table in parsed_output['tables']:
-                text_parts.append(f"\n[TABLE]\n{table}\n[/TABLE]\n")
-        
-        # Combine all text
-        text = '\n\n'.join(text_parts)
-        
-        if not text.strip():
-            print(f"⚠️ No text content found in {doc_name}")
-            continue
-        
-        # Update progress
-        if progress_callback:
-            progress = 5 + ((doc_idx / total_docs) * 90)
-            progress_callback(f"Processing {doc_name} with {splitter_type} chunking...", progress)
+        print(f"📄 Chunking document: {doc_name} ({len(content):,} characters)")
         
         try:
-            # Try semantic chunking first
-            if semantic_splitter is not None:
-                try:
-                    chunks = semantic_splitter.split_text(text)
-                    chunking_method = "LangChain Semantic (MiniLM)"
-                except Exception as e:
-                    print(f"⚠️ Semantic chunking failed for {doc_name}: {e}")
-                    chunks = fallback_splitter.split_text(text)
-                    chunking_method = "LangChain Recursive (Fallback)"
-            else:
-                # Use fallback splitter
-                chunks = fallback_splitter.split_text(text)
-                chunking_method = "LangChain Recursive"
-            
-            # Process chunks
-            for idx, chunk_text in enumerate(chunks):
-                # Skip very short chunks
-                if len(chunk_text.strip()) < 50:
-                    continue
+            # Handle ordered content if available
+            if 'ordered_content' in doc_data and doc_data['ordered_content']:
+                # Process ordered content maintaining sequence - handle both formats
+                ordered_text = ""
+                for item in doc_data['ordered_content']:
+                    if isinstance(item, dict):
+                        # New format: {'content': 'text', 'type': 'text', 'page': 1}
+                        content_type = item.get('type', 'text')
+                        item_content = item.get('content', '')
+                        page_num = item.get('page', 1)
+                        
+                        if content_type == 'table':
+                            ordered_text += f"\n\n[TABLE on Page {page_num}]\n{item_content}\n\n"
+                        else:
+                            ordered_text += f"{item_content}\n"
+                    elif isinstance(item, str):
+                        # Current format: just strings
+                        ordered_text += f"{item}\n"
+                    else:
+                        # Fallback: convert to string
+                        ordered_text += f"{str(item)}\n"
                 
-                # Create deterministic chunk ID based on content
-                content_hash = hashlib.md5(chunk_text.encode('utf-8')).hexdigest()[:8]
-                chunk_id = f"{doc_name}_{idx}_{content_hash}"
+                # Save ordered text file if requested
+                if save_parsed_text:
+                    # Convert strings to dict format for saving function
+                    ordered_content_for_save = []
+                    for i, item in enumerate(doc_data['ordered_content']):
+                        if isinstance(item, dict):
+                            ordered_content_for_save.append(item)
+                        else:
+                            ordered_content_for_save.append({
+                                'type': 'text',
+                                'content': str(item),
+                                'page': 1
+                            })
+                    save_parsed_text_file_ordered(doc_name, ordered_content_for_save, output_dir)
+                
+                content_to_split = ordered_text.strip()
+            else:
+                content_to_split = content
+            
+            # Split the content
+            chunks = splitter.split_text(content_to_split)
+            
+            print(f"✅ Created {len(chunks)} chunks for {doc_name}")
+            
+            # Create chunk dictionaries
+            for i, chunk in enumerate(chunks):
+                chunk_id = generate_chunk_id(doc_name, chunk, i)
                 
                 chunk_dict = {
-                    'text': chunk_text.strip(),
-                    'document_name': doc_name,
-                    'page_number': 1,  # Could be improved with actual page detection
                     'chunk_id': chunk_id,
-                    'chunking_method': chunking_method,
-                    'chunk_index': idx,
-                    'total_chars': len(chunk_text)
+                    'document_name': doc_name,
+                    'chunk_index': i,
+                    'content': chunk.strip(),
+                    'metadata': {
+                        'source': doc_name,
+                        'chunk_index': i,
+                        'total_chunks': len(chunks),
+                        'chunk_size': len(chunk),
+                        'splitter_type': 'semantic' if use_semantic else 'recursive'
+                    }
                 }
-                all_chunks.append(chunk_dict)
+                
+                # Add original metadata if available
+                if 'metadata' in doc_data:
+                    chunk_dict['metadata'].update(doc_data['metadata'])
+                
+                chunked_docs.append(chunk_dict)
                 
         except Exception as e:
             print(f"❌ Error chunking document {doc_name}: {e}")
-            # Continue with next document
             continue
     
+    print(f"✅ Document chunking complete! Generated {len(chunked_docs)} total chunks")
+    return chunked_docs
+
+# Backwards compatibility function for old API
+def chunk_documents_old_format(parsed_docs: List[Dict], progress_callback: Optional[Callable] = None) -> List[Dict]:
+    """
+    Backwards compatibility wrapper for old format.
+    Converts old format to new format and uses semantic chunking with MiniLM.
+    """
     if progress_callback:
-        progress_callback(f"✅ Chunking complete! Created {len(all_chunks)} semantic chunks", 100)
+        progress_callback("🔄 Converting to new format for semantic chunking...", 0)
     
-    # Print summary
-    semantic_count = sum(1 for c in all_chunks if 'Semantic' in c.get('chunking_method', ''))
-    fallback_count = len(all_chunks) - semantic_count
+    # Convert old format to new format
+    new_format_docs = []
+    for doc in parsed_docs:
+        if 'parsed_output' in doc and isinstance(doc['parsed_output'], dict):
+            parsed_output = doc['parsed_output']
+            
+            # Handle ordered content if available
+            if 'ordered_content' in parsed_output and parsed_output['ordered_content']:
+                # FIXED: Handle both string list and dict list formats
+                ordered_content = parsed_output['ordered_content']
+                content_parts = []
+                
+                for item in ordered_content:
+                    if isinstance(item, dict):
+                        # New format: {'content': 'text', 'type': 'text', 'page': 1}
+                        content_parts.append(str(item.get('content', '')))
+                    elif isinstance(item, str):
+                        # Current format: just strings
+                        content_parts.append(item)
+                    else:
+                        # Fallback: convert to string
+                        content_parts.append(str(item))
+                
+                new_doc = {
+                    'document_name': doc['document_name'],
+                    'content': '\n\n'.join(content_parts),
+                    'ordered_content': parsed_output['ordered_content']
+                }
+            else:
+                # Fallback for older structures (if any)
+                text_parts = []
+                if 'paragraphs' in parsed_output:
+                    text_parts.extend(parsed_output.get('paragraphs', []))
+                if 'tables' in parsed_output:
+                    text_parts.extend(parsed_output.get('tables', []))
+                
+                new_doc = {
+                    'document_name': doc['document_name'],
+                    'content': '\n\n'.join(map(str, text_parts))
+                }
+            
+            new_format_docs.append(new_doc)
     
-    print(f"""
-📊 Chunking Summary:
-- Total chunks: {len(all_chunks)}
-- Semantic chunks: {semantic_count}
-- Fallback chunks: {fallback_count}
-- Average chunk size: {sum(c['total_chars'] for c in all_chunks) // len(all_chunks) if all_chunks else 0} chars
-- Documents processed: {total_docs}
-    """)
+    if progress_callback:
+        progress_callback("📊 Using LangChain SemanticChunker with MiniLM...", 20)
     
-    return all_chunks 
+    # Use new chunking function with semantic splitting
+    chunked_docs = chunk_documents(new_format_docs, use_semantic=True)
+    
+    if progress_callback:
+        progress_callback("✅ Converting back to old format...", 90)
+    
+    # Convert back to old format for compatibility
+    old_format_chunks = []
+    for chunk in chunked_docs:
+        old_chunk = {
+            'text': chunk['content'],
+            'document_name': chunk['document_name'],
+            'page_number': 1,  # Default page number
+            'chunk_id': chunk['chunk_id'],
+            'chunking_method': 'Semantic (MiniLM)',
+            'chunk_index': chunk['chunk_index'],
+            'total_chars': len(chunk['content'])
+        }
+        old_format_chunks.append(old_chunk)
+    
+    if progress_callback:
+        progress_callback(f"🎉 Semantic chunking complete! Created {len(old_format_chunks)} chunks", 100)
+    
+    return old_format_chunks

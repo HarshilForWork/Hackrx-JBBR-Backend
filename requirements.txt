@@ -1,20 +1,18 @@
-# Insurance Document Query System Requirements
-# Core PDF processing
-pdfplumber>=0.9.0
+# OPTIMIZED Insurance Document Query System Requirements
+# Core PDF processing (HYBRID APPROACH - best quality)
+pdfplumber>=0.9.0  # RESTORED - needed for accurate table extraction
 PyMuPDF>=1.23.0
-pandas>=2.0.0
+pandas>=2.0.0  # RESTORED - needed for table processing
 
-# Machine Learning and NLP
+# Machine Learning and NLP (MINIMAL SET)
 sentence-transformers>=2.2.0
-torch>=2.0.0
-transformers>=4.30.0
+# torch>=2.0.0  # Will be installed by sentence-transformers if needed
+# transformers>=4.30.0  # Will be installed by sentence-transformers if needed
 
 # Advanced Embedding Models (NVIDIA Hosted)
-# Note: llama-text-embed-v2 requires API access
 requests>=2.28.0
 
-# Advanced Re-ranking Models (BAAI Hosted) 
-# Note: bge-reranker-v2-m3 requires API access or local deployment
+# Advanced Re-ranking Models (BAAI) 
 FlagEmbedding>=1.2.0
 
 # Vector Database and Search
@@ -23,13 +21,13 @@ pinecone>=7.0.0
 # LLM Integration
 google-generativeai>=0.3.0
 
-# LangChain for Advanced Chunking
+# LangChain for semantic chunking with MiniLM
 langchain>=0.1.0
-langchain-experimental>=0.0.50
+langchain-experimental>=0.0.50  
 langchain-huggingface>=0.0.2
 
-# Cross-encoder for Re-ranking
-cross-encoder>=1.2.0
+# Cross-encoder REMOVED - BGE Reranker handles this
+# cross-encoder>=1.2.0  # REMOVED
 
 # Web Interface
 streamlit>=1.28.0

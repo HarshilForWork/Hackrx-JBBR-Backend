@@ -102,6 +102,147 @@ def clear_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index'
     
     return total_vectors
 
+def delete_duplicate_vectors(pinecone_api_key: str, index_name: str = 'policy-index', dry_run: bool = True):
+    """
+    Delete duplicate vectors from Pinecone index based on content hash.
+    
+    Args:
+        pinecone_api_key: Pinecone API key
+        index_name: Name of the Pinecone index
+        dry_run: If True, only report duplicates without deleting
+        
+    Returns:
+        dict: Results of duplicate detection/deletion
+    """
+    pc = Pinecone(api_key=pinecone_api_key)
+    
+    if index_name not in pc.list_indexes().names():
+        return {'error': f'Index {index_name} not found'}
+    
+    index = pc.Index(index_name)
+    
+    # Get all vectors (this might be slow for large indexes)
+    print("🔍 Scanning index for duplicates...")
+    
+    # Query all vectors by fetching with empty filter
+    all_vectors = {}
+    content_hashes = {}
+    duplicates = []
+    
+    try:
+        # Get all vector IDs first
+        stats = index.describe_index_stats()
+        total_vectors = stats.get('total_vector_count', 0)
+        
+        if total_vectors == 0:
+            return {'message': 'No vectors in index', 'duplicates_found': 0}
+        
+        print(f"📊 Found {total_vectors} vectors in index")
+        
+        # Fetch vectors in batches to find duplicates
+        # Note: This is a simplified approach - for large indexes, you'd need pagination
+        query_response = index.query(
+            vector=[0.0] * 384,  # Dummy vector for metadata-only query
+            top_k=min(10000, total_vectors),  # Limit to avoid memory issues
+            include_metadata=True
+        )
+        
+        for match in query_response.matches:
+            vector_id = match.id
+            metadata = match.metadata or {}
+            content_hash = metadata.get('content_hash', '')
+            
+            if content_hash:
+                if content_hash in content_hashes:
+                    # Found duplicate
+                    duplicates.append({
+                        'duplicate_id': vector_id,
+                        'original_id': content_hashes[content_hash],
+                        'content_hash': content_hash,
+                        'document_name': metadata.get('document_name', 'unknown')
+                    })
+                else:
+                    content_hashes[content_hash] = vector_id
+        
+        print(f"🔍 Found {len(duplicates)} duplicate vectors")
+        
+        if not dry_run and duplicates:
+            print("🗑️ Deleting duplicate vectors...")
+            duplicate_ids = [dup['duplicate_id'] for dup in duplicates]
+            
+            # Delete in batches
+            batch_size = 100
+            deleted_count = 0
+            
+            for i in range(0, len(duplicate_ids), batch_size):
+                batch = duplicate_ids[i:i + batch_size]
+                index.delete(ids=batch)
+                deleted_count += len(batch)
+                print(f"Deleted {deleted_count}/{len(duplicate_ids)} duplicates...")
+            
+            return {
+                'duplicates_found': len(duplicates),
+                'duplicates_deleted': deleted_count,
+                'remaining_vectors': total_vectors - deleted_count,
+                'action': 'deleted'
+            }
+        else:
+            return {
+                'duplicates_found': len(duplicates),
+                'duplicates_deleted': 0,
+                'total_vectors': total_vectors,
+                'action': 'dry_run' if dry_run else 'none_deleted',
+                'duplicate_details': duplicates[:10]  # Show first 10 for review
+            }
+            
+    except Exception as e:
+        return {'error': f'Error processing duplicates: {str(e)}'}
+
+def reindex_documents(pinecone_api_key: str, documents_to_reindex: List[str], 
+                     index_name: str = 'policy-index'):
+    """
+    Remove and re-add specific documents to the index.
+    
+    Args:
+        pinecone_api_key: Pinecone API key
+        documents_to_reindex: List of document names to reindex
+        index_name: Name of the Pinecone index
+        
+    Returns:
+        dict: Results of reindexing operation
+    """
+    pc = Pinecone(api_key=pinecone_api_key)
+    
+    if index_name not in pc.list_indexes().names():
+        return {'error': f'Index {index_name} not found'}
+    
+    index = pc.Index(index_name)
+    
+    deleted_vectors = []
+    
+    for doc_name in documents_to_reindex:
+        print(f"🗑️ Removing existing vectors for document: {doc_name}")
+        
+        # Query vectors for this document
+        query_response = index.query(
+            vector=[0.0] * 384,  # Dummy vector
+            filter={'document_name': doc_name},
+            top_k=10000,  # Get all chunks for this document
+            include_metadata=True
+        )
+        
+        if query_response.matches:
+            vector_ids = [match.id for match in query_response.matches]
+            index.delete(ids=vector_ids)
+            deleted_vectors.extend(vector_ids)
+            print(f"Deleted {len(vector_ids)} vectors for {doc_name}")
+    
+    return {
+        'documents_processed': len(documents_to_reindex),
+        'vectors_deleted': len(deleted_vectors),
+        'message': f'Deleted {len(deleted_vectors)} vectors. Re-run indexing to add fresh vectors.'
+    }
+
 def get_index_stats(pinecone_api_key: str, index_name: str = 'policy-index'):
     """
     Get statistics about a Pinecone index.
@@ -245,9 +386,17 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
     print(f"Successfully indexed {len(chunks)} chunks into Pinecone index '{index_name}'.")
     return {"success": True, "indexed_count": len(chunks)}
 
-def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', progress_callback: Optional[Callable] = None) -> Dict[str, Any]:
+def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', 
+                         progress_callback: Optional[Callable] = None, save_parsed_text: bool = False) -> Dict[str, Any]:
     """
     Smart indexing - only processes new or changed documents
+    
+    Args:
+        docs_folder: Folder containing PDF documents
+        pinecone_api_key: Pinecone API key
+        index_name: Name of the Pinecone index
+        progress_callback: Optional callback for progress updates
+        save_parsed_text: Whether to save parsed content to text files for inspection
     """
     registry = DocumentRegistry()
     
@@ -295,7 +444,7 @@ def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: s
         try:
             # Parse single document
             from .parse_documents import load_and_parse_from_folder
-            parsed_docs = load_and_parse_from_folder(docs_folder, file_filter=[filename])
+            parsed_docs = load_and_parse_from_folder(docs_folder, file_filter=[filename], save_parsed_text=save_parsed_text)
             
             if parsed_docs:
                 # Chunk document
@@ -334,9 +483,17 @@ def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: s
         "status_counts": status_counts
     }
 
-def force_reindex_all(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', progress_callback: Optional[Callable] = None) -> Dict[str, Any]:
+def force_reindex_all(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', 
+                     progress_callback: Optional[Callable] = None, save_parsed_text: bool = False) -> Dict[str, Any]:
     """
     Force reindex all documents (clears registry and processes everything)
+    
+    Args:
+        docs_folder: Folder containing PDF documents
+        pinecone_api_key: Pinecone API key
+        index_name: Name of the Pinecone index
+        progress_callback: Optional callback for progress updates
+        save_parsed_text: Whether to save parsed content to text files for inspection
     """
     registry = DocumentRegistry()
     
@@ -357,4 +514,4 @@ def force_reindex_all(docs_folder: str, pinecone_api_key: str, index_name: str =
         return {"status": "failed", "error": f"Could not clear index: {str(e)}"}
     
     # Process all documents
-    return smart_index_documents(docs_folder, pinecone_api_key, index_name, progress_callback) 
+    return smart_index_documents(docs_folder, pinecone_api_key, index_name, progress_callback, save_parsed_text) 

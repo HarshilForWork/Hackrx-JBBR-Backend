@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from src.parse_documents import load_and_parse_documents
-from src.chunk_documents import chunk_documents
+from src.chunk_documents import chunk_documents_old_format
 from src.embed_and_index import index_chunks_in_pinecone
 from src.query_processor import QueryProcessor
 
@@ -26,7 +26,7 @@ def parse_documents():
             return {"success": False, "error": "Failed to parse documents!"}
         
         # Process into chunks
-        chunks = chunk_documents(parsed_docs)
+        chunks = chunk_documents_old_format(parsed_docs)
         
         return {
             "success": True,
