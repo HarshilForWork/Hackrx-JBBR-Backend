@@ -9,6 +9,14 @@ sentence-transformers>=2.2.0
 torch>=2.0.0
 transformers>=4.30.0
 
+# Advanced Embedding Models (NVIDIA Hosted)
+# Note: llama-text-embed-v2 requires API access
+requests>=2.28.0
+
+# Advanced Re-ranking Models (BAAI Hosted) 
+# Note: bge-reranker-v2-m3 requires API access or local deployment
+FlagEmbedding>=1.2.0
+
 # Vector Database and Search
 pinecone-client>=3.0.0
 

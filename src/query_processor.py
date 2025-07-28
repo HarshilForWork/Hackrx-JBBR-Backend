@@ -21,10 +21,18 @@ except ImportError:
     GENAI_AVAILABLE = False
 
 try:
-    from sentence_transformers import CrossEncoder
-    CROSS_ENCODER_AVAILABLE = True
+    # Try to import BGE Reranker (BAAI)
+    from FlagEmbedding import FlagReranker
+    BGE_RERANKER_AVAILABLE = True
 except ImportError:
-    CROSS_ENCODER_AVAILABLE = False
+    try:
+        # Fallback to sentence-transformers CrossEncoder
+        from sentence_transformers import CrossEncoder
+        CROSS_ENCODER_AVAILABLE = True
+        BGE_RERANKER_AVAILABLE = False
+    except ImportError:
+        CROSS_ENCODER_AVAILABLE = False
+        BGE_RERANKER_AVAILABLE = False
 
 from .embed_and_index import get_embedding_model
 
@@ -52,18 +60,60 @@ class QueryProcessor:
         # Use cached embedding model for consistency and performance
         self.model = get_embedding_model()
         
-        # Initialize Cross-Encoder for re-ranking
+    def _encode_query(self, query: str) -> List[float]:
+        """Encode query using the appropriate embedding model."""
+        try:
+            if isinstance(self.model, str) and self.model == "llama-text-embed-v2":
+                # Use Llama Text Embed v2 API
+                from .embed_and_index import generate_embeddings_llama
+                embeddings = generate_embeddings_llama([query])
+                return embeddings[0] if embeddings else [0.0] * 384
+            else:
+                # Use sentence-transformers model
+                return self.model.encode(query).tolist()
+        except Exception as e:
+            print(f"⚠️ Query encoding error: {e}")
+            # Return zero vector as fallback
+            return [0.0] * 384
+        
+        # Initialize Advanced Re-ranker (BGE Reranker v2 M3 or fallback)
         self.reranker = None
-        if CROSS_ENCODER_AVAILABLE:
+        if BGE_RERANKER_AVAILABLE:
             try:
-                print("🔄 Loading cross-encoder for re-ranking...")
-                self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
-                print("✅ Cross-encoder loaded successfully!")
+                print("🔄 Loading BGE Reranker v2 M3 (BAAI) for advanced re-ranking...")
+                # Note: This would typically require the model to be downloaded or API access
+                self.reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
+                print("✅ BGE Reranker v2 M3 loaded successfully!")
+                self.reranker_type = "bge-reranker-v2-m3"
             except Exception as e:
-                print(f"⚠️ Could not load cross-encoder: {e}")
+                print(f"⚠️ Could not load BGE Reranker: {e}")
+                # Fallback to CrossEncoder
+                if CROSS_ENCODER_AVAILABLE:
+                    try:
+                        print("🔄 Falling back to CrossEncoder...")
+                        self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+                        print("✅ CrossEncoder loaded as fallback!")
+                        self.reranker_type = "cross-encoder"
+                    except Exception as e2:
+                        print(f"⚠️ Could not load fallback reranker: {e2}")
+                        self.reranker = None
+                        self.reranker_type = "none"
+                else:
+                    self.reranker = None
+                    self.reranker_type = "none"
+        elif CROSS_ENCODER_AVAILABLE:
+            try:
+                print("🔄 Loading CrossEncoder for re-ranking...")
+                self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+                print("✅ CrossEncoder loaded successfully!")
+                self.reranker_type = "cross-encoder"
+            except Exception as e:
+                print(f"⚠️ Could not load CrossEncoder: {e}")
                 self.reranker = None
+                self.reranker_type = "none"
         else:
-            print("⚠️ Cross-encoder not available - using similarity-only ranking")
+            print("⚠️ No re-ranker available - using similarity-only ranking")
+            self.reranker_type = "none"
         
         # Initialize Gemini
         if GENAI_AVAILABLE and gemini_api_key and gemini_api_key != 'dummy':
@@ -370,7 +420,7 @@ class QueryProcessor:
         try:
             # Stage 1: Initial broad retrieval
             print(f"🔍 Stage 1: Retrieving top {initial_k} candidates...")
-            query_embedding = self.model.encode(query).tolist()
+            query_embedding = self._encode_query(query)
             
             response = self.index.query(
                 vector=query_embedding,
@@ -396,23 +446,41 @@ class QueryProcessor:
             
             print(f"✅ Retrieved {len(candidates)} candidates")
             
-            # Stage 2: Re-ranking with cross-encoder
+            # Stage 2: Advanced Re-ranking with BGE Reranker v2 M3 or CrossEncoder
             if self.reranker and len(candidates) > final_k:
-                print(f"🎯 Stage 2: Re-ranking with cross-encoder...")
+                print(f"🎯 Stage 2: Re-ranking with {self.reranker_type}...")
                 
-                # Prepare query-text pairs for cross-encoder
-                query_text_pairs = [(query, candidate["text"]) for candidate in candidates]
+                if self.reranker_type == "bge-reranker-v2-m3":
+                    # Use BGE Reranker v2 M3 (BAAI)  
+                    try:
+                        # BGE Reranker expects list of [query, passage] pairs
+                        pairs = [[query, candidate["text"]] for candidate in candidates]
+                        cross_scores = self.reranker.compute_score(pairs, normalize=True)
+                        
+                        # Handle single score or list of scores
+                        if not isinstance(cross_scores, list):
+                            cross_scores = [cross_scores]
+                            
+                    except Exception as e:
+                        print(f"⚠️ BGE Reranker error: {e}, falling back to basic scoring")
+                        cross_scores = [0.5] * len(candidates)  # Neutral scores
+                    
+                elif self.reranker_type == "cross-encoder":
+                    # Use traditional CrossEncoder
+                    query_text_pairs = [(query, candidate["text"]) for candidate in candidates]
+                    cross_scores = self.reranker.predict(query_text_pairs)
                 
-                # Get cross-encoder scores
-                cross_scores = self.reranker.predict(query_text_pairs)
+                else:
+                    # Fallback - shouldn't reach here
+                    cross_scores = [0.0] * len(candidates)
                 
-                # Add cross-encoder scores to candidates
+                # Add re-ranker scores to candidates
                 for i, candidate in enumerate(candidates):
-                    candidate["cross_score"] = float(cross_scores[i])
+                    candidate["cross_score"] = float(cross_scores[i]) if i < len(cross_scores) else 0.0
                 
-                # Sort by cross-encoder score (higher is better)
+                # Sort by re-ranker score (higher is better)
                 candidates.sort(key=lambda x: x["cross_score"], reverse=True)
-                print(f"✅ Re-ranked using cross-encoder")
+                print(f"✅ Re-ranked using {self.reranker_type}")
                 
                 # Take top final_k after re-ranking
                 final_candidates = candidates[:final_k]
