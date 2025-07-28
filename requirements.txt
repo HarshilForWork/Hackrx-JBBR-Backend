@@ -1,18 +1,19 @@
-# OPTIMIZED Insurance Document Query System Requirements
+# OPTIMIZED Insurance Document Query System Requirements (v2.0)
 # Core PDF processing (HYBRID APPROACH - best quality)
 pdfplumber>=0.9.0  # RESTORED - needed for accurate table extraction
 PyMuPDF>=1.23.0
 pandas>=2.0.0  # RESTORED - needed for table processing
 
-# Machine Learning and NLP (MINIMAL SET)
-sentence-transformers>=2.2.0
+# Machine Learning and NLP (OPTIMIZED SET)
+sentence-transformers>=2.2.0  # For MiniLM cross-encoder (10x faster than BGE)
+scikit-learn>=1.3.0  # For TF-IDF hybrid search
 # torch>=2.0.0  # Will be installed by sentence-transformers if needed
 # transformers>=4.30.0  # Will be installed by sentence-transformers if needed
 
 # Advanced Embedding Models (NVIDIA Hosted)
 requests>=2.28.0
 
-# Advanced Re-ranking Models (BAAI) 
+# Advanced Re-ranking Models (BAAI) - Fallback option
 FlagEmbedding>=1.2.0
 
 # Vector Database and Search
@@ -25,9 +26,6 @@ google-generativeai>=0.3.0
 langchain>=0.1.0
 langchain-experimental>=0.0.50  
 langchain-huggingface>=0.0.2
-
-# Cross-encoder REMOVED - BGE Reranker handles this
-# cross-encoder>=1.2.0  # REMOVED
 
 # Web Interface
 streamlit>=1.28.0

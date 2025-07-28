@@ -41,6 +41,21 @@ except ImportError:
     BGE_RERANKER_AVAILABLE = False
     print("❌ BGE Reranker not available. Install with: pip install FlagEmbedding")
 
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+    SKLEARN_AVAILABLE = True
+except ImportError:
+    SKLEARN_AVAILABLE = False
+    print("⚠️ scikit-learn not available for advanced text processing")
+
+try:
+    from sentence_transformers import CrossEncoder
+    CROSS_ENCODER_AVAILABLE = True
+except ImportError:
+    CROSS_ENCODER_AVAILABLE = False
+    print("⚠️ sentence-transformers CrossEncoder not available")
+
 from .embed_and_index import get_embedding_model
 
 class QueryProcessor:
@@ -67,17 +82,11 @@ class QueryProcessor:
         # Use cached embedding model for consistency and performance
         self.model = get_embedding_model()
         
-        # Initialize BGE Reranker v2 M3 (BAAI) - required, no fallbacks
-        if BGE_RERANKER_AVAILABLE:
-            print("🔄 Loading BGE Reranker v2 M3 (BAAI) for advanced re-ranking...")
-            # Initialize with standard settings
-            self.reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
-            print("✅ BGE Reranker v2 M3 loaded successfully!")
-            self.reranker_type = "bge-reranker-v2-m3"
-        else:
-            print("❌ BGE Reranker not available. System will not function without it.")
-            self.reranker = None
-            self.reranker_type = "none"
+        # Initialize optimized reranker with multiple options
+        self._init_optimized_reranker()
+        
+        # Initialize hybrid search components
+        self._init_hybrid_search()
         
         # Initialize Gemini
         if GENAI_AVAILABLE and gemini_api_key and gemini_api_key != 'dummy':
@@ -132,6 +141,93 @@ class QueryProcessor:
                 self.fallback_reason = "Using dummy API key for testing"
             else:
                 self.fallback_reason = "API key not provided"
+    
+    def _init_optimized_reranker(self):
+        """Initialize the best available reranker with optimizations."""
+        print("🔄 Initializing optimized reranker...")
+        
+        # Try lightweight cross-encoder first (much faster than BGE)
+        if CROSS_ENCODER_AVAILABLE:
+            try:
+                # Use a lightweight, fast cross-encoder
+                self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+                self.reranker_type = "minilm_cross_encoder"
+                print("✅ Loaded fast MiniLM Cross-Encoder (10x faster than BGE)")
+                
+                # Add caching for reranker results
+                self._reranker_cache = {}
+                self._cache_max_size = 200
+                return
+            except Exception as e:
+                print(f"⚠️ MiniLM Cross-Encoder failed: {e}")
+        
+        # Fallback to BGE with optimizations
+        if BGE_RERANKER_AVAILABLE:
+            try:
+                import torch
+                device = "cuda" if torch.cuda.is_available() else "cpu"
+                print(f"🚀 Using device: {device}")
+                
+                # Use smaller, faster BGE model
+                self.reranker = FlagReranker(
+                    'BAAI/bge-reranker-base',  # Smaller, faster than v2-m3
+                    use_fp16=True,
+                    device=device,
+                    batch_size=16,  # Reduced for stability
+                    max_length=256  # Shorter sequences for speed
+                )
+                self.reranker_type = "bge-reranker-base"
+                print("✅ BGE Base Reranker loaded with optimizations!")
+                
+                self._reranker_cache = {}
+                self._cache_max_size = 150
+                return
+                
+            except Exception as e:
+                print(f"⚠️ BGE Reranker failed: {e}")
+        
+        # Final fallback - no reranker
+        print("❌ No reranker available - using hybrid scoring only")
+        self.reranker = None
+        self.reranker_type = "none"
+        self._reranker_cache = {}
+        self._cache_max_size = 0
+    
+    def _init_hybrid_search(self):
+        """Initialize components for hybrid search (semantic + lexical)."""
+        print("🔄 Initializing hybrid search components...")
+        
+        # Initialize TF-IDF for lexical search
+        if SKLEARN_AVAILABLE:
+            self.tfidf_vectorizer = TfidfVectorizer(
+                max_features=10000,
+                stop_words='english',
+                ngram_range=(1, 2),  # Unigrams and bigrams
+                min_df=2,  # Ignore terms in less than 2 documents
+                max_df=0.8  # Ignore terms in more than 80% of documents
+            )
+            self.tfidf_fitted = False
+            self.document_texts = []  # Store for TF-IDF fitting
+            print("✅ TF-IDF vectorizer initialized for lexical search")
+        else:
+            self.tfidf_vectorizer = None
+            self.tfidf_fitted = False
+            print("⚠️ TF-IDF not available - using semantic search only")
+        
+        # Initialize keyword boosting
+        self.medical_keywords = {
+            'surgery', 'operation', 'procedure', 'treatment', 'therapy', 'diagnosis',
+            'hospital', 'clinic', 'doctor', 'physician', 'specialist', 'consultation',
+            'insurance', 'policy', 'claim', 'coverage', 'premium', 'deductible',
+            'pre-existing', 'waiting period', 'exclusion', 'benefit', 'reimbursement'
+        }
+        
+        # Scoring weights for hybrid search
+        self.hybrid_weights = {
+            'semantic': 0.6,  # Semantic similarity weight
+            'lexical': 0.3,   # TF-IDF/BM25 weight
+            'keyword': 0.1    # Keyword boost weight
+        }
     
     def _encode_query(self, query: str) -> List[float]:
         """Encode query using the appropriate embedding model."""
@@ -259,6 +355,197 @@ class QueryProcessor:
         
         return None
 
+    def _optimize_text_for_reranking(self, text: str, max_length: int = 512) -> str:
+        """Optimize text length for faster reranking."""
+        if len(text) <= max_length:
+            return text
+        
+        # Smart truncation: keep beginning and end, remove middle
+        half_length = max_length // 2
+        return text[:half_length] + "..." + text[-half_length:]
+    
+    def _get_reranker_cache_key(self, query: str, texts: list) -> str:
+        """Generate cache key for reranker results."""
+        import hashlib
+        combined = query + "|".join(texts[:3])  # Use first 3 texts for cache key
+        return hashlib.md5(combined.encode()).hexdigest()[:16]
+    
+    def _batch_rerank_with_cache(self, query: str, candidates: List[Dict]) -> List[float]:
+        """Optimized batch reranking with caching and multiple reranker support."""
+        if not self.reranker:
+            return self._hybrid_score_candidates(query, candidates)
+        
+        # Optimize text lengths for faster processing
+        optimized_texts = [
+            self._optimize_text_for_reranking(candidate["text"]) 
+            for candidate in candidates
+        ]
+        
+        # Check cache first
+        cache_key = self._get_reranker_cache_key(query, optimized_texts)
+        if cache_key in self._reranker_cache:
+            print("🎯 Using cached reranking results")
+            return self._reranker_cache[cache_key]
+        
+        try:
+            print(f"🔄 Reranking {len(candidates)} candidates with {self.reranker_type}...")
+            start_time = time.time()
+            
+            if self.reranker_type == "minilm_cross_encoder":
+                # Use sentence-transformers CrossEncoder
+                try:
+                    # CrossEncoder expects list of [query, text] pairs
+                    pairs = [[query, text] for text in optimized_texts]
+                    cross_scores = self.reranker.predict(pairs)
+                    
+                    # Convert to float list safely
+                    scores = []
+                    if hasattr(cross_scores, '__iter__'):
+                        for score in cross_scores:
+                            try:
+                                if hasattr(score, 'item'):  # numpy scalar
+                                    scores.append(float(score.item()))
+                                else:
+                                    scores.append(float(score))
+                            except (ValueError, TypeError, AttributeError):
+                                scores.append(0.0)
+                    else:
+                        # Single score case
+                        try:
+                            scores = [float(cross_scores)] * len(optimized_texts)
+                        except:
+                            scores = [0.0] * len(optimized_texts)
+                except Exception as ce_error:
+                    print(f"⚠️ CrossEncoder error: {ce_error}")
+                    return self._hybrid_score_candidates(query, candidates)
+                        
+            elif "bge" in self.reranker_type:
+                # Use BGE FlagReranker
+                pairs = [(query, text) for text in optimized_texts]
+                cross_scores = self.reranker.compute_score(pairs, normalize=True)
+                
+                # Handle single score or list of scores
+                if not isinstance(cross_scores, list):
+                    cross_scores = [cross_scores]
+                
+                scores = []
+                for score in cross_scores:
+                    try:
+                        if hasattr(score, 'item'):
+                            scores.append(float(score.item()))
+                        elif score is not None:
+                            scores.append(float(score))
+                        else:
+                            scores.append(0.0)
+                    except (ValueError, TypeError, AttributeError):
+                        scores.append(0.0)
+            else:
+                # Fallback to hybrid scoring
+                return self._hybrid_score_candidates(query, candidates)
+            
+            processing_time = time.time() - start_time
+            print(f"⚡ Reranking completed in {processing_time:.2f}s ({len(candidates)/processing_time:.1f} docs/sec)")
+            
+            # Cache results (with size limit)
+            if len(self._reranker_cache) >= self._cache_max_size:
+                # Remove oldest entry
+                oldest_key = next(iter(self._reranker_cache))
+                del self._reranker_cache[oldest_key]
+            
+            self._reranker_cache[cache_key] = scores
+            return scores
+            
+        except Exception as e:
+            print(f"⚠️ Reranking error: {e}")
+            # Fallback to hybrid scoring
+            return self._hybrid_score_candidates(query, candidates)
+    
+    def _hybrid_score_candidates(self, query: str, candidates: List[Dict]) -> List[float]:
+        """Hybrid scoring combining semantic, lexical, and keyword matching."""
+        scores = []
+        
+        # Get semantic scores (already available as vector_score)
+        semantic_scores = [c.get("vector_score", 0.0) for c in candidates]
+        
+        # Get lexical scores using TF-IDF if available
+        lexical_scores = self._get_tfidf_scores(query, candidates)
+        
+        # Get keyword boost scores
+        keyword_scores = self._get_keyword_scores(query, candidates)
+        
+        # Combine scores using hybrid weights
+        for i in range(len(candidates)):
+            semantic = semantic_scores[i] if i < len(semantic_scores) else 0.0
+            lexical = lexical_scores[i] if i < len(lexical_scores) else 0.0
+            keyword = keyword_scores[i] if i < len(keyword_scores) else 0.0
+            
+            # Normalize scores to 0-1 range
+            semantic_norm = max(0.0, min(1.0, semantic))
+            lexical_norm = max(0.0, min(1.0, lexical))
+            keyword_norm = max(0.0, min(1.0, keyword))
+            
+            # Weighted combination
+            hybrid_score = (
+                semantic_norm * self.hybrid_weights['semantic'] +
+                lexical_norm * self.hybrid_weights['lexical'] +
+                keyword_norm * self.hybrid_weights['keyword']
+            )
+            
+            scores.append(hybrid_score)
+        
+        print(f"✅ Hybrid scoring completed for {len(candidates)} candidates")
+        return scores
+    
+    def _get_tfidf_scores(self, query: str, candidates: List[Dict]) -> List[float]:
+        """Get TF-IDF based lexical similarity scores."""
+        if not self.tfidf_vectorizer or not SKLEARN_AVAILABLE:
+            return [0.0] * len(candidates)
+        
+        try:
+            texts = [c["text"] for c in candidates]
+            
+            # Fit TF-IDF if not already fitted
+            if not self.tfidf_fitted:
+                all_texts = texts + [query]
+                self.tfidf_vectorizer.fit(all_texts)
+                self.tfidf_fitted = True
+            
+            # Transform query and candidate texts
+            query_tfidf = self.tfidf_vectorizer.transform([query])
+            candidates_tfidf = self.tfidf_vectorizer.transform(texts)
+            
+            # Calculate cosine similarity
+            similarities = cosine_similarity(query_tfidf, candidates_tfidf)[0]
+            
+            return similarities.tolist()
+            
+        except Exception as e:
+            print(f"⚠️ TF-IDF scoring error: {e}")
+            return [0.0] * len(candidates)
+    
+    def _get_keyword_scores(self, query: str, candidates: List[Dict]) -> List[float]:
+        """Get keyword-based boost scores for medical/insurance terms."""
+        query_words = set(query.lower().split())
+        query_medical_words = query_words.intersection(self.medical_keywords)
+        
+        scores = []
+        for candidate in candidates:
+            text_words = set(candidate["text"].lower().split())
+            text_medical_words = text_words.intersection(self.medical_keywords)
+            
+            # Score based on medical keyword overlap
+            if query_medical_words:
+                keyword_overlap = len(query_medical_words.intersection(text_medical_words))
+                score = keyword_overlap / len(query_medical_words)
+            else:
+                # General keyword overlap if no medical terms
+                overlap = len(query_words.intersection(text_words))
+                score = overlap / len(query_words) if query_words else 0.0
+            
+            scores.append(score)
+        
+        return scores
+
     def extract_entities(self, query: str) -> Dict[str, Any]:
         """Extract structured entities from natural language query using Gemini only."""
         if self.llm:
@@ -337,19 +624,66 @@ class QueryProcessor:
                 "amount": None
             }
     
-    def semantic_search_with_reranking(self, query: str, initial_k: int = 50, final_k: int = 3) -> List[Dict]:
+    def _prefilter_candidates(self, candidates: List[Dict], query: str, max_candidates: int = 15) -> List[Dict]:
+        """Enhanced pre-filtering using hybrid scoring to reduce reranking workload."""
+        if len(candidates) <= max_candidates:
+            return candidates
+        
+        print(f"🔍 Smart pre-filtering from {len(candidates)} to {max_candidates} candidates...")
+        
+        # Get hybrid scores for all candidates
+        hybrid_scores = self._hybrid_score_candidates(query, candidates)
+        
+        # Add hybrid scores to candidates
+        for i, candidate in enumerate(candidates):
+            if i < len(hybrid_scores):
+                candidate["hybrid_score"] = hybrid_scores[i]
+            else:
+                candidate["hybrid_score"] = 0.0
+        
+        # Sort by hybrid score (combination of semantic, lexical, and keyword)
+        candidates.sort(key=lambda x: x["hybrid_score"], reverse=True)
+        
+        # Take top candidates
+        filtered = candidates[:max_candidates]
+        
+        print(f"✅ Pre-filtered to top {len(filtered)} candidates using hybrid scoring")
+        return filtered
+
+    def _should_rerank(self, candidates: List[Dict], final_k: int) -> bool:
+        """Decide if reranking is beneficial based on score distribution."""
+        if len(candidates) <= final_k:
+            return False
+        
+        # Get vector scores of top candidates
+        top_scores = [c.get("vector_score", 0) for c in candidates[:final_k * 2]]
+        
+        if not top_scores:
+            return True  # Always rerank if no scores
+        
+        # Calculate score variance - if scores are very similar, reranking helps
+        import statistics
+        try:
+            score_std = statistics.stdev(top_scores) if len(top_scores) > 1 else 0
+            # If standard deviation is low (scores are similar), reranking is beneficial
+            return score_std < 0.1  # Threshold for "similar" scores
+        except:
+            return True  # Default to reranking if calculation fails
+
+    def semantic_search_with_reranking(self, query: str, initial_k: int = 40, final_k: int = 3) -> List[Dict]:
         """
-        Advanced two-stage retrieval with re-ranking:
-        1. Retrieve top 50-100 candidates using vector similarity
-        2. Re-rank using cross-encoder for semantic relevance
-        3. Return top 2-3 most relevant chunks with context expansion
+        Optimized two-stage retrieval with hybrid scoring and fast reranking:
+        1. Retrieve top 40 candidates using vector similarity (reduced from 50)
+        2. Pre-filter to 15 best candidates using hybrid scoring (semantic + lexical + keyword)
+        3. Re-rank top candidates using lightweight cross-encoder or BGE
+        4. Return top 3 most relevant chunks with context expansion
         """
         if not self.index:
             print("❌ Pinecone index not available")
             return []
         
         try:
-            # Stage 1: Initial broad retrieval
+            # Stage 1: Initial retrieval (reduced k for speed)
             print(f"🔍 Stage 1: Retrieving top {initial_k} candidates...")
             query_embedding = self._encode_query(query)
             
@@ -377,62 +711,69 @@ class QueryProcessor:
             
             print(f"✅ Retrieved {len(candidates)} candidates")
             
-            # Stage 2: BGE Reranker v2 M3 Re-ranking (no fallbacks)
+            # Stage 1.5: Smart pre-filtering with hybrid scoring
+            if len(candidates) > 15:  # Pre-filter to fewer candidates
+                candidates = self._prefilter_candidates(candidates, query, max_candidates=15)
+            
+            # Stage 2: Adaptive optimized reranking
             if self.reranker and len(candidates) > final_k:
-                print(f"🎯 Stage 2: Re-ranking with BGE Reranker v2 M3...")
+                should_rerank = self._should_rerank(candidates, final_k)
                 
-                # BGE Reranker expects list of (query, passage) tuples
-                pairs = [(query, candidate["text"]) for candidate in candidates]
-                cross_scores = self.reranker.compute_score(pairs, normalize=True)
+                if should_rerank:
+                    print(f"🎯 Stage 2: Fast reranking with {self.reranker_type}...")
+                    
+                    # Use optimized reranking
+                    cross_scores = self._batch_rerank_with_cache(query, candidates)
+                    
+                    # Add reranker scores to candidates
+                    for i, candidate in enumerate(candidates):
+                        if i < len(cross_scores):
+                            candidate["cross_score"] = cross_scores[i]
+                        else:
+                            candidate["cross_score"] = candidate.get("hybrid_score", candidate.get("vector_score", 0.0))
+                    
+                    # Sort by reranker score
+                    candidates.sort(key=lambda x: x["cross_score"], reverse=True)
+                    print(f"✅ Fast reranking completed")
+                else:
+                    print(f"⚡ Skipping reranking - using hybrid scores")
+                    # Use hybrid scores as cross scores
+                    for candidate in candidates:
+                        candidate["cross_score"] = candidate.get("hybrid_score", candidate.get("vector_score", 0.0))
                 
-                # Handle single score or list of scores
-                if not isinstance(cross_scores, list):
-                    cross_scores = [cross_scores]
-                
-                # Add re-ranker scores to candidates with safe conversion
-                for i, candidate in enumerate(candidates):
-                    if i < len(cross_scores):
-                        score = cross_scores[i]
-                        # Safely convert score to float
-                        try:
-                            if hasattr(score, 'item'):  # numpy scalar
-                                candidate["cross_score"] = float(score.item())
-                            elif score is not None:
-                                candidate["cross_score"] = float(score)
-                            else:
-                                candidate["cross_score"] = 0.0
-                        except (ValueError, TypeError, AttributeError):
-                            candidate["cross_score"] = 0.0
-                    else:
-                        candidate["cross_score"] = 0.0
-                
-                # Sort by re-ranker score (higher is better)
-                candidates.sort(key=lambda x: x["cross_score"], reverse=True)
-                print(f"✅ Re-ranked using BGE Reranker v2 M3")
-                
-                # Take top final_k after re-ranking
                 final_candidates = candidates[:final_k]
                 
+            elif len(candidates) > final_k:
+                # No reranker available - use hybrid scores
+                print("⚡ Using hybrid scoring (no reranker available)")
+                for candidate in candidates:
+                    candidate["cross_score"] = candidate.get("hybrid_score", candidate.get("vector_score", 0.0))
+                
+                candidates.sort(key=lambda x: x["cross_score"], reverse=True)
+                final_candidates = candidates[:final_k]
             else:
-                print("❌ BGE Reranker not available - cannot perform re-ranking")
-                return []
+                # Fewer candidates than needed
+                final_candidates = candidates
+                for candidate in final_candidates:
+                    candidate["cross_score"] = candidate.get("hybrid_score", candidate.get("vector_score", 0.0))
             
             # Stage 3: Context expansion
-            print(f"📄 Stage 3: Expanding context for {len(final_candidates)} chunks...")
+            print(f"📄 Stage 3: Context expansion for {len(final_candidates)} chunks...")
             expanded_results = self._expand_context(final_candidates)
             
             # Add ranking metadata
             for i, result in enumerate(expanded_results):
                 result["final_rank"] = i + 1
-                result["ranking_method"] = "cross_encoder" if self.reranker else "vector_similarity"
+                result["ranking_method"] = f"hybrid_{self.reranker_type}" if self.reranker else "hybrid_only"
             
             self._print_ranking_summary(query, expanded_results)
             
             return expanded_results
             
         except Exception as e:
-            print(f"❌ Advanced search error: {e}")
-            # No fallback - return empty results
+            print(f"❌ Optimized search error: {e}")
+            import traceback
+            traceback.print_exc()
             return []
     
     def _expand_context(self, candidates: List[Dict], context_chars: int = 500) -> List[Dict]:
@@ -727,7 +1068,7 @@ class QueryProcessor:
             }
     
     def process_query(self, query: str) -> Dict[str, Any]:
-        """Complete query processing pipeline with advanced RAG and re-ranking."""
+        """Complete query processing pipeline with optimized hybrid RAG."""
         try:
             # Get API status for debugging
             api_status = self.get_api_status()
@@ -736,32 +1077,39 @@ class QueryProcessor:
             print("🔍 Step 1: Extracting entities...")
             entities = self.extract_entities(query)
             
-            # Step 2: Advanced semantic search with re-ranking
-            print("🔍 Step 2: Advanced semantic search with re-ranking...")
+            # Step 2: Optimized hybrid semantic search with fast reranking
+            print("🔍 Step 2: Optimized hybrid search with fast reranking...")
             search_results = self.semantic_search_with_reranking(
                 query, 
-                initial_k=50,  # Retrieve top 50 candidates initially
-                final_k=3      # Re-rank and return top 3
+                initial_k=30,  # Reduced for speed
+                final_k=3     # Top 3 results
             )
             
-            # Fallback to simple search if advanced search fails
+            # Fallback to simple search if optimized search fails completely
             if not search_results:
-                print("❌ Advanced search failed and no fallback available")
-                search_results = []
+                print("⚠️ Optimized search failed, trying simple fallback...")
+                search_results = self.semantic_search(query, top_k=5)
             
             # Step 3: Evaluate claim
-            print("🔍 Step 3: Evaluating claim with enhanced context...")
+            print("🔍 Step 3: Evaluating claim with optimized context...")
             evaluation = self.evaluate_claim(query, entities, search_results)
             
-            # Add advanced RAG information
-            evaluation['search_method'] = 'advanced_rag_with_reranking'
+            # Add optimization information
+            evaluation['search_method'] = 'optimized_hybrid_rag'
+            evaluation['reranker_type'] = getattr(self, 'reranker_type', 'none')
             evaluation['reranker_available'] = self.reranker is not None
-            evaluation['total_candidates_retrieved'] = 50 if search_results else 0
+            evaluation['hybrid_search_enabled'] = SKLEARN_AVAILABLE
+            evaluation['total_candidates_retrieved'] = 30 if search_results else 0
             evaluation['final_chunks_used'] = len(search_results)
             
-            # Add fallback information to evaluation if needed
+            # Add performance notes
             if not self.llm:
                 evaluation['note'] = "❌ Analysis performed without LLM (required for full functionality)"
+            
+            if not self.reranker:
+                evaluation['performance_note'] = "⚡ Using hybrid scoring only (no reranker) - install sentence-transformers for better results"
+            elif self.reranker_type == "minilm_cross_encoder":
+                evaluation['performance_note'] = "🚀 Using fast MiniLM cross-encoder for optimal speed/accuracy balance"
             
             # Combine all results
             result = {
@@ -776,6 +1124,10 @@ class QueryProcessor:
             return result
             
         except Exception as e:
+            print(f"❌ Query processing error: {e}")
+            import traceback
+            traceback.print_exc()
+            
             return {
                 "query": query,
                 "entities": {},
