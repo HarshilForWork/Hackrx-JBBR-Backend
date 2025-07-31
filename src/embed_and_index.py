@@ -14,21 +14,18 @@ _model_cache = None
 
 def get_embedding_model():
     """
-    Get embedding model - now using Llama Text Embed v2 (NVIDIA Hosted).
-    Falls back to sentence-transformers if API is not available.
+    Get embedding model - using SentenceTransformers with all-MiniLM-L6-v2.
     """
     global _model_cache
     if _model_cache is None:
         try:
-            # Try to use NVIDIA-hosted Llama Text Embed v2
-            # This would typically require API configuration
-            _model_cache = "llama-text-embed-v2"  # Placeholder for API-based model
-            print("✅ Using Llama Text Embed v2 (NVIDIA Hosted)")
-        except Exception as e:
-            # Fallback to sentence-transformers
+            # Use sentence-transformers directly (more reliable than placeholder API)
             from sentence_transformers import SentenceTransformer
             _model_cache = SentenceTransformer('all-MiniLM-L6-v2')
-            print(f"⚠️ Falling back to SentenceTransformer: {e}")
+            print("✅ Using SentenceTransformer: all-MiniLM-L6-v2")
+        except Exception as e:
+            print(f"❌ Failed to load SentenceTransformer: {e}")
+            raise
     return _model_cache
 
 def generate_embeddings_llama(texts: List[str], api_key: Optional[str] = None) -> List[List[float]]:
@@ -310,29 +307,25 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
     index = pc.Index(index_name)
     
     if progress_callback:
-        progress_callback("Loading Llama Text Embed v2 model...", 10)
+        progress_callback("Loading SentenceTransformer model...", 10)
     
-    # Use the advanced Llama embedding model
+    # Use SentenceTransformer directly
     model = get_embedding_model()
     
     if progress_callback:
-        progress_callback("Generating embeddings with Llama Text Embed v2...", 15)
+        progress_callback("Generating embeddings with SentenceTransformer...", 15)
     
-    # Generate embeddings using Llama Text Embed v2
-    texts = [chunk['text'] for chunk in chunks]
+    # Generate embeddings using SentenceTransformer
+    texts = [chunk['content'] for chunk in chunks]  # Fixed: use 'content' not 'text'
     
-    if isinstance(model, str) and model == "llama-text-embed-v2":
-        # Use the new Llama embedding function
-        embeddings = generate_embeddings_llama(texts)
+    # Use SentenceTransformer directly
+    embeddings_raw = model.encode(texts, batch_size=32, show_progress_bar=False)
+    
+    # Convert to list safely
+    if hasattr(embeddings_raw, 'tolist'):
+        embeddings = embeddings_raw.tolist()
     else:
-        # Fallback to sentence-transformers
-        embeddings_raw = model.encode(texts, batch_size=32, show_progress_bar=False)
-        
-        # Convert to list safely
-        if hasattr(embeddings_raw, 'tolist'):
-            embeddings = embeddings_raw.tolist()
-        else:
-            embeddings = [list(map(float, emb)) for emb in embeddings_raw]
+        embeddings = [list(map(float, emb)) for emb in embeddings_raw]
     
     if progress_callback:
         progress_callback("Preparing vectors for indexing...", 60)
@@ -341,9 +334,9 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
     vectors = []
     for i, (chunk, embedding) in enumerate(zip(chunks, embeddings)):
         meta = {
-            'text': chunk['text'][:1000],  # Truncate text to avoid metadata size limits
+            'text': chunk['content'][:1000],  # Truncate text to avoid metadata size limits
             'document_name': chunk['document_name'],
-            'page_number': chunk['page_number'],
+            'page_number': chunk.get('page_number', 0),  # Use get() with default since this field might not exist
             'chunk_id': chunk['chunk_id']
         }
         
@@ -431,7 +424,7 @@ def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: s
     processed_files = []
     
     # Import here to avoid circular imports
-    from .chunk_documents import chunk_documents
+    from .chunk_documents_optimized import chunk_documents_optimized
     
     total_files = len(files_to_process)
     
@@ -447,8 +440,24 @@ def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: s
             parsed_docs = load_and_parse_from_folder(docs_folder, file_filter=[filename], save_parsed_text=save_parsed_text)
             
             if parsed_docs:
-                # Chunk document
-                chunks = chunk_documents(parsed_docs)
+                # Transform to expected format for optimized chunking
+                transformed_docs = []
+                for doc in parsed_docs:
+                    doc_name = doc.get('document_name', 'unknown')
+                    parsed_output = doc.get('parsed_output', {})
+                    content = (parsed_output.get('content', '') or 
+                              parsed_output.get('text', '') or 
+                              parsed_output.get('cleaned_text', ''))
+                    
+                    transformed_doc = {
+                        'document_name': doc_name,
+                        'content': content,
+                        'ordered_content': parsed_output.get('ordered_content', [])
+                    }
+                    transformed_docs.append(transformed_doc)
+                
+                # Chunk document with optimized chunking
+                chunks = chunk_documents_optimized(transformed_docs)
                 
                 # Index chunks
                 result = index_chunks_in_pinecone(chunks, pinecone_api_key, index_name)

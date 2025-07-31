@@ -173,3 +173,5 @@ Thumbs.db
 *.tmp
 *.temp
 .streamlit
+tests
+results
