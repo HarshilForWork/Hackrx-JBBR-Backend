@@ -237,8 +237,8 @@ class QueryProcessor:
                     
         except Exception as e:
             print(f"❌ NVIDIA query encoding error: {e}")
-            # Return zero vector as fallback (1024 dimensions for NVIDIA)
-            return [0.0] * 1024
+            # Return zero vector as fallback (4096 dimensions for NVIDIA Llama Text Embed v2)
+            return [0.0] * 4096
     
     def get_api_status(self) -> Dict[str, Any]:
         """Get current API status and recommendations."""

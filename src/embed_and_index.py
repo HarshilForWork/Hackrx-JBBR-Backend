@@ -19,17 +19,17 @@ def get_nvidia_api_key() -> str:
 
 def generate_embeddings_nvidia(texts: List[str]) -> List[List[float]]:
     """
-    Generate embeddings using NVIDIA NIM API with NV-Embed-QA model.
+    Generate embeddings using NVIDIA Llama Text Embed v2 model via NIM API.
     
     Args:
         texts: List of texts to embed
         
     Returns:
-        List of embedding vectors (1024 dimensions)
+        List of embedding vectors (4096 dimensions)
     """
     api_key = get_nvidia_api_key()
     
-    url = "https://ai.api.nvidia.com/v1/retrieval/nvidia/nv-embedqa-e5-v5"
+    url = "https://ai.api.nvidia.com/v1/embeddings"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Accept": "application/json",
@@ -39,15 +39,14 @@ def generate_embeddings_nvidia(texts: List[str]) -> List[List[float]]:
     all_embeddings = []
     
     # Process in batches to handle API limits
-    batch_size = 50  # NVIDIA API typically supports 50 texts per request
+    batch_size = 20  # Conservative batch size for large embeddings
     
     for i in range(0, len(texts), batch_size):
         batch_texts = texts[i:i + batch_size]
         
         payload = {
             "input": batch_texts,
-            "input_type": "passage",
-            "model": "NV-Embed-QA",
+            "model": "nvidia/llama-text-embed-v2",
             "encoding_format": "float"
         }
         
@@ -80,22 +79,22 @@ def generate_embeddings_nvidia(texts: List[str]) -> List[List[float]]:
     if len(all_embeddings) != len(texts):
         raise RuntimeError(f"❌ Embedding count mismatch: expected {len(texts)}, got {len(all_embeddings)}")
     
-    print(f"✅ Generated {len(all_embeddings)} embeddings using NVIDIA NV-Embed-QA (1024 dimensions)")
+    print(f"✅ Generated {len(all_embeddings)} embeddings using NVIDIA Llama Text Embed v2 (4096 dimensions)")
     return all_embeddings
 
 def generate_query_embedding_nvidia(query: str) -> List[float]:
     """
-    Generate a single query embedding using NVIDIA NIM API.
+    Generate a single query embedding using NVIDIA Llama Text Embed v2 model.
     
     Args:
         query: Query text to embed
         
     Returns:
-        Single embedding vector (1024 dimensions)
+        Single embedding vector (4096 dimensions)
     """
     api_key = get_nvidia_api_key()
     
-    url = "https://ai.api.nvidia.com/v1/retrieval/nvidia/nv-embedqa-e5-v5"
+    url = "https://ai.api.nvidia.com/v1/embeddings"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Accept": "application/json",
@@ -104,8 +103,7 @@ def generate_query_embedding_nvidia(query: str) -> List[float]:
     
     payload = {
         "input": [query],
-        "input_type": "query",  # Different type for queries
-        "model": "NV-Embed-QA",
+        "model": "nvidia/llama-text-embed-v2",
         "encoding_format": "float"
     }
     
@@ -124,7 +122,7 @@ def generate_query_embedding_nvidia(query: str) -> List[float]:
         if not embedding:
             raise RuntimeError("❌ No embedding found in NVIDIA API response")
         
-        print(f"✅ Generated query embedding using NVIDIA NV-Embed-QA (1024 dimensions)")
+        print(f"✅ Generated query embedding using NVIDIA Llama Text Embed v2 (4096 dimensions)")
         return embedding
         
     except requests.exceptions.RequestException as e:
@@ -200,12 +198,13 @@ def delete_duplicate_vectors(pinecone_api_key: str, index_name: str = 'policy-in
         # Fetch vectors in batches to find duplicates
         # Note: This is a simplified approach - for large indexes, you'd need pagination
         query_response = index.query(
-            vector=[0.0] * 384,  # Dummy vector for metadata-only query
+            vector=[0.0] * 4096,  # Dummy vector for NVIDIA Llama Text Embed v2 (4096 dimensions)
             top_k=min(10000, total_vectors),  # Limit to avoid memory issues
             include_metadata=True
         )
         
-        for match in query_response.matches:
+        matches = getattr(query_response, 'matches', [])
+        for match in matches:
             vector_id = match.id
             metadata = match.metadata or {}
             content_hash = metadata.get('content_hash', '')
@@ -283,14 +282,15 @@ def reindex_documents(pinecone_api_key: str, documents_to_reindex: List[str],
         
         # Query vectors for this document
         query_response = index.query(
-            vector=[0.0] * 384,  # Dummy vector
+            vector=[0.0] * 4096,  # Dummy vector with correct dimensions for Llama Text Embed v2
             filter={'document_name': doc_name},
             top_k=10000,  # Get all chunks for this document
             include_metadata=True
         )
         
-        if query_response.matches:
-            vector_ids = [match.id for match in query_response.matches]
+        matches = getattr(query_response, 'matches', [])
+        if matches:
+            vector_ids = [match.id for match in matches]
             index.delete(ids=vector_ids)
             deleted_vectors.extend(vector_ids)
             print(f"Deleted {len(vector_ids)} vectors for {doc_name}")
@@ -355,7 +355,7 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
             progress_callback("Creating Pinecone index for NVIDIA embeddings...", 5)
         pc.create_index(
             name=index_name,
-            dimension=1024,  # 1024 for NVIDIA NV-Embed-QA
+            dimension=4096,  # 4096 for NVIDIA Llama Text Embed v2
             metric="cosine",
             spec=ServerlessSpec(
                 cloud='aws',
