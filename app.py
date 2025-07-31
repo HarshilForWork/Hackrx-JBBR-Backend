@@ -55,78 +55,92 @@ def query_documents():
             with col1:
                 if st.button("🦷 Dental Surgery Coverage", use_container_width=True, key="dental_btn"):
                     st.session_state['query_input'] = "Is dental surgery covered for a 35-year-old female?"
+                    st.rerun()
                 if st.button("🤰 Maternity Benefits", use_container_width=True, key="maternity_btn"):
                     st.session_state['query_input'] = "What is the waiting period for maternity benefits?"
+                    st.rerun()
             with col2:
                 if st.button("💰 Claim Process", use_container_width=True, key="claim_btn"):
                     st.session_state['query_input'] = "How do I file a claim for medical expenses?"
+                    st.rerun()
                 if st.button("📋 Policy Duration", use_container_width=True, key="policy_btn"):
                     st.session_state['query_input'] = "Is there coverage for 3 months old policy?"
+                    st.rerun()
+        
+        # Initialize session state for query input persistence
+        if 'persistent_query' not in st.session_state:
+            st.session_state.persistent_query = ''
+        
+        # Handle button clicks for sample queries
+        if 'query_input' in st.session_state:
+            st.session_state.persistent_query = st.session_state['query_input']
+            del st.session_state['query_input']
         
         # Main query input with form for Enter key submission
         with st.form("query_form", clear_on_submit=False):
-            # Get the initial value, considering button clicks
-            initial_value = st.session_state.get('query_input', '')
-            
             user_query = st.text_area(
                 "Enter your question:",
-                value=initial_value,
+                value=st.session_state.persistent_query,
                 placeholder="e.g., Is dental surgery covered for a 35-year-old female?",
                 height=100,
-                key="query_text"
-            ) or ""  # Ensure it's never None
+                key="query_text_input"
+            )
             
             # Create columns for submit and clear buttons
-            col1, col2 = st.columns([3, 1])
+            col1, col2, col3 = st.columns([2, 1, 1])
             with col1:
-                submitted = st.form_submit_button("🔍 Search Documents", type="primary", disabled=not user_query.strip())
+                submitted = st.form_submit_button("🔍 Search Documents", type="primary")
             with col2:
-                clear_clicked = st.form_submit_button("🗑️ Clear Results")
+                clear_query = st.form_submit_button("🗑️ Clear Query")
+            with col3:
+                clear_results = st.form_submit_button("🧹 Clear Results")
         
-        # Clear the session state after form is displayed to prevent loops
-        if 'query_input' in st.session_state:
-            del st.session_state['query_input']
-        
-        # Clear results if clear button is clicked
-        if clear_clicked:
+        # Handle clear query button
+        if clear_query:
+            st.session_state.persistent_query = ''
             if 'query_results' in st.session_state:
-                del st.session_state['query_results']
+                del st.session_state.query_results
+            st.rerun()
+        
+        # Handle clear results button
+        if clear_results:
+            if 'query_results' in st.session_state:
+                del st.session_state.query_results
             st.rerun()
         
         # Process query if search button is clicked
-        if submitted and user_query.strip():
-            # Prevent infinite loops by checking if we're already processing the same query
-            current_query = user_query.strip()
-            last_processed = st.session_state.get('last_processed_query', '')
+        if submitted and user_query and user_query.strip():
+            # Save the query to session state for persistence
+            st.session_state.persistent_query = user_query.strip()
             
-            if current_query != last_processed:
-                st.session_state['last_processed_query'] = current_query
+            with st.spinner("🔍 Searching documents and analyzing..."):
+                try:
+                    # Process query using pipeline function
+                    result = query_documents_sync(
+                        query=user_query.strip(),
+                        pinecone_api_key=pinecone_api_key,
+                        gemini_api_key=gemini_api_key,
+                        index_name="policy-index"
+                    )
+                    
+                    # Store results in session state
+                    st.session_state.query_results = {
+                        'query': user_query.strip(),
+                        'result': result
+                    }
+                    
+                except Exception as e:
+                    st.error(f"❌ Query processing failed: {str(e)}")
+                    st.session_state.query_results = {
+                        'query': user_query.strip(),
+                        'result': {
+                            'success': False,
+                            'error': str(e)
+                        }
+                    }
                 
-                with st.spinner("🔍 Searching documents and analyzing..."):
-                    try:
-                        # Process query using pipeline function
-                        result = query_documents_sync(
-                            query=current_query,
-                            pinecone_api_key=pinecone_api_key,
-                            gemini_api_key=gemini_api_key,
-                            index_name="policy-index"
-                        )
-                        
-                        # Store results in session state
-                        st.session_state.query_results = {
-                            'query': current_query,
-                            'result': result
-                        }
-                        
-                    except Exception as e:
-                        st.error(f"❌ Query processing failed: {str(e)}")
-                        st.session_state.query_results = {
-                            'query': current_query,
-                            'result': {
-                                'success': False,
-                                'error': str(e)
-                            }
-                        }
+                # Rerun to display results
+                st.rerun()
         
         # Display results from session state (persistent across reruns)
         if st.session_state.query_results:
@@ -248,6 +262,8 @@ def main():
         st.session_state.processing_stats = {}
     if 'query_results' not in st.session_state:
         st.session_state.query_results = None
+    if 'persistent_query' not in st.session_state:
+        st.session_state.persistent_query = ''
     
     st.title("🏥 Insurance Policy RAG System")
     st.markdown("**AI-Powered Insurance Policy Analysis** • Ask questions and get instant answers with source citations")

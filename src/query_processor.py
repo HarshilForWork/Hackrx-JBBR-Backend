@@ -363,7 +363,8 @@ class QueryProcessor:
                     "id": match.id,
                     "vector_score": match.score,
                     "text": match.metadata.get("text", ""),
-                    "document_name": match.metadata.get("document_name", ""),
+                    "source_document": match.metadata.get("document_name", "Unknown"),
+                    "document_name": match.metadata.get("document_name", "Unknown"),
                     "page_number": match.metadata.get("page_number", 1),
                     "chunk_index": match.metadata.get("chunk_index", 0)
                 })
@@ -377,6 +378,7 @@ class QueryProcessor:
             # Use similarity scores as final scores (no reranking)
             for candidate in candidates:
                 candidate["final_score"] = candidate["vector_score"]
+                candidate["score"] = candidate["vector_score"]  # Add score field for app compatibility
             
             # Context expansion
             print(f"📄 Context expansion for {len(candidates)} chunks...")
@@ -584,7 +586,8 @@ class QueryProcessor:
                      "id": m.id,
                      "score": m.score,
                      "text": m.metadata.get("text", ""),
-                     "document_name": m.metadata.get("document_name", ""),
+                     "source_document": m.metadata.get("document_name", "Unknown"),
+                     "document_name": m.metadata.get("document_name", "Unknown"),
                      "page_number": m.metadata.get("page_number", 1)
                  })
              
