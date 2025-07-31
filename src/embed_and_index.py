@@ -1,78 +1,136 @@
 """
 Module: embed_and_index.py
-Functionality: Advanced embedding generation using Llama Text Embed v2 and vector indexing with smart document management.
+Functionality: NVIDIA-hosted embedding generation using NIM API and vector indexing.
 """
 from typing import List, Dict, Optional, Callable, Any
 import requests
 import time
 import os
+import json
 from pinecone import Pinecone, ServerlessSpec
 from .document_registry import DocumentRegistry
 
-# Global model cache to avoid reloading
-_model_cache = None
+def get_nvidia_api_key() -> str:
+    """Get NVIDIA API key from environment variables."""
+    api_key = os.getenv("NVIDIA_API_KEY")
+    if not api_key:
+        raise ValueError("NVIDIA_API_KEY environment variable is required. Get your key from https://build.nvidia.com/")
+    return api_key
 
-def get_embedding_model():
+def generate_embeddings_nvidia(texts: List[str]) -> List[List[float]]:
     """
-    Get embedding model - now using Llama Text Embed v2 (NVIDIA Hosted).
-    Falls back to sentence-transformers if API is not available.
-    """
-    global _model_cache
-    if _model_cache is None:
-        try:
-            # Try to use NVIDIA-hosted Llama Text Embed v2
-            # This would typically require API configuration
-            _model_cache = "llama-text-embed-v2"  # Placeholder for API-based model
-            print("✅ Using Llama Text Embed v2 (NVIDIA Hosted)")
-        except Exception as e:
-            # Fallback to sentence-transformers
-            from sentence_transformers import SentenceTransformer
-            _model_cache = SentenceTransformer('all-MiniLM-L6-v2')
-            print(f"⚠️ Falling back to SentenceTransformer: {e}")
-    return _model_cache
-
-def generate_embeddings_llama(texts: List[str], api_key: Optional[str] = None) -> List[List[float]]:
-    """
-    Generate embeddings using NVIDIA-hosted Llama Text Embed v2.
+    Generate embeddings using NVIDIA NIM API with NV-Embed-QA model.
     
     Args:
         texts: List of texts to embed
-        api_key: NVIDIA API key (if required)
         
     Returns:
-        List of embedding vectors
+        List of embedding vectors (1024 dimensions)
     """
+    api_key = get_nvidia_api_key()
+    
+    url = "https://ai.api.nvidia.com/v1/retrieval/nvidia/nv-embedqa-e5-v5"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    }
+    
+    all_embeddings = []
+    
+    # Process in batches to handle API limits
+    batch_size = 50  # NVIDIA API typically supports 50 texts per request
+    
+    for i in range(0, len(texts), batch_size):
+        batch_texts = texts[i:i + batch_size]
+        
+        payload = {
+            "input": batch_texts,
+            "input_type": "passage",
+            "model": "NV-Embed-QA",
+            "encoding_format": "float"
+        }
+        
+        try:
+            response = requests.post(url, headers=headers, json=payload, timeout=30)
+            response.raise_for_status()
+            
+            result = response.json()
+            
+            # Extract embeddings from response
+            batch_embeddings = []
+            for item in result.get("data", []):
+                embedding = item.get("embedding")
+                if embedding:
+                    batch_embeddings.append(embedding)
+            
+            all_embeddings.extend(batch_embeddings)
+            
+            print(f"✅ Generated {len(batch_embeddings)} embeddings for batch {i//batch_size + 1}")
+            
+            # Rate limiting - be respectful to the API
+            if i + batch_size < len(texts):
+                time.sleep(0.1)
+                
+        except requests.exceptions.RequestException as e:
+            raise RuntimeError(f"❌ NVIDIA API request failed: {e}")
+        except Exception as e:
+            raise RuntimeError(f"❌ Error processing NVIDIA embeddings: {e}")
+    
+    if len(all_embeddings) != len(texts):
+        raise RuntimeError(f"❌ Embedding count mismatch: expected {len(texts)}, got {len(all_embeddings)}")
+    
+    print(f"✅ Generated {len(all_embeddings)} embeddings using NVIDIA NV-Embed-QA (1024 dimensions)")
+    return all_embeddings
+
+def generate_query_embedding_nvidia(query: str) -> List[float]:
+    """
+    Generate a single query embedding using NVIDIA NIM API.
+    
+    Args:
+        query: Query text to embed
+        
+    Returns:
+        Single embedding vector (1024 dimensions)
+    """
+    api_key = get_nvidia_api_key()
+    
+    url = "https://ai.api.nvidia.com/v1/retrieval/nvidia/nv-embedqa-e5-v5"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    }
+    
+    payload = {
+        "input": [query],
+        "input_type": "query",  # Different type for queries
+        "model": "NV-Embed-QA",
+        "encoding_format": "float"
+    }
+    
     try:
-        # This is a placeholder for the actual NVIDIA API call
-        # You would need to implement the actual API integration
-        embeddings = []
+        response = requests.post(url, headers=headers, json=payload, timeout=30)
+        response.raise_for_status()
         
-        # For now, fall back to sentence-transformers
-        from sentence_transformers import SentenceTransformer
-        model = SentenceTransformer('all-MiniLM-L6-v2')
-        embeddings_raw = model.encode(texts)
+        result = response.json()
         
-        # Convert to list safely
-        if hasattr(embeddings_raw, 'tolist'):
-            embeddings = embeddings_raw.tolist()
-        else:
-            embeddings = [list(map(float, emb)) for emb in embeddings_raw]
+        # Extract embedding from response
+        data = result.get("data", [])
+        if not data:
+            raise RuntimeError("❌ No embedding data returned from NVIDIA API")
         
-        print(f"✅ Generated {len(embeddings)} embeddings using Llama Text Embed v2")
-        return embeddings
+        embedding = data[0].get("embedding")
+        if not embedding:
+            raise RuntimeError("❌ No embedding found in NVIDIA API response")
         
+        print(f"✅ Generated query embedding using NVIDIA NV-Embed-QA (1024 dimensions)")
+        return embedding
+        
+    except requests.exceptions.RequestException as e:
+        raise RuntimeError(f"❌ NVIDIA API request failed: {e}")
     except Exception as e:
-        print(f"❌ Error generating embeddings: {e}")
-        # Fallback to sentence-transformers
-        from sentence_transformers import SentenceTransformer
-        model = SentenceTransformer('all-MiniLM-L6-v2')
-        embeddings_raw = model.encode(texts)
-        
-        # Convert to list safely
-        if hasattr(embeddings_raw, 'tolist'):
-            return embeddings_raw.tolist()
-        else:
-            return [list(map(float, emb)) for emb in embeddings_raw]
+        raise RuntimeError(f"❌ Error processing NVIDIA query embedding: {e}")
 
 def clear_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index'):
     """
@@ -294,10 +352,10 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
     # Check if index exists, else create
     if index_name not in pc.list_indexes().names():
         if progress_callback:
-            progress_callback("Creating Pinecone index...", 5)
+            progress_callback("Creating Pinecone index for NVIDIA embeddings...", 5)
         pc.create_index(
             name=index_name,
-            dimension=384,  # 384 for MiniLM
+            dimension=1024,  # 1024 for NVIDIA NV-Embed-QA
             metric="cosine",
             spec=ServerlessSpec(
                 cloud='aws',
@@ -310,29 +368,11 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
     index = pc.Index(index_name)
     
     if progress_callback:
-        progress_callback("Loading Llama Text Embed v2 model...", 10)
+        progress_callback("Generating embeddings with NVIDIA NV-Embed-QA...", 15)
     
-    # Use the advanced Llama embedding model
-    model = get_embedding_model()
-    
-    if progress_callback:
-        progress_callback("Generating embeddings with Llama Text Embed v2...", 15)
-    
-    # Generate embeddings using Llama Text Embed v2
+    # Generate embeddings using NVIDIA API ONLY
     texts = [chunk['text'] for chunk in chunks]
-    
-    if isinstance(model, str) and model == "llama-text-embed-v2":
-        # Use the new Llama embedding function
-        embeddings = generate_embeddings_llama(texts)
-    else:
-        # Fallback to sentence-transformers
-        embeddings_raw = model.encode(texts, batch_size=32, show_progress_bar=False)
-        
-        # Convert to list safely
-        if hasattr(embeddings_raw, 'tolist'):
-            embeddings = embeddings_raw.tolist()
-        else:
-            embeddings = [list(map(float, emb)) for emb in embeddings_raw]
+    embeddings = generate_embeddings_nvidia(texts)
     
     if progress_callback:
         progress_callback("Preparing vectors for indexing...", 60)

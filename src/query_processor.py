@@ -56,7 +56,7 @@ except ImportError:
     CROSS_ENCODER_AVAILABLE = False
     print("⚠️ sentence-transformers CrossEncoder not available")
 
-from .embed_and_index import get_embedding_model
+from .embed_and_index import generate_query_embedding_nvidia
 
 class QueryProcessor:
     def __init__(self, pinecone_api_key: str, gemini_api_key: str, index_name: str = 'policy-index'):
@@ -79,8 +79,8 @@ class QueryProcessor:
             self.pc = None
             self.index = None
         
-        # Use cached embedding model for consistency and performance
-        self.model = get_embedding_model()
+        # Use NVIDIA embeddings ONLY - no fallbacks
+        print("✅ Using NVIDIA NV-Embed-QA embeddings (no fallbacks)")
         
         # Initialize optimized reranker with multiple options
         self._init_optimized_reranker()
@@ -230,40 +230,15 @@ class QueryProcessor:
         }
     
     def _encode_query(self, query: str) -> List[float]:
-        """Encode query using the appropriate embedding model."""
+        """Encode query using NVIDIA NV-Embed-QA model ONLY."""
         try:
-            if isinstance(self.model, str) and self.model == "llama-text-embed-v2":
-                # Use Llama Text Embed v2 API
-                from .embed_and_index import generate_embeddings_llama
-                embeddings = generate_embeddings_llama([query])
-                return embeddings[0] if embeddings else [0.0] * 384
-            else:
-                # Use sentence-transformers model
-                embedding = self.model.encode(query)
-                
-                # Convert to list safely
-                try:
-                    # Try the most common case (numpy array)
-                    import numpy as np
-                    if isinstance(embedding, np.ndarray):
-                        return embedding.tolist()
-                    # If it's already a list
-                    elif isinstance(embedding, list):
-                        return [float(x) for x in embedding]  # Ensure float type
-                    # If it has tolist method
-                    elif hasattr(embedding, 'tolist'):
-                        return embedding.tolist()  # type: ignore
-                    else:
-                        # Last resort conversion
-                        return list(map(float, embedding))
-                except Exception as convert_error:
-                    print(f"⚠️ Conversion error: {convert_error}")
-                    return [0.0] * 384
+            # Use NVIDIA embeddings ONLY - no fallbacks
+            return generate_query_embedding_nvidia(query)
                     
         except Exception as e:
-            print(f"⚠️ Query encoding error: {e}")
-            # Return zero vector as fallback (using proper dimension)
-            return [0.0] * 384
+            print(f"❌ NVIDIA query encoding error: {e}")
+            # Return zero vector as fallback (1024 dimensions for NVIDIA)
+            return [0.0] * 1024
     
     def get_api_status(self) -> Dict[str, Any]:
         """Get current API status and recommendations."""

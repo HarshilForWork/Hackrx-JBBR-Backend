@@ -48,11 +48,15 @@ def embed_and_index():
         
         # Get API keys from secrets or environment
         pinecone_api_key = st.secrets.get("PINECONE_API_KEY") or os.getenv("PINECONE_API_KEY")
+        nvidia_api_key = st.secrets.get("NVIDIA_API_KEY") or os.getenv("NVIDIA_API_KEY")
         
         if not pinecone_api_key:
             return {"success": False, "error": "Pinecone API key not found!"}
         
-        # Embed and index (pinecone_env is ignored in the function)
+        if not nvidia_api_key:
+            return {"success": False, "error": "NVIDIA API key not found! Get one from https://build.nvidia.com/"}
+        
+        # Embed and index using NVIDIA embeddings
         result = index_chunks_in_pinecone(chunks, pinecone_api_key, "us-east-1")
         
         return result
@@ -66,12 +70,16 @@ def semantic_search_with_reranking(query: str):
         # Get API keys from secrets or environment
         pinecone_api_key = st.secrets.get("PINECONE_API_KEY") or os.getenv("PINECONE_API_KEY")
         gemini_api_key = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+        nvidia_api_key = st.secrets.get("NVIDIA_API_KEY") or os.getenv("NVIDIA_API_KEY")
         
         if not pinecone_api_key:
             raise Exception("Pinecone API key not found!")
         
         if not gemini_api_key:
             raise Exception("Gemini API key not found!")
+        
+        if not nvidia_api_key:
+            raise Exception("NVIDIA API key not found! Get one from https://build.nvidia.com/")
         
         # Create QueryProcessor instance
         processor = QueryProcessor(pinecone_api_key, gemini_api_key)
@@ -91,7 +99,37 @@ def main():
         layout="wide"
     )
     
-    st.title("📋 Policy Document Q&A System")
+    st.title("📋 Policy Document Q&A System v3.0 - NVIDIA Powered")
+    
+    # API Key Status Check
+    with st.expander("🔑 API Key Configuration", expanded=False):
+        st.markdown("""
+        **Required API Keys:**
+        - **NVIDIA API Key**: Get from [NVIDIA Build Platform](https://build.nvidia.com/) (Free tier available)
+        - **Pinecone API Key**: Get from [Pinecone](https://pinecone.io/) 
+        - **Google Gemini API Key**: Get from [Google AI Studio](https://makersuite.google.com/app/apikey)
+        
+        **Set as environment variables or Streamlit secrets:**
+        ```
+        NVIDIA_API_KEY=your_nvidia_key_here
+        PINECONE_API_KEY=your_pinecone_key_here
+        GEMINI_API_KEY=your_gemini_key_here
+        ```
+        """)
+        
+        # Check API key availability
+        nvidia_key = st.secrets.get("NVIDIA_API_KEY") or os.getenv("NVIDIA_API_KEY")
+        pinecone_key = st.secrets.get("PINECONE_API_KEY") or os.getenv("PINECONE_API_KEY") 
+        gemini_key = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.write("🟢 NVIDIA API" if nvidia_key else "🔴 NVIDIA API")
+        with col2:
+            st.write("🟢 Pinecone API" if pinecone_key else "🔴 Pinecone API")
+        with col3:
+            st.write("🟢 Gemini API" if gemini_key else "🔴 Gemini API")
+    
     st.markdown("---")
     
     # Sidebar for parsing and indexing controls
