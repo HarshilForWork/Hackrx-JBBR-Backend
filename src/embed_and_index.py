@@ -71,6 +71,37 @@ def generate_embeddings_llama(texts: List[str], api_key: Optional[str] = None) -
         else:
             return [list(map(float, emb)) for emb in embeddings_raw]
 
+def generate_query_embedding_nvidia(query: str, api_key: Optional[str] = None) -> List[float]:
+    """
+    Generate embedding for a single query using NVIDIA-compatible embedding model.
+    
+    Args:
+        query: Query text to embed
+        api_key: NVIDIA API key (optional, for future use)
+        
+    Returns:
+        Embedding vector for the query
+    """
+    try:
+        # For now, use SentenceTransformer (same as document embeddings for consistency)
+        from sentence_transformers import SentenceTransformer
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+        embedding_raw = model.encode([query])
+        
+        # Convert to list safely
+        if hasattr(embedding_raw, 'tolist'):
+            embedding = embedding_raw.tolist()[0]
+        else:
+            embedding = list(map(float, embedding_raw[0]))
+        
+        print(f"✅ Generated query embedding using a compatible model (384 dimensions)")
+        return embedding
+        
+    except Exception as e:
+        print(f"❌ Error generating query embedding: {e}")
+        # Return zero vector as fallback (384 dimensions for all-MiniLM-L6-v2)
+        return [0.0] * 384
+
 def clear_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index'):
     """
     Clear all vectors from a Pinecone index.

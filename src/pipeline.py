@@ -1,6 +1,7 @@
 """
 Single-click pipeline for complete document processing.
 Combines parsing, chunking, embedding, and indexing into one streamlined operation.
+Also provides query functionality for the complete RAG system.
 """
 
 import os
@@ -34,6 +35,36 @@ class DocumentPipeline:
         self.config = config or PipelineConfig()
         self.registry = DocumentRegistry()
     
+    def _create_error_result(self, error_msg: str, step: str, start_time: float) -> Dict[str, Any]:
+        """Create standardized error result with all required fields."""
+        total_time = time.time() - start_time
+        return {
+            "success": False,
+            "error": error_msg,
+            "step": step,
+            "statistics": {
+                "total_files": 0,
+                "processed_files": 0,
+                "skipped_files": 0,
+                "total_documents": 0,
+                "total_chunks": 0,
+                "indexed_vectors": 0,
+                "total_characters": 0,
+                "processing_speed": "N/A",
+            },
+            "timing": {
+                "parsing_time": "0.00s",
+                "chunking_time": "0.00s", 
+                "indexing_time": "0.00s",
+                "total_time": f"{total_time:.2f}s"
+            },
+            "files": {
+                "processed": [],
+                "skipped": []
+            },
+            "processing_time": total_time
+        }
+    
     async def process_all_documents(self, 
                             docs_dir: str = "docs", 
                             pinecone_api_key: Optional[str] = None,
@@ -54,28 +85,28 @@ class DocumentPipeline:
         try:
             # Step 1: Validate inputs
             if not os.path.exists(docs_dir):
-                return {
-                    "success": False,
-                    "error": f"Directory '{docs_dir}' not found!",
-                    "step": "validation"
-                }
+                return self._create_error_result(
+                    f"Directory '{docs_dir}' not found!", 
+                    "validation", 
+                    start_time
+                )
             
             if not pinecone_api_key:
-                return {
-                    "success": False,
-                    "error": "Pinecone API key is required!",
-                    "step": "validation"
-                }
+                return self._create_error_result(
+                    "Pinecone API key is required!", 
+                    "validation", 
+                    start_time
+                )
             
             # Step 2: Find PDF files
             pdf_files = [f for f in os.listdir(docs_dir) if f.lower().endswith('.pdf')]
             
             if not pdf_files:
-                return {
-                    "success": False,
-                    "error": f"No PDF files found in '{docs_dir}' directory!",
-                    "step": "file_discovery"
-                }
+                return self._create_error_result(
+                    f"No PDF files found in '{docs_dir}' directory!", 
+                    "file_discovery", 
+                    start_time
+                )
             
             # Step 3: Filter files based on registry (unless force reprocess)
             files_to_process = []
@@ -99,7 +130,26 @@ class DocumentPipeline:
                 return {
                     "success": True,
                     "message": "All documents already processed. Use force_reprocess=True to reprocess.",
-                    "skipped_files": skipped_files,
+                    "statistics": {
+                        "total_files": len(pdf_files),
+                        "processed_files": 0,
+                        "skipped_files": len(skipped_files),
+                        "total_documents": 0,
+                        "total_chunks": 0,
+                        "indexed_vectors": 0,
+                        "total_characters": 0,
+                        "processing_speed": "N/A",
+                    },
+                    "timing": {
+                        "parsing_time": "0.00s",
+                        "chunking_time": "0.00s", 
+                        "indexing_time": "0.00s",
+                        "total_time": f"{time.time() - start_time:.2f}s"
+                    },
+                    "files": {
+                        "processed": [],
+                        "skipped": skipped_files
+                    },
                     "step": "registry_check",
                     "processing_time": time.time() - start_time
                 }
@@ -109,11 +159,11 @@ class DocumentPipeline:
             parsed_docs = await self._parse_documents_async(files_to_process)
             
             if not parsed_docs:
-                return {
-                    "success": False,
-                    "error": "Failed to parse any documents!",
-                    "step": "parsing"
-                }
+                return self._create_error_result(
+                    "Failed to parse any documents!", 
+                    "parsing", 
+                    start_time
+                )
             
             parsing_time = time.time() - parsing_start
             
@@ -125,11 +175,11 @@ class DocumentPipeline:
             chunking_time = time.time() - chunking_start
             
             if not all_chunks:
-                return {
-                    "success": False,
-                    "error": "Failed to create any chunks!",
-                    "step": "chunking"
-                }
+                return self._create_error_result(
+                    "Failed to create any chunks!", 
+                    "chunking", 
+                    start_time
+                )
             
             # Step 6: Generate embeddings and index (async)
             indexing_start = time.time()
@@ -139,11 +189,11 @@ class DocumentPipeline:
             indexing_time = time.time() - indexing_start
             
             if not indexing_result.get("success", False):
-                return {
-                    "success": False,
-                    "error": f"Indexing failed: {indexing_result.get('error', 'Unknown error')}",
-                    "step": "indexing"
-                }
+                return self._create_error_result(
+                    f"Indexing failed: {indexing_result.get('error', 'Unknown error')}", 
+                    "indexing", 
+                    start_time
+                )
             
             # Step 7: Update registry for processed files (async)
             await self._update_registry_async(files_to_process, all_chunks)
@@ -178,12 +228,11 @@ class DocumentPipeline:
             }
             
         except Exception as e:
-            return {
-                "success": False,
-                "error": f"Pipeline error: {str(e)}",
-                "step": "unknown",
-                "processing_time": time.time() - start_time
-            }
+            return self._create_error_result(
+                f"Pipeline error: {str(e)}", 
+                "unknown", 
+                start_time
+            )
 
     async def _parse_documents_async(self, files_to_process: List[str]) -> List[Dict]:
         """Async wrapper for document parsing."""
@@ -324,33 +373,33 @@ async def streamlit_single_click_pipeline(pinecone_api_key: Optional[str] = None
     )
     
     # Add user-friendly messages
-    if result["success"]:
-        stats = result["statistics"]
-        timing = result["timing"]
+    if result.get("success", False):
+        stats = result.get("statistics", {})
+        timing = result.get("timing", {})
         
         result["user_message"] = f"""
 🎉 **Pipeline Complete!**
 
 📊 **Processing Summary:**
-- Processed {stats['processed_files']} PDF files
-- Created {stats['total_chunks']} semantic chunks
-- Indexed {stats['indexed_vectors']} vectors in Pinecone
-- Processing speed: {stats['processing_speed']}
+- Processed {stats.get('processed_files', 0)} PDF files
+- Created {stats.get('total_chunks', 0)} semantic chunks
+- Indexed {stats.get('indexed_vectors', 0)} vectors in Pinecone
+- Processing speed: {stats.get('processing_speed', 'N/A')}
 
 ⏱️ **Timing:**
-- Parsing: {timing['parsing_time']}
-- Chunking: {timing['chunking_time']}
-- Indexing: {timing['indexing_time']}
-- **Total: {timing['total_time']}**
+- Parsing: {timing.get('parsing_time', 'N/A')}
+- Chunking: {timing.get('chunking_time', 'N/A')}
+- Indexing: {timing.get('indexing_time', 'N/A')}
+- **Total: {timing.get('total_time', 'N/A')}**
 
 ✅ Your document search system is ready!
         """.strip()
         
-        if stats['skipped_files'] > 0:
-            result["user_message"] += f"\n\n📋 Skipped {stats['skipped_files']} already processed files."
+        if stats.get('skipped_files', 0) > 0:
+            result["user_message"] += f"\n\n📋 Skipped {stats.get('skipped_files', 0)} already processed files."
     
     else:
-        result["user_message"] = f"❌ **Pipeline Failed**\n\nError in {result.get('step', 'unknown')} step:\n{result['error']}"
+        result["user_message"] = f"❌ **Pipeline Failed**\n\nError in {result.get('step', 'unknown')} step:\n{result.get('error', 'Unknown error')}"
     
     return result
 
@@ -394,3 +443,72 @@ def streamlit_single_click_pipeline_sync(pinecone_api_key: Optional[str] = None,
             loop.close()
         except:
             pass
+
+
+# Query functionality for complete RAG system
+def query_documents_sync(query: str, 
+                        pinecone_api_key: Optional[str] = None,
+                        gemini_api_key: Optional[str] = None,
+                        index_name: str = "policy-index") -> Dict[str, Any]:
+    """
+    Synchronous function to query processed documents.
+    
+    Args:
+        query: The question to ask
+        pinecone_api_key: Pinecone API key for vector search
+        gemini_api_key: Gemini API key for LLM processing (optional, uses fallback if None)
+        index_name: Name of the Pinecone index to query
+        
+    Returns:
+        Dictionary with query results and analysis
+        
+    Example:
+        >>> result = query_documents_sync(
+        ...     "What is covered under accidental death benefit?",
+        ...     pinecone_api_key="your-pinecone-key",
+        ...     gemini_api_key="your-gemini-key"
+        ... )
+        >>> print(result["evaluation"]["decision"])  # covered/not_covered/partial
+    """
+    try:
+        from .query_processor import QueryProcessor
+        
+        # Validate inputs
+        if not query or not query.strip():
+            return {
+                "success": False,
+                "error": "Query cannot be empty",
+                "query": query
+            }
+        
+        if not pinecone_api_key:
+            return {
+                "success": False,
+                "error": "Pinecone API key is required for querying",
+                "query": query
+            }
+        
+        # Use dummy key if Gemini API key not provided (fallback mode)
+        if not gemini_api_key:
+            gemini_api_key = "dummy"
+        
+        # Initialize query processor
+        processor = QueryProcessor(
+            pinecone_api_key=pinecone_api_key,
+            gemini_api_key=gemini_api_key,
+            index_name=index_name
+        )
+        
+        # Process query
+        result = processor.process_query(query.strip())
+        result["success"] = result.get("status") == "success"
+        
+        return result
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": f"Query processing error: {str(e)}",
+            "query": query,
+            "status": "error"
+        }
