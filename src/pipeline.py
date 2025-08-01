@@ -446,10 +446,13 @@ def streamlit_single_click_pipeline_sync(pinecone_api_key: Optional[str] = None,
 
 
 # Query functionality for complete RAG system
-def query_documents_sync(query: str, 
-                        pinecone_api_key: Optional[str] = None,
-                        gemini_api_key: Optional[str] = None,
-                        index_name: str = "policy-index") -> Dict[str, Any]:
+def query_documents_sync(
+    query: str, 
+    pinecone_api_key: Optional[str] = None,
+    gemini_api_key: Optional[str] = None,
+    index_name: str = "policy-index",
+    query_embedding: Optional[list] = None  # <-- Add this line
+) -> Dict[str, Any]:
     """
     Synchronous function to query processed documents.
     
@@ -472,7 +475,7 @@ def query_documents_sync(query: str,
     """
     try:
         from .query_processor import QueryProcessor
-        
+
         # Validate inputs
         if not query or not query.strip():
             return {
@@ -480,31 +483,31 @@ def query_documents_sync(query: str,
                 "error": "Query cannot be empty",
                 "query": query
             }
-        
+
         if not pinecone_api_key:
             return {
                 "success": False,
                 "error": "Pinecone API key is required for querying",
                 "query": query
             }
-        
+
         # Use dummy key if Gemini API key not provided (fallback mode)
         if not gemini_api_key:
             gemini_api_key = "dummy"
-        
+
         # Initialize query processor
         processor = QueryProcessor(
             pinecone_api_key=pinecone_api_key,
             gemini_api_key=gemini_api_key,
             index_name=index_name
         )
-        
-        # Process query
-        result = processor.process_query(query.strip())
+
+        # Process query, now supports query_embedding
+        result = processor.process_query(query.strip(), query_embedding=query_embedding)
         result["success"] = result.get("status") == "success"
-        
+
         return result
-        
+
     except Exception as e:
         return {
             "success": False,

@@ -335,7 +335,7 @@ class QueryProcessor:
         except:
             return True  # Default to reranking if calculation fails
 
-    def semantic_search_with_similarity(self, query: str, top_k: int = 3) -> List[Dict]:
+    def semantic_search_with_similarity(self, query: str, top_k: int = 3, query_embedding: Optional[list] = None) -> List[Dict]:
         """
         Simple semantic search using only vector similarity scores:
         1. Retrieve top candidates using vector similarity 
@@ -344,18 +344,19 @@ class QueryProcessor:
         if not self.index:
             print("❌ Pinecone index not available")
             return []
-        
         try:
-            # Retrieve candidates using vector similarity
+            # Use provided query_embedding if available, else encode
+            if query_embedding is not None:
+                print("🔍 Using precomputed query embedding for search...")
+                embedding = query_embedding
+            else:
+                embedding = self._encode_query(query)
             print(f"🔍 Retrieving top {top_k} candidates using semantic similarity...")
-            query_embedding = self._encode_query(query)
-            
             response = self.index.query(
-                vector=query_embedding,
+                vector=embedding,
                 top_k=top_k,
                 include_metadata=True
             )
-            
             # Format results (already sorted by similarity score)
             candidates = []
             for match in response.matches:
@@ -363,42 +364,32 @@ class QueryProcessor:
                     "id": match.id,
                     "vector_score": match.score,
                     "text": match.metadata.get("text", ""),
-                    "source_document": match.metadata.get("document_name", "Unknown"),
-                    "document_name": match.metadata.get("document_name", "Unknown"),
+                    "document_name": match.metadata.get("document_name", ""),
                     "page_number": match.metadata.get("page_number", 1),
                     "chunk_index": match.metadata.get("chunk_index", 0)
                 })
-            
             if not candidates:
                 print("⚠️ No candidates found")
                 return []
-            
             print(f"✅ Retrieved {len(candidates)} candidates")
-            
             # Use similarity scores as final scores (no reranking)
             for candidate in candidates:
                 candidate["final_score"] = candidate["vector_score"]
-                candidate["score"] = candidate["vector_score"]  # Add score field for app compatibility
-            
             # Context expansion
             print(f"📄 Context expansion for {len(candidates)} chunks...")
             expanded_results = self._expand_context(candidates)
-            
             # Add ranking metadata
             for i, result in enumerate(expanded_results):
                 result["final_rank"] = i + 1
                 result["ranking_method"] = "similarity_only"
-            
             self._print_ranking_summary(query, expanded_results)
-            
             return expanded_results
-            
         except Exception as e:
             print(f"❌ Search error: {e}")
             import traceback
             traceback.print_exc()
             return []
-    
+
     def _expand_context(self, candidates: List[Dict], context_chars: int = 500) -> List[Dict]:
         """Expand context around selected chunks by retrieving adjacent chunks."""
         expanded_results = []
@@ -586,8 +577,7 @@ class QueryProcessor:
                      "id": m.id,
                      "score": m.score,
                      "text": m.metadata.get("text", ""),
-                     "source_document": m.metadata.get("document_name", "Unknown"),
-                     "document_name": m.metadata.get("document_name", "Unknown"),
+                     "document_name": m.metadata.get("document_name", ""),
                      "page_number": m.metadata.get("page_number", 1)
                  })
              
@@ -632,34 +622,26 @@ class QueryProcessor:
         ])
         
         prompt = f"""
-        You are an insurance claim evaluator. Based on the following context from policy documents, evaluate this claim:
-        
+        You are an insurance policy helper. Based on the following context from policy documents, answer the user's query clearly and concisely in one or two sentences.
+
         QUERY: {query}
-        
+
         EXTRACTED ENTITIES:
         {json.dumps(entities, indent=2)}
-        
+
         RELEVANT POLICY CONTEXT:
         {context}
-        
-        Please provide a decision in this exact JSON format:
+
+        Return your answer as a JSON object with these fields:
+        - answer: string (your concise answer in one or two sentences)
+        - source_chunks: list of document names or chunk indices you used for the answer
+
+        Example:
         {{
-            "decision": "approved" or "rejected" or "needs_review",
-            "amount": number or null,
-            "confidence": 0.0 to 1.0,
-            "justification": "detailed explanation",
-            "relevant_clauses": ["list of specific clauses used"],
-            "reasoning": "step by step reasoning"
+          "answer": "Dental expenses are not covered under this policy."
         }}
-        
-        Consider factors like:
-        - Policy coverage for the procedure
-        - Waiting periods
-        - Geographic coverage
-        - Age restrictions
-        - Pre-existing conditions
-        
-        Only return the JSON, no other text.
+
+        Please answer in plain English, focusing on what the policy says about the query. Do not evaluate or approve claims, just provide helpful information from the policy. Only return the JSON object, nothing else.
         """
         
         # Use robust request method
@@ -691,32 +673,26 @@ class QueryProcessor:
                 "reasoning": "JSON extraction failed"
             }
     
-    def process_query(self, query: str) -> Dict[str, Any]:
+    def process_query(self, query: str, query_embedding: Optional[list] = None) -> Dict[str, Any]:
         """Complete query processing pipeline with optimized hybrid RAG."""
         try:
             # Get API status for debugging
             api_status = self.get_api_status()
-            
-            # Step 1: Extract entities
-            print("🔍 Step 1: Extracting entities...")
-            entities = self.extract_entities(query)
-            
+            # Step 1: (Removed) Extract entities
             # Step 2: Simple semantic search using similarity scores
-            print("🔍 Step 2: Semantic search using similarity scores...")
+            print("🔍 Step 1: Semantic search using similarity scores...")
             search_results = self.semantic_search_with_similarity(
-                query, 
-                top_k=3     # Top 3 results
+                query,
+                top_k=3,  # Top 3 results
+                query_embedding=query_embedding
             )
-            
             # Fallback to simple search if search fails completely
             if not search_results:
                 print("⚠️ Similarity search failed, trying simple fallback...")
                 search_results = self.semantic_search(query, top_k=5)
-            
-            # Step 3: Evaluate claim
-            print("🔍 Step 3: Evaluating claim with semantic context...")
-            evaluation = self.evaluate_claim(query, entities, search_results)
-            
+            # Step 3: Evaluate claim (now just LLM answer)
+            print("🔍 Step 2: Evaluating with semantic context...")
+            evaluation = self.evaluate_claim(query, {}, search_results)
             # Add search method information
             evaluation['search_method'] = 'semantic_similarity_only'
             evaluation['reranker_type'] = 'none'
@@ -725,17 +701,14 @@ class QueryProcessor:
             evaluation['reranking_enabled'] = False  # Reranking removed
             evaluation['total_candidates_retrieved'] = 3 if search_results else 0
             evaluation['final_chunks_used'] = len(search_results)
-            
             # Add performance notes
             if not self.llm:
                 evaluation['note'] = "❌ Analysis performed without LLM (required for full functionality)"
-            
             evaluation['performance_note'] = "⚡ Using simple semantic similarity search for fast results"
-            
             # Combine all results
             result = {
                 "query": query,
-                "entities": entities,
+                # 'entities' removed
                 "search_results": search_results,
                 "evaluation": evaluation,
                 "api_status": api_status,
@@ -751,7 +724,7 @@ class QueryProcessor:
             
             return {
                 "query": query,
-                "entities": {},
+                # 'entities' removed
                 "search_results": [],
                 "evaluation": {
                     "decision": "error",
