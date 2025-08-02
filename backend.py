@@ -1,31 +1,61 @@
 # backend.py
-from fastapi import FastAPI, File, UploadFile, Form, Request
+from fastapi import FastAPI, File, UploadFile, Form, Request, Header, HTTPException, Depends, Security
 from fastapi.responses import JSONResponse
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi.middleware.cors import CORSMiddleware
 import tempfile
 import os
 import requests
 from dotenv import load_dotenv
 from src.pipeline import process_all_documents_pipeline, query_documents_sync
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 import time
 from sentence_transformers import SentenceTransformer
 import asyncio
 
 load_dotenv()
-app = FastAPI()
-model = SentenceTransformer('all-MiniLM-L6-v2')
-class QueryPDFRequest(BaseModel):
-    pdf_url: str
-    queries: List[str]
+app = FastAPI(title="HackRx Insurance API", description="API for querying insurance PDFs")
 
-@app.post("/query_pdf")
-async def query_pdf(input: QueryPDFRequest):
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Hardcoded API token - keep it simple
+API_TOKEN = "552a90e441d8b2a0c195b5425dd982e0e71292568a08d2facf1ebc9434c1bcd0"
+
+# Security scheme for Bearer token authentication
+security = HTTPBearer()
+
+class QueryPDFRequest(BaseModel):
+    documents: str  # URL to the PDF
+    questions: List[str]  # List of questions to answer
+
+def verify_token(credentials: HTTPAuthorizationCredentials = Security(security)):
+    """Verify the token provided in the authorization header."""
+    if credentials.scheme != "Bearer" or credentials.credentials != API_TOKEN:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid authentication credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    return credentials.credentials
+
+@app.post("/hackrx/run")
+async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
+    total_start_time = time.time()
     timings = {}
-    pdf_url = input.pdf_url
-    queries = input.queries
+    pdf_url = input.documents  # Changed from pdf_url to documents
+    queries = input.questions  # Changed from queries to questions
     if not pdf_url or not queries or not isinstance(queries, list):
-        return JSONResponse({"error": "pdf_url and queries (list) are required"}, status_code=400)
+        return JSONResponse({"error": "documents URL and questions (list) are required"}, status_code=400)
 
     # Download PDF
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -66,7 +96,7 @@ async def query_pdf(input: QueryPDFRequest):
         if not result.get("success"):
             return JSONResponse({"error": result.get("error", "Pipeline failed")}, status_code=500)
 
-        # Query the indexed document for each query
+        # Process all queries concurrently
         gemini_key = os.getenv("GEMINI_API_KEY")
         answers = []
         query_times = []
@@ -86,8 +116,16 @@ async def query_pdf(input: QueryPDFRequest):
             answers.append(answer)
             query_times.append(time.time() - t0)
         timings["queries"] = query_times
+        timings["total_execution_time"] = time.time() - total_start_time
 
-        return JSONResponse({"answers": answers, "timings": timings, "query_embeddings": query_embeddings.tolist()})
+        # Only return answers in the response along with timing information
+        return JSONResponse({
+            "answers": answers,
+            "performance": {
+                "total_time_seconds": timings["total_execution_time"],
+                "avg_query_time_seconds": sum(timings["queries"]) / len(timings["queries"]) if timings["queries"] else 0
+            }
+        })
 
 if __name__ == "__main__":
     import uvicorn

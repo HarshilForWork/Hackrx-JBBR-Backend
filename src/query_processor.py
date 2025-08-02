@@ -299,21 +299,76 @@ class QueryProcessor:
                 "amount": None
             }
     
-    def _prefilter_candidates(self, candidates: List[Dict], query: str, max_candidates: int = 15) -> List[Dict]:
-        """Pre-filtering using semantic scores to reduce reranking workload."""
-        if len(candidates) <= max_candidates:
-            return candidates
+    def _extract_keywords(self, query: str) -> List[str]:
+        """Extract important keywords from the query for hybrid search."""
+        # Remove stop words and special characters
+        import re
+        import string
         
-        print(f"🔍 Pre-filtering from {len(candidates)} to {max_candidates} candidates using semantic scores...")
+        # Common stop words
+        stop_words = {
+            "a", "an", "the", "in", "on", "at", "by", "for", "with", "about", 
+            "against", "between", "into", "through", "during", "before", "after",
+            "above", "below", "to", "from", "up", "down", "is", "am", "are", "was",
+            "were", "be", "been", "being", "have", "has", "had", "having", "do",
+            "does", "did", "doing", "would", "should", "could", "ought", "i'm",
+            "you're", "he's", "she's", "it's", "we're", "they're", "i've", "you've",
+            "we've", "they've", "i'd", "you'd", "he'd", "she'd", "we'd", "they'd",
+            "i'll", "you'll", "he'll", "she'll", "we'll", "they'll", "isn't", "aren't",
+            "wasn't", "weren't", "hasn't", "haven't", "hadn't", "doesn't", "don't",
+            "didn't", "won't", "wouldn't", "shan't", "shouldn't", "can't", "cannot",
+            "couldn't", "mustn't", "let's", "that's", "who's", "what's", "here's",
+            "there's", "when's", "where's", "why's", "how's", "of", "this", "that",
+            "these", "those", "is", "are", "will", "be"
+        }
         
-        # Sort by semantic scores (vector_score)
-        candidates.sort(key=lambda x: x.get("vector_score", 0.0), reverse=True)
+        # Clean the query
+        query = query.lower()
+        # Remove punctuation
+        query = re.sub(f'[{string.punctuation}]', ' ', query)
+        # Split into words
+        words = query.split()
+        # Filter out stop words and single-character words
+        keywords = [word for word in words if word not in stop_words and len(word) > 2]
         
-        # Take top candidates
-        filtered = candidates[:max_candidates]
+        # Add any numbers as they are likely important
+        numbers = re.findall(r'\d+', query)
+        keywords.extend(numbers)
         
-        print(f"✅ Pre-filtered to top {len(filtered)} candidates using semantic scores")
-        return filtered
+        # Deduplicate
+        keywords = list(set(keywords))
+        
+        # Take the most important keywords (limit to avoid too restrictive filtering)
+        if len(keywords) > 5:
+            keywords = keywords[:5]
+            
+        return keywords
+        
+    def _calculate_hybrid_score(self, candidate: Dict, keywords: List[str]) -> float:
+        """Calculate a hybrid score based on vector similarity and keyword presence."""
+        # Start with vector similarity score (typically 0-1)
+        score = candidate.get("vector_score", 0.0)
+        
+        if not keywords:
+            return score
+            
+        # Get text from candidate
+        text = candidate.get("text", "").lower()
+        
+        # Count keywords present in the text
+        keyword_count = sum(1 for kw in keywords if kw.lower() in text)
+        
+        # Boost score based on keyword matches (0.05 boost per keyword match)
+        keyword_boost = min(0.3, keyword_count * 0.05)  # Cap at 0.3 to avoid dominating vector score
+        
+        # Combine scores
+        hybrid_score = score + keyword_boost
+        
+        # Add debug info
+        candidate["keyword_matches"] = keyword_count
+        candidate["keyword_boost"] = keyword_boost
+        
+        return hybrid_score
 
     def _should_rerank(self, candidates: List[Dict], final_k: int) -> bool:
         """Decide if reranking is beneficial based on score distribution."""
@@ -337,9 +392,10 @@ class QueryProcessor:
 
     def semantic_search_with_similarity(self, query: str, top_k: int = 3, query_embedding: Optional[list] = None) -> List[Dict]:
         """
-        Simple semantic search using only vector similarity scores:
+        Hybrid search using vector similarity and keyword matching:
         1. Retrieve top candidates using vector similarity 
-        2. Return top results sorted by similarity scores with context expansion
+        2. Boost results that contain keywords from the query (post-retrieval)
+        3. Return top results sorted by combined scores with context expansion
         """
         if not self.index:
             print("❌ Pinecone index not available")
@@ -351,12 +407,24 @@ class QueryProcessor:
                 embedding = query_embedding
             else:
                 embedding = self._encode_query(query)
-            print(f"🔍 Retrieving top {top_k} candidates using semantic similarity...")
+                
+            print(f"🔍 Retrieving top {top_k} candidates using vector search...")
+            
+            # Extract keywords for hybrid search (post-retrieval)
+            keywords = self._extract_keywords(query)
+            if keywords:
+                print(f"🔍 Will apply keyword boosting after retrieval: {keywords}")
+            
+            # Get more candidates for post-filtering
+            retrieve_k = min(top_k * 2, 20)  # Get more results but cap at 20
+            
+            # First retrieve with vector search only
             response = self.index.query(
                 vector=embedding,
-                top_k=top_k,
+                top_k=retrieve_k,
                 include_metadata=True
             )
+            
             # Format results (already sorted by similarity score)
             candidates = []
             for match in response.matches:
@@ -368,20 +436,44 @@ class QueryProcessor:
                     "page_number": match.metadata.get("page_number", 1),
                     "chunk_index": match.metadata.get("chunk_index", 0)
                 })
+            
+        
+                
             if not candidates:
                 print("⚠️ No candidates found")
                 return []
-            print(f"✅ Retrieved {len(candidates)} candidates")
-            # Use similarity scores as final scores (no reranking)
-            for candidate in candidates:
-                candidate["final_score"] = candidate["vector_score"]
+                
+            print(f"✅ Retrieved {len(candidates)} candidates with vector search")
+            
+            # Apply hybrid scoring that combines vector similarity with keyword matching
+            if keywords:
+                print("🔍 Applying hybrid scoring with keyword boosting...")
+                for candidate in candidates:
+                    hybrid_score = self._calculate_hybrid_score(candidate, keywords)
+                    candidate["hybrid_score"] = hybrid_score
+                    candidate["final_score"] = hybrid_score
+                    
+                # Re-sort based on hybrid scores
+                candidates.sort(key=lambda x: x.get("hybrid_score", 0.0), reverse=True)
+                print(f"✅ Re-ranked results using hybrid scoring (vector + keyword boost)")
+            else:
+                # Use similarity scores as final scores (no hybrid scoring)
+                for candidate in candidates:
+                    candidate["final_score"] = candidate["vector_score"]
+                print("ℹ️ Using pure vector similarity scores (no keywords found)")
+            
+            # Take top-k after hybrid scoring
+            candidates = candidates[:top_k]
+            
             # Context expansion
             print(f"📄 Context expansion for {len(candidates)} chunks...")
             expanded_results = self._expand_context(candidates)
+            
             # Add ranking metadata
             for i, result in enumerate(expanded_results):
                 result["final_rank"] = i + 1
-                result["ranking_method"] = "similarity_only"
+                result["ranking_method"] = "hybrid_post_retrieval" if keywords else "vector_similarity"
+                
             self._print_ranking_summary(query, expanded_results)
             return expanded_results
         except Exception as e:
@@ -679,32 +771,70 @@ class QueryProcessor:
             # Get API status for debugging
             api_status = self.get_api_status()
             # Step 1: (Removed) Extract entities
-            # Step 2: Simple semantic search using similarity scores
-            print("🔍 Step 1: Semantic search using similarity scores...")
-            search_results = self.semantic_search_with_similarity(
-                query,
-                top_k=3,  # Top 3 results
-                query_embedding=query_embedding
-            )
-            # Fallback to simple search if search fails completely
-            if not search_results:
-                print("⚠️ Similarity search failed, trying simple fallback...")
+            # Step 2: Hybrid search using post-retrieval keyword boosting
+            print("🔍 Step 1: Performing vector search with post-retrieval keyword boosting...")
+            try:
+                # Modified semantic search without filter to avoid $contains error
+                # Use provided query_embedding if available, else encode
+                if query_embedding is not None:
+                    print("🔍 Using precomputed query embedding for search...")
+                    embedding = query_embedding
+                else:
+                    embedding = self._encode_query(query)
+                
+                # Get top candidates using vector search
+                response = self.index.query(
+                    vector=embedding,
+                    top_k=20,  # Get more for post-filtering
+                    include_metadata=True
+                )
+                
+                # Format results (already sorted by similarity score)
+                search_results = []
+                for match in response.matches:
+                    search_results.append({
+                        "id": match.id,
+                        "score": match.score,
+                        "text": match.metadata.get("text", ""),
+                        "document_name": match.metadata.get("document_name", ""),
+                        "page_number": match.metadata.get("page_number", 1)
+                    })
+                
+                # Extract keywords for post-retrieval boosting
+                keywords = self._extract_keywords(query)
+                if keywords:
+                    print(f"🔍 Applying keyword boosting: {keywords}")
+                    # Boost scores for results containing keywords
+                    for result in search_results:
+                        text = result.get("text", "").lower()
+                        keyword_matches = sum(1 for kw in keywords if kw.lower() in text)
+                        keyword_boost = min(0.3, keyword_matches * 0.05)
+                        result["hybrid_score"] = result["score"] + keyword_boost
+                    
+                    # Re-sort based on hybrid scores
+                    search_results.sort(key=lambda x: x.get("hybrid_score", 0.0), reverse=True)
+                
+                # Limit to top 10
+                search_results = search_results[:10]
+            except Exception as e:
+                print(f"❌ Hybrid search error: {e}")
+                # Fall back to simple search
                 search_results = self.semantic_search(query, top_k=5)
             # Step 3: Evaluate claim (now just LLM answer)
             print("🔍 Step 2: Evaluating with semantic context...")
             evaluation = self.evaluate_claim(query, {}, search_results)
             # Add search method information
-            evaluation['search_method'] = 'semantic_similarity_only'
+            evaluation['search_method'] = 'hybrid_post_retrieval'
             evaluation['reranker_type'] = 'none'
             evaluation['reranker_available'] = False
-            evaluation['hybrid_search_enabled'] = False  # TF-IDF removed
+            evaluation['hybrid_search_enabled'] = True  # Hybrid search enabled
             evaluation['reranking_enabled'] = False  # Reranking removed
-            evaluation['total_candidates_retrieved'] = 3 if search_results else 0
+            evaluation['total_candidates_retrieved'] = len(search_results) if search_results else 0
             evaluation['final_chunks_used'] = len(search_results)
             # Add performance notes
             if not self.llm:
                 evaluation['note'] = "❌ Analysis performed without LLM (required for full functionality)"
-            evaluation['performance_note'] = "⚡ Using simple semantic similarity search for fast results"
+            evaluation['performance_note'] = "⚡ Using post-retrieval keyword boosting for improved accuracy"
             # Combine all results
             result = {
                 "query": query,
