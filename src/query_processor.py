@@ -72,9 +72,9 @@ class QueryProcessor:
                 genai.configure(api_key=gemini_api_key)
                 # Try different models based on availability
                 model_options = [
-                    'gemini-1.5-flash',  # More available for students
+                    'gemini-2.5-flash',  # More available for students
                     'gemini-pro',        # Standard model
-                    'gemini-1.5-pro'     # Premium model (might be limited)
+                    'gemini-2.5-pro'     # Premium model (might be limited)
                 ]
                 
                 self.llm = None

@@ -71,11 +71,12 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             return JSONResponse({"error": f"Failed to download PDF: {str(e)}"}, status_code=400)
 
         # Embed queries and process PDF concurrently
-        async def embed_queries():
+        async def embed_single_query(idx, query):
             t0 = time.time()
-            embeddings = model.encode(queries, show_progress_bar=False)
-            timings["query_embedding"] = time.time() - t0
-            return embeddings
+            # Encode one query at a time
+            embedding = model.encode(query, show_progress_bar=False)
+            embedding_time = time.time() - t0
+            return idx, embedding, embedding_time
 
         async def process_pdf():
             pinecone_key = os.getenv("PINECONE_API_KEY")
@@ -87,46 +88,115 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             )
             timings["process_and_index"] = time.time() - t0
             return result, pinecone_key
-
-        # Run both tasks concurrently
-        query_embed_task = asyncio.create_task(embed_queries())
+            
+        # Create embedding tasks for all queries
+        embedding_tasks = []
+        for idx, query in enumerate(queries):
+            task = embed_single_query(idx, query)
+            embedding_tasks.append(task)
+            
+        # Process PDF in parallel with embeddings
         pdf_task = asyncio.create_task(process_pdf())
-        query_embeddings, (result, pinecone_key) = await asyncio.gather(query_embed_task, pdf_task)
+        
+        # Gather embedding results
+        embedding_results = await asyncio.gather(*embedding_tasks)
+        
+        # Process embedding results and maintain order
+        query_embeddings = [None] * len(queries)
+        query_embedding_times = [0] * len(queries)
+        for idx, embedding, time_taken in embedding_results:
+            query_embeddings[idx] = embedding
+            query_embedding_times[idx] = time_taken
+            
+        # Wait for PDF processing to complete
+        result, pinecone_key = await pdf_task
+        
+        # Store embedding timing information
+        timings["query_embedding_individual"] = query_embedding_times
+        timings["query_embedding"] = sum(query_embedding_times)
 
         if not result.get("success"):
             return JSONResponse({"error": result.get("error", "Pipeline failed")}, status_code=500)
 
-        # Process all queries concurrently
+        # Process all queries together and ensure answers are in original order
         gemini_key = os.getenv("GEMINI_API_KEY")
-        answers = []
-        query_times = []
-        for idx, query in enumerate(queries):
-            t0 = time.time()
-            embedding = query_embeddings[idx]
+        answers = [None] * len(queries)  # Pre-allocate list to maintain order
+        query_times = [0] * len(queries)  # Pre-allocate timing list
+        
+        # Create a QueryProcessor once for all queries
+        t0 = time.time()
+        from src.query_processor import QueryProcessor
+        processor = QueryProcessor(
+            pinecone_api_key=pinecone_key,
+            gemini_api_key=gemini_key,
+            index_name="policy-index"
+        )
+        timings["processor_init"] = time.time() - t0
+        
+        # Process queries concurrently with asyncio
+        async def process_single_query(idx, query, embedding):
+            t_query_start = time.time()
             if hasattr(embedding, 'tolist'):
                 embedding = embedding.tolist()
-            verdict = query_documents_sync(
+            
+            # Process individual query using processor
+            verdict = processor.process_query(
                 query=query,
-                pinecone_api_key=pinecone_key,
-                gemini_api_key=gemini_key,
-                index_name="policy-index",
-                query_embedding=embedding  # Pass the precomputed embedding
+                query_embedding=embedding
             )
+            
+            # Extract answer and store at correct index to maintain order
             answer = verdict.get("evaluation", {}).get("answer")
-            answers.append(answer)
-            query_times.append(time.time() - t0)
+            answers[idx] = answer
+            query_times[idx] = time.time() - t_query_start
+        
+        # Create tasks for all queries
+        query_tasks = []
+        for idx, query in enumerate(queries):
+            task = process_single_query(idx, query, query_embeddings[idx])
+            query_tasks.append(task)
+        
+        # Run all query tasks concurrently
+        await asyncio.gather(*query_tasks)
+            
         timings["queries"] = query_times
         timings["total_execution_time"] = time.time() - total_start_time
 
-        # Only return answers in the response along with timing information
+        # Create response with individual query times
+        query_timing_details = []
+        for idx, (query, time_taken) in enumerate(zip(queries, query_times)):
+            query_timing_details.append({
+                "query_index": idx,
+                "query": query[:50] + "..." if len(query) > 50 else query,  # Truncate long queries
+                "time_seconds": time_taken
+            })
+
+        # Calculate combined time for all queries
+        total_query_time = sum(query_times)
+
+        # Collect all timing metrics for each step
+        all_timings = {
+            "download_pdf": timings.get("download", 0),
+            "query_embedding": {
+                "total": timings.get("query_embedding", 0),
+                "individual": timings.get("query_embedding_individual", [])
+            },
+            "pdf_processing_and_indexing": timings.get("process_and_index", 0),
+            "query_processor_initialization": timings.get("processor_init", 0),
+            "query_processing": {
+                "total": total_query_time,
+                "average": sum(query_times) / len(query_times) if query_times else 0,
+                "individual": query_times
+            },
+            "total_execution_time": timings.get("total_execution_time", 0)
+        }
+
+        # Return answers and detailed timing information
         return JSONResponse({
             "answers": answers,
-            "performance": {
-                "total_time_seconds": timings["total_execution_time"],
-                "avg_query_time_seconds": sum(timings["queries"]) / len(timings["queries"]) if timings["queries"] else 0
-            }
+            "all_timings": all_timings
         })
-
+     
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("backend:app", host="0.0.0.0", port=8000, reload=True)
