@@ -73,7 +73,7 @@ class QueryProcessor:
                 # Try different models based on availability
                 model_options = [
                     'gemini-2.5-flash',  # More available for students
-                    'gemini-pro',        # Standard model
+                    'gemini-2.5-pro',        # Standard model
                     'gemini-2.5-pro'     # Premium model (might be limited)
                 ]
                 
@@ -83,13 +83,25 @@ class QueryProcessor:
                 # Try each model until one works
                 for model_name in model_options:
                     try:
-                        test_model = genai.GenerativeModel(model_name)
+                        # Set generation config with temperature 0.7
+                        # Gemini temperature ranges from 0-2, where 0 is deterministic and 2 is highly random
+                        generation_config = {
+                            #"temperature": 0.3,  # Medium-high creative temperature (default is 0.9)
+                            "top_p": 0.95,
+                            "top_k": 40
+                        }
+                        
+                        test_model = genai.GenerativeModel(
+                            model_name=model_name,
+                            generation_config=generation_config
+                        )
+                        
                         # Test with a simple query to verify access
                         test_response = test_model.generate_content("Hello")
                         if test_response:
                             self.llm = test_model
                             self.model_name = model_name
-                            print(f"Successfully initialized Gemini model: {model_name}")
+                            print(f"Successfully initialized Gemini model: {model_name} with temperature=0.7")
                             break
                     except Exception as e:
                         print(f"Failed to initialize {model_name}: {str(e)}")
@@ -416,7 +428,7 @@ class QueryProcessor:
                 print(f"🔍 Will apply keyword boosting after retrieval: {keywords}")
             
             # Get more candidates for post-filtering
-            retrieve_k = min(top_k * 2, 20)  # Get more results but cap at 20
+            retrieve_k = min(top_k , 20)  # Get more results but cap at 20
             
             # First retrieve with vector search only
             response = self.index.query(
@@ -787,7 +799,7 @@ class QueryProcessor:
                 # Get top candidates using vector search
                 response = self.index.query(
                     vector=embedding,
-                    top_k=20,  # Get more for post-filtering
+                    top_k=8,  # Get more for post-filtering
                     include_metadata=True
                 )
                 

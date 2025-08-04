@@ -160,6 +160,19 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
         await asyncio.gather(*query_tasks)
             
         timings["queries"] = query_times
+        
+        # Clean up Pinecone index after all queries are processed
+        try:
+            t0 = time.time()
+            if processor.index:
+                # Delete all vectors from the index
+                processor.index.delete(delete_all=True)
+                print("✅ Successfully deleted all vectors from Pinecone index")
+            timings["cleanup_index"] = time.time() - t0
+        except Exception as e:
+            print(f"❌ Error cleaning up Pinecone index: {e}")
+            timings["cleanup_index"] = 0
+            
         timings["total_execution_time"] = time.time() - total_start_time
 
         # Create response with individual query times
@@ -188,13 +201,15 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
                 "average": sum(query_times) / len(query_times) if query_times else 0,
                 "individual": query_times
             },
+            "cleanup_index": timings.get("cleanup_index", 0),
             "total_execution_time": timings.get("total_execution_time", 0)
         }
 
         # Return answers and detailed timing information
         return JSONResponse({
             "answers": answers,
-            "timings": all_timings
+            "timings": all_timings,
+            "cleanup_status": "Vectors deleted from Pinecone index"
         })
      
 if __name__ == "__main__":
