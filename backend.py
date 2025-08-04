@@ -194,7 +194,7 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
         # Return answers and detailed timing information
         return JSONResponse({
             "answers": answers,
-            "all_timings": all_timings
+            "timings": all_timings
         })
      
 if __name__ == "__main__":

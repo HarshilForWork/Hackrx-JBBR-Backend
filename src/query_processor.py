@@ -714,7 +714,7 @@ class QueryProcessor:
         ])
         
         prompt = f"""
-        You are an insurance policy helper. Based on the following context from policy documents, answer the user's query clearly and concisely in one or two sentences.
+        You are an insurance policy expert. Based on the following context from policy documents, provide a clear and concise answer in 2-3 sentences.
 
         QUERY: {query}
 
@@ -725,15 +725,17 @@ class QueryProcessor:
         {context}
 
         Return your answer as a JSON object with these fields:
-        - answer: string (your concise answer in one or two sentences)
-        - source_chunks: list of document names or chunk indices you used for the answer
+        - answer: string (your concise answer in 2-3 sentences)
+        - source_document: string (the document name you primarily referenced)
 
-        Example:
+        For yes/no questions, format your answer as "Yes, [brief reason]" or "No, [brief reason]"
+
+        Example response for a coverage question:
         {{
-          "answer": "Dental expenses are not covered under this policy."
+          "answer": "Yes, dental implants are covered up to ₹50,000 under your policy's dental care benefit. This is subject to a 6-month waiting period.",
         }}
 
-        Please answer in plain English, focusing on what the policy says about the query. Do not evaluate or approve claims, just provide helpful information from the policy. Only return the JSON object, nothing else.
+        Please provide accurate information based solely on the policy documents provided. Only return the JSON object, nothing else.
         """
         
         # Use robust request method
