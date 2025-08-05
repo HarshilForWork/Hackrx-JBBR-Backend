@@ -8,10 +8,11 @@ import os
 import requests
 from dotenv import load_dotenv
 from src.pipeline import process_all_documents_pipeline, query_documents_sync
+from src.embed_and_index import generate_query_embedding_pinecone
+from pinecone import Pinecone
 from pydantic import BaseModel
 from typing import List, Optional
 import time
-from sentence_transformers import SentenceTransformer
 import asyncio
 
 load_dotenv()
@@ -26,13 +27,11 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# Security scheme for Bearer token authentication
+security = HTTPBearer()
 
 # Hardcoded API token - keep it simple
 API_TOKEN = "552a90e441d8b2a0c195b5425dd982e0e71292568a08d2facf1ebc9434c1bcd0"
-
-# Security scheme for Bearer token authentication
-security = HTTPBearer()
 
 class QueryPDFRequest(BaseModel):
     documents: str  # URL to the PDF
@@ -57,7 +56,7 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
     if not pdf_url or not queries or not isinstance(queries, list):
         return JSONResponse({"error": "documents URL and questions (list) are required"}, status_code=400)
 
-    # Download PDF
+        # Download PDF
     with tempfile.TemporaryDirectory() as tmpdir:
         pdf_path = os.path.join(tmpdir, "input.pdf")
         try:
@@ -70,14 +69,7 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
         except Exception as e:
             return JSONResponse({"error": f"Failed to download PDF: {str(e)}"}, status_code=400)
 
-        # Embed queries and process PDF concurrently
-        async def embed_single_query(idx, query):
-            t0 = time.time()
-            # Encode one query at a time
-            embedding = model.encode(query, show_progress_bar=False)
-            embedding_time = time.time() - t0
-            return idx, embedding, embedding_time
-
+        # Process PDF in a separate task
         async def process_pdf():
             pinecone_key = os.getenv("PINECONE_API_KEY")
             t0 = time.time()
@@ -88,32 +80,88 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             )
             timings["process_and_index"] = time.time() - t0
             return result, pinecone_key
-            
-        # Create embedding tasks for all queries
-        embedding_tasks = []
-        for idx, query in enumerate(queries):
-            task = embed_single_query(idx, query)
-            embedding_tasks.append(task)
-            
-        # Process PDF in parallel with embeddings
+        
+        # Create PDF processing task
         pdf_task = asyncio.create_task(process_pdf())
         
-        # Gather embedding results
-        embedding_results = await asyncio.gather(*embedding_tasks)
-        
-        # Process embedding results and maintain order
-        query_embeddings = [None] * len(queries)
-        query_embedding_times = [0] * len(queries)
-        for idx, embedding, time_taken in embedding_results:
-            query_embeddings[idx] = embedding
-            query_embedding_times[idx] = time_taken
+        # Embed all queries in a batch
+        t0 = time.time()
+        pinecone_key = os.getenv("PINECONE_API_KEY")
+
+        # Process all queries in a single batch using Pinecone
+        try:
+            # Create Pinecone client directly instead of using get_pinecone_client
+            pc = Pinecone(api_key=pinecone_key)
+            model_name = "multilingual-e5-large"
             
+            # Make the API call directly to ensure proper formatting
+            response = pc.inference.embed(
+                model=model_name,
+                inputs=queries,
+                parameters={"input_type": "query", "truncate": "END"}
+            )
+            
+            # Process the response based on its structure
+            if isinstance(response, dict) and 'data' in response:
+                # Standard response format
+                all_embeddings = [item['values'] for item in response['data']]
+            elif isinstance(response, list):
+                # Alternative response format
+                all_embeddings = [item['values'] for item in response]
+            elif hasattr(response, 'data'):
+                # EmbeddingsList object format
+                all_embeddings = [item['values'] for item in response.data]
+            else:
+                # Last resort: try to extract data directly from the response object
+                try:
+                    # Try to convert the response to a dict
+                    response_dict = response.__dict__
+                    if 'data' in response_dict:
+                        all_embeddings = [item['values'] for item in response_dict['data']]
+                    else:
+                        # If we can't figure out the format, just use individual embedding
+                        raise ValueError(f"Cannot extract embeddings from response")
+                except:
+                    raise ValueError(f"Unexpected response format: {type(response)}")
+                
+            query_embedding_time = time.time() - t0
+            
+            # Store embedding timing information
+            query_embedding_times = [query_embedding_time / len(queries)] * len(queries)
+            timings["query_embedding_individual"] = query_embedding_times
+            timings["query_embedding"] = query_embedding_time
+            
+            print(f"✅ Successfully batch-embedded {len(all_embeddings)} queries with {model_name}")
+            
+        except Exception as e:
+            print(f"❌ Error in batch embedding: {e}")
+            print(f"Response type: {type(response) if 'response' in locals() else 'Unknown'}")
+            if 'response' in locals():
+                print(f"Response attributes: {dir(response)}")
+                if hasattr(response, 'data'):
+                    print(f"Response.data type: {type(response.data)}")
+                    if hasattr(response.data, '__len__'):
+                        print(f"Response.data length: {len(response.data)}")
+                        if len(response.data) > 0:
+                            print(f"First item type: {type(response.data[0])}")
+            
+            # We'll use individual embedding as fallback since that's more reliable
+            all_embeddings = []
+            total_embedding_time = 0
+            for query in queries:
+                t_embed = time.time()
+                embedding = generate_query_embedding_pinecone(query, pinecone_key)
+                embed_time = time.time() - t_embed
+                total_embedding_time += embed_time
+                all_embeddings.append(embedding)
+            
+            # Update timing information for fallback case
+            query_embedding_times = [total_embedding_time / len(queries)] * len(queries)
+            timings["query_embedding_individual"] = query_embedding_times
+            timings["query_embedding"] = total_embedding_time
+        
         # Wait for PDF processing to complete
         result, pinecone_key = await pdf_task
-        
-        # Store embedding timing information
-        timings["query_embedding_individual"] = query_embedding_times
-        timings["query_embedding"] = sum(query_embedding_times)
 
         if not result.get("success"):
             return JSONResponse({"error": result.get("error", "Pipeline failed")}, status_code=500)
@@ -123,9 +171,12 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
         answers = [None] * len(queries)  # Pre-allocate list to maintain order
         query_times = [0] * len(queries)  # Pre-allocate timing list
         
-        # Create a QueryProcessor once for all queries
+        # Process queries using the pipeline's query_documents_sync function
         t0 = time.time()
+        from src.pipeline import query_documents_sync
         from src.query_processor import QueryProcessor
+        
+        # Initialize the QueryProcessor for cleanup later
         processor = QueryProcessor(
             pinecone_api_key=pinecone_key,
             gemini_api_key=gemini_key,
@@ -139,21 +190,39 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             if hasattr(embedding, 'tolist'):
                 embedding = embedding.tolist()
             
-            # Process individual query using processor
-            verdict = processor.process_query(
+            # Process individual query using query_documents_sync from pipeline
+            result = query_documents_sync(
                 query=query,
+                pinecone_api_key=pinecone_key,
+                gemini_api_key=gemini_key,
+                index_name="policy-index",
                 query_embedding=embedding
             )
             
-            # Extract answer and store at correct index to maintain order
-            answer = verdict.get("evaluation", {}).get("answer")
-            answers[idx] = answer
+            # Extract important information from the result
+            answer = result.get("evaluation", {}).get("answer")
+            search_results = result.get("search_results", [])
+            evaluation = result.get("evaluation", {})
+            
+            # Create a comprehensive response for this query, preserving the original structure
+            query_response = {
+                "search_results": search_results,
+                "evaluation": evaluation,  # Keep the full evaluation object intact
+                "api_status": result.get("api_status", {}),
+                "status": result.get("status", "success"),
+                "success": result.get("success", True),
+                "query": query
+            }
+            
+            # Store the comprehensive response
+            answers[idx] = query_response
+            
             query_times[idx] = time.time() - t_query_start
         
         # Create tasks for all queries
         query_tasks = []
         for idx, query in enumerate(queries):
-            task = process_single_query(idx, query, query_embeddings[idx])
+            task = process_single_query(idx, query, all_embeddings[idx])
             query_tasks.append(task)
         
         # Run all query tasks concurrently
@@ -175,7 +244,7 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             
         timings["total_execution_time"] = time.time() - total_start_time
 
-        # Create response with individual query times
+        # Create response with individual query times and additional info
         query_timing_details = []
         for idx, (query, time_taken) in enumerate(zip(queries, query_times)):
             query_timing_details.append({
@@ -205,11 +274,16 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             "total_execution_time": timings.get("total_execution_time", 0)
         }
 
-        # Return answers and detailed timing information
+        # Return answers with vector search results and detailed timing information
         return JSONResponse({
-            "answers": answers,
+            "answers": answers,  # This now contains the full result structure for each query
             "timings": all_timings,
-            "cleanup_status": "Vectors deleted from Pinecone index"
+            "cleanup_status": "Vectors deleted from Pinecone index",
+            "api_version": "2.1",  # Updated API version to reflect the new response format
+            "model_info": {
+                "embedding_model": "multilingual-e5-large",
+                "temperature": 0.7
+            }
         })
      
 if __name__ == "__main__":

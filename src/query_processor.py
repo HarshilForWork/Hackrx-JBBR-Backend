@@ -383,7 +383,7 @@ class QueryProcessor:
         keyword_boost = min(0.3, keyword_count * 0.05)  # Cap at 0.3 to avoid dominating vector score
         
         # Combine scores
-        hybrid_score = score + keyword_boost
+        hybrid_score = score #+ #keyword_boost
         
         # Add debug info
         candidate["keyword_matches"] = keyword_count
@@ -728,10 +728,11 @@ class QueryProcessor:
                 "reasoning": "System requires LLM for claim evaluation"
             }
             
-        # Prepare context from search results
+        # Prepare context from search results - include all top vectors
+        # Include more context by using the full text and all search results
         context = "\n\n".join([
-            f"Document: {result['document_name']}\nContent: {result['text'][:500]}..."
-            for result in search_results[:3]
+            f"Document: {result['document_name']}\nRelevance Score: {result.get('score', 0.0):.3f}\nContent: {result['text']}"
+            for result in search_results
         ])
         
         prompt = f"""
@@ -750,6 +751,12 @@ class QueryProcessor:
         - source_document: string (the document name you primarily referenced)
 
         For yes/no questions, format your answer as "Yes, [brief reason]" or "No, [brief reason]"
+        Consider all the vectors in the context and provide a comprehensive answer.
+        Even if the vector had low similarity, it may still contain relevant information.
+        Compare the query with the context and provide a decision based on the policy documents.
+        Don't look for exact words, but rather the intent and coverage of the query.
+        For query questions, focus on the coverage and intent of the query.
+        Even if something is not explicitly mentioned, infer from the context.
 
         Example response for a coverage question:
         {{
@@ -808,7 +815,7 @@ class QueryProcessor:
                 # Get top candidates using vector search
                 response = self.index.query(
                     vector=embedding,
-                    top_k=8,  # Get more for post-filtering
+                    top_k=5,  # Get more for post-filtering
                     include_metadata=True
                 )
                 

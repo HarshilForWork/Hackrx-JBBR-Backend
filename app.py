@@ -166,6 +166,12 @@ def query_documents():
                 else:
                     st.info(f"🤔 **UNCLEAR** (Confidence: {confidence:.1%})")
                 
+                # Show answer from LLM if available
+                answer = evaluation.get("answer")
+                if answer:
+                    st.markdown("### 💬 Answer")
+                    st.markdown(f"_{answer}_")
+                
                 # Show justification
                 justification = evaluation.get("justification", "No explanation available")
                 st.markdown(f"**Explanation:** {justification}")

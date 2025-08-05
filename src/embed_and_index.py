@@ -11,33 +11,45 @@ try:
 except ImportError:
     from document_registry import DocumentRegistry
 
-def generate_embeddings_pinecone(texts: List[str], api_key: str) -> List[List[float]]:
+def generate_embeddings_batch(texts: List[str], api_key: str, batch_size: int = 96) -> List[List[float]]:
     """
-    Generate embeddings for a list of texts using Pinecone inference API.
+    Generate embeddings for a list of texts using Pinecone inference API with batching.
     Args:
         texts: List of text strings to embed
         api_key: Pinecone API key
+        batch_size: Maximum number of texts to process in a single batch (default: 96)
     Returns:
         List of embedding vectors
     """
     try:
-        # Use Pinecone client inference method
+        # Initialize Pinecone client
         pc = Pinecone(api_key=api_key)
         
-        # Use the inference.embed method directly
-        response = pc.inference.embed(
-            model="multilingual-e5-large",
-            inputs=texts,
-            parameters={"input_type": "passage", "truncate": "END"}
-        )
+        # Process in batches to respect Pinecone's limits
+        all_embeddings = []
+        total_texts = len(texts)
         
-        # Extract embeddings from the response
-        embeddings = []
-        for embedding in response.data:
-            embeddings.append(embedding.values)
+        # Process in batches
+        for i in range(0, total_texts, batch_size):
+            batch = texts[i:i+batch_size]
+            print(f"📦 Processing batch {i//batch_size + 1}/{(total_texts+batch_size-1)//batch_size}: {len(batch)} texts")
+            
+            # Use the inference.embed method for this batch
+            response = pc.inference.embed(
+                model="multilingual-e5-large",
+                inputs=batch,
+                parameters={"input_type": "passage", "truncate": "END"}
+            )
+            
+            # Extract embeddings from the response
+            batch_embeddings = []
+            for embedding in response.data:
+                batch_embeddings.append(embedding.values)
+            
+            all_embeddings.extend(batch_embeddings)
         
-        print(f"✅ Generated {len(embeddings)} embeddings using Pinecone inference ({len(embeddings[0])} dims)")
-        return embeddings
+        print(f"✅ Generated {len(all_embeddings)} embeddings using Pinecone inference ({len(all_embeddings[0]) if all_embeddings else 0} dims)")
+        return all_embeddings
         
     except Exception as e:
         print(f"❌ Error generating embeddings with Pinecone inference: {e}")
@@ -47,6 +59,18 @@ def generate_embeddings_pinecone(texts: List[str], api_key: str) -> List[List[fl
         for _ in texts:
             fallback_embeddings.append([random.uniform(-0.01, 0.01) for _ in range(1024)])
         return fallback_embeddings
+
+def generate_embeddings_pinecone(texts: List[str], api_key: str) -> List[List[float]]:
+    """
+    Generate embeddings for a list of texts using Pinecone inference API.
+    Args:
+        texts: List of text strings to embed
+        api_key: Pinecone API key
+    Returns:
+        List of embedding vectors
+    """
+    # Use the batched implementation with a max batch size of 96
+    return generate_embeddings_batch(texts, api_key, batch_size=96)
 
 ## Fallback logic removed for simplicity and reliability
 
