@@ -33,9 +33,8 @@ try:
 except ImportError:
     GENAI_AVAILABLE = False
 
-# Reranking functionality removed - using semantic similarity scores only
-
-from .embed_and_index import generate_query_embedding_nvidia
+# Pinecone embeddings integration
+from .embed_and_index import generate_query_embedding_pinecone
 
 class QueryProcessor:
     def __init__(self, pinecone_api_key: str, gemini_api_key: str, index_name: str = 'policy-index'):
@@ -48,8 +47,18 @@ class QueryProcessor:
         # Initialize Pinecone
         if PINECONE_AVAILABLE and pinecone_api_key and pinecone_api_key != 'dummy':
             try:
-                self.pc = Pinecone(api_key=pinecone_api_key)
-                self.index = self.pc.Index(index_name)
+                from .embed_and_index import check_or_create_pinecone_index
+                
+                # Ensure index has correct dimensions for Pinecone inference
+                print("🔍 Checking/creating Pinecone index with correct dimensions...")
+                if check_or_create_pinecone_index(pinecone_api_key, index_name, 1024):
+                    self.pc = Pinecone(api_key=pinecone_api_key)
+                    self.index = self.pc.Index(index_name)
+                    print("✅ Initialized Pinecone client and index")
+                else:
+                    print("❌ Failed to create/verify Pinecone index")
+                    self.pc = None
+                    self.index = None
             except Exception as e:
                 print(f"Pinecone initialization error: {e}")
                 self.pc = None
@@ -58,8 +67,8 @@ class QueryProcessor:
             self.pc = None
             self.index = None
         
-        # Use NVIDIA embeddings ONLY - no fallbacks
-        print("✅ Using NVIDIA NV-Embed-QA embeddings (no fallbacks)")
+        # Use Pinecone embeddings - no fallbacks
+        print("✅ Using Pinecone multilingual-e5-large embeddings")
         
         # Reranking disabled - using similarity scores only
         print("✅ Using similarity scores only (no reranking)")
@@ -133,15 +142,15 @@ class QueryProcessor:
                 self.fallback_reason = "API key not provided"
     
     def _encode_query(self, query: str) -> List[float]:
-        """Encode query using NVIDIA NV-Embed-QA model ONLY."""
+        """Encode query using Pinecone's embedding service."""
         try:
-            # Use NVIDIA embeddings ONLY - no fallbacks
-            return generate_query_embedding_nvidia(query)
+            # Use Pinecone embeddings with the same API key
+            return generate_query_embedding_pinecone(query, self.pinecone_api_key)
                     
         except Exception as e:
-            print(f"❌ NVIDIA query encoding error: {e}")
-            # Return zero vector as fallback (4096 dimensions for NVIDIA Llama Text Embed v2)
-            return [0.0] * 4096
+            print(f"❌ Pinecone query encoding error: {e}")
+            # Return zero vector as fallback (1024 dimensions for multilingual-e5-large)
+            return [0.0] * 1024
     
     def get_api_status(self) -> Dict[str, Any]:
         """Get current API status and recommendations."""

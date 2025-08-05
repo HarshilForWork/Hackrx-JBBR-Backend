@@ -8,13 +8,13 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system for intellige
 - **One-click pipeline**: Parse → Chunk → Embed → Index with progress tracking
 - **Smart PDF parsing** with PyMuPDF for complex layouts and tables
 - **Optimized semantic chunking** with paragraph and sentence boundary awareness
-- **NVIDIA NV-Embed-QA embeddings** (4096-dimensional vectors) for superior semantic understanding
+- **Pinecone inference embeddings** (1024-dimensional vectors) using multilingual-e5-large
 - **Pinecone vector database** for millisecond-scale similarity search
 - **Intelligent document registry** prevents reprocessing and tracks changes
 
 ### 🧠 AI-Powered Query Interface
 - **Natural language queries** with context-aware processing
-- **Hybrid semantic search** with similarity scoring and context expansion
+- **Pinecone inference API** for embedding generation and search
 - **LLM analysis** using Google Gemini 1.5 Flash for nuanced policy interpretation
 - **Structured decisions**: Covered/Not Covered/Partial/Needs Review with confidence scores
 - **Source citations** with exact document references and page numbers
@@ -59,7 +59,6 @@ pip install -r requirements.txt
 ```toml
 # Required - Vector search and embeddings
 PINECONE_API_KEY = "your-pinecone-api-key"
-NVIDIA_API_KEY = "your-nvidia-api-key"
 
 # Recommended - Enhanced LLM analysis
 GEMINI_API_KEY = "your-gemini-api-key"
@@ -75,8 +74,7 @@ streamlit run app.py
 ```
 
 ### 🔑 API Key Setup
-- **Pinecone**: Free tier at [pinecone.io](https://www.pinecone.io/) - vector database
-- **NVIDIA**: Free API at [build.nvidia.com](https://build.nvidia.com/) - embeddings
+- **Pinecone**: Free tier at [pinecone.io](https://www.pinecone.io/) - vector database with inference API
 - **Gemini**: Free tier at [Google AI Studio](https://aistudio.google.com/) - LLM analysis
 
 ## 💻 Usage Guide
@@ -142,8 +140,8 @@ streamlit run app.py
 
 ### Core Technologies
 - **Frontend**: Streamlit with real-time updates and session management
-- **Vector Database**: Pinecone (serverless, auto-scaling)
-- **Embeddings**: NVIDIA NV-Embed-QA (4096-dimensional, state-of-the-art)
+- **Vector Database**: Pinecone (serverless, auto-scaling) with inference API
+- **Embeddings**: Pinecone multilingual-e5-large (1024-dimensional, multilingual)
 - **LLM**: Google Gemini 1.5 Flash (fast, accurate, cost-effective)
 - **PDF Processing**: PyMuPDF (robust, handles complex layouts)
 - **Backend**: Python 3.10+ with async processing
@@ -163,16 +161,16 @@ streamlit run app.py
 - **Adaptive sizing**: 800-character chunks optimized for policy content
 
 **3. Advanced Embedding Generation**
-- **NVIDIA NV-Embed-QA**: Purpose-built for question-answering
-- **4096-dimensional vectors**: High-resolution semantic representation
+- **Pinecone inference API**: Purpose-built multilingual-e5-large model
+- **1024-dimensional vectors**: High-resolution semantic representation
 - **Batch processing**: Efficient handling of large document sets
 - **Quality validation**: Automatic embedding quality checks
 
 **4. Vector Database Operations**
 - **Pinecone serverless**: Auto-scaling with global distribution
+- **Inference API**: Integrated embedding generation and search
 - **Metadata filtering**: Document, page, and chunk-level filters
 - **Similarity search**: Cosine similarity with configurable thresholds
-- **Index optimization**: Automatic performance tuning
 
 ### 🤖 Query Processing Engine
 
@@ -317,13 +315,25 @@ Solution:
 4. Verify Pinecone environment configuration
 ```
 
-**🔴 "NVIDIA API quota exceeded"**
+**🔴 "Pinecone inference API error"**
 ```bash
+❌ Error generating embeddings with Pinecone inference: [error details]
+
 Solution:
-1. Check API usage in NVIDIA developer dashboard
-2. Wait for quota reset (usually 24 hours)
-3. Consider upgrading to paid tier
-4. Implement rate limiting in production
+1. Verify Pinecone API key is correct and active
+2. Ensure you have pinecone>=5.0.0 installed
+3. Check that the inference plugin is properly installed
+4. Verify your Pinecone account has inference API access
+```
+
+**🔴 "Index dimension mismatch"**
+```bash
+❌ Error: Dimension mismatch (expected 1024, got 384)
+
+Solution:
+1. Clear existing index: Use the clear_pinecone_index function
+2. The new system uses 1024-dimensional embeddings (multilingual-e5-large)
+3. Old 384-dimensional indexes are incompatible
 ```
 
 **🔴 "Gemini LLM unavailable - using fallback"**

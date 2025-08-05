@@ -1,6 +1,6 @@
 """
 Module: embed_and_index.py
-Functionality: Advanced embedding generation using Llama Text Embed v2 and vector indexing with smart document management.
+Functionality: Advanced embedding generation using Pinecone's text embeddings and vector indexing with smart document management.
 """
 from typing import List, Dict, Optional, Callable, Any
 import requests
@@ -9,45 +9,150 @@ import os
 from pinecone import Pinecone, ServerlessSpec
 from .document_registry import DocumentRegistry
 
-# Global model cache to avoid reloading
-_model_cache = None
+# Global Pinecone client cache
+_pinecone_client = None
 
-def get_embedding_model():
-    """
-    Get embedding model - using SentenceTransformers with all-MiniLM-L6-v2.
-    """
-    global _model_cache
-    if _model_cache is None:
-        try:
-            # Use sentence-transformers directly (more reliable than placeholder API)
-            from sentence_transformers import SentenceTransformer
-            _model_cache = SentenceTransformer('all-MiniLM-L6-v2')
-            print("✅ Using SentenceTransformer: all-MiniLM-L6-v2")
-        except Exception as e:
-            print(f"❌ Failed to load SentenceTransformer: {e}")
-            raise
-    return _model_cache
+def get_pinecone_client(api_key: str):
+    """Get or initialize Pinecone client."""
+    global _pinecone_client
+    if _pinecone_client is None:
+        _pinecone_client = Pinecone(api_key=api_key)
+        print("✅ Initialized Pinecone client for embeddings")
+    return _pinecone_client
 
-def generate_embeddings_llama(texts: List[str], api_key: Optional[str] = None) -> List[List[float]]:
+def generate_embeddings_batch(texts: List[str], pinecone_api_key: str, model: str = "multilingual-e5-large") -> List[List[float]]:
     """
-    Generate embeddings using NVIDIA-hosted Llama Text Embed v2.
+    Generate embeddings for a batch of texts using Pinecone's embedding service.
     
     Args:
         texts: List of texts to embed
-        api_key: NVIDIA API key (if required)
+        pinecone_api_key: Pinecone API key
+        model: Embedding model to use
         
     Returns:
         List of embedding vectors
     """
     try:
-        # This is a placeholder for the actual NVIDIA API call
-        # You would need to implement the actual API integration
-        embeddings = []
+        pc = get_pinecone_client(pinecone_api_key)
         
-        # For now, fall back to sentence-transformers
+        # Use Pinecone's embedding service
+        response = pc.inference.embed(
+            model=model,
+            inputs=texts,
+            parameters={"input_type": "passage", "truncate": "END"}
+        )
+        
+        # Extract embeddings from response
+        embeddings = [item['values'] for item in response['data']]
+        print(f"✅ Generated {len(embeddings)} embeddings using Pinecone {model}")
+        return embeddings
+        
+    except Exception as e:
+        print(f"❌ Pinecone batch embedding error: {e}")
+        # Fallback to sentence transformers
+        return generate_embeddings_fallback(texts)
+    """
+    Generate embeddings using Pinecone's embedding service.
+    
+    Args:
+        texts: List of texts to embed
+        api_key: Pinecone API key
+        model: Embedding model to use
+        
+    Returns:
+        List of embedding vectors
+    """
+    try:
+        pc = get_pinecone_client(api_key)
+        
+        # Use Pinecone's embedding service
+        response = pc.inference.embed(
+            model=model,
+            inputs=texts,
+            parameters={"input_type": "passage", "truncate": "END"}
+        )
+        
+        # Extract embeddings from response
+        embeddings = [item['values'] for item in response['data']]
+        print(f"✅ Generated {len(embeddings)} embeddings using Pinecone {model}")
+        return embeddings
+        
+    except Exception as e:
+        print(f"❌ Pinecone embedding error: {e}")
+        # Fallback to sentence transformers
+        return generate_embeddings_fallback(texts)
+
+def generate_embeddings_fallback(texts: List[str]) -> List[List[float]]:
+    """
+    Fallback embedding generation using SentenceTransformers.
+    
+    Args:
+        texts: List of texts to embed
+        
+    Returns:
+        List of embedding vectors
+    """
+    try:
         from sentence_transformers import SentenceTransformer
         model = SentenceTransformer('all-MiniLM-L6-v2')
         embeddings_raw = model.encode(texts)
+        embeddings = [emb.tolist() for emb in embeddings_raw]
+        print(f"✅ Generated {len(embeddings)} embeddings using fallback SentenceTransformer")
+        return embeddings
+    except Exception as e:
+        print(f"❌ Fallback embedding error: {e}")
+        # Return zero vectors as last resort
+        return [[0.0] * 384 for _ in texts]
+
+def generate_query_embedding_pinecone(query: str, api_key: str, model: str = "multilingual-e5-large") -> List[float]:
+    """
+    Generate a single query embedding using Pinecone's embedding service.
+    
+    Args:
+        query: Query text to embed
+        api_key: Pinecone API key
+        model: Embedding model to use
+        
+    Returns:
+        Query embedding vector
+    """
+    try:
+        pc = get_pinecone_client(api_key)
+        
+        # Use Pinecone's embedding service for query
+        response = pc.inference.embed(
+            model=model,
+            inputs=[query],
+            parameters={"input_type": "query", "truncate": "END"}
+        )
+        
+        # Extract embedding from response
+        # Try different possible response formats
+        if isinstance(response, list) and len(response) > 0:
+            embedding = response[0]['values']
+        elif hasattr(response, 'data') and len(response.data) > 0:
+            embedding = response.data[0]['values']
+        elif isinstance(response, dict) and 'data' in response:
+            embedding = response['data'][0]['values']
+        else:
+            # If we can't parse the response, raise an error
+            raise ValueError(f"Unexpected response format: {type(response)}")
+        
+        print(f"✅ Generated query embedding using Pinecone {model} ({len(embedding)} dimensions)")
+        return embedding
+        
+    except Exception as e:
+        print(f"❌ Pinecone query embedding error: {e}")
+        # Fallback to sentence transformers
+        try:
+            from sentence_transformers import SentenceTransformer
+            model_st = SentenceTransformer('all-MiniLM-L6-v2')
+            embedding = model_st.encode([query])[0].tolist()
+            print(f"✅ Generated query embedding using fallback SentenceTransformer ({len(embedding)} dimensions)")
+            return embedding
+        except Exception as e2:
+            print(f"❌ Fallback query embedding error: {e2}")
+            return [0.0] * 384
         
         # Convert to list safely
         if hasattr(embeddings_raw, 'tolist'):
@@ -70,37 +175,6 @@ def generate_embeddings_llama(texts: List[str], api_key: Optional[str] = None) -
             return embeddings_raw.tolist()
         else:
             return [list(map(float, emb)) for emb in embeddings_raw]
-
-def generate_query_embedding_nvidia(query: str, api_key: Optional[str] = None) -> List[float]:
-    """
-    Generate embedding for a single query using NVIDIA-compatible embedding model.
-    
-    Args:
-        query: Query text to embed
-        api_key: NVIDIA API key (optional, for future use)
-        
-    Returns:
-        Embedding vector for the query
-    """
-    try:
-        # For now, use SentenceTransformer (same as document embeddings for consistency)
-        from sentence_transformers import SentenceTransformer
-        model = SentenceTransformer('all-MiniLM-L6-v2')
-        embedding_raw = model.encode([query])
-        
-        # Convert to list safely
-        if hasattr(embedding_raw, 'tolist'):
-            embedding = embedding_raw.tolist()[0]
-        else:
-            embedding = list(map(float, embedding_raw[0]))
-        
-        print(f"✅ Generated query embedding using a compatible model (384 dimensions)")
-        return embedding
-        
-    except Exception as e:
-        print(f"❌ Error generating query embedding: {e}")
-        # Return zero vector as fallback (384 dimensions for all-MiniLM-L6-v2)
-        return [0.0] * 384
 
 def clear_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index'):
     """
@@ -301,10 +375,133 @@ def get_index_stats(pinecone_api_key: str, index_name: str = 'policy-index'):
     except Exception as e:
         return {'exists': False, 'error': str(e), 'total_vector_count': 0}
 
+def generate_embeddings_pinecone(texts: List[str], api_key: str) -> List[List[float]]:
+    """
+    Generate embeddings for a list of texts using Pinecone inference API.
+    
+    Args:
+        texts: List of text strings to embed
+        api_key: Pinecone API key
+        
+    Returns:
+        List of embedding vectors
+    """
+    try:
+        pc = Pinecone(api_key=api_key)
+        
+        # Use Pinecone inference API with multilingual-e5-large model
+        embeddings = pc.inference.embed(
+            model="multilingual-e5-large",
+            inputs=texts,
+            parameters={"input_type": "passage", "truncate": "END"}
+        )
+        
+        # Extract the embedding vectors
+        return [record['values'] for record in embeddings]
+        
+    except Exception as e:
+        print(f"❌ Error generating embeddings with Pinecone inference: {e}")
+        # Return zero vectors as fallback (1024 dimensions for multilingual-e5-large)
+        return [[0.0] * 1024 for _ in texts]
+
+def check_or_create_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index', 
+                                  required_dimension: int = 1024, progress_callback: Optional[Callable] = None) -> bool:
+    """
+    Check if index exists with correct dimensions, delete and recreate if needed.
+    
+    Args:
+        pinecone_api_key: Pinecone API key
+        index_name: Name of the Pinecone index
+        required_dimension: Required embedding dimension (1024 for multilingual-e5-large)
+        progress_callback: Optional callback for progress updates
+        
+    Returns:
+        bool: True if index is ready, False if failed
+    """
+    try:
+        pc = Pinecone(api_key=pinecone_api_key)
+        
+        # Check if index exists
+        existing_indexes = pc.list_indexes().names()
+        
+        if index_name in existing_indexes:
+            # Check dimension
+            index = pc.Index(index_name)
+            stats = index.describe_index_stats()
+            current_dimension = stats.get('dimension', 0)
+            
+            if current_dimension != required_dimension:
+                print(f"⚠️ Index '{index_name}' has {current_dimension} dimensions, but we need {required_dimension}")
+                print(f"🗑️ Deleting existing index to recreate with correct dimensions...")
+                
+                if progress_callback:
+                    progress_callback(f"Deleting old index ({current_dimension}D)...", 10)
+                
+                # Delete the existing index
+                pc.delete_index(index_name)
+                
+                # Wait for deletion to complete
+                print("⏳ Waiting for index deletion to complete...")
+                time.sleep(15)
+                
+                # Create new index with correct dimensions
+                print(f"🏗️ Creating new index with {required_dimension} dimensions...")
+                if progress_callback:
+                    progress_callback(f"Creating new index ({required_dimension}D)...", 20)
+                
+                pc.create_index(
+                    name=index_name,
+                    dimension=required_dimension,
+                    metric="cosine",
+                    spec=ServerlessSpec(
+                        cloud='aws',
+                        region='us-east-1'
+                    )
+                )
+                
+                # Wait for index to be ready
+                print("⏳ Waiting for new index to be ready...")
+                time.sleep(20)
+                
+                print(f"✅ Successfully recreated index '{index_name}' with {required_dimension} dimensions")
+                return True
+            else:
+                print(f"✅ Index '{index_name}' already exists with correct {required_dimension} dimensions")
+                return True
+        else:
+            # Create new index
+            print(f"🏗️ Creating new index '{index_name}' with {required_dimension} dimensions...")
+            if progress_callback:
+                progress_callback(f"Creating new index ({required_dimension}D)...", 15)
+            
+            pc.create_index(
+                name=index_name,
+                dimension=required_dimension,
+                metric="cosine",
+                spec=ServerlessSpec(
+                    cloud='aws',
+                    region='us-east-1'
+                )
+            )
+            
+            # Wait for index to be ready
+            print("⏳ Waiting for index to be ready...")
+            time.sleep(15)
+            
+            print(f"✅ Successfully created index '{index_name}' with {required_dimension} dimensions")
+            return True
+            
+    except Exception as e:
+        print(f"❌ Error managing Pinecone index: {e}")
+        if progress_callback:
+            progress_callback(f"Index creation failed: {e}", -1)
+        return False
+
 def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone_env: str, 
                            index_name: str = 'policy-index', progress_callback: Optional[Callable] = None):
     """
     Optimized function to generate embeddings and upsert to Pinecone with metadata.
+    Uses Pinecone inference API with proper dimension handling.
     
     Args:
         chunks: List of chunk dictionaries
@@ -316,47 +513,30 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
     if progress_callback:
         progress_callback("Initializing Pinecone...", 0)
     
-    # Initialize Pinecone client (new API)
-    pc = Pinecone(api_key=pinecone_api_key)
-
-    # Check if index exists, else create
-    if index_name not in pc.list_indexes().names():
+    # Check or create index with correct dimensions (1024 for multilingual-e5-large)
+    if not check_or_create_pinecone_index(pinecone_api_key, index_name, 1024, progress_callback):
+        print("❌ Failed to create or verify Pinecone index")
         if progress_callback:
-            progress_callback("Creating Pinecone index...", 5)
-        pc.create_index(
-            name=index_name,
-            dimension=384,  # 384 for MiniLM
-            metric="cosine",
-            spec=ServerlessSpec(
-                cloud='aws',
-                region='us-east-1'
-            )
-        )
-        # Wait for index to be ready
-        time.sleep(10)
+            progress_callback("Failed to create index", -1)
+        return False
     
+    # Initialize Pinecone client
+    pc = Pinecone(api_key=pinecone_api_key)
     index = pc.Index(index_name)
     
     if progress_callback:
-        progress_callback("Loading SentenceTransformer model...", 10)
+        progress_callback("Generating embeddings with Pinecone inference...", 15)
     
-    # Use SentenceTransformer directly
-    model = get_embedding_model()
+    # Generate embeddings using Pinecone inference API
+    texts = [chunk['content'] for chunk in chunks]
     
-    if progress_callback:
-        progress_callback("Generating embeddings with SentenceTransformer...", 15)
-    
-    # Generate embeddings using SentenceTransformer
-    texts = [chunk['content'] for chunk in chunks]  # Fixed: use 'content' not 'text'
-    
-    # Use SentenceTransformer directly
-    embeddings_raw = model.encode(texts, batch_size=32, show_progress_bar=False)
-    
-    # Convert to list safely
-    if hasattr(embeddings_raw, 'tolist'):
-        embeddings = embeddings_raw.tolist()
-    else:
-        embeddings = [list(map(float, emb)) for emb in embeddings_raw]
+    try:
+        embeddings = generate_embeddings_pinecone(texts, pinecone_api_key)
+    except Exception as e:
+        print(f"❌ Error generating embeddings: {e}")
+        if progress_callback:
+            progress_callback(f"Error generating embeddings: {e}", -1)
+        return False
     
     if progress_callback:
         progress_callback("Preparing vectors for indexing...", 60)

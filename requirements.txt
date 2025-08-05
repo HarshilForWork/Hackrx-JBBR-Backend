@@ -1,33 +1,27 @@
-# ENHANCED Insurance Document Query System Requirements (v3.0)
+# ENHANCED Insurance Document Query System Requirements (v4.0)
 # Core PDF processing with Enhanced PyMuPDF
 PyMuPDF>=1.23.0  # Core PDF processing with table detection
 pandas>=2.0.0  # Data processing and table handling
 
-# Normalized Semantic Chunker Dependencies
-torch>=2.0.0  # PyTorch for GPU acceleration
-transformers>=4.30.0  # Hugging Face transformers
-sentence-transformers>=2.2.0  # For embeddings in chunking
-numpy>=1.24.0  # Numerical computations
-scikit-learn>=1.3.0  # For clustering and similarity metrics
-
-# Machine Learning and NLP (OPTIMIZED SET)
-scikit-learn>=1.3.0  # For TF-IDF hybrid search
-# FlagEmbedding>=1.2.0  # Advanced Re-ranking Models (BAAI) - Fallback option
-
-# Advanced Embedding Models (NVIDIA Hosted)
-requests>=2.28.0
-
-# Vector Database and Search
-pinecone>=7.0.0
+# Vector Database and Embeddings (Updated for Pinecone Inference API)
+pinecone>=5.0.0,<6.0.0  # Pinecone with inference API support
+sentence-transformers>=2.2.0  # Fallback embeddings
 
 # LLM Integration
-google-generativeai>=0.3.0
+google-generativeai>=0.3.0  # Gemini AI for analysis
 
-# LangChain for enhanced semantic processing
-langchain>=0.1.0
-langchain-experimental>=0.0.50  
-langchain-huggingface>=0.0.2
-langchain-community>=0.0.20
+# Machine Learning and NLP
+numpy>=1.24.0  # Numerical computations
+scikit-learn>=1.3.0  # For similarity metrics
+
+# Web Framework and UI
+streamlit>=1.47.0  # Main web interface
+
+# HTTP and API calls
+requests>=2.28.0  # For API communications
+
+# Data processing and utilities
+python-dotenv>=1.0.0  # Environment variable management
 
 # Web Interface
 streamlit>=1.28.0
