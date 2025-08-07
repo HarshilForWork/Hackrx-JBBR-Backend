@@ -383,7 +383,7 @@ class QueryProcessor:
         keyword_boost = min(0.3, keyword_count * 0.05)  # Cap at 0.3 to avoid dominating vector score
         
         # Combine scores
-        hybrid_score = score #+ #keyword_boost
+        hybrid_score = score + keyword_boost
         
         # Add debug info
         candidate["keyword_matches"] = keyword_count
@@ -538,19 +538,19 @@ class QueryProcessor:
         
         return expanded_results
     
-    def _get_adjacent_chunks(self, doc_name: str, chunk_index: int, max_chars: int) -> List[Dict]:
-        """Retrieve adjacent chunks from the same document using namespace query."""
+    def _get_adjacent_chunks_extended(self, doc_name: str, chunk_index: int, chunks_before: int = 25, chunks_after: int = 25) -> List[Dict]:
+        """Retrieve extended adjacent chunks (25 before + 25 after) from the same document."""
         try:
             if not self.index:
                 return []
             
-            # Create a dummy vector for metadata-only search
-            dummy_vector = [0.0] * 384
+            # Create a dummy vector for metadata-only search (correct dimension)
+            dummy_vector = [0.0] * 1024  # Fixed dimension for multilingual-e5-large
             
             # Query for all chunks from the same document
             response = self.index.query(
                 vector=dummy_vector,
-                top_k=200,  # Get more chunks to find adjacent ones
+                top_k=1000,  # Get many chunks to find all adjacent ones
                 include_metadata=True
             )
             
@@ -572,42 +572,42 @@ class QueryProcessor:
             # Find chunks adjacent to our target
             adjacent = []
             target_found = False
+            target_position = None
             
             for i, chunk in enumerate(same_doc_chunks):
                 if chunk["chunk_index"] == chunk_index:
                     target_found = True
-                    # Get previous chunks
-                    for j in range(max(0, i-2), i):
-                        prev_chunk = same_doc_chunks[j]
-                        adjacent.append({
-                            "text": prev_chunk["text"],
-                            "chunk_index": prev_chunk["chunk_index"],
-                            "position": "before"
-                        })
-                    
-                    # Get next chunks
-                    for j in range(i+1, min(len(same_doc_chunks), i+3)):
-                        next_chunk = same_doc_chunks[j]
-                        adjacent.append({
-                            "text": next_chunk["text"],
-                            "chunk_index": next_chunk["chunk_index"],
-                            "position": "after"
-                        })
+                    target_position = i
                     break
             
-            if not target_found:
+            if target_found:
+                # Get 25 previous chunks
+                start_idx = max(0, target_position - chunks_before)
+                for j in range(start_idx, target_position):
+                    prev_chunk = same_doc_chunks[j]
+                    adjacent.append({
+                        "text": prev_chunk["text"],
+                        "chunk_index": prev_chunk["chunk_index"],
+                        "position": "before",
+                        "distance": target_position - j
+                    })
+                
+                # Get 25 next chunks
+                end_idx = min(len(same_doc_chunks), target_position + chunks_after + 1)
+                for j in range(target_position + 1, end_idx):
+                    next_chunk = same_doc_chunks[j]
+                    adjacent.append({
+                        "text": next_chunk["text"],
+                        "chunk_index": next_chunk["chunk_index"],
+                        "position": "after",
+                        "distance": j - target_position
+                    })
+            else:
                 print(f"⚠️ Target chunk {chunk_index} not found in document {doc_name}")
-                # Fallback: just get some chunks from the same document
-                for chunk in same_doc_chunks[:4]:
-                    if chunk["chunk_index"] != chunk_index:
-                        adjacent.append({
-                            "text": chunk["text"],
-                            "chunk_index": chunk["chunk_index"],
-                            "position": "context"
-                        })
+                return []
             
-            print(f"🔍 Found {len(adjacent)} adjacent chunks for {doc_name} chunk {chunk_index}")
-            return adjacent[:4]  # Limit to prevent too much context
+            print(f"🔍 Found {len(adjacent)} adjacent chunks for {doc_name} chunk {chunk_index} (target: 25 before + 25 after)")
+            return adjacent
             
         except Exception as e:
             print(f"⚠️ Could not retrieve adjacent chunks: {e}")
@@ -615,40 +615,71 @@ class QueryProcessor:
             traceback.print_exc()
             return []
     
-    def _combine_chunks_with_context(self, main_text: str, adjacent_chunks: List[Dict], max_chars: int) -> str:
-        """Intelligently combine main chunk with context from adjacent chunks."""
-        # Start with main text
-        result = main_text
-        chars_used = len(main_text)
-        remaining_chars = max_chars
+    def _create_comprehensive_context(self, top_vectors: List[Dict]) -> str:
+        """Create comprehensive context from top 5 vectors with their adjacent chunks."""
+        context_sections = []
         
-        # Add before context
-        before_chunks = [c for c in adjacent_chunks if c["position"] == "before"]
-        before_chunks.sort(key=lambda x: x["chunk_index"], reverse=True)  # Closest first
+        for i, vector in enumerate(top_vectors, 1):
+            doc_name = vector["document_name"]
+            chunk_index = vector.get("chunk_index", 0)
+            main_text = vector["text"]
+            similarity_score = vector.get("score", 0.0)
+            
+            print(f"📄 Processing Vector {i}: Getting adjacent context for chunk {chunk_index} from {doc_name}")
+            
+            # Get 25 chunks before and 25 chunks after
+            adjacent_chunks = self._get_adjacent_chunks_extended(doc_name, chunk_index, 25, 25)
+            
+            # Organize chunks
+            before_chunks = [c for c in adjacent_chunks if c["position"] == "before"]
+            after_chunks = [c for c in adjacent_chunks if c["position"] == "after"]
+            
+            # Sort by distance from main chunk
+            before_chunks.sort(key=lambda x: x["distance"], reverse=True)  # Closest first
+            after_chunks.sort(key=lambda x: x["distance"])  # Closest first
+            
+            # Build the section
+            section_parts = []
+            
+            # Add header for this vector
+            section_parts.append(f"=== VECTOR {i} (Similarity: {similarity_score:.3f}) ===")
+            section_parts.append(f"Document: {doc_name}")
+            section_parts.append(f"Main Chunk Index: {chunk_index}")
+            section_parts.append("")
+            
+            # Add before context
+            if before_chunks:
+                section_parts.append(f"--- CONTEXT BEFORE (25 chunks) ---")
+                for chunk in before_chunks:
+                    section_parts.append(f"[Chunk {chunk['chunk_index']}] {chunk['text']}")
+                section_parts.append("")
+            
+            # Add main chunk
+            section_parts.append(f"--- MAIN CHUNK (Most Relevant) ---")
+            section_parts.append(f"[Chunk {chunk_index}] {main_text}")
+            section_parts.append("")
+            
+            # Add after context
+            if after_chunks:
+                section_parts.append(f"--- CONTEXT AFTER (25 chunks) ---")
+                for chunk in after_chunks:
+                    section_parts.append(f"[Chunk {chunk['chunk_index']}] {chunk['text']}")
+                section_parts.append("")
+            
+            # Add summary for this vector
+            total_context = len(before_chunks) + 1 + len(after_chunks)
+            section_parts.append(f"--- END VECTOR {i} (Total chunks: {total_context}) ---")
+            section_parts.append("")
+            
+            context_sections.append("\n".join(section_parts))
         
-        before_context = ""
-        for chunk in before_chunks:
-            chunk_text = chunk["text"]
-            if len(before_context) + len(chunk_text) <= remaining_chars // 2:
-                before_context = chunk_text + " ... " + before_context
+        # Combine all sections
+        full_context = "\n".join(context_sections)
         
-        # Add after context
-        after_chunks = [c for c in adjacent_chunks if c["position"] == "after"]
-        after_chunks.sort(key=lambda x: x["chunk_index"])  # Closest first
+        print(f"📊 Created comprehensive context with {len(top_vectors)} vectors and their adjacent chunks")
+        print(f"📊 Total context length: {len(full_context)} characters")
         
-        after_context = ""
-        for chunk in after_chunks:
-            chunk_text = chunk["text"]
-            if len(after_context) + len(chunk_text) <= remaining_chars // 2:
-                after_context = after_context + " ... " + chunk_text
-        
-        # Combine all parts
-        if before_context:
-            result = f"[CONTEXT] {before_context} [MAIN] {main_text}"
-        if after_context:
-            result = result + f" [CONTINUED] {after_context}"
-        
-        return result
+        return full_context
     
     def _print_ranking_summary(self, query: str, results: List[Dict]):
         """Print detailed ranking summary for debugging."""
@@ -715,8 +746,8 @@ class QueryProcessor:
                 "reasoning": "System requires LLM for claim evaluation"
             }
     
-    def _llm_evaluation(self, query: str, entities: Dict, search_results: List[Dict]) -> Dict[str, Any]:
-        """Use LLM for claim evaluation - no fallbacks."""
+    def _llm_evaluation_with_comprehensive_context(self, query: str, entities: Dict, comprehensive_context: str, top_vectors: List[Dict]) -> Dict[str, Any]:
+        """Use LLM for evaluation with comprehensive adjacent context from 5 vectors."""
         if not self.llm:
             print("❌ LLM not available for evaluation")
             return {
@@ -727,84 +758,91 @@ class QueryProcessor:
                 "relevant_clauses": [],
                 "reasoning": "System requires LLM for claim evaluation"
             }
-            
-        # Prepare context from search results - include all top vectors
-        # Include more context by using the full text and all search results
-        context = "\n\n".join([
-            f"Document: {result['document_name']}\nRelevance Score: {result.get('score', 0.0):.3f}\nContent: {result['text']}"
-            for result in search_results
-        ])
+        
+        # Create a summary of the vectors for reference
+        vector_summary = []
+        for i, vector in enumerate(top_vectors, 1):
+            vector_summary.append(f"Vector {i}: {vector['document_name']} (Similarity: {vector['score']:.3f})")
         
         prompt = f"""
-        You are an insurance policy expert. Based on the following context from policy documents, provide a clear and concise answer in 2-3 sentences.
+        You are an insurance policy expert. Based on the comprehensive context from policy documents, provide a clear and concise answer in 2-3 sentences.
 
         QUERY: {query}
 
         EXTRACTED ENTITIES:
         {json.dumps(entities, indent=2)}
 
-        RELEVANT POLICY CONTEXT:
-        {context}
+        TOP 5 VECTORS SUMMARY:
+        {chr(10).join(vector_summary)}
+
+        COMPREHENSIVE POLICY CONTEXT WITH ADJACENT CHUNKS:
+        {comprehensive_context}
+
+        Instructions:
+        - Each vector section contains the most relevant chunk plus 25 chunks before and 25 chunks after it
+        - Consider information from all 5 vector sections when forming your answer
+        - Look for complementary information across different sections
+        - If multiple sections discuss the same topic, synthesize the information
+        - For coverage questions, check waiting periods, exclusions, and conditions across all sections
+        - For amount/limit questions, look for specific numbers in any of the sections
 
         Return your answer as a JSON object with these fields:
         - answer: string (your concise answer in 2-3 sentences)
-        - source_document: string (the document name you primarily referenced)
+        - source_document: string (the primary document name you referenced)
+        - relevant_sections: array of integers (which vector sections 1-5 were most relevant)
 
         For yes/no questions, format your answer as "Yes, [brief reason]" or "No, [brief reason]"
-        Consider all the vectors in the context and provide a comprehensive answer.
-        Even if the vector had low similarity, it may still contain relevant information.
-        Compare the query with the context and provide a decision based on the policy documents.
-        Don't look for exact words, but rather the intent and coverage of the query.
-        For query questions, focus on the coverage and intent of the query.
-        Even if something is not explicitly mentioned, infer from the context.
+        Even if something is not explicitly mentioned, infer from the comprehensive context provided.
+        Use information from multiple sections to provide a complete answer.
 
-        Example response for a coverage question:
+        Example response:
         {{
-          "answer": "Yes, dental implants are covered up to ₹50,000 under your policy's dental care benefit. This is subject to a 6-month waiting period.",
+          "answer": "Yes, dental implants are covered up to ₹50,000 under your policy's dental care benefit. This is subject to a 6-month waiting period as mentioned in the policy terms.",
+          "source_document": "policy.pdf",
+          "relevant_sections": [1, 3, 4]
         }}
 
-        Please provide accurate information based solely on the policy documents provided. Only return the JSON object, nothing else.
+        Please provide accurate information based solely on the comprehensive policy context provided. Only return the JSON object, nothing else.
         """
         
         # Use robust request method
         response_text = self._make_llm_request_with_retry(prompt)
         if not response_text:
-            print("❌ No response from LLM for evaluation")
+            print("❌ No response from LLM for comprehensive evaluation")
             return {
-                "decision": "error",
-                "amount": None,
-                "confidence": 0.0,
-                "justification": "No response from LLM.",
-                "relevant_clauses": [],
-                "reasoning": "LLM did not respond"
+                "answer": "Unable to process query due to LLM unavailability.",
+                "source_document": "N/A",
+                "relevant_sections": []
             }
         
         # Extract JSON from response
-        evaluation = self._extract_json_from_response(response_text, "claim evaluation")
+        evaluation = self._extract_json_from_response(response_text, "comprehensive evaluation")
         if evaluation:
-            print("✅ Successfully completed claim evaluation using LLM")
+            print("✅ Successfully completed comprehensive evaluation using LLM")
+            # Add metadata about the comprehensive context
+            evaluation['context_stats'] = {
+                'total_vectors': len(top_vectors),
+                'total_context_length': len(comprehensive_context),
+                'chunks_per_vector': 51  # 25 before + 1 main + 25 after
+            }
             return evaluation
         else:
-            print("❌ JSON extraction failed from LLM evaluation response")
+            print("❌ JSON extraction failed from LLM comprehensive evaluation response")
             return {
-                "decision": "error",
-                "amount": None,
-                "confidence": 0.0,
-                "justification": "Failed to parse LLM response.",
-                "relevant_clauses": [],
-                "reasoning": "JSON extraction failed"
+                "answer": "Failed to parse LLM response for comprehensive evaluation.",
+                "source_document": "N/A",
+                "relevant_sections": []
             }
     
     def process_query(self, query: str, query_embedding: Optional[list] = None) -> Dict[str, Any]:
-        """Complete query processing pipeline with optimized hybrid RAG."""
+        """Complete query processing pipeline with comprehensive adjacent context."""
         try:
             # Get API status for debugging
             api_status = self.get_api_status()
-            # Step 1: (Removed) Extract entities
-            # Step 2: Hybrid search using post-retrieval keyword boosting
-            print("🔍 Step 1: Performing vector search with post-retrieval keyword boosting...")
+            
+            # Step 1: Get top 5 vectors with similarity search
+            print("🔍 Step 1: Getting top 5 vectors with similarity search...")
             try:
-                # Modified semantic search without filter to avoid $contains error
                 # Use provided query_embedding if available, else encode
                 if query_embedding is not None:
                     print("🔍 Using precomputed query embedding for search...")
@@ -812,63 +850,62 @@ class QueryProcessor:
                 else:
                     embedding = self._encode_query(query)
                 
-                # Get top candidates using vector search
+                # Get top 5 candidates using vector search
                 response = self.index.query(
                     vector=embedding,
-                    top_k=5,  # Get more for post-filtering
+                    top_k=5,  # Get exactly 5 top vectors
                     include_metadata=True
                 )
                 
                 # Format results (already sorted by similarity score)
-                search_results = []
+                top_vectors = []
                 for match in response.matches:
-                    search_results.append({
+                    top_vectors.append({
                         "id": match.id,
                         "score": match.score,
                         "text": match.metadata.get("text", ""),
                         "document_name": match.metadata.get("document_name", ""),
-                        "page_number": match.metadata.get("page_number", 1)
+                        "page_number": match.metadata.get("page_number", 1),
+                        "chunk_index": match.metadata.get("chunk_index", 0)
                     })
                 
-                # Extract keywords for post-retrieval boosting
-                keywords = self._extract_keywords(query)
-                if keywords:
-                    print(f"🔍 Applying keyword boosting: {keywords}")
-                    # Boost scores for results containing keywords
-                    for result in search_results:
-                        text = result.get("text", "").lower()
-                        keyword_matches = sum(1 for kw in keywords if kw.lower() in text)
-                        keyword_boost = min(0.3, keyword_matches * 0.05)
-                        result["hybrid_score"] = result["score"] + keyword_boost
-                    
-                    # Re-sort based on hybrid scores
-                    search_results.sort(key=lambda x: x.get("hybrid_score", 0.0), reverse=True)
+                print(f"✅ Retrieved {len(top_vectors)} top vectors")
                 
-                # Limit to top 10
-                search_results = search_results[:10]
+                # Step 2: Create comprehensive context with adjacent chunks for each vector
+                print("🔍 Step 2: Creating comprehensive context with 25 before + 25 after chunks for each vector...")
+                comprehensive_context = self._create_comprehensive_context(top_vectors)
+                
+                # Use the comprehensive context as search results for LLM
+                search_results = top_vectors  # Keep original for response structure
+                
             except Exception as e:
-                print(f"❌ Hybrid search error: {e}")
-                # Fall back to simple search
-                search_results = self.semantic_search(query, top_k=5)
-            # Step 3: Evaluate claim (now just LLM answer)
-            print("🔍 Step 2: Evaluating with semantic context...")
-            evaluation = self.evaluate_claim(query, {}, search_results)
+                print(f"❌ Vector search error: {e}")
+                top_vectors = []
+                comprehensive_context = ""
+                search_results = []
+            
+            # Step 3: Evaluate with comprehensive context
+            print("🔍 Step 3: Evaluating with comprehensive context...")
+            evaluation = self._llm_evaluation_with_comprehensive_context(query, {}, comprehensive_context, top_vectors)
+            
             # Add search method information
-            evaluation['search_method'] = 'hybrid_post_retrieval'
+            evaluation['search_method'] = 'comprehensive_adjacent_context'
             evaluation['reranker_type'] = 'none'
             evaluation['reranker_available'] = False
-            evaluation['hybrid_search_enabled'] = True  # Hybrid search enabled
-            evaluation['reranking_enabled'] = False  # Reranking removed
-            evaluation['total_candidates_retrieved'] = len(search_results) if search_results else 0
-            evaluation['final_chunks_used'] = len(search_results)
+            evaluation['hybrid_search_enabled'] = False
+            evaluation['reranking_enabled'] = False
+            evaluation['total_candidates_retrieved'] = len(top_vectors)
+            evaluation['final_chunks_used'] = len(top_vectors)
+            evaluation['adjacent_chunks_per_vector'] = 50  # 25 before + 25 after
+            
             # Add performance notes
             if not self.llm:
                 evaluation['note'] = "❌ Analysis performed without LLM (required for full functionality)"
-            evaluation['performance_note'] = "⚡ Using post-retrieval keyword boosting for improved accuracy"
+            evaluation['performance_note'] = "⚡ Using comprehensive adjacent context (25 before + 25 after) for each top vector"
+            
             # Combine all results
             result = {
                 "query": query,
-                # 'entities' removed
                 "search_results": search_results,
                 "evaluation": evaluation,
                 "api_status": api_status,
@@ -884,7 +921,6 @@ class QueryProcessor:
             
             return {
                 "query": query,
-                # 'entities' removed
                 "search_results": [],
                 "evaluation": {
                     "decision": "error",
