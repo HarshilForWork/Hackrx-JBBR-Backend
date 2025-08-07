@@ -1,0 +1,826 @@
+{
+  "timestamp": "2025-08-07T11:16:45.729687",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/indian_constitution.pdf?sv=2023-01-03&st=2025-07-28T06%3A42%3A00Z&se=2026-11-29T06%3A42%3A00Z&sr=b&sp=r&sig=5Gs%2FOXqP3zY00lgciu4BZjDV5QjTDIx7fgnfdz6Pu24%3D",
+    "questions": [
+      "What is the official name of India according to Article 1 of the Constitution?",
+      "Which Article guarantees equality before the law and equal protection of laws to all persons?",
+      "What is abolished by Article 17 of the Constitution?",
+      "What are the key ideals mentioned in the Preamble of the Constitution of India?",
+      "Under which Article can Parliament alter the boundaries, area, or name of an existing State?",
+      "According to Article 24, children below what age are prohibited from working in hazardous industries like factories or mines?",
+      "What is the significance of Article 21 in the Indian Constitution?",
+      "Article 15 prohibits discrimination on certain grounds. However, which groups can the State make special provisions for under this Article?",
+      "Which Article allows Parliament to regulate the right of citizenship and override previous articles on citizenship (Articles 5 to 10)?",
+      "What restrictions can the State impose on the right to freedom of speech under Article 19(2)?"
+    ],
+    "pdf_filename": "input_20250807_111605.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250807_111605.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "What is the official name of India according to Article 1 of the Constitution?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.0952855274,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.24528552740000004
+          },
+          {
+            "id": "input_20250807_111605.pdf_80_9780dcb3",
+            "score": 0.0854335502,
+            "text": "THE CONSTITUTION OF INDIA\n(Part V.—The Union)\n51\n(f) the receipt of money on account of the Consolidated Fund of India \nor the public account of India or the custody or issue of such money or \nthe audit of the accounts of the Union or of a State; or \n(g) any matter incidental to any of the matters specified in \nsub-clauses (a) to (f).\n(2) A Bill shall not be deemed to be a Money Bill by reason only that it \nprovides for the imposition of fines or other pecuniary penalties, or for the \ndemand or payment of fees for licences or fees for services rendered, or by \nreason that it provides for the imposition, abolition, remission, alteration or \nregulation of any tax by any local authority or body for local purposes.\n(3) If any question arises whether a Bill is a Money Bill or not, the \ndecision of the Speaker of the House of the People thereon shall be final.\n(4) There shall be endorsed on every Money Bill when it is transmitted \nto the Council of States under article 109, and when it is pr",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.2354335502
+          },
+          {
+            "id": "input_20250807_111605.pdf_167_fcc1ff8c",
+            "score": 0.0861479566,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IXB.—Co-operative Societies)\n138\n243ZJ. Number and term of members of board and its office \nbearers.—(1) The board shall consist of such number of directors as may be \nprovided by the Legislature of a State, by law:\nProvided that the maximum number of directors of a co-operative \nsociety shall not exceed twenty-one: \nProvided further that the Legislature of a State shall, by law, provide for \nthe reservation of one seat for the Scheduled Castes or the Scheduled Tribes \nand two seats for women on board of every co-operative society consisting of \nindividuals as members and having members from such class of category of \npersons. \n(2) The term of office of elected members of the board and its office \nbearers shall be five years from the date of election and the term of office \nbearers shall be conterminous with the term of the board: \nProvided that the board may fill a casual vacancy on the board by \nnomination out of the same class of members in respect of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1861479566
+          },
+          {
+            "id": "input_20250807_111605.pdf_75_9e28d989",
+            "score": 0.0696753561,
+            "text": "THE CONSTITUTION OF INDIA\n(Part V.—The Union)\n46\n102. Disqualifications for membership.—(1) A person shall be \ndisqualified for being chosen as, and for being, a member of either House of \nParliament— \n1[(a) if he holds any office of profit under the Government of India \nor the Government of any State, other than an office declared by \nParliament by law not to disqualify its holder;]\n(b) if he is of unsound mind and stands so declared by a competent \ncourt;\n(c) if he is an undischarged insolvent;\n(d) if he is not a citizen of India, or has voluntarily acquired the \ncitizenship of a foreign State, or is under any acknowledgment of \nallegiance or adherence to a foreign State;\n(e) if he is so disqualified by or under any law made by Parliament. \n2[Explanation.—For the purposes of this clause] a person shall not be \ndeemed to hold an office of profit under the Government of India or the \nGovernment of any State by reason only that he is a Minister either for the \nUnion or for such State.\n3",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1696753561
+          },
+          {
+            "id": "input_20250807_111605.pdf_6_b6ba0168",
+            "score": 0.0672898591,
+            "text": "Contents\nARTICLES\n(v)\n55.\nManner of election of President.\n56.\nTerm of office of President.\n57. \nEligibility for re-election. \n58. \nQualifications for election as President. \n59. \nConditions of President’s office. \n60.\nOath or affirmation by the President.\n61.\nProcedure for impeachment of the President.\n62. \nTime of holding election to fill vacancy in the office of President \nand the term of office of person elected to fill casual vacancy.\n63. \nThe Vice-President of India.\n64. \nThe Vice-President to be ex officio Chairman of the Council of \nStates. \n65. \nThe Vice-President to act as President or to discharge his \nfunctions during casual vacancies in the office, or during the \nabsence, of President.\n66.\nElection of Vice-President.\n67.\nTerm of office of Vice-President.\n68.\nTime of holding election to fill vacancy in the office of Vice-President \nand the term of office of person elected to fill casual vacancy. \n69.\nOath or affirmation by the Vice-President.\n70.\nDischarge of President’s fu",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1672898591
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy documents, which are excerpts from the Constitution of India, do not contain the text of Article 1. Therefore, based solely on the given context, the official name of India according to Article 1 cannot be determined.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Which Article guarantees equality before the law and equal protection of laws to all persons?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_176_e2987d07",
+            "score": 0.0857022628,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XI.—Relations between the Union and the States) \n146\n(2) Parliament has exclusive power to make laws with respect to goods \nand services tax where the supply of goods, or of services, or both takes place \nin the course of inter-State trade or commerce.\nExplanation.—The provisions of this article, shall, in respect of goods \nand services tax referred to in clause (5) of article 279A, take effect from the \ndate recommended by the Goods and Services Tax Council.] \n247. Power of Parliament to provide for the establishment of certain \nadditional courts.—Notwithstanding anything in this Chapter, Parliament may \nby law provide for the establishment of any additional courts for the better \nadministration of laws made by Parliament or of any existing laws with respect \nto a matter enumerated in the Union List.\n248. Residuary powers of legislation.—(1) 1[Subject to article 246A, \nParliament] has exclusive power to make any law with respect to any matter \nnot enume",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.18570226280000002
+          },
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.0801141858,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1801141858
+          },
+          {
+            "id": "input_20250807_111605.pdf_249_d5768eab",
+            "score": 0.106150828,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVIII.—EMERGENCY PROVISIONS)\n218\n(c) shall cease to operate at the expiration of two months, unless \nbefore the expiration of that period it has been approved by resolutions \nof both Houses of Parliament:\nProvided that if any such Proclamation is issued at a time when the \nHouse of the People has been dissolved or the dissolution of the House of the \nPeople takes place during\nthe\nperiod of\ntwo months referred to in \nsub-clause (c), and if a resolution approving the Proclamation has been passed \nby the Council of States, but no resolution with respect to such Proclamation \nhas been passed by the House of the People before the expiration of that period, \nthe Proclamation shall cease to operate at the expiration of thirty days from the \ndate on which the House of the People first sits after its reconstitution unless \nbefore the expiration of the said period of thirty days a resolution approving the \nProclamation has been also passed by the House of the Peop",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.15615082800000002
+          },
+          {
+            "id": "input_20250807_111605.pdf_171_4720ef28",
+            "score": 0.0754139498,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IXB.—Co-operative Societies)\n142\n(b) any person wilfully or without any reasonable excuse disobeys \nany summons, requisition or lawful written order issued under the \nprovisions of the State Act; \n(c) any employer who, without sufficient cause, fails to pay to a \nco-operative society amount deducted by him from its employee within a \nperiod of fourteen days from the date on which such deduction is made; \n(d) any officer or custodian who wilfully fails to handover custody of \nbooks, accounts, documents, records, cash, security and other property \nbelonging to a co-operative society of which he is an officer or \ncustodian, to an authorised person; and\n(e) whoever, before, during or after the election of members of the \nboard or office bearers, adopts any corrupt practice.\n243ZR. Application to multi-State co-operative societies.—The \nprovisions of this Part shall apply to the multi-State co-operative societies \nsubject to the modification that any referenc",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1254139498
+          },
+          {
+            "id": "input_20250807_111605.pdf_39_106c95ef",
+            "score": 0.0792777166,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n10\n(e) to reside and settle in any part of the territory of India; 1[and]\n2[(f)* * * * *] \n(g) to practise any profession, or to carry on any occupation, trade or \nbusiness. \n3[(2) Nothing in sub-clause (a) of clause (1) shall affect the operation of \nany existing law, or prevent the State from making any law, in so far as such \nlaw imposes reasonable restrictions on the exercise of the right conferred by the \nsaid sub-clause in the interests of 4[the sovereignty and integrity of India], the \nsecurity of the State, friendly relations with foreign States, public order, \ndecency or morality, or in relation to contempt of court, defamation or \nincitement to an offence.]\n(3) Nothing in sub-clause (b) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of 4[the sovereignty and integrity of India or]\npublic order, reasonable res",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0792777166
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context snippets from 'The Constitution of India' do not contain the specific article that guarantees equality before the law and equal protection of laws to all persons. The snippets cover topics such as GST, All-India services, emergency provisions, co-operative societies, and certain fundamental rights (like freedom of movement and profession), but Article 14, which typically addresses this, is not present.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What is abolished by Article 17 of the Constitution?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.0945467353,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.24454673530000004
+          },
+          {
+            "id": "input_20250807_111605.pdf_47_8bfe3f66",
+            "score": 0.0765866712,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n18\n(b) the expression “rights”, in relation to an estate, shall include any \nrights vesting in a proprietor, sub-proprietor, under-proprietor, tenure-\nholder, 1[raiyat, under-raiyat] or other intermediary and any rights or \nprivileges in respect of land revenue.] \n2[31B. Validation of certain Acts and Regulations.—Without \nprejudice to the generality of the provisions contained in article 31A, none of \nthe Acts and Regulations specified in the Ninth Schedule nor any of the \nprovisions thereof shall be deemed to be void, or ever to have become void, on \nthe ground that such Act, Regulation or provision is inconsistent with, or takes \naway or abridges any of the rights conferred by, any provisions of this Part, and \nnotwithstanding any judgment, decree or order of any court or Tribunal to the \ncontrary, each of the said Acts and Regulations shall, subject to the power of \nany competent Legislature to repeal or amend it, continue in",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1765866712
+          },
+          {
+            "id": "input_20250807_111605.pdf_249_d5768eab",
+            "score": 0.089845486,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVIII.—EMERGENCY PROVISIONS)\n218\n(c) shall cease to operate at the expiration of two months, unless \nbefore the expiration of that period it has been approved by resolutions \nof both Houses of Parliament:\nProvided that if any such Proclamation is issued at a time when the \nHouse of the People has been dissolved or the dissolution of the House of the \nPeople takes place during\nthe\nperiod of\ntwo months referred to in \nsub-clause (c), and if a resolution approving the Proclamation has been passed \nby the Council of States, but no resolution with respect to such Proclamation \nhas been passed by the House of the People before the expiration of that period, \nthe Proclamation shall cease to operate at the expiration of thirty days from the \ndate on which the House of the People first sits after its reconstitution unless \nbefore the expiration of the said period of thirty days a resolution approving the \nProclamation has been also passed by the House of the Peop",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.13984548600000002
+          },
+          {
+            "id": "input_20250807_111605.pdf_300_a1ff1662",
+            "score": 0.0801924,
+            "text": "THE CONSTITUTION OF INDIA\n(Second Schedule) \n268\n11. In this Part, unless the context otherwise requires,—\n(a) the expression “Chief Justice” includes an acting Chief Justice, \nand a “Judge” includes an ad hoc Judge; \n(b) “actual service” includes— \n(i) time spent by a Judge on duty as a Judge or in the performance \nof such other functions as he may at the request of the President \nundertake to discharge;\n(ii) vacations, excluding any time during which the Judge is absent \non leave; and\n(iii) joining time on transfer from a High Court to the Supreme \nCourt or from one High Court to another. \nPART E\nPROVISIONS AS TO THE COMPTROLLER AND AUDITOR-GENERAL OF INDIA \n12. (1) There shall be paid to the Comptroller and Auditor-General of \nIndia a salary at the rate of *four thousand rupees per mensem.\n(2) The person who was holding office immediately before the \ncommencement of this Constitution as Auditor-General of India and has \nbecome on such commencement the Comptroller and Auditor-General",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.13019239999999999
+          },
+          {
+            "id": "input_20250807_111605.pdf_138_40fe0f49",
+            "score": 0.0626702085,
+            "text": "THE CONSTITUTION OF INDIA\n(Part VI.—The States) \n109\nbe, and the posting and promotion of, district judges in any State shall be made \nby the Governor of the State in consultation with the High Court exercising \njurisdiction in relation to such State.\n(2) A person not already in the service of the Union or of the State shall \nonly be eligible to be appointed a district judge if he has been for not less than \nseven years an advocate or a pleader and is recommended by the High Court \nfor appointment. \n1[233A. Validation of appointments of, and judgments, etc., \ndelivered by, certain district judges.—Notwithstanding any judgment, \ndecree or order of any court,—\n(a) (i) no appointment of any person already in the judicial service \nof a State or of any person who has been for not less than seven years an \nadvocate or a pleader, to be a district judge in that State, and\n(ii) no posting, promotion or transfer of any such person as a \ndistrict judge, made at any time before the commencement of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.11267020850000001
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context does not contain any information regarding Article 17 of the Constitution or what it abolishes. The available documents discuss other articles such as 312, 31B, 233A, and provisions related to emergency, all-India services, and the Comptroller and Auditor-General, but none refer to Article 17.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What are the key ideals mentioned in the Preamble of the Constitution of India?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.0866075,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1366075
+          },
+          {
+            "id": "input_20250807_111605.pdf_267_9e0be403",
+            "score": 0.0807849,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XXI.—Temporary, Transitional and Special Provisions)\n236\n(ii) the Minister for Tuensang affairs shall deal with, and have \ndirect access to the Governor on, all matters relating to the Tuensang \ndistrict but he shall keep the Chief Minister informed about the same;\n(f) notwithstanding anything in the foregoing provisions of this \nclause, the final decision on all matters relating to the Tuensang district \nshall be made by the Governor in his discretion;\n(g) in articles 54 and 55 and clause (4) of article 80, references to the \nelected members of the Legislative Assembly of a State or to each such \nmember shall include references to the members or member of the \nLegislative Assembly of Nagaland elected by the regional council \nestablished under this article;\n(h) in article 170—\n(i) clause (1) shall, in relation to the Legislative Assembly of \nNagaland, have effect as if for the word “sixty”, the word “forty-\nsix” had been substituted; \n(ii) in the said cl",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1307849
+          },
+          {
+            "id": "input_20250807_111605.pdf_401_ba7e1475",
+            "score": 0.0740199611,
+            "text": "THE CONSTITUTION OF INDIA\n(Appendix I) \n367\n1 \n2 \n3\n4 \n5 \n 6 \n26. \nFalnapur \nSitalkuchi \nPatgram \n64 \n505.56\n27. \nAmjhol \nSitalkuchi \nHatibandha \n57 \n1.25\n28.\nKismat Batrigachh\nDinhata\nKaliganj\n82\n209.95\n29. \nDurgapur \nDinhata \nKaliganj\n83 \n20.96\n30.\nBansua Khamar \nGitaldaha \nDinhata\nLalmonirhat\n1\n24.54\n31.\nPoaturkuthi\nDinhata\nLalmonirhat\n37\n589.94\n32.\nPaschim Bakalir \nChhara\nDinhata\nBhurungamari\n38\n151.98\n33.\nMadhya Bakalir \nChhara\nDinhata\nBhurungamari\n39\n32.72\n34.\nPurba Bakalir \nChhara\nDinhata\nBhurungamari\n40\n12.23\n35.\nMadhya Masaldanga\nDinhata\nBhurungamari\n3\n136.66\n36.\nMadhya Chhit \nMasaldanga\nDinhata\nBhurungamari\n8\n11.87\n37.\nPaschim Chhit \nMasaldanga\nDinhata\nBhurungamari\n7\n7.6\n38.\nUttar Masaldanga\nDinhata\nBhurungamari\n2\n27.29\n39.\nKachua\nDinhata\nBhurungamari\n5\n119.74\n40.\nUttar Bansjani\nTufanganj\nBhurungamari\n1\n47.17\n41.\nChhat Tilai\nTufanganj\nBhurungamari\n17\n81.56\nB. Enclaves with Fragmented Chhits\n42.\n(i) Nalgram\nSitalkuchi\nPatgarm\n65\n1397.34\n(ii) Nalgram \n(Fragment)\nSitalkuchi\nPatg",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1240199611
+          },
+          {
+            "id": "input_20250807_111605.pdf_136_6414ee9a",
+            "score": 0.0732107237,
+            "text": "THE CONSTITUTION OF INDIA\n(Part VI.—The States) \n107\n1[228A. Special provisions as to disposal of questions relating to \nconstitutional validity of State laws.].—Omitted by the Constitution (Forty-\nthird Amendment) Act, 1977, s. 10 (w.e.f. 13-4-1978). \n229. Officers and servants and the expenses of High Courts.—(1) \nAppointments of officers and servants of a High Court shall be made by the Chief \nJustice of the Court or such other Judge or officer of the Court as he may direct:\nProvided that the Governor of the State 2*** may by rule require that in \nsuch cases as may be specified in the rule no person not already attached to the \nCourt shall be appointed to any office connected with the Court save after \nconsultation with the State Public Service Commission.\n(2) Subject to the provisions of any law made by the Legislature of the \nState, the conditions of service of officers and servants of a High Court shall be \nsuch as may be prescribed by rules made by the Chief Justice of the Court",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1232107237
+          },
+          {
+            "id": "input_20250807_111605.pdf_138_40fe0f49",
+            "score": 0.0703921467,
+            "text": "THE CONSTITUTION OF INDIA\n(Part VI.—The States) \n109\nbe, and the posting and promotion of, district judges in any State shall be made \nby the Governor of the State in consultation with the High Court exercising \njurisdiction in relation to such State.\n(2) A person not already in the service of the Union or of the State shall \nonly be eligible to be appointed a district judge if he has been for not less than \nseven years an advocate or a pleader and is recommended by the High Court \nfor appointment. \n1[233A. Validation of appointments of, and judgments, etc., \ndelivered by, certain district judges.—Notwithstanding any judgment, \ndecree or order of any court,—\n(a) (i) no appointment of any person already in the judicial service \nof a State or of any person who has been for not less than seven years an \nadvocate or a pleader, to be a district judge in that State, and\n(ii) no posting, promotion or transfer of any such person as a \ndistrict judge, made at any time before the commencement of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.12039214670000001
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context, which includes various sections and articles of The Constitution of India, does not contain information about the Preamble of the Constitution or its key ideals. The excerpts focus on specific administrative services, state provisions, and judicial appointments rather than the foundational principles outlined in the Preamble.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Under which Article can Parliament alter the boundaries, area, or name of an existing State?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_249_d5768eab",
+            "score": 0.0778844208,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVIII.—EMERGENCY PROVISIONS)\n218\n(c) shall cease to operate at the expiration of two months, unless \nbefore the expiration of that period it has been approved by resolutions \nof both Houses of Parliament:\nProvided that if any such Proclamation is issued at a time when the \nHouse of the People has been dissolved or the dissolution of the House of the \nPeople takes place during\nthe\nperiod of\ntwo months referred to in \nsub-clause (c), and if a resolution approving the Proclamation has been passed \nby the Council of States, but no resolution with respect to such Proclamation \nhas been passed by the House of the People before the expiration of that period, \nthe Proclamation shall cease to operate at the expiration of thirty days from the \ndate on which the House of the People first sits after its reconstitution unless \nbefore the expiration of the said period of thirty days a resolution approving the \nProclamation has been also passed by the House of the Peop",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1778844208
+          },
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.112575926,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.162575926
+          },
+          {
+            "id": "input_20250807_111605.pdf_7_839e331b",
+            "score": 0.0715616271,
+            "text": "Contents\nARTICLES\n(vi)\nConduct of Government Business \n77.\nConduct of business of the Government of India.\n78.\nDuties of Prime Minister as respects the furnishing of \ninformation to the President, etc.\nCHAPTER II.\nPARLIAMENT \nGeneral \n79. \nConstitution of Parliament.\n80.\nComposition of the Council of States.\n81.\nComposition of the House of the People.\n82. \nReadjustment after each census. \n83. \nDuration of Houses of Parliament. \n84. \nQualification for membership of Parliament.\n85.\nSessions of Parliament, prorogation and dissolution.\n86.\nRight of President to address and send messages to Houses.\n87.\nSpecial address by the President.\n88.\nRights of Ministers and Attorney-General as respects Houses.\nOfficers of Parliament\n89.\nThe Chairman and Deputy Chairman of the Council of States.\n90.\nVacation and resignation of, and removal from, the office of \nDeputy Chairman.\n91.\nPower of the Deputy Chairman or other person to perform the \nduties of the office of, or to act as, Chairman.\n92.\nThe Chair",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1215616271
+          },
+          {
+            "id": "input_20250807_111605.pdf_167_fcc1ff8c",
+            "score": 0.0851854682,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IXB.—Co-operative Societies)\n138\n243ZJ. Number and term of members of board and its office \nbearers.—(1) The board shall consist of such number of directors as may be \nprovided by the Legislature of a State, by law:\nProvided that the maximum number of directors of a co-operative \nsociety shall not exceed twenty-one: \nProvided further that the Legislature of a State shall, by law, provide for \nthe reservation of one seat for the Scheduled Castes or the Scheduled Tribes \nand two seats for women on board of every co-operative society consisting of \nindividuals as members and having members from such class of category of \npersons. \n(2) The term of office of elected members of the board and its office \nbearers shall be five years from the date of election and the term of office \nbearers shall be conterminous with the term of the board: \nProvided that the board may fill a casual vacancy on the board by \nnomination out of the same class of members in respect of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0851854682
+          },
+          {
+            "id": "input_20250807_111605.pdf_138_40fe0f49",
+            "score": 0.0798839554,
+            "text": "THE CONSTITUTION OF INDIA\n(Part VI.—The States) \n109\nbe, and the posting and promotion of, district judges in any State shall be made \nby the Governor of the State in consultation with the High Court exercising \njurisdiction in relation to such State.\n(2) A person not already in the service of the Union or of the State shall \nonly be eligible to be appointed a district judge if he has been for not less than \nseven years an advocate or a pleader and is recommended by the High Court \nfor appointment. \n1[233A. Validation of appointments of, and judgments, etc., \ndelivered by, certain district judges.—Notwithstanding any judgment, \ndecree or order of any court,—\n(a) (i) no appointment of any person already in the judicial service \nof a State or of any person who has been for not less than seven years an \nadvocate or a pleader, to be a district judge in that State, and\n(ii) no posting, promotion or transfer of any such person as a \ndistrict judge, made at any time before the commencement of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0798839554
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context from the Constitution of India does not contain information detailing the specific Article under which Parliament can alter the boundaries, area, or name of an existing State. The snippets focus on emergency provisions, all-India services, parliamentary structure, cooperative societies, and district judges, none of which address the query directly.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "According to Article 24, children below what age are prohibited from working in hazardous industries like factories or mines?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_283_1de3402e",
+            "score": 0.0761267245,
+            "text": "252\nPART XXII\nSHORT TITLE, COMMENCEMENT, 1[AUTHORITATIVE \nTEXT IN HINDI] AND REPEALS\n393. Short title.—This Constitution may be called the Constitution of \nIndia. \n394. Commencement.—This article and articles 5, 6, 7, 8, 9, 60, 324, \n366, 367, 379, 380, 388, 391, 392 and 393 shall come into force at once, and \nthe remaining provisions of this Constitution shall come into force on the \ntwenty-sixth day of January, 1950, which day is referred to in this Constitution \nas the commencement of this Constitution. \n2[394A. Authoritative text in the Hindi language.—(1) The President \nshall cause to be published under his authority,— \n(a) the translation of this Constitution in the Hindi language, \nsigned by the members of the Constituent Assembly, with such \nmodifications as may be necessary to bring it in conformity with the \nlanguage, style and terminology adopted in the authoritative texts of \nCentral Acts in the Hindi language, and incorporating therein all the \namendments of this Constitut",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1261267245
+          },
+          {
+            "id": "input_20250807_111605.pdf_39_106c95ef",
+            "score": 0.0866555944,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n10\n(e) to reside and settle in any part of the territory of India; 1[and]\n2[(f)* * * * *] \n(g) to practise any profession, or to carry on any occupation, trade or \nbusiness. \n3[(2) Nothing in sub-clause (a) of clause (1) shall affect the operation of \nany existing law, or prevent the State from making any law, in so far as such \nlaw imposes reasonable restrictions on the exercise of the right conferred by the \nsaid sub-clause in the interests of 4[the sovereignty and integrity of India], the \nsecurity of the State, friendly relations with foreign States, public order, \ndecency or morality, or in relation to contempt of court, defamation or \nincitement to an offence.]\n(3) Nothing in sub-clause (b) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of 4[the sovereignty and integrity of India or]\npublic order, reasonable res",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0866555944
+          },
+          {
+            "id": "input_20250807_111605.pdf_6_b6ba0168",
+            "score": 0.0735730156,
+            "text": "Contents\nARTICLES\n(v)\n55.\nManner of election of President.\n56.\nTerm of office of President.\n57. \nEligibility for re-election. \n58. \nQualifications for election as President. \n59. \nConditions of President’s office. \n60.\nOath or affirmation by the President.\n61.\nProcedure for impeachment of the President.\n62. \nTime of holding election to fill vacancy in the office of President \nand the term of office of person elected to fill casual vacancy.\n63. \nThe Vice-President of India.\n64. \nThe Vice-President to be ex officio Chairman of the Council of \nStates. \n65. \nThe Vice-President to act as President or to discharge his \nfunctions during casual vacancies in the office, or during the \nabsence, of President.\n66.\nElection of Vice-President.\n67.\nTerm of office of Vice-President.\n68.\nTime of holding election to fill vacancy in the office of Vice-President \nand the term of office of person elected to fill casual vacancy. \n69.\nOath or affirmation by the Vice-President.\n70.\nDischarge of President’s fu",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0735730156
+          },
+          {
+            "id": "input_20250807_111605.pdf_73_c4fe8335",
+            "score": 0.0728065819,
+            "text": "THE CONSTITUTION OF INDIA\n(Part V.—The Union)\n44\nConduct of Business\n99. Oath or affirmation by members.—Every member of either House \nof Parliament shall, before taking his seat, make and subscribe before the \nPresident, or some person appointed in that behalf by him, an oath or \naffirmation according to the form set out for the purpose in the Third Schedule. \n100. Voting in Houses, power of Houses to act notwithstanding \nvacancies and quorum.—(1) Save as otherwise provided in this Constitution, \nall questions at any sitting of either House or joint sitting of the Houses shall be \ndetermined by a majority of votes of the members present and voting, other \nthan the Speaker or person acting as Chairman or Speaker.\nThe Chairman or Speaker, or person acting as such, shall not vote in the \nfirst instance, but shall have and exercise a casting vote in the case of an \nequality of votes.\n(2) Either House of Parliament shall have power to act notwithstanding \nany vacancy in the membership ther",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0728065819
+          },
+          {
+            "id": "input_20250807_111605.pdf_31_9cfe02ae",
+            "score": 0.0678864121,
+            "text": "2\nPART I\nTHE UNION AND ITS TERRITORY\n1. Name and territory of the Union.—(1) India, that is Bharat, \nshall be a Union of States.\n1[(2) The States and the territories thereof shall be as specified in \nthe First Schedule.]\n(3) The territory of India shall comprise—\n(a) the territories of the States; \n2[(b) the Union territories specified in the First Schedule; \nand]\n(c) such other territories as may be acquired.\n2. Admission or establishment of new States.—Parliament may \nby law admit into the Union, or establish, new States on such terms and \nconditions as it thinks fit.\n3[2A. [Sikkim to be associated with the Union.] —Omitted by the \nConstitution (Thirty-sixth Amendment) Act, 1975, s. 5 (w.e.f. 26-4-1975).]\n3. Formation of new States and alteration of areas, \nboundaries or names of existing States.—Parliament may by law—\n(a) form a new State by separation of territory from any \nState or by uniting two or more States or parts of States or by \nuniting any territory to a part of any State",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0678864121
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy documents do not contain information regarding Article 24 or the prohibited age for children working in hazardous industries like factories or mines. Therefore, I cannot answer your query based on the given context.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What is the significance of Article 21 in the Indian Constitution?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.105065651,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.255065651
+          },
+          {
+            "id": "input_20250807_111605.pdf_267_9e0be403",
+            "score": 0.0731703192,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XXI.—Temporary, Transitional and Special Provisions)\n236\n(ii) the Minister for Tuensang affairs shall deal with, and have \ndirect access to the Governor on, all matters relating to the Tuensang \ndistrict but he shall keep the Chief Minister informed about the same;\n(f) notwithstanding anything in the foregoing provisions of this \nclause, the final decision on all matters relating to the Tuensang district \nshall be made by the Governor in his discretion;\n(g) in articles 54 and 55 and clause (4) of article 80, references to the \nelected members of the Legislative Assembly of a State or to each such \nmember shall include references to the members or member of the \nLegislative Assembly of Nagaland elected by the regional council \nestablished under this article;\n(h) in article 170—\n(i) clause (1) shall, in relation to the Legislative Assembly of \nNagaland, have effect as if for the word “sixty”, the word “forty-\nsix” had been substituted; \n(ii) in the said cl",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1731703192
+          },
+          {
+            "id": "input_20250807_111605.pdf_136_6414ee9a",
+            "score": 0.0796385184,
+            "text": "THE CONSTITUTION OF INDIA\n(Part VI.—The States) \n107\n1[228A. Special provisions as to disposal of questions relating to \nconstitutional validity of State laws.].—Omitted by the Constitution (Forty-\nthird Amendment) Act, 1977, s. 10 (w.e.f. 13-4-1978). \n229. Officers and servants and the expenses of High Courts.—(1) \nAppointments of officers and servants of a High Court shall be made by the Chief \nJustice of the Court or such other Judge or officer of the Court as he may direct:\nProvided that the Governor of the State 2*** may by rule require that in \nsuch cases as may be specified in the rule no person not already attached to the \nCourt shall be appointed to any office connected with the Court save after \nconsultation with the State Public Service Commission.\n(2) Subject to the provisions of any law made by the Legislature of the \nState, the conditions of service of officers and servants of a High Court shall be \nsuch as may be prescribed by rules made by the Chief Justice of the Court",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1296385184
+          },
+          {
+            "id": "input_20250807_111605.pdf_337_119d0b55",
+            "score": 0.0756869838,
+            "text": "THE CONSTITUTION OF INDIA\n(Sixth Schedule)\n303\n119. Transitional provisions.—(1) As soon as possible after the\ncommencement of this Constitution the Governor shall take steps for the \nconstitution of a District Council for each autonomous district in the State \nunder this Schedule and, until a District Council is so constituted for an \nautonomous district, the administration of such district shall be vested in the \nGovernor and the following provisions shall apply to the administration of \nthe areas within such district instead of the foregoing provisions of this \nSchedule, namely:— \n(a) no Act of Parliament or of the Legislature of the State shall\napply to any such area unless the Governor by public notification so \ndirects; and the Governor in giving such a direction with respect to \nany Act may direct that the Act shall, in its application to the area or \nto any specified part thereof, have effect subject to such exceptions or \nmodifications as he thinks fit; \n(b) the Governor may m",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.12568698379999999
+          },
+          {
+            "id": "input_20250807_111605.pdf_39_106c95ef",
+            "score": 0.0741382912,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n10\n(e) to reside and settle in any part of the territory of India; 1[and]\n2[(f)* * * * *] \n(g) to practise any profession, or to carry on any occupation, trade or \nbusiness. \n3[(2) Nothing in sub-clause (a) of clause (1) shall affect the operation of \nany existing law, or prevent the State from making any law, in so far as such \nlaw imposes reasonable restrictions on the exercise of the right conferred by the \nsaid sub-clause in the interests of 4[the sovereignty and integrity of India], the \nsecurity of the State, friendly relations with foreign States, public order, \ndecency or morality, or in relation to contempt of court, defamation or \nincitement to an offence.]\n(3) Nothing in sub-clause (b) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of 4[the sovereignty and integrity of India or]\npublic order, reasonable res",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1241382912
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy documents do not contain any information regarding Article 21 of the Indian Constitution. Therefore, its significance cannot be determined from the given context.",
+          "source_document": "N/A",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Article 15 prohibits discrimination on certain grounds. However, which groups can the State make special provisions for under this Article?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_7_839e331b",
+            "score": 0.0895921439,
+            "text": "Contents\nARTICLES\n(vi)\nConduct of Government Business \n77.\nConduct of business of the Government of India.\n78.\nDuties of Prime Minister as respects the furnishing of \ninformation to the President, etc.\nCHAPTER II.\nPARLIAMENT \nGeneral \n79. \nConstitution of Parliament.\n80.\nComposition of the Council of States.\n81.\nComposition of the House of the People.\n82. \nReadjustment after each census. \n83. \nDuration of Houses of Parliament. \n84. \nQualification for membership of Parliament.\n85.\nSessions of Parliament, prorogation and dissolution.\n86.\nRight of President to address and send messages to Houses.\n87.\nSpecial address by the President.\n88.\nRights of Ministers and Attorney-General as respects Houses.\nOfficers of Parliament\n89.\nThe Chairman and Deputy Chairman of the Council of States.\n90.\nVacation and resignation of, and removal from, the office of \nDeputy Chairman.\n91.\nPower of the Deputy Chairman or other person to perform the \nduties of the office of, or to act as, Chairman.\n92.\nThe Chair",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.13959214390000002
+          },
+          {
+            "id": "input_20250807_111605.pdf_228_8f3eddea",
+            "score": 0.0894373283,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n197\n(2) Subject to the provisions of any law made in this behalf by \nParliament, the Commission shall consist of a Chairperson, Vice-Chairperson \nand three other Members and the conditions of service and tenure of office of \nthe Chairperson, Vice-Chairperson and other Members so appointed shall be \nsuch as the President may by rule determine. \n(3) The Chairperson, Vice-Chairperson and other Members of the \nCommission shall be appointed by the President by warrant under his hand and seal. \n(4) The Commission shall have the power to regulate its own procedure.\n(5) It shall be the duty of the Commission—\n(a) to investigate and monitor all matters relating to the \nsafeguards provided for the Scheduled Tribes under this Constitution or \nunder any other law for the time being in force or under any order of the \nGovernment and to evaluate the working of such safeguards;\n(b) to inquire into specific complaint",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1394373283
+          },
+          {
+            "id": "input_20250807_111605.pdf_167_fcc1ff8c",
+            "score": 0.0824194625,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IXB.—Co-operative Societies)\n138\n243ZJ. Number and term of members of board and its office \nbearers.—(1) The board shall consist of such number of directors as may be \nprovided by the Legislature of a State, by law:\nProvided that the maximum number of directors of a co-operative \nsociety shall not exceed twenty-one: \nProvided further that the Legislature of a State shall, by law, provide for \nthe reservation of one seat for the Scheduled Castes or the Scheduled Tribes \nand two seats for women on board of every co-operative society consisting of \nindividuals as members and having members from such class of category of \npersons. \n(2) The term of office of elected members of the board and its office \nbearers shall be five years from the date of election and the term of office \nbearers shall be conterminous with the term of the board: \nProvided that the board may fill a casual vacancy on the board by \nnomination out of the same class of members in respect of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0824194625
+          },
+          {
+            "id": "input_20250807_111605.pdf_39_106c95ef",
+            "score": 0.0808052644,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n10\n(e) to reside and settle in any part of the territory of India; 1[and]\n2[(f)* * * * *] \n(g) to practise any profession, or to carry on any occupation, trade or \nbusiness. \n3[(2) Nothing in sub-clause (a) of clause (1) shall affect the operation of \nany existing law, or prevent the State from making any law, in so far as such \nlaw imposes reasonable restrictions on the exercise of the right conferred by the \nsaid sub-clause in the interests of 4[the sovereignty and integrity of India], the \nsecurity of the State, friendly relations with foreign States, public order, \ndecency or morality, or in relation to contempt of court, defamation or \nincitement to an offence.]\n(3) Nothing in sub-clause (b) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of 4[the sovereignty and integrity of India or]\npublic order, reasonable res",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0808052644
+          },
+          {
+            "id": "input_20250807_111605.pdf_215_4d89f8fe",
+            "score": 0.0759487897,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIVA.—Tribunals)\n185\n1[(j)] any matter incidental to any of the matters specified in \nsub-clauses (a) to 2[(i)]. \n(3) A law made under clause (1) may—\n(a) provide for the establishment of a hierarchy of tribunals;\n(b) specify the jurisdiction, powers (including the power to punish for \ncontempt) and authority which may be exercised by each of the said \ntribunals;\n(c) provide for the procedure (including provisions as to limitation \nand rules of evidence) to be followed by the said tribunals;\n(d) exclude the jurisdiction of all courts, except the jurisdiction of the \nSupreme Court under article 136, with respect to all or any of the matters \nfalling within the jurisdiction of the said tribunals; \n(e) provide for the transfer to each such tribunal of any cases pending \nbefore any court or any other authority immediately before the \nestablishment of such tribunal as would have been within the jurisdiction \nof such tribunal if the causes of action on which s",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0759487897
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the provided policy context from the Constitution of India, the State can make special provisions for groups such as Scheduled Castes, Scheduled Tribes, and women. This is exemplified by the mandate for State Legislatures to provide reservations for these groups on the boards of co-operative societies, and the existence of safeguards for Scheduled Tribes.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Which Article allows Parliament to regulate the right of citizenship and override previous articles on citizenship (Articles 5 to 10)?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_249_d5768eab",
+            "score": 0.091164656,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVIII.—EMERGENCY PROVISIONS)\n218\n(c) shall cease to operate at the expiration of two months, unless \nbefore the expiration of that period it has been approved by resolutions \nof both Houses of Parliament:\nProvided that if any such Proclamation is issued at a time when the \nHouse of the People has been dissolved or the dissolution of the House of the \nPeople takes place during\nthe\nperiod of\ntwo months referred to in \nsub-clause (c), and if a resolution approving the Proclamation has been passed \nby the Council of States, but no resolution with respect to such Proclamation \nhas been passed by the House of the People before the expiration of that period, \nthe Proclamation shall cease to operate at the expiration of thirty days from the \ndate on which the House of the People first sits after its reconstitution unless \nbefore the expiration of the said period of thirty days a resolution approving the \nProclamation has been also passed by the House of the Peop",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.191164656
+          },
+          {
+            "id": "input_20250807_111605.pdf_176_e2987d07",
+            "score": 0.0700361654,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XI.—Relations between the Union and the States) \n146\n(2) Parliament has exclusive power to make laws with respect to goods \nand services tax where the supply of goods, or of services, or both takes place \nin the course of inter-State trade or commerce.\nExplanation.—The provisions of this article, shall, in respect of goods \nand services tax referred to in clause (5) of article 279A, take effect from the \ndate recommended by the Goods and Services Tax Council.] \n247. Power of Parliament to provide for the establishment of certain \nadditional courts.—Notwithstanding anything in this Chapter, Parliament may \nby law provide for the establishment of any additional courts for the better \nadministration of laws made by Parliament or of any existing laws with respect \nto a matter enumerated in the Union List.\n248. Residuary powers of legislation.—(1) 1[Subject to article 246A, \nParliament] has exclusive power to make any law with respect to any matter \nnot enume",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1200361654
+          },
+          {
+            "id": "input_20250807_111605.pdf_215_4d89f8fe",
+            "score": 0.0671266168,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIVA.—Tribunals)\n185\n1[(j)] any matter incidental to any of the matters specified in \nsub-clauses (a) to 2[(i)]. \n(3) A law made under clause (1) may—\n(a) provide for the establishment of a hierarchy of tribunals;\n(b) specify the jurisdiction, powers (including the power to punish for \ncontempt) and authority which may be exercised by each of the said \ntribunals;\n(c) provide for the procedure (including provisions as to limitation \nand rules of evidence) to be followed by the said tribunals;\n(d) exclude the jurisdiction of all courts, except the jurisdiction of the \nSupreme Court under article 136, with respect to all or any of the matters \nfalling within the jurisdiction of the said tribunals; \n(e) provide for the transfer to each such tribunal of any cases pending \nbefore any court or any other authority immediately before the \nestablishment of such tribunal as would have been within the jurisdiction \nof such tribunal if the causes of action on which s",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1171266168
+          },
+          {
+            "id": "input_20250807_111605.pdf_167_fcc1ff8c",
+            "score": 0.0759898722,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IXB.—Co-operative Societies)\n138\n243ZJ. Number and term of members of board and its office \nbearers.—(1) The board shall consist of such number of directors as may be \nprovided by the Legislature of a State, by law:\nProvided that the maximum number of directors of a co-operative \nsociety shall not exceed twenty-one: \nProvided further that the Legislature of a State shall, by law, provide for \nthe reservation of one seat for the Scheduled Castes or the Scheduled Tribes \nand two seats for women on board of every co-operative society consisting of \nindividuals as members and having members from such class of category of \npersons. \n(2) The term of office of elected members of the board and its office \nbearers shall be five years from the date of election and the term of office \nbearers shall be conterminous with the term of the board: \nProvided that the board may fill a casual vacancy on the board by \nnomination out of the same class of members in respect of",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0759898722
+          },
+          {
+            "id": "input_20250807_111605.pdf_47_8bfe3f66",
+            "score": 0.0708837956,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n18\n(b) the expression “rights”, in relation to an estate, shall include any \nrights vesting in a proprietor, sub-proprietor, under-proprietor, tenure-\nholder, 1[raiyat, under-raiyat] or other intermediary and any rights or \nprivileges in respect of land revenue.] \n2[31B. Validation of certain Acts and Regulations.—Without \nprejudice to the generality of the provisions contained in article 31A, none of \nthe Acts and Regulations specified in the Ninth Schedule nor any of the \nprovisions thereof shall be deemed to be void, or ever to have become void, on \nthe ground that such Act, Regulation or provision is inconsistent with, or takes \naway or abridges any of the rights conferred by, any provisions of this Part, and \nnotwithstanding any judgment, decree or order of any court or Tribunal to the \ncontrary, each of the said Acts and Regulations shall, subject to the power of \nany competent Legislature to repeal or amend it, continue in",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.0708837956
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the provided policy context, there is no mention of any specific Article that allows Parliament to regulate the right of citizenship or override Articles 5 to 10. The provided documents discuss various other constitutional provisions, such as emergency powers, parliamentary powers related to taxation and courts, tribunals, co-operative societies, and fundamental rights, but none address citizenship laws.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What restrictions can the State impose on the right to freedom of speech under Article 19(2)?",
+        "search_results": [
+          {
+            "id": "input_20250807_111605.pdf_205_0eb2c66c",
+            "score": 0.105585262,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n175\n312. All-India services.—(1) Notwithstanding anything in 1[Chapter VI \nof Part VI or Part XI], if the Council of States has declared by resolution \nsupported by not less than two-thirds of the members present and voting that it \nis necessary or expedient in the national interest so to do, Parliament may by \nlaw provide for the creation of one or more all India services 2[(including an \nall-India judicial service)] common to the Union and the States, and, subject to \nthe other provisions of this Chapter, regulate the recruitment, and the \nconditions of service of persons appointed, to any such service.\n(2) The services known at the commencement of this Constitution as the \nIndian Administrative Service and the Indian Police Service shall be deemed to \nbe services created by Parliament under this article.\n2[(3) The all-India judicial service referred to in clause (1) shall not \ninclude any post inferior to",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.205585262
+          },
+          {
+            "id": "input_20250807_111605.pdf_215_4d89f8fe",
+            "score": 0.0800453275,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIVA.—Tribunals)\n185\n1[(j)] any matter incidental to any of the matters specified in \nsub-clauses (a) to 2[(i)]. \n(3) A law made under clause (1) may—\n(a) provide for the establishment of a hierarchy of tribunals;\n(b) specify the jurisdiction, powers (including the power to punish for \ncontempt) and authority which may be exercised by each of the said \ntribunals;\n(c) provide for the procedure (including provisions as to limitation \nand rules of evidence) to be followed by the said tribunals;\n(d) exclude the jurisdiction of all courts, except the jurisdiction of the \nSupreme Court under article 136, with respect to all or any of the matters \nfalling within the jurisdiction of the said tribunals; \n(e) provide for the transfer to each such tribunal of any cases pending \nbefore any court or any other authority immediately before the \nestablishment of such tribunal as would have been within the jurisdiction \nof such tribunal if the causes of action on which s",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.18004532750000002
+          },
+          {
+            "id": "input_20250807_111605.pdf_6_b6ba0168",
+            "score": 0.0768514872,
+            "text": "Contents\nARTICLES\n(v)\n55.\nManner of election of President.\n56.\nTerm of office of President.\n57. \nEligibility for re-election. \n58. \nQualifications for election as President. \n59. \nConditions of President’s office. \n60.\nOath or affirmation by the President.\n61.\nProcedure for impeachment of the President.\n62. \nTime of holding election to fill vacancy in the office of President \nand the term of office of person elected to fill casual vacancy.\n63. \nThe Vice-President of India.\n64. \nThe Vice-President to be ex officio Chairman of the Council of \nStates. \n65. \nThe Vice-President to act as President or to discharge his \nfunctions during casual vacancies in the office, or during the \nabsence, of President.\n66.\nElection of Vice-President.\n67.\nTerm of office of Vice-President.\n68.\nTime of holding election to fill vacancy in the office of Vice-President \nand the term of office of person elected to fill casual vacancy. \n69.\nOath or affirmation by the Vice-President.\n70.\nDischarge of President’s fu",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1768514872
+          },
+          {
+            "id": "input_20250807_111605.pdf_87_72ebc06a",
+            "score": 0.0822030678,
+            "text": "THE CONSTITUTION OF INDIA\n(Part V.—The Union)\n58\n1[(2A) The age of a Judge of the Supreme Court shall be determined by \nsuch authority and in such manner as Parliament may by law provide.]\n(3) A person shall not be qualified for appointment as a Judge of the \nSupreme Court unless he is a citizen of India and— \n(a) has been for at least five years a Judge of a High Court or of \ntwo or more such Courts in succession; or\n(b) has been for at least ten years an advocate of a High Court or \nof two or more such Courts in succession; or\n(c) is, in the opinion of the President, a distinguished jurist.\nExplanation I.—In this clause \"High Court'' means a High Court which \nexercises, or which at any time before the commencement of this Constitution \nexercised, jurisdiction in any part of the territory of India.\nExplanation II.—In computing for the purpose of this clause the period \nduring which a person has been an advocate, any period during which a person has \nheld judicial office not inferior t",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.13220306780000002
+          },
+          {
+            "id": "input_20250807_111605.pdf_249_d5768eab",
+            "score": 0.0687874,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVIII.—EMERGENCY PROVISIONS)\n218\n(c) shall cease to operate at the expiration of two months, unless \nbefore the expiration of that period it has been approved by resolutions \nof both Houses of Parliament:\nProvided that if any such Proclamation is issued at a time when the \nHouse of the People has been dissolved or the dissolution of the House of the \nPeople takes place during\nthe\nperiod of\ntwo months referred to in \nsub-clause (c), and if a resolution approving the Proclamation has been passed \nby the Council of States, but no resolution with respect to such Proclamation \nhas been passed by the House of the People before the expiration of that period, \nthe Proclamation shall cease to operate at the expiration of thirty days from the \ndate on which the House of the People first sits after its reconstitution unless \nbefore the expiration of the said period of thirty days a resolution approving the \nProclamation has been also passed by the House of the Peop",
+            "document_name": "input_20250807_111605.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.1187874
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy documents, which appear to be excerpts from the Constitution of India, do not contain any information regarding the restrictions the State can impose on the right to freedom of speech under Article 19(2). The extracts cover topics such as All-India services, tribunals, roles of the President and Vice-President, Supreme Court judges, and emergency provisions, but do not address fundamental rights or Article 19.",
+          "source_document": "input_20250807_111605.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 0.643310546875,
+      "query_embedding": {
+        "total": 0.8126754760742188,
+        "individual": [
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187,
+          0.08126754760742187
+        ]
+      },
+      "pdf_processing_and_indexing": 19.20761203765869,
+      "query_processor_initialization": 3.3674330711364746,
+      "query_processing": {
+        "total": 95.93724250793457,
+        "average": 9.593724250793457,
+        "individual": [
+          6.764020204544067,
+          7.844507455825806,
+          8.007604360580444,
+          10.954440832138062,
+          9.40262246131897,
+          10.961171865463257,
+          8.051782131195068,
+          14.907987356185913,
+          10.356008291244507,
+          8.687097549438477
+        ]
+      },
+      "cleanup_index": 1.03444504737854,
+      "total_execution_time": 39.9803900718689
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpfva0vnnb",
+    "api_version": "2.1",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7
+    }
+  },
+  "processing_summary": {
+    "total_questions": 10,
+    "total_time_seconds": 39.9803900718689,
+    "pdf_processing_time": 19.20761203765869,
+    "query_processing_time": 95.93724250793457,
+    "parallel_execution_time": 14.914003133773804,
+    "max_individual_query_time": 14.907987356185913,
+    "embedding_time": 0.8126754760742188
+  },
+  "performance_metrics": {
+    "queries_processed": 10,
+    "parallel_speedup_ratio": 6.4326956114604785,
+    "individual_query_times": [
+      6.764020204544067,
+      7.844507455825806,
+      8.007604360580444,
+      10.954440832138062,
+      9.40262246131897,
+      10.961171865463257,
+      8.051782131195068,
+      14.907987356185913,
+      10.356008291244507,
+      8.687097549438477
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "What is the official name of India according to Ar...",
+        "time_seconds": 6.764020204544067
+      },
+      {
+        "query_index": 1,
+        "query": "Which Article guarantees equality before the law a...",
+        "time_seconds": 7.844507455825806
+      },
+      {
+        "query_index": 2,
+        "query": "What is abolished by Article 17 of the Constitutio...",
+        "time_seconds": 8.007604360580444
+      },
+      {
+        "query_index": 3,
+        "query": "What are the key ideals mentioned in the Preamble ...",
+        "time_seconds": 10.954440832138062
+      },
+      {
+        "query_index": 4,
+        "query": "Under which Article can Parliament alter the bound...",
+        "time_seconds": 9.40262246131897
+      },
+      {
+        "query_index": 5,
+        "query": "According to Article 24, children below what age a...",
+        "time_seconds": 10.961171865463257
+      },
+      {
+        "query_index": 6,
+        "query": "What is the significance of Article 21 in the Indi...",
+        "time_seconds": 8.051782131195068
+      },
+      {
+        "query_index": 7,
+        "query": "Article 15 prohibits discrimination on certain gro...",
+        "time_seconds": 14.907987356185913
+      },
+      {
+        "query_index": 8,
+        "query": "Which Article allows Parliament to regulate the ri...",
+        "time_seconds": 10.356008291244507
+      },
+      {
+        "query_index": 9,
+        "query": "What restrictions can the State impose on the righ...",
+        "time_seconds": 8.687097549438477
+      }
+    ]
+  }
+}

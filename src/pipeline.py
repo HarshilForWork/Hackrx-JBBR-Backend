@@ -515,3 +515,134 @@ def query_documents_sync(
             "query": query,
             "status": "error"
         }
+
+
+async def query_documents_batch_async(
+    queries: List[str], 
+    pinecone_api_key: Optional[str] = None,
+    gemini_api_key: Optional[str] = None,
+    index_name: str = "policy-index",
+    query_embeddings: Optional[List[List[float]]] = None
+) -> List[Dict[str, Any]]:
+    """
+    Asynchronous function to query multiple documents in parallel.
+    
+    Args:
+        queries: List of questions to ask
+        pinecone_api_key: Pinecone API key for vector search
+        gemini_api_key: Gemini API key for LLM processing (optional, uses fallback if None)
+        index_name: Name of the Pinecone index to query
+        query_embeddings: Optional list of precomputed embeddings for each query
+        
+    Returns:
+        List of dictionaries with query results and analysis in the same order as input
+        
+    Example:
+        >>> results = await query_documents_batch_async(
+        ...     ["What is covered?", "What are exclusions?"],
+        ...     pinecone_api_key="your-pinecone-key",
+        ...     gemini_api_key="your-gemini-key"
+        ... )
+        >>> for result in results:
+        ...     print(result["evaluation"]["decision"])
+    """
+    try:
+        from .query_processor import QueryProcessor
+
+        # Validate inputs
+        if not queries:
+            return []
+        
+        # Validate that all queries are non-empty
+        for i, query in enumerate(queries):
+            if not query or not query.strip():
+                return [{
+                    "success": False,
+                    "error": f"Query {i+1} cannot be empty",
+                    "query": query,
+                    "status": "error"
+                }]
+
+        if not pinecone_api_key:
+            return [{
+                "success": False,
+                "error": "Pinecone API key is required for querying",
+                "query": query,
+                "status": "error"
+            } for query in queries]
+
+        # Use dummy key if Gemini API key not provided (fallback mode)
+        if not gemini_api_key:
+            gemini_api_key = "dummy"
+
+        # Initialize query processor once for all queries
+        processor = QueryProcessor(
+            pinecone_api_key=pinecone_api_key,
+            gemini_api_key=gemini_api_key,
+            index_name=index_name
+        )
+
+        # Process queries in batch
+        stripped_queries = [query.strip() for query in queries]
+        results = await processor.process_queries_batch(stripped_queries, query_embeddings)
+        
+        # Add success flag to each result
+        for result in results:
+            result["success"] = result.get("status") == "success"
+
+        return results
+
+    except Exception as e:
+        # Return error for all queries
+        error_result = {
+            "success": False,
+            "error": f"Batch query processing error: {str(e)}",
+            "status": "error"
+        }
+        return [dict(error_result, query=query) for query in queries]
+
+
+def query_documents_batch_sync(
+    queries: List[str], 
+    pinecone_api_key: Optional[str] = None,
+    gemini_api_key: Optional[str] = None,
+    index_name: str = "policy-index",
+    query_embeddings: Optional[List[List[float]]] = None
+) -> List[Dict[str, Any]]:
+    """
+    Synchronous wrapper for batch query processing.
+    
+    Args:
+        queries: List of questions to ask
+        pinecone_api_key: Pinecone API key for vector search
+        gemini_api_key: Gemini API key for LLM processing (optional, uses fallback if None)
+        index_name: Name of the Pinecone index to query
+        query_embeddings: Optional list of precomputed embeddings for each query
+        
+    Returns:
+        List of dictionaries with query results and analysis in the same order as input
+    """
+    import asyncio
+    
+    # Get or create event loop
+    try:
+        loop = asyncio.get_event_loop()
+        if loop.is_running():
+            # If we're already in an async context, we need to run in a new thread
+            import concurrent.futures
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                future = executor.submit(
+                    asyncio.run,
+                    query_documents_batch_async(queries, pinecone_api_key, gemini_api_key, index_name, query_embeddings)
+                )
+                return future.result()
+        else:
+            # We can run directly
+            return loop.run_until_complete(
+                query_documents_batch_async(queries, pinecone_api_key, gemini_api_key, index_name, query_embeddings)
+            )
+    except RuntimeError:
+        # No event loop exists, create a new one
+        return asyncio.run(
+            query_documents_batch_async(queries, pinecone_api_key, gemini_api_key, index_name, query_embeddings)
+        )

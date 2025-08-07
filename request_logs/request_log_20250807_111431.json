@@ -1,0 +1,133 @@
+{
+  "timestamp": "2025-08-07T11:14:59.395521",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201.pdf?sv=2023-01-03&st=2025-07-21T08%3A29%3A02Z&se=2025-09-22T08%3A29%3A00Z&sr=b&sp=r&sig=nzrz1K9Iurt%2BBXom%2FB%2BMPTFMFP3PRnIvEsipAX10Ig4%3D",
+    "questions": [
+      "I have raised a claim for hospitalization for Rs 200,000 with HDFC, and it's approved. My total expenses are Rs 250,000. Can I raise the remaining Rs 50,000 with you?"
+    ],
+    "pdf_filename": "input_20250807_111431.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250807_111431.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "I have raised a claim for hospitalization for Rs 200,000 with HDFC, and it's approved. My total expenses are Rs 250,000. Can I raise the remaining Rs 50,000 with you?",
+        "search_results": [
+          {
+            "id": "input_20250807_111431.pdf_12_2d7d8372",
+            "score": 0.831652045,
+            "text": "3.44. Post-hospitalisation Medical Expenses means medical expenses incurred during the period of 60 days immediately after \nthe insured person is discharged from the hospital provided that: \ni. Such Medical Expenses are for the same condition for which the insured person’s hospitalisation was required, and \nii. The inpatient hospitalisation claim for such hospitalisation is admissible by the Insurance Company. 3.45. Policy means these Policy wordings, the Policy Schedule and any applicable endorsements or extensions attaching to or \nforming part thereof. The Policy contains details of the extent of cover available to the Insured person, what is excluded from \nthe cover and the terms & conditions on which the Policy is issued to the Insured person 3.46. Policy Period means period of one year as mentioned in the schedule for which the Policy is issued. 3.47. Policy Schedule means the Policy Schedule attached to and forming part of Policy. 3.48. Portability means a facility provided to th",
+            "document_name": "input_20250807_111431.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.931652045
+          },
+          {
+            "id": "input_20250807_111431.pdf_16_10bcfaae",
+            "score": 0.847840667,
+            "text": "4.1.1. Other expenses \ni. \nExpenses incurred on treatment of cataract subject to the sub limits \nii. Dental treatment, necessitated due to disease or injury \niii. Plastic surgery necessitated due to disease or injury \niv. All the day care treatments \nv. Expenses incurred on road Ambulance subject to a maximum of Rs 2,000 per hospitalization. \nNote: \n1. Expenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible. However, the time limit \nshall not apply in respect of Day Care Treatment. \n2. In case of admission to a Room at rates exceeding the aforesaid limits, the reimbursement/payment of Associated Medical \nExpenses incurred at the Hospital, shall be effected in the same proportion as the admissible rate per day bears to the actual rate per \nday of Room Rent charges. Proportionate deduction shall not apply if admitted to ICU/ ICCU. \nAssociated Medical Expenses shall include all related expenses except the following expenses, \na. Cost of pharmacy a",
+            "document_name": "input_20250807_111431.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8978406670000001
+          },
+          {
+            "id": "input_20250807_111431.pdf_15_7d7e0de5",
+            "score": 0.837619305,
+            "text": "4.1. Hospitalization \nThe Company shall indemnify Medical Expense incurred for Hospitalization of the Insured Person during the Policy Period, up to \nthe Sum Insured and Cumulative Bonus specified in the Policy Schedule, for, \ni. \nRoom Rent, Boarding, Nursing Expenses all inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured \nsubject to maximum of Rs. 5,000/-per day \nii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of the sum insured subject to maximum of \nRs. 10,000/- per day \niii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating doctor/ surgeon or \nto the hospital \niv. Anesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, \ndiagnostic imaging modalities and such similar other expenses.",
+            "document_name": "input_20250807_111431.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8876193050000001
+          },
+          {
+            "id": "input_20250807_111431.pdf_30_d07319d5",
+            "score": 0.824786,
+            "text": "9.2. Documents to be submitted \nThe reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. \ni. \nDuly completed claim form \nii. Photo Identity proof of the patient \niii. Medical practitioner’s prescription advising admission. \niv. Original bills with itemized break-up \nv. Payment receipts \nvi. Discharge summary including complete medical history of the patient along with other details. \nvii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending medical practitioner \nviii. OT notes or Surgeon's certificate giving details of the operation performed (for surgical cases). \nix. Sticker/Invoice of the Implants, wherever applicable. \nx. MLR (Medico Legal Report copy if carried out and FIR (First information report) if registered, where ever applicable. \nxi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque \nxii. KYC (Identity proof with Address) of the propo",
+            "document_name": "input_20250807_111431.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8747860000000001
+          },
+          {
+            "id": "input_20250807_111431.pdf_49_950eae6d",
+            "score": 0.822005153,
+            "text": "Grace Period \nThe grace period of thirty days (where premium is paid in quarterly/half yearly/annual instalments) is \navailable on the premium due date, to pay the premium. \nHospitalisation \nExpenses \nExpenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible \nTime limit of 24 hrs shall not apply when the treatment is undergone in a Day Care Center \nPre Hospitalisation \nFor 30 days prior to the date of hospitalization \nPost Hospitalisation \nFor 60 days from the date of discharge from the hospital \nSublimit for \nroom/doctors fee \n1. Room Rent, Boarding, Nursing Expenses all inclusive as provided by the Hospital/ Nursing Home \nup to 2% of the Sum Insured subject to maximum of Rs. 5,000/- per day \n2. Intensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as \nprovided by the Hospital/ Nursing Home up to 5% of the Sum Insured subject to maximum of Rs. \n10,000/- per day \nCataract Treatment \nUp to 25% of Sum Insured o",
+            "document_name": "input_20250807_111431.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.872005153
+          }
+        ],
+        "evaluation": {
+          "answer": "The policy outlines coverage for medical expenses incurred during hospitalization up to the Sum Insured. However, the provided policy documents do not contain any specific clauses regarding coordination of benefits with other insurance policies or how claims partially covered by another insurer are handled. Therefore, based solely on this information, it cannot be confirmed if the remaining Rs 50,000 can be claimed from this policy after HDFC has already paid a portion.",
+          "source_document": "input_20250807_111431.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 0.12732338905334473,
+      "query_embedding": {
+        "total": 0.6160736083984375,
+        "individual": [
+          0.6160736083984375
+        ]
+      },
+      "pdf_processing_and_indexing": 6.900961637496948,
+      "query_processor_initialization": 2.677597761154175,
+      "query_processing": {
+        "total": 16.946866750717163,
+        "average": 16.946866750717163,
+        "individual": [
+          16.946866750717163
+        ]
+      },
+      "cleanup_index": 1.0995509624481201,
+      "total_execution_time": 28.369377613067627
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpy9wnldug",
+    "api_version": "2.1",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7
+    }
+  },
+  "processing_summary": {
+    "total_questions": 1,
+    "total_time_seconds": 28.369377613067627,
+    "pdf_processing_time": 6.900961637496948,
+    "query_processing_time": 16.946866750717163,
+    "parallel_execution_time": 16.946866750717163,
+    "max_individual_query_time": 16.946866750717163,
+    "embedding_time": 0.6160736083984375
+  },
+  "performance_metrics": {
+    "queries_processed": 1,
+    "parallel_speedup_ratio": 1.0,
+    "individual_query_times": [
+      16.946866750717163
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "I have raised a claim for hospitalization for Rs 2...",
+        "time_seconds": 16.946866750717163
+      }
+    ]
+  }
+}

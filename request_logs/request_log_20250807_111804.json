@@ -1,0 +1,980 @@
+{
+  "timestamp": "2025-08-07T11:19:16.960687",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/principia_newton.pdf?sv=2023-01-03&st=2025-07-28T07%3A20%3A32Z&se=2026-07-29T07%3A20%3A00Z&sr=b&sp=r&sig=V5I1QYyigoxeUMbnUKsdEaST99F5%2FDfo7wpKg9XXF5w%3D",
+    "questions": [
+      "How does Newton define 'quantity of motion' and how is it distinct from 'force'?",
+      "According to Newton, what are the three laws of motion and how do they apply in celestial mechanics?",
+      "How does Newton derive Kepler's Second Law (equal areas in equal times) from his laws of motion and gravitation?",
+      "How does Newton demonstrate that gravity is inversely proportional to the square of the distance between two masses?",
+      "What is Newton's argument for why gravitational force must act on all masses universally?",
+      "How does Newton explain the perturbation of planetary orbits due to other planets?",
+      "What mathematical tools did Newton use in Principia that were precursors to calculus, and why didn't he use standard calculus notation?",
+      "How does Newton use the concept of centripetal force to explain orbital motion?",
+      "How does Newton handle motion in resisting media, such as air or fluids?",
+      "In what way does Newton's notion of absolute space and time differ from relative motion, and how does it support his laws?",
+      "Who was the grandfather of Isaac Newton?",
+      "Do we know any other descent of Isaac Newton apart from his grandfather?"
+    ],
+    "pdf_filename": "input_20250807_111804.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250807_111804.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "How does Newton define 'quantity of motion' and how is it distinct from 'force'?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_65_bdb469ad",
+            "score": 0.83986187,
+            "text": "76 THE MATHEMATICAL PRINCIPLES \nDEFINITION VII. \nThe accelerative quantity of a centripetal force is the measure, of tht \nsame, proportional to the velocity which it generates in a given time. \nThus the force of the same load-stone is greater at a less distance, and \nless at a greater : also the force of gravity is greater in valleys, less on \ntops of exceeding high mountains ; and yet less (as shall hereafter be shown), \nat greater distances from the body of the earth ; but at equal distan \nces, it is the same everywhere ; because (taking away, or allowing for, the \nresistance of the air), it equally accelerates all falling bodies, whether heavy \nor light, great or small. \nDEFINITION VIII. \nTJie motive quantity of a centripetal force, is the measure of the samt\\ \nproportional to the motion which it generates in a given twip. \nThus the weight is greater in a greater body, less in a less body ; and. \nin the same body, it is greater near to the earth, and less at remoter dis \ntances. Thi",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 1.03986187
+          },
+          {
+            "id": "input_20250807_111804.pdf_62_dfb69246",
+            "score": 0.846879661,
+            "text": "THE \nMATHEMATICAL PRINCIPLES \nOF \nNATURAL PHILOSOPHY \nDEFINITIONS. \nDEFINITION I. \n77w? quantity of matter is the measure of the same, arising from its \ndensity and hulk conjutictly. \nTHUS air of a double density, in a double space, is quadruple in quan- \nti ty ; in a triple space, sextuple in quantity. The same thing is to be un \nderstood of snow, and fine dust or powders, that are condensed by compres \nsion or liquefaction • and of all bodies that are by any causes whatever \ndifferently condensed. I have no regard in this place to a medium, if any \nsuch there is, that freely pervades the interstices between the parts oi \nbodies. It is this quantity that I mean hereafter everywhere under the \nname of body or mass. And the same is known by the weight of each \nbody ; for it is proportional to the weight, as I have found by experiments \non pendulums, very accurately made, which shall be shewn hereafter. \nDEFINITION II. \nThe quantity of motion is the measure nf tlie same, arising from the",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.946879661
+          },
+          {
+            "id": "input_20250807_111804.pdf_290_dd750f5a",
+            "score": 0.838025153,
+            "text": "SEC. VI.] OF NATURAL PHILOSOPHY. 303 \nelastic fluids do really consist of particles so repelling each other, is a phy \nsical question. We have here demonstrated mathematically the property \nof fluids consisting of particles of this kind, that hence philosophers may \ntake occasion to discuss that question. \nSECTION VI. \nOf the motion and resistance of funependulous bodies. \nPROPOSITION XXIV. THEOREM XIX. \nThe quantities of matter i/i funependulous bodies, whose centres of oscil \nlation are equally distant from, the centre of suspension, are in a, ratio \ncompounded of the ratio of the weights and the duplicate ratio of the \ntimes of the oscillations in vacuo. \nFor the velocity which a given force can generate in a given matter in \na given time is as the force and the time directly, and the matter inversely. \nThe greater the force or the time is, or the less the matter, the greater ve \nlocity will he generated. This is manifest from the second Law of Mo \ntion. Now if pendulums are of the ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.938025153
+          },
+          {
+            "id": "input_20250807_111804.pdf_172_e1f17dff",
+            "score": 0.830745339,
+            "text": "SEC. X.J OF NATURAL PHILOSOPHY- 183 \nLet S be the centre of force, SC the \nleast distance of that centre from the given \nplane, P a body issuing from the place P \nin the direction of the right line PZ, Q, \nthe same body revolving in its trajectory, \nand PQ,R the trajectory itself which is \nrequired to be found, described in that \ngiven plane. Join CQ, Q.S, and if in Q,S \nwe take SV proportional to the centripetal \nforce with which the body is attracted to \nwards the centre S, and draw VT parallel \nto CQ, and meeting SC in T ; then will the force SV be resolved into \ntwo (by Cor. 2, of the Laws of Motion), the force ST, and the force TV ; of \nwhich ST aMracting the body in the direction of a line perpendicular to \nthat plane, does not at all change its motion in that plane. But the action \nc f the other force TV, coinciding with the position of the plane itself, at \ntracts the body directly towards the given point C in that plane ; a«d \nt icreftre causes the body to move in this plane i",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.930745339
+          },
+          {
+            "id": "input_20250807_111804.pdf_66_df65800e",
+            "score": 0.840668857,
+            "text": "OF NATURAL PHILOSOPHY. 77 \nsurface of the earth, where the accelerative gravity, or force productive of \ngravity, in all bodies is the same, the motive gravity or the weight is as \nthe body : but if we should ascend to higher regions, where the accelerative \ngravity is less, the weight would be equally diminished, and would always \nbe as the product of the body, by the accelerative gravity. So in those re \ngions, where the accelerative gravity is diminished into one half, the weight \nof a body two or three times less, will be four or six times less. \nI likewise call attractions and impulses, in the same sense, accelerative, \nand motive ; and use the words attraction, impulse or propensity of any \nsort towards a centre, promiscuously, and indifferently, one for another ; \nconsidering those forces not physically, but mathematically : wherefore, the \nreader is not to imagine, that by those words, I anywhere take upon me to \ndefine the kind, or the manner of any action, the causes or the p",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8906688570000001
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton defines 'quantity of motion' as a measure arising from a body's matter (mass) and velocity conjointly, though the definition provided is truncated. In contrast, 'force' is described in terms of its ability to *generate* motion or velocity: 'accelerative force' is proportional to the velocity it generates, while 'motive force' is proportional to the quantity of motion it generates in a given time. Thus, quantity of motion is a state or property of a body (its momentum), whereas force is the action or influence that changes that state of motion.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "According to Newton, what are the three laws of motion and how do they apply in celestial mechanics?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_30_75741f23",
+            "score": 0.84268707,
+            "text": "LIFE OF SIR ISAAC NEWTON. 33 \nThe entire work bears the general title of THE MATHEMATICAL \nPRINCIPLES OF NATURAL PHILOSOPHY. It consists of three books: \nthe first two, entitled, OF THE MOTION OF BODIES, are occupied \nwith the laws and conditions of motions and forces, and are illus \ntrated with many scholia treating of some of the most general \nand best established points in philosophy, such as the density and \nresistance of bodies, spaces void of matter, and the motion of \nsound and light. From these principles, there is deduced, in the \nthird book, drawn up in as popular a style as possible and entitled, \nOF THE SYSTEM OF THE WORLD, the constitution of the system of \ni he world. In regard to this book, the author say^ — \" I had, indeed, \ncomposed the third Book in a popular method, that it might be read \nby many ; but afterwards, considering that such as had not suf- \nficently entered into the principles could not easily discover the \nstrength of the consequences, nor lay aside the ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.89268707
+          },
+          {
+            "id": "input_20250807_111804.pdf_72_28a5bfdf",
+            "score": 0.838095903,
+            "text": "OF NATURAL PHILOSOPHY. \nAXIOMS, OR LAWS OF MOTION. \nLAW I. \nHvery body perseveres in its state of rest, or of uniform motion in a ri^ht \nline, unless it is compelled to change that state by forces impressed \nthereon. \nPROJECTILES persevere in their motions, so far as they are not retarded \nby the resistance of the air, or impelled downwards by the force of gravity \nA top, whose parts by their cohesion are perpetually drawn aside from \nrectilinear motions, does not cease its rotation, otherwise than as it is re \ntarded by the air. The greater bodies of the planets and comets, meeting \nwith less resistance in more free spaces, preserve then jDotions both pro \ngressive and circular for a much longer time. \nLAW II. \nThe alteration of motion is ever proportional to the motive force imp reus \ned ; and is made in the direction of the right line in. which that force \nis impressed. \nIf any force generates a motion, a double force will generate double the \nmotion, a triple force triple the motio",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8880959030000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_385_95b56861",
+            "score": 0.836191297,
+            "text": "BOOK III.] OF NATURAL PHILOSOPHY. 401 \n75000000000000 to 1 nearly. And hence the planet Jupiter, revolving in \na medium of the same density with that superior air, would not lose by the \nresistance of the medium the 1000000th part of its motion in 1000000 \nyears. In the spaces near the earth the resistance is produced only by the \nair, exhalations, and vapours. When these are carefully exhausted by the \nair-pump from under the receiver, heavy bodies fall within the receiver with \nperfect freedom, and without the le.ist sensible resistance: gold itself, and \nthe lightest down, let fall together, will descend with equal velocity; and \nthough they fall through a space of four, six, and eight feet, they will come \nto the bottom at the same time; as appears from experiments. And there \nfore the celestial regions being perfectly void of air and exhalations, the \nplanets and comets meeting no sensible resistance in those spaces will con \ntinue their motions through them for an immense tract o",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.886191297
+          },
+          {
+            "id": "input_20250807_111804.pdf_31_be9ff7dd",
+            "score": 0.836076915,
+            "text": "LIFE OF SIR ISAAC NEWTON. \nthe areas to t\\ie times of their description, our author inferred \nthat the force which retained the planet in its orbit was always \ndirected to the sun ; and from the second, namely, that every \nplanet moves in an ellipse with the sun in one of its foci, he drew \nthe more general inference that the force by which the planet \nmoves round that focus varies inversely as the square of its dis \ntance therefrom : and he demonstrated that a planet acted upon \nby such a force could not move in any other curve than a conic \nsection ; showing when the moving body would describe a circu \nlar, an elliptical, a parabolic, or hyperbolic orbit. He demon \nstrated, too, that this force, or attracting, gravitating power re \nsided in every, the least particle ; but that, in spherical masses, it \noperated as if confined to their centres ; so that, one sphere or \nbody will act upon another sphere or body, with a force directly \nproportional to the quantity of matter, and inverse",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8860769150000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_188_85a7365a",
+            "score": 0.837373435,
+            "text": "SEC. XL] OF NATURAL PHILOSOPHY. 1 % \nalso the uniform motion of the common centre of gravity, and the motion \nof the space which moves along with this centre uniformly in a right line, \nand also the very first, or beginning motions of the bodies in respect of this \nspace. Then (by Cor. 5, of the Laws, and the last Theorem) the subse \nquent motions will be performed in the same manner in that space, as if \nthat space together with the common centre of gravity were at rest, and as \nif the bodies did not attract each other, but were attracted by a third body \nplaced in that centre. The motion therefore in this movable space of each \nbody going off from a given place, in a given direction, with a given velo \ncity, and acted upon by a centripetal force tending to that centre, is to be \ndetermined by Prob. IX and XXVI, and at the same time will be obtained \nthe motion of the other round the same centre. With this motion com \npound the uniform progressive motion of the entire system of the sp",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.837373435
+          }
+        ],
+        "evaluation": {
+          "answer": "According to the provided context, Newton's First Law states that a body persists in its state of rest or uniform motion unless acted upon by a force. The Second Law states that the alteration of motion is proportional to the impressed force and occurs in its direction. These laws apply to celestial mechanics as planets and comets maintain their motions due to minimal resistance in space, and the forces (such as gravity, which varies inversely as the square of the distance) determine their orbital paths, forming the \"System of the World.\"",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton derive Kepler's Second Law (equal areas in equal times) from his laws of motion and gravitation?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_78_4ff57e5d",
+            "score": 0.856853664,
+            "text": "OF NATURAL PHILOSOPHY. 89 \nthemselves, whether that space is at rest, or moves uniformly forwards \nin a right line without any circular motion. \nFor the differences of the motions tending towards the same parts, and \nthe sums of those that tend towards contrary parts, are, at first (by sup \nposition), in both cases the same ; and it is from those sums and differences \nthat the collisions and impulses do arise with which the bodies mutually \nimpinge one upon another. Wherefore (by Law II), the effects of those \ncollisions will be equal in both cases ; and therefore the mutual motions \nof the bodies among themselves in the one case will remain equal to the \nmutual motions of the bodies among themselves in the other. A clear \nproof of which we have from the experiment of a ship ; where all motions \nhappen after the same manner, whether the ship is at rest, or is carried \nuniformly forwards in a right line. \nCOROLLARY VI. \nIf bodies, any how moved among themselves, are urged in the direct-",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.9568536639999999
+          },
+          {
+            "id": "input_20250807_111804.pdf_31_be9ff7dd",
+            "score": 0.845439136,
+            "text": "LIFE OF SIR ISAAC NEWTON. \nthe areas to t\\ie times of their description, our author inferred \nthat the force which retained the planet in its orbit was always \ndirected to the sun ; and from the second, namely, that every \nplanet moves in an ellipse with the sun in one of its foci, he drew \nthe more general inference that the force by which the planet \nmoves round that focus varies inversely as the square of its dis \ntance therefrom : and he demonstrated that a planet acted upon \nby such a force could not move in any other curve than a conic \nsection ; showing when the moving body would describe a circu \nlar, an elliptical, a parabolic, or hyperbolic orbit. He demon \nstrated, too, that this force, or attracting, gravitating power re \nsided in every, the least particle ; but that, in spherical masses, it \noperated as if confined to their centres ; so that, one sphere or \nbody will act upon another sphere or body, with a force directly \nproportional to the quantity of matter, and inverse",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.945439136
+          },
+          {
+            "id": "input_20250807_111804.pdf_82_a07d5d53",
+            "score": 0.845940113,
+            "text": "OF NATURAL PHILOSOPHY. \n93 \ntowards the parts on which B lies ; arid in free spaces, to go forward in \ninfmitiim with a motion perpetually accelerated ; which is absurd and \ncontrary to the first Law. For, by the first Law, the system ought to per \nsevere in its state of rest, or of moving uniformly forward in a right line : \nand therefore the bodies must equally press the obstacle, and be equally \nattracted one by the other. I made the experiment on the loadstone and \niron. If these, placed apart in proper vessels, are made to float by one \nanother in standing water, neither of them will propel the other ; but, \nby being equally attracted, they will sustain each other's pressure, and rest \nat last in an equilibrium. \nSo the gravitation betwixt the earth and its parts is mutual. Let the \nearth FI be cut by any plane EG into two parts EGF \nand EGI, and their weights one towards the other \nwill be mutually equal. For if by another plane \nHK, parallel to the former EG, the greater partFJ ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8959401130000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_193_f4d4199f",
+            "score": 0.845438361,
+            "text": "THE MATHEMATICAL PRINCIPLES [BOOK 1 \nelliptical figure before-mentioned upon two accounts ; first because that \nforce is not directed from P to T ; and, secondly, because it is not recipro \ncally proportional to the square of the distance PT. These things being \npremised, it is manifest that the areas are then most nearly proportional to \nthe times, when that third force is the least possible, the rest preserving \ntheir former quantity ; and that the orbit PAB does then approach nearest \nto the elliptical figure above-mentioned, when both the second and third, \nbut especially the third force, is the least possible; the first force remain \ning in its former quantity. \nLet the accelerative attraction of the body T towards S be expressed by \nthe line SN ; then if the accelerative attractions SM and SN were equal, \nthese, attracting the bodies T and P equally and in parallel directions \nwould not at all change their situation with respect to each other. The mo \ntions of the bodies between ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8954383610000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_183_c2cdeee6",
+            "score": 0.844911098,
+            "text": "194 THE MATHEMATICAL PRINCIPLES [BOOK I \nwith the interval TV let the projection of that little circle in the plane AOP \nbe the ellipsis pQ. And because the magnitude of that little circle T/, and \nTN or PO its distance from the axis CO is also given, the ellipsis pQ, will \nbe given both in kind and magnitude, as also its position to the right line \nPO. And since the area PO/? is proportional to the time, and therefore \ngiven because the time is given, the angle POp will be given. And thence \nwill be given jo the common intersection of the ellipsis and. the right line \nOp, together with the angle OPp, in which the projection APp of the tra \njectory cuts the line OP. But from thence (by conferring Prop. XLI, with \nUs 2d Cor.) the mariner of determining the curve APp easily appears. \nThen from the several points P of that projection erecting to the plane \nAOP, the perpendiculars PT meeting the curve superficies in T, there will \nbe £iven the several points T of the trajectory. Q.E.I. \nSE",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.844911098
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context does not detail how Newton derived Kepler's Second Law (equal areas in equal times) from his laws of motion and gravitation. Instead, it mentions that from the observation of areas being proportional to times, Newton inferred that the force retaining a planet in its orbit was always directed towards the sun.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton demonstrate that gravity is inversely proportional to the square of the distance between two masses?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_31_be9ff7dd",
+            "score": 0.84147042,
+            "text": "LIFE OF SIR ISAAC NEWTON. \nthe areas to t\\ie times of their description, our author inferred \nthat the force which retained the planet in its orbit was always \ndirected to the sun ; and from the second, namely, that every \nplanet moves in an ellipse with the sun in one of its foci, he drew \nthe more general inference that the force by which the planet \nmoves round that focus varies inversely as the square of its dis \ntance therefrom : and he demonstrated that a planet acted upon \nby such a force could not move in any other curve than a conic \nsection ; showing when the moving body would describe a circu \nlar, an elliptical, a parabolic, or hyperbolic orbit. He demon \nstrated, too, that this force, or attracting, gravitating power re \nsided in every, the least particle ; but that, in spherical masses, it \noperated as if confined to their centres ; so that, one sphere or \nbody will act upon another sphere or body, with a force directly \nproportional to the quantity of matter, and inverse",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.94147042
+          },
+          {
+            "id": "input_20250807_111804.pdf_27_a115d129",
+            "score": 0.840250611,
+            "text": "30 LIFE OF SIR ISAAC NEWTON. \nthe discovery that a projectile would move in an elliptical orbil \nwhen under the influence of a force varying inversely as the \nsquare of the distance, was led to discover \" the theorem bj \nwhich he afterwards examined the ellipsis ;\" and to demonstrate \nthe celebrated proposition that a planet acted upon by an attrac \ntive force varying inversely as the squares of the distances will \ndescribe an elliptical orbit, in one of whose foci the attractive \nforce resides. \nWhen he was attending a meeting of the Royal Society, in \nJune 1682, the conversation fell upon the subject of the measure \nment of a degree of the meridian, executed by M. Picard, a \nFrench Astronomer, in 1679. Newton took a memorandum oi \nthe result ; and afterward, at the earliest opportunity, computed \nfrom it the diameter of the earth : furnished with these new data, \nhe resumed his calculation of 1666. As he proceeded therein, \nhe saw that his early expectations were now likely to be rea",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.940250611
+          },
+          {
+            "id": "input_20250807_111804.pdf_287_546b52f1",
+            "score": 0.836099625,
+            "text": "300 THE MATHEMATICAL PRINC. PLES [BOOK II. \nreasoning, — ^n~~ *s e(lua^ to ^, &c- But Aa> B^> ^c, &cv are continu \nally proportional, and therefore proportional to their differences Aa — B&, \nB6 — Cc; &c., therefore the rectangles fy?, nq, &c., are proportional to those \ndifferences ; as also the sums of the rectangles tp + uq, or tp + uq -f w \nto the sums of the differences Aa — Cc or Aa — Da7. Suppose several of \nthese terms, and the sum of all the differences, as Aa — F/, will be pro \nportional t? the sum of all the rectangles, as zthn. Increase the number \nof terms, and diminish the distances of the points A, B, C, (fee., in iiijini- \ntum, and those rectangles will become equal to the hyperbolic area zthn. \nand therefore the difference Aa — F/ 19 proportional to this area. Take \nnowT any distances, as SA, SD, SF, in harmonic progression, and the dif \nferences Aa — Da7, Da1 — F/ will be equal ; and therefore the areas thlx, \nxlnz, proportional to those differences will be equal amon",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8860996250000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_183_c2cdeee6",
+            "score": 0.833596945,
+            "text": "194 THE MATHEMATICAL PRINCIPLES [BOOK I \nwith the interval TV let the projection of that little circle in the plane AOP \nbe the ellipsis pQ. And because the magnitude of that little circle T/, and \nTN or PO its distance from the axis CO is also given, the ellipsis pQ, will \nbe given both in kind and magnitude, as also its position to the right line \nPO. And since the area PO/? is proportional to the time, and therefore \ngiven because the time is given, the angle POp will be given. And thence \nwill be given jo the common intersection of the ellipsis and. the right line \nOp, together with the angle OPp, in which the projection APp of the tra \njectory cuts the line OP. But from thence (by conferring Prop. XLI, with \nUs 2d Cor.) the mariner of determining the curve APp easily appears. \nThen from the several points P of that projection erecting to the plane \nAOP, the perpendiculars PT meeting the curve superficies in T, there will \nbe £iven the several points T of the trajectory. Q.E.I. \nSE",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8835969450000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_266_2bdac168",
+            "score": 0.835186779,
+            "text": "SEC. IILJ OF NATURAL PHILOSOPHY. 279 \nSECTION III. \nOf the motions of bodies which are resisted partly in the ratio of the ve \nlocities, and partly in the duplicate of the same ratio. \nPROPOSITION XI. THEOREM VIII. \nIf a body be resisted partly in the ratio and partly in the duplicate ratio \nof its velocity, and moves in a similar medium by its innate force \nonly; and the times be taken in arithmetical progression; then \nquantities reciprocally proportional to the velocities, increased by a cer \ntain given quantity, will be in geometrical progression. \nWith the centre C, and the rectangular asymptotes ^ \nOADd and CH, describe an hyperbola BEe, and let | \\p \nAB, DE, de. be parallel to the asymptote CH. In | \nthe asymptote CD let A, G be given points ; and if \nthe time be expounded by the hyperbolic area ABED \nuniformly increasing, I say, that the velocity may ~r \nbe expressed by the length DF, whose reciprocal \nGD, together with the given line CG, compose the \nlength CD increasing in a ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.835186779
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton demonstrated the inverse square law of gravity primarily by inferring it from Kepler's second law of planetary motion, which states that every planet moves in an ellipse with the sun in one of its foci. He showed that the force retaining a planet in its orbit, directed towards the sun, must vary inversely as the square of its distance from the sun. Furthermore, he demonstrated that a planet acted upon by such an inverse square force could only describe a conic section, specifically an elliptical orbit.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What is Newton's argument for why gravitational force must act on all masses universally?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_510_9fddc898",
+            "score": 0.818689942,
+            "text": "THE SYSTEM OF THE WORLD. 529 \n3ne another than they do the satellites now. From these attractions it is \nthat the bodies of the earth and all the planets effect a spherical figure, and \ntheir parts cohere, and are not dispersed through the aether. But we have \nbefore proved that these forces arise from the universal nature of matter \n(p. 398), and that, therefore, the force of any whole globe is made up of \nthe several forces of all its parts. And from thence it follows (by Cor. \nIII, Prop. LXXIV) that the force of every particle decreases in the dupli \ncate proportion of the distance from that particle ; and (by Prop. LXXIII \nand LXXV) that the force of an entire globe, reckoning from the surface \noutwards, decreases in the duplicate, but, reckoning inwards, in the sim \nple proportion of the distances from the centres, if the matter of the globe \nbe uniform. And though the matter of the globe, reckoning from the \ncentre towards the surface, is not uniform (p. 398, 399), yet the decrea",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.918689942
+          },
+          {
+            "id": "input_20250807_111804.pdf_507_d840ba23",
+            "score": 0.813910484,
+            "text": "526 \nTHE SYSTEM OF THE WORLD. \nin equal times ; and, by the help of pendulums, that equality of tim-es may \nbe distinguished to great exactness. \n1 tried the thing in gold, silver, lead, glass, sand, common salt wood, \nwater, and wheat. I provided two equal wooden boxes. I filled the one \nwith wood, and suspended an equal weight of gold (as exactly as I could) \nin the centre of oscillation of the other. The boxes, hung by equal threads \nof 11 feet, made a couple of pendulums perfectly equal in weight and fig \nure, and equally exposed to the resistance of the air : and, placing the one \nby the other, I observed them to play together forwards and backwards for \na long while, with equal vibrations. And therefore (by Cor. 1 and VI, \nProp. XXIV. Book II) the quantity of matter in the gold was to the quan \ntity of matter in the wood as the action of the motive force upon all the \ngold to the action of the same upon all the wood ; that is, as the weight of \nthe one to the weight of the other.",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.913910484
+          },
+          {
+            "id": "input_20250807_111804.pdf_31_be9ff7dd",
+            "score": 0.824407756,
+            "text": "LIFE OF SIR ISAAC NEWTON. \nthe areas to t\\ie times of their description, our author inferred \nthat the force which retained the planet in its orbit was always \ndirected to the sun ; and from the second, namely, that every \nplanet moves in an ellipse with the sun in one of its foci, he drew \nthe more general inference that the force by which the planet \nmoves round that focus varies inversely as the square of its dis \ntance therefrom : and he demonstrated that a planet acted upon \nby such a force could not move in any other curve than a conic \nsection ; showing when the moving body would describe a circu \nlar, an elliptical, a parabolic, or hyperbolic orbit. He demon \nstrated, too, that this force, or attracting, gravitating power re \nsided in every, the least particle ; but that, in spherical masses, it \noperated as if confined to their centres ; so that, one sphere or \nbody will act upon another sphere or body, with a force directly \nproportional to the quantity of matter, and inverse",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8744077560000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_30_75741f23",
+            "score": 0.822340488,
+            "text": "LIFE OF SIR ISAAC NEWTON. 33 \nThe entire work bears the general title of THE MATHEMATICAL \nPRINCIPLES OF NATURAL PHILOSOPHY. It consists of three books: \nthe first two, entitled, OF THE MOTION OF BODIES, are occupied \nwith the laws and conditions of motions and forces, and are illus \ntrated with many scholia treating of some of the most general \nand best established points in philosophy, such as the density and \nresistance of bodies, spaces void of matter, and the motion of \nsound and light. From these principles, there is deduced, in the \nthird book, drawn up in as popular a style as possible and entitled, \nOF THE SYSTEM OF THE WORLD, the constitution of the system of \ni he world. In regard to this book, the author say^ — \" I had, indeed, \ncomposed the third Book in a popular method, that it might be read \nby many ; but afterwards, considering that such as had not suf- \nficently entered into the principles could not easily discover the \nstrength of the consequences, nor lay aside the ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8723404880000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_78_4ff57e5d",
+            "score": 0.815219,
+            "text": "OF NATURAL PHILOSOPHY. 89 \nthemselves, whether that space is at rest, or moves uniformly forwards \nin a right line without any circular motion. \nFor the differences of the motions tending towards the same parts, and \nthe sums of those that tend towards contrary parts, are, at first (by sup \nposition), in both cases the same ; and it is from those sums and differences \nthat the collisions and impulses do arise with which the bodies mutually \nimpinge one upon another. Wherefore (by Law II), the effects of those \ncollisions will be equal in both cases ; and therefore the mutual motions \nof the bodies among themselves in the one case will remain equal to the \nmutual motions of the bodies among themselves in the other. A clear \nproof of which we have from the experiment of a ship ; where all motions \nhappen after the same manner, whether the ship is at rest, or is carried \nuniformly forwards in a right line. \nCOROLLARY VI. \nIf bodies, any how moved among themselves, are urged in the direct-",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8652190000000001
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton argued that gravitational force acts universally on all masses because it arises from the inherent, universal nature of matter, residing in every individual particle. He demonstrated this through experiments, such as his pendulum tests with various materials, which showed that the gravitational action on different substances is directly proportional to their quantity of matter.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton explain the perturbation of planetary orbits due to other planets?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_31_be9ff7dd",
+            "score": 0.827620566,
+            "text": "LIFE OF SIR ISAAC NEWTON. \nthe areas to t\\ie times of their description, our author inferred \nthat the force which retained the planet in its orbit was always \ndirected to the sun ; and from the second, namely, that every \nplanet moves in an ellipse with the sun in one of its foci, he drew \nthe more general inference that the force by which the planet \nmoves round that focus varies inversely as the square of its dis \ntance therefrom : and he demonstrated that a planet acted upon \nby such a force could not move in any other curve than a conic \nsection ; showing when the moving body would describe a circu \nlar, an elliptical, a parabolic, or hyperbolic orbit. He demon \nstrated, too, that this force, or attracting, gravitating power re \nsided in every, the least particle ; but that, in spherical masses, it \noperated as if confined to their centres ; so that, one sphere or \nbody will act upon another sphere or body, with a force directly \nproportional to the quantity of matter, and inverse",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.927620566
+          },
+          {
+            "id": "input_20250807_111804.pdf_14_51a69108",
+            "score": 0.827980638,
+            "text": "LIFE OF SIR ISAAC NEWTON. 17 \nmore or less diminution ? The conjecture appeared most proba \nble : and, in order to estimate what the degree of diminution \nmight be, he considered that if the moon be retained in her orbit \nby the force of gravity, the primary planets must also be carried \nround the sun by the like power; and, by comparing the periods \nof the several planets with their distances from the sun, he found \nthat, if they were held in their courses by any power like gravity, \nits strength must decrease in the duplicate proportion of the in \ncrease of distance. In forming this conclusion, he supposed the \nplanets to move in perfect circles, concentric to the sun. Now \nwas this the law of the moon's motion ? Was such a force, em \nanating from the earth and directed to the moon, sufficient, when \ndiminished as the square of the distance, to retain her in her \norbit ? To ascertain this master-fact, he compared the space \nthrough which heavy bodies fall, in a second of time, at a g",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.877980638
+          },
+          {
+            "id": "input_20250807_111804.pdf_387_b8fd16d6",
+            "score": 0.823869586,
+            "text": "BOOK III.] OF NATURAL PHILOSOPHY. 403 \nis differently situated in these conjunctions, its eccentricity is sometimes \naugmented, sometimes diminished; its aphelion is sometimes carried for \nward, sometimes backward, and its mean motion is by turns accelerated and \nretarded ; yet the whole error in its motion about the sun, though arising \nfrom so great a force, may be almost avoided (except in the mean motion) \nby placing the lower focus of its orbit in the common centre of gravity of \nJupiter and the sun (according to Prop. LXVII, Book I), and therefore that \nerror, when it is greatest, scarcely exceeds two minutes ; and the greatest \nerror in the mean motion scarcely exceeds two minutes yearly. But in the \nconjunction of Jupiter and Saturn, the accelerative forces of gravity of the \nsun towards Saturn, of Jupiter towards Saturn, and of Jupiter towards the \nsun, are almost as 16, 81, and - ~o^~~ — > or 156609: and therefore \nthe difference of the forces of gravity of the sun towards Sa",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.823869586
+          },
+          {
+            "id": "input_20250807_111804.pdf_374_d411f089",
+            "score": 0.822575,
+            "text": "390 THE MATHEMATICAL PRINCIPLES [BOOK III \nPROPOSITIONS- \nPROPOSITION I. THEOREM I. \nThat the forces by which the circumjovial planets are continually drawn \noff from rectilinear motions, and retained in their proper orbits, tend \nto Jupiter's centre ; and are reciprocally as the squares of the distances \nof the places of those planets/ro?/i that centre. \nThe former part of this Proposition appears from Pham. I, and Prop. \nII or III, Book I : the latter from Phaen. I, and Cor. 6, Prop. IV, of the same \nBook. \nThe same thing we are to understand of the planets which encompass \nSaturn, by Phaon. II. \nPROPOSITION II. THEOREM II. \nThat the forces by which the primary planets are continually drawn off \nfrom rectilinear motions, and retained in their proper orbits, tend to \nthe sun. ; and are reciprocally as the squares of the distances of the \nplaces of those planets from the sun's centre. \nThe former part of the Proposition is manifest from Phasn. V, and \nProp. II, Book I ; the latter from",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.822575
+          },
+          {
+            "id": "input_20250807_111804.pdf_512_8231ab5b",
+            "score": 0.82146275,
+            "text": "THE SYSTEM OF THE WJP.I.D. 53L \ntimes and more, ought to be depressed into the lowermost place, and to be \nheld for the centre of the system. And thus the true disposition of the \nwhole system will be more fully and more exactly understood. \nBecause the fixed stars are quiescent one in respect of another (p. 401, \n4U2), we may consider the sun, earth, and planets, as one system of bodies \ncarried hither and thither by various motions among themselves; and the \ncommon centre of gravity of all (by Cor. IT of the Laws of Motion) will \neither be quiescent, or move uniformly forward in a right line : in which \ncase the whole system will likewise move uniformly forward in right lines. \nBut this is an hypothesis hardly to be admitted ; and, therefore, setting it \narfide, that common centre will be quiescent: and from it the sun is never \nfar removed. The common centre of gravity of the sun and Jupiter falls \non the surface of the sun ; and though all the planets were placed towards \nthe same ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.82146275
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton explained the perturbation of planetary orbits by acknowledging that all planets mutually attract each other through gravity, not just being solely influenced by the sun. These gravitational interactions between planets, such as between Jupiter and Saturn, cause observable 'errors' or deviations in their motion, which he accounted for by considering the accelerative forces of gravity between them and the common center of gravity of the system.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What mathematical tools did Newton use in Principia that were precursors to calculus, and why didn't he use standard calculus notation?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_4_1e0e1bc0",
+            "score": 0.836808622,
+            "text": "V: INTRODUCTION TO \nset up. The PRINCIPIA, above all, glows with the immortality of \na transcendant mind. Marble and brass dissolve and pass away ; \nbut the true creations of genius endure, in time and beyond time, \nforever : high upon the adamant of the indestructible, they send \nforth afar and near, over the troublous waters of life, a pure, un \nwavering, quenchless light whereby the myriad myriads of barques, \nrichly laden with reason, intelligence and various faculty, are \nguided through the night and the storm, by the beetling shore \nand the hidden rock, the breaker and the shoal, safely into havens \ncalm and secure. \nTo the teacher and the taught, the scholar and the student, the \ndevotee of Science and the worshipper of Truth, the PRINCIPIA \nmust ever continue to be of inestimable value. If to educate \nmeans, not so much to store the memory with symbols and facts, \nas to bring forth the faculties of the soul and develope them to the \nfull by healthy nurture and a hardy disciplin",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.886808622
+          },
+          {
+            "id": "input_20250807_111804.pdf_29_1d50ce00",
+            "score": 0.835534,
+            "text": "32 LIFE OF SIR ISAAC NEWTON. \nPrincipia Mathematicia ; and thereupon I had altered it to this, \nDe Motu Corporum Libri duo. But after second thought I re \ntain the former title. It will help the sale of the book, which I \nought not to diminish now 'tis yours.\" \nThis \" warning\" arose from some pretensions put forth by Dr. \nHooke. And though Newton gave a minute and positive refuta \ntions of such claims, yet, to reconcile all differences, he gener \nously added to Prop. IV. Cor. 6, Book I, a Scholium, in which \nWren, Hooke and Halley are acknowledged to have indepen \ndently deduced the law of gravity from the second law of \nKepler. \nThe suppression of the third book Dr. Halley could not endure \nto see. \" I must again beg you\" says he, \" not to let your re \nsentments run so high as to deprive us of your third book, where \nin your applications of your mathematical doctrine to the theory \nof comets, and several curious experiments, which, as I guess by \nwhat you write ought to compose it, wi",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.885534
+          },
+          {
+            "id": "input_20250807_111804.pdf_46_e6a41409",
+            "score": 0.828170359,
+            "text": "LIFE OF SIR ISAAC NEWTON. 49 \n\" I. Mr. Leibnitz was in London in the beginning of the year \n1673 ; and went thence in or about March, to Paris, where he \nkept a correspondence with Mr. Collins, by means of Mr. Olden \nburg, till about September, 1676, and then returned, by London \nand Amsterdam, to Hanover: and that Mr. Collins was very free \nin communicating to able mathematicians what he had received \nfrom Mr, Newton and Mr. Gregory. \n\" II. That when Mr. Leibnitz was the first time in London, \nhe contended for the invention of another differential method, \nproperly so called ; and, notwithstanding he was shown by Dr. \nPell that it was Newton?s method, persisted in maintaining it to \nbe his own invention, by reason that he had found it by himself \nwithout knowing what Newton had done before, and had much \nimproved it. And we find no mention of his having any other \ndifferential method than Newton's before his letter of the 21st of \nJune, 1677, which was a year after a copy of Mr. Newto",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.828170359
+          },
+          {
+            "id": "input_20250807_111804.pdf_44_004b536e",
+            "score": 0.826182663,
+            "text": "LIFE OF SIR ISAAC NEWTON. 47 \nand to teach, and so render himself, not the \"ornament\" cnly; \nbut inconceivably more, the pre-eminent benefactor of his species. \nThe honour of knighthood v/as conferred on our author in \n1705. Soon afterward, he was a candidate again for the Repre \nsentation of the University, but was defeated by a large majority. \nIt is thought that a more pliant man was preferred by both min \nisters and electors. Newton was always remarkable for simplicity \nof dress, and his only known departure from it was on this oc \ncasion, when he is said to have appeared in a suit of laced \nclothes. \nThe Algebraical Lectures which he had, Juring nine years, \ndelivered at Cambridge, were published by Whiston, in 1707, \nunder the title of ARITHMETICS UNIVERSALIS, SINE DE COMPOSI \nTIONS ET RESOLUTIONS ARITHMETICA LIBER. This publication \nis said to have been a breach of confidence on Whiston's part. Mr. \nRalphson, not long afterward, translated the work into English ; \nand a second e",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.826182663
+          },
+          {
+            "id": "input_20250807_111804.pdf_91_028e9cdf",
+            "score": 0.825294733,
+            "text": "102 THE MATHEMATICAL PRINCIPLES [BOOK 1 \nceding. And if DB be made successively as AD2, AD|, AD^, AD], AD| \nAD7, &c., we shall have another infinite series of angles of contact, the first \nof which is of the same sort with those of circles, the second infinitely \ngreater, and every succeeding one infinitely greater than the preceding. \nBut between any two of these angles another series of intermediate angles \nof contact may be interposed, proceeding both ways in infinitum. wherein \nevery succeeding angle shall be infinitely greater or infinitely less than the \npreceding. As if between the terms AD2 and AD3 there were interposed \nthe series AD'f, ADy, AD49, AD|, AD?, AD|, AD^1, AD^, AD^7, &c. And \nagain, between any two angles of this series, a new series of intermediate \nangles may be interposed, differing from one another by infinite intervals. \nNor is nature confined to any bounds. \nThose things which have been demonstrated of curve lines, and the \neuperfices which they comprehend, m",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.825294733
+          }
+        ],
+        "evaluation": {
+          "answer": "In Principia, Newton utilized mathematical concepts involving infinitesimals and infinite series, evident in his discussions of \"infinite series of angles of contact\" and analysis of \"curve lines\" with \"infinite intervals,\" which served as precursors to calculus. He did not use the standard calculus notation because he had developed his own distinct mathematical \"method\" prior to and independently of Leibnitz's \"differential method,\" which later became the widely adopted standard.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton use the concept of centripetal force to explain orbital motion?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_157_c4b3f98e",
+            "score": 0.824693561,
+            "text": "163 THE MATHEMATICAL PRINCIPLES [BoOK I \nSECTION VIII. \nOf the invention of orbits wherein bodies will revolve, being acted upon \nby any sort of centripetal force. \nPROPOSITION XL. THEOREM XIII. \n//' a body, acted upon by any centripetal force, is any how moved, and \nanother body ascends or descends in a right line, and their velocities \nbe equal in amj one case of equal altitudes, t/ieir velocities will be also \nequal at all equal altitudes. \nLet a body descend from A through D and E, to the centre \n(j : and let another body move from V in the curve line VIK&. \nFrom the centre C, with any distances, describe the concentric \ncircles DI, EK, meeting the right line AC in I) and E; and \nthe curve VIK in I and K. Draw 1C meeting KE in N, and \non IK let fall the perpendicular NT • and let the interval DE \nor IN between the circumferences of the circles be very small ; K/ \nand imagine the bodies in D and I to have equal velocities. \nThen because the distances CD and CI are equal, the centri ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.974693561
+          },
+          {
+            "id": "input_20250807_111804.pdf_558_7f27a01f",
+            "score": 0.82323885,
+            "text": "INDEX TO THE PRINCIPIA. 577 \nFomcE, centripetal force defined, 74 \n\" the absolute quantity of centripetal force defined, 75 \nM the accelerative quantity of the same defined, 76 \nw the mutive quantity of the same defined, 76 \n\" the proportion thereof to any known force how collected, 109 \n\" a centripetal force that if reciprocally as the cube of the ordinate tending to a vastly \nremote centre of lorce will ca.use a body to move in any given conic section, . . 114 \n\" a centripetal force that is as the cube of the ordinate tending to a vastly remote centre of \nforce will cau^e a body to move in an hyperbola, 243 \n•' centrifugal force of bodies on the earth's equator, how great, 405 \nGOD, his nature, 506 \nClaAviTY mutual between the earth and its parts, \n• • • . 94\" \n'* of a different nature from magnetical force, ........ 397 \n\" the cause of it not assigned, 507 \n\" tends towards all the pi anets, 393 \n\" from the surfaces of the planets upwards decreases in the duplicate ratio of the dis \n",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.97323885
+          },
+          {
+            "id": "input_20250807_111804.pdf_278_6c063283",
+            "score": 0.82205075,
+            "text": "•SEC. IY.1 OF NATURAL PHILOSOPHY. 291 \nCOR. 9. And although these motions becoming eccentrical should be \nperformed in spirals approaching to an oval figure, yet, conceiving the \nseveral revolutions of those spirals to be at the same distances from each \nother, and to approach to the centre by the same degrees as the spiral above \ndescribed, we may also understand how the motions of bodies may be per \nformed in spirals of that kind. \nPROPOSITION XVI. THEOREM XIII. \nIf the density of the medium in each of the places be reciprocally as the \ndistance of the >, places from the immoveable centre, and the centripetal \nforce be reciprocally as any power of the same distance, I say, that the \nbody may revolve in a spiral intersecting all the radii drawn from \nthat centre in a given, angle. \nThis is demonstrated in the same manner as \nthe foregoing Proposition. For if the centri \npetal force in P be reciprocally as any power \nSPn+1 of the distance SP whose index is n \n+ 1 ; it will be collected",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.9720507500000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_31_be9ff7dd",
+            "score": 0.829628766,
+            "text": "LIFE OF SIR ISAAC NEWTON. \nthe areas to t\\ie times of their description, our author inferred \nthat the force which retained the planet in its orbit was always \ndirected to the sun ; and from the second, namely, that every \nplanet moves in an ellipse with the sun in one of its foci, he drew \nthe more general inference that the force by which the planet \nmoves round that focus varies inversely as the square of its dis \ntance therefrom : and he demonstrated that a planet acted upon \nby such a force could not move in any other curve than a conic \nsection ; showing when the moving body would describe a circu \nlar, an elliptical, a parabolic, or hyperbolic orbit. He demon \nstrated, too, that this force, or attracting, gravitating power re \nsided in every, the least particle ; but that, in spherical masses, it \noperated as if confined to their centres ; so that, one sphere or \nbody will act upon another sphere or body, with a force directly \nproportional to the quantity of matter, and inverse",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.929628766
+          },
+          {
+            "id": "input_20250807_111804.pdf_97_d7d24ac5",
+            "score": 0.825986087,
+            "text": "I OS THE MATHEMATICAL PRINCIPLES [BOOK . \nthe centripetal forces are in a ratio compounded of the duplicate ra'jio of \nthe velocities directly, and of the simple ratio of the radii inversely. \nCOR. 2. And since the periodic times are in a ratio compounded of the \nratio of the radii directly, and the ratio of the velocities inversely, the cen \ntripetal forces, are in a ratio compounded of the ratio of the radii directly, \nand the duplicate ratio of the periodic times inversely. \nCOR, 3. Whence if the periodic times are equal, and the velocities \ntherefore as the radii, the centripetal forces will be also as the radii ; and \ntke contrary. \nCOR. 4. If the periodic times and the velocities are both in the subdu- \nplicate ratio of the radii, the centripetal forces will be equal among them \nselves ; and the contrary. \nCOR. 5. If the periodic times are as the radii, and therefore the veloci \nties equal, the centripetal forces will be reciprocally as the radii ; and the \ncontrary. \nCOR. 6. If ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.875986087
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton explained orbital motion by identifying the force that retains planets in their orbits as a centripetal force, always directed towards the central body (like the sun). He inferred that this force, which is gravity, varies inversely as the square of the distance, demonstrating that such a centripetal force causes bodies to move in specific conic sections, including the elliptical paths observed for planets.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton handle motion in resisting media, such as air or fluids?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_343_4dd8d5bd",
+            "score": 0.840496242,
+            "text": "356 THE MATHEMATICAL PRINCIPLES [BoOK 11. \nProjectiles excite a motion in fluids as they pass through them, and this \nmotion arises from the excess of the pressure of the fluid at the fore parts \nof the projectile above the pressure of the same at the hinder parts : and \ncannot be less in mediums infinitely fluid than it is in air, water, and quick \nsilver, in proportion to the density of matter in each. Now this excess of \npressure does, in proportion to its quantity, not only excite a motion in the \nfluid, but also acts upon the projectile so as to retard its motion ; and there \nfore the resistance in every fluid is as the motion excited by the projectile \nin the fluid ; and cannot be less in the most subtile aether in proportion to \nthe density of that aether, than it is in air, water, and Quicksilver, in pro \nportion to the densities of those fluids. \nSECTION VIII. \nOf motion propagated through fluids. \nPROPOSITION XLI. THEOREM XXXII. \nA pressure is not propagated through a fluid i",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.9404962419999999
+          },
+          {
+            "id": "input_20250807_111804.pdf_306_cab509a3",
+            "score": 0.824485779,
+            "text": "SEC. VI.] OF NATURAL PHILOSOPHY. 319 \nIn the experiments of the 4th column there were equal motions lost in \n535 oscillations made in the air, and If in water. The oscillations in the \nair were indeed a little swifter than those in the water. But if the oscil \nlations in the water were accelerated in such a ratio that the motions of \nthe pendulums might be equally swift in both mediums, there would be \nstill the same number 1 j of oscillations in the water, and by these the \nsame quantity of motion would be lost as before ; because the resistance i> \nincreased, and the square of the time diminished in the same duplicate ra \ntio. The pendulums, therefore, being of equal velocities, there were equal \nmotions lost in 535 oscillations in the air, and 1} in the water; and there \nfore the resistance of the pendulum in the water is to its resistance in the \nair as 535 to 1 }. This is the proportion of the whole resistances in the \ncase of the 4th column. \nNow let AV + CV2 represent the differ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.924485779
+          },
+          {
+            "id": "input_20250807_111804.pdf_342_89214ccc",
+            "score": 0.840027034,
+            "text": "SEC. VII.J OF NATUKAL PHILOSOPHY. 355 \nexperiments of pendulums, as well as by the experiments of falling bodies. \nAnd from all this it may be concluded, that the resistances of bodies, moving \nin any fluids whatsoever, though of the most extreme fluidity, are, cceteris \nparibus, as the densities of the fluids. \nThese things being thus established, we may now determine what part \nof its motion any globe projected in any fluid whatsoever would nearly lose \nin a given time. Let D be the diameter of the globe, and V its velocity \nat the beginning of its motion, and T the time in which a globe with the \nvelocity V can describe in vacua a space that is, to the space |D as the \ndensity of the globe to the density of the fluid ; and the globe projected \n*V \nin that fluid will, in any other time t lose the part ™ , the part \n1 -p t \nTV \nr» remaining ; and will describe a space, which will be to that de \nscribed in the same time in, vacua with the uniform velocity V, as the \nT + t \nlogarithm of",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.890027034
+          },
+          {
+            "id": "input_20250807_111804.pdf_290_dd750f5a",
+            "score": 0.825328171,
+            "text": "SEC. VI.] OF NATURAL PHILOSOPHY. 303 \nelastic fluids do really consist of particles so repelling each other, is a phy \nsical question. We have here demonstrated mathematically the property \nof fluids consisting of particles of this kind, that hence philosophers may \ntake occasion to discuss that question. \nSECTION VI. \nOf the motion and resistance of funependulous bodies. \nPROPOSITION XXIV. THEOREM XIX. \nThe quantities of matter i/i funependulous bodies, whose centres of oscil \nlation are equally distant from, the centre of suspension, are in a, ratio \ncompounded of the ratio of the weights and the duplicate ratio of the \ntimes of the oscillations in vacuo. \nFor the velocity which a given force can generate in a given matter in \na given time is as the force and the time directly, and the matter inversely. \nThe greater the force or the time is, or the less the matter, the greater ve \nlocity will he generated. This is manifest from the second Law of Mo \ntion. Now if pendulums are of the ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.875328171
+          },
+          {
+            "id": "input_20250807_111804.pdf_312_4dd66880",
+            "score": 0.826263249,
+            "text": "SEC. VII.] OF NATURAL PHILOSOPHY. C>2\" \ndiameter of the correspondent particle or part in the other, and since the \nquantities of matter are as the densities of the parts and the cubes of the \ndiameters ; the resistances arc to each other as the squares of the velocities \nand the squares of the diameters and the densities of the parts of the sys \ntems. Q.E.D. The resistances of the latter sort are as the number of \nsorrespondent reflexions and the forces of those reflexions conjunctly ; but \nthe number of the reflexions are to each other as the velocities of the cor \nresponding parts directly and the spaces between their reflexions inversely. \nAnd the forces of the reflexions are as the velocities and the magnitudes \nand the densities of the corresponding parts conjunctly ; that is, as the ve \nlocities and the cubes of the diameters and the densities of the parts. And, \njoining all these ratios, the resistances of the corresponding parts are to \neach other as the squares of the velocit",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.826263249
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton explains that resistance in fluids arises from the excess pressure at the fore parts of a moving body, which excites motion in the fluid and consequently retards the projectile's motion. This resistance is proportional to the motion excited in the fluid and, ceteris paribus, to the density of the fluid. Furthermore, for bodies like projectiles, the resistance is proportional to the square of their velocity, the square of their diameter, and the density of the fluid.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "In what way does Newton's notion of absolute space and time differ from relative motion, and how does it support his laws?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_66_df65800e",
+            "score": 0.838009119,
+            "text": "OF NATURAL PHILOSOPHY. 77 \nsurface of the earth, where the accelerative gravity, or force productive of \ngravity, in all bodies is the same, the motive gravity or the weight is as \nthe body : but if we should ascend to higher regions, where the accelerative \ngravity is less, the weight would be equally diminished, and would always \nbe as the product of the body, by the accelerative gravity. So in those re \ngions, where the accelerative gravity is diminished into one half, the weight \nof a body two or three times less, will be four or six times less. \nI likewise call attractions and impulses, in the same sense, accelerative, \nand motive ; and use the words attraction, impulse or propensity of any \nsort towards a centre, promiscuously, and indifferently, one for another ; \nconsidering those forces not physically, but mathematically : wherefore, the \nreader is not to imagine, that by those words, I anywhere take upon me to \ndefine the kind, or the manner of any action, the causes or the p",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.988009119
+          },
+          {
+            "id": "input_20250807_111804.pdf_67_2baff27f",
+            "score": 0.855420291,
+            "text": "TS THE MATHEMATICAL PRINCIPLES \nthe air passes ; at another time it will be another part of the same, and so. \nabsolutely understood, it will be perpetually mutable. \nIII. Place is a part of space which a body takes up, and is according to \nthe space, either absolute or relative. I say, a part of space ; not the situation, \nnor the external surface of the body. For the places of equal solids are \nalways equal ; but their superfices, by reason of their dissimilar figures, are \noften unequal. Positions properly have no quantity, nor are they so much \nthe places themselves, as the properties of places. The motion of the whole \nis the same thing with the sum of the motions of the parts ; that is, the \ntranslation of the whole, out of its place, is the same thing with the sum \nof the translations of the parts out of their places ; and therefore the place \nof the whole is the same thing with the sum of the places of the parts, and \nfor that reason, it is internal, and in the whole body. \nIV.",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.955420291
+          },
+          {
+            "id": "input_20250807_111804.pdf_78_4ff57e5d",
+            "score": 0.835754931,
+            "text": "OF NATURAL PHILOSOPHY. 89 \nthemselves, whether that space is at rest, or moves uniformly forwards \nin a right line without any circular motion. \nFor the differences of the motions tending towards the same parts, and \nthe sums of those that tend towards contrary parts, are, at first (by sup \nposition), in both cases the same ; and it is from those sums and differences \nthat the collisions and impulses do arise with which the bodies mutually \nimpinge one upon another. Wherefore (by Law II), the effects of those \ncollisions will be equal in both cases ; and therefore the mutual motions \nof the bodies among themselves in the one case will remain equal to the \nmutual motions of the bodies among themselves in the other. A clear \nproof of which we have from the experiment of a ship ; where all motions \nhappen after the same manner, whether the ship is at rest, or is carried \nuniformly forwards in a right line. \nCOROLLARY VI. \nIf bodies, any how moved among themselves, are urged in the direct-",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.935754931
+          },
+          {
+            "id": "input_20250807_111804.pdf_68_77343393",
+            "score": 0.842221379,
+            "text": "OF NATURAL PHILOSOPHY. 79 \ntions may be accelerated and retarded; but the true, or equable, progress of \nabsolute time is liable to no change. The duration or perseverance of the \nexistence of things remains the same, whether the motions are swift or slow, \nor none at all : and therefore it ought to be distinguished from what are \nonly sensible measures thereof ; and out of which we collect it, by means \nof the astronomical equation. The necessity of which equation, for deter \nmining the times of a phamomenon, is evinced as well from the experiments \nof the pendulum clock, as by eclipses of the satellites of Jupiter. \nAs the order of the parts of time is immutable, so also is the order of \nthe parts of space. Suppose those parts to be moved out of their places, and \nthey will be moved (if the expression may be allowed) out of themselves. \nFor times and spaces are, as it were, the places as well of themselves as of \nall other things. All things are placed in time as to order of successi",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8922213790000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_69_10093e7b",
+            "score": 0.838297,
+            "text": "8C THE MATHEMATICAL PRINCIPLES \nmined by the translation of it from those which only seem to rest ; for the \nexternal bodies ought not only to appear at rest, but to be really at rest. \nFor otherwise, all included bodies, beside their translation from near the \nsurrounding ones, partake likewise of their true motions ; and though that \ntranslation were not made they would not be really at rest, but only seem \nto be so. For the surrounding bodies stand in the like relation to the \nsurrounded as the exterior part of a whole does to the interior, or as the \nshell does to the kernel ; but, if the shell moves, the kernel will also \nmove, as being part of the whole, without any removal from near the shell. \nA property, near akin to the preceding, is this, that if a place is moved, \nwhatever is placed therein moves along with it ; and therefore a body, \nwhich is moved from a place in motion, partakes also of the motion of its \nplace. Upon which account, all motions, from places in motion, are",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.838297
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton defines absolute space as an immutable, fixed framework independent of bodies, and absolute time as a true, uniform flow, distinguishing them from the mutable and sensible relative measures derived from objects. This absolute framework supports his laws by providing a fundamental, unchanging reference against which true motion and accelerations can be defined, allowing his laws to accurately describe how forces cause changes in absolute motion.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Who was the grandfather of Isaac Newton?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_7_6a5869e6",
+            "score": 0.8131302,
+            "text": "10 LIFE OF SIR ISAAC NEWTON. \nso doubtingly hovered, lived ; — lived to a vigorous maturity, to a \nhale old age ; — lived to become the boast of his country, the won \nder of his time, and the \"ornament of his srjecies.\" \nBeyond the grandfather, Robert Newton, the descent of Sir \nIsaac cannot with certainty be traced. Two traditions were held \nin the family : one, that they were of Scotch extraction ; the \nother, that they came originally from Newton, in Lancashire, \ndwelling, for a time, however, at Westby, county of Lincoln, be \nfore the removal to and purchase of Woolsthorpe — about a hundred \nyears before this memorable birth. \nThe widow Newton was left with the simple means of a com \nfortable subsistence. The Woolsthorpe estate together with \nsmall one which she possessed at Sewstern, in Leicestershire, yield \ned her an income of some eighty pounds ; and upon this limited sum, \nshe had to rely chiefly for the support of herself, and the educa \ntion of her child. She continued his n",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.9631302
+          },
+          {
+            "id": "input_20250807_111804.pdf_58_68f0e837",
+            "score": 0.807979107,
+            "text": "LIFE OF SIR ISAAC NEWTON. 61 \nchiefly, in the possession of the family of the Earl of Portsmouth, \nthrough the Viscountess Lymington. \nEverything appertaining to Newton has been kept and che \nrished with peculiar veneration. Different memorials of him are \npreserved in Trinity College, Cambridge ; in the rooms of the \nRoyal Society, of London : and in the Museum of the Royal \nSociety of Edinburgh. \nThe manor-house, at Woolsthorpe, was visited by Dr. Stuke \nley, in October, 1721, who, in a letter to Dr. Mead, written in \n1727, gave the following description of it: — \" 'Tis built of stone, \nas is the way of the country hereabouts, and a reasonably good \none. They led me up stairs and showed me Sir Isaac's stud}-, \nwhere I supposed he studied, when in the country, in his younger \ndays, or perhaps when he visited his mother from the University. \nI observed the shelves were of his own making, being pieces of \ndeal boxes, which probably he sent his books and clothes down \nin on those occasio",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.957979107
+          },
+          {
+            "id": "input_20250807_111804.pdf_27_a115d129",
+            "score": 0.79630059,
+            "text": "30 LIFE OF SIR ISAAC NEWTON. \nthe discovery that a projectile would move in an elliptical orbil \nwhen under the influence of a force varying inversely as the \nsquare of the distance, was led to discover \" the theorem bj \nwhich he afterwards examined the ellipsis ;\" and to demonstrate \nthe celebrated proposition that a planet acted upon by an attrac \ntive force varying inversely as the squares of the distances will \ndescribe an elliptical orbit, in one of whose foci the attractive \nforce resides. \nWhen he was attending a meeting of the Royal Society, in \nJune 1682, the conversation fell upon the subject of the measure \nment of a degree of the meridian, executed by M. Picard, a \nFrench Astronomer, in 1679. Newton took a memorandum oi \nthe result ; and afterward, at the earliest opportunity, computed \nfrom it the diameter of the earth : furnished with these new data, \nhe resumed his calculation of 1666. As he proceeded therein, \nhe saw that his early expectations were now likely to be rea",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.94630059
+          },
+          {
+            "id": "input_20250807_111804.pdf_6_576cc27a",
+            "score": 0.796069205,
+            "text": "LIFE OF \nSIE ISAAC NEWTON. \nNec fas est proprius mortal? attingere Divos. — HALLEY. \nFROM the thick darkness of the middle ages man's struggling \nspirit emerged as in new birth ; breaking out of the iron control \nof that period ; growing strong and confident in the tug and din \nof succeeding conflict and revolution, it bounded forwards and \nupwards with resistless vigour to the investigation of physical and \nmoral truth ; ascending height after height ; sweeping afar over \nthe earth, penetrating afar up into the heavens ; increasing in en \ndeavour, enlarging in endowment ; every where boldly, earnestly \nout-stretching, till, in the AUTHOR of the PRINCIPIA, one arose, \nwho, grasping the master-key of the universe and treading its \ncelestial paths, opened up to the human intellect the stupendous \nrealities of the material world, and, in the unrolling of its harmo \nnies, gave to the human heart a new song to the goodness, wis \ndom, and majesty of the all-creating, all-sustaining, all-perf",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.946069205
+          },
+          {
+            "id": "input_20250807_111804.pdf_54_9106ef32",
+            "score": 0.8023929,
+            "text": "LIFE OF SIR ISAAC NEWTON. 57 \nheard him censure the handling geometrical subjects ly algebraic \ncalculations ; and his book of Algebra he called by the name of \nUniversal Arithmetic, in opposition to the injudicious title of \nGeometry, which Descartes had given to the treatise, wherein he \nshows how the geometer may assist his invention by such kind \nof computations. He thought Huygens the most elegant of any \nmathematical writer of modern times, and the most just imitator \nof the ancients. Of their taste and form of demonstration, Sir \nIsaac always professed himself a great admirer. I have heard \nhim even censure himself for not following them yet more closely \nthan he did ; and speak with regret of his mistake at the begin \nning of his mathematical studies, in applying himself to the works \nof Descartes and other algebraic writers, before he had considered \nthe elements of Euclid with that attention which so excellent a \nwriter deserves.\" \n\" Though his memory was much decayed,\" conti",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.9023928999999999
+          }
+        ],
+        "evaluation": {
+          "answer": "The grandfather of Isaac Newton was Robert Newton. His lineage could not be traced with certainty beyond him.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Do we know any other descent of Isaac Newton apart from his grandfather?",
+        "search_results": [
+          {
+            "id": "input_20250807_111804.pdf_7_6a5869e6",
+            "score": 0.835789502,
+            "text": "10 LIFE OF SIR ISAAC NEWTON. \nso doubtingly hovered, lived ; — lived to a vigorous maturity, to a \nhale old age ; — lived to become the boast of his country, the won \nder of his time, and the \"ornament of his srjecies.\" \nBeyond the grandfather, Robert Newton, the descent of Sir \nIsaac cannot with certainty be traced. Two traditions were held \nin the family : one, that they were of Scotch extraction ; the \nother, that they came originally from Newton, in Lancashire, \ndwelling, for a time, however, at Westby, county of Lincoln, be \nfore the removal to and purchase of Woolsthorpe — about a hundred \nyears before this memorable birth. \nThe widow Newton was left with the simple means of a com \nfortable subsistence. The Woolsthorpe estate together with \nsmall one which she possessed at Sewstern, in Leicestershire, yield \ned her an income of some eighty pounds ; and upon this limited sum, \nshe had to rely chiefly for the support of herself, and the educa \ntion of her child. She continued his n",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.985789502
+          },
+          {
+            "id": "input_20250807_111804.pdf_58_68f0e837",
+            "score": 0.826062441,
+            "text": "LIFE OF SIR ISAAC NEWTON. 61 \nchiefly, in the possession of the family of the Earl of Portsmouth, \nthrough the Viscountess Lymington. \nEverything appertaining to Newton has been kept and che \nrished with peculiar veneration. Different memorials of him are \npreserved in Trinity College, Cambridge ; in the rooms of the \nRoyal Society, of London : and in the Museum of the Royal \nSociety of Edinburgh. \nThe manor-house, at Woolsthorpe, was visited by Dr. Stuke \nley, in October, 1721, who, in a letter to Dr. Mead, written in \n1727, gave the following description of it: — \" 'Tis built of stone, \nas is the way of the country hereabouts, and a reasonably good \none. They led me up stairs and showed me Sir Isaac's stud}-, \nwhere I supposed he studied, when in the country, in his younger \ndays, or perhaps when he visited his mother from the University. \nI observed the shelves were of his own making, being pieces of \ndeal boxes, which probably he sent his books and clothes down \nin on those occasio",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8760624410000001
+          },
+          {
+            "id": "input_20250807_111804.pdf_54_9106ef32",
+            "score": 0.823192716,
+            "text": "LIFE OF SIR ISAAC NEWTON. 57 \nheard him censure the handling geometrical subjects ly algebraic \ncalculations ; and his book of Algebra he called by the name of \nUniversal Arithmetic, in opposition to the injudicious title of \nGeometry, which Descartes had given to the treatise, wherein he \nshows how the geometer may assist his invention by such kind \nof computations. He thought Huygens the most elegant of any \nmathematical writer of modern times, and the most just imitator \nof the ancients. Of their taste and form of demonstration, Sir \nIsaac always professed himself a great admirer. I have heard \nhim even censure himself for not following them yet more closely \nthan he did ; and speak with regret of his mistake at the begin \nning of his mathematical studies, in applying himself to the works \nof Descartes and other algebraic writers, before he had considered \nthe elements of Euclid with that attention which so excellent a \nwriter deserves.\" \n\" Though his memory was much decayed,\" conti",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.873192716
+          },
+          {
+            "id": "input_20250807_111804.pdf_6_576cc27a",
+            "score": 0.81734705,
+            "text": "LIFE OF \nSIE ISAAC NEWTON. \nNec fas est proprius mortal? attingere Divos. — HALLEY. \nFROM the thick darkness of the middle ages man's struggling \nspirit emerged as in new birth ; breaking out of the iron control \nof that period ; growing strong and confident in the tug and din \nof succeeding conflict and revolution, it bounded forwards and \nupwards with resistless vigour to the investigation of physical and \nmoral truth ; ascending height after height ; sweeping afar over \nthe earth, penetrating afar up into the heavens ; increasing in en \ndeavour, enlarging in endowment ; every where boldly, earnestly \nout-stretching, till, in the AUTHOR of the PRINCIPIA, one arose, \nwho, grasping the master-key of the universe and treading its \ncelestial paths, opened up to the human intellect the stupendous \nrealities of the material world, and, in the unrolling of its harmo \nnies, gave to the human heart a new song to the goodness, wis \ndom, and majesty of the all-creating, all-sustaining, all-perf",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.86734705
+          },
+          {
+            "id": "input_20250807_111804.pdf_57_8b6d287f",
+            "score": 0.814602554,
+            "text": "60 LIFE OF SIR ISAAC NEWTON. \nyears, ind full of honours, the heaven-sent was recalled ; and, in \nthe confidence of a \" certain hope,\" peacefully he passed awa}' \ninto the silent depths of Eternity. \nHis body was placed in Westminster Abbey, with the state \nand ceremonial that usually attended the interment of the most \ndistinguished. In 1731, his relatives, the inheritors of his personal \nestate, erected a monument to his memory in the most conspicu \nous part of the Abbey, which had often been refused by the dean \nand chapter to the greatest of England's nobility. During the \nsame year a medal was struck at the Tower in his honour ; arid, \nin 1755, a full-length statue of him, in white marble, admirably \nexecuted, by Roubiliac, at the expense of Dr. Robert Smith, was \nerected in the ante-chamber of Trinity College, Cambridge. \nThere is a painting executed in the glass of one of the windows \nof the same college, made pursuant to the will of Dr. Smith, who \nleft five hundred pounds for ",
+            "document_name": "input_20250807_111804.pdf",
+            "page_number": 0.0,
+            "hybrid_score": 0.8646025540000001
+          }
+        ],
+        "evaluation": {
+          "answer": "No, the policy context states that beyond his grandfather, Robert Newton, the descent of Sir Isaac Newton cannot be traced with certainty. While there were family traditions about their origin in Scotland or Lancashire, these are not definite.",
+          "source_document": "input_20250807_111804.pdf",
+          "search_method": "hybrid_post_retrieval",
+          "reranker_type": "none",
+          "reranker_available": false,
+          "hybrid_search_enabled": true,
+          "reranking_enabled": false,
+          "total_candidates_retrieved": 5,
+          "final_chunks_used": 5,
+          "performance_note": "⚡ Using post-retrieval keyword boosting for improved accuracy"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 15.550059080123901,
+      "query_embedding": {
+        "total": 0.8220717906951904,
+        "individual": [
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254,
+          0.06850598255793254
+        ]
+      },
+      "pdf_processing_and_indexing": 32.13301706314087,
+      "query_processor_initialization": 4.482681512832642,
+      "query_processing": {
+        "total": 145.20620489120483,
+        "average": 12.100517074267069,
+        "individual": [
+          14.339333057403564,
+          15.54767632484436,
+          11.704269647598267,
+          10.972327470779419,
+          10.971327066421509,
+          10.971327066421509,
+          18.071406364440918,
+          12.020935297012329,
+          11.133990049362183,
+          11.79294729232788,
+          10.963892221450806,
+          6.71677303314209
+        ]
+      },
+      "cleanup_index": 1.0987873077392578,
+      "total_execution_time": 72.16207885742188
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpvx2le2wj",
+    "api_version": "2.1",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7
+    }
+  },
+  "processing_summary": {
+    "total_questions": 12,
+    "total_time_seconds": 72.16207885742188,
+    "pdf_processing_time": 32.13301706314087,
+    "query_processing_time": 145.20620489120483,
+    "parallel_execution_time": 18.075462102890015,
+    "max_individual_query_time": 18.071406364440918,
+    "embedding_time": 0.8220717906951904
+  },
+  "performance_metrics": {
+    "queries_processed": 12,
+    "parallel_speedup_ratio": 8.033332927515495,
+    "individual_query_times": [
+      14.339333057403564,
+      15.54767632484436,
+      11.704269647598267,
+      10.972327470779419,
+      10.971327066421509,
+      10.971327066421509,
+      18.071406364440918,
+      12.020935297012329,
+      11.133990049362183,
+      11.79294729232788,
+      10.963892221450806,
+      6.71677303314209
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "How does Newton define 'quantity of motion' and ho...",
+        "time_seconds": 14.339333057403564
+      },
+      {
+        "query_index": 1,
+        "query": "According to Newton, what are the three laws of mo...",
+        "time_seconds": 15.54767632484436
+      },
+      {
+        "query_index": 2,
+        "query": "How does Newton derive Kepler's Second Law (equal ...",
+        "time_seconds": 11.704269647598267
+      },
+      {
+        "query_index": 3,
+        "query": "How does Newton demonstrate that gravity is invers...",
+        "time_seconds": 10.972327470779419
+      },
+      {
+        "query_index": 4,
+        "query": "What is Newton's argument for why gravitational fo...",
+        "time_seconds": 10.971327066421509
+      },
+      {
+        "query_index": 5,
+        "query": "How does Newton explain the perturbation of planet...",
+        "time_seconds": 10.971327066421509
+      },
+      {
+        "query_index": 6,
+        "query": "What mathematical tools did Newton use in Principi...",
+        "time_seconds": 18.071406364440918
+      },
+      {
+        "query_index": 7,
+        "query": "How does Newton use the concept of centripetal for...",
+        "time_seconds": 12.020935297012329
+      },
+      {
+        "query_index": 8,
+        "query": "How does Newton handle motion in resisting media, ...",
+        "time_seconds": 11.133990049362183
+      },
+      {
+        "query_index": 9,
+        "query": "In what way does Newton's notion of absolute space...",
+        "time_seconds": 11.79294729232788
+      },
+      {
+        "query_index": 10,
+        "query": "Who was the grandfather of Isaac Newton?",
+        "time_seconds": 10.963892221450806
+      },
+      {
+        "query_index": 11,
+        "query": "Do we know any other descent of Isaac Newton apart...",
+        "time_seconds": 6.71677303314209
+      }
+    ]
+  }
+}

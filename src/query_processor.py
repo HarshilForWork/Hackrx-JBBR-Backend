@@ -898,3 +898,118 @@ class QueryProcessor:
                 "status": "error",
                 "error": str(e)
             }
+    
+    async def process_queries_batch(self, queries: List[str], query_embeddings: Optional[List[List[float]]] = None) -> List[Dict[str, Any]]:
+        """
+        Process multiple queries in parallel using asyncio.
+        
+        Args:
+            queries: List of queries to process
+            query_embeddings: Optional list of precomputed embeddings for each query
+            
+        Returns:
+            List of results in the same order as input queries
+        """
+        import asyncio
+        
+        # Validate inputs
+        if not queries:
+            return []
+        
+        if query_embeddings and len(query_embeddings) != len(queries):
+            raise ValueError("Number of embeddings must match number of queries")
+        
+        # Create semaphore to limit concurrent processing (prevent overwhelming the APIs)
+        max_concurrent = min(10, len(queries))  # Limit to 10 concurrent queries
+        semaphore = asyncio.Semaphore(max_concurrent)
+        
+        async def process_single_query_async(idx: int, query: str) -> Dict[str, Any]:
+            """Process a single query with semaphore protection."""
+            async with semaphore:
+                try:
+                    # Use precomputed embedding if available
+                    embedding = query_embeddings[idx] if query_embeddings else None
+                    
+                    # Run the synchronous process_query in a thread pool
+                    loop = asyncio.get_event_loop()
+                    result = await loop.run_in_executor(
+                        None, 
+                        self.process_query, 
+                        query, 
+                        embedding
+                    )
+                    
+                    # Add index to track original order
+                    result["original_index"] = idx
+                    return result
+                    
+                except Exception as e:
+                    # Return error result in same format
+                    return {
+                        "query": query,
+                        "search_results": [],
+                        "evaluation": {
+                            "decision": "error",
+                            "amount": None,
+                            "confidence": 0.0,
+                            "justification": f"Batch processing error: {str(e)}",
+                            "relevant_clauses": [],
+                            "reasoning": "Batch processing system error"
+                        },
+                        "api_status": self.get_api_status(),
+                        "status": "error",
+                        "error": str(e),
+                        "original_index": idx
+                    }
+        
+        # Create tasks for all queries
+        print(f"🚀 Starting batch processing of {len(queries)} queries with max {max_concurrent} concurrent...")
+        tasks = []
+        for idx, query in enumerate(queries):
+            task = process_single_query_async(idx, query)
+            tasks.append(task)
+        
+        # Execute all tasks concurrently
+        start_time = time.time()
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        end_time = time.time()
+        
+        # Handle any exceptions that occurred
+        processed_results = []
+        for idx, result in enumerate(results):
+            if isinstance(result, Exception):
+                # Create error result for failed queries
+                error_result = {
+                    "query": queries[idx],
+                    "search_results": [],
+                    "evaluation": {
+                        "decision": "error",
+                        "amount": None,
+                        "confidence": 0.0,
+                        "justification": f"Exception during processing: {str(result)}",
+                        "relevant_clauses": [],
+                        "reasoning": "Exception occurred"
+                    },
+                    "api_status": self.get_api_status(),
+                    "status": "error",
+                    "error": str(result),
+                    "original_index": idx
+                }
+                processed_results.append(error_result)
+            else:
+                processed_results.append(result)
+        
+        # Sort results by original index to maintain order
+        processed_results.sort(key=lambda x: x.get("original_index", 0))
+        
+        # Remove the original_index field from final results
+        final_results = []
+        for result in processed_results:
+            if "original_index" in result:
+                del result["original_index"]
+            final_results.append(result)
+        
+        print(f"✅ Batch processing completed in {end_time - start_time:.2f} seconds")
+        print(f"📊 Processed {len(final_results)} queries successfully")
+        
+        return final_results
