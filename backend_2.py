@@ -192,7 +192,7 @@ def batch_embed_queries_multithread(queries: List[str], pinecone_key: str, max_w
     
     return all_embeddings, individual_times, total_time, thread_info
 
-def batch_process_queries_multithread(queries: List[str], embeddings: List[list], pinecone_key: str, gemini_key: str, max_workers: int = 15):
+def batch_process_queries_multithread(queries: List[str], embeddings: List[list], pinecone_key: str, gemini_key: str, max_workers: int = 10):
     """Process multiple queries using multithreading"""
     print(f"🚀 Starting multithreaded query processing for {len(queries)} queries with {max_workers} workers")
     
@@ -331,7 +331,7 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
     embedding_start = time.time()
     
     # Determine optimal number of threads (max 10 for embedding to avoid rate limits)
-    max_embedding_workers = min(10, len(queries))
+    max_embedding_workers = min(20, len(queries))
     all_embeddings, embedding_times, total_embedding_time, embedding_threads = batch_embed_queries_multithread(
         queries, pinecone_key, max_embedding_workers
     )
@@ -361,8 +361,8 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
     # Process all queries using multithreading
     print(f"🧵 Starting multithreaded query processing for {len(queries)} queries...")
     
-    # Determine optimal number of threads (max 5 for query processing to avoid overwhelming LLM APIs)
-    max_query_workers = min(5, len(queries))
+    # Determine optimal number of threads (max 10 for query processing instead of 5)
+    max_query_workers = min(20, len(queries))  # Increased from 5 to 10
     answers, query_times, total_batch_time, query_threads = batch_process_queries_multithread(
         queries, all_embeddings, pinecone_key, gemini_key, max_query_workers
     )
@@ -523,7 +523,7 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             "pdf_download": timings.get("download", 0),
             "pdf_processing": timings.get("process_and_index", 0),
             "embedding_time": total_embedding_time,
-            "query_processing_time": total_batch_time,
+            "query_processing_time": total_batch_time,  # This is the actual parallel execution time
             "cleanup_time": timings.get("cleanup_index", 0)
         },
         "multithreading_performance": {
@@ -532,7 +532,13 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
             "embedding_speedup": (sum(embedding_times) / total_embedding_time) if total_embedding_time > 0 else 1,
             "query_speedup": (total_query_time / total_batch_time) if total_batch_time > 0 else 1,
             "individual_embedding_times": embedding_times,
-            "individual_query_times": query_times
+            "individual_query_times": query_times,
+            "bottleneck_analysis": {
+                "slowest_query_time": max(query_times) if query_times else 0,
+                "fastest_query_time": min(query_times) if query_times else 0,
+                "time_variance": max(query_times) - min(query_times) if query_times else 0,
+                "parallel_efficiency": (sum(query_times) / (total_batch_time * max_query_workers)) if total_batch_time > 0 else 0
+            }
         },
         "vector_info": {
             "total_queries": len(all_embeddings),

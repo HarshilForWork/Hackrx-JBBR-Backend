@@ -1,0 +1,673 @@
+{
+  "timestamp": "2025-08-10T00:52:30.025202",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/Super_Splendor_(Feb_2023).pdf?sv=2023-01-03&st=2025-07-21T08%3A10%3A00Z&se=2025-09-22T08%3A10%3A00Z&sr=b&sp=r&sig=vhHrl63YtrEOCsAy%2BpVKr20b3ZUo5HMz1lF9%2BJh6LQ0%3D",
+    "questions": [
+      "What is the ideal spark plug gap recommeded",
+      "Does this comes in tubeless tyre version",
+      "Is it compulsoury to have a disc brake",
+      "Can I put thums up instead of oil",
+      "Give me JS code to generate a random number between 1 and 100"
+    ],
+    "pdf_filename": "input_20250810_005155.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_005155.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "What is the ideal spark plug gap recommeded",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_44_a5888c8a",
+            "score": 0.854926169,
+            "text": "38\nNGK-CPR 7EA9, RG8YC (Federal Mogul)\nRecommended spark plugs: \nFor most riding conditions this spark plug heat \nrange number is satisfactory. However, if the \nvehicle is going to be operated for extended \nperiods at high speeds or near maximum \npower in hot climates, the spark plug should \nbe changed to a cold heat range number, \nconsult Authorised \nHero MotoCorp workshop \non this if required.\n• Disconnect the noise suppressor cap (1) \nand remove the spark plug (2) with the help \nof spark plug box wrench provided in the \ntool bag. \nSPARK PLUG INSPECTION\n• Clean any dirt around the spark plug base.\n• Make sure that the spark plug gap is \n0.8-0.9 mm using a wire-type feeler \ngauge. If adjustment is necessary, bend the \nside electrode carefully. Make sure the plug \nwasher is in good conditions.\n• Tighten a new spark plug 1/2 turn with \nspark plug wrench to compress the washer. \nIf you are reusing a plug, it should only take \n1/8-1/4 turn after the plug seats. \n• With the plug washer att",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.854926169,
+            "final_score": 0.8934954,
+            "rerank_score": 0.8934954,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_75_f6893b0d",
+            "score": 0.80686456,
+            "text": "69\nOK\nCheck air cleaner element\nOK\nReplace\nDirty\nLeakage\nConsult Authorised Hero MotoCorp Workshop\n2. ENGINE STARTS BUT STALLS\nConsult Authorised Hero MotoCorp Workshop\nCheck fuel lines\nCheck ignition switch\nOk\nOk\nOk\n“OFF”\nD. No spark at spark plug\nNo spark\nConsult Authorised Hero MotoCorp Workshop\nCheck spark plug for fouling/\nImproper electrode gap\nReplace spark plug/adjust\nSpark plug gap (0.8-0.9 mm)\nLoose contact\nCheck for poorly connected\nOr loose spark plug wire\nSecure properly\nTurn ignition switch “ON”\nSpark plug loose in cylinder head\nOk\nCheck air cleaner element\nOk\nOk\nCheck brake binding\nImproper adjustment\nTighten the spark plug\nReplace\nReadjust free play of rear brake pedal\nClogged\nLoose\n3. POOR PICK UP\nOk\nCheck tyre inflation pressure\nUnder inflated\nCorrect tyre pressure\nConsult Authorised Hero MotoCorp Workshop\nBASIC TROUBLESHOOTING BASIC TROUBLESHOOTING\nCheck fuse\nOk\nInspect battery\nOk\nOk\nCheck bulbs\nFuse/wrong wattage\nReplace fuse (page 64)\nWeak\nFused\nFeeble horn sound o",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.80686456,
+            "final_score": 0.29229218,
+            "rerank_score": 0.29229218,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_5_a217932d",
+            "score": 0.8045367,
+            "text": "5\nVEHICLE SPECIFICATION\nEngine oil\nFuel tank capacity\nMaximum power\nMaximum torque\nBore and stroke\nCompression ratio\nDisplacement\nSpark plug gap\nValve clearance\nIdle speed\nFront suspension\nRear suspension\nCaster angle\n0.95 litre at disassembly and 0.75 litre at draining\n12 litres \n8 kW @ 7500 r/min\n10.6 N-m @ 6000 r/min\n52.4x57.8 mm\n9.9:1\n124.7 cc\n0.8-0.9 mm\n0.08 mm \n0.12 mm \n1400±100 r/min\nTelescopic hydraulic shock absorbers\nSwingarm with 5 step adjustable hydraulic shock \nabsorbers\n26°\nCapacities \nEngine\nIntake (cold)\nExhaust (cold)\nChassis and suspension\nSpark plug\nSPECIFICATIONS\nITEM\nDimensions\nOverall length\nOverall width\nOverall height\nWheelbase\nSaddle height\nGround clearance\n2042 mm\n740 mm \n1102 mm\n1267 mm\n799 mm\n180 mm\n122 kg \nWeight\nNGK-CPR 7EA9, RG8YC (Federal Mogul)\n714 mm \nDisc-Drum\nDrum-Drum\nKerb weight\n123 kg \nDisc-Drum\nDrum-Drum\nPayload\n130 kg \nTrail length\n92 mm",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.8045367,
+            "final_score": 0.030214587,
+            "rerank_score": 0.030214587,
+            "original_rank": 5,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_42_e5d76b65",
+            "score": 0.806450844,
+            "text": "We would strongly recommend the following schedule, to keep your vehicle in \nperfect running condition and healthy environment. Vehicle subjected to severe use or ridden \nin dusty area will require more frequent servicing. \nMAINTENANCE SCHEDULE\nFuel Line\nI\nI\nI\nI\nI\n3000-\n3500\n6000-\n6500\n9000-\n9500\n12000-\n12500\nWHICHEVER\nCOMES FIRST\nITEMS\nDURING FREE SERVICE PERIOD\nSERVICE\nst1\n2nd\nrd3\nth4\nth5\nAFTER FREE SERVICE\nONCE IN EVERY\n6000\n9000 12000 15000\nDAYS\nKM Note-1\n500-\n750\n3000\nNext \n100\nNext \n100\nNext \n100\n1st 60\nNext \n100\nI\nThrottle Operation\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nAir Cleaner Element\nSpark Plug\nValve Clearance\nEngine Oil\nEngine Oil Strainer\nScreen\nEngine Oil Filter\nBrake Shoe\nR\nR\nO\nC\nI\nDrive Chain\nBattery Voltage\nI\nI\nI\nI\nI\nElectric Starter\nI\nR\nC\nC\nI, T\nO\nI, T\nO\nI, T\nO\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nI, C, A\nI, C, A\nI, C, A\nI, C, A\nI, C, A\nR\nOil Circulation\nI\nI\nI\nI\nI\nI\nI\nDrive Chain Slider\nI\nI\nI\nI\nI\nNote-2\nNote-3\nNote-4\nDo not open air cleaner element unless \nthere is a drivability p",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.806450844,
+            "final_score": 0.0018386652,
+            "rerank_score": 0.0018386652,
+            "original_rank": 4,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_59_8e1b7cc3",
+            "score": 0.798220336,
+            "text": "53\n(2) Integrated/Rear brake pedal\n(3) Free play: 20-30 mm \nŸ Push the integrated brake arm (4) by hand \nin the direction as shown.\nŸ Turn the first adjuster nut (5) till you cannot \nturn it by hand.\nFront brake cable (A) on “F” side \nAdjustment\n(4) Integrated brake arm (5) First adjuster nut \n(i) Decrease free play (ii) Increase free play\nIntegrated brake cable (B) on “C” side\nŸ If the free play is out specification turn the \nadjuster nut to obtain desired free play.\nŸ Check the free play of front brake lever.\n FREE PLAY: 10-20 mm\n• Push the integrated brake arm (4) by hand \nin the direction as shown.\n• Turn the second adjuster nut (6) until a gap \nis created between joint (7) and the slot on \nthe first side in integrated brake arm.\n• After ensuring the gap, turn the second \nadjuster nut counterclockwise by half \nrotation.\n• Check the free play of rear brake pedal.\nAdjustment\n• If the free play is out specification turn the \nadjuster nut to obtain desired free play.\n FREE PLAY: 20-30 ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.798220336,
+            "final_score": 0.0011291547,
+            "rerank_score": 0.0011291547,
+            "original_rank": 11,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "The ideal spark plug gap recommended is between 0.8-0.9 mm. This gap should be checked using a wire-type feeler gauge, and adjusted carefully if necessary.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127860,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Does this comes in tubeless tyre version",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_6_cc107116",
+            "score": 0.791419923,
+            "text": "6\nVEHICLE SPECIFICATION\nSPECIFICATIONS\nITEM\n*MF stands for Maintenance Free\n**MFR stands for Multi-Focal Reflector\nSide stand indicator\ni3s indicator\nFuse\n15A, 10A, 10A, 10A\nProgrammed FI Malfunction indicator lamp (MIL)\nFront\nRear\nPrimary reduction\nFinal reduction\nst\nGear ratio, 1\nrd4\nth5\nTransmission \nnd2\nBrakes\nFront (Drum variant)\nTyre size\nFront (Disc variant)\nRear (Drum variant)\nDia. \n240 mm\nDia. 1\n mm\n30\n80/100-18 47P (Tubeless tyre)\n90/90-18 51P (Tubeless tyre) \nDia. 1\n mm\n30\n3.071 (43/14)\nBattery\nAlternator\nStarting system\nHeadlamp (High/Low)\nTail/Stop lamp\nTurn signal lamp\n12V-21/5W-**MFR\nKick/Electric tart \ns\n12V-35W/35W Halogen bulb-**MFR\n12V-10Wx4 (Amber bulb) with clear lens-**MFR\n*MF battery 12V-4Ah/ETZ5\n1\n40 W @ 5000 \nr/min\nElectricals\nMeter illumination\nNeutral indicator\nTurn signal indicator\nLED\nLED\nLED\nLED\nLED\nLED\nLED\nLED\nHi beam indicator\n3.35 (67/20)\n3.17 (38/12)\n1.83 (33/18)\n1.04 (26/25)\n0.923 (24/26)\nrd3\n1.272 (28/22)\nTransmission\n5 speed transmission\nFront & rea",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.791419923,
+            "final_score": 0.16344544,
+            "rerank_score": 0.16344544,
+            "original_rank": 6,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_68_7d443618",
+            "score": 0.806411147,
+            "text": "62\nWARNING\n!!\n• Operation with excessively worn tyres is \nhazardous and will adversely affect traction \nand handling.\n• Always use the size and type of tyres \nrecommended in this owner's manual.\n• Under-inflation may result in the tyre \nslipping on or tyre coming off the rim.\nNOTE\nFor repair and replacement of tyre it is advised \nto visit your Authorised Hero MotoCorp \nworkshop.\nNOTE\nThe imported tyre(s) if fitted without ISI mark; \nare in compliance of BIS standard and Central \nMotor Vehicle Rules 1989, as declared by the \nTyre manufacturer.\n• Do not install a tube inside a tubeless tyre on \nthis vehicle. Excessive heat buildup can \ncause the tube to burst.\nImportant safety reminders\n• Use only tubeless tyres on this vehicle. The \nrims are designed for tubeless tyres, and \nduring hard acceleration or braking, a tube-\ntype tyre could slip on the rim and cause the \ntyre to rapidly deflate.\n• Check that all chassis nuts and bolts are \ntightened to correct torque values.\n• Check that all ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.806411147,
+            "final_score": 0.13466208,
+            "rerank_score": 0.13466208,
+            "original_rank": 1,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_2_76b56368",
+            "score": 0.773189962,
+            "text": "Pg. No.\nPg. No.\nCONTENTS\nPg. No.\nANTI-THEFT TIPS \n7 \nVEHICLE SAFETY \n8\nVEHICLE IDENTIFICATION \n1\nVEHICLE SPECIFICATION \n5\nVEHICLE VIEWS \n2\nACCESSORIES & MODIFICATIONS \n7\nŸ Important safety information \n8\nŸ Protective apparel \n9\nSAFE RIDING TIPS \n10\nTIPS FOR HEALTHY ENVIRONMENT \n11\nŸ Ignition switch \n12\nPARTS FUNCTION \n12\nŸ LCD panel \n15\nFEATURES \n19\nŸ Instruments and Indicators \n13\nHANDLEBAR SWITCHES CONTROL \n19\ni3s (IDLE STOP START SYSTEM) \n20\nSIDE STAND INDICATOR/SWITCH \n22\nFUEL \n24\nSEAT LOCK/HELMET HOLDER \n26\nTOOL KIT/FIRST AID KIT \n32\nPARKING \n32\nPRE-RIDE INSPECTION \n28\nUSB CHARGER \n27\nMAINTENANCE \n33\nCLEANING AND WASHING OF VEHICLE \n33\nSTARTING THE ENGINE \n29\nBRAKING \n31\nRIDING \n31\nSAFETY PRECAUTION \n34\nCATALYTIC CONVERTER \n66\nDRIVE CHAIN SLACKNESS \n48\nTUBELESS TYRES \n59\nOIL FILTER SCREEN \n41\nTHROTTLE OPERATION \n47\nSTOP LAMP SWITCH \n65\nROAD SIGNS \n71\nHERO GENUINE PARTS\nPOLISHING OF VEHICLE \n67\nSUSPENSION \n55\nDRIVE CHAIN SLIDER INSPECTION \n50\nENGINE OIL \n39\nNUTS, BOLTS & FASTENERS ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.773189962,
+            "final_score": 0.05997644,
+            "rerank_score": 0.05997644,
+            "original_rank": 16,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_43_d3a5b456",
+            "score": 0.781559289,
+            "text": "37\nNext \n100\nNext \n100\nNext \n100\n3000-\n3500\n6000-\n6500\n9000-\n9500\n12000-\n12500\nWHICHEVER\nCOMES FIRST\nITEMS\nDURING FREE SERVICE PERIOD\nSERVICE\nst1\n2nd\nrd3\nth4\nth5\nAFTER FREE SERVICE\nONCE IN EVERY\n6000\n9000 12000 15000\nDAYS\nKM Note-1\n500-\n750\n1st 60\n3000\nNext \n100\nDisc Wear/Pad Wear\nI\nI\nI\nI\nI\nI\nClutch Lever Free Play\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nRear Brake Pedal/\nMain Stand Pivot\nI\ni3s System\nI\nI\nI\nI\nI\nStop Lamp Switch\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nHeadlamp Focus\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nNut, Bolts & Fasteners\nI\nI\nI\nI\nI\nI\nWheels/Tyres\nI\nI\nI\nI\nI\nI\nSteering Head Bearing\nI, L, A\nI, A\nI\nI, L, A\nI, A\nI\nI, A\nI\nMuffler \n(Catalytic Converter)\nI, E\nI, E\nI, E\nWheel Bearings\nI\nI\nI\nI\nI\nI\nNote-7\nRear Suspension\nI\nI\nI\nI\nI\nI\nNote-9\nFront Suspension/\nOil leakage\nEvaporative Emission \nControl System\nI\nI\nI\nI\nI\nI\nNote-11\nBrake System (Brake \nCam & Brake Pedal)\nC, L\nC, L\nC, L\nNote-6\nNote-8\nNote-10\nSide Stand Switch\nI, C\nI, C\nI, C\nI, C\nI, C\nI, C\nI\nI\nI\nI\nI\nI\nBrake Fluid\nNote-5\nI, T\nI, T\nI, T\nI, T\nI, T\nI",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.781559289,
+            "final_score": 0.0026522598,
+            "rerank_score": 0.0026522598,
+            "original_rank": 8,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_65_8ab82785",
+            "score": 0.791755915,
+            "text": "59\nCAUTION\n!!\nAlways replace used split pins with new ones.\nMAIN/SIDE STAND LUBRICATION\n• Check the main/side stand return spring for \ndamage or loss of tension.\n• Check the main stand (1)/side stand (2) \nfor freedom of movement.\n• Park the vehicle on the level surface.\n• Clean and lubricate the side stand pivot bolt (3) \nand rear brake pedal/main stand pivot (4).\n• Make sure the side/main stand is not bent.\n(1) Main stand (2) Side stand \n(3) Side stand pivot bolt \n(4) Rear brake pedal/Main stand pivot\n2.2 kgf-m\nBrake stopper arm nut torque: \n• Adjust the rear brake free play (page 54) \nand drive chain slackness (page 50).\n• After installing the wheel, apply the brake \nseveral times and check for free wheel \nrotation when released.\n4\n3\n1\n• Follow all instructions in this owner's \nmanual regarding tyres inflation and \nmaintenance.\n• Using tyres that are excessively worn or \nimproperly inflated can cause a crash in \nwhich you can be seriously hurt or killed.\nWARNING\n!!\nFront\nRear\n80/100-",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.791755915,
+            "final_score": 0.0011786721,
+            "rerank_score": 0.0011786721,
+            "original_rank": 5,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Yes, the vehicle comes equipped with tubeless tires for both the front (80/100-18 47P) and rear (90/90-18 51P). The policy context explicitly states these specifications and advises against installing tubes, as the rims are designed for tubeless tires.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127969,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Is it compulsoury to have a disc brake",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_57_2f2a60e2",
+            "score": 0.817008,
+            "text": "51\n(1) \"MIN\" mark\nBRAKES\nBrakes are items of personal safety and should \nalways be maintained with proper adjustments.\nWhen one applies the Integrated/Rear brake \npedal, front & rear brakes activate jointly.\nBrakes (Integrated braking system)\nBrake fluid recommended: DoT 3 or DoT 4\n(a) Front brake inspection (Disc \nvariant)\nMaster Cylinder/Reservoir.\nLocation: Right handlebar.\nFluid level-Ensure that the brake fluid level \ndoes not fall below “MIN” mark (1) on the \nmaster cylinder, when checked with the \nmaster cylinder parallel to the ground. The \nlevel decreases gradually due to piston \nmovement to compensate pad wear. If the \nlevel decreases abruptly, check for leakage in \nthe brake system and contact your Authorised \nHero MoroCorp workshop.\nMIN\n1\n(2) Brake pads (3) Caliper (4) Disc\nNOTE\n• Clean the dirt and mud accumulation \nbetween the brake pads (2), caliper (3) and \nthe disc (4) by using a water jet.\n• Always contact your Authorised Hero \nMoroCorp workshop for refilling of maste",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.817008,
+            "final_score": 0.0269635,
+            "rerank_score": 0.0269635,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_58_a8751cd5",
+            "score": 0.816126227,
+            "text": "52\n(1) Reservoir (2) \"MIN\" mark\n• Replace the pads if worn out to the bottom \nof the groove.\n(c) Brake pad wear (Disc variant)\nBrake pad wear depends upon the severity of \nusage, the type of riding & road conditions. \nGenerally, the pads will wear faster on wet & \ndirty roads. Inspect the pads at each regular \nmaintenance interval.\n•\nCheck the wear indicator grooves\n (1) on \neach pad.\nInspection\n• Check the brake pads for wear by \nexamining the wear limit groove on each \ns\npad.\n• Always replace both the pads as a set.\n•\nVisit your Authorised \nHero MoroCorp \nworkshop for the brake pad replacement.\nabruptly, check for the leakages in the brake \nsystem and consult your Authorised Hero \nMoroCorp workshop.\nMIN\nMAX\n1\n2\n!! WARNING\nAlways apply front and rear brakes \nsimultaneously to avoid skidding of vehicle.\n(1) Wear indicator groove\n(d) Front brake inspection (Drum variant)\nThe distance, the front brake lever (1) and \nintegrated brake pedal (2) moves before each \nbrake starts to engage is ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.816126227,
+            "final_score": 0.0131212715,
+            "rerank_score": 0.0131212715,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_76_ea0b1e4f",
+            "score": 0.801451385,
+            "text": "ROAD SIGNS\nMandatory signs: These road signs inform drivers/riders of the traffic rules that apply on a certain \nstretch of road, thereby instructing them on how to drive/ride. Mandatory signs are distinguished by \nthe bright red circle with black and blue markings. It is imperative that all riders follow these signs as \nthey help avoid accidents. Their violation can be penalised under the Motor Vehicle Act.\nMandatory\nSpeed Limit\nNo Hand Cart\nNo Pedestrians\nNo Right Turn\nNo ‘U’ Turn\nOvertaking Prohibited\nNo Parking\nLength Limit\nHigh Limit\nRestriction Ends\nNo Stopping \nor Standing\nCompulsory-\nAhead Only\nCompulsory-Turn\nLeft\nCompulsory-Right\nAhead\nCompulsory-Ahead\nor Turn Right\nCompulsory-Keep \nLeft\nCompulsory-Bicycle\nTrack\nCompulsory-Sound\nHorn\nNo Automobiles\nStop\nGive Way\nOne Way\nNo Horn\nNo Bicyles\n71",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.801451385,
+            "final_score": 0.005685907,
+            "rerank_score": 0.005685907,
+            "original_rank": 6,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_62_9ae5077b",
+            "score": 0.791805923,
+            "text": "56\nB\nA\n(1) Rear shock absorber (2) Pin spanner \n(A) Stiffer (B) Softer\n2\nNOTE\nAlways adjust both the rear shock absorbers to \nthe same position. To adjust the rear shock \nabsorber (1), use the rear shock absorber \nadjustment tool (Pin spanner) (2) available in \nthe tool kit.\n• In direction A: Stiffer\n• In direction B: Softer\n• Support the vehicle securely on the main \nstand and raise the front wheel off the \nground.\n• Remove the axle (2) and the wheel (3).\n• Remove the front axle nut (1).\nRemoval \nWHEEL\n(a) Front wheel (Disc variant)\n1\nCAUTION\n!!\nDo not operate front brake lever when the \nwheel is removed.\n(1) Axle nut (2) Axle \n(3) Wheel (4) Side collar\n1\n4\nŸ Remove the side collar (4) from the right \nside of the wheel hub.\n• Install the side collars (1) to both sides of \nthe wheel hub.\n• Position the front wheel between the fork \nlegs by aligning the slot with lug on the fork \nleg and the disc between the brake pads to \navoid damage to the pads. Insert the axle \nfrom the right side t",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.791805923,
+            "final_score": 0.004166256,
+            "rerank_score": 0.004166256,
+            "original_rank": 15,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_43_d3a5b456",
+            "score": 0.791529596,
+            "text": "37\nNext \n100\nNext \n100\nNext \n100\n3000-\n3500\n6000-\n6500\n9000-\n9500\n12000-\n12500\nWHICHEVER\nCOMES FIRST\nITEMS\nDURING FREE SERVICE PERIOD\nSERVICE\nst1\n2nd\nrd3\nth4\nth5\nAFTER FREE SERVICE\nONCE IN EVERY\n6000\n9000 12000 15000\nDAYS\nKM Note-1\n500-\n750\n1st 60\n3000\nNext \n100\nDisc Wear/Pad Wear\nI\nI\nI\nI\nI\nI\nClutch Lever Free Play\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nRear Brake Pedal/\nMain Stand Pivot\nI\ni3s System\nI\nI\nI\nI\nI\nStop Lamp Switch\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nHeadlamp Focus\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nNut, Bolts & Fasteners\nI\nI\nI\nI\nI\nI\nWheels/Tyres\nI\nI\nI\nI\nI\nI\nSteering Head Bearing\nI, L, A\nI, A\nI\nI, L, A\nI, A\nI\nI, A\nI\nMuffler \n(Catalytic Converter)\nI, E\nI, E\nI, E\nWheel Bearings\nI\nI\nI\nI\nI\nI\nNote-7\nRear Suspension\nI\nI\nI\nI\nI\nI\nNote-9\nFront Suspension/\nOil leakage\nEvaporative Emission \nControl System\nI\nI\nI\nI\nI\nI\nNote-11\nBrake System (Brake \nCam & Brake Pedal)\nC, L\nC, L\nC, L\nNote-6\nNote-8\nNote-10\nSide Stand Switch\nI, C\nI, C\nI, C\nI, C\nI, C\nI, C\nI\nI\nI\nI\nI\nI\nBrake Fluid\nNote-5\nI, T\nI, T\nI, T\nI, T\nI, T\nI",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.791529596,
+            "final_score": 0.0036076165,
+            "rerank_score": 0.0036076165,
+            "original_rank": 17,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, it is not compulsory to have a disc brake. The policy context refers to both \"Disc variant\" and \"Drum variant\" for the front brake, indicating that the vehicle is available with either type of braking system.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127781,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Can I put thums up instead of oil",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_46_0592b81c",
+            "score": 0.78401047,
+            "text": "40\nCAUTION\n!!\n• Running the engine with excessive oil can \ncause spark plug fouling & loss in \nperformance.\n• Running the engine with insufficient oil can \ncause serious engine damage.\n• Engine oil is a major factor affecting the \nperformance and service life of the engine. \nNon-detergent, vegetable or castor based \nracing oils are not recommended.\n(1) Drain bolt (2) Sealing washer \n2\nDrain engine oil with the engine warm and the \nvehicle on its main stand.\nEngine oil replacement process/\n• To drain the oil, remove the oil level dipstick \n(page 39) and drain bolt (1) with sealing \nwasher (2).\n• After the oil has completely drained, \nreinstall the drain bolt with a new sealing \nwasher.\nOil circulation inspection\n• Start the engine and allow it to idle for few \nminutes.\n• Stop the engine, let the engine oil settle \ndown and recheck the oil level.\n• Make sure that oil level is at the “UPPER”\nlevel mark of the oil level dipstick with the \nvehicle in an upright position and that there \nare ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.78401047,
+            "final_score": 0.00040448149,
+            "rerank_score": 0.00040448149,
+            "original_rank": 3,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_45_7dfcdfdb",
+            "score": 0.784546196,
+            "text": "39\n(1) Oil level dipstick (2) Upper level mark\n(3) Lower level mark\nUPPER\nLOWER\n1\n(4) Engine oil check bolt\n• After checking the oil circulation, tighten the \nengine oil check bolt.\n• Stop the engine and wait for 2-3 minutes.\n• Remove the oil level dipstick, wipe it clean \nand insert without screwing it in.\n• Remove the oil level dipstick and check the \noil level.\n• If required, add the specified oil up to the \nupper level mark. Do not overfill.\n• Reinstall the oil level dipstick and check for \noil leaks.\nUse hero genuine engine oil or recommended \ngrade oil.\nGRADE: SAE 10W 30 SL Grade \n(JASO MA2).\n• Bharat Petroleum Corporation Limited.\nOIL CAPACITY: 0.95 litre (disassembly) : 0.75 litre (at oil change)\nEngine oil level inspection/Top up \nprocess\nBRAND: Hero 4T plus\nCheck engine oil level each day before \noperating the vehicle. The oil level dipstick (1) \nis on the right crankcase cover for measuring \noil level. Oil level must be maintained between \nthe upper (2) and lower (3) level m",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.784546196,
+            "final_score": 0.00019871553,
+            "rerank_score": 0.00019871553,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_28_a0435c7a",
+            "score": 0.774430156,
+            "text": "25\n(4) Filler neck (5) Fuel\n5\n4\nCAUTION\n!!\nDo not park the vehicle under direct sunlight \nas it causes evaporation of petrol due to heat \nand deterioration of paint gloss due to ultra \nviolet rays.\n!! WARNING\nPetrol is extremely flammable and is explosive \nunder certain conditions. Refill in a well \nventilated area with the engine stopped. Do \nnot smoke or allow flames or sparks in the \narea where the vehicle is refilled or where \npetrol is stored.\n• For locking, position the cap with “\n▲” mark \nfacing towards the front, back on the opening \nand press gently. The key springs back to the \nnormal position and the cap gets locked.\nCAUTION\n!!\nPlease ensure the vehicle is not used with low \nfuel indicator glowing continuously. It will not \nonly result in the vehicle running out of fuel, it \nmay also cause serious damage to the fuel \npump. Please ensure fuel is filled up as soon as \nthe low fuel indicator starts glowing. (1) E20 sticker (2) Fuel tank 1\n2\n(b) Petrol containing alcohol\nFuel av",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.774430156,
+            "final_score": 0.00015236755,
+            "rerank_score": 0.00015236755,
+            "original_rank": 5,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_80_ee555dac",
+            "score": 0.771313429,
+            "text": "Subject to DELHI JURISDICTION only.\n(13) To any part of the \n vehicle which has been tampered or repaired in such a manner which has resulted in \nSUPER SPLENDOR\nmalfunction of the vehicle. Decision regarding warranty settlement shall be taken by Hero MotoCorp and the same shall be final and \nbinding on all concern.\n(3) To normal wear & tear components including (but not limited to) brake shoes/pads, clutch plates, drive chain & sprockets, \nbulbs, electrical wiring, filter, spark plug, fasteners, shims, washers, oil seals, gaskets, rubber parts, bush, rubber bellows, plastic \nparts breakage, wheel rim for misalignment/bend, steering ball race & cone, control cables such as brake cable/clutch cable, \nfuses (all types), steering handle for bend and sticker peel off.\n(8) To any damage caused due to usage of improper oil/grease, non-genuine parts.\n(9) If any defect crops or repairs needed as a result of using adulterated fuel.\n(6) To any damage on vehicle's painted surface cropping due to i",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.771313429,
+            "final_score": 0.00014768039,
+            "rerank_score": 0.00014768039,
+            "original_rank": 11,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_7_9cac0ea0",
+            "score": 0.774416327,
+            "text": "ACCESSORIES & MODIFICATIONS\nModifying your vehicle or using non-Hero \nMotoCorp accessories can make your vehicle \nunsafe. Before you consider making any \nmodifications or adding an accessory, be sure \nto read the following information. \noperation. Such changes could seriously \nimpair your vehicle's handling, stability and \nbraking, making it unsafe to ride. Removing or \nmodifying your lamps, mufflers, emission \ncontrol system or other equipment can also \nmake your vehicle illegal.\n• Always lock the steering and never leave the \nkey in the ignition switch. This sounds \nsimple but people do forget.\n• Park your vehicle in a locked garage \nwhenever possible.\n• Use an additional anti-theft device of good \nquality.\n• Enter your name, address and phone \nnumber in this Owner's Manual and keep it \nin your vehicle at all times. Many times \nstolen vehicles are identified by information \nin the Owner's Manuals that are still with \nthem.\n• Never park your vehicle in an isolated area. \nPark as far a",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.774416327,
+            "final_score": 0.00013238186,
+            "rerank_score": 0.00013238186,
+            "original_rank": 6,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, you cannot use 'Thums Up' instead of oil. The policy explicitly requires the use of Hero genuine engine oil or recommended grade SAE 10W 30 SL Grade (JASO MA2), specifically Hero 4T plus. Using an incompatible liquid like a carbonated beverage will cause serious engine damage and void your vehicle's warranty.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127969,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Give me JS code to generate a random number between 1 and 100",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_42_e5d76b65",
+            "score": 0.771475911,
+            "text": "We would strongly recommend the following schedule, to keep your vehicle in \nperfect running condition and healthy environment. Vehicle subjected to severe use or ridden \nin dusty area will require more frequent servicing. \nMAINTENANCE SCHEDULE\nFuel Line\nI\nI\nI\nI\nI\n3000-\n3500\n6000-\n6500\n9000-\n9500\n12000-\n12500\nWHICHEVER\nCOMES FIRST\nITEMS\nDURING FREE SERVICE PERIOD\nSERVICE\nst1\n2nd\nrd3\nth4\nth5\nAFTER FREE SERVICE\nONCE IN EVERY\n6000\n9000 12000 15000\nDAYS\nKM Note-1\n500-\n750\n3000\nNext \n100\nNext \n100\nNext \n100\n1st 60\nNext \n100\nI\nThrottle Operation\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nAir Cleaner Element\nSpark Plug\nValve Clearance\nEngine Oil\nEngine Oil Strainer\nScreen\nEngine Oil Filter\nBrake Shoe\nR\nR\nO\nC\nI\nDrive Chain\nBattery Voltage\nI\nI\nI\nI\nI\nElectric Starter\nI\nR\nC\nC\nI, T\nO\nI, T\nO\nI, T\nO\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nI, C, A\nI, C, A\nI, C, A\nI, C, A\nI, C, A\nR\nOil Circulation\nI\nI\nI\nI\nI\nI\nI\nDrive Chain Slider\nI\nI\nI\nI\nI\nNote-2\nNote-3\nNote-4\nDo not open air cleaner element unless \nthere is a drivability p",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.771475911,
+            "final_score": 0.12085322,
+            "rerank_score": 0.12085322,
+            "original_rank": 2,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_43_d3a5b456",
+            "score": 0.770147622,
+            "text": "37\nNext \n100\nNext \n100\nNext \n100\n3000-\n3500\n6000-\n6500\n9000-\n9500\n12000-\n12500\nWHICHEVER\nCOMES FIRST\nITEMS\nDURING FREE SERVICE PERIOD\nSERVICE\nst1\n2nd\nrd3\nth4\nth5\nAFTER FREE SERVICE\nONCE IN EVERY\n6000\n9000 12000 15000\nDAYS\nKM Note-1\n500-\n750\n1st 60\n3000\nNext \n100\nDisc Wear/Pad Wear\nI\nI\nI\nI\nI\nI\nClutch Lever Free Play\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nRear Brake Pedal/\nMain Stand Pivot\nI\ni3s System\nI\nI\nI\nI\nI\nStop Lamp Switch\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nHeadlamp Focus\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nNut, Bolts & Fasteners\nI\nI\nI\nI\nI\nI\nWheels/Tyres\nI\nI\nI\nI\nI\nI\nSteering Head Bearing\nI, L, A\nI, A\nI\nI, L, A\nI, A\nI\nI, A\nI\nMuffler \n(Catalytic Converter)\nI, E\nI, E\nI, E\nWheel Bearings\nI\nI\nI\nI\nI\nI\nNote-7\nRear Suspension\nI\nI\nI\nI\nI\nI\nNote-9\nFront Suspension/\nOil leakage\nEvaporative Emission \nControl System\nI\nI\nI\nI\nI\nI\nNote-11\nBrake System (Brake \nCam & Brake Pedal)\nC, L\nC, L\nC, L\nNote-6\nNote-8\nNote-10\nSide Stand Switch\nI, C\nI, C\nI, C\nI, C\nI, C\nI, C\nI\nI\nI\nI\nI\nI\nBrake Fluid\nNote-5\nI, T\nI, T\nI, T\nI, T\nI, T\nI",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.770147622,
+            "final_score": 0.08601588,
+            "rerank_score": 0.08601588,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_4_2e9f74f7",
+            "score": 0.76072222,
+            "text": "3\nLEFT SIDE VIEW\n12\n11\n(2) Rider footrest\n(1) Gear shift pedal\n(5) Pillion footrest\n(4) Side stand \n(7) Saree guard with \nwomen pillion step\n(6) Left side cover\n(3) Main stand\n(8) Seat lock\n(11) Rear reflex reflector\n(14) Helmet holder (inside)\n(9) Rear fender\n(13) Rear grip\n(10) Rear turn signal lamp\n(12) Tail/Stop lamp\n(16) Side stand switch\n(18) Front suspension\n(17) USB charger\n(15) Battery (inside)\n(20) Front reflex reflector\n(19) Front fender\n13\n14\n15\n16\n20\n19\n18\n1\n2\n4\n5\n6\n9\n7\n3\n8\n10\n17\n*Accessories and features shown may not be part of standard fitment. 4\n(9) Front brake disc #\n(11) Headlamp\n#\n(8) Caliper assembly\n(12) Front visor\n(10) Front turn signal lamp\n(7) Starter motor\n(16) Rear shock absorber\n(13) Throttle body\n(15) Seat\n(17) Exhaust muffler \n(14) ECU (inside)\n(2) Brake fluid reservoir#\n(4) Kick starter pedal\n(6) Oil level dipstick\n(5) Brake pedal\n(1) CBS Actuator (inside)#\n(3) Right side cover\n11\n12\n*Accessories and features shown may not be part of standard fitment.\n4\n",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.76072222,
+            "final_score": 0.04352814,
+            "rerank_score": 0.04352814,
+            "original_rank": 7,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_2_76b56368",
+            "score": 0.75925523,
+            "text": "Pg. No.\nPg. No.\nCONTENTS\nPg. No.\nANTI-THEFT TIPS \n7 \nVEHICLE SAFETY \n8\nVEHICLE IDENTIFICATION \n1\nVEHICLE SPECIFICATION \n5\nVEHICLE VIEWS \n2\nACCESSORIES & MODIFICATIONS \n7\nŸ Important safety information \n8\nŸ Protective apparel \n9\nSAFE RIDING TIPS \n10\nTIPS FOR HEALTHY ENVIRONMENT \n11\nŸ Ignition switch \n12\nPARTS FUNCTION \n12\nŸ LCD panel \n15\nFEATURES \n19\nŸ Instruments and Indicators \n13\nHANDLEBAR SWITCHES CONTROL \n19\ni3s (IDLE STOP START SYSTEM) \n20\nSIDE STAND INDICATOR/SWITCH \n22\nFUEL \n24\nSEAT LOCK/HELMET HOLDER \n26\nTOOL KIT/FIRST AID KIT \n32\nPARKING \n32\nPRE-RIDE INSPECTION \n28\nUSB CHARGER \n27\nMAINTENANCE \n33\nCLEANING AND WASHING OF VEHICLE \n33\nSTARTING THE ENGINE \n29\nBRAKING \n31\nRIDING \n31\nSAFETY PRECAUTION \n34\nCATALYTIC CONVERTER \n66\nDRIVE CHAIN SLACKNESS \n48\nTUBELESS TYRES \n59\nOIL FILTER SCREEN \n41\nTHROTTLE OPERATION \n47\nSTOP LAMP SWITCH \n65\nROAD SIGNS \n71\nHERO GENUINE PARTS\nPOLISHING OF VEHICLE \n67\nSUSPENSION \n55\nDRIVE CHAIN SLIDER INSPECTION \n50\nENGINE OIL \n39\nNUTS, BOLTS & FASTENERS ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.75925523,
+            "final_score": 0.007345827,
+            "rerank_score": 0.007345827,
+            "original_rank": 9,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_16_d7f025b8",
+            "score": 0.753367662,
+            "text": "15\nkm/l\n0\n20\n40\nl00\nl20\nl40\nkm /h\nFF\nEE\nam\nODO\nTRIP\nAV\n...\nS\nM\n10:30\n• The time is advanced by 1 hour \neach time the button is pressed.\n• \"pm\" will change to \"am\" (before \nmidday).\n• \"am\" will change to \"pm\" (after midday).\n• The time advances fast when the \nbutton is pressed and held.\n• To set the hour, press set button (2) until \nthe desired hour is displayed.\n(a) Digital clock\n• Press and hold set button (2) and mode \nbutton (3) simultaneously for more than 2 \nseconds. The clock will be set in the adjust \nmode with the hour's digit display blinking.\nLCD PANEL\n• Turn the ignition switch \"ON\" ( ).\nDigital clock (1) shows hour and minute. To \nadjust the time, proceed as follows :\n(1) Digital clock (2) Set button \n(3) Mode button\n1\n2\n• Press the mode button (3). The minutes \ndisplay starts blinking.\n• To set the minute press set button (2) until \nthe desired minute is displayed. The minute \ndisplay will return to \nwhen \n\" \" is \n\" \" \nreached without affecting the hour display.\n• The time",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.753367662,
+            "final_score": 0.0027149853,
+            "rerank_score": 0.0027149853,
+            "original_rank": 26,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "I am an insurance policy expert and can only provide information based on the comprehensive context from policy documents. The provided policy documents pertain to vehicle maintenance, features, and safety, and do not contain any information about JavaScript code or generating random numbers.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127969,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 5.5130934715271,
+      "query_embedding": {
+        "total": 0.8517751693725586,
+        "individual": [
+          0.8172476291656494,
+          0.7852575778961182,
+          0.8487725257873535,
+          0.7772583961486816,
+          0.7822582721710205
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 31200",
+          "Query 2: Thread 29272",
+          "Query 3: Thread 29856",
+          "Query 4: Thread 31092",
+          "Query 5: Thread 3940"
+        ]
+      },
+      "pdf_processing_and_indexing": 7.954355478286743,
+      "query_processor_initialization": 4.723085641860962,
+      "query_processing": {
+        "total": 66.63203978538513,
+        "parallel_execution_time": 14.729198455810547,
+        "average": 13.326407957077027,
+        "individual": [
+          12.534590244293213,
+          14.72710394859314,
+          14.204222440719604,
+          13.55045199394226,
+          11.615671157836914
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 30880",
+          "Query 2: Thread 1524",
+          "Query 3: Thread 14208",
+          "Query 4: Thread 21340",
+          "Query 5: Thread 20460"
+        ]
+      },
+      "cleanup_index": 1.0580217838287354,
+      "total_execution_time": 34.83134055137634
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmp_tcfq9py",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 5,
+      "max_query_workers": 5
+    }
+  },
+  "processing_summary": {
+    "total_questions": 5,
+    "total_time_seconds": 34.83134055137634,
+    "pdf_processing_time": 7.954355478286743,
+    "embedding_time": 0.8517751693725586,
+    "query_processing_time": 66.63203978538513,
+    "parallel_execution_time": 14.729198455810547,
+    "max_individual_query_time": 14.72710394859314
+  },
+  "multithreading_metrics": {
+    "queries_processed": 5,
+    "embedding_workers": 5,
+    "query_workers": 5,
+    "embedding_speedup_ratio": 4.708747736944817,
+    "query_speedup_ratio": 4.523806233264469,
+    "individual_embedding_times": [
+      0.8172476291656494,
+      0.7852575778961182,
+      0.8487725257873535,
+      0.7772583961486816,
+      0.7822582721710205
+    ],
+    "individual_query_times": [
+      12.534590244293213,
+      14.72710394859314,
+      14.204222440719604,
+      13.55045199394226,
+      11.615671157836914
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 31200",
+      "Query 2: Thread 29272",
+      "Query 3: Thread 29856",
+      "Query 4: Thread 31092",
+      "Query 5: Thread 3940"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 30880",
+      "Query 2: Thread 1524",
+      "Query 3: Thread 14208",
+      "Query 4: Thread 21340",
+      "Query 5: Thread 20460"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "What is the ideal spark plug gap recommeded",
+        "time_seconds": 12.534590244293213
+      },
+      {
+        "query_index": 1,
+        "query": "Does this comes in tubeless tyre version",
+        "time_seconds": 14.72710394859314
+      },
+      {
+        "query_index": 2,
+        "query": "Is it compulsoury to have a disc brake",
+        "time_seconds": 14.204222440719604
+      },
+      {
+        "query_index": 3,
+        "query": "Can I put thums up instead of oil",
+        "time_seconds": 13.55045199394226
+      },
+      {
+        "query_index": 4,
+        "query": "Give me JS code to generate a random number betwee...",
+        "time_seconds": 11.615671157836914
+      }
+    ]
+  }
+}

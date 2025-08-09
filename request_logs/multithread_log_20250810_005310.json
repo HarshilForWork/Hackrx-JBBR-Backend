@@ -1,0 +1,1273 @@
+{
+  "timestamp": "2025-08-10T00:53:54.778226",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/indian_constitution.pdf?sv=2023-01-03&st=2025-07-28T06%3A42%3A00Z&se=2026-11-29T06%3A42%3A00Z&sr=b&sp=r&sig=5Gs%2FOXqP3zY00lgciu4BZjDV5QjTDIx7fgnfdz6Pu24%3D",
+    "questions": [
+      "What is the official name of India according to Article 1 of the Constitution?",
+      "Which Article guarantees equality before the law and equal protection of laws to all persons?",
+      "What is abolished by Article 17 of the Constitution?",
+      "What are the key ideals mentioned in the Preamble of the Constitution of India?",
+      "Under which Article can Parliament alter the boundaries, area, or name of an existing State?",
+      "According to Article 24, children below what age are prohibited from working in hazardous industries like factories or mines?",
+      "What is the significance of Article 21 in the Indian Constitution?",
+      "Article 15 prohibits discrimination on certain grounds. However, which groups can the State make special provisions for under this Article?",
+      "Which Article allows Parliament to regulate the right of citizenship and override previous articles on citizenship (Articles 5 to 10)?",
+      "What restrictions can the State impose on the right to freedom of speech under Article 19(2)?"
+    ],
+    "pdf_filename": "input_20250810_005310.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_005310.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "What is the official name of India according to Article 1 of the Constitution?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_31_9cfe02ae",
+            "score": 0.820248306,
+            "text": "2\nPART I\nTHE UNION AND ITS TERRITORY\n1. Name and territory of the Union.—(1) India, that is Bharat, \nshall be a Union of States.\n1[(2) The States and the territories thereof shall be as specified in \nthe First Schedule.]\n(3) The territory of India shall comprise—\n(a) the territories of the States; \n2[(b) the Union territories specified in the First Schedule; \nand]\n(c) such other territories as may be acquired.\n2. Admission or establishment of new States.—Parliament may \nby law admit into the Union, or establish, new States on such terms and \nconditions as it thinks fit.\n3[2A. [Sikkim to be associated with the Union.] —Omitted by the \nConstitution (Thirty-sixth Amendment) Act, 1975, s. 5 (w.e.f. 26-4-1975).]\n3. Formation of new States and alteration of areas, \nboundaries or names of existing States.—Parliament may by law—\n(a) form a new State by separation of territory from any \nState or by uniting two or more States or parts of States or by \nuniting any territory to a part of any State",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.820248306,
+            "final_score": 0.7070003,
+            "rerank_score": 0.7070003,
+            "original_rank": 3,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_2_690cc28f",
+            "score": 0.824406207,
+            "text": "THE CONSTITUTION OF INDIA\n____________ \nCONTENTS\n__________ PREAMBLE\nPART I \nTHE UNION AND ITS TERRITORY\nARTICLES \n1.\nName and territory of the Union.\n 2. \nAdmission or establishment of new States. \n[2A. Sikkim to be associated with the Union.—Omitted.]\n3.\nFormation of new States and alteration of areas, boundaries or \nnames of existing States.\n4.\nLaws made under articles 2 and 3 to provide for the amendment of \nthe First and the Fourth Schedules and supplemental, incidental \nand consequential matters.\nPART II\nCITIZENSHIP\n5.\nCitizenship at the commencement of the Constitution.\n6.\nRights of citizenship of certain persons who have migrated to \nIndia from Pakistan.\n7.\nRights of citizenship of certain migrants to Pakistan.\n8.\nRights of citizenship of certain persons of Indian origin residing \noutside India.\n9.\nPersons voluntarily acquiring citizenship of a foreign State not to \nbe citizens.\n10.\nContinuance of the rights of citizenship.\n11.\nParliament to regulate the right of citizenship by",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.824406207,
+            "final_score": 0.1573957,
+            "rerank_score": 0.1573957,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_306_f7da3195",
+            "score": 0.817840934,
+            "text": "THE CONSTITUTION OF INDIA\n(Fourth Schedule) \n274\n1[2[10.]]\nMadhya Pradesh .........................................................\n3[11]\n4[1[2[11.] \nChhattisgarh ...............................................................5]]\n5[1[2[12.] \nTamil Nadu ................................................................\n6[18]]\n7[1[2[13.]\nMaharashtra ...............................................................19]]\n8[1[2[14.] \nKarnataka ................................................................ 12]]\n1[2[15.] \n9[Odisha] ................................................................ 10]\n1[2[16.]\nPunjab ........................................................................\n10[7]\n1[2[17.] \nRajasthan ................................................................ 10]\n1[2[18.] \nUttar Pradesh ..............................................................\n11[31]\n12[1[2[19.]\n13[Uttarakhand] ...........................................................3]]\n1[2[20.] \nWest Bengal ............",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.817840934,
+            "final_score": 0.14163722,
+            "rerank_score": 0.14163722,
+            "original_rank": 6,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_291_c27966e2",
+            "score": 0.81586045,
+            "text": "THE CONSTITUTION OF INDIA\n(First Schedule) 260\n1[2[25.] Chhattisgarh\nThe territories specified in section 3 of the Madhya \nPradesh Reorganisation Act, 2000.] \n1[3[26.] 4[Uttarakhand] \nThe territories specified in section 3 of the Uttar Pradesh \nReorganisation Act, 2000.] \n1[5[27.] Jharkhand \nThe territories specified in section 3 of the Bihar \nReorganisation Act, 2000.] \n1[6[28.] Telangana\nThe territories specified in section 3 of the Andhra \nPradesh Reorganisation Act, 2014.] \nII. THE UNION TERRITORIES\nName\nExtent\n1. Delhi\nThe \nterritory \nwhich \nimmediately \nbefore \nthe \ncommencement of this Constitution was comprised in the \nChief Commissioner’s Province of Delhi.\n7[*\n*\n*\n*\n*]\n8[2.] The Andaman \nand Nicobar \nIslands \nThe \nterritory \nwhich \nimmediately \nbefore \nthe \ncommencement of this Constitution was comprised in \nthe Chief Commissioner’s Province of the \nAndaman and Nicobar Islands. \n______________________________________________\n1. Entries 16 to 29 renumbered as entries 15 to 28 ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.81586045,
+            "final_score": 0.11318691,
+            "rerank_score": 0.11318691,
+            "original_rank": 8,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_307_c9f9987f",
+            "score": 0.813903451,
+            "text": "THE CONSTITUTION OF INDIA\n(Fourth Schedule) \n275\n1[2[3[4[22.] \nHimachal Pradesh .......................................................3]]]\n3[2[4[23.] \nManipur ................................................................\n1]\n3[2[4[24.] \nTripura ................................................................\n1]]\n3[2[4[25.] \nMeghalaya ................................................................1]]\n5[3[2[4[26.] \nSikkim ................................................................\n1]]\n6[3[2[4[27.] \nMizoram ................................................................\n1]]\n7[3[2[4[28.]\nArunachal Pradesh ......................................................1]]\n3[2[4[29.] \nDelhi .......................................................................... 3]\n3[2[4[30.]\n8[Puducherry] .............................................................1]]\n9[3[2[4[31. \nJammu and Kashmir.................................................... 4]",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813903451,
+            "final_score": 0.07978202,
+            "rerank_score": 0.07978202,
+            "original_rank": 9,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "According to Article 1 (1) of the Constitution, the official name of India is stated as \"India, that is Bharat.\" This signifies that both \"India\" and \"Bharat\" are recognized names for the Union of States.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132407,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Which Article guarantees equality before the law and equal protection of laws to all persons?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_3_72e9ca5f",
+            "score": 0.823974669,
+            "text": "Contents\nARTICLES\n(ii)\nPART III\nFUNDAMENTAL RIGHTS\nGeneral \n12.\nDefinition.\n13. \nLaws inconsistent with or in derogation of the fundamental \nrights. Right to Equality\n14.\nEquality before law.\n15. \nProhibition of discrimination on grounds of religion, race, caste, \nsex or place of birth.\n16. \nEquality of opportunity in matters of public employment. \n17.\nAbolition of Untouchability.\n18. \nAbolition of titles. \nRight to Freedom\n19.\nProtection of certain rights regarding freedom of speech, etc.\n20.\nProtection in respect of conviction for offences.\n21.\nProtection of life and personal liberty.\n21A.\nRight to education.\n22.\nProtection against arrest and detention in certain cases.\nRight against Exploitation\n23.\nProhibition of traffic in human beings and forced labour.\n24.\nProhibition of employment of children in factories, etc.\nRight to Freedom of Religion\n25.\nFreedom of conscience and free profession, practice and \npropagation of religion.\n26.\nFreedom to manage religious affairs.\n27.\nFreedom a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.823974669,
+            "final_score": 0.44534862,
+            "rerank_score": 0.44534862,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_37_03f23e98",
+            "score": 0.813078105,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n8\nExplanation.—For the purposes of this article and article 16, \n\"economically weaker sections\" shall be such as may be notified by the State \nfrom time to time on the basis of family income and other indicators of \neconomic disadvantage.]\n16. Equality of opportunity in matters of public employment.—(1) \nThere shall be equality of opportunity for all citizens in matters relating to \nemployment or appointment to any office under the State. \n(2) No citizen shall, on grounds only of religion, race, caste, sex, descent, \nplace of birth, residence or any of them, be ineligible for, or discriminated against \nin respect of, any employment or office under the State.\n(3) Nothing in this article shall prevent Parliament from making any law \nprescribing, in regard to a class or classes of employment or appointment to an \noffice 1[under the Government of, or any local or other authority within, a State \nor Union territory, any requirement as",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813078105,
+            "final_score": 0.111821815,
+            "rerank_score": 0.111821815,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_5_243beb71",
+            "score": 0.809128046,
+            "text": "Contents\nARTICLES\n(iv)\n40.\nOrganisation of village panchayats.\n 41. \nRight to work, to education and to public assistance in certain \ncases. \n42.\nProvision for just and humane conditions of work and maternity \nrelief.\n 43. \nLiving wage, etc., for workers. \n43A. \nParticipation of workers in management of Industries.\n43B. \nPromotion of co-operative societies.\n44.\nUniform civil code for the citizens.\n 45. \nProvision for early childhood care and education to children \nbelow the age of six years. \n46.\nPromotion of educational and economic interests of Scheduled \nCastes, Scheduled Tribes and other weaker sections.\n47.\nDuty of the State to raise the level of nutrition and the standard \nof living and to improve public health. \n48.\nOrganisation of agriculture and animal husbandry.\n48A.\nProtection and improvement of environment and safeguarding of \nforests and wild life.\n49.\nProtection of monuments and places and objects of national \nimportance.\n50.\nSeparation of judiciary from executive.\n51.\nPr",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.809128046,
+            "final_score": 0.08359067,
+            "rerank_score": 0.08359067,
+            "original_rank": 7,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_0_0ae75dce",
+            "score": 0.791912854,
+            "text": "£ÉÉ®iÉ BÉEÉ ºÉÆÉÊ´ÉvÉÉxÉ \n[1\n, 2024\n]\nTHE CONSTITUTION OF INDIA\n[As on 1st May, 2024] \n2024\nGOVERNMENT OF INDIA\nMINISTRY OF LAW AND JUSTICE\nLEGISLATIVE DEPARTMENT, OFFICIAL LANGUAGES WING PREFACE\nThis is the sixth pocket size edition of the Constitution of \nIndia in the diglot form. In this edition, the text of the \nConstitution of India has been brought up-to-date by \nincorporating therein all the amendments up to the Constitution \n(One Hundred and Sixth Amendment) Act, 2023. The foot notes \nbelow the text indicate the Constitution Amendment Acts by \nwhich such amendments have been made. \nThe Constitution (One Hundredth Amendment) Act, 2015 \ncontaining details of acquired and transferred territories \nbetween the Governments of India and Bangladesh has been \nprovided in Appendix I.\nThe Constitution (Application to Jammu and Kashmir) \nOrder, 2019 and the declaration under article 370(3) of the \nConstitution have been provided respectively in Appendix II and \nAppendix III for reference.\n",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.791912854,
+            "final_score": 0.068288535,
+            "rerank_score": 0.068288535,
+            "original_rank": 22,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_36_e0aaf360",
+            "score": 0.800265074,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n7\n(a) access to shops, public restaurants, hotels and places of public \nentertainment; or \n(b) the use of wells, tanks, bathing ghats, roads and places of \npublic resort maintained wholly or partly out of State funds or dedicated \nto the use of the general public. \n(3) Nothing in this article shall prevent the State from making any \nspecial provision for women and children. \n1[(4) Nothing in this article or in clause (2) of article 29 shall prevent the \nState from making any special provision for the advancement of any socially \nand educationally backward classes of citizens or for the Scheduled Castes and \nthe Scheduled Tribes.] \n2[(5) Nothing in this article or in sub-clause (g) of clause (1) of article 19 \nshall prevent the State from making any special provision, by law, for the \nadvancement of any socially and educationally backward classes of citizens or \nfor the Scheduled Castes or the Scheduled Tribes in so far as such sp",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.800265074,
+            "final_score": 0.064771704,
+            "rerank_score": 0.064771704,
+            "original_rank": 9,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Article 14 of the Constitution of India guarantees equality before the law and equal protection of laws to all persons. This provision is listed under Part III, 'Fundamental Rights', in the document's contents.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What is abolished by Article 17 of the Constitution?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_38_2893c1c3",
+            "score": 0.789113343,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n9\n(5) Nothing in this article shall affect the operation of any law which \nprovides that the incumbent of an office in connection with the affairs of any \nreligious or denominational institution or any member of the governing body \nthereof shall be a person professing a particular religion or belonging to a \nparticular denomination.\n1[(6) Nothing in this article shall prevent the State from making any \nprovision for the reservation of appointments or posts in favour of any \neconomically weaker sections of citizens other than the classes mentioned in \nclause (4), in addition to the existing reservation and subject to a maximum of \nten per cent. of the posts in each category.]\n17. Abolition of Untouchability.—“Untouchability” is abolished and its \npractice in any form is forbidden. The enforcement of any disability arising out \nof “Untouchability” shall be an offence punishable in accordance with law.\n18. Abolition of titles.—(1) N",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.789113343,
+            "final_score": 0.96131647,
+            "rerank_score": 0.96131647,
+            "original_rank": 5,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_3_72e9ca5f",
+            "score": 0.778926134,
+            "text": "Contents\nARTICLES\n(ii)\nPART III\nFUNDAMENTAL RIGHTS\nGeneral \n12.\nDefinition.\n13. \nLaws inconsistent with or in derogation of the fundamental \nrights. Right to Equality\n14.\nEquality before law.\n15. \nProhibition of discrimination on grounds of religion, race, caste, \nsex or place of birth.\n16. \nEquality of opportunity in matters of public employment. \n17.\nAbolition of Untouchability.\n18. \nAbolition of titles. \nRight to Freedom\n19.\nProtection of certain rights regarding freedom of speech, etc.\n20.\nProtection in respect of conviction for offences.\n21.\nProtection of life and personal liberty.\n21A.\nRight to education.\n22.\nProtection against arrest and detention in certain cases.\nRight against Exploitation\n23.\nProhibition of traffic in human beings and forced labour.\n24.\nProhibition of employment of children in factories, etc.\nRight to Freedom of Religion\n25.\nFreedom of conscience and free profession, practice and \npropagation of religion.\n26.\nFreedom to manage religious affairs.\n27.\nFreedom a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.778926134,
+            "final_score": 0.6910806,
+            "rerank_score": 0.6910806,
+            "original_rank": 22,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_46_8a24d44f",
+            "score": 0.788707376,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n17\n(e) the extinguishment or modification of any rights accruing by \nvirtue of any agreement, lease or licence for the purpose of searching for, \nor winning, any mineral or mineral oil, or the premature termination or \ncancellation of any such agreement, lease or licence,\nshall be deemed to be void on the ground that it is inconsistent with, or takes \naway or abridges any of the rights conferred by 1[article 14 or article 19]:\nProvided that where such law is a law made by the Legislature of a State, \nthe provisions of this article shall not apply thereto unless such law, having \nbeen reserved for the consideration of the President, has received his assent:]\n2[Provided further that where any law makes any provision for the \nacquisition by the State of any estate and where any land comprised therein is \nheld by a person under his personal cultivation, it shall not be lawful for the \nState to acquire any portion of such land as is w",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.788707376,
+            "final_score": 0.28547153,
+            "rerank_score": 0.28547153,
+            "original_rank": 6,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_253_1028d8db",
+            "score": 0.786465287,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIX.—MISCELLANEOUS)\n222\n(b) on and from the commencement of the Constitution (Twenty-\nsixth Amendment) Act, 1971, privy purse is abolished and all rights, \nliabilities and obligations in respect of privy purse are extinguished and \naccordingly the Ruler or, as the case may be, the successor of such \nRuler, referred to in clause (a) or any other person shall not be paid any \nsum as privy purse.]\n364. Special provisions as to major ports and aerodromes.—(1) \nNotwithstanding anything in this Constitution, the President may by public \nnotification direct that as from such date as may be specified in the \nnotification— \n(a) any law made by Parliament or by the Legislature of a State \nshall not apply to any major port or aerodrome or shall apply thereto \nsubject to such exceptions or modifications as may be specified in the \nnotification; or \n(b) any existing law shall cease to have effect in any major port or \naerodrome except as respects things done or omitt",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.786465287,
+            "final_score": 0.15027806,
+            "rerank_score": 0.15027806,
+            "original_rank": 7,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_204_4a6b1f91",
+            "score": 0.791609704,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIV.—Services under the Union and the States) \n174\nnecessary in order to secure the services of a person having special \nqualifications, provide for the payment to him of compensation, if before the \nexpiration of an agreed period that post is abolished or he is, for reasons not \nconnected with any misconduct on his part, required to vacate that post.\n311. Dismissal, removal or reduction in rank of persons employed in \ncivil capacities under the Union or a State.—(1) No person who is a member \nof a civil service of the Union or an all-India service or a civil service of a \nState or holds a civil post under the Union or a State shall be dismissed or \nremoved by an authority subordinate to that by which he was appointed. \n1[(2) No such person as aforesaid shall be dismissed or removed or \nreduced in rank except after an inquiry in which he has been informed of the \ncharges against him and given a reasonable opportunity of being heard in \nrespect of those c",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.791609704,
+            "final_score": 0.09384396,
+            "rerank_score": 0.09384396,
+            "original_rank": 3,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Article 17 of the Constitution explicitly abolishes \"Untouchability.\" It also forbids its practice in any form, making the enforcement of any disability arising from \"Untouchability\" an offense punishable by law.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What are the key ideals mentioned in the Preamble of the Constitution of India?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_2_690cc28f",
+            "score": 0.841709077,
+            "text": "THE CONSTITUTION OF INDIA\n____________ \nCONTENTS\n__________ PREAMBLE\nPART I \nTHE UNION AND ITS TERRITORY\nARTICLES \n1.\nName and territory of the Union.\n 2. \nAdmission or establishment of new States. \n[2A. Sikkim to be associated with the Union.—Omitted.]\n3.\nFormation of new States and alteration of areas, boundaries or \nnames of existing States.\n4.\nLaws made under articles 2 and 3 to provide for the amendment of \nthe First and the Fourth Schedules and supplemental, incidental \nand consequential matters.\nPART II\nCITIZENSHIP\n5.\nCitizenship at the commencement of the Constitution.\n6.\nRights of citizenship of certain persons who have migrated to \nIndia from Pakistan.\n7.\nRights of citizenship of certain migrants to Pakistan.\n8.\nRights of citizenship of certain persons of Indian origin residing \noutside India.\n9.\nPersons voluntarily acquiring citizenship of a foreign State not to \nbe citizens.\n10.\nContinuance of the rights of citizenship.\n11.\nParliament to regulate the right of citizenship by",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.841709077,
+            "final_score": 0.6454552,
+            "rerank_score": 0.6454552,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_54_deaa94f1",
+            "score": 0.836933196,
+            "text": "25\n1[PART IVA\nFUNDAMENTAL DUTIES \n51A. Fundamental duties.—It shall be the duty of every citizen of \nIndia—\n(a) to abide by the Constitution and respect its ideals and \ninstitutions, the National Flag and the National Anthem;\n(b) to cherish and follow the noble ideals which inspired our \nnational struggle for freedom; \n(c) to uphold and protect the sovereignty, unity and integrity of \nIndia;\n(d) to defend the country and render national service when called \nupon to do so;\n(e) to promote harmony and the spirit of common brotherhood \namongst all the people of India transcending religious, linguistic and \nregional or sectional diversities; to renounce practices derogatory to the \ndignity of women;\n(f) to value and preserve the rich heritage of our composite \nculture;\n(g) to protect and improve the natural environment including \nforests, lakes, rivers and wild life, and to have compassion for living \ncreatures; \n(h) to develop the scientific temper, humanism and the spirit of \ninquiry and ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.836933196,
+            "final_score": 0.43158415,
+            "rerank_score": 0.43158415,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_30_c54ed39c",
+            "score": 0.813600183,
+            "text": "LIBERTY of thought, expression, belief, faith and worship;\nEQUALITY of status and of opportunity;\nand to promote among them all\nFRATERNITY assuring the dignity of the individual and the 2[unity \nand integrity of the Nation];\nIN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of \nNovember, 1949, do HEREBY ADOPT, ENACT AND GIVE TO \nOURSELVES THIS CONSTITUTION.\n______________________________________________\n1. Subs. by the Constitution (Forty-second Amendment) Act, 1976, s.2, for \"SOVEREIGN \nDEMOCRATIC REPUBLIC\" (w.e.f. 3-1-1977).\n2. Subs. by s. 2, ibid., for \"Unity of the Nation\" (w.e.f. 3-1-1977).",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813600183,
+            "final_score": 0.13881165,
+            "rerank_score": 0.13881165,
+            "original_rank": 13,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_51_dd94213d",
+            "score": 0.81940496,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IV.— Directive Principles of State Policy)\n22\n1[(f) that children are given opportunities and facilities to develop \nin a healthy manner and in conditions of freedom and dignity and that \nchildhood and youth are protected against exploitation and against moral \nand material abandonment.]\n2[39A. Equal justice and free legal aid.—The State shall secure that the \noperation of the legal system promotes justice, on a basis of equal opportunity, \nand shall, in particular, provide free legal aid, by suitable legislation or schemes \nor in any other way, to ensure that opportunities for securing justice are not \ndenied to any citizen by reason of economic or other disabilities.] \n40. Organisation of village panchayats.—The State shall take steps to \norganise village panchayats and endow them with such powers and authority as \nmay be necessary to enable them to function as units of self-government.\n41. Right to work, to education and to public assistance in certai",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.81940496,
+            "final_score": 0.07477004,
+            "rerank_score": 0.07477004,
+            "original_rank": 6,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_358_22e76665",
+            "score": 0.810822904,
+            "text": "THE CONSTITUTION OF INDIA\n(Seventh Schedule) \n323\n21. Commercial and industrial monopolies, combines and trusts.\n22. Trade unions; industrial and labour disputes.\n23. Social security and social insurance; employment and unemployment.\n24. Welfare of labour including conditions of work, provident funds, \nemployers' liability, workmen's compensation, invalidity and old age pensions \nand maternity benefits.\n1[25. Education, including technical education, medical education and \nuniversities, subject to the provisions of entries 63, 64, 65 and 66 of List I; \nvocational and technical training of labour.]\n26. Legal, medical and other professions.\n27. Relief and rehabilitation of persons displaced from their original place \nof residence by reason of the setting up of the Dominions of India and Pakistan.\n28. Charities and charitable institutions, charitable \nand \nreligious \nendowments and religious institutions.\n29. Prevention of the extension from one State to another of infectious or \ncontagio",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.810822904,
+            "final_score": 0.07409726,
+            "rerank_score": 0.07409726,
+            "original_rank": 15,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "The Preamble of the Constitution of India outlines several key ideals for the nation. These include Justice (social, economic, and political), Liberty (of thought, expression, belief, faith, and worship), and Equality (of status and opportunity). Furthermore, it aims to promote Fraternity, ensuring the dignity of the individual and the unity and integrity of the Nation.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132061,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Under which Article can Parliament alter the boundaries, area, or name of an existing State?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_31_9cfe02ae",
+            "score": 0.8374874,
+            "text": "2\nPART I\nTHE UNION AND ITS TERRITORY\n1. Name and territory of the Union.—(1) India, that is Bharat, \nshall be a Union of States.\n1[(2) The States and the territories thereof shall be as specified in \nthe First Schedule.]\n(3) The territory of India shall comprise—\n(a) the territories of the States; \n2[(b) the Union territories specified in the First Schedule; \nand]\n(c) such other territories as may be acquired.\n2. Admission or establishment of new States.—Parliament may \nby law admit into the Union, or establish, new States on such terms and \nconditions as it thinks fit.\n3[2A. [Sikkim to be associated with the Union.] —Omitted by the \nConstitution (Thirty-sixth Amendment) Act, 1975, s. 5 (w.e.f. 26-4-1975).]\n3. Formation of new States and alteration of areas, \nboundaries or names of existing States.—Parliament may by law—\n(a) form a new State by separation of territory from any \nState or by uniting two or more States or parts of States or by \nuniting any territory to a part of any State",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.8374874,
+            "final_score": 0.5371021,
+            "rerank_score": 0.5371021,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_32_cd513a7a",
+            "score": 0.819200873,
+            "text": "THE CONSTITUTION OF INDIA\n(Part I.—Union and its territory)\n3\n1[Provided that no Bill for the purpose shall be introduced in \neither House of Parliament except on the recommendation of the \nPresident and unless, where the proposal contained in the Bill affects \nthe area, boundaries or name of any of the States12***, the Bill has \nbeen referred by the President to the Legislature of that State for \nexpressing its views thereon within such period as may be specified in \nthe reference or within such further period as the President may allow \nand the period so specified or allowed has expired.] \n3[Explanation I.—In this article, in clauses (a) to (e), “State” \nincludes a Union territory, but in the proviso, “State” does not include a \nUnion territory.\nExplanation II.—The power conferred on Parliament by \nclause (a) includes the power to form a new State or Union territory by \nuniting a part of any State or Union territory to any other State or \nUnion territory.]\n4. Laws made under articles",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.819200873,
+            "final_score": 0.47333768,
+            "rerank_score": 0.47333768,
+            "original_rank": 6,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_284_942f2370",
+            "score": 0.81731981,
+            "text": "1[FIRST SCHEDULE \n[Articles 1 and 4]\nI. THE STATES Name\nTerritories\n1. \nAndhra \nPradesh 2[The territories specified in sub-section (1) of section 3 of \nthe Andhra State Act, 1953, sub-section (1) of section 3 of \nthe States Reorganisation Act, 1956, the First Schedule to \nthe Andhra Pradesh and Madras (Alteration of Boundaries) \nAct, 1959, and the Schedule to the Andhra Pradesh and \nMysore (Transfer of Territory) Act, 1968, but excluding \nthe territories specified in the Second Schedule to the \nAndhra Pradesh and Madras (Alteration of Boundaries) \nAct, 1959] 3[and the territories specified in section 3 of \nthe Andhra Pradesh Reorganisation Act, 2014].\n2. Assam\nThe \nterritories \nwhich \nimmediately \nbefore \nthe \ncommencement of this Constitution were comprised in the \nProvince of Assam, the Khasi States and the Assam Tribal \nAreas, \nbut \nexcluding \nthe \nterritories \nspecified \nin \nthe \nSchedule \nto \nthe \nAssam \n(Alteration of Boundaries) Act, 1951 4[and the territories \nspecified in sub-",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.81731981,
+            "final_score": 0.3407045,
+            "rerank_score": 0.3407045,
+            "original_rank": 8,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_312_287908b4",
+            "score": 0.818647504,
+            "text": "THE CONSTITUTION OF INDIA\n(Fifth Schedule) \n279\n(c) on any alteration of the boundaries of a State or on the \nadmission into the Union or the establishment of a new State, declare \nany territory not previously included in any State to be, or to form part \nof, a Scheduled Area;\n1[(d) rescind, in relation to any State or States, any order or orders \nmade under this paragraph, and in consultation with the Governor of the \nState concerned, make fresh orders redefining the areas which are to be \nScheduled Areas;]\nand any such order may contain such incidental and consequential provisions as \nappear to the President to be necessary and proper, but save as aforesaid, the \norder made under sub-paragraph (1) of this paragraph shall not be varied by \nany subsequent order. \nPART D\nAMENDMENT OF THE SCHEDULE\n7. Amendment of the Schedule.—(1) Parliament may from time to time \nby law amend by way of addition, variation or repeal any of the provisions of \nthis Schedule and, when the Schedule is so ame",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.818647504,
+            "final_score": 0.3382957,
+            "rerank_score": 0.3382957,
+            "original_rank": 7,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_289_fc55791d",
+            "score": 0.809853792,
+            "text": "THE CONSTITUTION OF INDIA\n(First Schedule) 258\n1[2[**\n* * *]]\n3[4[15.]\nNagaland \nThe territories specified in sub-section (1) of section 3 \nof the State of Nagaland Act, 1962.]\n3[5[16.]\nHaryana\n6[The territories specified in sub-section (1) of section 3 \nof the Punjab Reorganisation Act, 1966 and the \nterritories specified in clause (a) of sub-section (1) of \nsection 4 of the Haryana and Uttar Pradesh (Alteration \nof Boundaries) Act, 1979, but excluding the territories \nspecified in clause (v) of sub-section (1) of section 4 of \nthat Act.]] \n 3[7[17.] \nHimachal \nPradesh\nThe \nterritories \nwhich \nimmediately \nbefore \nthe \ncommencement of this Constitution were being \nadministered as if they were Chief Commissioners’ \nProvinces under the names of Himachal Pradesh and \nBilaspur and the territories specified in sub-section (1) \nof section 5 of the Punjab Reorganisation Act, 1966.]\n3[8[18.]\nManipur\nThe \nterritory \nwhich \nimmediately \nbefore \nthe \ncommencement \nof \nthis \nConstitution \nwas \nbe",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.809853792,
+            "final_score": 0.21452682,
+            "rerank_score": 0.21452682,
+            "original_rank": 21,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Parliament is empowered to alter the boundaries, area, or name of an existing State under Article 3 of the Constitution. This power allows Parliament to form new States by separating territory from any existing State, uniting States or parts of States, or uniting any territory to a part of any State.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "According to Article 24, children below what age are prohibited from working in hazardous industries like factories or mines?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_43_ff93ed9a",
+            "score": 0.826417744,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n14\nRight against Exploitation\n23. Prohibition of traffic in human beings and forced labour.—(1) \nTraffic in human beings and begar and other similar forms of forced labour are \nprohibited and any contravention of this provision shall be an offence \npunishable in accordance with law.\n(2) Nothing in this article shall prevent the State from imposing \ncompulsory service for public purposes, and in imposing such service the State \nshall not make any discrimination on grounds only of religion, race, caste or \nclass or any of them. \n24. Prohibition of employment of children in factories, etc.—No child \nbelow the age of fourteen years shall be employed to work in any factory or \nmine or engaged in any other hazardous employment.\nRight to Freedom of Religion\n25. Freedom of conscience and free profession, practice and \npropagation of religion.—(1) Subject to public order, morality and health and \nto the other provisions of this Part, all ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.826417744,
+            "final_score": 0.96879715,
+            "rerank_score": 0.96879715,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_5_243beb71",
+            "score": 0.799684048,
+            "text": "Contents\nARTICLES\n(iv)\n40.\nOrganisation of village panchayats.\n 41. \nRight to work, to education and to public assistance in certain \ncases. \n42.\nProvision for just and humane conditions of work and maternity \nrelief.\n 43. \nLiving wage, etc., for workers. \n43A. \nParticipation of workers in management of Industries.\n43B. \nPromotion of co-operative societies.\n44.\nUniform civil code for the citizens.\n 45. \nProvision for early childhood care and education to children \nbelow the age of six years. \n46.\nPromotion of educational and economic interests of Scheduled \nCastes, Scheduled Tribes and other weaker sections.\n47.\nDuty of the State to raise the level of nutrition and the standard \nof living and to improve public health. \n48.\nOrganisation of agriculture and animal husbandry.\n48A.\nProtection and improvement of environment and safeguarding of \nforests and wild life.\n49.\nProtection of monuments and places and objects of national \nimportance.\n50.\nSeparation of judiciary from executive.\n51.\nPr",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.799684048,
+            "final_score": 0.10070161,
+            "rerank_score": 0.10070161,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_3_72e9ca5f",
+            "score": 0.778473616,
+            "text": "Contents\nARTICLES\n(ii)\nPART III\nFUNDAMENTAL RIGHTS\nGeneral \n12.\nDefinition.\n13. \nLaws inconsistent with or in derogation of the fundamental \nrights. Right to Equality\n14.\nEquality before law.\n15. \nProhibition of discrimination on grounds of religion, race, caste, \nsex or place of birth.\n16. \nEquality of opportunity in matters of public employment. \n17.\nAbolition of Untouchability.\n18. \nAbolition of titles. \nRight to Freedom\n19.\nProtection of certain rights regarding freedom of speech, etc.\n20.\nProtection in respect of conviction for offences.\n21.\nProtection of life and personal liberty.\n21A.\nRight to education.\n22.\nProtection against arrest and detention in certain cases.\nRight against Exploitation\n23.\nProhibition of traffic in human beings and forced labour.\n24.\nProhibition of employment of children in factories, etc.\nRight to Freedom of Religion\n25.\nFreedom of conscience and free profession, practice and \npropagation of religion.\n26.\nFreedom to manage religious affairs.\n27.\nFreedom a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.778473616,
+            "final_score": 0.091220066,
+            "rerank_score": 0.091220066,
+            "original_rank": 28,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_52_592b0a18",
+            "score": 0.796320379,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IV.— Directive Principles of State Policy)\n23\n1[43B. Promotion of co-operative societies.—The State shall endeavour \nto promote voluntary formation, autonomous functioning, democratic control \nand professional management of co-operative societies.]\n44. Uniform civil code for the citizens.—The State shall endeavour to \nsecure for the citizens a uniform civil code throughout the territory of India.\n2[45. Provision for early childhood care and education to children \nbelow the age of six years.—The State shall endeavour to provide early \nchildhood care and education for all children until they complete the age of six \nyears.] \n46. Promotion of educational and economic interests of Scheduled \nCastes, Scheduled Tribes and other weaker sections.—The State shall \npromote with special care the educational and economic interests of the weaker \nsections of the people, and, in particular, of the Scheduled Castes and the \nScheduled Tribes, and shall protect them from",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.796320379,
+            "final_score": 0.045862664,
+            "rerank_score": 0.045862664,
+            "original_rank": 7,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_383_6a7c2f6d",
+            "score": 0.783047378,
+            "text": "349\n1[ELEVENTH SCHEDULE\n(Article 243G)\n1.\nAgriculture, including agricultural extension.\n2. \nLand improvement, implementation of land reforms, land \nconsolidation and soil conservation.\n3.\nMinor \nirrigation, \nwater \nmanagement \nand \nwatershed \ndevelopment.\n4. \nAnimal husbandry, dairying and poultry.\n5. \nFisheries.\n6.\nSocial forestry and farm forestry.\n7. \nMinor forest produce.\n8. \nSmall scale industries, including food processing industries.\n9.\nKhadi, village and cottage industries.\n10.\nRural housing.\n11.\nDrinking water.\n12. \nFuel and fodder.\n13.\nRoads, culverts, bridges, ferries, waterways and other means of \ncommunication.\n14.\nRural electrification, including distribution of electricity.\n15.\nNon-conventional energy sources.\n16.\nPoverty alleviation programme.\n17.\nEducation, including primary and secondary schools.\n18.\nTechnical training and vocational education.\n19.\nAdult and non-formal education.\n20.\nLibraries.\n21.\nCultural activities.\n22.\nMarkets and fairs.\n23.\nHealth and sanitation",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.783047378,
+            "final_score": 0.010169658,
+            "rerank_score": 0.010169658,
+            "original_rank": 18,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "According to Article 24, children below the age of fourteen years are prohibited from working in factories, mines, or any other hazardous employment. This provision is part of the Right against Exploitation under the Fundamental Rights.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What is the significance of Article 21 in the Indian Constitution?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_268_0fb8c940",
+            "score": 0.826909959,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XXI.—Temporary, Transitional and Special Provisions)\n237\nmembers of that Assembly elected from the tribal areas specified in 1[Part I] of \nthe table appended to paragraph 20 of the Sixth Schedule and such number of \nother members of that Assembly as may be specified in the order and for the \nmodifications to be made in the rules of procedure of that Assembly for the \nconstitution and proper functioning of such committee.]\n2[371C. Special provision with respect to the State of Manipur.—(1) \nNotwithstanding anything in this Constitution, the President may, by order made \nwith respect to the State of Manipur, provide for the constitution and functions of \na committee of the Legislative Assembly of the State consisting of members of \nthat Assembly elected from the Hill Areas of that State, for the modifications to \nbe made in the rules of business of the Government and in the rules of procedure \nof the Legislative Assembly of the State and for any special re",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.826909959,
+            "final_score": 0.24454336,
+            "rerank_score": 0.24454336,
+            "original_rank": 5,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_26_92d6d78f",
+            "score": 0.827899575,
+            "text": "Contents\nARTICLES\n(xxv)\n364. \nSpecial provisions as to major ports and aerodromes.\n365.\nEffect of failure to comply with, or to give effect to, directions \ngiven by the Union. \n366. \nDefinitions.\n367. \nInterpretation.\nPART XX \nAMENDMENT OF THE CONSTITUTION\n368.\nPower of Parliament to amend the Constitution and procedure \ntherefor. \nPART XXI\nTEMPORARY, TRANSITIONAL AND \nSPECIAL PROVISIONS\n369.\nTemporary power to Parliament to make laws with respect to \ncertain matters in the State List as if they were matters in the \nConcurrent List.\n370.\nTemporary provisions with respect to the State of Jammu and \nKashmir.\n371.\nSpecial provision with respect to the States of Maharashtra and \nGujarat.\n371A.\nSpecial provision with respect to the State of Nagaland.\n371B .\nSpecial provision with respect to the State of Assam.\n371C.\nSpecial provision with respect to the State of Manipur.\n371D. \nSpecial provisions with respect to the State of Andhra Pradesh or \nthe State of Telangana.\n371E.\nEstablishment of ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.827899575,
+            "final_score": 0.18039525,
+            "rerank_score": 0.18039525,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_256_a4d3c6ea",
+            "score": 0.819895,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIX.—MISCELLANEOUS)\n225\n(16) “Part” means a Part of this Constitution;\n(17) “pension” means a pension, whether contributory or not, of \nany kind whatsoever payable to or in respect of any person, and includes \nretired pay so payable; a gratuity so payable and any sum or sums so \npayable by way of the return, with or without interest thereon or any \nother addition thereto, of subscriptions to a provident fund;\n(18) “Proclamation of Emergency” means a Proclamation issued \nunder clause (1) of article 352; \n(19) “public notification” means a notification in the Gazette of \nIndia, or, as the case may be, the Official Gazette of a State;\n(20) “railway” does not include—\n(a) a tramway wholly within a municipal area; or\n(b) any other line of communication wholly situate in one State \nand declared by Parliament by law not to be a railway;\n1[(21)*\n* \n*\n*]\n2[(22) “Ruler” means the Prince, Chief or other person who, at any \ntime before the commencement of the Consti",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.819895,
+            "final_score": 0.101767845,
+            "rerank_score": 0.101767845,
+            "original_rank": 25,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_54_deaa94f1",
+            "score": 0.822211742,
+            "text": "25\n1[PART IVA\nFUNDAMENTAL DUTIES \n51A. Fundamental duties.—It shall be the duty of every citizen of \nIndia—\n(a) to abide by the Constitution and respect its ideals and \ninstitutions, the National Flag and the National Anthem;\n(b) to cherish and follow the noble ideals which inspired our \nnational struggle for freedom; \n(c) to uphold and protect the sovereignty, unity and integrity of \nIndia;\n(d) to defend the country and render national service when called \nupon to do so;\n(e) to promote harmony and the spirit of common brotherhood \namongst all the people of India transcending religious, linguistic and \nregional or sectional diversities; to renounce practices derogatory to the \ndignity of women;\n(f) to value and preserve the rich heritage of our composite \nculture;\n(g) to protect and improve the natural environment including \nforests, lakes, rivers and wild life, and to have compassion for living \ncreatures; \n(h) to develop the scientific temper, humanism and the spirit of \ninquiry and ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.822211742,
+            "final_score": 0.03904829,
+            "rerank_score": 0.03904829,
+            "original_rank": 20,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_2_690cc28f",
+            "score": 0.828679383,
+            "text": "THE CONSTITUTION OF INDIA\n____________ \nCONTENTS\n__________ PREAMBLE\nPART I \nTHE UNION AND ITS TERRITORY\nARTICLES \n1.\nName and territory of the Union.\n 2. \nAdmission or establishment of new States. \n[2A. Sikkim to be associated with the Union.—Omitted.]\n3.\nFormation of new States and alteration of areas, boundaries or \nnames of existing States.\n4.\nLaws made under articles 2 and 3 to provide for the amendment of \nthe First and the Fourth Schedules and supplemental, incidental \nand consequential matters.\nPART II\nCITIZENSHIP\n5.\nCitizenship at the commencement of the Constitution.\n6.\nRights of citizenship of certain persons who have migrated to \nIndia from Pakistan.\n7.\nRights of citizenship of certain migrants to Pakistan.\n8.\nRights of citizenship of certain persons of Indian origin residing \noutside India.\n9.\nPersons voluntarily acquiring citizenship of a foreign State not to \nbe citizens.\n10.\nContinuance of the rights of citizenship.\n11.\nParliament to regulate the right of citizenship by",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.828679383,
+            "final_score": 0.0262553,
+            "rerank_score": 0.0262553,
+            "original_rank": 2,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided comprehensive policy context, which comprises excerpts from the Indian Constitution, does not contain specific information detailing the significance of Article 21. The document outlines various parts, articles, and schedules, but the content or importance of Article 21 is not described within these sections.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Article 15 prohibits discrimination on certain grounds. However, which groups can the State make special provisions for under this Article?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_36_e0aaf360",
+            "score": 0.828736782,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n7\n(a) access to shops, public restaurants, hotels and places of public \nentertainment; or \n(b) the use of wells, tanks, bathing ghats, roads and places of \npublic resort maintained wholly or partly out of State funds or dedicated \nto the use of the general public. \n(3) Nothing in this article shall prevent the State from making any \nspecial provision for women and children. \n1[(4) Nothing in this article or in clause (2) of article 29 shall prevent the \nState from making any special provision for the advancement of any socially \nand educationally backward classes of citizens or for the Scheduled Castes and \nthe Scheduled Tribes.] \n2[(5) Nothing in this article or in sub-clause (g) of clause (1) of article 19 \nshall prevent the State from making any special provision, by law, for the \nadvancement of any socially and educationally backward classes of citizens or \nfor the Scheduled Castes or the Scheduled Tribes in so far as such sp",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.828736782,
+            "final_score": 0.8217605,
+            "rerank_score": 0.8217605,
+            "original_rank": 2,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_23_3edfa68d",
+            "score": 0.812405109,
+            "text": "Contents\nARTICLES\n(xxii)\nPART XV \nELECTIONS\n 324. \nSuperintendence, direction and control of elections to be vested \nin an Election Commission.\n 325. \nNo person to be ineligible for inclusion in, or to claim to be \nincluded in a special, electoral roll on grounds of religion, race, \ncaste or sex.\n 326. \nElections to the House of the People and to the Legislative \nAssemblies of States to be on the basis of adult suffrage.\n327.\nPower of Parliament to make provision with respect to elections \nto Legislatures.\n328.\nPower of Legislature of a State to make provision with respect to \nelections to such Legislature. \n329.\nBar to interference by courts in electoral matters.\n [329A. \nSpecial provision as to elections to Parliament in the case of \nPrime Minister and Speaker.\nOmitted.]\nPART XVI\nSPECIAL PROVISIONS RELATING TO CERTAIN \nCLASSES\n330.\n330A. \nReservation of seats for Scheduled Castes and Scheduled Tribes \nin the House of the People. \nReservation of seats for women in the House of the Peo",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.812405109,
+            "final_score": 0.63973606,
+            "rerank_score": 0.63973606,
+            "original_rank": 10,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_43_ff93ed9a",
+            "score": 0.804218173,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n14\nRight against Exploitation\n23. Prohibition of traffic in human beings and forced labour.—(1) \nTraffic in human beings and begar and other similar forms of forced labour are \nprohibited and any contravention of this provision shall be an offence \npunishable in accordance with law.\n(2) Nothing in this article shall prevent the State from imposing \ncompulsory service for public purposes, and in imposing such service the State \nshall not make any discrimination on grounds only of religion, race, caste or \nclass or any of them. \n24. Prohibition of employment of children in factories, etc.—No child \nbelow the age of fourteen years shall be employed to work in any factory or \nmine or engaged in any other hazardous employment.\nRight to Freedom of Religion\n25. Freedom of conscience and free profession, practice and \npropagation of religion.—(1) Subject to public order, morality and health and \nto the other provisions of this Part, all ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.804218173,
+            "final_score": 0.45066157,
+            "rerank_score": 0.45066157,
+            "original_rank": 27,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_37_03f23e98",
+            "score": 0.830841601,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n8\nExplanation.—For the purposes of this article and article 16, \n\"economically weaker sections\" shall be such as may be notified by the State \nfrom time to time on the basis of family income and other indicators of \neconomic disadvantage.]\n16. Equality of opportunity in matters of public employment.—(1) \nThere shall be equality of opportunity for all citizens in matters relating to \nemployment or appointment to any office under the State. \n(2) No citizen shall, on grounds only of religion, race, caste, sex, descent, \nplace of birth, residence or any of them, be ineligible for, or discriminated against \nin respect of, any employment or office under the State.\n(3) Nothing in this article shall prevent Parliament from making any law \nprescribing, in regard to a class or classes of employment or appointment to an \noffice 1[under the Government of, or any local or other authority within, a State \nor Union territory, any requirement as",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.830841601,
+            "final_score": 0.41703403,
+            "rerank_score": 0.41703403,
+            "original_rank": 1,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_225_743a0152",
+            "score": 0.824136138,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n194\n1[Provided that nothing in this article shall prevent in making of any \nprovision in favour of the members of the Scheduled Castes and the Scheduled \nTribes for relaxation in qualifying marks in any examination or lowering the \nstandards of evaluation, for reservation in matters or promotion to any class or \nclasses of services or posts in connection with the affairs of the Union or of a State.]\n336. Special provision for Anglo-Indian community in certain \nservices.—(1) During the first two years after the commencement of this \nConstitution, appointments of members of the Anglo-Indian community to posts \nin the railway, customs, postal and telegraph services of the Union shall be made \non the same basis as immediately before the fifteenth day of August, 1947. \nDuring every succeeding period of two years, the number of posts \nreserved for the members of the said community in the said services shall",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.824136138,
+            "final_score": 0.38156518,
+            "rerank_score": 0.38156518,
+            "original_rank": 3,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Under Article 15, the State is permitted to make special provisions for women and children. Additionally, it can make special provisions for the advancement of any socially and educationally backward classes of citizens, as well as for the Scheduled Castes and the Scheduled Tribes.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Which Article allows Parliament to regulate the right of citizenship and override previous articles on citizenship (Articles 5 to 10)?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_2_690cc28f",
+            "score": 0.813379288,
+            "text": "THE CONSTITUTION OF INDIA\n____________ \nCONTENTS\n__________ PREAMBLE\nPART I \nTHE UNION AND ITS TERRITORY\nARTICLES \n1.\nName and territory of the Union.\n 2. \nAdmission or establishment of new States. \n[2A. Sikkim to be associated with the Union.—Omitted.]\n3.\nFormation of new States and alteration of areas, boundaries or \nnames of existing States.\n4.\nLaws made under articles 2 and 3 to provide for the amendment of \nthe First and the Fourth Schedules and supplemental, incidental \nand consequential matters.\nPART II\nCITIZENSHIP\n5.\nCitizenship at the commencement of the Constitution.\n6.\nRights of citizenship of certain persons who have migrated to \nIndia from Pakistan.\n7.\nRights of citizenship of certain migrants to Pakistan.\n8.\nRights of citizenship of certain persons of Indian origin residing \noutside India.\n9.\nPersons voluntarily acquiring citizenship of a foreign State not to \nbe citizens.\n10.\nContinuance of the rights of citizenship.\n11.\nParliament to regulate the right of citizenship by",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813379288,
+            "final_score": 0.44329914,
+            "rerank_score": 0.44329914,
+            "original_rank": 4,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_34_e8296f14",
+            "score": 0.836365521,
+            "text": "THE CONSTITUTION OF INDIA\n(Part II.—Citizenship)\n5\nProvided that nothing in this article shall apply to a person who, after \nhaving so migrated to the territory now included in Pakistan, has returned to the \nterritory of India under a permit for resettlement or permanent return issued by \nor under the authority of any law and every such person shall for the purposes \nof clause (b) of article 6 be deemed to have migrated to the territory of India \nafter the nineteenth day of July, 1948.\n8. Rights of citizenship of certain persons of Indian origin residing \noutside India.—Notwithstanding anything in article 5, any person who or \neither of whose parents or any of whose grand-parents was born in India as \ndefined in the Government of India Act, 1935 (as originally enacted), and who \nis ordinarily residing in any country outside India as so defined shall be deemed \nto be a citizen of India if he has been registered as a citizen of India by the \ndiplomatic or consular representative of India",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.836365521,
+            "final_score": 0.286269,
+            "rerank_score": 0.286269,
+            "original_rank": 1,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_33_ea25c407",
+            "score": 0.81351608,
+            "text": "4\nPART II\nCITIZENSHIP \n5. Citizenship at the commencement of the Constitution.—At the \ncommencement of this Constitution, every person who has his domicile in the \nterritory of India and—\n(a) who was born in the territory of India; or \n(b) either of whose parents was born in the territory of India; or\n(c) who has been ordinarily resident in the territory of India for \nnot less than five years immediately preceding such commencement, \nshall be a citizen of India.\n6. Rights of citizenship of certain persons who have migrated to \nIndia from Pakistan.—Notwithstanding anything in article 5, a person who \nhas migrated to the territory of India from the territory now included in \nPakistan shall be deemed to be a citizen of India at the commencement of this \nConstitution if—\n(a) he or either of his parents or any of his grand-parents was born \nin India as defined in the Government of India Act, 1935 (as originally \nenacted); and\n(b)(i) in the case where such person has so migrated before the \n",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.81351608,
+            "final_score": 0.17036992,
+            "rerank_score": 0.17036992,
+            "original_rank": 3,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_259_4069830b",
+            "score": 0.80818516,
+            "text": "228\nPART XX\nAMENDMENT OF THE CONSTITUTION\n368. \n1[Power of Parliament to amend the Constitution and \nprocedure therefor].— 2[(1) Notwithstanding anything in this Constitution, \nParliament may in exercise of its constituent power amend by way of addition, \nvariation or repeal any provision of this Constitution in accordance with the \nprocedure laid down in this article.] \n3[(2)] An amendment of this Constitution may be initiated only by the \nintroduction of a Bill for the purpose in either House of Parliament, and when \nthe Bill is passed in each House by a majority of the total membership of that \nHouse and by a majority of not less than two-thirds of the members of that \nHouse present and voting, 4[it shall be presented to the President who shall give \nhis assent to the Bill and thereupon] the Constitution shall stand amended in \naccordance with the terms of the Bill:\nProvided that if such amendment seeks to make any change in—\n(a) article 54, article 55, article 73, 5[ article 162, a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.80818516,
+            "final_score": 0.091220066,
+            "rerank_score": 0.091220066,
+            "original_rank": 7,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_37_03f23e98",
+            "score": 0.809596419,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n8\nExplanation.—For the purposes of this article and article 16, \n\"economically weaker sections\" shall be such as may be notified by the State \nfrom time to time on the basis of family income and other indicators of \neconomic disadvantage.]\n16. Equality of opportunity in matters of public employment.—(1) \nThere shall be equality of opportunity for all citizens in matters relating to \nemployment or appointment to any office under the State. \n(2) No citizen shall, on grounds only of religion, race, caste, sex, descent, \nplace of birth, residence or any of them, be ineligible for, or discriminated against \nin respect of, any employment or office under the State.\n(3) Nothing in this article shall prevent Parliament from making any law \nprescribing, in regard to a class or classes of employment or appointment to an \noffice 1[under the Government of, or any local or other authority within, a State \nor Union territory, any requirement as",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.809596419,
+            "final_score": 0.07030385,
+            "rerank_score": 0.07030385,
+            "original_rank": 6,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Article 11 of the Constitution of India grants Parliament the power to regulate the right of citizenship. This article enables Parliament to make laws concerning citizenship, thereby overriding or supplementing the provisions laid down in Articles 5 to 10.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What restrictions can the State impose on the right to freedom of speech under Article 19(2)?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_39_106c95ef",
+            "score": 0.81009376,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n10\n(e) to reside and settle in any part of the territory of India; 1[and]\n2[(f)* * * * *] \n(g) to practise any profession, or to carry on any occupation, trade or \nbusiness. \n3[(2) Nothing in sub-clause (a) of clause (1) shall affect the operation of \nany existing law, or prevent the State from making any law, in so far as such \nlaw imposes reasonable restrictions on the exercise of the right conferred by the \nsaid sub-clause in the interests of 4[the sovereignty and integrity of India], the \nsecurity of the State, friendly relations with foreign States, public order, \ndecency or morality, or in relation to contempt of court, defamation or \nincitement to an offence.]\n(3) Nothing in sub-clause (b) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of 4[the sovereignty and integrity of India or]\npublic order, reasonable res",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.81009376,
+            "final_score": 0.09186979,
+            "rerank_score": 0.09186979,
+            "original_rank": 5,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_40_b42cb91b",
+            "score": 0.807025194,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n11\n(6) Nothing in sub-clause (g) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of the general public, reasonable restrictions \non the exercise of the right conferred by the said sub-clause, and, in particular, \n1[nothing in the said sub-clause shall affect the operation of any existing law in \nso far as it relates to, or prevent the State from making any law relating to,—\n(i) the professional or technical qualifications necessary for practising \nany profession or carrying on any occupation, trade or business; or\n(ii) the carrying on by the State, or by a corporation owned or \ncontrolled by the State, of any trade, business, industry or service, \nwhether to the exclusion, complete or partial, of citizens or otherwise.]\n20. Protection in respect of conviction for offences.—(1) No person \nshall be convicted of any offen",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.807025194,
+            "final_score": 0.068040416,
+            "rerank_score": 0.068040416,
+            "original_rank": 8,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_48_8b4a51c9",
+            "score": 0.810711443,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n19\nRight to Constitutional Remedies \n32. Remedies for enforcement of rights conferred by this Part.—(1) \nThe right to move the Supreme Court by appropriate proceedings for the \nenforcement of the rights conferred by this Part is guaranteed.\n(2) The Supreme Court shall have power to issue directions or orders or \nwrits, including writs in the nature of habeas corpus, mandamus, prohibition,\nquo warranto and certiorari,\nwhichever may be appropriate, for the \nenforcement of any of the rights conferred by this Part.\n(3) Without prejudice to the powers conferred on the Supreme Court by \nclauses (1) and (2), Parliament may by law empower any other court to exercise \nwithin the local limits of its jurisdiction all or any of the powers exercisable by \nthe Supreme Court under clause (2).\n(4) The right guaranteed by this article shall not be suspended except as \notherwise provided for by this Constitution.\n132A. [Constitutional validity of ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.810711443,
+            "final_score": 0.048047356,
+            "rerank_score": 0.048047356,
+            "original_rank": 4,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_36_e0aaf360",
+            "score": 0.812638164,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n7\n(a) access to shops, public restaurants, hotels and places of public \nentertainment; or \n(b) the use of wells, tanks, bathing ghats, roads and places of \npublic resort maintained wholly or partly out of State funds or dedicated \nto the use of the general public. \n(3) Nothing in this article shall prevent the State from making any \nspecial provision for women and children. \n1[(4) Nothing in this article or in clause (2) of article 29 shall prevent the \nState from making any special provision for the advancement of any socially \nand educationally backward classes of citizens or for the Scheduled Castes and \nthe Scheduled Tribes.] \n2[(5) Nothing in this article or in sub-clause (g) of clause (1) of article 19 \nshall prevent the State from making any special provision, by law, for the \nadvancement of any socially and educationally backward classes of citizens or \nfor the Scheduled Castes or the Scheduled Tribes in so far as such sp",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.812638164,
+            "final_score": 0.04248321,
+            "rerank_score": 0.04248321,
+            "original_rank": 3,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_25_012cbb0d",
+            "score": 0.813716948,
+            "text": "Contents\nARTICLES\n(xxiv) CHAPTER IV.\nSPECIAL DIRECTIVES\n350.\nLanguage to be used in representations for redress of grievances. \n350A.\nFacilities for instruction in mother-tongue at primary stage.\n350B.\nSpecial Officer for linguistic minorities.\n 351. \nDirective for development of the Hindi language. PART XVIII\nEMERGENCY PROVISIONS\n 352. \nProclamation of Emergency.\n 353. \nEffect of Proclamation of Emergency. \n 354. \nApplication of provisions relating to distribution of revenues \nwhile a Proclamation of Emergency is in operation.\n 355. \nDuty of the Union to protect States against external aggression \nand internal disturbance. \n356.\nProvisions in case of failure of constitutional machinery in \nStates. \n357.\nExercise of legislative powers under Proclamation issued under \narticle 356.\n358.\nSuspension of provisions of article 19 during emergencies.\n359.\nSuspension of the enforcement of the rights conferred by Part III \nduring emergencies.\n[359A.\nApplication of this Part to the State of Punja",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813716948,
+            "final_score": 0.03567855,
+            "rerank_score": 0.03567855,
+            "original_rank": 2,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Under Article 19(2), the State can impose reasonable restrictions on the right to freedom of speech. These restrictions can be in the interests of India's sovereignty and integrity, state security, friendly relations with foreign states, public order, decency, or morality. Additionally, restrictions can be applied in relation to contempt of court, defamation, or incitement to an offense.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 0.6013681888580322,
+      "query_embedding": {
+        "total": 1.0702333450317383,
+        "individual": [
+          1.015807867050171,
+          1.0403156280517578,
+          0.9895758628845215,
+          0.9905798435211182,
+          1.0348074436187744,
+          1.0108044147491455,
+          1.0116658210754395,
+          1.061722993850708,
+          1.0341756343841553,
+          0.9986634254455566
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 18792",
+          "Query 2: Thread 17588",
+          "Query 3: Thread 30660",
+          "Query 4: Thread 30340",
+          "Query 5: Thread 15460",
+          "Query 6: Thread 26508",
+          "Query 7: Thread 27504",
+          "Query 8: Thread 14400",
+          "Query 9: Thread 31320",
+          "Query 10: Thread 29152"
+        ]
+      },
+      "pdf_processing_and_indexing": 21.066674947738647,
+      "query_processor_initialization": 4.41395115852356,
+      "query_processing": {
+        "total": 141.92353582382202,
+        "parallel_execution_time": 16.539764404296875,
+        "average": 14.192353582382202,
+        "individual": [
+          13.90316891670227,
+          13.308074235916138,
+          14.646260738372803,
+          13.413045883178711,
+          15.725273132324219,
+          16.533758878707886,
+          13.916195631027222,
+          14.220537662506104,
+          13.550544738769531,
+          12.706676006317139
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 31272",
+          "Query 2: Thread 24836",
+          "Query 3: Thread 31240",
+          "Query 4: Thread 29572",
+          "Query 5: Thread 9312",
+          "Query 6: Thread 23644",
+          "Query 7: Thread 9624",
+          "Query 8: Thread 28936",
+          "Query 9: Thread 4760",
+          "Query 10: Thread 30660"
+        ]
+      },
+      "cleanup_index": 1.069232702255249,
+      "total_execution_time": 44.763838052749634
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmptkjwzt8m",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 10,
+      "max_query_workers": 10
+    }
+  },
+  "processing_summary": {
+    "total_questions": 10,
+    "total_time_seconds": 44.763838052749634,
+    "pdf_processing_time": 21.066674947738647,
+    "embedding_time": 1.0702333450317383,
+    "query_processing_time": 141.92353582382202,
+    "parallel_execution_time": 16.539764404296875,
+    "max_individual_query_time": 16.533758878707886
+  },
+  "multithreading_metrics": {
+    "queries_processed": 10,
+    "embedding_workers": 10,
+    "query_workers": 10,
+    "embedding_speedup_ratio": 9.51953046681536,
+    "query_speedup_ratio": 8.580747122791642,
+    "individual_embedding_times": [
+      1.015807867050171,
+      1.0403156280517578,
+      0.9895758628845215,
+      0.9905798435211182,
+      1.0348074436187744,
+      1.0108044147491455,
+      1.0116658210754395,
+      1.061722993850708,
+      1.0341756343841553,
+      0.9986634254455566
+    ],
+    "individual_query_times": [
+      13.90316891670227,
+      13.308074235916138,
+      14.646260738372803,
+      13.413045883178711,
+      15.725273132324219,
+      16.533758878707886,
+      13.916195631027222,
+      14.220537662506104,
+      13.550544738769531,
+      12.706676006317139
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 18792",
+      "Query 2: Thread 17588",
+      "Query 3: Thread 30660",
+      "Query 4: Thread 30340",
+      "Query 5: Thread 15460",
+      "Query 6: Thread 26508",
+      "Query 7: Thread 27504",
+      "Query 8: Thread 14400",
+      "Query 9: Thread 31320",
+      "Query 10: Thread 29152"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 31272",
+      "Query 2: Thread 24836",
+      "Query 3: Thread 31240",
+      "Query 4: Thread 29572",
+      "Query 5: Thread 9312",
+      "Query 6: Thread 23644",
+      "Query 7: Thread 9624",
+      "Query 8: Thread 28936",
+      "Query 9: Thread 4760",
+      "Query 10: Thread 30660"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "What is the official name of India according to Ar...",
+        "time_seconds": 13.90316891670227
+      },
+      {
+        "query_index": 1,
+        "query": "Which Article guarantees equality before the law a...",
+        "time_seconds": 13.308074235916138
+      },
+      {
+        "query_index": 2,
+        "query": "What is abolished by Article 17 of the Constitutio...",
+        "time_seconds": 14.646260738372803
+      },
+      {
+        "query_index": 3,
+        "query": "What are the key ideals mentioned in the Preamble ...",
+        "time_seconds": 13.413045883178711
+      },
+      {
+        "query_index": 4,
+        "query": "Under which Article can Parliament alter the bound...",
+        "time_seconds": 15.725273132324219
+      },
+      {
+        "query_index": 5,
+        "query": "According to Article 24, children below what age a...",
+        "time_seconds": 16.533758878707886
+      },
+      {
+        "query_index": 6,
+        "query": "What is the significance of Article 21 in the Indi...",
+        "time_seconds": 13.916195631027222
+      },
+      {
+        "query_index": 7,
+        "query": "Article 15 prohibits discrimination on certain gro...",
+        "time_seconds": 14.220537662506104
+      },
+      {
+        "query_index": 8,
+        "query": "Which Article allows Parliament to regulate the ri...",
+        "time_seconds": 13.550544738769531
+      },
+      {
+        "query_index": 9,
+        "query": "What restrictions can the State impose on the righ...",
+        "time_seconds": 12.706676006317139
+      }
+    ]
+  }
+}

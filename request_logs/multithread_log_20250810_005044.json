@@ -1,0 +1,553 @@
+{
+  "timestamp": "2025-08-10T00:51:15.208145",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201.pdf?sv=2023-01-03&st=2025-07-21T08%3A29%3A02Z&se=2025-09-22T08%3A29%3A00Z&sr=b&sp=r&sig=nzrz1K9Iurt%2BBXom%2FB%2BMPTFMFP3PRnIvEsipAX10Ig4%3D",
+    "questions": [
+      "When will my root canal claim of Rs 25,000 be settled?",
+      "I have done an IVF for Rs 56,000. Is it covered?",
+      "I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?",
+      "Give me a list of documents to be uploaded for hospitalization for heart surgery."
+    ],
+    "pdf_filename": "input_20250810_005044.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_005044.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "When will my root canal claim of Rs 25,000 be settled?",
+        "search_results": [
+          {
+            "id": "input_20250810_005044.pdf_32_28ab00d2",
+            "score": 0.838523626,
+            "text": "9.4. Claim Settlement \ni. \nThe Company shall settle or reject a claim, as the case may be, within 15 days from the date of receipt of last necessary \ndocument. \nii. In the case of delay in the payment of a claim, the Company shall be liable to pay interest to the policyholder from the date of \nreceipt of last necessary document to the date of payment of claim at a rate 2% above the bank rate. \niii. However, where the circumstances of a claim warrant an investigation in the opinion of the Company, it shall initiate and \ncomplete such investigation at the earliest, in any case not later than 30 days from the date of receipt of last necessary document. \nIn such cases, the Company shall settle or reject the claim within 45 days from the date of receipt of last necessary document. \niv. In case of delay beyond stipulated 45 days, the Company shall be liable to pay interest to the policyholder at a rate 2% above \nthe bank rate from the date of receipt of last necessary document to the date of",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.838523626,
+            "final_score": 0.023286305,
+            "rerank_score": 0.023286305,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_36_f56a9cb2",
+            "score": 0.811672032,
+            "text": "10.7. Territorial Limit \nAll medical treatment for the purpose of this insurance will have to be taken in India only. 10.8. Multiple Policies \ni. \nIn case of multiple policies taken by an insured person during a period from one or more insurers to indemnify treatment costs, \nthe insured person shall have the right to require a settlement of his/her claim in terms of any of his/her policies. In all such \ncases the insurer chosen by the insured person shall be obliged to settle the claim as long as the claim is within the limits of and \naccording to the terms of the chosen policy. \nii. Insured person having multiple policies shall also have the right to prefer claims under this policy for the amounts disallowed \nunder any other policy / policies. Then the insurer shall independently settle the claim subject to the terms and conditions of \nthis policy. \niii. If the amount to be claimed exceeds the sum insured under a single policy, the insured person shall have the right to choose \ninsure",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.811672032,
+            "final_score": 0.0017961492,
+            "rerank_score": 0.0017961492,
+            "original_rank": 10,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_30_d07319d5",
+            "score": 0.822781086,
+            "text": "9.2. Documents to be submitted \nThe reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. \ni. \nDuly completed claim form \nii. Photo Identity proof of the patient \niii. Medical practitioner’s prescription advising admission. \niv. Original bills with itemized break-up \nv. Payment receipts \nvi. Discharge summary including complete medical history of the patient along with other details. \nvii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending medical practitioner \nviii. OT notes or Surgeon's certificate giving details of the operation performed (for surgical cases). \nix. Sticker/Invoice of the Implants, wherever applicable. \nx. MLR (Medico Legal Report copy if carried out and FIR (First information report) if registered, where ever applicable. \nxi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque \nxii. KYC (Identity proof with Address) of the propo",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.822781086,
+            "final_score": 0.0012893283,
+            "rerank_score": 0.0012893283,
+            "original_rank": 3,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_33_7a0c1ca1",
+            "score": 0.817103505,
+            "text": "9.5. Services Offered by TPA \nServicing of claims, i.e., claim admissions and assessments, under this Policy by way of pre-authorization of cashless treatment or \nprocessing of claims other than cashless claims or both, as per the underlying terms and conditions of the policy. \nThe services offered by a TPA shall not include \ni. \nClaim settlement and claim rejection; \nii. Any services directly to any insured person or to any other person unless such service is in accordance with the terms and \nconditions of the Agreement entered into with the Company. 9.6. Disclaimer \nIf the Company shall disclaim liability to the insured person for any claim hereunder and if the insured person shall not within \ntwelve calendar months from the date of receipt of the notice of such disclaimer notify the Company in writing that he does not \naccept such disclaimer and intends to recover his claim from the Company, then the claim shall for all purposes be deemed to have \nbeen abandoned and shall not therea",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.817103505,
+            "final_score": 0.0012065896,
+            "rerank_score": 0.0012065896,
+            "original_rank": 6,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_29_6006b2f9",
+            "score": 0.813247085,
+            "text": "9.1.2 Procedure for Reimbursement of Claims \nFor reimbursement of claims the Insured Person shall submit the necessary documents to TPA (if claim is processed by \nTPA)/Company within the prescribed time limit as specified hereunder. \nSl. \nNo. \nType of claim \nPrescribed Time limit \n1. \nReimbursement of hospitalisation, day care and pre hospitalisation \nexpenses \nWithin thirty days of date of discharge \nfrom hospital \n2. \nReimbursement of post hospitalisation expenses \nWithin fifteen days from completion of \npost hospitalisation treatment 9.1. Notification of Claim \nNotice with full particulars shall be sent to the Company/ TPA (if applicable) as under: \ni. \nWithin 24hours from the date of emergency hospitalization required or before the Insured Person’s discharge from Hospital, \nwhichever is earlier. \nii. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization.",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813247085,
+            "final_score": 0.0007408056,
+            "rerank_score": 0.0007408056,
+            "original_rank": 9,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Your root canal claim of Rs 25,000 will generally be settled or rejected within 15 days from the date the company receives all necessary documents. However, if your claim requires an investigation, the settlement or rejection period extends to within 45 days from the date of receiving the last required document.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127681,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "I have done an IVF for Rs 56,000. Is it covered?",
+        "search_results": [
+          {
+            "id": "input_20250810_005044.pdf_25_c904ea87",
+            "score": 0.8305372,
+            "text": "7.12. Refractive Error (Code – Excl 15) \nExpenses related to the treatment for correction of eye sight due to refractive error less than 7.5 dioptres. 7.13. Unproven Treatments (Code – Excl 16) \nExpenses related to any unproven treatment, services and supplies for or in connection with any treatment. Unproven treatments are \ntreatments, procedures or supplies that lack significant medical documentation to support their effectiveness. 7.14. \nSterility and Infertility (Code – Excl 17) \nExpenses related to sterility and infertility. This includes: \ni. Any type of sterilization \nii. Assisted Reproduction services including artificial insemination and advanced reproductive technologies such as IVF, \nZIFT, GIFT, ICSI \niii. Gestational Surrogacy \niv. Reversal of sterilization 7.15. \nMaternity Expenses (Code – Excl 18) \ni. Medical treatment expenses traceable to childbirth (including complicated deliveries and caesarean sections incurred \nduring hospitalization) except ectopic pregnancy; \nii. ",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.8305372,
+            "final_score": 0.006145092,
+            "rerank_score": 0.006145092,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_21_669ffc02",
+            "score": 0.815310061,
+            "text": "except claims arising due to an accident, provided the same are covered. \nb) This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than 12 (twelve) months. \nc) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum \ninsured subsequently. \n. \n6.3. Specified disease/procedure waiting period (Excl 02) \na) Expenses related to the treatment of the listed Conditions, surgeries/treatments shall be excluded until the expiry of 24 \n(twenty four) months of continuous coverage after the date of inception of the first policy with us. This exclusion shall not \nbe applicable for claims arising due to an accident \nb) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. \nc) If any of the specified disease/procedure falls under the waiting period specified for Pre-Existing Diseases, then the longer \nof the two waiting periods shall apply. \nd) ",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.815310061,
+            "final_score": 0.004591684,
+            "rerank_score": 0.004591684,
+            "original_rank": 8,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_15_7d7e0de5",
+            "score": 0.816612184,
+            "text": "4.1. Hospitalization \nThe Company shall indemnify Medical Expense incurred for Hospitalization of the Insured Person during the Policy Period, up to \nthe Sum Insured and Cumulative Bonus specified in the Policy Schedule, for, \ni. \nRoom Rent, Boarding, Nursing Expenses all inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured \nsubject to maximum of Rs. 5,000/-per day \nii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of the sum insured subject to maximum of \nRs. 10,000/- per day \niii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating doctor/ surgeon or \nto the hospital \niv. Anesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, \ndiagnostic imaging modalities and such similar other expenses.",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.816612184,
+            "final_score": 0.0037654135,
+            "rerank_score": 0.0037654135,
+            "original_rank": 6,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_48_4d46f430",
+            "score": 0.824453592,
+            "text": "12. TABLE OF BENEFITS \nName \nArogya Sanjeevani Policy - National \nProduct Type \nIndividual/ Floater \nCategory of Cover \nIndemnity \nSum insured \n₹ 50,000 to ₹ 10L, in multiple of ₹ 50,000 \nOn Individual basis – SI shall apply to each individual family member \nOn Floater basis – SI shall apply to the entire family \nPolicy Period \n1 years \nEligibility \nPolicy can be availed by persons between the aged of 18 years and 65 years above, as Proposer. \nProposer with higher age can obtain policy for family, without covering self. \nChildren between the age of 91 days and 25 years may be covered, provided parent(s) is/are covered at \nthe same time. \nPolicy can be availed for Self and the following family members \na. \nLegally wedded spouse \nb. Parents and parents-in-law. \nc. \nDependent children (i.e., natural or legally adopted) between the age 3 months to 25 years. If \nthe child above 18 years of age is financially independent, he or she shall be ineligible for \ncoverage in the subsequent renewals",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.824453592,
+            "final_score": 0.0031603526,
+            "rerank_score": 0.0031603526,
+            "original_rank": 2,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_18_af440780",
+            "score": 0.823277473,
+            "text": "Treatment during the Policy Period: \nModern Treatment \nCoverage \nUAE & HIFU \nLimit is for Procedure cost only \nBalloon Sinuplasty \nLimit is for Balloon cost only \nDeep Brain Stimulation \nLimit is for implants including batteries only \nOral Chemotherapy \nOnly cost of medicines payable under this limit, other incidental charges like investigations and consultation \ncharges not payable. \nImmunotherapy \nLimit is for cost of injections only. \nIntravitreal injections \nLimit is for complete treatment, including Pre & Post Hospitalization \nRobotic Surgery \nLimit is for robotic component only. \nStereotactic Radio \nsurgeries \nLimit is for radiation procedure. \nBronchial Thermoplasty \nLimit is for complete treatment, including Pre & Post Hospitalization \nVaporization of the \nprostrate \nLimit is for LASER component only. \nIONM \nLimit is for IONM procedure only. \nStem cell therapy \nLimit is for complete treatment, including Pre & Post Hospitalization 4.7. The expenses that are not covered in this p",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.823277473,
+            "final_score": 0.002560871,
+            "rerank_score": 0.002560871,
+            "original_rank": 3,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, expenses related to In Vitro Fertilization (IVF) are explicitly excluded under this policy as per section 7.14, which covers 'Sterility and Infertility' and lists IVF as an excluded Assisted Reproduction service.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127668,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?",
+        "search_results": [
+          {
+            "id": "input_20250810_005044.pdf_16_10bcfaae",
+            "score": 0.829823732,
+            "text": "4.1.1. Other expenses \ni. \nExpenses incurred on treatment of cataract subject to the sub limits \nii. Dental treatment, necessitated due to disease or injury \niii. Plastic surgery necessitated due to disease or injury \niv. All the day care treatments \nv. Expenses incurred on road Ambulance subject to a maximum of Rs 2,000 per hospitalization. \nNote: \n1. Expenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible. However, the time limit \nshall not apply in respect of Day Care Treatment. \n2. In case of admission to a Room at rates exceeding the aforesaid limits, the reimbursement/payment of Associated Medical \nExpenses incurred at the Hospital, shall be effected in the same proportion as the admissible rate per day bears to the actual rate per \nday of Room Rent charges. Proportionate deduction shall not apply if admitted to ICU/ ICCU. \nAssociated Medical Expenses shall include all related expenses except the following expenses, \na. Cost of pharmacy a",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.829823732,
+            "final_score": 0.02806074,
+            "rerank_score": 0.02806074,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_49_950eae6d",
+            "score": 0.805628,
+            "text": "Grace Period \nThe grace period of thirty days (where premium is paid in quarterly/half yearly/annual instalments) is \navailable on the premium due date, to pay the premium. \nHospitalisation \nExpenses \nExpenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible \nTime limit of 24 hrs shall not apply when the treatment is undergone in a Day Care Center \nPre Hospitalisation \nFor 30 days prior to the date of hospitalization \nPost Hospitalisation \nFor 60 days from the date of discharge from the hospital \nSublimit for \nroom/doctors fee \n1. Room Rent, Boarding, Nursing Expenses all inclusive as provided by the Hospital/ Nursing Home \nup to 2% of the Sum Insured subject to maximum of Rs. 5,000/- per day \n2. Intensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as \nprovided by the Hospital/ Nursing Home up to 5% of the Sum Insured subject to maximum of Rs. \n10,000/- per day \nCataract Treatment \nUp to 25% of Sum Insured o",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.805628,
+            "final_score": 0.025468083,
+            "rerank_score": 0.025468083,
+            "original_rank": 10,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_17_0e2945bc",
+            "score": 0.823882937,
+            "text": "4.2. AYUSH Treatment \nThe Company shall indemnify Medical Expenses incurred for Inpatient Care treatment under Ayurveda, Yoga and Naturopathy, \nUnani, Sidha and Homeopathy systems of medicines during each Policy Period up to the limit of sum insured as specified in the \npolicy schedule in any AYUSH Hospital. 4.3. Cataract Treatment \nThe Company shall indemnify medical expenses incurred for treatment of Cataract, subject to a limit of 25% of Sum Insured or INR \n40,000 per eye, whichever is lower, per each eye in one Policy Period. 4.4. Pre Hospitalisation \nThe Company shall indemnify pre-hospitalization medical expenses incurred, related to an admissible hospitalization requiring \nInpatient Care, for a fixed period of 30 days prior to the date of admissible Hospitalization covered under the Policy. 4.5. Post Hospitalisation \nThe Company shall indemnify post hospitalization medical expenses incurred, related to an admissible hospitalization requiring \ninpatient care, for a fixed period o",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.823882937,
+            "final_score": 0.011597361,
+            "rerank_score": 0.011597361,
+            "original_rank": 2,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_36_f56a9cb2",
+            "score": 0.822778702,
+            "text": "10.7. Territorial Limit \nAll medical treatment for the purpose of this insurance will have to be taken in India only. 10.8. Multiple Policies \ni. \nIn case of multiple policies taken by an insured person during a period from one or more insurers to indemnify treatment costs, \nthe insured person shall have the right to require a settlement of his/her claim in terms of any of his/her policies. In all such \ncases the insurer chosen by the insured person shall be obliged to settle the claim as long as the claim is within the limits of and \naccording to the terms of the chosen policy. \nii. Insured person having multiple policies shall also have the right to prefer claims under this policy for the amounts disallowed \nunder any other policy / policies. Then the insurer shall independently settle the claim subject to the terms and conditions of \nthis policy. \niii. If the amount to be claimed exceeds the sum insured under a single policy, the insured person shall have the right to choose \ninsure",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.822778702,
+            "final_score": 0.0051797125,
+            "rerank_score": 0.0051797125,
+            "original_rank": 3,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_35_771d0065",
+            "score": 0.801744878,
+            "text": "10.5. Complete Discharge \nAny payment to the policyholder, Insured Person or his/ her nominees or his/ her legal representative or assignee or to the \nHospital, as the case may be, for any benefit under the Policy shall be a valid discharge towards payment of claim by the \nCompany to the extent of then amount for the particular claim. National Insurance Co. Ltd. \nRegd. & Head Office: Premises No. 18-0374, \nPlot no. CBD-81, New Town, Kolkata - 700156 \nPage 11 of 16 \nArogya Sanjeevani Policy - National \nUIN: NICHLIP25041V022425 10.6. Notice & Communication \ni. \nAny notice, direction, instruction or any other communication related to the Policy should be made in writing. \nii. Such communication shall be sent to the address of the Company or through any other electronic modes specified in the Policy \nSchedule. \niii. The Company shall communicate to the Insured at the address or through any other electronic mode mentioned in the schedule. 10.7. Territorial Limit \nAll medical treatment for t",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.801744878,
+            "final_score": 0.0014325366,
+            "rerank_score": 0.0014325366,
+            "original_rank": 13,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, your cataract treatment cost of Rs 100,000 will not be settled in full. The policy specifies a sub-limit for cataract treatment, which is the lower of 25% of your Sum Insured or INR 40,000 per eye, per policy period.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127779,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Give me a list of documents to be uploaded for hospitalization for heart surgery.",
+        "search_results": [
+          {
+            "id": "input_20250810_005044.pdf_30_d07319d5",
+            "score": 0.833484709,
+            "text": "9.2. Documents to be submitted \nThe reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. \ni. \nDuly completed claim form \nii. Photo Identity proof of the patient \niii. Medical practitioner’s prescription advising admission. \niv. Original bills with itemized break-up \nv. Payment receipts \nvi. Discharge summary including complete medical history of the patient along with other details. \nvii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending medical practitioner \nviii. OT notes or Surgeon's certificate giving details of the operation performed (for surgical cases). \nix. Sticker/Invoice of the Implants, wherever applicable. \nx. MLR (Medico Legal Report copy if carried out and FIR (First information report) if registered, where ever applicable. \nxi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque \nxii. KYC (Identity proof with Address) of the propo",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.833484709,
+            "final_score": 0.15469499,
+            "rerank_score": 0.15469499,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_15_7d7e0de5",
+            "score": 0.831850052,
+            "text": "4.1. Hospitalization \nThe Company shall indemnify Medical Expense incurred for Hospitalization of the Insured Person during the Policy Period, up to \nthe Sum Insured and Cumulative Bonus specified in the Policy Schedule, for, \ni. \nRoom Rent, Boarding, Nursing Expenses all inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured \nsubject to maximum of Rs. 5,000/-per day \nii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of the sum insured subject to maximum of \nRs. 10,000/- per day \niii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating doctor/ surgeon or \nto the hospital \niv. Anesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, \ndiagnostic imaging modalities and such similar other expenses.",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.831850052,
+            "final_score": 0.010091316,
+            "rerank_score": 0.010091316,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_29_6006b2f9",
+            "score": 0.809847891,
+            "text": "9.1.2 Procedure for Reimbursement of Claims \nFor reimbursement of claims the Insured Person shall submit the necessary documents to TPA (if claim is processed by \nTPA)/Company within the prescribed time limit as specified hereunder. \nSl. \nNo. \nType of claim \nPrescribed Time limit \n1. \nReimbursement of hospitalisation, day care and pre hospitalisation \nexpenses \nWithin thirty days of date of discharge \nfrom hospital \n2. \nReimbursement of post hospitalisation expenses \nWithin fifteen days from completion of \npost hospitalisation treatment 9.1. Notification of Claim \nNotice with full particulars shall be sent to the Company/ TPA (if applicable) as under: \ni. \nWithin 24hours from the date of emergency hospitalization required or before the Insured Person’s discharge from Hospital, \nwhichever is earlier. \nii. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization.",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.809847891,
+            "final_score": 0.009821793,
+            "rerank_score": 0.009821793,
+            "original_rank": 14,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_51_ed74f17c",
+            "score": 0.825193,
+            "text": "Annexure-A \nList I – List of which coverage is not available in the policy \nSl \nItem \n1 \nBABY FOOD \n2 \nBABY UTILITIES CHARGES \n3 \nBEAUTY SERVICES \n4 \nBELTS/ BRACES \n5 \nBUDS \n6 \nCOLD PACK/HOT PACK \n7 \nCARRY BAGS \n8 \nEMAIL / INTERNET CHARGES \n9 \nFOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY \nHOSPITAL) \n10 \nLEGGINGS \n11 \nLAUNDRY CHARGES \n12 \nMINERAL WATER \n13 \nSANITARY PAD \n14 \nTELEPHONE CHARGES \n15 \nGUEST SERVICES \n16 \nCREPE BANDAGE \n17 \nDIAPER OF ANY TYPE \n18 \nEYELET COLLAR \n19 \nSLINGS \n20 \nBLOOD GROUPING AND CROSS MATCHING OF DONORS SAMPLES \n21 \nSERVICE CHARGES WHERE NURSING CHARGE ALSO CHARGED \n22 \nTelevision Charges \n23 \nSURCHARGES \n24 \nATTENDANT CHARGES \n25 \nEXTRA DIET OF PATIENT (OTHER THAN THAT WHICH FORMS \nPART OF BED CHARGE) \n26 \nBIRTH CERTIFICATE \n27 \nCERTIFICATE CHARGES \n28 \nCOURIER CHARGES \n29 \nCONVEYANCE CHARGES \n30 \nMEDICAL CERTIFICATE \n31 \nMEDICAL RECORDS \n32 \nPHOTOCOPIES CHARGES \n33 \nMORTUARY CHARGES \n34 \nWALKING AIDS CHARGES \n35 \nOXYGEN CYLINDER (FOR USAGE OUTSIDE ",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.825193,
+            "final_score": 0.008315778,
+            "rerank_score": 0.008315778,
+            "original_rank": 4,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005044.pdf_23_29049cac",
+            "score": 0.819953144,
+            "text": "4. Body Mass Index (BMI); a) greater than or equal to 40 or b) greater than or equal to 35 in conjunction with any of the following severe co-morbidities following failure of less invasive \nmethods of weight loss: \ni. Obesity-related cardiomyopathy \nii. Coronary heart disease \niii. Severe Sleep Apnea \niv. Uncontrolled Type2 Diabetes 7.4. Change-of-Gender treatments (Code – Excl 07) Expenses related to any treatment, including surgical management, to change characteristics of the body to those of the opposite \nsex. National Insurance Co. Ltd. \nRegd. & Head Office: Premises No. 18-0374, \nPlot no. CBD-81, New Town, Kolkata - 700156 \nPage 8 of 16 \nArogya Sanjeevani Policy - National \nUIN: NICHLIP25041V022425 7.5. Cosmetic or plastic Surgery (Code – Excl 08) \nExpenses for cosmetic or plastic surgery or any treatment to change appearance unless for reconstruction following an Accident, \nBurn(s) or Cancer or as part of medically necessary treatment to remove a direct and immediate health risk",
+            "document_name": "input_20250810_005044.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.819953144,
+            "final_score": 0.0038244836,
+            "rerank_score": 0.0038244836,
+            "original_rank": 6,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "For hospitalization for heart surgery, you need to submit a duly completed claim form, photo identity proof of the patient, and the medical practitioner's prescription advising admission. Additionally, provide original itemized bills, payment receipts, the discharge summary, investigation/diagnostic test reports supported by a prescription, and OT notes or a surgeon's certificate detailing the operation. Include sticker/invoice of implants if applicable, MLR/FIR copies if relevant, NEFT details with a cancelled cheque, and KYC documents (identity proof with address).",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127570,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 0.136918306350708,
+      "query_embedding": {
+        "total": 0.8526248931884766,
+        "individual": [
+          0.8393917083740234,
+          0.8516278266906738,
+          0.8343949317932129,
+          0.837395429611206
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 3220",
+          "Query 2: Thread 31736",
+          "Query 3: Thread 29960",
+          "Query 4: Thread 21552"
+        ]
+      },
+      "pdf_processing_and_indexing": 8.225449800491333,
+      "query_processor_initialization": 6.009228467941284,
+      "query_processing": {
+        "total": 50.22702479362488,
+        "parallel_execution_time": 13.27789568901062,
+        "average": 12.55675619840622,
+        "individual": [
+          12.184122562408447,
+          13.27789568901062,
+          11.958860158920288,
+          12.806146383285522
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 28548",
+          "Query 2: Thread 24872",
+          "Query 3: Thread 460",
+          "Query 4: Thread 30284"
+        ]
+      },
+      "cleanup_index": 1.3789458274841309,
+      "total_execution_time": 30.238834381103516
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmp8oymbcln",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 4,
+      "max_query_workers": 4
+    }
+  },
+  "processing_summary": {
+    "total_questions": 4,
+    "total_time_seconds": 30.238834381103516,
+    "pdf_processing_time": 8.225449800491333,
+    "embedding_time": 0.8526248931884766,
+    "query_processing_time": 50.22702479362488,
+    "parallel_execution_time": 13.27789568901062,
+    "max_individual_query_time": 13.27789568901062
+  },
+  "multithreading_metrics": {
+    "queries_processed": 4,
+    "embedding_workers": 4,
+    "query_workers": 4,
+    "embedding_speedup_ratio": 3.9440672250296966,
+    "query_speedup_ratio": 3.782754886016691,
+    "individual_embedding_times": [
+      0.8393917083740234,
+      0.8516278266906738,
+      0.8343949317932129,
+      0.837395429611206
+    ],
+    "individual_query_times": [
+      12.184122562408447,
+      13.27789568901062,
+      11.958860158920288,
+      12.806146383285522
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 3220",
+      "Query 2: Thread 31736",
+      "Query 3: Thread 29960",
+      "Query 4: Thread 21552"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 28548",
+      "Query 2: Thread 24872",
+      "Query 3: Thread 460",
+      "Query 4: Thread 30284"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "When will my root canal claim of Rs 25,000 be sett...",
+        "time_seconds": 12.184122562408447
+      },
+      {
+        "query_index": 1,
+        "query": "I have done an IVF for Rs 56,000. Is it covered?",
+        "time_seconds": 13.27789568901062
+      },
+      {
+        "query_index": 2,
+        "query": "I did a cataract treatment of Rs 100,000. Will you...",
+        "time_seconds": 11.958860158920288
+      },
+      {
+        "query_index": 3,
+        "query": "Give me a list of documents to be uploaded for hos...",
+        "time_seconds": 12.806146383285522
+      }
+    ]
+  }
+}

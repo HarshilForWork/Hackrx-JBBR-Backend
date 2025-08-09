@@ -1,0 +1,1273 @@
+{
+  "timestamp": "2025-08-10T00:54:52.740226",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/indian_constitution.pdf?sv=2023-01-03&st=2025-07-28T06%3A42%3A00Z&se=2026-11-29T06%3A42%3A00Z&sr=b&sp=r&sig=5Gs%2FOXqP3zY00lgciu4BZjDV5QjTDIx7fgnfdz6Pu24%3D",
+    "questions": [
+      "If my car is stolen, what case will it be in law?",
+      "If I am arrested without a warrant, is that legal?",
+      "If someone denies me a job because of my caste, is that allowed?",
+      "If the government takes my land for a project, can I stop it?",
+      "If my child is forced to work in a factory, is that legal?",
+      "If I am stopped from speaking at a protest, is that against my rights?",
+      "If a religious place stops me from entering because I'm a woman, is that constitutional?",
+      "If I change my religion, can the government stop me?",
+      "If the police torture someone in custody, what right is being violated?",
+      "If I'm denied admission to a public university because I'm from a backward community, can I do something?"
+    ],
+    "pdf_filename": "input_20250810_005407.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_005407.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "If my car is stolen, what case will it be in law?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_91_a62fb25e",
+            "score": 0.782319486,
+            "text": "THE CONSTITUTION OF INDIA\n(Part V.—The Union)\n62\n1(2)* * * * \n*\n(3) Where such a certificate is given, 2*** any party in the case may \nappeal to the Supreme Court on the ground that any such question as aforesaid \nhas been wrongly decided 2***.\nExplanation.—For the purposes of this article, the expression “final \norder” includes an order deciding an issue which, if decided in favour of the \nappellant, would be sufficient for the final disposal of the case.\n133. Appellate jurisdiction of the Supreme Court in appeals from \nHigh Courts in regard to civil matters.—3[(1) An appeal shall lie to the \nSupreme Court from any judgment, decree or final order in a civil proceeding \nof a High Court in the territory of India 4[if the High Court certifies under \narticle 134A—] \n(a) that the case involves a substantial question of law of general \nimportance; and\n(b) that in the opinion of the High Court the said question needs to be \ndecided by the Supreme Court.]\n(2) Notwithstanding anything in artic",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.782319486,
+            "final_score": 0.0012065896,
+            "rerank_score": 0.0012065896,
+            "original_rank": 8,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_200_ac712054",
+            "score": 0.785713077,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XII.—Finance, Property, Contracts and Suits) \n170\n299. Contracts.—(1) All contracts made in the exercise of the executive \npower of the Union or of a State shall be expressed to be made by the \nPresident, or by the Governor 1*** of the State, as the case may be, and all such \ncontracts and all assurances of property made in the exercise of that power shall \nbe executed on behalf of the President or the Governor 1*** by such persons \nand in such manner as he may direct or authorise.\n(2) Neither the President nor the Governor 2*** shall be personally liable \nin respect of any contract or assurance made or executed for the purposes of \nthis Constitution, or for the purposes of any enactment relating to the \nGovernment of India heretofore in force, nor shall any person making or \nexecuting any such contract or assurance on behalf of any of them be \npersonally liable in respect thereof.\n300. Suits and proceedings.—(1) The Government of India may sue or \nbe su",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.785713077,
+            "final_score": 0.0011160142,
+            "rerank_score": 0.0011160142,
+            "original_rank": 6,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_92_3dc93ce0",
+            "score": 0.777300537,
+            "text": "THE CONSTITUTION OF INDIA\n(Part V.—The Union)\n63\nProvided that an appeal under sub-clause (c) shall lie subject to such \nprovisions as may be made in that behalf under clause (1) of article 145 and to \nsuch conditions as the High Court may establish or require.\n(2) Parliament may by law confer on the Supreme Court any further \npowers to entertain and hear appeals from any judgment, final order or sentence \nin a criminal proceeding of a High Court in the territory of India subject to such \nconditions and limitations as may be specified in such law.\n1[134A. Certificate for appeal to the Supreme Court.—Every High \nCourt, passing or making a judgment, decree, final order, or sentence, referred to \nin clause (1) of article 132 or clause (1) of article 133, or clause (1) of article \n134,— \n(a) may, if it deems fit so to do, on its own motion; and \n(b) shall, if an oral application is made, by or on behalf of the party \naggrieved, immediately after the passing or making of such judgment, \ndec",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.777300537,
+            "final_score": 0.0010403185,
+            "rerank_score": 0.0010403185,
+            "original_rank": 20,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_356_cd8bbbe2",
+            "score": 0.790358722,
+            "text": "THE CONSTITUTION OF INDIA\n(Seventh Schedule) \n321\n57. Taxes on vehicles, whether mechanically propelled or not, suitable for \nuse on roads, including tramcars subject to the provisions of entry 35 of List III.\n58. Taxes on animals and boats. \n59. Tolls.\n60. Taxes on professions, trades, callings and employments.\n61. Capitation taxes.\n1[62. Taxes on entertainments and amusements to the extent levied and \ncollected by a Panchayat or a Municipality or a Regional Council or a District \nCouncil.]\n63. Rates of stamp duty in respect of documents other than those specified \nin the provisions of List I with regard to rates of stamp duty.\n64. Offences against laws with respect to any of the matters in this List.\n65. Jurisdiction and powers of all courts, except the Supreme Court, with \nrespect to any of the matters in this List.\n66. Fees in respect of any of the matters in this List, but not including fees \ntaken in any court.\nList III—Concurrent List\n1. Criminal law, including all matters inclu",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.790358722,
+            "final_score": 0.0009773504,
+            "rerank_score": 0.0009773504,
+            "original_rank": 2,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_357_ea1cccaf",
+            "score": 0.783341527,
+            "text": "THE CONSTITUTION OF INDIA\n(Seventh Schedule) \n322\n5. Marriage and divorce; infants and minors; adoption; wills, intestacy \nand succession; joint family and partition; all matters in respect of which \nparties in judicial proceedings were immediately before the commencement of \nthis Constitution subject to their personal law.\n 6. Transfer of property other than agricultural land; registration of deeds \nand documents.\n7. Contracts, including partnership, agency, contracts of carriage, and \nother special forms of contracts, but not including contracts relating to \nagricultural land. \n 8. Actionable wrongs.\n 9. Bankruptcy and insolvency.\n10. Trust and Trustees.\n11. Administrators-general and official trustees. \n1[11A. Administration of Justice; constitution and organisation of all \ncourts, except the Supreme Court and the High Courts.] \n12. Evidence and oaths; recognition of laws, public acts and records, and \njudicial proceedings.\n13. Civil procedure, including all matters included in the ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.783341527,
+            "final_score": 0.00069867563,
+            "rerank_score": 0.00069867563,
+            "original_rank": 7,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the provided constitutional context, the theft of a car would fall under the domain of 'Criminal law.' The Indian Constitution's Seventh Schedule, under List III (Concurrent List), explicitly includes 'Criminal law' as a subject for legislative action, meaning it is a matter addressed by legal statutes and courts.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If I am arrested without a warrant, is that legal?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_41_dcb9b2d8",
+            "score": 0.805009902,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n12\n(2) Every person who is arrested and detained in custody shall be \nproduced before the nearest magistrate within a period of twenty-four hours of \nsuch arrest excluding the time necessary for the journey from the place of arrest \nto the court of the magistrate and no such person shall be detained in custody \nbeyond the said period without the authority of a magistrate.\n(3) Nothing in clauses (1) and (2) shall apply—\n(a) to any person who for the time being is an enemy alien; or\n(b) to any person who is arrested or detained under any law providing \nfor preventive detention.\n(4) No law providing for preventive detention shall authorise the \ndetention of a person for a longer period than three months unless—\n(a) an Advisory Board consisting of persons who are, or have been, \nor are qualified to be appointed as, Judges of a High Court has reported \nbefore the expiration of the said period of three months that there is in its \nopin",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.805009902,
+            "final_score": 0.054098696,
+            "rerank_score": 0.054098696,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_48_8b4a51c9",
+            "score": 0.802435935,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n19\nRight to Constitutional Remedies \n32. Remedies for enforcement of rights conferred by this Part.—(1) \nThe right to move the Supreme Court by appropriate proceedings for the \nenforcement of the rights conferred by this Part is guaranteed.\n(2) The Supreme Court shall have power to issue directions or orders or \nwrits, including writs in the nature of habeas corpus, mandamus, prohibition,\nquo warranto and certiorari,\nwhichever may be appropriate, for the \nenforcement of any of the rights conferred by this Part.\n(3) Without prejudice to the powers conferred on the Supreme Court by \nclauses (1) and (2), Parliament may by law empower any other court to exercise \nwithin the local limits of its jurisdiction all or any of the powers exercisable by \nthe Supreme Court under clause (2).\n(4) The right guaranteed by this article shall not be suspended except as \notherwise provided for by this Constitution.\n132A. [Constitutional validity of ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.802435935,
+            "final_score": 0.010818449,
+            "rerank_score": 0.010818449,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_250_f86ab38b",
+            "score": 0.788186967,
+            "text": "219\nPART XIX\nMISCELLANEOUS\n361. Protection of President and Governors and Rajpramukhs.—(1) \nThe President, or the Governor or Rajpramukh of a State, shall not be \nanswerable to any court for the exercise and performance of the powers and \nduties of his office or for any act done or purporting to be done by him in the \nexercise and performance of those powers and duties: \nProvided that the conduct of the President may be brought under review \nby any court, tribunal or body appointed or designated by either House of \nParliament for the investigation of a charge under article 61:\nProvided further that nothing in this clause shall be construed as \nrestricting the right of any person to bring appropriate proceedings against the \nGovernment of India or the Government of a State.\n(2) No criminal proceedings whatsoever shall be instituted or continued \nagainst the President, or the Governor 1*** of a State, in any court during his \nterm of office.\n(3) No process for the arrest or imprisonment ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.788186967,
+            "final_score": 0.0048297215,
+            "rerank_score": 0.0048297215,
+            "original_rank": 21,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_42_9e83a7c1",
+            "score": 0.804116309,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n13\nProvided that nothing in this sub-clause shall authorise the detention \nof any person beyond the maximum period prescribed by any law made \nby Parliament under sub-clause (b) of clause (7); or\n(b) such person is detained in accordance with the provisions of any \nlaw made by Parliament under sub-clauses (a) and (b) of clause (7).\n(5) When any person is detained in pursuance of an order made under \nany law providing for preventive detention, the authority making the order \nshall, as soon as may be, communicate to such person the grounds on which the \norder has been made and shall afford him the earliest opportunity of making a \nrepresentation against the order.\n(6) Nothing in clause (5) shall require the authority making any such \norder as is referred to in that clause to disclose facts which such authority \nconsiders to be against the public interest to disclose.\n(7) Parliament may by law prescribe—\n(a) the circumstances under ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.804116309,
+            "final_score": 0.004810983,
+            "rerank_score": 0.004810983,
+            "original_rank": 2,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_128_554e06cd",
+            "score": 0.786079228,
+            "text": "THE CONSTITUTION OF INDIA\n(Part VI.—The States) \n99\nCHAPTER V.—THE HIGH COURTS IN THE STATES\n214. High Courts for States.—1*** There shall be a High Court for each \nState. \n2(2)* * * * \n2(3)* * * * \n215. High Courts to be courts of record.—Every High Court shall be a \ncourt of record and shall have all the powers of such a court including the \npower to punish for contempt of itself.\n216. Constitution of High Courts.—Every High Court shall consist of a \nChief Justice and such other Judges as the President may from time to time \ndeem it necessary to appoint. \n3* \n* * *\n* \n217. Appointment and conditions of the office of a Judge of a High \nCourt.—(1) Every Judge of a High Court shall be appointed by the President \nby warrant under his hand and seal 4[on the recommendation of the National \nJudicial Appointments Commission referred to in article 124A], and the \nGovernor of the State, and, in the case of appointment of a Judge other than the \nChief Justice, the Chief Justice of the High Cour",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.786079228,
+            "final_score": 0.0043483814,
+            "rerank_score": 0.0043483814,
+            "original_rank": 26,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Yes, an arrest without a warrant can be legal under the Constitution of India. It stipulates that any person arrested and detained must be produced before the nearest magistrate within twenty-four hours, excluding travel time, and further detention requires a magistrate's authority. Additionally, provisions exist for preventive detention without a warrant, governed by specific laws enacted by Parliament.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If someone denies me a job because of my caste, is that allowed?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_37_03f23e98",
+            "score": 0.83811152,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n8\nExplanation.—For the purposes of this article and article 16, \n\"economically weaker sections\" shall be such as may be notified by the State \nfrom time to time on the basis of family income and other indicators of \neconomic disadvantage.]\n16. Equality of opportunity in matters of public employment.—(1) \nThere shall be equality of opportunity for all citizens in matters relating to \nemployment or appointment to any office under the State. \n(2) No citizen shall, on grounds only of religion, race, caste, sex, descent, \nplace of birth, residence or any of them, be ineligible for, or discriminated against \nin respect of, any employment or office under the State.\n(3) Nothing in this article shall prevent Parliament from making any law \nprescribing, in regard to a class or classes of employment or appointment to an \noffice 1[under the Government of, or any local or other authority within, a State \nor Union territory, any requirement as",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.83811152,
+            "final_score": 0.20946968,
+            "rerank_score": 0.20946968,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_43_ff93ed9a",
+            "score": 0.816121399,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n14\nRight against Exploitation\n23. Prohibition of traffic in human beings and forced labour.—(1) \nTraffic in human beings and begar and other similar forms of forced labour are \nprohibited and any contravention of this provision shall be an offence \npunishable in accordance with law.\n(2) Nothing in this article shall prevent the State from imposing \ncompulsory service for public purposes, and in imposing such service the State \nshall not make any discrimination on grounds only of religion, race, caste or \nclass or any of them. \n24. Prohibition of employment of children in factories, etc.—No child \nbelow the age of fourteen years shall be employed to work in any factory or \nmine or engaged in any other hazardous employment.\nRight to Freedom of Religion\n25. Freedom of conscience and free profession, practice and \npropagation of religion.—(1) Subject to public order, morality and health and \nto the other provisions of this Part, all ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.816121399,
+            "final_score": 0.039416388,
+            "rerank_score": 0.039416388,
+            "original_rank": 10,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_23_3edfa68d",
+            "score": 0.810082078,
+            "text": "Contents\nARTICLES\n(xxii)\nPART XV \nELECTIONS\n 324. \nSuperintendence, direction and control of elections to be vested \nin an Election Commission.\n 325. \nNo person to be ineligible for inclusion in, or to claim to be \nincluded in a special, electoral roll on grounds of religion, race, \ncaste or sex.\n 326. \nElections to the House of the People and to the Legislative \nAssemblies of States to be on the basis of adult suffrage.\n327.\nPower of Parliament to make provision with respect to elections \nto Legislatures.\n328.\nPower of Legislature of a State to make provision with respect to \nelections to such Legislature. \n329.\nBar to interference by courts in electoral matters.\n [329A. \nSpecial provision as to elections to Parliament in the case of \nPrime Minister and Speaker.\nOmitted.]\nPART XVI\nSPECIAL PROVISIONS RELATING TO CERTAIN \nCLASSES\n330.\n330A. \nReservation of seats for Scheduled Castes and Scheduled Tribes \nin the House of the People. \nReservation of seats for women in the House of the Peo",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.810082078,
+            "final_score": 0.03615194,
+            "rerank_score": 0.03615194,
+            "original_rank": 20,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_225_743a0152",
+            "score": 0.818525136,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n194\n1[Provided that nothing in this article shall prevent in making of any \nprovision in favour of the members of the Scheduled Castes and the Scheduled \nTribes for relaxation in qualifying marks in any examination or lowering the \nstandards of evaluation, for reservation in matters or promotion to any class or \nclasses of services or posts in connection with the affairs of the Union or of a State.]\n336. Special provision for Anglo-Indian community in certain \nservices.—(1) During the first two years after the commencement of this \nConstitution, appointments of members of the Anglo-Indian community to posts \nin the railway, customs, postal and telegraph services of the Union shall be made \non the same basis as immediately before the fifteenth day of August, 1947. \nDuring every succeeding period of two years, the number of posts \nreserved for the members of the said community in the said services shall",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.818525136,
+            "final_score": 0.01627746,
+            "rerank_score": 0.01627746,
+            "original_rank": 4,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_232_60ae3b9d",
+            "score": 0.820932806,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n201\nthe Governor 1*** thereof], by public notification2, specify the castes, races or \ntribes or parts of or groups within castes, races or tribes which shall for the \npurposes of this Constitution be deemed to be Scheduled Castes in relation to \nthat State 3[or Union territory, as the case may be.]\n(2) Parliament may by law include in or exclude from the list of \nScheduled Castes specified in a notification issued under clause (1) any caste, \nrace or tribe or part of or group within any caste, race or tribe, but save as \naforesaid a notification issued under the said clause shall not be varied by any \nsubsequent notification.\n342. Scheduled Tribes.—(1) The President 4[may with respect to any \nState 3[or Union territory], and where it is a State 45***, after consultation with \nthe Governor 31*** thereof], by public notification6,5 specify the tribes or tribal \ncommunities or parts of or groups within ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.820932806,
+            "final_score": 0.014227047,
+            "rerank_score": 0.014227047,
+            "original_rank": 3,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, denying a job to someone based on their caste is not allowed under The Constitution of India. Article 16 (2) guarantees equality of opportunity in public employment and explicitly states that no citizen shall be discriminated against on grounds only of religion, race, caste, sex, descent, place of birth, residence, or any of them, in respect of any employment or office under the State.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If the government takes my land for a project, can I stop it?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_46_8a24d44f",
+            "score": 0.808264792,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n17\n(e) the extinguishment or modification of any rights accruing by \nvirtue of any agreement, lease or licence for the purpose of searching for, \nor winning, any mineral or mineral oil, or the premature termination or \ncancellation of any such agreement, lease or licence,\nshall be deemed to be void on the ground that it is inconsistent with, or takes \naway or abridges any of the rights conferred by 1[article 14 or article 19]:\nProvided that where such law is a law made by the Legislature of a State, \nthe provisions of this article shall not apply thereto unless such law, having \nbeen reserved for the consideration of the President, has received his assent:]\n2[Provided further that where any law makes any provision for the \nacquisition by the State of any estate and where any land comprised therein is \nheld by a person under his personal cultivation, it shall not be lawful for the \nState to acquire any portion of such land as is w",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.808264792,
+            "final_score": 0.0123361,
+            "rerank_score": 0.0123361,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_321_14c7244c",
+            "score": 0.80759114,
+            "text": "THE CONSTITUTION OF INDIA\n(Sixth Schedule) \n287\nrespect of all areas within such region and the District Council for an \nautonomous district in respect of all areas within the district except those \nwhich are under the authority of Regional Councils, if any, within the \ndistrict shall have power to make laws with respect to—\n(a) the allotment, occupation or use, or the setting apart, of \nland, other than any land which is a reserved forest for the purposes \nof agriculture or grazing or for residential or other non-agricultural \npurposes or for any other purpose likely to promote the interests of \nthe inhabitants of any village or town: \nProvided that nothing in such laws shall prevent the \ncompulsory acquisition of any land, whether occupied or unoccupied, \nfor public purposes 1[by the Government of the State concerned] in \naccordance with the law for the time being in force authorising such \nacquisition; \n(b) the management of any forest not being a reserved forest;\n(c) the use of any",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.80759114,
+            "final_score": 0.008644178,
+            "rerank_score": 0.008644178,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_47_8bfe3f66",
+            "score": 0.795379579,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n18\n(b) the expression “rights”, in relation to an estate, shall include any \nrights vesting in a proprietor, sub-proprietor, under-proprietor, tenure-\nholder, 1[raiyat, under-raiyat] or other intermediary and any rights or \nprivileges in respect of land revenue.] \n2[31B. Validation of certain Acts and Regulations.—Without \nprejudice to the generality of the provisions contained in article 31A, none of \nthe Acts and Regulations specified in the Ninth Schedule nor any of the \nprovisions thereof shall be deemed to be void, or ever to have become void, on \nthe ground that such Act, Regulation or provision is inconsistent with, or takes \naway or abridges any of the rights conferred by, any provisions of this Part, and \nnotwithstanding any judgment, decree or order of any court or Tribunal to the \ncontrary, each of the said Acts and Regulations shall, subject to the power of \nany competent Legislature to repeal or amend it, continue in",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.795379579,
+            "final_score": 0.0032476764,
+            "rerank_score": 0.0032476764,
+            "original_rank": 8,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_372_1ddd4dd8",
+            "score": 0.787676096,
+            "text": "THE CONSTITUTION OF INDIA\n(Ninth Schedule)\n338\n183. The West Bengal Land Reforms (Amendment) Act, 1974 (West \nBengal Act XXXIII of 1974).\n184. The West Bengal Land Reforms (Amendment) Act, 1975 (West \nBengal Act XXIII of 1975).\n185. The West Bengal Land Reforms (Amendment) Act, 1976 (West \nBengal Act XII of 1976).\n186. The Delhi Land Holdings (Ceiling) Amendment Act, 1976 (Central \nAct 15 of 1976).\n187. The Goa, Daman and Diu Mundkars (Protection from Eviction) Act, \n1975 (Goa, Daman and Diu Act 1 of 1976).\n188. The Pondicherry Land Reforms (Fixation of Ceiling on Land) Act, \n1973 (Pondicherry Act 9 of 1974).]\n1[189. The Assam (Temporarily Settled Areas) Tenancy Act, 1971 (Assam \nAct XXIII of 1971). \n190. The Assam (Temporarily Settled Areas) Tenancy (Amendment) Act, \n1974 (Assam Act XVIII of 1974).\n191. The Bihar Land Reforms (Fixation of Ceiling Area and Acquisition of \nSurplus Land) (Amendment) Amending Act, 1974 (Bihar Act 13 of 1975).\n192. The Bihar Land Reforms (Fixation of Ceili",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.787676096,
+            "final_score": 0.002946405,
+            "rerank_score": 0.002946405,
+            "original_rank": 27,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_200_ac712054",
+            "score": 0.790733218,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XII.—Finance, Property, Contracts and Suits) \n170\n299. Contracts.—(1) All contracts made in the exercise of the executive \npower of the Union or of a State shall be expressed to be made by the \nPresident, or by the Governor 1*** of the State, as the case may be, and all such \ncontracts and all assurances of property made in the exercise of that power shall \nbe executed on behalf of the President or the Governor 1*** by such persons \nand in such manner as he may direct or authorise.\n(2) Neither the President nor the Governor 2*** shall be personally liable \nin respect of any contract or assurance made or executed for the purposes of \nthis Constitution, or for the purposes of any enactment relating to the \nGovernment of India heretofore in force, nor shall any person making or \nexecuting any such contract or assurance on behalf of any of them be \npersonally liable in respect thereof.\n300. Suits and proceedings.—(1) The Government of India may sue or \nbe su",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.790733218,
+            "final_score": 0.0021322616,
+            "rerank_score": 0.0021322616,
+            "original_rank": 19,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, you generally cannot stop the government from taking your land for a project if it is for public purposes and is carried out in accordance with existing law. The Constitution of India allows for the compulsory acquisition of land by the State for public purposes, and laws authorizing such acquisition are explicitly protected from being deemed void on the grounds of inconsistency with certain fundamental rights.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If my child is forced to work in a factory, is that legal?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_43_ff93ed9a",
+            "score": 0.815268576,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n14\nRight against Exploitation\n23. Prohibition of traffic in human beings and forced labour.—(1) \nTraffic in human beings and begar and other similar forms of forced labour are \nprohibited and any contravention of this provision shall be an offence \npunishable in accordance with law.\n(2) Nothing in this article shall prevent the State from imposing \ncompulsory service for public purposes, and in imposing such service the State \nshall not make any discrimination on grounds only of religion, race, caste or \nclass or any of them. \n24. Prohibition of employment of children in factories, etc.—No child \nbelow the age of fourteen years shall be employed to work in any factory or \nmine or engaged in any other hazardous employment.\nRight to Freedom of Religion\n25. Freedom of conscience and free profession, practice and \npropagation of religion.—(1) Subject to public order, morality and health and \nto the other provisions of this Part, all ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.815268576,
+            "final_score": 0.80147004,
+            "rerank_score": 0.80147004,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_51_dd94213d",
+            "score": 0.801651657,
+            "text": "THE CONSTITUTION OF INDIA\n(Part IV.— Directive Principles of State Policy)\n22\n1[(f) that children are given opportunities and facilities to develop \nin a healthy manner and in conditions of freedom and dignity and that \nchildhood and youth are protected against exploitation and against moral \nand material abandonment.]\n2[39A. Equal justice and free legal aid.—The State shall secure that the \noperation of the legal system promotes justice, on a basis of equal opportunity, \nand shall, in particular, provide free legal aid, by suitable legislation or schemes \nor in any other way, to ensure that opportunities for securing justice are not \ndenied to any citizen by reason of economic or other disabilities.] \n40. Organisation of village panchayats.—The State shall take steps to \norganise village panchayats and endow them with such powers and authority as \nmay be necessary to enable them to function as units of self-government.\n41. Right to work, to education and to public assistance in certai",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.801651657,
+            "final_score": 0.004314688,
+            "rerank_score": 0.004314688,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_40_b42cb91b",
+            "score": 0.795381904,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n11\n(6) Nothing in sub-clause (g) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of the general public, reasonable restrictions \non the exercise of the right conferred by the said sub-clause, and, in particular, \n1[nothing in the said sub-clause shall affect the operation of any existing law in \nso far as it relates to, or prevent the State from making any law relating to,—\n(i) the professional or technical qualifications necessary for practising \nany profession or carrying on any occupation, trade or business; or\n(ii) the carrying on by the State, or by a corporation owned or \ncontrolled by the State, of any trade, business, industry or service, \nwhether to the exclusion, complete or partial, of citizens or otherwise.]\n20. Protection in respect of conviction for offences.—(1) No person \nshall be convicted of any offen",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.795381904,
+            "final_score": 0.0026939143,
+            "rerank_score": 0.0026939143,
+            "original_rank": 4,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_39_106c95ef",
+            "score": 0.787742913,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n10\n(e) to reside and settle in any part of the territory of India; 1[and]\n2[(f)* * * * *] \n(g) to practise any profession, or to carry on any occupation, trade or \nbusiness. \n3[(2) Nothing in sub-clause (a) of clause (1) shall affect the operation of \nany existing law, or prevent the State from making any law, in so far as such \nlaw imposes reasonable restrictions on the exercise of the right conferred by the \nsaid sub-clause in the interests of 4[the sovereignty and integrity of India], the \nsecurity of the State, friendly relations with foreign States, public order, \ndecency or morality, or in relation to contempt of court, defamation or \nincitement to an offence.]\n(3) Nothing in sub-clause (b) of the said clause shall affect the operation \nof any existing law in so far as it imposes, or prevent the State from making \nany law imposing, in the interests of 4[the sovereignty and integrity of India or]\npublic order, reasonable res",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.787742913,
+            "final_score": 0.0013885233,
+            "rerank_score": 0.0013885233,
+            "original_rank": 10,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_37_03f23e98",
+            "score": 0.784386218,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n8\nExplanation.—For the purposes of this article and article 16, \n\"economically weaker sections\" shall be such as may be notified by the State \nfrom time to time on the basis of family income and other indicators of \neconomic disadvantage.]\n16. Equality of opportunity in matters of public employment.—(1) \nThere shall be equality of opportunity for all citizens in matters relating to \nemployment or appointment to any office under the State. \n(2) No citizen shall, on grounds only of religion, race, caste, sex, descent, \nplace of birth, residence or any of them, be ineligible for, or discriminated against \nin respect of, any employment or office under the State.\n(3) Nothing in this article shall prevent Parliament from making any law \nprescribing, in regard to a class or classes of employment or appointment to an \noffice 1[under the Government of, or any local or other authority within, a State \nor Union territory, any requirement as",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.784386218,
+            "final_score": 0.0011740822,
+            "rerank_score": 0.0011740822,
+            "original_rank": 20,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, it is not legal for a child to be forced to work in a factory. The Constitution of India explicitly prohibits the employment of any child below the age of fourteen years in factories, mines, or other hazardous employment, as outlined in Article 24. Furthermore, Article 23 prohibits all forms of forced labor and traffic in human beings, ensuring children are protected against exploitation.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If I am stopped from speaking at a protest, is that against my rights?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_3_72e9ca5f",
+            "score": 0.797778785,
+            "text": "Contents\nARTICLES\n(ii)\nPART III\nFUNDAMENTAL RIGHTS\nGeneral \n12.\nDefinition.\n13. \nLaws inconsistent with or in derogation of the fundamental \nrights. Right to Equality\n14.\nEquality before law.\n15. \nProhibition of discrimination on grounds of religion, race, caste, \nsex or place of birth.\n16. \nEquality of opportunity in matters of public employment. \n17.\nAbolition of Untouchability.\n18. \nAbolition of titles. \nRight to Freedom\n19.\nProtection of certain rights regarding freedom of speech, etc.\n20.\nProtection in respect of conviction for offences.\n21.\nProtection of life and personal liberty.\n21A.\nRight to education.\n22.\nProtection against arrest and detention in certain cases.\nRight against Exploitation\n23.\nProhibition of traffic in human beings and forced labour.\n24.\nProhibition of employment of children in factories, etc.\nRight to Freedom of Religion\n25.\nFreedom of conscience and free profession, practice and \npropagation of religion.\n26.\nFreedom to manage religious affairs.\n27.\nFreedom a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.797778785,
+            "final_score": 0.010944578,
+            "rerank_score": 0.010944578,
+            "original_rank": 8,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_48_8b4a51c9",
+            "score": 0.799390554,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n19\nRight to Constitutional Remedies \n32. Remedies for enforcement of rights conferred by this Part.—(1) \nThe right to move the Supreme Court by appropriate proceedings for the \nenforcement of the rights conferred by this Part is guaranteed.\n(2) The Supreme Court shall have power to issue directions or orders or \nwrits, including writs in the nature of habeas corpus, mandamus, prohibition,\nquo warranto and certiorari,\nwhichever may be appropriate, for the \nenforcement of any of the rights conferred by this Part.\n(3) Without prejudice to the powers conferred on the Supreme Court by \nclauses (1) and (2), Parliament may by law empower any other court to exercise \nwithin the local limits of its jurisdiction all or any of the powers exercisable by \nthe Supreme Court under clause (2).\n(4) The right guaranteed by this article shall not be suspended except as \notherwise provided for by this Constitution.\n132A. [Constitutional validity of ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.799390554,
+            "final_score": 0.0023322338,
+            "rerank_score": 0.0023322338,
+            "original_rank": 5,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_30_c54ed39c",
+            "score": 0.794793367,
+            "text": "LIBERTY of thought, expression, belief, faith and worship;\nEQUALITY of status and of opportunity;\nand to promote among them all\nFRATERNITY assuring the dignity of the individual and the 2[unity \nand integrity of the Nation];\nIN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of \nNovember, 1949, do HEREBY ADOPT, ENACT AND GIVE TO \nOURSELVES THIS CONSTITUTION.\n______________________________________________\n1. Subs. by the Constitution (Forty-second Amendment) Act, 1976, s.2, for \"SOVEREIGN \nDEMOCRATIC REPUBLIC\" (w.e.f. 3-1-1977).\n2. Subs. by s. 2, ibid., for \"Unity of the Nation\" (w.e.f. 3-1-1977).",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.794793367,
+            "final_score": 0.0014048677,
+            "rerank_score": 0.0014048677,
+            "original_rank": 14,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_42_9e83a7c1",
+            "score": 0.806105435,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n13\nProvided that nothing in this sub-clause shall authorise the detention \nof any person beyond the maximum period prescribed by any law made \nby Parliament under sub-clause (b) of clause (7); or\n(b) such person is detained in accordance with the provisions of any \nlaw made by Parliament under sub-clauses (a) and (b) of clause (7).\n(5) When any person is detained in pursuance of an order made under \nany law providing for preventive detention, the authority making the order \nshall, as soon as may be, communicate to such person the grounds on which the \norder has been made and shall afford him the earliest opportunity of making a \nrepresentation against the order.\n(6) Nothing in clause (5) shall require the authority making any such \norder as is referred to in that clause to disclose facts which such authority \nconsiders to be against the public interest to disclose.\n(7) Parliament may by law prescribe—\n(a) the circumstances under ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.806105435,
+            "final_score": 0.0013777326,
+            "rerank_score": 0.0013777326,
+            "original_rank": 1,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_247_6dfe8dd5",
+            "score": 0.79923737,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVIII.—EMERGENCY PROVISIONS)\n216\n(a) to any law which does not contain a recital to the effect that \nsuch law is in relation to the Proclamation of Emergency in operation \nwhen it is made; or\n(b) to any executive action taken otherwise than under a law \ncontaining such a recital.]\n359. Suspension of the enforcement of the rights conferred by \nPart III during emergencies.—(1) Where a Proclamation of Emergency is in \noperation, the President may by order declare that the right to move any court \nfor the enforcement of such of 1[the rights conferred by Part III (except articles \n20 and 21)] as may be mentioned in the order and all proceedings pending in \nany court for the enforcement of the rights so mentioned shall remain \nsuspended for the period during which the Proclamation is in force or for such \nshorter period as may be specified in the order.\n2[(1A) While an order made under clause (1) mentioning any of 1[the \nrights conferred by Part III (except ar",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.79923737,
+            "final_score": 0.0012693645,
+            "rerank_score": 0.0012693645,
+            "original_rank": 7,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Yes, based on the comprehensive policy context, being stopped from speaking at a protest is generally against your rights. The policy includes the \"Protection of certain rights regarding freedom of speech, etc.\" as a fundamental right. These rights, however, can be subject to restrictions or suspension during emergencies, as outlined in the policy's provisions on emergency measures.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132061,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If a religious place stops me from entering because I'm a woman, is that constitutional?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_38_2893c1c3",
+            "score": 0.811082959,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n9\n(5) Nothing in this article shall affect the operation of any law which \nprovides that the incumbent of an office in connection with the affairs of any \nreligious or denominational institution or any member of the governing body \nthereof shall be a person professing a particular religion or belonging to a \nparticular denomination.\n1[(6) Nothing in this article shall prevent the State from making any \nprovision for the reservation of appointments or posts in favour of any \neconomically weaker sections of citizens other than the classes mentioned in \nclause (4), in addition to the existing reservation and subject to a maximum of \nten per cent. of the posts in each category.]\n17. Abolition of Untouchability.—“Untouchability” is abolished and its \npractice in any form is forbidden. The enforcement of any disability arising out \nof “Untouchability” shall be an offence punishable in accordance with law.\n18. Abolition of titles.—(1) N",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.811082959,
+            "final_score": 0.016403032,
+            "rerank_score": 0.016403032,
+            "original_rank": 4,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_44_2f74ae35",
+            "score": 0.813141048,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n15\n(b) to manage its own affairs in matters of religion;\n(c) to own and acquire movable and immovable property; and\n(d) to administer such property in accordance with law.\n27. Freedom as to payment of taxes for promotion of any particular \nreligion.—No person shall be compelled to pay any taxes, the proceeds of \nwhich are specifically appropriated in payment of expenses for the promotion \nor maintenance of any particular religion or religious denomination.\n28. Freedom as to attendance at religious instruction or religious \nworship in certain educational institutions.—(1) No religious instruction \nshall be provided in any educational institution wholly maintained out of State \nfunds.\n(2) Nothing in clause (1) shall apply to an educational institution which \nis administered by the State but has been established under any endowment or \ntrust which requires that religious instruction shall be imparted in such \ninstitution.\n(3) No per",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.813141048,
+            "final_score": 0.012722708,
+            "rerank_score": 0.012722708,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_224_81ac7f31",
+            "score": 0.8001,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n193\nshall cease to have effect on the expiration of a period of 1[eighty years in \nrespect of clause (a) and seventy years in respect of clause (b)] from the \ncommencement of this Constitution:\nProvided that nothing in this article shall affect any representation in the \nHouse of the People or in the Legislative Assembly of a State until the \ndissolution of the then existing House or Assembly, as the case may be. \n2[334A. Reservation of seats for women take effect. — (1) \nNotwithstanding anything in the foregoing provision of this Part or Part VIII, \nthe provisions of the Constitution relating to the reservation of seats for women \nin the House of the People, the Legislative Assembly of a State and the \nLegislative Assembly of the National Capital Territory of Delhi shall come into \neffect after an exercise of delimitation is undertaken for this purpose after the \nrelevant figures for the first census",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.8001,
+            "final_score": 0.010611421,
+            "rerank_score": 0.010611421,
+            "original_rank": 17,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_36_e0aaf360",
+            "score": 0.82294929,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n7\n(a) access to shops, public restaurants, hotels and places of public \nentertainment; or \n(b) the use of wells, tanks, bathing ghats, roads and places of \npublic resort maintained wholly or partly out of State funds or dedicated \nto the use of the general public. \n(3) Nothing in this article shall prevent the State from making any \nspecial provision for women and children. \n1[(4) Nothing in this article or in clause (2) of article 29 shall prevent the \nState from making any special provision for the advancement of any socially \nand educationally backward classes of citizens or for the Scheduled Castes and \nthe Scheduled Tribes.] \n2[(5) Nothing in this article or in sub-clause (g) of clause (1) of article 19 \nshall prevent the State from making any special provision, by law, for the \nadvancement of any socially and educationally backward classes of citizens or \nfor the Scheduled Castes or the Scheduled Tribes in so far as such sp",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.82294929,
+            "final_score": 0.010368157,
+            "rerank_score": 0.010368157,
+            "original_rank": 1,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_37_03f23e98",
+            "score": 0.810640574,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n8\nExplanation.—For the purposes of this article and article 16, \n\"economically weaker sections\" shall be such as may be notified by the State \nfrom time to time on the basis of family income and other indicators of \neconomic disadvantage.]\n16. Equality of opportunity in matters of public employment.—(1) \nThere shall be equality of opportunity for all citizens in matters relating to \nemployment or appointment to any office under the State. \n(2) No citizen shall, on grounds only of religion, race, caste, sex, descent, \nplace of birth, residence or any of them, be ineligible for, or discriminated against \nin respect of, any employment or office under the State.\n(3) Nothing in this article shall prevent Parliament from making any law \nprescribing, in regard to a class or classes of employment or appointment to an \noffice 1[under the Government of, or any local or other authority within, a State \nor Union territory, any requirement as",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.810640574,
+            "final_score": 0.009821793,
+            "rerank_score": 0.009821793,
+            "original_rank": 5,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the Constitution of India's Part III, Fundamental Rights, denying a woman entry to a religious place solely because of her gender may be unconstitutional. Article 15 prohibits discrimination on grounds of sex in access to places of public resort, which could include religious sites if they are maintained by State funds or dedicated to the general public. While religious institutions have the right to manage their own affairs, this right is typically interpreted as being subject to the broader principles of equality enshrined in the Constitution.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 107148,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If I change my religion, can the government stop me?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_38_2893c1c3",
+            "score": 0.804948568,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n9\n(5) Nothing in this article shall affect the operation of any law which \nprovides that the incumbent of an office in connection with the affairs of any \nreligious or denominational institution or any member of the governing body \nthereof shall be a person professing a particular religion or belonging to a \nparticular denomination.\n1[(6) Nothing in this article shall prevent the State from making any \nprovision for the reservation of appointments or posts in favour of any \neconomically weaker sections of citizens other than the classes mentioned in \nclause (4), in addition to the existing reservation and subject to a maximum of \nten per cent. of the posts in each category.]\n17. Abolition of Untouchability.—“Untouchability” is abolished and its \npractice in any form is forbidden. The enforcement of any disability arising out \nof “Untouchability” shall be an offence punishable in accordance with law.\n18. Abolition of titles.—(1) N",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.804948568,
+            "final_score": 0.08647765,
+            "rerank_score": 0.08647765,
+            "original_rank": 2,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_3_72e9ca5f",
+            "score": 0.794537187,
+            "text": "Contents\nARTICLES\n(ii)\nPART III\nFUNDAMENTAL RIGHTS\nGeneral \n12.\nDefinition.\n13. \nLaws inconsistent with or in derogation of the fundamental \nrights. Right to Equality\n14.\nEquality before law.\n15. \nProhibition of discrimination on grounds of religion, race, caste, \nsex or place of birth.\n16. \nEquality of opportunity in matters of public employment. \n17.\nAbolition of Untouchability.\n18. \nAbolition of titles. \nRight to Freedom\n19.\nProtection of certain rights regarding freedom of speech, etc.\n20.\nProtection in respect of conviction for offences.\n21.\nProtection of life and personal liberty.\n21A.\nRight to education.\n22.\nProtection against arrest and detention in certain cases.\nRight against Exploitation\n23.\nProhibition of traffic in human beings and forced labour.\n24.\nProhibition of employment of children in factories, etc.\nRight to Freedom of Religion\n25.\nFreedom of conscience and free profession, practice and \npropagation of religion.\n26.\nFreedom to manage religious affairs.\n27.\nFreedom a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.794537187,
+            "final_score": 0.011288074,
+            "rerank_score": 0.011288074,
+            "original_rank": 9,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_44_2f74ae35",
+            "score": 0.808862031,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n15\n(b) to manage its own affairs in matters of religion;\n(c) to own and acquire movable and immovable property; and\n(d) to administer such property in accordance with law.\n27. Freedom as to payment of taxes for promotion of any particular \nreligion.—No person shall be compelled to pay any taxes, the proceeds of \nwhich are specifically appropriated in payment of expenses for the promotion \nor maintenance of any particular religion or religious denomination.\n28. Freedom as to attendance at religious instruction or religious \nworship in certain educational institutions.—(1) No religious instruction \nshall be provided in any educational institution wholly maintained out of State \nfunds.\n(2) Nothing in clause (1) shall apply to an educational institution which \nis administered by the State but has been established under any endowment or \ntrust which requires that religious instruction shall be imparted in such \ninstitution.\n(3) No per",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.808862031,
+            "final_score": 0.011158031,
+            "rerank_score": 0.011158031,
+            "original_rank": 1,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_30_c54ed39c",
+            "score": 0.797201097,
+            "text": "LIBERTY of thought, expression, belief, faith and worship;\nEQUALITY of status and of opportunity;\nand to promote among them all\nFRATERNITY assuring the dignity of the individual and the 2[unity \nand integrity of the Nation];\nIN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of \nNovember, 1949, do HEREBY ADOPT, ENACT AND GIVE TO \nOURSELVES THIS CONSTITUTION.\n______________________________________________\n1. Subs. by the Constitution (Forty-second Amendment) Act, 1976, s.2, for \"SOVEREIGN \nDEMOCRATIC REPUBLIC\" (w.e.f. 3-1-1977).\n2. Subs. by s. 2, ibid., for \"Unity of the Nation\" (w.e.f. 3-1-1977).",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.797201097,
+            "final_score": 0.010570489,
+            "rerank_score": 0.010570489,
+            "original_rank": 7,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_43_ff93ed9a",
+            "score": 0.801053584,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n14\nRight against Exploitation\n23. Prohibition of traffic in human beings and forced labour.—(1) \nTraffic in human beings and begar and other similar forms of forced labour are \nprohibited and any contravention of this provision shall be an offence \npunishable in accordance with law.\n(2) Nothing in this article shall prevent the State from imposing \ncompulsory service for public purposes, and in imposing such service the State \nshall not make any discrimination on grounds only of religion, race, caste or \nclass or any of them. \n24. Prohibition of employment of children in factories, etc.—No child \nbelow the age of fourteen years shall be employed to work in any factory or \nmine or engaged in any other hazardous employment.\nRight to Freedom of Religion\n25. Freedom of conscience and free profession, practice and \npropagation of religion.—(1) Subject to public order, morality and health and \nto the other provisions of this Part, all ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.801053584,
+            "final_score": 0.0075187176,
+            "rerank_score": 0.0075187176,
+            "original_rank": 3,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, the government cannot stop you from changing your religion. The Constitution of India guarantees the fundamental right to freedom of conscience and the free profession, practice, and propagation of religion, subject only to public order, morality, and health. This freedom includes the right to convert to another religion.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132061,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If the police torture someone in custody, what right is being violated?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_3_72e9ca5f",
+            "score": 0.792762578,
+            "text": "Contents\nARTICLES\n(ii)\nPART III\nFUNDAMENTAL RIGHTS\nGeneral \n12.\nDefinition.\n13. \nLaws inconsistent with or in derogation of the fundamental \nrights. Right to Equality\n14.\nEquality before law.\n15. \nProhibition of discrimination on grounds of religion, race, caste, \nsex or place of birth.\n16. \nEquality of opportunity in matters of public employment. \n17.\nAbolition of Untouchability.\n18. \nAbolition of titles. \nRight to Freedom\n19.\nProtection of certain rights regarding freedom of speech, etc.\n20.\nProtection in respect of conviction for offences.\n21.\nProtection of life and personal liberty.\n21A.\nRight to education.\n22.\nProtection against arrest and detention in certain cases.\nRight against Exploitation\n23.\nProhibition of traffic in human beings and forced labour.\n24.\nProhibition of employment of children in factories, etc.\nRight to Freedom of Religion\n25.\nFreedom of conscience and free profession, practice and \npropagation of religion.\n26.\nFreedom to manage religious affairs.\n27.\nFreedom a",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.792762578,
+            "final_score": 0.0107351625,
+            "rerank_score": 0.0107351625,
+            "original_rank": 7,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_41_dcb9b2d8",
+            "score": 0.800581515,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n12\n(2) Every person who is arrested and detained in custody shall be \nproduced before the nearest magistrate within a period of twenty-four hours of \nsuch arrest excluding the time necessary for the journey from the place of arrest \nto the court of the magistrate and no such person shall be detained in custody \nbeyond the said period without the authority of a magistrate.\n(3) Nothing in clauses (1) and (2) shall apply—\n(a) to any person who for the time being is an enemy alien; or\n(b) to any person who is arrested or detained under any law providing \nfor preventive detention.\n(4) No law providing for preventive detention shall authorise the \ndetention of a person for a longer period than three months unless—\n(a) an Advisory Board consisting of persons who are, or have been, \nor are qualified to be appointed as, Judges of a High Court has reported \nbefore the expiration of the said period of three months that there is in its \nopin",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.800581515,
+            "final_score": 0.010288301,
+            "rerank_score": 0.010288301,
+            "original_rank": 2,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_4_ca041c77",
+            "score": 0.783157,
+            "text": "Saving of Certain Laws\n31A.\nSaving of Laws providing for acquisition of estates, etc.\n31B. \nValidation of certain Acts and Regulations. \n31C.\nSaving of laws giving effect to certain directive principles.\n[31D. \nSaving of laws in respect of anti-national activities.—Omitted.] Right to Constitutional Remedies\n 32. \nRemedies for enforcement of rights conferred by this Part.\n[32A.\nConstitutional validity of State laws not to be considered in \nproceedings under article 32.—Omitted.]\n33.\nPower of Parliament to modify the rights conferred by this Part \nin their application to Forces, etc.\n 34. \nRestriction on rights conferred by this Part while martial law is \nin force in any area.\n35.\nLegislation to give effect to the provisions of this Part.\nPART IV\nDIRECTIVE PRINCIPLES OF STATE POLICY\n36.\nDefinition.\n37.\nApplication of the principles contained in this Part.\n38.\nState to secure a social order for the promotion of welfare of the \npeople.\n39.\nCertain principles of policy to be followed by the",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.783157,
+            "final_score": 0.0048297215,
+            "rerank_score": 0.0048297215,
+            "original_rank": 24,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_48_8b4a51c9",
+            "score": 0.807291567,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n19\nRight to Constitutional Remedies \n32. Remedies for enforcement of rights conferred by this Part.—(1) \nThe right to move the Supreme Court by appropriate proceedings for the \nenforcement of the rights conferred by this Part is guaranteed.\n(2) The Supreme Court shall have power to issue directions or orders or \nwrits, including writs in the nature of habeas corpus, mandamus, prohibition,\nquo warranto and certiorari,\nwhichever may be appropriate, for the \nenforcement of any of the rights conferred by this Part.\n(3) Without prejudice to the powers conferred on the Supreme Court by \nclauses (1) and (2), Parliament may by law empower any other court to exercise \nwithin the local limits of its jurisdiction all or any of the powers exercisable by \nthe Supreme Court under clause (2).\n(4) The right guaranteed by this article shall not be suspended except as \notherwise provided for by this Constitution.\n132A. [Constitutional validity of ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.807291567,
+            "final_score": 0.0026626128,
+            "rerank_score": 0.0026626128,
+            "original_rank": 1,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_49_793cf2a6",
+            "score": 0.794062436,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n20\n34. Restriction on rights conferred by this Part while martial law is \nin force in any area.—Notwithstanding anything in the foregoing provisions \nof this Part, Parliament may by law indemnify any person in the service of the \nUnion or of a State or any other person in respect of any act done by him in \nconnection with the maintenance or restoration of order in any area within the \nterritory of India where martial law was in force or validate any sentence \npassed, punishment inflicted, forfeiture ordered or other act done under martial \nlaw in such area. \n35. Legislation to give effect to the provisions of this Part.—\nNotwithstanding anything in this Constitution,— \n(a) Parliament shall have, and the Legislature of a State shall not \nhave, power to make laws—\n(i) with respect to any of the matters which under clause (3) of \narticle 16, clause (3) of article 32, article 33 and article 34 may be \nprovided for by law made by Parl",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.794062436,
+            "final_score": 0.002217013,
+            "rerank_score": 0.002217013,
+            "original_rank": 6,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "When police torture someone in custody, the fundamental right being violated is the 'Protection of life and personal liberty,' as enshrined in Article 21 of the Constitution of India. Torture directly infringes upon a person's personal liberty and can endanger their life, both of which are protected under this crucial fundamental right.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "If I'm denied admission to a public university because I'm from a backward community, can I do something?",
+        "search_results": [
+          {
+            "id": "input_20250810_005310.pdf_233_cc2a4f46",
+            "score": 0.821340322,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n202\n1[342A. Socially and educationally backward classes.—(1) The \nPresident may with respect to any State or Union territory, and where it is a \nState, after consultation with the Governor thereof, by public notification, \nspecify 2[the socially and educationally backward classes in the Central List \nwhich shall for the purposes of the Central Government] be deemed to be \nsocially and educationally backward classes in relation to that State or Union \nterritory, as the case may be. \n(2) Parliament may by law include in or exclude from the Central List of \nsocially and educationally backward classes specified in a notification issued \nunder clause (1) any socially and educationally backward class, but save as \naforesaid a notification issued under the said clause shall not be varied by any \nsubsequent notification.] \n3[Explanation.—For the purposes of clauses (1) and (2), the expression \n“Central List” ",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.821340322,
+            "final_score": 0.00809329,
+            "rerank_score": 0.00809329,
+            "original_rank": 1,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_24_e8817907",
+            "score": 0.796914458,
+            "text": "Contents\nARTICLES\n(xxiii)\n336.\nSpecial provision for Anglo-Indian community in certain \nservices. \n337.\nSpecial provision with respect to educational grants for the \nbenefit of Anglo-Indian Community. \n 338. \nNational Commission for Scheduled Castes.\n338A.\nNational Commission for Scheduled Tribes.\n338B.\nNational Commission for Backward Classes.\n 339. \nControl of the Union over the administration of Scheduled Areas \nand the welfare of Scheduled Tribes.\n340.\nAppointment of a Commission to investigate the conditions of \nbackward classes.\n 341. \nScheduled Castes. \n 342. \nScheduled Tribes.\n342A.\nSocially and educationally backward classes.\nPART XVII\nOFFICIAL LANGUAGE\nCHAPTER I.—LANGUAGE OF THE UNION\n343.\nOfficial language of the Union.\n 344. \nCommission and Committee of Parliament on official language. \nCHAPTER II.\nREGIONAL LANGUAGES\n345.\nOfficial language or languages of a State.\n346.\nOfficial language for communication between one State and \nanother or between a State and the Union.\n347.\n",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.796914458,
+            "final_score": 0.007846239,
+            "rerank_score": 0.007846239,
+            "original_rank": 5,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_229_deb9593f",
+            "score": 0.821227,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XVI.—Special Provisions Relating to Certain Classes) \n198\n(8) The Commission shall, while investigating any matter referred to in \nsub-clause (a) or inquiring into any complaint referred to in sub-clause (b) of \nclause (5), have all the powers of a civil court trying a suit and in particular in \nrespect of the following matters, namely:—\n(a) summoning and enforcing the attendance of any person from \nany part of India and examining him on oath;\n(b) requiring the discovery and production of any document;\n(c) receiving evidence on affidavits; \n(d) requisitioning any public record or copy thereof from any \ncourt or office;\n(e) issuing commissions for the examination of witnesses and documents; \n(f) any other matter which the President may, by rule, determine.\n(9) The Union and every State Government shall consult the \nCommission on all major policy matters affecting Scheduled Tribes.]\n1[338B. National Commission for Backward Classes.—(1) There shall \nbe a Co",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.821227,
+            "final_score": 0.0028671587,
+            "rerank_score": 0.0028671587,
+            "original_rank": 2,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_36_e0aaf360",
+            "score": 0.796458542,
+            "text": "THE CONSTITUTION OF INDIA\n(Part III.—Fundamental Rights)\n7\n(a) access to shops, public restaurants, hotels and places of public \nentertainment; or \n(b) the use of wells, tanks, bathing ghats, roads and places of \npublic resort maintained wholly or partly out of State funds or dedicated \nto the use of the general public. \n(3) Nothing in this article shall prevent the State from making any \nspecial provision for women and children. \n1[(4) Nothing in this article or in clause (2) of article 29 shall prevent the \nState from making any special provision for the advancement of any socially \nand educationally backward classes of citizens or for the Scheduled Castes and \nthe Scheduled Tribes.] \n2[(5) Nothing in this article or in sub-clause (g) of clause (1) of article 19 \nshall prevent the State from making any special provision, by law, for the \nadvancement of any socially and educationally backward classes of citizens or \nfor the Scheduled Castes or the Scheduled Tribes in so far as such sp",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.796458542,
+            "final_score": 0.0026626128,
+            "rerank_score": 0.0026626128,
+            "original_rank": 6,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005310.pdf_257_1e5c3de3",
+            "score": 0.780839324,
+            "text": "THE CONSTITUTION OF INDIA\n(Part XIX.—MISCELLANEOUS)\n226\n(26) “securities” includes stock;\n1* * * \n2[(26A) “Services” means anything other than goods;\n(26B) “State” with reference to articles 246A, 268, 269, 269A and \narticle 279A includes a Union territory with Legislature];\n3[(26C) \"socially and educationally backward classes\" means such \nbackward classes as are so deemed under article 342A for the purposes \nof the Central Government or the State or Union territory, as the case \nmay be];\n(27) “sub-clause” means a sub-clause of the clause in which the \nexpression occurs;\n(28) “taxation” includes the imposition of any tax or impost, \nwhether general or local or special, and “tax” shall be construed \naccordingly; \n(29) “tax on income” includes a tax in the nature of an excess \nprofits tax;\n4[(29A) “tax on the sale or purchase of goods” includes— \n(a) a tax on the transfer, otherwise than in pursuance of a \ncontract, of property in any goods for cash, deferred payment or \nother valuable c",
+            "document_name": "input_20250810_005310.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.780839324,
+            "final_score": 0.001648483,
+            "rerank_score": 0.001648483,
+            "original_rank": 23,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Yes, if you are denied admission to a public university because you are from a backward community, the Constitution of India provides avenues for action. It explicitly permits the State to make special provisions for the advancement of socially and educationally backward classes, including in matters of university admission. You can approach the National Commission for Backward Classes, which is empowered to investigate complaints and matters affecting backward classes with the powers of a civil court.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 1.751784324645996,
+      "query_embedding": {
+        "total": 1.127051830291748,
+        "individual": [
+          0.9948763847351074,
+          1.079545497894287,
+          1.0149359703063965,
+          1.0098793506622314,
+          1.1240525245666504,
+          1.0058789253234863,
+          0.9873669147491455,
+          1.0109341144561768,
+          1.012962818145752,
+          0.9988782405853271
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 27504",
+          "Query 2: Thread 1952",
+          "Query 3: Thread 25216",
+          "Query 4: Thread 11588",
+          "Query 5: Thread 21468",
+          "Query 6: Thread 22216",
+          "Query 7: Thread 30392",
+          "Query 8: Thread 31176",
+          "Query 9: Thread 28988",
+          "Query 10: Thread 26284"
+        ]
+      },
+      "pdf_processing_and_indexing": 17.27858066558838,
+      "query_processor_initialization": 5.592063665390015,
+      "query_processing": {
+        "total": 152.77897000312805,
+        "parallel_execution_time": 18.814882278442383,
+        "average": 15.277897000312805,
+        "individual": [
+          18.47071671485901,
+          13.22665548324585,
+          13.52285647392273,
+          15.157588720321655,
+          13.978298664093018,
+          15.312450170516968,
+          18.807878494262695,
+          12.957421779632568,
+          14.801392793655396,
+          16.543710708618164
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 28220",
+          "Query 2: Thread 31444",
+          "Query 3: Thread 29816",
+          "Query 4: Thread 25484",
+          "Query 5: Thread 20352",
+          "Query 6: Thread 29088",
+          "Query 7: Thread 30800",
+          "Query 8: Thread 24392",
+          "Query 9: Thread 28796",
+          "Query 10: Thread 22640"
+        ]
+      },
+      "cleanup_index": 1.0335328578948975,
+      "total_execution_time": 45.59944486618042
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpd0p_n9zp",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 10,
+      "max_query_workers": 10
+    }
+  },
+  "processing_summary": {
+    "total_questions": 10,
+    "total_time_seconds": 45.59944486618042,
+    "pdf_processing_time": 17.27858066558838,
+    "embedding_time": 1.127051830291748,
+    "query_processing_time": 152.77897000312805,
+    "parallel_execution_time": 18.814882278442383,
+    "max_individual_query_time": 18.807878494262695
+  },
+  "multithreading_metrics": {
+    "queries_processed": 10,
+    "embedding_workers": 10,
+    "query_workers": 10,
+    "embedding_speedup_ratio": 9.085039805821546,
+    "query_speedup_ratio": 8.120112990458534,
+    "individual_embedding_times": [
+      0.9948763847351074,
+      1.079545497894287,
+      1.0149359703063965,
+      1.0098793506622314,
+      1.1240525245666504,
+      1.0058789253234863,
+      0.9873669147491455,
+      1.0109341144561768,
+      1.012962818145752,
+      0.9988782405853271
+    ],
+    "individual_query_times": [
+      18.47071671485901,
+      13.22665548324585,
+      13.52285647392273,
+      15.157588720321655,
+      13.978298664093018,
+      15.312450170516968,
+      18.807878494262695,
+      12.957421779632568,
+      14.801392793655396,
+      16.543710708618164
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 27504",
+      "Query 2: Thread 1952",
+      "Query 3: Thread 25216",
+      "Query 4: Thread 11588",
+      "Query 5: Thread 21468",
+      "Query 6: Thread 22216",
+      "Query 7: Thread 30392",
+      "Query 8: Thread 31176",
+      "Query 9: Thread 28988",
+      "Query 10: Thread 26284"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 28220",
+      "Query 2: Thread 31444",
+      "Query 3: Thread 29816",
+      "Query 4: Thread 25484",
+      "Query 5: Thread 20352",
+      "Query 6: Thread 29088",
+      "Query 7: Thread 30800",
+      "Query 8: Thread 24392",
+      "Query 9: Thread 28796",
+      "Query 10: Thread 22640"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "If my car is stolen, what case will it be in law?",
+        "time_seconds": 18.47071671485901
+      },
+      {
+        "query_index": 1,
+        "query": "If I am arrested without a warrant, is that legal?",
+        "time_seconds": 13.22665548324585
+      },
+      {
+        "query_index": 2,
+        "query": "If someone denies me a job because of my caste, is...",
+        "time_seconds": 13.52285647392273
+      },
+      {
+        "query_index": 3,
+        "query": "If the government takes my land for a project, can...",
+        "time_seconds": 15.157588720321655
+      },
+      {
+        "query_index": 4,
+        "query": "If my child is forced to work in a factory, is tha...",
+        "time_seconds": 13.978298664093018
+      },
+      {
+        "query_index": 5,
+        "query": "If I am stopped from speaking at a protest, is tha...",
+        "time_seconds": 15.312450170516968
+      },
+      {
+        "query_index": 6,
+        "query": "If a religious place stops me from entering becaus...",
+        "time_seconds": 18.807878494262695
+      },
+      {
+        "query_index": 7,
+        "query": "If I change my religion, can the government stop m...",
+        "time_seconds": 12.957421779632568
+      },
+      {
+        "query_index": 8,
+        "query": "If the police torture someone in custody, what rig...",
+        "time_seconds": 14.801392793655396
+      },
+      {
+        "query_index": 9,
+        "query": "If I'm denied admission to a public university bec...",
+        "time_seconds": 16.543710708618164
+      }
+    ]
+  }
+}

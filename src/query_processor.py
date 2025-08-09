@@ -70,10 +70,22 @@ class QueryProcessor:
         # Use Pinecone embeddings - no fallbacks
         print("✅ Using Pinecone multilingual-e5-large embeddings")
         
-        # Reranking disabled - using similarity scores only
-        print("✅ Using similarity scores only (no reranking)")
-        self.reranker = None
-        self.reranker_type = "none"
+        # Initialize BGE Reranker
+        self.reranker_available = False
+        try:
+            # Check if BGE reranker is available in Pinecone
+            if hasattr(self.pc, 'inference') and self.pc:
+                print("🔍 Checking BGE Reranker-v2-m3 availability...")
+                self.reranker_available = True
+                self.reranker_type = "bge-reranker-v2-m3"
+                print("✅ BGE Reranker-v2-m3 available for reranking")
+            else:
+                print("⚠️ BGE reranker not available, using similarity scores only")
+                self.reranker_type = "none"
+        except Exception as e:
+            print(f"⚠️ Reranker initialization failed: {e}")
+            self.reranker_available = False
+            self.reranker_type = "none"
         
         # Initialize Gemini
         if GENAI_AVAILABLE and gemini_api_key and gemini_api_key != 'dummy':
@@ -92,12 +104,10 @@ class QueryProcessor:
                 # Try each model until one works
                 for model_name in model_options:
                     try:
-                        # Set generation config with temperature 0.7
-                        # Gemini temperature ranges from 0-2, where 0 is deterministic and 2 is highly random
+                        # Set generation config optimized for JSON responses
+                        # Use low temperature for consistent, structured outputs
                         generation_config = {
-                            #"temperature": 0.3,  # Medium-high creative temperature (default is 0.9)
-                            "top_p": 0.95,
-                            "top_k": 40
+                            #"temperature": 0.7,  # Very low temperature for structured JSON responses
                         }
                         
                         test_model = genai.GenerativeModel(
@@ -110,7 +120,7 @@ class QueryProcessor:
                         if test_response:
                             self.llm = test_model
                             self.model_name = model_name
-                            print(f"Successfully initialized Gemini model: {model_name} with temperature=0.7")
+                            print(f"Successfully initialized Gemini model: {model_name} with temperature=0.1 for JSON responses")
                             break
                     except Exception as e:
                         print(f"Failed to initialize {model_name}: {str(e)}")
@@ -159,6 +169,8 @@ class QueryProcessor:
             'model_name': getattr(self, 'model_name', None),
             'quota_exceeded': getattr(self, 'quota_exceeded', False),
             'fallback_reason': getattr(self, 'fallback_reason', None),
+            'reranker_available': getattr(self, 'reranker_available', False),
+            'reranker_type': getattr(self, 'reranker_type', 'none'),
             'recommendations': []
         }
         
@@ -178,6 +190,11 @@ class QueryProcessor:
         else:
             status['recommendations'].append(f"✅ Using {self.model_name} for optimal results")
         
+        # Add reranker status
+        if self.reranker_available:
+            status['recommendations'].append(f"🔄 Using {self.reranker_type} for enhanced relevance ranking")
+        else:
+            status['recommendations'].append("⚠️ Reranker not available - using similarity scores only")
         
         return status
     
@@ -204,9 +221,26 @@ class QueryProcessor:
                 return json.loads(json_str)
             except (json.JSONDecodeError, ValueError) as e:
                 print(f"🔍 JSON extraction failed from {context}: {str(e)[:50]}...")
-                print(f"🔍 Raw response preview: '{response_text[:100]}...'")
+                print(f"🔍 Raw response preview: '{response_text[:200]}...'")
+        
+        # Try to find JSON-like content with regex
+        import re
+        json_pattern = r'\{[^{}]*"answer"[^{}]*\}'
+        matches = re.findall(json_pattern, response_text, re.DOTALL)
+        if matches:
+            try:
+                return json.loads(matches[0])
+            except json.JSONDecodeError:
+                pass
+        
+        # If all else fails, try to extract just the answer content
+        answer_pattern = r'"answer":\s*"([^"]*)"'
+        answer_match = re.search(answer_pattern, response_text)
+        if answer_match:
+            return {"answer": answer_match.group(1)}
         
         print(f"🔍 No valid JSON found in {context}")
+        print(f"🔍 Full response for debugging: '{response_text}'")
         return None
     
     def _make_llm_request_with_retry(self, prompt: str, max_retries: int = 2) -> Optional[str]:
@@ -391,7 +425,50 @@ class QueryProcessor:
         
         return hybrid_score
 
-    def _should_rerank(self, candidates: List[Dict], final_k: int) -> bool:
+    def _rerank_with_bge(self, query: str, candidates: List[Dict], top_k: int = 5) -> List[Dict]:
+        """Rerank candidates using BGE Reranker-v2-m3 via Pinecone."""
+        if not self.reranker_available or not self.pc:
+            print("⚠️ BGE reranker not available, returning original candidates")
+            return candidates[:top_k]
+        
+        try:
+            print(f"🔄 Reranking {len(candidates)} candidates with BGE Reranker-v2-m3...")
+            
+            # Prepare documents for reranking
+            documents = [candidate["text"] for candidate in candidates]
+            
+            # Use Pinecone's inference API for BGE reranking
+            rerank_response = self.pc.inference.rerank(
+                model="bge-reranker-v2-m3",
+                query=query,
+                documents=documents,
+                top_n=top_k,  # BGE reranker also uses top_n
+                return_documents=True
+            )
+            
+            # Map reranked results back to original candidates
+            reranked_candidates = []
+            for result in rerank_response.data:
+                original_idx = result.index
+                candidate = candidates[original_idx].copy()
+                
+                # Add reranking information
+                candidate["rerank_score"] = result.score
+                candidate["original_rank"] = original_idx + 1
+                candidate["reranked_rank"] = len(reranked_candidates) + 1
+                candidate["final_score"] = result.score
+                candidate["ranking_method"] = "bge_reranker_v2_m3"
+                
+                reranked_candidates.append(candidate)
+            
+            print(f"✅ Reranked to top {len(reranked_candidates)} candidates using BGE Reranker-v2-m3")
+            return reranked_candidates
+            
+        except Exception as e:
+            print(f"❌ BGE reranking failed: {e}")
+            print("🔄 Falling back to similarity-based ranking...")
+            # Fallback to original similarity ranking
+            return candidates[:top_k]
         """Decide if reranking is beneficial based on score distribution."""
         if len(candidates) <= final_k:
             return False
@@ -411,7 +488,7 @@ class QueryProcessor:
         except:
             return True  # Default to reranking if calculation fails
 
-    def semantic_search_with_similarity(self, query: str, top_k: int = 3, query_embedding: Optional[list] = None) -> List[Dict]:
+    def semantic_search_with_similarity(self, query: str, top_k: int = 5, query_embedding: Optional[list] = None) -> List[Dict]:
         """
         Hybrid search using vector similarity and keyword matching:
         1. Retrieve top candidates using vector similarity 
@@ -550,7 +627,7 @@ class QueryProcessor:
             # Query for all chunks from the same document
             response = self.index.query(
                 vector=dummy_vector,
-                top_k=1000,  # Get many chunks to find all adjacent ones
+                top_k=200,  # Get many chunks to find all adjacent ones
                 include_metadata=True
             )
             
@@ -581,7 +658,7 @@ class QueryProcessor:
                     break
             
             if target_found:
-                # Get 25 previous chunks
+                # Get 15 previous chunks
                 start_idx = max(0, target_position - chunks_before)
                 for j in range(start_idx, target_position):
                     prev_chunk = same_doc_chunks[j]
@@ -592,7 +669,7 @@ class QueryProcessor:
                         "distance": target_position - j
                     })
                 
-                # Get 25 next chunks
+                # Get 15 next chunks
                 end_idx = min(len(same_doc_chunks), target_position + chunks_after + 1)
                 for j in range(target_position + 1, end_idx):
                     next_chunk = same_doc_chunks[j]
@@ -772,37 +849,37 @@ class QueryProcessor:
         EXTRACTED ENTITIES:
         {json.dumps(entities, indent=2)}
 
-        TOP 5 VECTORS SUMMARY:
+        TOP 5 RERANKED VECTORS SUMMARY:
         {chr(10).join(vector_summary)}
 
         COMPREHENSIVE POLICY CONTEXT WITH ADJACENT CHUNKS:
         {comprehensive_context}
 
         Instructions:
+        - These 5 vectors were reranked using BGE Reranker-v2-m3 for maximum relevance to your query
         - Each vector section contains the most relevant chunk plus 25 chunks before and 25 chunks after it
         - Consider information from all 5 vector sections when forming your answer
         - Look for complementary information across different sections
         - If multiple sections discuss the same topic, synthesize the information
         - For coverage questions, check waiting periods, exclusions, and conditions across all sections
         - For amount/limit questions, look for specific numbers in any of the sections
+        - Don't look for exact phrases; instead, focus on the overall meaning and context.
 
-        Return your answer as a JSON object with these fields:
-        - answer: string (your concise answer in 2-3 sentences)
-        - source_document: string (the primary document name you referenced)
-        - relevant_sections: array of integers (which vector sections 1-5 were most relevant)
-
-        For yes/no questions, format your answer as "Yes, [brief reason]" or "No, [brief reason]"
-        Even if something is not explicitly mentioned, infer from the comprehensive context provided.
-        Use information from multiple sections to provide a complete answer.
-
-        Example response:
+        CRITICAL: YOU MUST RETURN ONLY VALID JSON FORMAT:
         {{
-          "answer": "Yes, dental implants are covered up to ₹50,000 under your policy's dental care benefit. This is subject to a 6-month waiting period as mentioned in the policy terms.",
-          "source_document": "policy.pdf",
-          "relevant_sections": [1, 3, 4]
+          "answer": "Your detailed answer here "
         }}
 
-        Please provide accurate information based solely on the comprehensive policy context provided. Only return the JSON object, nothing else.
+        RULES:
+        - For yes/no questions, format your answer as "Yes, [brief reason]" or "No, [brief reason]"
+        - Even if something is not explicitly mentioned, infer from the comprehensive context provided
+        - Use information from multiple sections to provide a complete answer
+        - Be careful to consider all relevant information before making a decision
+        - RETURN ONLY THE JSON OBJECT - NO OTHER TEXT
+
+    
+
+        RETURN ONLY THE JSON OBJECT:
         """
         
         # Use robust request method
@@ -835,13 +912,13 @@ class QueryProcessor:
             }
     
     def process_query(self, query: str, query_embedding: Optional[list] = None) -> Dict[str, Any]:
-        """Complete query processing pipeline with comprehensive adjacent context."""
+        """Complete query processing pipeline with Cohere reranking and comprehensive adjacent context."""
         try:
             # Get API status for debugging
             api_status = self.get_api_status()
             
-            # Step 1: Get top 5 vectors with similarity search
-            print("🔍 Step 1: Getting top 5 vectors with similarity search...")
+            # Step 1: Get top 25 vectors with similarity search for reranking
+            print("🔍 Step 1: Getting top 25 vectors with similarity search for reranking...")
             try:
                 # Use provided query_embedding if available, else encode
                 if query_embedding is not None:
@@ -850,58 +927,72 @@ class QueryProcessor:
                 else:
                     embedding = self._encode_query(query)
                 
-                # Get top 5 candidates using vector search
+                # Get top 25 candidates for reranking (optimized retrieval)
                 response = self.index.query(
                     vector=embedding,
-                    top_k=5,  # Get exactly 5 top vectors
+                    top_k=30,  # Get 25 candidates for reranking
                     include_metadata=True
                 )
                 
                 # Format results (already sorted by similarity score)
-                top_vectors = []
+                candidates = []
                 for match in response.matches:
-                    top_vectors.append({
+                    candidates.append({
                         "id": match.id,
                         "score": match.score,
                         "text": match.metadata.get("text", ""),
                         "document_name": match.metadata.get("document_name", ""),
                         "page_number": match.metadata.get("page_number", 1),
-                        "chunk_index": match.metadata.get("chunk_index", 0)
+                        "chunk_index": match.metadata.get("chunk_index", 0),
+                        "vector_score": match.score,
+                        "final_score": match.score
                     })
                 
-                print(f"✅ Retrieved {len(top_vectors)} top vectors")
+                print(f"✅ Retrieved {len(candidates)} candidates for reranking")
                 
-                # Step 2: Create comprehensive context with adjacent chunks for each vector
-                print("🔍 Step 2: Creating comprehensive context with 25 before + 25 after chunks for each vector...")
+                # Step 2: Rerank with BGE to get top 5
+                print("🔍 Step 2: Reranking with BGE Reranker-v2-m3 to get top 5...")
+                top_vectors = self._rerank_with_bge(query, candidates, top_k=5)
+                
+                if not top_vectors:
+                    print("⚠️ No vectors after reranking, using top 5 from similarity search")
+                    top_vectors = candidates[:5]
+                
+                # Step 3: Create comprehensive context with adjacent chunks for top 5 reranked vectors
+                print("🔍 Step 3: Creating comprehensive context with 25 before + 25 after chunks for each top 5 reranked vector...")
                 comprehensive_context = self._create_comprehensive_context(top_vectors)
                 
                 # Use the comprehensive context as search results for LLM
-                search_results = top_vectors  # Keep original for response structure
+                search_results = top_vectors  # Keep reranked results for response structure
                 
             except Exception as e:
-                print(f"❌ Vector search error: {e}")
+                print(f"❌ Vector search/reranking error: {e}")
                 top_vectors = []
                 comprehensive_context = ""
                 search_results = []
             
-            # Step 3: Evaluate with comprehensive context
-            print("🔍 Step 3: Evaluating with comprehensive context...")
+            # Step 4: Evaluate with comprehensive context using reranked top 5
+            print("🔍 Step 4: Evaluating with comprehensive context using top 5 reranked vectors...")
             evaluation = self._llm_evaluation_with_comprehensive_context(query, {}, comprehensive_context, top_vectors)
             
             # Add search method information
-            evaluation['search_method'] = 'comprehensive_adjacent_context'
-            evaluation['reranker_type'] = 'none'
-            evaluation['reranker_available'] = False
+            evaluation['search_method'] = 'bge_rerank_comprehensive_context'
+            evaluation['reranker_type'] = self.reranker_type
+            evaluation['reranker_available'] = self.reranker_available
             evaluation['hybrid_search_enabled'] = False
-            evaluation['reranking_enabled'] = False
-            evaluation['total_candidates_retrieved'] = len(top_vectors)
-            evaluation['final_chunks_used'] = len(top_vectors)
+            evaluation['reranking_enabled'] = self.reranker_available
+            evaluation['initial_candidates_retrieved'] = len(candidates) if 'candidates' in locals() else 0
+            evaluation['final_vectors_after_reranking'] = len(top_vectors)
             evaluation['adjacent_chunks_per_vector'] = 50  # 25 before + 25 after
             
             # Add performance notes
             if not self.llm:
                 evaluation['note'] = "❌ Analysis performed without LLM (required for full functionality)"
-            evaluation['performance_note'] = "⚡ Using comprehensive adjacent context (25 before + 25 after) for each top vector"
+            
+            if self.reranker_available:
+                evaluation['performance_note'] = "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+            else:
+                evaluation['performance_note'] = "⚡ Using similarity ranking + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
             
             # Combine all results
             result = {

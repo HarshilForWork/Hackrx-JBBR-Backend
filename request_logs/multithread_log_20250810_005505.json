@@ -1,0 +1,1513 @@
+{
+  "timestamp": "2025-08-10T00:56:18.796596",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/principia_newton.pdf?sv=2023-01-03&st=2025-07-28T07%3A20%3A32Z&se=2026-07-29T07%3A20%3A00Z&sr=b&sp=r&sig=V5I1QYyigoxeUMbnUKsdEaST99F5%2FDfo7wpKg9XXF5w%3D",
+    "questions": [
+      "How does Newton define 'quantity of motion' and how is it distinct from 'force'?",
+      "According to Newton, what are the three laws of motion and how do they apply in celestial mechanics?",
+      "How does Newton derive Kepler's Second Law (equal areas in equal times) from his laws of motion and gravitation?",
+      "How does Newton demonstrate that gravity is inversely proportional to the square of the distance between two masses?",
+      "What is Newton's argument for why gravitational force must act on all masses universally?",
+      "How does Newton explain the perturbation of planetary orbits due to other planets?",
+      "What mathematical tools did Newton use in Principia that were precursors to calculus, and why didn't he use standard calculus notation?",
+      "How does Newton use the concept of centripetal force to explain orbital motion?",
+      "How does Newton handle motion in resisting media, such as air or fluids?",
+      "In what way does Newton's notion of absolute space and time differ from relative motion, and how does it support his laws?",
+      "Who was the grandfather of Isaac Newton?",
+      "Do we know any other descent of Isaac Newton apart from his grandfather?"
+    ],
+    "pdf_filename": "input_20250810_005505.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_005505.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "How does Newton define 'quantity of motion' and how is it distinct from 'force'?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_188_85a7365a",
+            "score": 0.0571195185,
+            "text": "SEC. XL] OF NATURAL PHILOSOPHY. 1 % \nalso the uniform motion of the common centre of gravity, and the motion \nof the space which moves along with this centre uniformly in a right line, \nand also the very first, or beginning motions of the bodies in respect of this \nspace. Then (by Cor. 5, of the Laws, and the last Theorem) the subse \nquent motions will be performed in the same manner in that space, as if \nthat space together with the common centre of gravity were at rest, and as \nif the bodies did not attract each other, but were attracted by a third body \nplaced in that centre. The motion therefore in this movable space of each \nbody going off from a given place, in a given direction, with a given velo \ncity, and acted upon by a centripetal force tending to that centre, is to be \ndetermined by Prob. IX and XXVI, and at the same time will be obtained \nthe motion of the other round the same centre. With this motion com \npound the uniform progressive motion of the entire system of the sp",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0571195185,
+            "final_score": 0.00698465,
+            "rerank_score": 0.00698465,
+            "original_rank": 20,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_293_31ebf42f",
+            "score": 0.0615982711,
+            "text": "306 THE MATHEMATICAL PRINCIPLES [BOOK. 11 \nratio. But at the beginning of the motion, when the bodies begin to de \nscend and describe those arcs, the forces, which at that time are proportional \nto the arcs, will generate velocities proportional to the arcs. Therefore \nthe velocities will be always as the whole arcs to be described, and there \nfore those arcs will be described in the same time. Q,.E.D. \nPROPOSITION XXVII. THEOREM XXII. \nIf fnnependulous bodies are resisted in the duplicate ratio of their \nvelocities, the differences between the times of the oscillations in a re \nsisting medium, and the times of the oscillations in a non-resisting \nmedium of the same specific gravity, will be proportional to the arcs \ndescribed in oscillating nearly. \nFor let equal pendulums in a re \nsisting medium describe the unequal \narcs A, B ; and the resistance of the \nbody in the arc A will be to the resist \nance of the body in the correspondent \npart of the arc B in the duplicate ra \ntio of the ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0615982711,
+            "final_score": 0.0046095722,
+            "rerank_score": 0.0046095722,
+            "original_rank": 14,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_359_cb4b65a3",
+            "score": 0.0571064167,
+            "text": "372 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK 11. \nfarther, its impulse will carry the outmost cylinder also about with it, Tin- \nless the cylinder be violently detained; and accelerate its motion till the \nperiodic times of both cylinders become equal among themselves. But if \nthe outward cylinder be violently detained, it will make an effort to retard \nthe motion of the fluid ; and unless the inward cylinder preserve that mo \ntion by means of some external force impressed thereon, it will make it \n3ease by degrees. \nAll these things will be found true by making the experiment in deep \nstanding water. \nPROPOSITION LIL THEOREM XL. \nIf a solid sphere, in an uniform and infinite fluid, revolves about an axis \ngiven in position with an uniform motion., and thejiuid be forced round \nby only this impulse of the sphere ; and every part of the fluid perse \nveres uniformly in its motion ; I say, that the periodic times of the \nparts of the fluid are as the squares of their distances from the centre ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0571064167,
+            "final_score": 0.0032350558,
+            "rerank_score": 0.0032350558,
+            "original_rank": 21,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_43_712aa3f4",
+            "score": 0.0616991259,
+            "text": "46 LIFE OF SIR ISAAC NEWTON, \nTransactions, in 1742. The instrument was the same as that \nproduced by Mr. Hadley, in 1731, and which, under the name of \nHadley's Quadrant, has been of so great use in navigation. On \nthe assembling of the new Parliament, in 1701, Newton was re- \nelected one of the members for the University of Cambridge. In \n1703, he was chosen President of the Royal Society of London, \nto which office he was annually re-elected till the period of his \ndecease — about twenty-five years afterward. \nOur author unquestionably devoted more labour to, and, in \nmany respects, took a greater pride in his Optical, than his other \ndiscoveries. This science he had placed on a new and indestruc \ntible basis ; and he wished not only to build, but to perfect the \ncostly and glowing structure. He had communicated, before the \npublication of the PRINCIPIA, his most important researches on \nlight to the Royal Society, in detached papers which were inserted \nin successive numbers of the",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0616991259,
+            "final_score": 0.0029349518,
+            "rerank_score": 0.0029349518,
+            "original_rank": 13,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_227_6e3f0c87",
+            "score": 0.0585451163,
+            "text": "238 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK I \nof the distances, that is, if FK be as rfFK, and therefore the area AHIKL \nas p-7 — p- ; the attraction of the corpuscle P towards the circle will \nPA AH \nbe as 1 — ; that is, as \nCOR. 2. And universally if the forces of the points at the distances D b( \nreciprocally as any power Dn of the distances; that is, if FK be as — . \nand therefore the area AHIKL as \n1 \n1 \n\" — l PH\" — \n1 PA \n, ; the attraction \nof the corpuscle P towards the circle will be as \nPA\" — 2 PH\" — l \nCOR. 3. And if the diameter of the circle be increased in itifinitum, and \nthe number n be greater than unity ; the attraction of the corpuscle P to \nwards the whole infinite plane will be reciprocally as PA\" — 2, because the \nPA \nother term \n vanishes. \nPROPOSITION XCI. PROBLEM XLV. \nTo find the attraction of a corpuscle situate in the axis of a round solid, \nto whose several points there tend equal centripetal forces decreasing \nin any ratio of the distances whatsoever. \nLet th",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0585451163,
+            "final_score": 0.0024534282,
+            "rerank_score": 0.0024534282,
+            "original_rank": 19,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context does not explicitly define Newton's 'quantity of motion' or provide a direct distinction from 'force'. However, the text uses 'force' to describe an influence that generates or changes a body's motion, such as a 'centripetal force' that determines a body's trajectory or a 'motive force' causing ascent and descent. 'Motion' is generally referred to in terms of 'velocity' and 'space described over time', but the specific quantitative measure of 'quantity of motion' (i.e., momentum) is not detailed.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "According to Newton, what are the three laws of motion and how do they apply in celestial mechanics?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_78_4ff57e5d",
+            "score": 0.0706021637,
+            "text": "OF NATURAL PHILOSOPHY. 89 \nthemselves, whether that space is at rest, or moves uniformly forwards \nin a right line without any circular motion. \nFor the differences of the motions tending towards the same parts, and \nthe sums of those that tend towards contrary parts, are, at first (by sup \nposition), in both cases the same ; and it is from those sums and differences \nthat the collisions and impulses do arise with which the bodies mutually \nimpinge one upon another. Wherefore (by Law II), the effects of those \ncollisions will be equal in both cases ; and therefore the mutual motions \nof the bodies among themselves in the one case will remain equal to the \nmutual motions of the bodies among themselves in the other. A clear \nproof of which we have from the experiment of a ship ; where all motions \nhappen after the same manner, whether the ship is at rest, or is carried \nuniformly forwards in a right line. \nCOROLLARY VI. \nIf bodies, any how moved among themselves, are urged in the direct-",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0706021637,
+            "final_score": 0.0094125895,
+            "rerank_score": 0.0094125895,
+            "original_rank": 9,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_248_e362ac8d",
+            "score": 0.0785424933,
+            "text": "SEC. 1L] OF NATURAL PHILOSOPHY. 261 \never, by describing spaces that are in a sesquiplicate ratio of the diameters, \nwill lose parts of their motions proportional to the wholes. \nCOR. 3. And universally, if equally swift bodies are resisted in the ratio \nof any power of the diameters, the spaces, in which homogeneous globes, \nmoving with any velocity whatsoever, will lose parts of their motions pro \nportional to the wholes, will be as the cubes of the diameters applied to \nthat power. Let those diameters be D and E : and if the resistances, where \nthe velocities are supposed equal, are as T)n and E\" ; the spaces in which \nthe globes, moving with any velocities whatsoever, will lose parts of their \nmotions proportional to the wholes, will be as D3 — n and E3 — n. And \ntherefore homogeneous globes, in describing spaces proportional to D 3 — n \nand E3 — n, will retain their velocities in the same ratio to one another as \nat the beginning. \nCOR. 4. Now if the globes are not homogeneous, th",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0785424933,
+            "final_score": 0.005139611,
+            "rerank_score": 0.005139611,
+            "original_rank": 3,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_173_c714da0b",
+            "score": 0.0520262904,
+            "text": "THE MATHEMATICAL PRINCIPLES [BOOK I. \nwould do in free spaces about the centre S ; and therefore (by Cor. 2, Prop. \nX, ai d Cor. 2, Prop. XXXVIII.) they will in equal times either describe \nellipses m that plane about the centre C, or move to and fro in right lines \npassing through the centre C in that plane; completing the same periods \nof time in all cases. Q.E.D. \nSCHOLIUM. \nThe ascent and descent of bodies in curve superficies has a near relation \nto these motions we have been speaking of. Imagine curve lines to be de \nscribed on any plane, and to revolve about any given axes passing through \nthe centre of force, and by that revolution to describe curve superficies ; and \nthat the bodies move in such sort that their centres may be always found \nm those superficies. If those bodies reciprocate to and fro with an oblique \nascent and descent, their motions will be performed in planes passing through \ntiie axis, and therefore in the curve lines, by whose revolution those curve \nsuperfi",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0520262904,
+            "final_score": 0.0035518846,
+            "rerank_score": 0.0035518846,
+            "original_rank": 29,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_359_cb4b65a3",
+            "score": 0.071956411,
+            "text": "372 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK 11. \nfarther, its impulse will carry the outmost cylinder also about with it, Tin- \nless the cylinder be violently detained; and accelerate its motion till the \nperiodic times of both cylinders become equal among themselves. But if \nthe outward cylinder be violently detained, it will make an effort to retard \nthe motion of the fluid ; and unless the inward cylinder preserve that mo \ntion by means of some external force impressed thereon, it will make it \n3ease by degrees. \nAll these things will be found true by making the experiment in deep \nstanding water. \nPROPOSITION LIL THEOREM XL. \nIf a solid sphere, in an uniform and infinite fluid, revolves about an axis \ngiven in position with an uniform motion., and thejiuid be forced round \nby only this impulse of the sphere ; and every part of the fluid perse \nveres uniformly in its motion ; I say, that the periodic times of the \nparts of the fluid are as the squares of their distances from the centre ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.071956411,
+            "final_score": 0.0034970103,
+            "rerank_score": 0.0034970103,
+            "original_rank": 7,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_9_4634d40f",
+            "score": 0.0542019866,
+            "text": "12 LIFE OF SIR ISAAC NEWTON. \nof discovery — the stirring elements of that wondrous spirit, \nwhich, clear, calm, and great, moved, in after years, through \ndeep onward through deep of Nature's mysteries, unlocking her \nstrongholds, dispelling darkness, educing order — everywhere si \nlently conquering. \nNewton had an early and decided taste for drawing. Pictures, \ntaken sometimes from copies, but often from life, and drawn, \ncoloured and framed by himself, ornamented his apartment. He \nwas skilled also, in poetical composition, \" excelled in making \nverses ;\" some of these were borne in remembrance and repeated, \nseventy years afterward, by Mrs. Vincent, for whom, in early \nyouth, as Miss Storey, he formed an ardent attachment. She \nwas the sister of a physician resident near Woolsthorpe ; but \nNewton's intimate acquaintance with her began at Grantham. \nwhere they were both numbered among the inmates of the same \nhouse. Two or three years younger than himself, of great per \nsonal beauty",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0542019866,
+            "final_score": 0.00305151,
+            "rerank_score": 0.00305151,
+            "original_rank": 23,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "According to Newton, the provided context from *The Mathematical Principles of Natural Philosophy* discusses principles consistent with his laws of motion, though it does not explicitly enumerate all three laws. It refers to 'Law II' in the context of collisions and implies the first law by noting that motions happen uniformly regardless of a system's state of rest or uniform motion. These principles are applied in celestial mechanics to explain phenomena such as the calculation of centripetal forces in orbits and the observed periodic times and distances of celestial bodies like planets and comets.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton derive Kepler's Second Law (equal areas in equal times) from his laws of motion and gravitation?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_78_4ff57e5d",
+            "score": 0.0630639344,
+            "text": "OF NATURAL PHILOSOPHY. 89 \nthemselves, whether that space is at rest, or moves uniformly forwards \nin a right line without any circular motion. \nFor the differences of the motions tending towards the same parts, and \nthe sums of those that tend towards contrary parts, are, at first (by sup \nposition), in both cases the same ; and it is from those sums and differences \nthat the collisions and impulses do arise with which the bodies mutually \nimpinge one upon another. Wherefore (by Law II), the effects of those \ncollisions will be equal in both cases ; and therefore the mutual motions \nof the bodies among themselves in the one case will remain equal to the \nmutual motions of the bodies among themselves in the other. A clear \nproof of which we have from the experiment of a ship ; where all motions \nhappen after the same manner, whether the ship is at rest, or is carried \nuniformly forwards in a right line. \nCOROLLARY VI. \nIf bodies, any how moved among themselves, are urged in the direct-",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0630639344,
+            "final_score": 0.15974101,
+            "rerank_score": 0.15974101,
+            "original_rank": 12,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_190_dba089f0",
+            "score": 0.086819537,
+            "text": "iSEC. XL] OF NATURAL PHILOSOPHY. 20 i \nmoves uniformly forward in a right line, suppose the lesser bodies so small \nthat the groat body may be never at a sensible distance from that centre ; \nand then the great body will, without any sensible error, be either at rest, \nor move uniformly forward in a right line; and the lesser will revolve \nabout that great one in ellipses, and by radii drawn thereto will describe \nareas proportional to the times ; if we except the errors that may be intro \nduced by the receding of the great body from the common centre of gravity, \nor by the mutual actions of the lesser bodies upon each other. But the \nlesser bodies may be so far diminished, as that this recess and the mutual \nactions of the bodies on each other may become less than any assignable; \nand therefore so as that the orbits may become ellipses, and the areas an \nswer to the times, without any error that is not less than any assignable. \nQ.E.O. \nCASE 2. Let us imagine a system of lesser bodies",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.086819537,
+            "final_score": 0.025178842,
+            "rerank_score": 0.025178842,
+            "original_rank": 1,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_405_31830741",
+            "score": 0.0540410578,
+            "text": "BOOK lit.] OF NATURAL PHILOSOPHY. \nThat acceleration of the moon, in its passage from the quadrature C to the \nconjunction A, is in every moment of time as the generating accclerative \n3PK X TK \nforce EL, that is, as —.5 . Let the time be represented by the \nmean motion of the moon, or (which comes to the same thing) by the angle \nCTP, or even by the arc CP. At right angles upon CT erect CG equal \nto CT ; and, supposing the quadrantal arc AC to be divided into an infinite \nnumber of equal parts P/?, &c., these parts may represent the like infinite \nnumber of the equal parts of time. Let fall pic perpendicular on CT, and \ndraw TG meeting with KP, kp produced in F arid /; then will FK be \nequal to TK, and K/v be to PK as P/> to T/?, that is, in a given propor- \n3PK X TK \ntion ; and therefore FK X K&, or the area FKkf, will be as - ~^pp '> \nthat is, as EL: and compounding, the whole area GCKF will be as the \nsum of all the forces EL impressed upon the moon in the whole time CP ; \nand ther",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0540410578,
+            "final_score": 0.01665704,
+            "rerank_score": 0.01665704,
+            "original_rank": 29,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_188_85a7365a",
+            "score": 0.0627114773,
+            "text": "SEC. XL] OF NATURAL PHILOSOPHY. 1 % \nalso the uniform motion of the common centre of gravity, and the motion \nof the space which moves along with this centre uniformly in a right line, \nand also the very first, or beginning motions of the bodies in respect of this \nspace. Then (by Cor. 5, of the Laws, and the last Theorem) the subse \nquent motions will be performed in the same manner in that space, as if \nthat space together with the common centre of gravity were at rest, and as \nif the bodies did not attract each other, but were attracted by a third body \nplaced in that centre. The motion therefore in this movable space of each \nbody going off from a given place, in a given direction, with a given velo \ncity, and acted upon by a centripetal force tending to that centre, is to be \ndetermined by Prob. IX and XXVI, and at the same time will be obtained \nthe motion of the other round the same centre. With this motion com \npound the uniform progressive motion of the entire system of the sp",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0627114773,
+            "final_score": 0.016152835,
+            "rerank_score": 0.016152835,
+            "original_rank": 15,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_359_cb4b65a3",
+            "score": 0.0641646,
+            "text": "372 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK 11. \nfarther, its impulse will carry the outmost cylinder also about with it, Tin- \nless the cylinder be violently detained; and accelerate its motion till the \nperiodic times of both cylinders become equal among themselves. But if \nthe outward cylinder be violently detained, it will make an effort to retard \nthe motion of the fluid ; and unless the inward cylinder preserve that mo \ntion by means of some external force impressed thereon, it will make it \n3ease by degrees. \nAll these things will be found true by making the experiment in deep \nstanding water. \nPROPOSITION LIL THEOREM XL. \nIf a solid sphere, in an uniform and infinite fluid, revolves about an axis \ngiven in position with an uniform motion., and thejiuid be forced round \nby only this impulse of the sphere ; and every part of the fluid perse \nveres uniformly in its motion ; I say, that the periodic times of the \nparts of the fluid are as the squares of their distances from the centre ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0641646,
+            "final_score": 0.011823394,
+            "rerank_score": 0.011823394,
+            "original_rank": 9,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton derives Kepler's Second Law by demonstrating that for a body moving under a centripetal force, the radius drawn from the central body to the orbiting body sweeps out areas proportional to the time. This is implicitly shown through a geometrical derivation involving moments of time and areas, indicating that the areas increase or decrease by proportional moments.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton demonstrate that gravity is inversely proportional to the square of the distance between two masses?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_100_20477d98",
+            "score": 0.055136174,
+            "text": "SEC. II.] OF NATURAL PHILOSOPHY. Ill \nCOR. 3. If the orbit is cither a circle, or touches or cuts a circle c< ncen- \ntrically, that is, contains with a circle the least angle of contact or sec \ntion, having the same curvature rnd the same radius of curvature at the \npoint P : and if PV be a chord of this circle, drawn from the body through \nthe centre of force ; the centripetal force will be reciprocally as the solid \nQP2 \nSY2 X PV. For PV is - . \nCOR. 4. The same things being supposed, the centripetal force is as the \nsquare of the velocity directly, and that chord inversely. For the velocity \nis reciprocally as the perpendicular SY, by Cor. 1. Prop. I. \nCOR. 5. Hence if any curvilinear figure APQ, is given, and therein a \npoint S is also given, to which a centripetal force is perpetually directed. \nthat law of centripetal force may be found, by which the body P will bcj \ncontinually drawn back from a rectilinear course, and. being detained in \nthe perimeter of that figure, will descr",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.055136174,
+            "final_score": 0.015543648,
+            "rerank_score": 0.015543648,
+            "original_rank": 25,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_196_92bdb799",
+            "score": 0.0558145531,
+            "text": "SEC. Xl.J OF NATURAL PHILOSOPHY. 207 \nof the line of the apsides depends upon both < f these causes conjuncdy, so \nthat it either goes forwards or backwards in proportion to the excess ol \none of these causes above the other. Therefore since the force KL in the \nsyzygies is almost twice as great as the force LM in the quadratures, the \nexcess will be on the side of the force KL, and by consequence the line of \nthe apsides will be carried forwards. The truth of this arid the foregoing \nIE \nCorollary will be more easily understood by conceiving the system of the \ntwo bodies T and P to be surrounded on every side by several bodies S, \nS, S, dec., disposed about the orbit ESE. For by the actions of these bo \ndies the action of the body T will be diminished on every side, and decrease \nin more than a duplicate ratio of the distance. \nCOR. 8. IJut since the progress or regress of the apsides depends upon \nthe decrease of the centripetal force, that is, upon its being in a greater or \nless ra",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0558145531,
+            "final_score": 0.010091316,
+            "rerank_score": 0.010091316,
+            "original_rank": 24,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_9_4634d40f",
+            "score": 0.0627564862,
+            "text": "12 LIFE OF SIR ISAAC NEWTON. \nof discovery — the stirring elements of that wondrous spirit, \nwhich, clear, calm, and great, moved, in after years, through \ndeep onward through deep of Nature's mysteries, unlocking her \nstrongholds, dispelling darkness, educing order — everywhere si \nlently conquering. \nNewton had an early and decided taste for drawing. Pictures, \ntaken sometimes from copies, but often from life, and drawn, \ncoloured and framed by himself, ornamented his apartment. He \nwas skilled also, in poetical composition, \" excelled in making \nverses ;\" some of these were borne in remembrance and repeated, \nseventy years afterward, by Mrs. Vincent, for whom, in early \nyouth, as Miss Storey, he formed an ardent attachment. She \nwas the sister of a physician resident near Woolsthorpe ; but \nNewton's intimate acquaintance with her began at Grantham. \nwhere they were both numbered among the inmates of the same \nhouse. Two or three years younger than himself, of great per \nsonal beauty",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0627564862,
+            "final_score": 0.006666932,
+            "rerank_score": 0.006666932,
+            "original_rank": 11,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_0_51962ee9",
+            "score": 0.0722067729,
+            "text": "NEWTON'S PRINCIPIA. \nTHE \nMATHEMATICAL PRINCIPLES \nOF \nNATURAL PHILOSOPHY, \nBY SIR ISAAC NEWTON; \nTRANSLATED INTO ENGLISH BY ANDREW MOTTE. \nTO WHICH IS ADDKTV \nNEWTON'S SYSTEM OF THE WORLD ; \nWith a Portrait taken from the Bust in the Royal Observatory at Greenwich. \nFIRST AMERICAN EDITION, CAREFULLY REVISED AND CORRECTED, \nWITH A LIFE OF THE AUTHOR, BY PI. W. CHITTENDEN, M. A., &e. \nNEW-YORK \nPUBLISHED BY DANIEL ADEE, 45 LIBERTY STREET. p*- \nKntered according to Act of Congress, in the year 1846, by \nDANIEL ADEE. \n3!Ltht Clerk's Office ut'tiie Southern Oisli:ct Court of New-York. \nTWuey * Lockwoof, Stom \n16 Spruce St. N. Y.",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0722067729,
+            "final_score": 0.0056638652,
+            "rerank_score": 0.0056638652,
+            "original_rank": 4,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_58_68f0e837",
+            "score": 0.061038021,
+            "text": "LIFE OF SIR ISAAC NEWTON. 61 \nchiefly, in the possession of the family of the Earl of Portsmouth, \nthrough the Viscountess Lymington. \nEverything appertaining to Newton has been kept and che \nrished with peculiar veneration. Different memorials of him are \npreserved in Trinity College, Cambridge ; in the rooms of the \nRoyal Society, of London : and in the Museum of the Royal \nSociety of Edinburgh. \nThe manor-house, at Woolsthorpe, was visited by Dr. Stuke \nley, in October, 1721, who, in a letter to Dr. Mead, written in \n1727, gave the following description of it: — \" 'Tis built of stone, \nas is the way of the country hereabouts, and a reasonably good \none. They led me up stairs and showed me Sir Isaac's stud}-, \nwhere I supposed he studied, when in the country, in his younger \ndays, or perhaps when he visited his mother from the University. \nI observed the shelves were of his own making, being pieces of \ndeal boxes, which probably he sent his books and clothes down \nin on those occasio",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.061038021,
+            "final_score": 0.005001672,
+            "rerank_score": 0.005001672,
+            "original_rank": 17,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "As an insurance policy expert reviewing the provided documents, while they delve into intricate principles of centripetal force and orbital mechanics, the specific demonstration by Newton that gravity is inversely proportional to the square of the distance between two masses is not explicitly detailed. The context does discuss how centripetal forces relate to velocity and distance in various geometrical scenarios, and how the 'action of a body... will... decrease in more than a duplicate ratio of the distance' in perturbed systems, hinting at complex force-distance relationships.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132091,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What is Newton's argument for why gravitational force must act on all masses universally?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_248_e362ac8d",
+            "score": 0.0676975697,
+            "text": "SEC. 1L] OF NATURAL PHILOSOPHY. 261 \never, by describing spaces that are in a sesquiplicate ratio of the diameters, \nwill lose parts of their motions proportional to the wholes. \nCOR. 3. And universally, if equally swift bodies are resisted in the ratio \nof any power of the diameters, the spaces, in which homogeneous globes, \nmoving with any velocity whatsoever, will lose parts of their motions pro \nportional to the wholes, will be as the cubes of the diameters applied to \nthat power. Let those diameters be D and E : and if the resistances, where \nthe velocities are supposed equal, are as T)n and E\" ; the spaces in which \nthe globes, moving with any velocities whatsoever, will lose parts of their \nmotions proportional to the wholes, will be as D3 — n and E3 — n. And \ntherefore homogeneous globes, in describing spaces proportional to D 3 — n \nand E3 — n, will retain their velocities in the same ratio to one another as \nat the beginning. \nCOR. 4. Now if the globes are not homogeneous, th",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0676975697,
+            "final_score": 0.01107216,
+            "rerank_score": 0.01107216,
+            "original_rank": 10,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_188_85a7365a",
+            "score": 0.0536703914,
+            "text": "SEC. XL] OF NATURAL PHILOSOPHY. 1 % \nalso the uniform motion of the common centre of gravity, and the motion \nof the space which moves along with this centre uniformly in a right line, \nand also the very first, or beginning motions of the bodies in respect of this \nspace. Then (by Cor. 5, of the Laws, and the last Theorem) the subse \nquent motions will be performed in the same manner in that space, as if \nthat space together with the common centre of gravity were at rest, and as \nif the bodies did not attract each other, but were attracted by a third body \nplaced in that centre. The motion therefore in this movable space of each \nbody going off from a given place, in a given direction, with a given velo \ncity, and acted upon by a centripetal force tending to that centre, is to be \ndetermined by Prob. IX and XXVI, and at the same time will be obtained \nthe motion of the other round the same centre. With this motion com \npound the uniform progressive motion of the entire system of the sp",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0536703914,
+            "final_score": 0.0066153924,
+            "rerank_score": 0.0066153924,
+            "original_rank": 25,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_0_51962ee9",
+            "score": 0.0711422563,
+            "text": "NEWTON'S PRINCIPIA. \nTHE \nMATHEMATICAL PRINCIPLES \nOF \nNATURAL PHILOSOPHY, \nBY SIR ISAAC NEWTON; \nTRANSLATED INTO ENGLISH BY ANDREW MOTTE. \nTO WHICH IS ADDKTV \nNEWTON'S SYSTEM OF THE WORLD ; \nWith a Portrait taken from the Bust in the Royal Observatory at Greenwich. \nFIRST AMERICAN EDITION, CAREFULLY REVISED AND CORRECTED, \nWITH A LIFE OF THE AUTHOR, BY PI. W. CHITTENDEN, M. A., &e. \nNEW-YORK \nPUBLISHED BY DANIEL ADEE, 45 LIBERTY STREET. p*- \nKntered according to Act of Congress, in the year 1846, by \nDANIEL ADEE. \n3!Ltht Clerk's Office ut'tiie Southern Oisli:ct Court of New-York. \nTWuey * Lockwoof, Stom \n16 Spruce St. N. Y.",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0711422563,
+            "final_score": 0.0055549247,
+            "rerank_score": 0.0055549247,
+            "original_rank": 8,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_227_6e3f0c87",
+            "score": 0.0662733167,
+            "text": "238 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK I \nof the distances, that is, if FK be as rfFK, and therefore the area AHIKL \nas p-7 — p- ; the attraction of the corpuscle P towards the circle will \nPA AH \nbe as 1 — ; that is, as \nCOR. 2. And universally if the forces of the points at the distances D b( \nreciprocally as any power Dn of the distances; that is, if FK be as — . \nand therefore the area AHIKL as \n1 \n1 \n\" — l PH\" — \n1 PA \n, ; the attraction \nof the corpuscle P towards the circle will be as \nPA\" — 2 PH\" — l \nCOR. 3. And if the diameter of the circle be increased in itifinitum, and \nthe number n be greater than unity ; the attraction of the corpuscle P to \nwards the whole infinite plane will be reciprocally as PA\" — 2, because the \nPA \nother term \n vanishes. \nPROPOSITION XCI. PROBLEM XLV. \nTo find the attraction of a corpuscle situate in the axis of a round solid, \nto whose several points there tend equal centripetal forces decreasing \nin any ratio of the distances whatsoever. \nLet th",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0662733167,
+            "final_score": 0.004848533,
+            "rerank_score": 0.004848533,
+            "original_rank": 11,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_238_fdd2a81d",
+            "score": 0.0525629446,
+            "text": "BOOK II. \nOF THE MOTION OF BODIES. \nSECTION I. \nOf the motion of bodies that are resisted in the ratio of the velocity. \nPROPOSITION I. THEOREM I. \nTf a body is resisted in the ratio of its velocity, the motion lost by re \nsistance is as the space gone over in its motion. \nFor since the motion lost in each equal particle of time is as the velocity, \nthat is, as the particle of space gone over, then, by composition, the motion \nlost in the whole time will he as the whole space gone over. Q.E.D. \nCOR. Therefore if the body, destitute of all gravity, move by its innate \nforce only in free spaces, and there be given both its whole motion at the \nbeginning, and also the motion remaining after some part of the way is \ngone over, there will be given also the whole space which the body can de \nscribe in an infinite time. For that space will be to the space now de \nscribed as the whole motion at the beginning is to the part lost of that \nmotion. \nLEMMA I. \nQuantities proportional to their diffe",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0525629446,
+            "final_score": 0.00462753,
+            "rerank_score": 0.00462753,
+            "original_rank": 28,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided comprehensive policy context, which comprises excerpts from Newton's Principia, details various mathematical principles, motions of celestial bodies (like planets and comets), and the effects of centripetal forces and resistance. However, it does not explicitly contain Newton's specific argument for *why* gravitational force must act on all masses universally. The text describes phenomena consistent with universal gravitation but does not articulate Newton's foundational reasoning for its universal application to all matter.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132091,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton explain the perturbation of planetary orbits due to other planets?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_43_712aa3f4",
+            "score": 0.0590363294,
+            "text": "46 LIFE OF SIR ISAAC NEWTON, \nTransactions, in 1742. The instrument was the same as that \nproduced by Mr. Hadley, in 1731, and which, under the name of \nHadley's Quadrant, has been of so great use in navigation. On \nthe assembling of the new Parliament, in 1701, Newton was re- \nelected one of the members for the University of Cambridge. In \n1703, he was chosen President of the Royal Society of London, \nto which office he was annually re-elected till the period of his \ndecease — about twenty-five years afterward. \nOur author unquestionably devoted more labour to, and, in \nmany respects, took a greater pride in his Optical, than his other \ndiscoveries. This science he had placed on a new and indestruc \ntible basis ; and he wished not only to build, but to perfect the \ncostly and glowing structure. He had communicated, before the \npublication of the PRINCIPIA, his most important researches on \nlight to the Royal Society, in detached papers which were inserted \nin successive numbers of the",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0590363294,
+            "final_score": 0.0065388246,
+            "rerank_score": 0.0065388246,
+            "original_rank": 19,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_26_c7937bb8",
+            "score": 0.0754689723,
+            "text": "LIFE OF SIR ISAAC NEWTON. 29 \nnor read ; but to recover the use of my eyes, shut myself up in \nmy chamber made dark, for three days together, and used all \nmeans to divert my imagination from the sun. For if I thought \nupon him, I presently saw his picture, though I was in the dark. \nBut by keeping in the dark, and employing my mind about other \nthings, I began in three or four days to have some use of my eyes \nagain ; and by forbearing to look upon bright objects, recovered \nthem pretty well, though not so well but that, for some months \nafter, the spectrum of the sun began to return as often as I began \nto meditate upon the phenomena, even though I lay in bed at mid \nnight with my curtains drawn. But now I have been very well \nfor many years, though I am apt to think, if I durst venture my \neyes, I could still make the phantasm return by the power of my \nfancy. This story I tell you, to let you understand, thaj; in the \nobservation related by Mr. Boyle, the man's fancy probably con \n",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0754689723,
+            "final_score": 0.005641909,
+            "rerank_score": 0.005641909,
+            "original_rank": 6,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_190_dba089f0",
+            "score": 0.0573906042,
+            "text": "iSEC. XL] OF NATURAL PHILOSOPHY. 20 i \nmoves uniformly forward in a right line, suppose the lesser bodies so small \nthat the groat body may be never at a sensible distance from that centre ; \nand then the great body will, without any sensible error, be either at rest, \nor move uniformly forward in a right line; and the lesser will revolve \nabout that great one in ellipses, and by radii drawn thereto will describe \nareas proportional to the times ; if we except the errors that may be intro \nduced by the receding of the great body from the common centre of gravity, \nor by the mutual actions of the lesser bodies upon each other. But the \nlesser bodies may be so far diminished, as that this recess and the mutual \nactions of the bodies on each other may become less than any assignable; \nand therefore so as that the orbits may become ellipses, and the areas an \nswer to the times, without any error that is not less than any assignable. \nQ.E.O. \nCASE 2. Let us imagine a system of lesser bodies",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0573906042,
+            "final_score": 0.0047737225,
+            "rerank_score": 0.0047737225,
+            "original_rank": 21,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_44_004b536e",
+            "score": 0.0680444762,
+            "text": "LIFE OF SIR ISAAC NEWTON. 47 \nand to teach, and so render himself, not the \"ornament\" cnly; \nbut inconceivably more, the pre-eminent benefactor of his species. \nThe honour of knighthood v/as conferred on our author in \n1705. Soon afterward, he was a candidate again for the Repre \nsentation of the University, but was defeated by a large majority. \nIt is thought that a more pliant man was preferred by both min \nisters and electors. Newton was always remarkable for simplicity \nof dress, and his only known departure from it was on this oc \ncasion, when he is said to have appeared in a suit of laced \nclothes. \nThe Algebraical Lectures which he had, Juring nine years, \ndelivered at Cambridge, were published by Whiston, in 1707, \nunder the title of ARITHMETICS UNIVERSALIS, SINE DE COMPOSI \nTIONS ET RESOLUTIONS ARITHMETICA LIBER. This publication \nis said to have been a breach of confidence on Whiston's part. Mr. \nRalphson, not long afterward, translated the work into English ; \nand a second e",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0680444762,
+            "final_score": 0.0031236485,
+            "rerank_score": 0.0031236485,
+            "original_rank": 9,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_166_85134d30",
+            "score": 0.0533555038,
+            "text": "SEC. IX..J OF NATURAL PHILOSOPHY. 177 \nbody will deflect from the rectilinear motion into the curve line Ypk. But \nthis curve ~Vpk is the same with the curve VPQ found in Cor. 3, Prop \nXLI, in which, I said, hodies attracted with such forces would ascend \nobliquely. \nPROPOSITION XLV. PROBLEM XXXL \nTo find the motion of the apsides in orbits approaching very near to \ncircles. \nThis problem is solved arithmetically by reducing the orbit, which a \nbody revolving in a movable ellipsis (as in Cor. 2 and 3 of the above \nProp.) describes in an immovable plane, to the figure of the orbit whose \napsides are required ; and then seeking the apsides of the orbit which that \nbody describes in an immovable plane. But orbits acquire the same figure, \nif the centripetal forces with which they are described, compared between \nthemselves, are made proportional at equal altitudes. Let the point V be \nthe highest apsis, and write T for the greatest altitude CV, A for any other \naltitude CP or C/?, and X f",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0533555038,
+            "final_score": 0.0029008577,
+            "rerank_score": 0.0029008577,
+            "original_rank": 27,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton explains that the elliptical motion of a planetary body is perturbed by the gravitational attraction of other celestial bodies. These disturbances are amplified when the common center of the three interacting bodies is agitated. Despite these perturbations, the orbits of smaller bodies revolving around a larger one will generally still approximate ellipses.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "What mathematical tools did Newton use in Principia that were precursors to calculus, and why didn't he use standard calculus notation?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_0_51962ee9",
+            "score": 0.0580240376,
+            "text": "NEWTON'S PRINCIPIA. \nTHE \nMATHEMATICAL PRINCIPLES \nOF \nNATURAL PHILOSOPHY, \nBY SIR ISAAC NEWTON; \nTRANSLATED INTO ENGLISH BY ANDREW MOTTE. \nTO WHICH IS ADDKTV \nNEWTON'S SYSTEM OF THE WORLD ; \nWith a Portrait taken from the Bust in the Royal Observatory at Greenwich. \nFIRST AMERICAN EDITION, CAREFULLY REVISED AND CORRECTED, \nWITH A LIFE OF THE AUTHOR, BY PI. W. CHITTENDEN, M. A., &e. \nNEW-YORK \nPUBLISHED BY DANIEL ADEE, 45 LIBERTY STREET. p*- \nKntered according to Act of Congress, in the year 1846, by \nDANIEL ADEE. \n3!Ltht Clerk's Office ut'tiie Southern Oisli:ct Court of New-York. \nTWuey * Lockwoof, Stom \n16 Spruce St. N. Y.",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0580240376,
+            "final_score": 0.016152835,
+            "rerank_score": 0.016152835,
+            "original_rank": 18,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_462_435e0991",
+            "score": 0.0561698936,
+            "text": "478 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK III, \nI \nThe Comet's \nDist. \nfrom \nsun. \nLongitude \ncomputed. \nLatitud. \ncompu \nted. \nLongitude \nobserved. \nLatitude \nobserved \nDif \nLo. \nDif. \nLat. \nDec. 12 \n29 \nFeb. 5 \nMar. 5 \n2792 \n8403 \n16669 \n21737 \nv? 63.32' \nX 13.131 \n8 17 .00' \n29 .19? \n8MSi \n28. 00 \n15. 29f \n12. 4 \nV55 6° 3U \nX 13 ,ll| \n« 16 .59? \n29 .20f \nS°.26 \n28 .10TV \n15 .27=f \n12. 3i \n+ 1 \n+2 \n+0 \n-1 \n- 7$ \n-10T'-0- \n+ 2*\" \n+ i \nBut afterwards Dr. Halley did determine the orbit to a greater accu \nracy by an arithmetical calculus than could be done by linear descriptions : \nand, retaining the place of the nodes in s and ^ 1° 53', and the inclina \ntion of the plane of the orbit to the ecliptic 61° 20|', as well as the time \nof the comet's being in perihelio, Dec. 8(i. OUh. 04', he found the distance \nof the perihelion from the ascending node measured in the comet's orbit \n9° 20', and the Ititus rectum of the parabola 2430 parts, supposing the \nmean distance of the sun from the earth",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0561698936,
+            "final_score": 0.014447852,
+            "rerank_score": 0.014447852,
+            "original_rank": 19,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_58_68f0e837",
+            "score": 0.0694915876,
+            "text": "LIFE OF SIR ISAAC NEWTON. 61 \nchiefly, in the possession of the family of the Earl of Portsmouth, \nthrough the Viscountess Lymington. \nEverything appertaining to Newton has been kept and che \nrished with peculiar veneration. Different memorials of him are \npreserved in Trinity College, Cambridge ; in the rooms of the \nRoyal Society, of London : and in the Museum of the Royal \nSociety of Edinburgh. \nThe manor-house, at Woolsthorpe, was visited by Dr. Stuke \nley, in October, 1721, who, in a letter to Dr. Mead, written in \n1727, gave the following description of it: — \" 'Tis built of stone, \nas is the way of the country hereabouts, and a reasonably good \none. They led me up stairs and showed me Sir Isaac's stud}-, \nwhere I supposed he studied, when in the country, in his younger \ndays, or perhaps when he visited his mother from the University. \nI observed the shelves were of his own making, being pieces of \ndeal boxes, which probably he sent his books and clothes down \nin on those occasio",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0694915876,
+            "final_score": 0.0041019293,
+            "rerank_score": 0.0041019293,
+            "original_rank": 9,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_438_933f4987",
+            "score": 0.0557202175,
+            "text": "45.4 THE MATHEMATICAL PRINCIPLES [BOOK III, \nmoon's quadratures the mean distance of the same centres is 60f such semi- \ndiameters of the earth ; for these two distances are to the mean distance oi \nthe moon in the octants as 69 and 70 to 69|, by Prop. XXVIII. \nCOR. 9. The mean distance of the centres of the earth and moon in the \nsyzygies of the moon is 60 mean semi-diameters of the earth, and a 10th \npart of one semi-diameter; and in the moon's quadratures the mean dis \ntance of the same centres is 61 mean semi- diameters of the earth, subduct \ning one 30th part of one semi-diameter. \nCOR. 10. In the moon's syzygies its mean horizontal parallax in the lat \nitudes of 0. 30, 38, 45, 52, 60, 90 degrees is 57' 20\", 57' 16\", 57' 14\", 57 \n12\", 57' 10\", 57' 8\", 57' 4\", respectively. \nIn these computations I do not consider the magnetic attraction of the \nearth, whose quantity is very small and unknown : if this quantity should \never be found out, and the measures of degrees upon the meridia",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0557202175,
+            "final_score": 0.0035106493,
+            "rerank_score": 0.0035106493,
+            "original_rank": 20,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_161_fb6b8928",
+            "score": 0.0703866929,
+            "text": "1.72 THE MATHEMATICAL PRINCIPLES [BOOK 1. \nis at first urged in I, as DR to DF. Let the body go on towards k; and \nabout the centre C, with the interval Ck, describe the circle ke, meeting \nthe right line PD in e, and let there be erected the lines eg, ev, ew, ordi- \nnately applied to the curves BF§*, abv} acw. From the given rectangle \nPDRQ, and the given law of centripetal force, by which the first body is \nacted on, the curve line BF»* is also given, by the construction of Prop. \nXXVII, and its Cor. 1. Then from the given angle CIK is given the \nproportion of the nascent lines 1K; KN ; and thence, by the construction \nof Prob. XXVIII, there is given the quantity Q,, with the curve lines abv, \nacw ; and therefore, at the end of any time Dbve, there is given both \nthe altitude of the body Ce or Ck, and the area Dcwe, with the sector \nequal to it XCy, the angle 1C A:, and the place k} in which the body will \nthen be found. Q.E.I. \nWe suppose in these Propositions the centripetal force ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0703866929,
+            "final_score": 0.003135836,
+            "rerank_score": 0.003135836,
+            "original_rank": 8,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "In Principia, Newton employed mathematical tools such as the method of \"moments\" and \"evanescent lines\" to analyze rates of change and accumulations, which served as precursors to his development of calculus. He deliberately chose to present these concepts through classical \"geometrical composition\" rather than using the standard analytical calculus notation, likely to align with the mathematical style and understanding prevalent among scholars of his time and for broader acceptance of his revolutionary ideas.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132091,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton use the concept of centripetal force to explain orbital motion?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_166_85134d30",
+            "score": 0.0605457276,
+            "text": "SEC. IX..J OF NATURAL PHILOSOPHY. 177 \nbody will deflect from the rectilinear motion into the curve line Ypk. But \nthis curve ~Vpk is the same with the curve VPQ found in Cor. 3, Prop \nXLI, in which, I said, hodies attracted with such forces would ascend \nobliquely. \nPROPOSITION XLV. PROBLEM XXXL \nTo find the motion of the apsides in orbits approaching very near to \ncircles. \nThis problem is solved arithmetically by reducing the orbit, which a \nbody revolving in a movable ellipsis (as in Cor. 2 and 3 of the above \nProp.) describes in an immovable plane, to the figure of the orbit whose \napsides are required ; and then seeking the apsides of the orbit which that \nbody describes in an immovable plane. But orbits acquire the same figure, \nif the centripetal forces with which they are described, compared between \nthemselves, are made proportional at equal altitudes. Let the point V be \nthe highest apsis, and write T for the greatest altitude CV, A for any other \naltitude CP or C/?, and X f",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0605457276,
+            "final_score": 0.119819485,
+            "rerank_score": 0.119819485,
+            "original_rank": 17,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_188_85a7365a",
+            "score": 0.0507092774,
+            "text": "SEC. XL] OF NATURAL PHILOSOPHY. 1 % \nalso the uniform motion of the common centre of gravity, and the motion \nof the space which moves along with this centre uniformly in a right line, \nand also the very first, or beginning motions of the bodies in respect of this \nspace. Then (by Cor. 5, of the Laws, and the last Theorem) the subse \nquent motions will be performed in the same manner in that space, as if \nthat space together with the common centre of gravity were at rest, and as \nif the bodies did not attract each other, but were attracted by a third body \nplaced in that centre. The motion therefore in this movable space of each \nbody going off from a given place, in a given direction, with a given velo \ncity, and acted upon by a centripetal force tending to that centre, is to be \ndetermined by Prob. IX and XXVI, and at the same time will be obtained \nthe motion of the other round the same centre. With this motion com \npound the uniform progressive motion of the entire system of the sp",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0507092774,
+            "final_score": 0.064653486,
+            "rerank_score": 0.064653486,
+            "original_rank": 28,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_196_92bdb799",
+            "score": 0.0497590788,
+            "text": "SEC. Xl.J OF NATURAL PHILOSOPHY. 207 \nof the line of the apsides depends upon both < f these causes conjuncdy, so \nthat it either goes forwards or backwards in proportion to the excess ol \none of these causes above the other. Therefore since the force KL in the \nsyzygies is almost twice as great as the force LM in the quadratures, the \nexcess will be on the side of the force KL, and by consequence the line of \nthe apsides will be carried forwards. The truth of this arid the foregoing \nIE \nCorollary will be more easily understood by conceiving the system of the \ntwo bodies T and P to be surrounded on every side by several bodies S, \nS, S, dec., disposed about the orbit ESE. For by the actions of these bo \ndies the action of the body T will be diminished on every side, and decrease \nin more than a duplicate ratio of the distance. \nCOR. 8. IJut since the progress or regress of the apsides depends upon \nthe decrease of the centripetal force, that is, upon its being in a greater or \nless ra",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0497590788,
+            "final_score": 0.062216982,
+            "rerank_score": 0.062216982,
+            "original_rank": 30,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_161_fb6b8928",
+            "score": 0.0517363623,
+            "text": "1.72 THE MATHEMATICAL PRINCIPLES [BOOK 1. \nis at first urged in I, as DR to DF. Let the body go on towards k; and \nabout the centre C, with the interval Ck, describe the circle ke, meeting \nthe right line PD in e, and let there be erected the lines eg, ev, ew, ordi- \nnately applied to the curves BF§*, abv} acw. From the given rectangle \nPDRQ, and the given law of centripetal force, by which the first body is \nacted on, the curve line BF»* is also given, by the construction of Prop. \nXXVII, and its Cor. 1. Then from the given angle CIK is given the \nproportion of the nascent lines 1K; KN ; and thence, by the construction \nof Prob. XXVIII, there is given the quantity Q,, with the curve lines abv, \nacw ; and therefore, at the end of any time Dbve, there is given both \nthe altitude of the body Ce or Ck, and the area Dcwe, with the sector \nequal to it XCy, the angle 1C A:, and the place k} in which the body will \nthen be found. Q.E.I. \nWe suppose in these Propositions the centripetal force ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0517363623,
+            "final_score": 0.031858854,
+            "rerank_score": 0.031858854,
+            "original_rank": 27,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_275_5e104a08",
+            "score": 0.0668424591,
+            "text": "288 THE MATHEMATICAL PRINCIPLES [_BoOK 11 \narc PQ is the fourth part of the decrement of the arc PR. Whence also \nif the area QSr be taken equal to the area PSQ, the decrement of the arc \nPQ will be equal to half the lineola Rr ; and therefore the force of resist \nance and the centripetal force are to each other as the lineola jRrandTQ \nwhich they generate in the same time. Because the centripetal force with \nwhich the body is urged in P is reciprocally as SP2, and (by Lem. X, \nBook I) the lineola TQ, which is generated by that force, is in a ratio \ncompounded of the ratio of this force and the duplicate ratio of the time \nin which the arc PQ, is described (for in this case I neglect the resistance, \nas being infinitely less than the centripetal force), it follows that TQ X \nSP2, that is (by the last Lemma), fPQ2 X SP, will be in a duplicate ra \ntio of the time, and therefore the time is as PQ, X v/SP ; and the velo \ncity of the body, with which the arc PQ is described in that time, as",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0668424591,
+            "final_score": 0.024007745,
+            "rerank_score": 0.024007745,
+            "original_rank": 13,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton explained orbital motion by asserting that a centripetal force continuously draws a celestial body from its natural rectilinear path, compelling it into a curved orbit around a central point. He established that this force is proportional to the body's velocity squared and inversely proportional to the radius of its orbit, causing bodies to revolve in conic sections. This mathematical relationship provided a foundation for understanding planetary motion and observed periodic times.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "How does Newton handle motion in resisting media, such as air or fluids?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_273_7df2b502",
+            "score": 0.0570105202,
+            "text": "286 THE MATHEMATICAL PRINCIPLES [BOOK II \nBD X V2 \none to another as the area r-^ — , and the difference of the areas DET \nAD \nand A6NK ; and moreover since the space, in a non-resisting medium, is \nBD X V2 \nperpetually as Tu~~> an(^ tne sPace> in a resisting medium, is perpetu \nally as the difference of the areas DET and A&NK ; it necessarily follows, \nthat the spaces, in both mediums, described in any equal times, are one to \nBD X V2 \nanother as that area 7-5 — » an(^ ^he difference of the areas DET and \nA6NK. Q.E.D. \nSCHOLIUM. \nThe resistance of spherical bodies in fluids arises partly from the tena \ncity, partly from the attrition, and partly from the density of the medium. \nAnd that part of the resistance which arises from the density of the fluid \nis, as I said, in a duplicate ratio of the velocity ; the other part, which \narises from the tenacity of the fluid, is uniform, or as the moment of the \ntime ; and, therefore, we might now proceed to the motion of bodies, whicli \nare re",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0570105202,
+            "final_score": 0.10818896,
+            "rerank_score": 0.10818896,
+            "original_rank": 21,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_293_31ebf42f",
+            "score": 0.0587201528,
+            "text": "306 THE MATHEMATICAL PRINCIPLES [BOOK. 11 \nratio. But at the beginning of the motion, when the bodies begin to de \nscend and describe those arcs, the forces, which at that time are proportional \nto the arcs, will generate velocities proportional to the arcs. Therefore \nthe velocities will be always as the whole arcs to be described, and there \nfore those arcs will be described in the same time. Q,.E.D. \nPROPOSITION XXVII. THEOREM XXII. \nIf fnnependulous bodies are resisted in the duplicate ratio of their \nvelocities, the differences between the times of the oscillations in a re \nsisting medium, and the times of the oscillations in a non-resisting \nmedium of the same specific gravity, will be proportional to the arcs \ndescribed in oscillating nearly. \nFor let equal pendulums in a re \nsisting medium describe the unequal \narcs A, B ; and the resistance of the \nbody in the arc A will be to the resist \nance of the body in the correspondent \npart of the arc B in the duplicate ra \ntio of the ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0587201528,
+            "final_score": 0.019456575,
+            "rerank_score": 0.019456575,
+            "original_rank": 18,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_359_cb4b65a3",
+            "score": 0.0817577392,
+            "text": "372 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK 11. \nfarther, its impulse will carry the outmost cylinder also about with it, Tin- \nless the cylinder be violently detained; and accelerate its motion till the \nperiodic times of both cylinders become equal among themselves. But if \nthe outward cylinder be violently detained, it will make an effort to retard \nthe motion of the fluid ; and unless the inward cylinder preserve that mo \ntion by means of some external force impressed thereon, it will make it \n3ease by degrees. \nAll these things will be found true by making the experiment in deep \nstanding water. \nPROPOSITION LIL THEOREM XL. \nIf a solid sphere, in an uniform and infinite fluid, revolves about an axis \ngiven in position with an uniform motion., and thejiuid be forced round \nby only this impulse of the sphere ; and every part of the fluid perse \nveres uniformly in its motion ; I say, that the periodic times of the \nparts of the fluid are as the squares of their distances from the centre ",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0817577392,
+            "final_score": 0.015014749,
+            "rerank_score": 0.015014749,
+            "original_rank": 3,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_80_f15e088b",
+            "score": 0.0898563,
+            "text": "OF NATUltAL PHILOSOPHY. 9 I \nreflexion, suppose the body A comes to the place s, and the body B to the \nplace k. Withdraw the body B, and find the place v, from which if the \nbody A, being let go, should after one oscillation return to the place r, st \nmay be a fourth part of rv. so placed in the middle thereof as to leave is \nequal to tv, and let the chord of the arc tA represent the velocity which \nthe body A had in the place A immediately after reflexion. For t will be \nthe true and correct place to which the body A should have ascended, if \nthe resistance of the air had been taken off. In the s.ime way we are to \ncorrect the place k to which the body B ascends, by finding the place I to \nwhich it should have ascended in vacuo. And thus everything may be \nsubjected to experiment, in the same manner as if we were really placed \nin vacuo. These things being done, we are to take the product (if I may \nso say) of the body A, by the chord of the arc TA (which represents its \nvelocity), t",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0898563,
+            "final_score": 0.012241275,
+            "rerank_score": 0.012241275,
+            "original_rank": 2,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_279_f2ea4010",
+            "score": 0.0632399693,
+            "text": "292 THE MATHEMATICAL PRINCIPLES | \nBoOK II \nforce of resistance is not as the density, the density must be so much aug \nmented or diminished, that either the excess of the resistance may be taken \naway, or the defect supplied. \nPROPOSITION XVII. PROBLEM IV \nTo find the centripetal force and the resisting force of the medium, by \nwhich a body, the law of the velocity being given, shall revolve in a \ngiven spiral. \nLet that spiral be PQR. From the velocity, \nwith which the body goes over the very small arc \nPQ,, the time will be given : and from the altitude \nTQ,, which is as the centripetal force, and the \nsquare of the time, that force will be given. Then \nfrom the difference RSr of the areas PSQ, and \nQ,SR described in equal particles of time, the re \ntardation of the body will be given ; and from \nthe retardation will be found the resisting force \nand density of the medium. \nPROPOSITION XVIII. PROBLEM V. \nThe law of centripptal force being given, to find the density of the me \ndium i",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0632399693,
+            "final_score": 0.0065134983,
+            "rerank_score": 0.0065134983,
+            "original_rank": 11,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton describes motion in resisting media, such as air or fluids, by acknowledging that resistance arises from the medium's tenacity, attrition, and density. Specifically, the resistance due to the fluid's density is in a duplicate ratio of the velocity, while the resistance from the fluid's tenacity is uniform or proportional to the moment of time. This resistance causes retardation, affecting the spaces bodies describe and their oscillation times compared to non-resisting environments.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "In what way does Newton's notion of absolute space and time differ from relative motion, and how does it support his laws?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_78_4ff57e5d",
+            "score": 0.0589337647,
+            "text": "OF NATURAL PHILOSOPHY. 89 \nthemselves, whether that space is at rest, or moves uniformly forwards \nin a right line without any circular motion. \nFor the differences of the motions tending towards the same parts, and \nthe sums of those that tend towards contrary parts, are, at first (by sup \nposition), in both cases the same ; and it is from those sums and differences \nthat the collisions and impulses do arise with which the bodies mutually \nimpinge one upon another. Wherefore (by Law II), the effects of those \ncollisions will be equal in both cases ; and therefore the mutual motions \nof the bodies among themselves in the one case will remain equal to the \nmutual motions of the bodies among themselves in the other. A clear \nproof of which we have from the experiment of a ship ; where all motions \nhappen after the same manner, whether the ship is at rest, or is carried \nuniformly forwards in a right line. \nCOROLLARY VI. \nIf bodies, any how moved among themselves, are urged in the direct-",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0589337647,
+            "final_score": 0.025468083,
+            "rerank_score": 0.025468083,
+            "original_rank": 13,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_341_ed117546",
+            "score": 0.0538948439,
+            "text": "354 \nTHE MATHEMATICAL PRINCIPLES \n[BOOK Jl \nthey were descending. And by these motions the times of their falling \nwere prolonged, and increased by half a second sometimes, and sometimes \nby a whole second. The second and fourth bladder fell most directly the \nfirst time, and the first and third the second time. The fifth bladder was \nwrinkled, and by its wrinkles was a little retarded. I found their diame \nters by their circumferences measured with a very fine thread wound about \nthem twice. In the following table I have compared the experiments with \nthe theory ; making the density of air to be to the density of rain-water as \n1 to 860, and computing the spaces which by the theory the globes ought \nto describe in falling. \nThe weight \nof tlie bla !- The diameters \nChe times ol \nfalling from \na height oi \nThe spaces winch by \nthe theory ought to \nhave been described \nThe difference be \ntween the theory \nand the experi \n' \n•272 t, t-t \nin those times \nments \n128 grains 5.28 inches \n19\"",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0538948439,
+            "final_score": 0.013902059,
+            "rerank_score": 0.013902059,
+            "original_rank": 26,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_188_85a7365a",
+            "score": 0.0550389141,
+            "text": "SEC. XL] OF NATURAL PHILOSOPHY. 1 % \nalso the uniform motion of the common centre of gravity, and the motion \nof the space which moves along with this centre uniformly in a right line, \nand also the very first, or beginning motions of the bodies in respect of this \nspace. Then (by Cor. 5, of the Laws, and the last Theorem) the subse \nquent motions will be performed in the same manner in that space, as if \nthat space together with the common centre of gravity were at rest, and as \nif the bodies did not attract each other, but were attracted by a third body \nplaced in that centre. The motion therefore in this movable space of each \nbody going off from a given place, in a given direction, with a given velo \ncity, and acted upon by a centripetal force tending to that centre, is to be \ndetermined by Prob. IX and XXVI, and at the same time will be obtained \nthe motion of the other round the same centre. With this motion com \npound the uniform progressive motion of the entire system of the sp",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0550389141,
+            "final_score": 0.010611421,
+            "rerank_score": 0.010611421,
+            "original_rank": 22,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_44_004b536e",
+            "score": 0.0542319715,
+            "text": "LIFE OF SIR ISAAC NEWTON. 47 \nand to teach, and so render himself, not the \"ornament\" cnly; \nbut inconceivably more, the pre-eminent benefactor of his species. \nThe honour of knighthood v/as conferred on our author in \n1705. Soon afterward, he was a candidate again for the Repre \nsentation of the University, but was defeated by a large majority. \nIt is thought that a more pliant man was preferred by both min \nisters and electors. Newton was always remarkable for simplicity \nof dress, and his only known departure from it was on this oc \ncasion, when he is said to have appeared in a suit of laced \nclothes. \nThe Algebraical Lectures which he had, Juring nine years, \ndelivered at Cambridge, were published by Whiston, in 1707, \nunder the title of ARITHMETICS UNIVERSALIS, SINE DE COMPOSI \nTIONS ET RESOLUTIONS ARITHMETICA LIBER. This publication \nis said to have been a breach of confidence on Whiston's part. Mr. \nRalphson, not long afterward, translated the work into English ; \nand a second e",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0542319715,
+            "final_score": 0.0056638652,
+            "rerank_score": 0.0056638652,
+            "original_rank": 24,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_0_51962ee9",
+            "score": 0.057574477,
+            "text": "NEWTON'S PRINCIPIA. \nTHE \nMATHEMATICAL PRINCIPLES \nOF \nNATURAL PHILOSOPHY, \nBY SIR ISAAC NEWTON; \nTRANSLATED INTO ENGLISH BY ANDREW MOTTE. \nTO WHICH IS ADDKTV \nNEWTON'S SYSTEM OF THE WORLD ; \nWith a Portrait taken from the Bust in the Royal Observatory at Greenwich. \nFIRST AMERICAN EDITION, CAREFULLY REVISED AND CORRECTED, \nWITH A LIFE OF THE AUTHOR, BY PI. W. CHITTENDEN, M. A., &e. \nNEW-YORK \nPUBLISHED BY DANIEL ADEE, 45 LIBERTY STREET. p*- \nKntered according to Act of Congress, in the year 1846, by \nDANIEL ADEE. \n3!Ltht Clerk's Office ut'tiie Southern Oisli:ct Court of New-York. \nTWuey * Lockwoof, Stom \n16 Spruce St. N. Y.",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.057574477,
+            "final_score": 0.0056200367,
+            "rerank_score": 0.0056200367,
+            "original_rank": 17,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Newton's notion of absolute space and time posits a universal, fixed reference for all motion, distinct from relative motion which describes movement solely between objects. This concept supports his laws by demonstrating that the relative motions and interactions of bodies remain consistent, whether the containing space is at absolute rest or moving uniformly. This invariance ensures the universal applicability of his laws across all inertial frames.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132091,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Who was the grandfather of Isaac Newton?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_58_68f0e837",
+            "score": 0.0498560257,
+            "text": "LIFE OF SIR ISAAC NEWTON. 61 \nchiefly, in the possession of the family of the Earl of Portsmouth, \nthrough the Viscountess Lymington. \nEverything appertaining to Newton has been kept and che \nrished with peculiar veneration. Different memorials of him are \npreserved in Trinity College, Cambridge ; in the rooms of the \nRoyal Society, of London : and in the Museum of the Royal \nSociety of Edinburgh. \nThe manor-house, at Woolsthorpe, was visited by Dr. Stuke \nley, in October, 1721, who, in a letter to Dr. Mead, written in \n1727, gave the following description of it: — \" 'Tis built of stone, \nas is the way of the country hereabouts, and a reasonably good \none. They led me up stairs and showed me Sir Isaac's stud}-, \nwhere I supposed he studied, when in the country, in his younger \ndays, or perhaps when he visited his mother from the University. \nI observed the shelves were of his own making, being pieces of \ndeal boxes, which probably he sent his books and clothes down \nin on those occasio",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0498560257,
+            "final_score": 0.20930801,
+            "rerank_score": 0.20930801,
+            "original_rank": 30,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_9_4634d40f",
+            "score": 0.0606404357,
+            "text": "12 LIFE OF SIR ISAAC NEWTON. \nof discovery — the stirring elements of that wondrous spirit, \nwhich, clear, calm, and great, moved, in after years, through \ndeep onward through deep of Nature's mysteries, unlocking her \nstrongholds, dispelling darkness, educing order — everywhere si \nlently conquering. \nNewton had an early and decided taste for drawing. Pictures, \ntaken sometimes from copies, but often from life, and drawn, \ncoloured and framed by himself, ornamented his apartment. He \nwas skilled also, in poetical composition, \" excelled in making \nverses ;\" some of these were borne in remembrance and repeated, \nseventy years afterward, by Mrs. Vincent, for whom, in early \nyouth, as Miss Storey, he formed an ardent attachment. She \nwas the sister of a physician resident near Woolsthorpe ; but \nNewton's intimate acquaintance with her began at Grantham. \nwhere they were both numbered among the inmates of the same \nhouse. Two or three years younger than himself, of great per \nsonal beauty",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0606404357,
+            "final_score": 0.045777272,
+            "rerank_score": 0.045777272,
+            "original_rank": 12,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_43_712aa3f4",
+            "score": 0.0636024401,
+            "text": "46 LIFE OF SIR ISAAC NEWTON, \nTransactions, in 1742. The instrument was the same as that \nproduced by Mr. Hadley, in 1731, and which, under the name of \nHadley's Quadrant, has been of so great use in navigation. On \nthe assembling of the new Parliament, in 1701, Newton was re- \nelected one of the members for the University of Cambridge. In \n1703, he was chosen President of the Royal Society of London, \nto which office he was annually re-elected till the period of his \ndecease — about twenty-five years afterward. \nOur author unquestionably devoted more labour to, and, in \nmany respects, took a greater pride in his Optical, than his other \ndiscoveries. This science he had placed on a new and indestruc \ntible basis ; and he wished not only to build, but to perfect the \ncostly and glowing structure. He had communicated, before the \npublication of the PRINCIPIA, his most important researches on \nlight to the Royal Society, in detached papers which were inserted \nin successive numbers of the",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0636024401,
+            "final_score": 0.016529556,
+            "rerank_score": 0.016529556,
+            "original_rank": 10,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_26_c7937bb8",
+            "score": 0.0538583212,
+            "text": "LIFE OF SIR ISAAC NEWTON. 29 \nnor read ; but to recover the use of my eyes, shut myself up in \nmy chamber made dark, for three days together, and used all \nmeans to divert my imagination from the sun. For if I thought \nupon him, I presently saw his picture, though I was in the dark. \nBut by keeping in the dark, and employing my mind about other \nthings, I began in three or four days to have some use of my eyes \nagain ; and by forbearing to look upon bright objects, recovered \nthem pretty well, though not so well but that, for some months \nafter, the spectrum of the sun began to return as often as I began \nto meditate upon the phenomena, even though I lay in bed at mid \nnight with my curtains drawn. But now I have been very well \nfor many years, though I am apt to think, if I durst venture my \neyes, I could still make the phantasm return by the power of my \nfancy. This story I tell you, to let you understand, thaj; in the \nobservation related by Mr. Boyle, the man's fancy probably con \n",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0538583212,
+            "final_score": 0.0072608665,
+            "rerank_score": 0.0072608665,
+            "original_rank": 21,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_179_2e860fb6",
+            "score": 0.0846994817,
+            "text": "t90 THE MATHEMATICAL PRINCIPLES [Bo^K 1. \nCOR. 1. Hence also the times of oscillating, falling, and revolving bodies \nmay be compared among themselves. For if the diameter of the wheel \nwith which the cycloid is described within the globe is supposed equal to \nthe semi-diameter of the globe, the cycloid will become a right line passing \nthrough the centre of the globe, and the oscillation will be changed into a \ndescent and subsequent ascent in that right line. Whence there is given \nboth the time of the descent from any place to the centre, and the time equal \nto it in which the body revolving uniformly about the centre of the globe \nat any distance describes an arc of a quadrant For this time (by \nCase 2) is to the time of half the oscillation in any cycloid QJR.S as 1 to \nAR \nV AC' \nCOR. 2. Hence also follow what Sir Christopher Wren and M. Huygevs \nhave discovered concerning the vulgar cycloid. For if the diameter of the \nglobe be infinitely increased, its sphacrical superficies wi",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0846994817,
+            "final_score": 0.00087276706,
+            "rerank_score": 0.00087276706,
+            "original_rank": 1,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the provided policy documents, the identity of Isaac Newton's grandfather is not mentioned.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Do we know any other descent of Isaac Newton apart from his grandfather?",
+        "search_results": [
+          {
+            "id": "input_20250810_005505.pdf_58_68f0e837",
+            "score": 0.0517415106,
+            "text": "LIFE OF SIR ISAAC NEWTON. 61 \nchiefly, in the possession of the family of the Earl of Portsmouth, \nthrough the Viscountess Lymington. \nEverything appertaining to Newton has been kept and che \nrished with peculiar veneration. Different memorials of him are \npreserved in Trinity College, Cambridge ; in the rooms of the \nRoyal Society, of London : and in the Museum of the Royal \nSociety of Edinburgh. \nThe manor-house, at Woolsthorpe, was visited by Dr. Stuke \nley, in October, 1721, who, in a letter to Dr. Mead, written in \n1727, gave the following description of it: — \" 'Tis built of stone, \nas is the way of the country hereabouts, and a reasonably good \none. They led me up stairs and showed me Sir Isaac's stud}-, \nwhere I supposed he studied, when in the country, in his younger \ndays, or perhaps when he visited his mother from the University. \nI observed the shelves were of his own making, being pieces of \ndeal boxes, which probably he sent his books and clothes down \nin on those occasio",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0517415106,
+            "final_score": 0.06512755,
+            "rerank_score": 0.06512755,
+            "original_rank": 26,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_9_4634d40f",
+            "score": 0.052738,
+            "text": "12 LIFE OF SIR ISAAC NEWTON. \nof discovery — the stirring elements of that wondrous spirit, \nwhich, clear, calm, and great, moved, in after years, through \ndeep onward through deep of Nature's mysteries, unlocking her \nstrongholds, dispelling darkness, educing order — everywhere si \nlently conquering. \nNewton had an early and decided taste for drawing. Pictures, \ntaken sometimes from copies, but often from life, and drawn, \ncoloured and framed by himself, ornamented his apartment. He \nwas skilled also, in poetical composition, \" excelled in making \nverses ;\" some of these were borne in remembrance and repeated, \nseventy years afterward, by Mrs. Vincent, for whom, in early \nyouth, as Miss Storey, he formed an ardent attachment. She \nwas the sister of a physician resident near Woolsthorpe ; but \nNewton's intimate acquaintance with her began at Grantham. \nwhere they were both numbered among the inmates of the same \nhouse. Two or three years younger than himself, of great per \nsonal beauty",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.052738,
+            "final_score": 0.015543648,
+            "rerank_score": 0.015543648,
+            "original_rank": 22,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_43_712aa3f4",
+            "score": 0.0668229386,
+            "text": "46 LIFE OF SIR ISAAC NEWTON, \nTransactions, in 1742. The instrument was the same as that \nproduced by Mr. Hadley, in 1731, and which, under the name of \nHadley's Quadrant, has been of so great use in navigation. On \nthe assembling of the new Parliament, in 1701, Newton was re- \nelected one of the members for the University of Cambridge. In \n1703, he was chosen President of the Royal Society of London, \nto which office he was annually re-elected till the period of his \ndecease — about twenty-five years afterward. \nOur author unquestionably devoted more labour to, and, in \nmany respects, took a greater pride in his Optical, than his other \ndiscoveries. This science he had placed on a new and indestruc \ntible basis ; and he wished not only to build, but to perfect the \ncostly and glowing structure. He had communicated, before the \npublication of the PRINCIPIA, his most important researches on \nlight to the Royal Society, in detached papers which were inserted \nin successive numbers of the",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0668229386,
+            "final_score": 0.011823394,
+            "rerank_score": 0.011823394,
+            "original_rank": 6,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_44_004b536e",
+            "score": 0.0627842173,
+            "text": "LIFE OF SIR ISAAC NEWTON. 47 \nand to teach, and so render himself, not the \"ornament\" cnly; \nbut inconceivably more, the pre-eminent benefactor of his species. \nThe honour of knighthood v/as conferred on our author in \n1705. Soon afterward, he was a candidate again for the Repre \nsentation of the University, but was defeated by a large majority. \nIt is thought that a more pliant man was preferred by both min \nisters and electors. Newton was always remarkable for simplicity \nof dress, and his only known departure from it was on this oc \ncasion, when he is said to have appeared in a suit of laced \nclothes. \nThe Algebraical Lectures which he had, Juring nine years, \ndelivered at Cambridge, were published by Whiston, in 1707, \nunder the title of ARITHMETICS UNIVERSALIS, SINE DE COMPOSI \nTIONS ET RESOLUTIONS ARITHMETICA LIBER. This publication \nis said to have been a breach of confidence on Whiston's part. Mr. \nRalphson, not long afterward, translated the work into English ; \nand a second e",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.0627842173,
+            "final_score": 0.009125637,
+            "rerank_score": 0.009125637,
+            "original_rank": 13,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005505.pdf_26_c7937bb8",
+            "score": 0.058348272,
+            "text": "LIFE OF SIR ISAAC NEWTON. 29 \nnor read ; but to recover the use of my eyes, shut myself up in \nmy chamber made dark, for three days together, and used all \nmeans to divert my imagination from the sun. For if I thought \nupon him, I presently saw his picture, though I was in the dark. \nBut by keeping in the dark, and employing my mind about other \nthings, I began in three or four days to have some use of my eyes \nagain ; and by forbearing to look upon bright objects, recovered \nthem pretty well, though not so well but that, for some months \nafter, the spectrum of the sun began to return as often as I began \nto meditate upon the phenomena, even though I lay in bed at mid \nnight with my curtains drawn. But now I have been very well \nfor many years, though I am apt to think, if I durst venture my \neyes, I could still make the phantasm return by the power of my \nfancy. This story I tell you, to let you understand, thaj; in the \nobservation related by Mr. Boyle, the man's fancy probably con \n",
+            "document_name": "input_20250810_005505.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.058348272,
+            "final_score": 0.0027469008,
+            "rerank_score": 0.0027469008,
+            "original_rank": 17,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the comprehensive policy context, there is no information provided regarding any direct descendants of Isaac Newton, such as children or grandchildren. The document focuses on his life, achievements, and the eventual possession of his effects by the family of the Earl of Portsmouth through the Viscountess Lymington, who was connected through his half-niece, Catherine Barton.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 132459,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 15.68941879272461,
+      "query_embedding": {
+        "total": 1.2392711639404297,
+        "individual": [
+          1.1728217601776123,
+          1.1461420059204102,
+          1.1692140102386475,
+          1.1521434783935547,
+          1.2336997985839844,
+          1.1646428108215332,
+          1.1561381816864014,
+          1.145134449005127,
+          1.1521391868591309,
+          1.1481413841247559,
+          1.157139539718628,
+          1.156139612197876
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 29556",
+          "Query 2: Thread 29192",
+          "Query 3: Thread 23176",
+          "Query 4: Thread 28796",
+          "Query 5: Thread 25484",
+          "Query 6: Thread 29088",
+          "Query 7: Thread 24632",
+          "Query 8: Thread 9456",
+          "Query 9: Thread 11908",
+          "Query 10: Thread 28344",
+          "Query 11: Thread 19944",
+          "Query 12: Thread 17688"
+        ]
+      },
+      "pdf_processing_and_indexing": 22.463353633880615,
+      "query_processor_initialization": 4.678813934326172,
+      "query_processing": {
+        "total": 251.3159716129303,
+        "parallel_execution_time": 27.59311294555664,
+        "average": 20.942997634410858,
+        "individual": [
+          24.081814765930176,
+          24.900399923324585,
+          16.088841676712036,
+          27.590192794799805,
+          24.18578815460205,
+          20.01428723335266,
+          17.066551685333252,
+          22.173758268356323,
+          18.77629256248474,
+          19.300921201705933,
+          15.281789541244507,
+          21.85533380508423
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 21296",
+          "Query 2: Thread 30268",
+          "Query 3: Thread 14024",
+          "Query 4: Thread 21552",
+          "Query 5: Thread 28248",
+          "Query 6: Thread 15312",
+          "Query 7: Thread 9764",
+          "Query 8: Thread 29316",
+          "Query 9: Thread 30700",
+          "Query 10: Thread 29340",
+          "Query 11: Thread 2388",
+          "Query 12: Thread 29672"
+        ]
+      },
+      "cleanup_index": 1.1844594478607178,
+      "total_execution_time": 72.84959936141968
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpgrjux8rs",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 12,
+      "max_query_workers": 12
+    }
+  },
+  "processing_summary": {
+    "total_questions": 12,
+    "total_time_seconds": 72.84959936141968,
+    "pdf_processing_time": 22.463353633880615,
+    "embedding_time": 1.2392711639404297,
+    "query_processing_time": 251.3159716129303,
+    "parallel_execution_time": 27.59311294555664,
+    "max_individual_query_time": 27.590192794799805
+  },
+  "multithreading_metrics": {
+    "queries_processed": 12,
+    "embedding_workers": 12,
+    "query_workers": 12,
+    "embedding_speedup_ratio": 11.259437501442896,
+    "query_speedup_ratio": 9.10792385436164,
+    "individual_embedding_times": [
+      1.1728217601776123,
+      1.1461420059204102,
+      1.1692140102386475,
+      1.1521434783935547,
+      1.2336997985839844,
+      1.1646428108215332,
+      1.1561381816864014,
+      1.145134449005127,
+      1.1521391868591309,
+      1.1481413841247559,
+      1.157139539718628,
+      1.156139612197876
+    ],
+    "individual_query_times": [
+      24.081814765930176,
+      24.900399923324585,
+      16.088841676712036,
+      27.590192794799805,
+      24.18578815460205,
+      20.01428723335266,
+      17.066551685333252,
+      22.173758268356323,
+      18.77629256248474,
+      19.300921201705933,
+      15.281789541244507,
+      21.85533380508423
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 29556",
+      "Query 2: Thread 29192",
+      "Query 3: Thread 23176",
+      "Query 4: Thread 28796",
+      "Query 5: Thread 25484",
+      "Query 6: Thread 29088",
+      "Query 7: Thread 24632",
+      "Query 8: Thread 9456",
+      "Query 9: Thread 11908",
+      "Query 10: Thread 28344",
+      "Query 11: Thread 19944",
+      "Query 12: Thread 17688"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 21296",
+      "Query 2: Thread 30268",
+      "Query 3: Thread 14024",
+      "Query 4: Thread 21552",
+      "Query 5: Thread 28248",
+      "Query 6: Thread 15312",
+      "Query 7: Thread 9764",
+      "Query 8: Thread 29316",
+      "Query 9: Thread 30700",
+      "Query 10: Thread 29340",
+      "Query 11: Thread 2388",
+      "Query 12: Thread 29672"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "How does Newton define 'quantity of motion' and ho...",
+        "time_seconds": 24.081814765930176
+      },
+      {
+        "query_index": 1,
+        "query": "According to Newton, what are the three laws of mo...",
+        "time_seconds": 24.900399923324585
+      },
+      {
+        "query_index": 2,
+        "query": "How does Newton derive Kepler's Second Law (equal ...",
+        "time_seconds": 16.088841676712036
+      },
+      {
+        "query_index": 3,
+        "query": "How does Newton demonstrate that gravity is invers...",
+        "time_seconds": 27.590192794799805
+      },
+      {
+        "query_index": 4,
+        "query": "What is Newton's argument for why gravitational fo...",
+        "time_seconds": 24.18578815460205
+      },
+      {
+        "query_index": 5,
+        "query": "How does Newton explain the perturbation of planet...",
+        "time_seconds": 20.01428723335266
+      },
+      {
+        "query_index": 6,
+        "query": "What mathematical tools did Newton use in Principi...",
+        "time_seconds": 17.066551685333252
+      },
+      {
+        "query_index": 7,
+        "query": "How does Newton use the concept of centripetal for...",
+        "time_seconds": 22.173758268356323
+      },
+      {
+        "query_index": 8,
+        "query": "How does Newton handle motion in resisting media, ...",
+        "time_seconds": 18.77629256248474
+      },
+      {
+        "query_index": 9,
+        "query": "In what way does Newton's notion of absolute space...",
+        "time_seconds": 19.300921201705933
+      },
+      {
+        "query_index": 10,
+        "query": "Who was the grandfather of Isaac Newton?",
+        "time_seconds": 15.281789541244507
+      },
+      {
+        "query_index": 11,
+        "query": "Do we know any other descent of Isaac Newton apart...",
+        "time_seconds": 21.85533380508423
+      }
+    ]
+  }
+}

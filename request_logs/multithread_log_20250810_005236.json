@@ -1,0 +1,433 @@
+{
+  "timestamp": "2025-08-10T00:53:03.812631",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201.pdf?sv=2023-01-03&st=2025-07-22T10%3A17%3A39Z&se=2025-08-23T10%3A17%3A00Z&sr=b&sp=r&sig=dA7BEMIZg3WcePcckBOb4QjfxK%2B4rIfxBs2%2F%2BNwoPjQ%3D",
+    "questions": [
+      "Is Non-infective Arthritis covered?",
+      "I renewed my policy yesterday, and I have been a customer for the last 6 years. Can I raise a claim for Hydrocele?",
+      "Is abortion covered?"
+    ],
+    "pdf_filename": "input_20250810_005236.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_005236.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "query": "Is Non-infective Arthritis covered?",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_78_9cbf752d",
+            "score": 0.746830642,
+            "text": "WARRANTY\nHero MotoCorp Ltd.\nScope of warranty\na) SUPER SPLENDOR vehicle is warranted for a period of 5 years or 70000 Km, \nwhichever is earlier, from the date of purchase, emission warranty is separately covered \nunder the head of “Emission Warranty”.\nTerms & conditions\nc) If any \n is observed in SUPER SPLENDOR vehicle, Hero MotoCorp's only \nproblem\nobligation/ liability is to repair or replace that part/those parts which is/are considered to \nbe the cause of such \n, provided however that such \n has not resulted due to \nproblem\nproblem\nmisuse/improper handling etc. of the vehicle. Any SUPER SPLENDOR vehicle needing \nrepair should be brought along with owner's manual to Hero MotoCorp's authorized \nworkshop for necessary inspection and carrying rectification job.\nHero MotoCorp Ltd. (hereinafter called ‘Hero MotoCorp’) warrants its SUPER SPLENDOR \nvehicles, assembled/manufactured in its Plants and sold through its \n, to be \nchannel partners\nfree from any defect - both in material and work",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.746830642,
+            "final_score": 0.00019411319,
+            "rerank_score": 0.00019411319,
+            "original_rank": 26,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_84_e18677f8",
+            "score": 0.749151528,
+            "text": "Hero MotoCorp Ltd.\nEMISSION WARRANTY\nScope of warranty\nHero MotoCorp Ltd. Warrants all its vehicles, assembled/manufactured at its various Plants and sold through its channel \npartners, to comply with emission standards as specified in sub rule (2) of Rule 115 of Central Motor Vehicles Rules, 1989, subject \nto following terms & conditions.\nTerms & conditions\na) The emission warranty shall be applicable in India and shall remain valid for a period of 3 years or 30000 km, whichever occurs \nearlier, from the date of vehicle purchase.\nb) In case any defect is observed in any emission-related component which are covered under emission warranty, Hero \nMotoCorp only obligation/liability shall be to repair and/or replace those part (s) which is/are considered to be the cause of \nnon-compliance with the emission standards.\nd) Hero MotoCorp Ltd. shall have the sole discretion to decide to replace the defective components or the entire assembly or \nany other part required for such repair.\ne) The ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.749151528,
+            "final_score": 0.00012632043,
+            "rerank_score": 0.00012632043,
+            "original_rank": 22,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_2_76b56368",
+            "score": 0.756132126,
+            "text": "Pg. No.\nPg. No.\nCONTENTS\nPg. No.\nANTI-THEFT TIPS \n7 \nVEHICLE SAFETY \n8\nVEHICLE IDENTIFICATION \n1\nVEHICLE SPECIFICATION \n5\nVEHICLE VIEWS \n2\nACCESSORIES & MODIFICATIONS \n7\nŸ Important safety information \n8\nŸ Protective apparel \n9\nSAFE RIDING TIPS \n10\nTIPS FOR HEALTHY ENVIRONMENT \n11\nŸ Ignition switch \n12\nPARTS FUNCTION \n12\nŸ LCD panel \n15\nFEATURES \n19\nŸ Instruments and Indicators \n13\nHANDLEBAR SWITCHES CONTROL \n19\ni3s (IDLE STOP START SYSTEM) \n20\nSIDE STAND INDICATOR/SWITCH \n22\nFUEL \n24\nSEAT LOCK/HELMET HOLDER \n26\nTOOL KIT/FIRST AID KIT \n32\nPARKING \n32\nPRE-RIDE INSPECTION \n28\nUSB CHARGER \n27\nMAINTENANCE \n33\nCLEANING AND WASHING OF VEHICLE \n33\nSTARTING THE ENGINE \n29\nBRAKING \n31\nRIDING \n31\nSAFETY PRECAUTION \n34\nCATALYTIC CONVERTER \n66\nDRIVE CHAIN SLACKNESS \n48\nTUBELESS TYRES \n59\nOIL FILTER SCREEN \n41\nTHROTTLE OPERATION \n47\nSTOP LAMP SWITCH \n65\nROAD SIGNS \n71\nHERO GENUINE PARTS\nPOLISHING OF VEHICLE \n67\nSUSPENSION \n55\nDRIVE CHAIN SLIDER INSPECTION \n50\nENGINE OIL \n39\nNUTS, BOLTS & FASTENERS ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.756132126,
+            "final_score": 0.00010889691,
+            "rerank_score": 0.00010889691,
+            "original_rank": 9,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_79_bc0421cd",
+            "score": 0.748293757,
+            "text": "Hero MotoCorp Ltd.\nLIMITATIONS OF WARRANTY\nThe warranty shall not apply—\n(7) For normal phenomena like noise vibration, oil seepage etc., which do not affect the performance of the vehicle.\n(14) For \n vehicle not used in accordance with the guidelines given in this Owner's Manual.\nSUPER SPLENDOR\n(2) If any other engine oil which is non compatible with product is used other than SAE 10W30 SL Grade (JASO MA2).\n(10) If any maintenance/repairs required due to bad road conditions or misuse of\n vehicle.\n SUPER SPLENDOR\n(1) If all free services/paid services/oil top-ups are not availed as per the recommended schedule at Hero MotoCorp's \nauthorized workshop.\n(4) If additional wheel(s) is/are fitted and/or any other modification carried out/unauthorized accessories fitted which shall be \nresponsible for malfunction/detoriation of the vehicle.\n(5) If \n vehicle has been used in any competitive events like races or rallies or for any commercial purposes as \nSUPER SPLENDOR\ntaxi etc.\n(11) If any def",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.748293757,
+            "final_score": 9.610242e-05,
+            "rerank_score": 9.610242e-05,
+            "original_rank": 24,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_85_a18db5ec",
+            "score": 0.75698936,
+            "text": "Hero MotoCorp Ltd.\nEMISSION WARRANTY\n• The vehicle has been used for competitions, races, and rallies or for the purpose of establishing records.\nk) The parts, which are covered under emission warranty are fuel injector, fuel pump, throttle body, ignition coil, oxygen sensor and \nmuffler.\n• The vehicle has been subjected to abnormal use, abuse, neglect and improper maintenance or has met with an accident.\nj) It is mandatory to obtain a PUC certificate from the Authorised PUC center. In case of non-compliance with the emission \nstandards please contact the channel partner\n immediately along with the previous OK certificate, for \n/authorised workshop\nthe necessary rectification. The manufacturer or the dealer is not responsible for any penalty levied on you on account of \nnon-compliance with the emission standards. Subject to Delhi jurisdiction only.\nl) Emission warranty shall not be applicable if\n• The vehicle, or parts thereof, has been altered, tampered with or modified or replaced in",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.75698936,
+            "final_score": 9.2421134e-05,
+            "rerank_score": 9.2421134e-05,
+            "original_rank": 5,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "No, Non-infective Arthritis is not covered under this policy. The provided policy context exclusively details the warranty and emission coverage for a Hero MotoCorp SUPER SPLENDOR vehicle, including its parts, maintenance, and usage conditions, with no mention of health or medical coverage for human conditions like arthritis.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127969,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "I renewed my policy yesterday, and I have been a customer for the last 6 years. Can I raise a claim for Hydrocele?",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_80_ee555dac",
+            "score": 0.780492723,
+            "text": "Subject to DELHI JURISDICTION only.\n(13) To any part of the \n vehicle which has been tampered or repaired in such a manner which has resulted in \nSUPER SPLENDOR\nmalfunction of the vehicle. Decision regarding warranty settlement shall be taken by Hero MotoCorp and the same shall be final and \nbinding on all concern.\n(3) To normal wear & tear components including (but not limited to) brake shoes/pads, clutch plates, drive chain & sprockets, \nbulbs, electrical wiring, filter, spark plug, fasteners, shims, washers, oil seals, gaskets, rubber parts, bush, rubber bellows, plastic \nparts breakage, wheel rim for misalignment/bend, steering ball race & cone, control cables such as brake cable/clutch cable, \nfuses (all types), steering handle for bend and sticker peel off.\n(8) To any damage caused due to usage of improper oil/grease, non-genuine parts.\n(9) If any defect crops or repairs needed as a result of using adulterated fuel.\n(6) To any damage on vehicle's painted surface cropping due to i",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.780492723,
+            "final_score": 0.00019411319,
+            "rerank_score": 0.00019411319,
+            "original_rank": 2,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_79_bc0421cd",
+            "score": 0.764763176,
+            "text": "Hero MotoCorp Ltd.\nLIMITATIONS OF WARRANTY\nThe warranty shall not apply—\n(7) For normal phenomena like noise vibration, oil seepage etc., which do not affect the performance of the vehicle.\n(14) For \n vehicle not used in accordance with the guidelines given in this Owner's Manual.\nSUPER SPLENDOR\n(2) If any other engine oil which is non compatible with product is used other than SAE 10W30 SL Grade (JASO MA2).\n(10) If any maintenance/repairs required due to bad road conditions or misuse of\n vehicle.\n SUPER SPLENDOR\n(1) If all free services/paid services/oil top-ups are not availed as per the recommended schedule at Hero MotoCorp's \nauthorized workshop.\n(4) If additional wheel(s) is/are fitted and/or any other modification carried out/unauthorized accessories fitted which shall be \nresponsible for malfunction/detoriation of the vehicle.\n(5) If \n vehicle has been used in any competitive events like races or rallies or for any commercial purposes as \nSUPER SPLENDOR\ntaxi etc.\n(11) If any def",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.764763176,
+            "final_score": 0.00010554686,
+            "rerank_score": 0.00010554686,
+            "original_rank": 12,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_81_9c7b6adb",
+            "score": 0.753895462,
+            "text": "Hero MotoCorp Ltd.\n3. This warranty card accompanies a battery sold as OEM fitment only. Claims should be supported with vehicle purchase invoice to \nenable processing.\nBATTERY WARRANTY PERIOD\n2. 21 months from the date of charging (whichever is earlier).\n1. 18 months from date of sale of vehicle or 20000 km. or\n3. 3 months idle period is allowed from the date of charging to date of sale on vehicle.\nTerms and condition of warranty\n1. Batteries are warranted against all defects in material and workmanship. Liability under this warranty is limited to making good of \ndefects rising solely from the use of faulty material or workmanship during manufacturing and developing under proper use.",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.753895462,
+            "final_score": 9.4612624e-05,
+            "rerank_score": 9.4612624e-05,
+            "original_rank": 28,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_82_c7811a63",
+            "score": 0.777794778,
+            "text": "The warranty commences from the date of delivery to the original purchase of the vehicle.\n2. In the event of any complaint the battery is to be returned complete with electrolyte to nearest battery service station or any OEM \ndealer. On inspection, battery would be returned or replaced.\n5. All liabilities under this warranty will cease if the battery is used on the vehicle other than that on which the battery was originally \nfitted and on the expiry of the warranty period as mentioned above.\n6. Recharging is not covered under the purview of this warranty and shall be billed as extra. However, FOC battery replacement/ \nrepair includes cost of charging.\n8. Breakage of container and cover do not come under the purview of this warranty.\n10. In case of tempering of the original wiring circuit in any manner whatsoever.\n12. The applicable taxes which is leviable on the battery under repair or replacement will be borne by the customer.\n13. Customers are deemed to have read, understood and agre",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.777794778,
+            "final_score": 9.387641e-05,
+            "rerank_score": 9.387641e-05,
+            "original_rank": 3,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_43_d3a5b456",
+            "score": 0.76424849,
+            "text": "37\nNext \n100\nNext \n100\nNext \n100\n3000-\n3500\n6000-\n6500\n9000-\n9500\n12000-\n12500\nWHICHEVER\nCOMES FIRST\nITEMS\nDURING FREE SERVICE PERIOD\nSERVICE\nst1\n2nd\nrd3\nth4\nth5\nAFTER FREE SERVICE\nONCE IN EVERY\n6000\n9000 12000 15000\nDAYS\nKM Note-1\n500-\n750\n1st 60\n3000\nNext \n100\nDisc Wear/Pad Wear\nI\nI\nI\nI\nI\nI\nClutch Lever Free Play\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nRear Brake Pedal/\nMain Stand Pivot\nI\ni3s System\nI\nI\nI\nI\nI\nStop Lamp Switch\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nHeadlamp Focus\nI, A\nI, A\nI, A\nI, A\nI, A\nI, A\nNut, Bolts & Fasteners\nI\nI\nI\nI\nI\nI\nWheels/Tyres\nI\nI\nI\nI\nI\nI\nSteering Head Bearing\nI, L, A\nI, A\nI\nI, L, A\nI, A\nI\nI, A\nI\nMuffler \n(Catalytic Converter)\nI, E\nI, E\nI, E\nWheel Bearings\nI\nI\nI\nI\nI\nI\nNote-7\nRear Suspension\nI\nI\nI\nI\nI\nI\nNote-9\nFront Suspension/\nOil leakage\nEvaporative Emission \nControl System\nI\nI\nI\nI\nI\nI\nNote-11\nBrake System (Brake \nCam & Brake Pedal)\nC, L\nC, L\nC, L\nNote-6\nNote-8\nNote-10\nSide Stand Switch\nI, C\nI, C\nI, C\nI, C\nI, C\nI, C\nI\nI\nI\nI\nI\nI\nBrake Fluid\nNote-5\nI, T\nI, T\nI, T\nI, T\nI, T\nI",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.76424849,
+            "final_score": 8.156225e-05,
+            "rerank_score": 8.156225e-05,
+            "original_rank": 13,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "The provided policy context pertains to a Hero MotoCorp vehicle warranty and owner's manual. It details coverage and exclusions related to vehicle components and maintenance, but it does not contain any information regarding health insurance policies or coverage for medical conditions such as Hydrocele. Therefore, I cannot determine if you can raise a claim for Hydrocele based on this document.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127662,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      },
+      {
+        "query": "Is abortion covered?",
+        "search_results": [
+          {
+            "id": "input_20250810_005155.pdf_4_2e9f74f7",
+            "score": 0.736311078,
+            "text": "3\nLEFT SIDE VIEW\n12\n11\n(2) Rider footrest\n(1) Gear shift pedal\n(5) Pillion footrest\n(4) Side stand \n(7) Saree guard with \nwomen pillion step\n(6) Left side cover\n(3) Main stand\n(8) Seat lock\n(11) Rear reflex reflector\n(14) Helmet holder (inside)\n(9) Rear fender\n(13) Rear grip\n(10) Rear turn signal lamp\n(12) Tail/Stop lamp\n(16) Side stand switch\n(18) Front suspension\n(17) USB charger\n(15) Battery (inside)\n(20) Front reflex reflector\n(19) Front fender\n13\n14\n15\n16\n20\n19\n18\n1\n2\n4\n5\n6\n9\n7\n3\n8\n10\n17\n*Accessories and features shown may not be part of standard fitment. 4\n(9) Front brake disc #\n(11) Headlamp\n#\n(8) Caliper assembly\n(12) Front visor\n(10) Front turn signal lamp\n(7) Starter motor\n(16) Rear shock absorber\n(13) Throttle body\n(15) Seat\n(17) Exhaust muffler \n(14) ECU (inside)\n(2) Brake fluid reservoir#\n(4) Kick starter pedal\n(6) Oil level dipstick\n(5) Brake pedal\n(1) CBS Actuator (inside)#\n(3) Right side cover\n11\n12\n*Accessories and features shown may not be part of standard fitment.\n4\n",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.736311078,
+            "final_score": 0.0014953384,
+            "rerank_score": 0.0014953384,
+            "original_rank": 14,
+            "reranked_rank": 1,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_8_bd368aec",
+            "score": 0.744983256,
+            "text": "Take time to learn & practice your \nvehicle\nYour vehicle can provide many years of \nservice and pleasure if you take responsibility \nfor your own safety and understand the \nchallenges you can meet on the road.\nIt is a proven fact, helmet significantly reduces \nthe number and severity of head injuries. So \nalways wear a helmet and make sure your \npillion rider does the same. We also \nrecommend that you wear eye protection, \nsturdy boots, gloves and other protective gear.\nBefore riding your vehicle\nMake sure that you are physically fit, mentally \nfocused and free of alcohol and drugs. Check \nthat you and your pillion are both wearing an \napproved vehicle helmet and protective \napparel. Instruct your pillion on holding onto \nthe grab rail or your waist, leaning with you in \nturns, and keeping their feet on the footrest, \neven when the vehicle is stopped.\nIMPORTANT SAFETY INFORMATION\nThere is much that you can do to protect \nyourself when you ride. You will find many \nhelpful recommendatio",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.744983256,
+            "final_score": 6.922184e-05,
+            "rerank_score": 6.922184e-05,
+            "original_rank": 5,
+            "reranked_rank": 2,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_85_a18db5ec",
+            "score": 0.75661552,
+            "text": "Hero MotoCorp Ltd.\nEMISSION WARRANTY\n• The vehicle has been used for competitions, races, and rallies or for the purpose of establishing records.\nk) The parts, which are covered under emission warranty are fuel injector, fuel pump, throttle body, ignition coil, oxygen sensor and \nmuffler.\n• The vehicle has been subjected to abnormal use, abuse, neglect and improper maintenance or has met with an accident.\nj) It is mandatory to obtain a PUC certificate from the Authorised PUC center. In case of non-compliance with the emission \nstandards please contact the channel partner\n immediately along with the previous OK certificate, for \n/authorised workshop\nthe necessary rectification. The manufacturer or the dealer is not responsible for any penalty levied on you on account of \nnon-compliance with the emission standards. Subject to Delhi jurisdiction only.\nl) Emission warranty shall not be applicable if\n• The vehicle, or parts thereof, has been altered, tampered with or modified or replaced in",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.75661552,
+            "final_score": 2.9541427e-05,
+            "rerank_score": 2.9541427e-05,
+            "original_rank": 2,
+            "reranked_rank": 3,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_84_e18677f8",
+            "score": 0.737479508,
+            "text": "Hero MotoCorp Ltd.\nEMISSION WARRANTY\nScope of warranty\nHero MotoCorp Ltd. Warrants all its vehicles, assembled/manufactured at its various Plants and sold through its channel \npartners, to comply with emission standards as specified in sub rule (2) of Rule 115 of Central Motor Vehicles Rules, 1989, subject \nto following terms & conditions.\nTerms & conditions\na) The emission warranty shall be applicable in India and shall remain valid for a period of 3 years or 30000 km, whichever occurs \nearlier, from the date of vehicle purchase.\nb) In case any defect is observed in any emission-related component which are covered under emission warranty, Hero \nMotoCorp only obligation/liability shall be to repair and/or replace those part (s) which is/are considered to be the cause of \nnon-compliance with the emission standards.\nd) Hero MotoCorp Ltd. shall have the sole discretion to decide to replace the defective components or the entire assembly or \nany other part required for such repair.\ne) The ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.737479508,
+            "final_score": 2.7751648e-05,
+            "rerank_score": 2.7751648e-05,
+            "original_rank": 13,
+            "reranked_rank": 4,
+            "ranking_method": "bge_reranker_v2_m3"
+          },
+          {
+            "id": "input_20250810_005155.pdf_2_76b56368",
+            "score": 0.733566344,
+            "text": "Pg. No.\nPg. No.\nCONTENTS\nPg. No.\nANTI-THEFT TIPS \n7 \nVEHICLE SAFETY \n8\nVEHICLE IDENTIFICATION \n1\nVEHICLE SPECIFICATION \n5\nVEHICLE VIEWS \n2\nACCESSORIES & MODIFICATIONS \n7\nŸ Important safety information \n8\nŸ Protective apparel \n9\nSAFE RIDING TIPS \n10\nTIPS FOR HEALTHY ENVIRONMENT \n11\nŸ Ignition switch \n12\nPARTS FUNCTION \n12\nŸ LCD panel \n15\nFEATURES \n19\nŸ Instruments and Indicators \n13\nHANDLEBAR SWITCHES CONTROL \n19\ni3s (IDLE STOP START SYSTEM) \n20\nSIDE STAND INDICATOR/SWITCH \n22\nFUEL \n24\nSEAT LOCK/HELMET HOLDER \n26\nTOOL KIT/FIRST AID KIT \n32\nPARKING \n32\nPRE-RIDE INSPECTION \n28\nUSB CHARGER \n27\nMAINTENANCE \n33\nCLEANING AND WASHING OF VEHICLE \n33\nSTARTING THE ENGINE \n29\nBRAKING \n31\nRIDING \n31\nSAFETY PRECAUTION \n34\nCATALYTIC CONVERTER \n66\nDRIVE CHAIN SLACKNESS \n48\nTUBELESS TYRES \n59\nOIL FILTER SCREEN \n41\nTHROTTLE OPERATION \n47\nSTOP LAMP SWITCH \n65\nROAD SIGNS \n71\nHERO GENUINE PARTS\nPOLISHING OF VEHICLE \n67\nSUSPENSION \n55\nDRIVE CHAIN SLIDER INSPECTION \n50\nENGINE OIL \n39\nNUTS, BOLTS & FASTENERS ",
+            "document_name": "input_20250810_005155.pdf",
+            "page_number": 0.0,
+            "chunk_index": 0,
+            "vector_score": 0.733566344,
+            "final_score": 2.5466403e-05,
+            "rerank_score": 2.5466403e-05,
+            "original_rank": 16,
+            "reranked_rank": 5,
+            "ranking_method": "bge_reranker_v2_m3"
+          }
+        ],
+        "evaluation": {
+          "answer": "Based on the comprehensive policy context provided, which appears to be an owner's manual for a Hero MotoCorp vehicle, there is no information available regarding coverage for abortion. The document focuses exclusively on vehicle specifications, maintenance, operation, and warranty.",
+          "context_stats": {
+            "total_vectors": 5,
+            "total_context_length": 127969,
+            "chunks_per_vector": 51
+          },
+          "search_method": "bge_rerank_comprehensive_context",
+          "reranker_type": "bge-reranker-v2-m3",
+          "reranker_available": true,
+          "hybrid_search_enabled": false,
+          "reranking_enabled": true,
+          "initial_candidates_retrieved": 30,
+          "final_vectors_after_reranking": 5,
+          "adjacent_chunks_per_vector": 50,
+          "performance_note": "⚡ Using BGE Reranker-v2-m3 + comprehensive adjacent context (25 before + 25 after) for top 5 vectors"
+        },
+        "api_status": {
+          "gemini_available": true,
+          "model_name": "gemini-2.5-flash",
+          "quota_exceeded": false,
+          "fallback_reason": null,
+          "reranker_available": true,
+          "reranker_type": "bge-reranker-v2-m3",
+          "recommendations": [
+            "✅ Using gemini-2.5-flash for optimal results",
+            "🔄 Using bge-reranker-v2-m3 for enhanced relevance ranking"
+          ]
+        },
+        "status": "success",
+        "success": true
+      }
+    ],
+    "timings": {
+      "download_pdf": 0.1780102252960205,
+      "query_embedding": {
+        "total": 0.7241437435150146,
+        "individual": [
+          0.6935782432556152,
+          0.7205379009246826,
+          0.6894941329956055
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 29848",
+          "Query 2: Thread 11888",
+          "Query 3: Thread 30608"
+        ]
+      },
+      "pdf_processing_and_indexing": 6.3592541217803955,
+      "query_processor_initialization": 4.79323148727417,
+      "query_processing": {
+        "total": 39.11004161834717,
+        "parallel_execution_time": 13.960510730743408,
+        "average": 13.036680539449057,
+        "individual": [
+          12.79689073562622,
+          13.95859980583191,
+          12.354551076889038
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 14204",
+          "Query 2: Thread 19704",
+          "Query 3: Thread 31484"
+        ]
+      },
+      "cleanup_index": 1.007359504699707,
+      "total_execution_time": 27.02415704727173
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpgembs_3a",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 3,
+      "max_query_workers": 3
+    }
+  },
+  "processing_summary": {
+    "total_questions": 3,
+    "total_time_seconds": 27.02415704727173,
+    "pdf_processing_time": 6.3592541217803955,
+    "embedding_time": 0.7241437435150146,
+    "query_processing_time": 39.11004161834717,
+    "parallel_execution_time": 13.960510730743408,
+    "max_individual_query_time": 13.95859980583191
+  },
+  "multithreading_metrics": {
+    "queries_processed": 3,
+    "embedding_workers": 3,
+    "query_workers": 3,
+    "embedding_speedup_ratio": 2.9049623034301426,
+    "query_speedup_ratio": 2.801476419642745,
+    "individual_embedding_times": [
+      0.6935782432556152,
+      0.7205379009246826,
+      0.6894941329956055
+    ],
+    "individual_query_times": [
+      12.79689073562622,
+      13.95859980583191,
+      12.354551076889038
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 29848",
+      "Query 2: Thread 11888",
+      "Query 3: Thread 30608"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 14204",
+      "Query 2: Thread 19704",
+      "Query 3: Thread 31484"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "Is Non-infective Arthritis covered?",
+        "time_seconds": 12.79689073562622
+      },
+      {
+        "query_index": 1,
+        "query": "I renewed my policy yesterday, and I have been a c...",
+        "time_seconds": 13.95859980583191
+      },
+      {
+        "query_index": 2,
+        "query": "Is abortion covered?",
+        "time_seconds": 12.354551076889038
+      }
+    ]
+  }
+}
