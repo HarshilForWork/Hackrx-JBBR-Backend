@@ -502,8 +502,8 @@ def query_documents_sync(
             index_name=index_name
         )
 
-        # Process query, now supports query_embedding
-        result = processor.process_query(query.strip(), query_embedding=query_embedding)
+        # Process query using synchronous wrapper
+        result = processor.process_query_sync(query.strip(), query_embedding=query_embedding)
         result["success"] = result.get("status") == "success"
 
         return result
