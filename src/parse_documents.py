@@ -1,63 +1,640 @@
 """
 Module: parse_documents.py
-Functionality: Enhanced PDF parsing using PyMuPDF with advanced table extraction and layout understanding.
+Functionality: Hybrid PDF parsing using both PyMuPDF and pdfplumber for optimal table and text extraction.
+Combines the strengths of both libraries while maintaining document flow order.
 """
 import os
 import re
 import time
 import numpy as np
-from typing import List, Dict, Optional, Tuple
-import fitz  # PyMuPDF for PDF handling
-import pandas as pd
+from typing import List, Dict, Optional, Tuple, Any
+import fitz  # PyMuPDF for general text and positioning
 
-def detect_table_structures(page, min_rows=2, min_cols=2) -> List[Dict]:
+# Try to import pdfplumber for enhanced table detection
+try:
+    import pdfplumber
+    PDFPLUMBER_AVAILABLE = True
+except ImportError:
+    PDFPLUMBER_AVAILABLE = False
+    print("⚠️ pdfplumber not available. Install with: pip install pdfplumber for enhanced table detection")
+
+# Try to import pandas for legacy compatibility
+try:
+    import pandas as pd
+    PANDAS_AVAILABLE = True
+except ImportError:
+    PANDAS_AVAILABLE = False
+
+def _is_valid_table(cleaned_data: List[List[str]]) -> bool:
     """
-    Detect table structures using PyMuPDF's table finding capabilities.
+    Validate if detected table is actually a table structure or just formatted text.
     
     Args:
-        page: PyMuPDF page object
-        min_rows: Minimum number of rows to consider a table
-        min_cols: Minimum number of columns to consider a table
+        cleaned_data: List of rows with cells
         
     Returns:
-        List of detected tables with their content
+        True if it's a valid table, False otherwise
     """
+    if len(cleaned_data) < 3:  # Need at least 3 rows (header + 2 data rows)
+        return False
+    
+    # Check if rows have consistent column structure
+    row_lengths = [len(row) for row in cleaned_data]
+    if len(set(row_lengths)) > 2:  # Too much variation in column count
+        return False
+    
+    # Check if it has proper tabular data (not just a paragraph split into lines)
+    max_cols = max(row_lengths)
+    if max_cols < 2:  # Single column is likely just text
+        return False
+    
+    # Check for table-like characteristics
+    # 1. Multiple rows should have multiple non-empty cells
+    multi_cell_rows = 0
+    for row in cleaned_data:
+        non_empty_cells = sum(1 for cell in row if cell and cell.strip())
+        if non_empty_cells >= 2:
+            multi_cell_rows += 1
+    
+    # If less than 50% of rows have multiple cells, it's probably not a table
+    if multi_cell_rows / len(cleaned_data) < 0.5:
+        return False
+    
+    # 2. Check for list-like patterns (single long text in first column, others empty)
+    list_pattern_count = 0
+    for row in cleaned_data:
+        if len(row) >= 2:
+            first_cell = row[0].strip() if row[0] else ""
+            other_cells = [cell.strip() for cell in row[1:] if cell]
+            
+            # If first cell is very long and others are mostly empty, it's likely a list
+            if len(first_cell) > 50 and len(other_cells) <= 1:
+                list_pattern_count += 1
+    
+    # If more than 60% rows follow list pattern, reject as table
+    if list_pattern_count / len(cleaned_data) > 0.6:
+        return False
+    
+    # 3. Check for paragraph-like content (very long text cells)
+    long_text_cells = 0
+    total_cells = 0
+    for row in cleaned_data:
+        for cell in row:
+            if cell and cell.strip():
+                total_cells += 1
+                if len(cell.strip()) > 100:  # Very long text
+                    long_text_cells += 1
+    
+    # If too many cells have very long text, it's probably paragraphs
+    if total_cells > 0 and long_text_cells / total_cells > 0.7:
+        return False
+    
+    return True
+
+def extract_tables_with_pdfplumber(pdf_path: str) -> Dict[int, List[Dict]]:
+    """
+    Extract tables using pdfplumber for superior table detection.
+    
+    Args:
+        pdf_path: Path to the PDF file
+        
+    Returns:
+        Dictionary mapping page numbers to list of tables with positioning
+    """
+    page_tables = {}
+    
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            for page_num, page in enumerate(pdf.pages):
+                tables = []
+                
+                # Extract tables with pdfplumber's superior detection - IMPROVED SETTINGS
+                detected_tables = page.find_tables(table_settings={
+                    "vertical_strategy": "lines", 
+                    "horizontal_strategy": "lines",
+                    "snap_tolerance": 3,
+                    "join_tolerance": 3,
+                    "edge_min_length": 10,  # Increased from 3 to 10 for better line detection
+                    "min_words_vertical": 4,  # Increased from 2 to 4 
+                    "min_words_horizontal": 2  # Increased from 1 to 2
+                })
+                
+                for table in detected_tables:
+                    try:
+                        # Extract table data
+                        table_data = table.extract()
+                        
+                        if table_data and len(table_data) >= 2:  # At least header + 1 row
+                            # Clean and process table data
+                            cleaned_data = []
+                            for row in table_data:
+                                if row and any(cell and str(cell).strip() for cell in row if cell is not None):
+                                    cleaned_row = []
+                                    for cell in row:
+                                        cell_str = str(cell).strip() if cell is not None else ""
+                                        # Clean common PDF artifacts
+                                        cell_str = re.sub(r'\s+', ' ', cell_str)
+                                        cell_str = re.sub(r'[^\x20-\x7E\u00A0-\u024F\u1E00-\u1EFF]', '', cell_str)
+                                        cleaned_row.append(cell_str)
+                                    if any(cell for cell in cleaned_row):  # Only add non-empty rows
+                                        cleaned_data.append(cleaned_row)
+                            
+                            if len(cleaned_data) >= 2:  # Ensure we have meaningful data
+                                # VALIDATE IF THIS IS ACTUALLY A TABLE
+                                if not _is_valid_table(cleaned_data):
+                                    continue  # Skip this "table" as it's likely just formatted text
+                                
+                                # Normalize column count
+                                max_cols = max(len(row) for row in cleaned_data)
+                                normalized_data = []
+                                for row in cleaned_data:
+                                    while len(row) < max_cols:
+                                        row.append("")
+                                    normalized_data.append(row[:max_cols])
+                                
+                                # Get table bbox for positioning
+                                bbox = table.bbox if hasattr(table, 'bbox') else [0, 0, 0, 0]
+                                
+                                # Create markdown table
+                                table_markdown = _create_clean_markdown_table(normalized_data)
+                                
+                                tables.append({
+                                    'content': table_markdown,
+                                    'type': 'table',
+                                    'bbox': bbox,
+                                    'y_position': bbox[1] if bbox else 0,
+                                    'rows': len(normalized_data),
+                                    'cols': max_cols,
+                                    'raw_data': normalized_data
+                                })
+                                
+                    except Exception as e:
+                        print(f"⚠️ Table processing error on page {page_num + 1}: {e}")
+                        continue
+                
+                if tables:
+                    page_tables[page_num] = tables
+                    
+    except Exception as e:
+        print(f"⚠️ pdfplumber table extraction error: {e}")
+    
+    return page_tables
+
+def _create_clean_markdown_table(data: List[List[str]]) -> str:
+    """Create a clean, well-formatted markdown table."""
+    if not data or len(data) < 2:
+        return ""
+    
+    # Use first row as headers, rest as data
+    headers = data[0]
+    rows = data[1:]
+    
+    # Clean headers and ensure they have meaningful names
+    clean_headers = []
+    for i, header in enumerate(headers):
+        header_str = str(header).strip() if header else ""
+        if not header_str:
+            header_str = f"Col_{i+1}"
+        clean_headers.append(header_str)
+    
+    # Calculate optimal column widths for readability
+    all_rows = [clean_headers] + rows
+    col_widths = []
+    for i in range(len(clean_headers)):
+        max_width = max(len(str(row[i]) if i < len(row) else "") for row in all_rows)
+        # Set reasonable width bounds
+        col_widths.append(min(max(max_width, 8), 50))
+    
+    # Create formatted table
+    table_lines = []
+    
+    # Header row
+    header_cells = []
+    for i, header in enumerate(clean_headers):
+        header_cells.append(str(header).ljust(col_widths[i]))
+    table_lines.append("| " + " | ".join(header_cells) + " |")
+    
+    # Separator row
+    separator_cells = ["-" * width for width in col_widths]
+    table_lines.append("| " + " | ".join(separator_cells) + " |")
+    
+    # Data rows
+    for row in rows:
+        data_cells = []
+        for i, cell in enumerate(row):
+            cell_str = str(cell).strip() if cell else ""
+            # Handle long content gracefully
+            if len(cell_str) > col_widths[i] - 3:
+                cell_str = cell_str[:col_widths[i] - 3] + "..."
+            data_cells.append(cell_str.ljust(col_widths[i]))
+        table_lines.append("| " + " | ".join(data_cells) + " |")
+    
+    return "\n".join(table_lines)
+
+def extract_text_with_pymupdf(pdf_path: str, page_tables: Dict[int, List[Dict]]) -> Dict[int, List[Dict]]:
+    """
+    Extract text blocks using PyMuPDF while avoiding table content areas.
+    
+    Args:
+        pdf_path: Path to the PDF file
+        page_tables: Dictionary of tables per page for overlap detection
+        
+    Returns:
+        Dictionary mapping page numbers to list of text blocks
+    """
+    page_text_blocks = {}
+    
+    try:
+        doc = fitz.open(pdf_path)
+        
+        for page_num in range(len(doc)):
+            page = doc[page_num]
+            text_blocks = []
+            
+            # Get tables for this page to avoid overlaps
+            tables_on_page = page_tables.get(page_num, [])
+            table_bboxes = [table['bbox'] for table in tables_on_page]
+            
+            # Extract text blocks with positioning
+            blocks = page.get_text("dict")
+            
+            for block_num, block in enumerate(blocks.get("blocks", [])):
+                if "lines" in block:  # Text block
+                    block_text = ""
+                    font_sizes = []
+                    is_bold = False
+                    
+                    for line in block["lines"]:
+                        line_text = ""
+                        for span in line.get("spans", []):
+                            text = span.get("text", "").strip()
+                            if text:
+                                line_text += text + " "
+                                
+                                # Collect font information
+                                font_size = span.get("size", 12)
+                                font_flags = span.get("flags", 0)
+                                font_sizes.append(font_size)
+                                
+                                # Check if bold (bit 4 of flags)
+                                if font_flags & (1 << 4):
+                                    is_bold = True
+                        
+                        if line_text.strip():
+                            block_text += line_text.strip() + " "
+                    
+                    if block_text.strip():
+                        bbox = block.get("bbox", [0, 0, 0, 0])
+                        
+                        # Check if this text block overlaps with any table
+                        overlaps_with_table = any(
+                            _bbox_overlap(bbox, table_bbox, 0.5) 
+                            for table_bbox in table_bboxes
+                        )
+                        
+                        if not overlaps_with_table:
+                            avg_font_size = np.mean(font_sizes) if font_sizes else 12
+                            
+                            # Determine content type based on formatting
+                            content_type = "text"
+                            if is_bold and avg_font_size > 14:
+                                content_type = "heading"
+                            elif is_bold:
+                                content_type = "subheading"
+                            
+                            text_blocks.append({
+                                'content': block_text.strip(),
+                                'type': content_type,
+                                'bbox': bbox,
+                                'y_position': bbox[1],
+                                'font_size': avg_font_size,
+                                'is_bold': is_bold,
+                                'block_number': block_num
+                            })
+            
+            if text_blocks:
+                page_text_blocks[page_num] = text_blocks
+        
+        doc.close()
+        
+    except Exception as e:
+        print(f"⚠️ PyMuPDF text extraction error: {e}")
+    
+    return page_text_blocks
+
+def _bbox_overlap(bbox1: List[float], bbox2: List[float], overlap_threshold: float = 0.5) -> bool:
+    """Check if two bounding boxes overlap significantly."""
+    if not bbox1 or not bbox2 or len(bbox1) < 4 or len(bbox2) < 4:
+        return False
+    
+    # Calculate intersection
+    x_overlap = max(0, min(bbox1[2], bbox2[2]) - max(bbox1[0], bbox2[0]))
+    y_overlap = max(0, min(bbox1[3], bbox2[3]) - max(bbox1[1], bbox2[1]))
+    
+    if x_overlap <= 0 or y_overlap <= 0:
+        return False
+    
+    intersection_area = x_overlap * y_overlap
+    
+    # Calculate areas
+    area1 = (bbox1[2] - bbox1[0]) * (bbox1[3] - bbox1[1])
+    area2 = (bbox2[2] - bbox2[0]) * (bbox2[3] - bbox2[1])
+    
+    if area1 <= 0 or area2 <= 0:
+        return False
+    
+    # Check if intersection is significant relative to the smaller box
+    smaller_area = min(area1, area2)
+    overlap_ratio = intersection_area / smaller_area
+    
+    return overlap_ratio >= overlap_threshold
+
+def merge_page_content(page_num: int, text_blocks: List[Dict], tables: List[Dict]) -> List[Dict]:
+    """
+    Merge text blocks and tables for a page by their position to maintain document order.
+    
+    Args:
+        page_num: Page number
+        text_blocks: List of text blocks for the page
+        tables: List of tables for the page
+        
+    Returns:
+        List of content elements in document order
+    """
+    all_content = []
+    
+    # Add text blocks
+    for block in text_blocks:
+        all_content.append({
+            'content': block['content'],
+            'type': block['type'],
+            'y_position': block['y_position'],
+            'page': page_num + 1,
+            'bbox': block['bbox'],
+            'font_size': block.get('font_size', 12),
+            'is_bold': block.get('is_bold', False)
+        })
+    
+    # Add tables
+    for table in tables:
+        all_content.append({
+            'content': table['content'],
+            'type': 'table',
+            'y_position': table['y_position'],
+            'page': page_num + 1,
+            'bbox': table['bbox'],
+            'rows': table['rows'],
+            'cols': table['cols']
+        })
+    
+    # Sort by vertical position (top to bottom)
+    all_content.sort(key=lambda x: x['y_position'])
+    
+    return all_content
+
+def clean_text_content(text: str) -> str:
+    """Clean and normalize text content."""
+    if not text:
+        return ""
+    
+    # Remove excessive whitespace while preserving structure
+    text = re.sub(r'[ \t]+', ' ', text)  # Multiple spaces/tabs to single space
+    text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)  # Multiple line breaks to double
+    
+    # Clean common PDF artifacts
+    text = re.sub(r'[^\x20-\x7E\u00A0-\u024F\u1E00-\u1EFF\n\r\t]', '', text)
+    
+    # Fix common character issues
+    text = text.replace('�', '')  # Remove replacement characters
+    
+    return text.strip()
+
+def parse_document_hybrid(pdf_path: str, save_parsed_text: bool = False) -> dict:
+    """
+    Hybrid PDF parsing using both PyMuPDF and pdfplumber for optimal results.
+    
+    Args:
+        pdf_path: Path to the PDF file
+        
+    Returns:
+        Dictionary containing parsed content with tables and text in document order
+    """
+    try:
+        doc_name = os.path.basename(pdf_path)
+        print(f"🚀 Starting hybrid parsing for {doc_name}...")
+        print(f"📊 Using pdfplumber for tables + PyMuPDF for text")
+        
+        start_time = time.time()
+        
+        # Step 1: Extract tables using pdfplumber (superior table detection)
+        print("🔍 Extracting tables with pdfplumber...")
+        page_tables = extract_tables_with_pdfplumber(pdf_path)
+        total_tables = sum(len(tables) for tables in page_tables.values())
+        print(f"✅ Found {total_tables} tables across {len(page_tables)} pages")
+        
+        # Step 2: Extract text using PyMuPDF (avoiding table areas)
+        print("📝 Extracting text with PyMuPDF...")
+        page_text_blocks = extract_text_with_pymupdf(pdf_path, page_tables)
+        total_text_blocks = sum(len(blocks) for blocks in page_text_blocks.values())
+        print(f"✅ Found {total_text_blocks} text blocks")
+        
+        # Step 3: Merge content by page and position
+        print("🔄 Merging content in document order...")
+        all_content = []
+        
+        # Get total page count
+        with fitz.open(pdf_path) as doc:
+            total_pages = len(doc)
+        
+        for page_num in range(total_pages):
+            text_blocks = page_text_blocks.get(page_num, [])
+            tables = page_tables.get(page_num, [])
+            
+            page_content = merge_page_content(page_num, text_blocks, tables)
+            all_content.extend(page_content)
+        
+        # Step 4: Generate final output
+        final_text = ""
+        for item in all_content:
+            content = item['content'].strip()
+            
+            if item['type'] == 'table':
+                # Format tables with clear separation
+                final_text += "\n" + "="*60 + "\n"
+                final_text += "TABLE:\n"
+                final_text += "="*60 + "\n\n"
+                final_text += content + "\n\n"
+                final_text += "="*60 + "\n\n"
+            elif item['type'] == 'heading':
+                # Format headings with separation
+                final_text += "\n" + content + "\n"
+                final_text += "-" * min(len(content), 60) + "\n\n"
+            else:
+                # Add regular text content
+                cleaned_content = clean_text_content(content)
+                if cleaned_content:
+                    final_text += cleaned_content + "\n\n"
+        
+        processing_time = time.time() - start_time
+        
+        result = {
+            'document_name': doc_name,
+            'content': final_text.strip(),
+            'total_pages': total_pages,
+            'parsing_method': 'hybrid_pymupdf_pdfplumber',
+            'processing_time': processing_time,
+            'metadata': {
+                'total_elements': len(all_content),
+                'text_elements': total_text_blocks,
+                'table_elements': total_tables,
+                'pages_processed': total_pages,
+                'characters_extracted': len(final_text)
+            }
+        }
+        
+        print(f"✅ Hybrid parsing complete!")
+        print(f"📊 Results: {total_tables} tables, {total_text_blocks} text blocks")
+        print(f"📄 Total: {len(final_text):,} characters in {processing_time:.2f}s")
+        
+        # Save parsed content if requested
+        if save_parsed_text:
+            save_parsed_content_to_file(result, pdf_path)
+        
+        return result
+        
+    except Exception as e:
+        print(f"❌ Hybrid parsing error: {e}")
+        return {
+            'document_name': os.path.basename(pdf_path),
+            'content': "",
+            'total_pages': 0,
+            'parsing_method': 'hybrid_error',
+            'processing_time': 0,
+            'metadata': {
+                'total_elements': 0,
+                'text_elements': 0,
+                'table_elements': 0,
+                'pages_processed': 0,
+                'characters_extracted': 0,
+                'error': str(e)
+            }
+        }
+
+def save_parsed_content_to_file(result: dict, original_pdf_path: str) -> str:
+    """
+    Save the hybrid parsing result to a single clean output file.
+    
+    Args:
+        result: Parsing result dictionary
+        original_pdf_path: Path to original PDF file
+        
+    Returns:
+        Path to the saved output file
+    """
+    try:
+        # Create output directory
+        output_dir = "output"
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Create filename
+        base_name = os.path.splitext(os.path.basename(original_pdf_path))[0]
+        output_file = os.path.join(output_dir, f"{base_name}_parsed.txt")
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            # Write header
+            f.write(f"HYBRID PDF PARSING OUTPUT\n")
+            f.write(f"="*50 + "\n")
+            f.write(f"Document: {result['document_name']}\n")
+            f.write(f"Method: {result['parsing_method']}\n")
+            f.write(f"Pages: {result['total_pages']}\n")
+            f.write(f"Tables: {result['metadata']['table_elements']}\n")
+            f.write(f"Text Blocks: {result['metadata']['text_elements']}\n")
+            f.write(f"Processing Time: {result['processing_time']:.2f}s\n")
+            f.write(f"="*50 + "\n\n")
+            
+            # Write content
+            f.write(result['content'])
+        
+        print(f"💾 Output saved to: {output_file}")
+        return output_file
+        
+    except Exception as e:
+        print(f"⚠️ Error saving hybrid output: {e}")
+        return ""
+
+# Legacy function names for backward compatibility
+def parse_document_enhanced_tables(pdf_path: str, save_parsed_text: bool = False) -> dict:
+    """Legacy function name - redirects to hybrid parsing."""
+    return parse_document_hybrid(pdf_path, save_parsed_text)
+
+def parse_document_with_tables(pdf_path: str, save_parsed_text: bool = False) -> dict:
+    """Legacy function name - redirects to hybrid parsing."""
+    return parse_document_hybrid(pdf_path, save_parsed_text)
+
+def detect_table_structures(page, min_rows=2, min_cols=2) -> List[Dict]:
+    """Legacy function for backward compatibility - uses PyMuPDF fallback method."""
     tables = []
     
     try:
-        # Use PyMuPDF's find_tables method if available
+        # Use PyMuPDF's find_tables method with enhanced settings
         if hasattr(page, 'find_tables'):
-            found_tables = page.find_tables()
+            found_tables = page.find_tables(
+                vertical_strategy="lines_strict",
+                horizontal_strategy="lines_strict",
+                snap_tolerance=3.0,
+                join_tolerance=3.0,
+                edge_min_length=3.0,
+                min_words_vertical=3,
+                min_words_horizontal=1
+            )
             
             for table in found_tables:
                 try:
                     # Extract table data
                     table_data = table.extract()
+                    bbox = table.bbox if hasattr(table, 'bbox') else [0, 0, 0, 0]
                     
                     if table_data and len(table_data) >= min_rows:
                         # Filter out empty rows and columns
                         filtered_data = []
                         for row in table_data:
                             if row and any(cell and str(cell).strip() for cell in row):
-                                filtered_data.append([str(cell).strip() if cell else "" for cell in row])
+                                cleaned_row = []
+                                for cell in row:
+                                    cell_str = str(cell).strip() if cell else ""
+                                    # Clean common PDF artifacts
+                                    cell_str = re.sub(r'\s+', ' ', cell_str)
+                                    cell_str = re.sub(r'[^\x20-\x7E\u00A0-\u024F\u1E00-\u1EFF]', '', cell_str)
+                                    cleaned_row.append(cell_str)
+                                filtered_data.append(cleaned_row)
                         
                         if len(filtered_data) >= min_rows and len(filtered_data[0]) >= min_cols:
-                            # Create DataFrame and convert to markdown
+                            # Create table with proper headers
                             try:
-                                df = pd.DataFrame(filtered_data[1:], columns=filtered_data[0])
-                                df = df.dropna(how='all').dropna(axis=1, how='all')
+                                # Ensure all rows have the same number of columns
+                                max_cols = max(len(row) for row in filtered_data)
+                                normalized_data = []
+                                for row in filtered_data:
+                                    while len(row) < max_cols:
+                                        row.append("")
+                                    normalized_data.append(row[:max_cols])
                                 
-                                if df.shape[0] >= 1 and df.shape[1] >= min_cols:
-                                    table_markdown = df.to_markdown(index=False, tablefmt='pipe')
+                                if len(normalized_data) >= min_rows and max_cols >= min_cols:
+                                    # Create markdown table
+                                    table_markdown = _create_markdown_table(normalized_data)
+                                    
                                     tables.append({
                                         'content': table_markdown,
                                         'type': 'table',
-                                        'rows': len(df) + 1,  # +1 for header
-                                        'cols': len(df.columns),
-                                        'bbox': table.bbox if hasattr(table, 'bbox') else None
+                                        'rows': len(normalized_data),
+                                        'cols': max_cols,
+                                        'bbox': bbox,
+                                        'y_position': bbox[1] if bbox else 0,
+                                        'raw_data': normalized_data
                                     })
+                                    
                             except Exception as e:
-                                print(f"⚠️ Table DataFrame creation error: {e}")
+                                print(f"⚠️ Table processing error: {e}")
                                 continue
                                 
                 except Exception as e:
@@ -69,316 +646,11 @@ def detect_table_structures(page, min_rows=2, min_cols=2) -> List[Dict]:
     
     return tables
 
-def extract_text_blocks(page) -> List[Dict]:
-    """
-    Extract text blocks with positioning information for better layout understanding.
-    
-    Args:
-        page: PyMuPDF page object
-        
-    Returns:
-        List of text blocks with metadata
-    """
-    text_blocks = []
-    
-    try:
-        # Get text blocks with position information
-        blocks = page.get_text("dict")
-        
-        for block in blocks.get("blocks", []):
-            if "lines" in block:  # Text block
-                block_text = ""
-                for line in block["lines"]:
-                    for span in line.get("spans", []):
-                        text = span.get("text", "").strip()
-                        if text:
-                            block_text += text + " "
-                
-                if block_text.strip():
-                    text_blocks.append({
-                        'text': block_text.strip(),
-                        'bbox': block.get("bbox", [0, 0, 0, 0]),
-                        'type': 'text_block'
-                    })
-    
-    except Exception as e:
-        print(f"⚠️ Text block extraction error: {e}")
-        # Fallback to simple text extraction
-        try:
-            simple_text = page.get_text()
-            if simple_text.strip():
-                text_blocks.append({
-                    'text': simple_text.strip(),
-                    'bbox': [0, 0, 0, 0],
-                    'type': 'text_block'
-                })
-        except Exception as fallback_error:
-            print(f"⚠️ Fallback text extraction error: {fallback_error}")
-    
-    return text_blocks
-
-def group_text_into_paragraphs(text_blocks: List[Dict]) -> List[str]:
-    """
-    Group text blocks into logical paragraphs based on positioning and content.
-    
-    Args:
-        text_blocks: List of text blocks with bbox information
-        
-    Returns:
-        List of paragraph texts
-    """
-    if not text_blocks:
-        return []
-    
-    # Sort blocks by vertical position (top to bottom)
-    sorted_blocks = sorted(text_blocks, key=lambda x: (x['bbox'][1], x['bbox'][0]))
-    
-    paragraphs = []
-    current_paragraph = []
-    last_y = None
-    paragraph_threshold = 20  # Pixel threshold for paragraph breaks
-    
-    for block in sorted_blocks:
-        text = block['text'].strip()
-        if not text:
-            continue
-            
-        y_pos = block['bbox'][1]  # Top y-coordinate
-        
-        # Check if this should start a new paragraph
-        if last_y is not None and abs(y_pos - last_y) > paragraph_threshold:
-            # Save current paragraph and start new one
-            if current_paragraph:
-                paragraph_text = ' '.join(current_paragraph)
-                if len(paragraph_text.strip()) > 15:  # Filter very short text
-                    paragraphs.append(paragraph_text.strip())
-            current_paragraph = [text]
-        else:
-            current_paragraph.append(text)
-        
-        last_y = y_pos
-    
-    # Add final paragraph
-    if current_paragraph:
-        paragraph_text = ' '.join(current_paragraph)
-        if len(paragraph_text.strip()) > 15:
-            paragraphs.append(paragraph_text.strip())
-    
-    return paragraphs
-
-def parse_document_enhanced_pymupdf(pdf_path: str, save_parsed_text: bool = False) -> dict:
-    """
-    Optimized PDF parsing using PyMuPDF with fast, simple extraction.
-    Now uses optimized approach for better performance.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        save_parsed_text: Whether to save parsed content to text files
-        
-    Returns:
-        Dictionary containing parsed content
-    """
-    try:
-        doc_name = os.path.basename(pdf_path)
-        
-        print(f"🚀 Starting optimized PyMuPDF parsing for {doc_name}...")
-        
-        # Open PDF with PyMuPDF
-        doc = fitz.open(pdf_path)
-        total_pages = len(doc)
-        
-        print(f"📄 Processing {total_pages} pages...")
-        
-        processing_start = time.time()
-        
-        all_text = ""
-        ordered_content = []
-        
-        for page_num in range(total_pages):
-            page = doc[page_num]
-            
-            # Simple, fast text extraction
-            page_text = page.get_text()
-            
-            if page_text.strip():
-                # Clean the text
-                cleaned_text = clean_text(page_text)
-                
-                if cleaned_text:
-                    all_text += cleaned_text + "\n\n"
-                    
-                    ordered_content.append({
-                        'content': cleaned_text,
-                        'type': 'text',
-                        'page': page_num + 1,
-                        'source': 'optimized_pymupdf'
-                    })
-            
-            if (page_num + 1) % 10 == 0:  # Progress update every 10 pages
-                print(f"   📖 Processed {page_num + 1}/{total_pages} pages...")
-        
-        doc.close()
-        
-        processing_time = time.time() - processing_start
-        
-        # Final text cleanup
-        final_text = clean_text(all_text)
-        
-        result = {
-            'document_name': doc_name,
-            'content': final_text,
-            'ordered_content': ordered_content,
-            'total_pages': total_pages,
-            'parsing_method': 'optimized_pymupdf',
-            'processing_time': processing_time,
-            'metadata': {
-                'total_elements': len(ordered_content),
-                'text_elements': len(ordered_content),
-                'table_elements': 0,
-                'pages_processed': total_pages,
-                'characters_extracted': len(final_text)
-            }
-        }
-        
-        print(f"✅ Optimized parsing complete: {len(final_text)} characters in {processing_time:.2f}s")
-        return result
-        
-    except Exception as e:
-        print(f"❌ Enhanced PyMuPDF parsing error: {e}")
-        # Fallback to simple extraction
-        return parse_document_simple_fallback(pdf_path, save_parsed_text)
-
-def parse_document_simple_fallback(pdf_path: str, save_parsed_text: bool = False) -> dict:
-    """
-    Simple fallback parsing method using PyMuPDF only.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        save_parsed_text: Whether to save parsed content to text files
-        
-    Returns:
-        Dictionary containing parsed content
-    """
-    try:
-        doc = fitz.open(pdf_path)
-        doc_name = os.path.basename(pdf_path)
-        total_pages = len(doc)
-        
-        all_text = ""
-        ordered_content = []
-        
-        for page_num in range(total_pages):
-            page = doc[page_num]
-            text = page.get_text()
-            
-            if text.strip():
-                all_text += text + "\n\n"
-                ordered_content.append({
-                    'content': text.strip(),
-                    'type': 'text',
-                    'page': page_num + 1,
-                    'source': 'simple_pymupdf'
-                })
-        
-        doc.close()
-        
-        return {
-            'document_name': doc_name,
-            'content': all_text,
-            'ordered_content': ordered_content,
-            'total_pages': total_pages,
-            'parsing_method': 'simple_pymupdf',
-            'metadata': {
-                'total_elements': len(ordered_content),
-                'text_elements': len(ordered_content),
-                'table_elements': 0,
-                'pages_processed': total_pages
-            }
-        }
-        
-    except Exception as e:
-        print(f"❌ Simple fallback parsing error: {e}")
-        raise
-
-# Main parsing function - now uses enhanced PyMuPDF by default
-def parse_document_paddleocr(pdf_path: str, save_parsed_text: bool = False, use_gpu: bool = False) -> dict:
-    """
-    Parse PDF using enhanced PyMuPDF (legacy function name for compatibility).
-    
-    Args:
-        pdf_path: Path to the PDF file
-        save_parsed_text: Whether to save parsed content to text files
-        use_gpu: Ignored (for compatibility)
-        
-    Returns:
-        Dictionary containing parsed content with improved accuracy
-    """
-    return parse_document_enhanced_pymupdf(pdf_path, save_parsed_text)
-
-def clean_text(text: str) -> str:
-    """Clean and normalize extracted text."""
-    if not text:
-        return ""
-    
-    # Remove excessive whitespace while preserving line breaks
-    text = re.sub(r'[ \t]+', ' ', text)  # Multiple spaces/tabs to single space
-    text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)  # Multiple line breaks to double
-    
-    return text.strip()
-
-def load_and_parse_documents(document_paths: List[str], save_parsed_text: bool = False) -> List[Dict]:
-    """
-    Parse multiple PDF documents using Enhanced PyMuPDF.
-    
-    Args:
-        document_paths: List of paths to PDF documents
-        save_parsed_text: Whether to save parsed content to text files for inspection
-    """
-    parsed_docs = []
-    
-    for path in document_paths:
-        doc_name = os.path.basename(path)
-        
-        if not os.path.exists(path):
-            parsed_docs.append({
-                'document_name': doc_name, 
-                'parsed_output': {"error": f"File not found: {path}"}
-            })
-            continue
-        
-        print(f"🔄 Processing {doc_name} with Enhanced PyMuPDF...")
-        parsed_output = parse_document_enhanced_pymupdf(path, save_parsed_text=save_parsed_text)
-        parsed_docs.append({
-            'document_name': doc_name, 
-            'parsed_output': parsed_output
-        })
-    
-    return parsed_docs
-
-def load_and_parse_from_folder(docs_folder: str, file_filter: Optional[List[str]] = None, save_parsed_text: bool = False) -> List[Dict]:
-    """
-    Load and parse documents from a folder using Enhanced PyMuPDF, optionally filtering by filenames.
-    
-    Args:
-        docs_folder: Folder containing PDF documents
-        file_filter: Optional list of filenames to process. If None, processes all PDFs.
-        save_parsed_text: Whether to save parsed content to text files for inspection
-    """
-    if not os.path.exists(docs_folder):
-        return []
-    
-    # Get all PDF files in folder
-    all_files = [f for f in os.listdir(docs_folder) if f.lower().endswith('.pdf')]
-    
-    # Apply filter if provided
-    if file_filter:
-        files_to_process = [f for f in all_files if f in file_filter]
+if __name__ == "__main__":
+    # Test the hybrid parser
+    pdf_path = "docs/policy.pdf"
+    if os.path.exists(pdf_path):
+        result = parse_document_hybrid(pdf_path, save_parsed_text=True)
+        print(f"✅ Parsing complete: {result['metadata']['characters_extracted']:,} characters")
     else:
-        files_to_process = all_files
-    
-    print(f"📁 Found {len(files_to_process)} PDF files to process with Enhanced PyMuPDF")
-    
-    # Create full paths
-    document_paths = [os.path.join(docs_folder, filename) for filename in files_to_process]
-    
-    return load_and_parse_documents(document_paths, save_parsed_text=save_parsed_text)
+        print(f"❌ PDF file not found: {pdf_path}")

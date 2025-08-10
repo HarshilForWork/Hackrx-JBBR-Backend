@@ -10,7 +10,7 @@ import asyncio
 from typing import Dict, List, Any, Optional, Union
 from dataclasses import dataclass
 
-from .parse_documents import load_and_parse_documents
+from .parse_documents import parse_document_hybrid
 from .chunk_documents_optimized import chunk_documents_optimized
 from .embed_and_index import index_chunks_in_pinecone
 from .document_registry import DocumentRegistry
@@ -238,7 +238,24 @@ class DocumentPipeline:
         """Async wrapper for document parsing."""
         # Run parsing in executor to avoid blocking
         loop = asyncio.get_event_loop()
-        return await loop.run_in_executor(None, load_and_parse_documents, files_to_process)
+        return await loop.run_in_executor(None, self._parse_multiple_documents, files_to_process)
+    
+    def _parse_multiple_documents(self, file_paths: List[str]) -> List[Dict]:
+        """Parse multiple documents using the hybrid parser."""
+        results = []
+        for pdf_path in file_paths:
+            try:
+                result = parse_document_hybrid(pdf_path, save_parsed_text=self.config.save_parsed_text)
+                results.append(result)
+            except Exception as e:
+                print(f"⚠️ Error parsing {pdf_path}: {e}")
+                # Create error result
+                results.append({
+                    'document_name': os.path.basename(pdf_path),
+                    'parsed_output': {'error': str(e)},
+                    'metadata': {'status': 'error'}
+                })
+        return results
     
     async def _chunk_documents_async(self, parsed_docs: List[Dict]) -> List[Dict]:
         """Async wrapper for document chunking."""
@@ -247,18 +264,37 @@ class DocumentPipeline:
         
         for doc in parsed_docs:
             doc_name = doc.get('document_name', 'unknown')
-            parsed_output = doc.get('parsed_output', {})
             
-            # Extract content from parsed_output
-            if isinstance(parsed_output, dict):
-                # Check for different possible content fields
-                content = (parsed_output.get('content', '') or 
-                          parsed_output.get('text', '') or 
-                          parsed_output.get('cleaned_text', ''))
-                ordered_content = parsed_output.get('ordered_content', [])
+            # Check if this is direct output from parse_document_hybrid or wrapped format
+            if 'parsed_output' in doc:
+                # Old wrapped format
+                parsed_output = doc.get('parsed_output', {})
+                if isinstance(parsed_output, dict):
+                    content = (parsed_output.get('content', '') or 
+                              parsed_output.get('text', '') or 
+                              parsed_output.get('cleaned_text', ''))
+                    ordered_content = parsed_output.get('ordered_content', [])
+                else:
+                    content = str(parsed_output) if parsed_output else ''
+                    ordered_content = []
             else:
-                content = str(parsed_output) if parsed_output else ''
-                ordered_content = []
+                # Direct format from parse_document_hybrid
+                content = doc.get('content', '')
+                ordered_content = doc.get('ordered_content', [])
+            
+            # Skip documents with actual parsing errors or no content
+            # Check for actual error conditions, not just the word "error" in content
+            has_parsing_error = (
+                doc.get('metadata', {}).get('error') or  # Check metadata for actual errors
+                (isinstance(content, str) and content.strip().startswith('Error:')) or  # Content starts with "Error:"
+                (isinstance(content, str) and 'parsing error' in content.lower()) or  # Explicit parsing errors
+                (len(content.strip()) < 10)  # Content too short to be meaningful
+            )
+            
+            if not content or content.strip() == '' or has_parsing_error:
+                error_reason = "No content" if not content else "Parsing error detected"
+                print(f"⚠️ Skipping document {doc_name}: {error_reason}")
+                continue
             
             # Create the format expected by chunk_documents
             transformed_doc = {

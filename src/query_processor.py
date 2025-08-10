@@ -107,7 +107,7 @@ class QueryProcessor:
                         # Set generation config optimized for JSON responses
                         # Use low temperature for consistent, structured outputs
                         generation_config = {
-                            #"temperature": 0.7,  # Very low temperature for structured JSON responses
+                            "temperature": 0.7,  # Very low temperature for structured JSON responses
                         }
                         
                         test_model = genai.GenerativeModel(
