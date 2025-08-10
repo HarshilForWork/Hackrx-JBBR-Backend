@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-08-10T17:40:40.829769",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_174022.pdf"
+  },
+  "response": {
+    "answers": [
+      "Based on the provided context, which only lists the file names and page numbers of the policy documents without providing their actual content, it is not possible to determine the grace period for premium payment under the National Parivar Mediclaim Plus Policy.\n\nThe policy documents themselves (i.e., the text content of `input_20250810_174022.pdf` and `input_20250810_173308.pdf` at Page 0) were not provided for analysis. Therefore, I cannot extract specific quotes or details regarding the grace period.",
+      "Based on the provided policy documents, there are two different waiting periods specified for pre-existing diseases (PED) depending on the source document:\n\n1.  **24 Months:**\n    According to `input_20250810_174022.pdf`, the waiting period for pre-existing diseases is 24 months.\n    *   \"Pre-existing diseases (PED) will be covered after a waiting period of 24 months from the policy inception date.\"\n        *   Source: input_20250810_174022.pdf, Page 0 (also found in Source 1, Source 3, Source 5)\n\n2.  **48 Months:**\n    Conversely, `input_20250810_173308.pdf` states a waiting period of 48 months for pre-existing diseases.\n    *   \"Pre-existing diseases are covered after 48 months of continuous coverage.\"\n        *   Source: input_20250810_173308.pdf, Page 0 (also found in Source 2, Source 4)\n\nTherefore, the waiting period for pre-existing diseases to be covered is either **24 months** or **48 months**, depending on which specific policy document (or section thereof) applies. The provided context does not specify which document takes precedence or if they refer to different policy types.",
+      "Yes, this policy does cover maternity expenses, subject to specific conditions.\n\n**Coverage Details:**\nThe policy covers \"medically necessary expenses for pregnancy, childbirth, and postnatal care, including complications.\"\n\n**Conditions for Coverage:**\n1.  **Benefit Limit:** Coverage is provided \"up to a maximum of $5,000 per policy period.\"\n2.  **Waiting Period:** A \"12-month waiting period applies from the policy's effective date before maternity benefits are payable.\"\n3.  **Overall Policy Maximum:** This benefit is also \"subject to the overall policy maximum.\"\n\n**Supporting Quotes:**\n*   \"Maternity Benefit: We will cover medically necessary expenses for pregnancy, childbirth, and postnatal care, including complications, up to a maximum of $5,000 per policy period. A 12-month waiting period applies from the policy's effective date before maternity benefits are payable. This benefit is subject to the overall policy maximum.\"\n    *   Source 1: input_20250810_174022.pdf, Page 0\n    *   Source 3: input_20250810_174022.pdf, Page 0\n    *   Source 5: input_20250810_174022.pdf, Page 0",
+      "Based on the provided policy documents, the waiting period for cataract surgery is **24 months**.\n\nThis waiting period is explicitly stated in both the Policy Schedule and the Health Insurance Policy Terms and Conditions.\n\n**Supporting Quotes:**\n\n*   \"Waiting Period for Specific Diseases/Procedures: 24 months for specified diseases/procedures including Cataract, Hernia, Hydrocele, Piles, Sinusitis, Gall Bladder Stones, Kidney Stones, Benign Prostatic Hypertrophy, Hysterectomy, Joint Replacement Surgery (other than accidental), and all types of Cysts/Tumors.\"\n    (Source 1: input_20250810_174022.pdf, Page 0)\n\n*   \"Specific Diseases/Procedures: A waiting period of 24 months shall apply for the following diseases/procedures from the Policy Commencement Date: Cataract, Hernia, Hydrocele, Piles, Sinusitis, Gall Bladder Stones, Kidney Stones, Benign Prostatic Hypertrophy, Hysterectomy, Joint Replacement Surgery (other than accidental), and all types of Cysts/Tumors.\"\n    (Source 2: input_20250810_173308.pdf, Page 0)\n\nThe waiting period of 24 months applies from the Policy Commencement Date for cataract surgery, as it is listed among the specific diseases/procedures subject to this waiting period.",
+      "Yes, the medical expenses for a living organ donor are covered under this policy, provided the recipient of the organ is a Covered Person under the policy.\n\n**Supporting Quotes:**\n\n*   \"Expenses for a living donor are covered if the recipient is a Covered Person under this Policy.\"\n    *   Source: input_20250810_174022.pdf, Page 0 (also found in Source 3 and Source 5, which are duplicates of Source 1)\n\nThe policy also lists \"Transplant\" and \"Organ Transplant\" as covered benefits with a significant lifetime maximum, further supporting the intent to cover such procedures.\n\n*   Under \"Major Medical Benefits\": \"Transplant - Lifetime Maximum: $1,000,000\"\n    *   Source: input_20250810_174022.pdf, Page 0\n*   Under \"Other Benefits\": \"Organ Transplant - Lifetime Maximum: $1,000,000\"\n    *   Source: input_20250810_174022.pdf, Page 0\n*   Under \"What is covered?\": \"Transplant - 100% after deductible\"\n    *   Source: input_20250810_173308.pdf, Page 0\n*   Under \"Other Benefits\": \"Organ Transplant - 100% after deductible\"\n    *   Source: input_20250810_173308.pdf, Page 0\n\nTherefore, the medical expenses for a living organ donor are covered, contingent on the recipient being a Covered Person under this specific policy.",
+      "Based on the provided policy documents, there are two different No Claim Discounts (NCDs) mentioned across the sources:\n\n1.  **60% No Claim Discount (NCD)**:\n    This NCD is stated in `input_20250810_174022.pdf`.\n    *   \"No Claim Discount (NCD) 60%\" (Source 1: input_20250810_174022.pdf, Page 0)\n    *   \"No Claim Discount (NCD) 60%\" (Source 3: input_20250810_174022.pdf, Page 0)\n    *   \"No Claim Discount (NCD) 60%\" (Source 5: input_20250810_174022.pdf, Page 0)\n\n2.  **50% No Claim Discount (NCD)**:\n    This NCD is stated in `input_20250810_173308.pdf`.\n    *   \"No Claim Discount (NCD) 50%\" (Source 2: input_20250810_173308.pdf, Page 0)\n    *   \"No Claim Discount (NCD) 50%\" (Source 4: input_20250810_173308.pdf, Page 0)\n\nTherefore, depending on which specific policy document is being referred to, the No Claim Discount offered is either 60% or 50%.",
+      "The provided policy documents contain conflicting information regarding benefits for preventive health check-ups.\n\n**Conflicting Information:**\n\n1.  **Denial of Coverage:**\n    One set of documents explicitly states that preventive health check-ups are generally not covered.\n    \"This policy does not cover routine physical examinations, preventive health check-ups, or health screenings unless specifically mandated by law for certain age groups or conditions, and only then to the extent required by such law.\"\n    (Source 1: input_20250810_174022.pdf, Page 0; Source 3: input_20250810_174022.pdf, Page 0; Source 5: input_20250810_174022.pdf, Page 0)\n\n2.  **Affirmation of Coverage:**\n    Conversely, another set of documents indicates that benefits for preventive care services, including annual physicals, are covered.\n    \"Benefits for preventive care services, including annual physicals and immunizations, are covered at 100% of the Usual, Customary, and Reasonable (UCR) charges when rendered by an in-network provider. A deductible and coinsurance may apply if services are rendered by an out-of-network provider.\"\n    (Source 2: input_20250810_173308.pdf, Page 0; Source 4: input_20250810_173308.pdf, Page 0)\n\n**Conclusion:**\n\nDue to the direct contradiction between the provided policy documents, it is not possible to definitively state whether there is a benefit for preventive health check-ups. One document explicitly excludes them (with a narrow legal exception), while the other explicitly includes them as covered benefits. Further clarification from the policy issuer would be required to resolve this discrepancy.",
+      "Based on the provided policy documents, the definition of 'Hospital' is not available. The provided sources are placeholders and do not contain any text or content from which to extract the definition.",
+      "The extent of coverage for AYUSH treatments is as follows:\n\nExpenses incurred on AYUSH Treatment are covered up to the Sum Insured.\n\nThis coverage is subject to the following specific conditions:\n1.  The treatment must have been undergone in a hospital or in any institute recognized by the Government and/or accredited by Quality Council of India/National Accreditation Board on Health for Hospitals and Healthcare Providers (NABH).\n2.  The treatment must be taken for a disease/illness/injury for which the Insured Person is hospitalized.\n3.  The treatment is not covered for any pre-existing disease during the waiting period.\n\n**Supporting Quotes and Citations:**\n\n*   \"Expenses incurred on AYUSH Treatment are covered up to the Sum Insured.\"\n    (Source 1: input_20250810_174022.pdf, Page 0; Source 2: input_20250810_173308.pdf, Page 0)\n\n*   \"This coverage is subject to the following conditions:\n    *   The treatment has been undergone in a hospital or in any institute recognized by the Government and/or accredited by Quality Council of India/National Accreditation Board on Health for Hospitals and Healthcare Providers (NABH).\n    *   The treatment is taken for a disease/illness/injury for which the Insured Person is hospitalized.\n    *   The treatment is not for any pre-existing disease during the waiting period.\"\n    (Source 1: input_20250810_174022.pdf, Page 0; Source 2: input_20250810_173308.pdf, Page 0)",
+      "Yes, there are sub-limits on room rent and ICU charges for Plan A under the Star Comprehensive Insurance Policy.\n\n**Room Rent Sub-limit:**\nFor Plan A, the policy limits room, boarding, and nursing expenses.\n\"Room, Boarding and Nursing Expenses as provided by the Hospital/Nursing Home up to 2% of the Sum Insured per day subject to a maximum of Rs. 5000/- per day.\"\n(Source 1: input_20250810_174022.pdf, Page 0; Source 3: input_20250810_174022.pdf, Page 0; Source 5: input_20250810_174022.pdf, Page 0)\n\n**ICU Charges Sub-limit:**\nSimilarly, Intensive Care Unit (ICU) expenses for Plan A are also subject to a sub-limit.\n\"Intensive Care Unit (ICU) expenses up to 5% of the Sum Insured per day subject to a maximum of Rs. 10000/- per day.\"\n(Source 1: input_20250810_174022.pdf, Page 0; Source 3: input_20250810_174022.pdf, Page 0; Source 5: input_20250810_174022.pdf, Page 0)"
+    ],
+    "similarity_vectors": [
+      [
+        0.8824295401573181,
+        0.8824295401573181,
+        0.876313328742981,
+        0.876313328742981,
+        0.8754510879516602
+      ],
+      [
+        0.8638529777526855,
+        0.8638529777526855,
+        0.840893566608429,
+        0.840893566608429,
+        0.8358030319213867
+      ],
+      [
+        0.8272889852523804,
+        0.8272889852523804,
+        0.8264632225036621,
+        0.8264632225036621,
+        0.8293212056159973
+      ],
+      [
+        0.8353191614151001,
+        0.8353191614151001,
+        0.8186277747154236,
+        0.8186277747154236,
+        0.8156862854957581
+      ],
+      [
+        0.8443835973739624,
+        0.8443835973739624,
+        0.8427172303199768,
+        0.8427172303199768,
+        0.837125837802887
+      ],
+      [
+        0.8132010698318481,
+        0.8132010698318481,
+        0.8128068447113037,
+        0.8128068447113037,
+        0.8196860551834106
+      ],
+      [
+        0.7817568778991699,
+        0.7817568778991699,
+        0.7808545827865601,
+        0.7808545827865601,
+        0.7892590165138245
+      ],
+      [
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8120719790458679,
+        0.8120719790458679,
+        0.8101596236228943
+      ],
+      [
+        0.8186568021774292,
+        0.8186568021774292,
+        0.8167492747306824,
+        0.8167492747306824,
+        0.8151763677597046
+      ],
+      [
+        0.8332703113555908,
+        0.8332703113555908,
+        0.8323262929916382,
+        0.8323262929916382,
+        0.8295103907585144
+      ]
+    ],
+    "total_time_taken": 18.55404543876648,
+    "timing_breakdown": {
+      "pdf_download": 0.36623096466064453,
+      "pdf_processing": 5.484088897705078,
+      "embedding_time": 1.1550636291503906,
+      "query_processing_time": 11.546576976776123,
+      "cleanup_time": 0.0
+    },
+    "multithreading_performance": {
+      "embedding_workers": 10,
+      "query_workers": 10,
+      "individual_embedding_times": [
+        1.1495497226715088,
+        1.146547555923462,
+        1.1495482921600342,
+        1.1495482921600342,
+        1.1520674228668213,
+        1.1465537548065186,
+        1.1445527076721191,
+        1.1370441913604736,
+        1.143376111984253,
+        1.1498868465423584
+      ],
+      "individual_query_times": [
+        8.013030290603638,
+        9.618237257003784,
+        10.185412645339966,
+        9.097774505615234,
+        9.850791454315186,
+        9.27095341682434,
+        11.543278217315674,
+        5.628886938095093,
+        11.065268516540527,
+        9.260157346725464
+      ],
+      "bottleneck_analysis": {
+        "slowest_query_time": 11.543278217315674,
+        "fastest_query_time": 5.628886938095093,
+        "time_variance": 5.914391279220581,
+        "parallel_efficiency": 0.810056441632056
+      },
+      "embedding_speedup": 9.929041663776903,
+      "query_speedup": 8.10056441632056
+    },
+    "vector_info": {
+      "total_queries": 10,
+      "query_embedding_dimension": 1024,
+      "embedding_model": "multilingual-e5-large",
+      "total_similarity_results": 50
+    }
+  },
+  "processing_summary": {
+    "success": true,
+    "total_questions": 10,
+    "total_time_seconds": 18.55404543876648,
+    "pdf_processing_time": 5.484088897705078,
+    "embedding_time": 1.1550636291503906,
+    "query_processing_time": 11.546576976776123
+  }
+}

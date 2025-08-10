@@ -319,7 +319,7 @@ class DocumentPipeline:
         )
     
     async def _index_documents_async(self, all_chunks: List[Dict], pinecone_api_key: str) -> Dict:
-        """Async wrapper for document indexing."""
+        """Async wrapper for document indexing using FAISS."""
         # Run indexing in executor to avoid blocking
         loop = asyncio.get_event_loop()
         return await loop.run_in_executor(
@@ -510,7 +510,7 @@ def query_documents_sync(
         >>> print(result["evaluation"]["decision"])  # covered/not_covered/partial
     """
     try:
-        from .query_processor import QueryProcessor
+        from .faiss_query_processor import FAISSQueryProcessor
 
         # Validate inputs
         if not query or not query.strip():
@@ -523,7 +523,7 @@ def query_documents_sync(
         if not pinecone_api_key:
             return {
                 "success": False,
-                "error": "Pinecone API key is required for querying",
+                "error": "Pinecone API key is required for embeddings (FAISS used for storage)",
                 "query": query
             }
 
@@ -531,15 +531,15 @@ def query_documents_sync(
         if not gemini_api_key:
             gemini_api_key = "dummy"
 
-        # Initialize query processor
-        processor = QueryProcessor(
+        # Initialize FAISS query processor
+        processor = FAISSQueryProcessor(
             pinecone_api_key=pinecone_api_key,
             gemini_api_key=gemini_api_key,
             index_name=index_name
         )
 
-        # Process query, now supports query_embedding
-        result = processor.process_query(query.strip(), query_embedding=query_embedding)
+        # Process query
+        result = processor.process_query(query.strip())
         result["success"] = result.get("status") == "success"
 
         return result
@@ -583,7 +583,7 @@ async def query_documents_batch_async(
         ...     print(result["evaluation"]["decision"])
     """
     try:
-        from .query_processor import QueryProcessor
+        from .faiss_query_processor import FAISSQueryProcessor
 
         # Validate inputs
         if not queries:
@@ -602,7 +602,7 @@ async def query_documents_batch_async(
         if not pinecone_api_key:
             return [{
                 "success": False,
-                "error": "Pinecone API key is required for querying",
+                "error": "Pinecone API key is required for embeddings (FAISS used for storage)",
                 "query": query,
                 "status": "error"
             } for query in queries]
@@ -611,8 +611,8 @@ async def query_documents_batch_async(
         if not gemini_api_key:
             gemini_api_key = "dummy"
 
-        # Initialize query processor once for all queries
-        processor = QueryProcessor(
+        # Initialize FAISS query processor once for all queries
+        processor = FAISSQueryProcessor(
             pinecone_api_key=pinecone_api_key,
             gemini_api_key=gemini_api_key,
             index_name=index_name

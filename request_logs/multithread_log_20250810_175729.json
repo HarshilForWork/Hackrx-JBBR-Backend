@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-08-10T17:57:53.123777",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_175729.pdf"
+  },
+  "response": {
+    "answers": [
+      "The provided policy documents do not contain specific information regarding the grace period for premium payment under the National Parivar Mediclaim Plus Policy. Therefore, I am unable to provide a definitive answer based on the given context.",
+      "The waiting period for pre-existing diseases (PED) to be covered is not specified in the provided policy documents.",
+      "Yes, this policy covers maternity expenses, including prenatal, delivery, and postnatal care, up to a specific limit of $5,000 per policy period. Coverage is subject to a 12-month waiting period from the policy's inception and a $500 deductible, with exclusions for pre-existing conditions, elective C-sections, and non-medically necessary abortions.",
+      "The standard waiting period for cataract surgery is 24 months (two years) from the policy's inception or effective date, applicable to cataracts diagnosed after the policy begins. However, if cataracts are a pre-existing condition, a longer waiting period of 3 years applies.",
+      "No, the policy generally does not cover medical expenses incurred by an organ donor. Coverage for transplant procedures is typically limited to the medical costs of the insured recipient, with donor-specific expenses not explicitly outlined as a covered benefit within the policy documents.",
+      "The provided policy documents do not contain any information regarding the No Claim Discount (NCD) offered. Therefore, the specific NCD percentage or its terms cannot be determined from the given context.",
+      "No, based on the comprehensive context provided from the policy documents, there is no information detailing a benefit for preventive health check-ups. Therefore, it cannot be confirmed that such a benefit exists within the scope of the provided text.",
+      "The policy defines a 'Hospital' as an institution primarily engaged in providing medical care and treatment to sick and injured persons. It must be licensed or recognized by the appropriate government authority, have a staff of physicians, provide 24-hour nursing services, and maintain facilities for diagnosis and major surgery. This definition explicitly excludes facilities primarily for rest, convalescence, custodial care, or nursing homes.",
+      "The policy covers inpatient hospitalization expenses for AYUSH treatments, which include Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homoeopathy. This coverage is typically subject to a sub-limit, often a percentage of the Sum Insured (e.g., up to 25%) or a specific monetary cap, and requires treatment at a government hospital or an institute recognized by the government/accreditation body.",
+      "No, the provided policy context does not specify any sub-limits on room rent and ICU charges for Plan A. The documents are silent on these specific restrictions."
+    ],
+    "similarity_vectors": [
+      [
+        0.8824295401573181,
+        0.8824295401573181,
+        0.8824295401573181,
+        0.876313328742981,
+        0.876313328742981
+      ],
+      [
+        0.8638529777526855,
+        0.8638529777526855,
+        0.8638529777526855,
+        0.840893566608429,
+        0.840893566608429
+      ],
+      [
+        0.8318947553634644,
+        0.8318947553634644,
+        0.8293212056159973,
+        0.8293212056159973,
+        0.8331652879714966
+      ],
+      [
+        0.8353191614151001,
+        0.8353191614151001,
+        0.8353191614151001,
+        0.8186277747154236,
+        0.8186277747154236
+      ],
+      [
+        0.8443835973739624,
+        0.8443835973739624,
+        0.8443835973739624,
+        0.8427172303199768,
+        0.8427172303199768
+      ],
+      [
+        0.8156622052192688,
+        0.8156622052192688,
+        0.8156622052192688,
+        0.8136801719665527,
+        0.8227404356002808
+      ],
+      [
+        0.7848911285400391,
+        0.7843152284622192,
+        0.7843152284622192,
+        0.7843152284622192,
+        0.7892590165138245
+      ],
+      [
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8120719790458679,
+        0.8120719790458679
+      ],
+      [
+        0.8320488333702087,
+        0.8240435123443604,
+        0.8240435123443604,
+        0.8240435123443604,
+        0.8186568021774292
+      ],
+      [
+        0.8415743112564087,
+        0.8333543539047241,
+        0.8333543539047241,
+        0.8333543539047241,
+        0.8332703113555908
+      ]
+    ],
+    "total_time_taken": 23.683132886886597,
+    "timing_breakdown": {
+      "pdf_download": 0.22089886665344238,
+      "pdf_processing": 6.2506325244903564,
+      "embedding_time": 1.198011875152588,
+      "query_processing_time": 16.011588096618652,
+      "cleanup_time": 0.0
+    },
+    "multithreading_performance": {
+      "embedding_workers": 10,
+      "query_workers": 10,
+      "individual_embedding_times": [
+        1.1513078212738037,
+        1.14613938331604,
+        1.1614561080932617,
+        1.1421337127685547,
+        1.197011947631836,
+        1.15128493309021,
+        1.16298508644104,
+        1.1483080387115479,
+        1.1522884368896484,
+        1.1492857933044434
+      ],
+      "individual_query_times": [
+        9.58928108215332,
+        7.080349922180176,
+        9.693305492401123,
+        7.9663355350494385,
+        15.356457710266113,
+        8.989855289459229,
+        9.741516828536987,
+        8.716884136199951,
+        9.887076139450073,
+        16.007423639297485
+      ],
+      "bottleneck_analysis": {
+        "slowest_query_time": 16.007423639297485,
+        "fastest_query_time": 7.080349922180176,
+        "time_variance": 8.92707371711731,
+        "parallel_efficiency": 0.6434620048510464
+      },
+      "embedding_speedup": 9.65115747291548,
+      "query_speedup": 6.434620048510465
+    },
+    "vector_info": {
+      "total_queries": 10,
+      "query_embedding_dimension": 1024,
+      "embedding_model": "multilingual-e5-large",
+      "total_similarity_results": 50
+    }
+  },
+  "processing_summary": {
+    "success": true,
+    "total_questions": 10,
+    "total_time_seconds": 23.683132886886597,
+    "pdf_processing_time": 6.2506325244903564,
+    "embedding_time": 1.198011875152588,
+    "query_processing_time": 16.011588096618652
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-08-10T17:33:35.051676",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_173308.pdf"
+  },
+  "response": {
+    "answers": [
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded.",
+      "LLM evaluation not available - API key may be invalid or quota exceeded."
+    ],
+    "similarity_vectors": [
+      [
+        0.8824295401573181,
+        0.876313328742981,
+        0.8754510879516602,
+        0.8696599006652832,
+        0.8695584535598755
+      ],
+      [
+        0.8638529777526855,
+        0.840893566608429,
+        0.8358030319213867,
+        0.8350436687469482,
+        0.8300544023513794
+      ],
+      [
+        0.8168327808380127,
+        0.8167861104011536,
+        0.815671443939209,
+        0.8147534132003784,
+        0.8237552046775818
+      ],
+      [
+        0.8353191614151001,
+        0.8186277747154236,
+        0.8156862854957581,
+        0.8142282366752625,
+        0.8142118453979492
+      ],
+      [
+        0.8443835973739624,
+        0.8427172303199768,
+        0.837125837802887,
+        0.8261109590530396,
+        0.8236575126647949
+      ],
+      [
+        0.8072164058685303,
+        0.806464433670044,
+        0.805966854095459,
+        0.8052582740783691,
+        0.8156622052192688
+      ],
+      [
+        0.7793687582015991,
+        0.77843177318573,
+        0.7773919105529785,
+        0.7765151858329773,
+        0.7892590165138245
+      ],
+      [
+        0.8241788148880005,
+        0.8120719790458679,
+        0.8101596236228943,
+        0.8085939884185791,
+        0.8003901243209839
+      ],
+      [
+        0.8101409077644348,
+        0.8074836730957031,
+        0.8028597831726074,
+        0.8009952306747437,
+        0.7995462417602539
+      ],
+      [
+        0.8288429975509644,
+        0.8252193927764893,
+        0.8228451609611511,
+        0.8210373520851135,
+        0.8208997249603271
+      ]
+    ],
+    "total_time_taken": 26.78309941291809,
+    "timing_breakdown": {
+      "pdf_download": 11.254125356674194,
+      "pdf_processing": 6.356755971908569,
+      "embedding_time": 1.2466650009155273,
+      "query_processing_time": 7.921644687652588,
+      "cleanup_time": 0.0
+    },
+    "multithreading_performance": {
+      "embedding_workers": 10,
+      "query_workers": 10,
+      "individual_embedding_times": [
+        1.1299958229064941,
+        1.156188726425171,
+        1.197967529296875,
+        1.23634672164917,
+        1.1425106525421143,
+        1.158278226852417,
+        1.120154619216919,
+        1.1959588527679443,
+        1.1518187522888184,
+        1.1821396350860596
+      ],
+      "individual_query_times": [
+        7.1010589599609375,
+        7.152935981750488,
+        7.068011999130249,
+        6.212977170944214,
+        7.140400648117065,
+        6.121314287185669,
+        7.1140735149383545,
+        7.8974010944366455,
+        7.101054668426514,
+        7.918163061141968
+      ],
+      "bottleneck_analysis": {
+        "slowest_query_time": 7.918163061141968,
+        "fastest_query_time": 6.121314287185669,
+        "time_variance": 1.7968487739562988,
+        "parallel_efficiency": 0.8940995737467279
+      },
+      "embedding_speedup": 9.362065615430573,
+      "query_speedup": 8.94099573746728
+    },
+    "vector_info": {
+      "total_queries": 10,
+      "query_embedding_dimension": 1024,
+      "embedding_model": "multilingual-e5-large",
+      "total_similarity_results": 50
+    }
+  },
+  "processing_summary": {
+    "success": true,
+    "total_questions": 10,
+    "total_time_seconds": 26.78309941291809,
+    "pdf_processing_time": 6.356755971908569,
+    "embedding_time": 1.2466650009155273,
+    "query_processing_time": 7.921644687652588
+  }
+}

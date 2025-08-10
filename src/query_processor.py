@@ -1,13 +1,16 @@
 """
 Module: query_processor.py
-Functionality: Complete query processing pipeline with LLM integration.
+Functionality: Complete query processing pipeline with LLM integration using FAISS for vector storage.
 """
 import json
 import re
 import time
 import warnings
-from typing import Dict, List, Any, Optional, Tuple
+import os
+import pickle
 import numpy as np
+import faiss
+from typing import Dict, List, Any, Optional, Tuple
 
 # Suppress specific tokenizer warnings for BGE Reranker
 warnings.filterwarnings(
@@ -44,31 +47,62 @@ class QueryProcessor:
         self.quota_exceeded = False
         self.fallback_reason = None
         
-        # Initialize Pinecone
-        if PINECONE_AVAILABLE and pinecone_api_key and pinecone_api_key != 'dummy':
-            try:
-                from .embed_and_index import check_or_create_pinecone_index
+        # Initialize FAISS for vector search
+        try:
+            print("🔍 Checking FAISS index...")
+            storage_dir = 'faiss_storage'
+            index_path = os.path.join(storage_dir, f"{index_name}.faiss")
+            metadata_path = os.path.join(storage_dir, f"{index_name}_metadata.json")
+            id_map_path = os.path.join(storage_dir, f"{index_name}_id_map.pkl")
+            
+            if os.path.exists(index_path):
+                self.faiss_index = faiss.read_index(index_path)
                 
-                # Ensure index has correct dimensions for Pinecone inference
-                print("🔍 Checking/creating Pinecone index with correct dimensions...")
-                if check_or_create_pinecone_index(pinecone_api_key, index_name, 1024):
-                    self.pc = Pinecone(api_key=pinecone_api_key)
-                    self.index = self.pc.Index(index_name)
-                    print("✅ Initialized Pinecone client and index")
-                else:
-                    print("❌ Failed to create/verify Pinecone index")
-                    self.pc = None
-                    self.index = None
-            except Exception as e:
-                print(f"Pinecone initialization error: {e}")
-                self.pc = None
-                self.index = None
-        else:
-            self.pc = None
-            self.index = None
+                # Load metadata
+                try:
+                    with open(metadata_path, 'r', encoding='utf-8') as f:
+                        self.metadata = json.load(f)
+                except:
+                    self.metadata = {}
+                
+                # Load ID mapping
+                try:
+                    with open(id_map_path, 'rb') as f:
+                        id_map_data = pickle.load(f)
+                        self.id_to_idx = id_map_data['id_to_idx']
+                        self.idx_to_id = id_map_data['idx_to_id']
+                except:
+                    self.id_to_idx = {}
+                    self.idx_to_id = {}
+                
+                print(f"✅ Loaded FAISS index with {self.faiss_index.ntotal} vectors")
+            else:
+                print("❌ FAISS index not found")
+                self.faiss_index = None
+                self.metadata = {}
+                self.id_to_idx = {}
+                self.idx_to_id = {}
+                
+        except Exception as e:
+            print(f"FAISS initialization error: {e}")
+            self.faiss_index = None
+            self.metadata = {}
+            self.id_to_idx = {}
+            self.idx_to_id = {}
         
         # Use Pinecone embeddings - no fallbacks
         print("✅ Using Pinecone multilingual-e5-large embeddings")
+        
+        # Initialize Pinecone client for embeddings and reranking
+        if PINECONE_AVAILABLE and pinecone_api_key and pinecone_api_key != 'dummy':
+            try:
+                self.pc = Pinecone(api_key=pinecone_api_key)
+                print("✅ Initialized Pinecone client for embeddings and reranking")
+            except Exception as e:
+                print(f"Pinecone client initialization error: {e}")
+                self.pc = None
+        else:
+            self.pc = None
         
         # Initialize BGE Reranker
         self.reranker_available = False
@@ -93,9 +127,8 @@ class QueryProcessor:
                 genai.configure(api_key=gemini_api_key)
                 # Try different models based on availability
                 model_options = [
-                    'gemini-2.5-flash',  # More available for students
-                    'gemini-2.5-pro',        # Standard model
-                    'gemini-2.5-pro'     # Premium model (might be limited)
+                    'gemini-2.5-flash',      # Most reliable
+                    'gemini-2.5-pro',       # Good alternative
                 ]
                 
                 self.llm = None
@@ -197,6 +230,42 @@ class QueryProcessor:
             status['recommendations'].append("⚠️ Reranker not available - using similarity scores only")
         
         return status
+    
+    def _search_documents_faiss(self, embedding: list, top_k: int) -> list:
+        """Search documents using FAISS"""
+        if not self.faiss_index:
+            print("❌ FAISS index not available")
+            return []
+        
+        try:
+            # Convert embedding to numpy array
+            query_vector = np.array([embedding], dtype=np.float32)
+            
+            # Search FAISS index
+            scores, indices = self.faiss_index.search(query_vector, min(top_k, self.faiss_index.ntotal))
+            
+            # Convert results to list format
+            results = []
+            for score, idx in zip(scores[0], indices[0]):
+                if idx != -1:  # Valid index
+                    # Get chunk ID from index mapping
+                    chunk_id = self.idx_to_id.get(idx, f"chunk_{idx}")
+                    
+                    # Get metadata
+                    metadata = self.metadata.get(chunk_id, {})
+                    
+                    results.append({
+                        'id': chunk_id,
+                        'score': float(score),
+                        'values': [],  # FAISS doesn't store vectors in results
+                        'metadata': metadata
+                    })
+            
+            return results
+            
+        except Exception as e:
+            print(f"FAISS search error: {e}")
+            return []
     
     def _extract_json_from_response(self, response_text: str, context: str = "response") -> Optional[Dict]:
         """Helper method to robustly extract JSON from LLM responses."""
@@ -495,8 +564,8 @@ class QueryProcessor:
         2. Boost results that contain keywords from the query (post-retrieval)
         3. Return top results sorted by combined scores with context expansion
         """
-        if not self.index:
-            print("❌ Pinecone index not available")
+        if not self.faiss_index:
+            print("❌ FAISS index not available")
             return []
         try:
             # Use provided query_embedding if available, else encode
@@ -517,18 +586,14 @@ class QueryProcessor:
             retrieve_k = min(top_k , 20)  # Get more results but cap at 20
             
             # First retrieve with vector search only
-            response = self.index.query(
-                vector=embedding,
-                top_k=retrieve_k,
-                include_metadata=True
-            )
+            results = self._search_documents_faiss(embedding, retrieve_k)
             
             # Format results (already sorted by similarity score)
             candidates = []
-            for match in response.matches:
+            for match in results:
                 candidates.append({
-                    "id": match.id,
-                    "vector_score": match.score,
+                    "id": match['id'],
+                    "vector_score": match['score'],
                     "text": match.metadata.get("text", ""),
                     "document_name": match.metadata.get("document_name", ""),
                     "page_number": match.metadata.get("page_number", 1),
@@ -618,29 +683,25 @@ class QueryProcessor:
     def _get_adjacent_chunks_extended(self, doc_name: str, chunk_index: int, chunks_before: int = 25, chunks_after: int = 25) -> List[Dict]:
         """Retrieve extended adjacent chunks (25 before + 25 after) from the same document."""
         try:
-            if not self.index:
+            if not self.faiss_index:
                 return []
             
             # Create a dummy vector for metadata-only search (correct dimension)
             dummy_vector = [0.0] * 1024  # Fixed dimension for multilingual-e5-large
             
-            # Query for all chunks from the same document
-            response = self.index.query(
-                vector=dummy_vector,
-                top_k=200,  # Get many chunks to find all adjacent ones
-                include_metadata=True
-            )
+            # Get all chunks from FAISS
+            results = self._search_documents_faiss(dummy_vector, 200)
             
             # Filter and find adjacent chunks manually
             same_doc_chunks = []
-            for match in response.matches:
-                metadata = match.metadata or {}
+            for match in results:
+                metadata = match['metadata'] or {}
                 if metadata.get("document_name") == doc_name:
                     same_doc_chunks.append({
                         "text": metadata.get("text", ""),
                         "chunk_index": metadata.get("chunk_index", 0),
-                        "chunk_id": match.id,
-                        "score": match.score
+                        "chunk_id": match['id'],
+                        "score": match['score']
                     })
             
             # Sort by chunk index to find adjacent chunks
@@ -776,30 +837,26 @@ class QueryProcessor:
             print()
     
     def semantic_search(self, query: str, top_k: int = 5) -> List[Dict]:
-         """Perform semantic search in Pinecone."""
-         if not self.index:
+         """Perform semantic search in FAISS."""
+         if not self.faiss_index:
              return []
          
          try:
              # Generate query embedding using helper method
              query_embedding = self._encode_query(query)
              
-             # Search in Pinecone (returns a QueryResponse)
-             response = self.index.query(
-                 vector=query_embedding,
-                 top_k=top_k,
-                 include_metadata=True
-             )
+             # Search in FAISS
+             results = self._search_documents_faiss(query_embedding, top_k)
  
-             # Format results from response.matches
+             # Format results
              search_results = []
-             for m in response.matches:
+             for m in results:
                  search_results.append({
-                     "id": m.id,
-                     "score": m.score,
-                     "text": m.metadata.get("text", ""),
-                     "document_name": m.metadata.get("document_name", ""),
-                     "page_number": m.metadata.get("page_number", 1)
+                     "id": m['id'],
+                     "score": m['score'],
+                     "text": m['metadata'].get("text", ""),
+                     "document_name": m['metadata'].get("document_name", ""),
+                     "page_number": m['metadata'].get("page_number", 1)
                  })
              
              return search_results
@@ -928,24 +985,20 @@ class QueryProcessor:
                     embedding = self._encode_query(query)
                 
                 # Get top 25 candidates for reranking (optimized retrieval)
-                response = self.index.query(
-                    vector=embedding,
-                    top_k=30,  # Get 25 candidates for reranking
-                    include_metadata=True
-                )
+                results = self._search_documents_faiss(embedding, 30)
                 
                 # Format results (already sorted by similarity score)
                 candidates = []
-                for match in response.matches:
+                for match in results:
                     candidates.append({
-                        "id": match.id,
-                        "score": match.score,
-                        "text": match.metadata.get("text", ""),
-                        "document_name": match.metadata.get("document_name", ""),
-                        "page_number": match.metadata.get("page_number", 1),
-                        "chunk_index": match.metadata.get("chunk_index", 0),
-                        "vector_score": match.score,
-                        "final_score": match.score
+                        "id": match['id'],
+                        "score": match['score'],
+                        "text": match['metadata'].get("text", ""),
+                        "document_name": match['metadata'].get("document_name", ""),
+                        "page_number": match['metadata'].get("page_number", 1),
+                        "chunk_index": match['metadata'].get("chunk_index", 0),
+                        "vector_score": match['score'],
+                        "final_score": match['score']
                     })
                 
                 print(f"✅ Retrieved {len(candidates)} candidates for reranking")

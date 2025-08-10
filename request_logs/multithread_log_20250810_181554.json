@@ -1,0 +1,1602 @@
+{
+  "timestamp": "2025-08-10T18:16:24.829814",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_181554.pdf"
+  },
+  "response": {
+    "answers": [
+      "The provided policy documents do not contain information regarding the grace period for premium payment under the National Parivar Mediclaim Plus Policy. The relevant sections are empty, preventing an answer from the given context.",
+      "Based on the provided policy documents, the waiting period for pre-existing diseases (PED) to be covered is not specified. The relevant sections of the documents appear to be empty, containing no information about this subject.",
+      "Based on the provided policy documents, there is no information available regarding coverage for maternity expenses or any associated conditions. Therefore, it is not possible to determine if maternity expenses are covered by this policy from the given context.",
+      "The provided policy documents do not contain any information regarding the waiting period for cataract surgery. Therefore, I cannot specify the exact waiting period based on the given context.",
+      "Based on the provided policy documents, there is no information available to determine whether medical expenses for an organ donor are covered under this policy. The relevant sections of the documents do not contain details regarding this specific coverage.",
+      "The provided policy documents do not contain any information regarding the specific No Claim Discount (NCD) offered. The relevant chunks are empty, preventing an assessment of the NCD details.",
+      "No, the provided policy documents do not contain any information regarding benefits for preventive health check-ups. The relevant sections retrieved from the documents are empty, preventing any determination of coverage or exclusions for such services.",
+      "The provided policy documents do not contain information defining what constitutes a 'Hospital' within the policy's terms. The relevant chunks are empty, preventing an answer based on the given context.",
+      "The provided policy documents do not contain any information regarding the extent of coverage for AYUSH treatments. Therefore, it is not possible to determine the specific terms, conditions, or limits of such coverage based on the given context.",
+      "Based on the provided policy document excerpts, there is no information available regarding Plan A or any sub-limits on room rent and ICU charges. The context provided is empty and does not contain details about specific plans or their coverage limits."
+    ],
+    "similarity_vectors": [
+      [
+        0.8826029300689697,
+        0.8825359344482422,
+        0.8824295401573181,
+        0.8824295401573181,
+        0.8824295401573181
+      ],
+      [
+        0.8638837337493896,
+        0.8638663291931152,
+        0.8638529777526855,
+        0.8638529777526855,
+        0.8638529777526855
+      ],
+      [
+        0.845467209815979,
+        0.845467209815979,
+        0.8348609805107117,
+        0.8348609805107117,
+        0.8455318808555603
+      ],
+      [
+        0.8353840112686157,
+        0.8353509902954102,
+        0.8353191614151001,
+        0.8353191614151001,
+        0.8353191614151001
+      ],
+      [
+        0.8444163799285889,
+        0.8444163799285889,
+        0.8443835973739624,
+        0.8443835973739624,
+        0.8443835973739624
+      ],
+      [
+        0.8196983337402344,
+        0.8196860551834106,
+        0.8196860551834106,
+        0.8196860551834106,
+        0.8251317739486694
+      ],
+      [
+        0.7872216701507568,
+        0.7872216701507568,
+        0.7872216701507568,
+        0.7872216701507568,
+        0.7893993854522705
+      ],
+      [
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8241568803787231
+      ],
+      [
+        0.8536797761917114,
+        0.8536797761917114,
+        0.8536797761917114,
+        0.8536797761917114,
+        0.8321784138679504
+      ],
+      [
+        0.8439573049545288,
+        0.8439573049545288,
+        0.8439573049545288,
+        0.8439573049545288,
+        0.8415743112564087
+      ]
+    ],
+    "llm_contexts": [
+      "=== VECTOR 1 (Similarity: 0.883) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.883) ===\nDocument: input_20250810_175824.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 2 (Total chunks: 1) ---\n\n=== VECTOR 3 (Similarity: 0.882) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 3 (Total chunks: 1) ---\n\n=== VECTOR 4 (Similarity: 0.882) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.882) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 5 (Total chunks: 26) ---\n",
+      "=== VECTOR 1 (Similarity: 0.864) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.864) ===\nDocument: input_20250810_175824.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 2 (Total chunks: 1) ---\n\n=== VECTOR 3 (Similarity: 0.864) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 3 (Total chunks: 1) ---\n\n=== VECTOR 4 (Similarity: 0.864) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.864) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 5 (Total chunks: 26) ---\n",
+      "=== VECTOR 1 (Similarity: 0.845) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.845) ===\nDocument: input_20250810_175824.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 2 (Total chunks: 1) ---\n\n=== VECTOR 3 (Similarity: 0.835) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 3 (Total chunks: 1) ---\n\n=== VECTOR 4 (Similarity: 0.835) ===\nDocument: input_20250810_175824.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 4 (Total chunks: 1) ---\n\n=== VECTOR 5 (Similarity: 0.846) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 5 (Total chunks: 1) ---\n",
+      "=== VECTOR 1 (Similarity: 0.835) ===\nDocument: input_20250810_175824.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.835) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 2 (Total chunks: 1) ---\n\n=== VECTOR 3 (Similarity: 0.835) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 3 (Total chunks: 1) ---\n\n=== VECTOR 4 (Similarity: 0.835) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.835) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 5 (Total chunks: 26) ---\n",
+      "=== VECTOR 1 (Similarity: 0.844) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.844) ===\nDocument: input_20250810_175824.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 2 (Total chunks: 1) ---\n\n=== VECTOR 3 (Similarity: 0.844) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 3 (Total chunks: 1) ---\n\n=== VECTOR 4 (Similarity: 0.844) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.844) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 5 (Total chunks: 26) ---\n",
+      "=== VECTOR 1 (Similarity: 0.820) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.820) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 2 (Total chunks: 1) ---\n\n=== VECTOR 3 (Similarity: 0.820) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 3 (Total chunks: 26) ---\n\n=== VECTOR 4 (Similarity: 0.820) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.825) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 5 (Total chunks: 26) ---\n",
+      "=== VECTOR 1 (Similarity: 0.787) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.787) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 2 (Total chunks: 26) ---\n\n=== VECTOR 3 (Similarity: 0.787) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 3 (Total chunks: 26) ---\n\n=== VECTOR 4 (Similarity: 0.787) ===\nDocument: input_20250810_174856.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.789) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 5 (Total chunks: 1) ---\n",
+      "=== VECTOR 1 (Similarity: 0.824) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.824) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 2 (Total chunks: 26) ---\n\n=== VECTOR 3 (Similarity: 0.824) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 3 (Total chunks: 26) ---\n\n=== VECTOR 4 (Similarity: 0.824) ===\nDocument: input_20250810_174856.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.824) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 5 (Total chunks: 1) ---\n",
+      "=== VECTOR 1 (Similarity: 0.854) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.854) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 2 (Total chunks: 26) ---\n\n=== VECTOR 3 (Similarity: 0.854) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 3 (Total chunks: 26) ---\n\n=== VECTOR 4 (Similarity: 0.854) ===\nDocument: input_20250810_174856.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.832) ===\nDocument: input_20250810_181554.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 5 (Total chunks: 1) ---\n",
+      "=== VECTOR 1 (Similarity: 0.844) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 1 (Total chunks: 1) ---\n\n=== VECTOR 2 (Similarity: 0.844) ===\nDocument: input_20250810_175729.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 2 (Total chunks: 26) ---\n\n=== VECTOR 3 (Similarity: 0.844) ===\nDocument: input_20250810_175024.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 3 (Total chunks: 26) ---\n\n=== VECTOR 4 (Similarity: 0.844) ===\nDocument: input_20250810_174856.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- CONTEXT AFTER (25 chunks) ---\n[Chunk 1] \n[Chunk 2] \n[Chunk 3] \n[Chunk 4] \n[Chunk 5] \n[Chunk 6] \n[Chunk 7] \n[Chunk 8] \n[Chunk 9] \n[Chunk 10] \n[Chunk 11] \n[Chunk 12] \n[Chunk 13] \n[Chunk 14] \n[Chunk 15] \n[Chunk 16] \n[Chunk 17] \n[Chunk 18] \n[Chunk 19] \n[Chunk 20] \n[Chunk 21] \n[Chunk 22] \n[Chunk 23] \n[Chunk 24] \n[Chunk 25] \n\n--- END VECTOR 4 (Total chunks: 26) ---\n\n=== VECTOR 5 (Similarity: 0.842) ===\nDocument: input_20250810_180444.pdf\nMain Chunk Index: 0\n\n--- MAIN CHUNK (Most Relevant) ---\n[Chunk 0] \n\n--- END VECTOR 5 (Total chunks: 1) ---\n"
+    ],
+    "source_vectors": [
+      [
+        {
+          "id": "input_20250810_181554.pdf_51_00697c51",
+          "score": 0.8826029300689697,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_51_00697c51",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754829973.1062994,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 3.5356254e-05,
+          "original_similarity_score": 0.8826029300689697
+        },
+        {
+          "id": "input_20250810_175824.pdf_51_00697c51",
+          "score": 0.8825359344482422,
+          "metadata": {
+            "chunk_id": "input_20250810_175824.pdf_51_00697c51",
+            "document_name": "input_20250810_175824.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_175824.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754828911.0358565,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175824.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175824.pdf",
+          "page_number": 0,
+          "rerank_score": 3.5356254e-05,
+          "original_similarity_score": 0.8825359344482422
+        },
+        {
+          "id": "input_20250810_180444.pdf_51_00697c51",
+          "score": 0.8824295401573181,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_51_00697c51",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754829293.9378881,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 3.5356254e-05,
+          "original_similarity_score": 0.8824295401573181
+        },
+        {
+          "id": "input_20250810_175729.pdf_51_00697c51",
+          "score": 0.8824295401573181,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_51_00697c51",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754828857.0981889,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 3.5356254e-05,
+          "original_similarity_score": 0.8824295401573181
+        },
+        {
+          "id": "input_20250810_175024.pdf_51_00697c51",
+          "score": 0.8824295401573181,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_51_00697c51",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754828432.4751332,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 3.5356254e-05,
+          "original_similarity_score": 0.8824295401573181
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_181554.pdf_29_2eea45df",
+          "score": 0.8638837337493896,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_29_2eea45df",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "4 EXCLUSIONS The Company shall not be liable to make any payment by the Policy, in respect of any expenses incurred in connection with or in respect of: 4.1. Pre-Existing Diseases (Excl 01) a) Expenses related to the treatment of a Pre-Existing Disease (PED) and its direct complications shall be excluded until the expiry of thirty six (36) months of continuous coverage after the date of inception of the first policy with us. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of thirty six (36) months for any pre-existing disease is subject to the same being declared at the time of application and accepted by us. 4.2. Specified disease/procedure waiting period (Excl 02) a) Expenses related to the treatment of the listed Conditions, surgeries/treatments shall be excluded until the expiry of 90 days/ one year/ two year/ three years (as specified against specific disease/ procedure) of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident",
+            "content_length": 1396,
+            "section": "content",
+            "chunk_index": 29,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "2eea45df9618812c3dcc8727bbbdf5cf",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1396,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00021654405,
+          "original_similarity_score": 0.8638837337493896
+        },
+        {
+          "id": "input_20250810_175824.pdf_29_2eea45df",
+          "score": 0.8638663291931152,
+          "metadata": {
+            "chunk_id": "input_20250810_175824.pdf_29_2eea45df",
+            "document_name": "input_20250810_175824.pdf",
+            "page_number": 0,
+            "content": "4 EXCLUSIONS The Company shall not be liable to make any payment by the Policy, in respect of any expenses incurred in connection with or in respect of: 4.1. Pre-Existing Diseases (Excl 01) a) Expenses related to the treatment of a Pre-Existing Disease (PED) and its direct complications shall be excluded until the expiry of thirty six (36) months of continuous coverage after the date of inception of the first policy with us. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of thirty six (36) months for any pre-existing disease is subject to the same being declared at the time of application and accepted by us. 4.2. Specified disease/procedure waiting period (Excl 02) a) Expenses related to the treatment of the listed Conditions, surgeries/treatments shall be excluded until the expiry of 90 days/ one year/ two year/ three years (as specified against specific disease/ procedure) of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident",
+            "content_length": 1396,
+            "section": "content",
+            "chunk_index": 29,
+            "source_document": "input_20250810_175824.pdf",
+            "content_hash": "2eea45df9618812c3dcc8727bbbdf5cf",
+            "timestamp": 1754828911.0358565,
+            "char_count": 1396,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175824.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175824.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00021654405,
+          "original_similarity_score": 0.8638663291931152
+        },
+        {
+          "id": "input_20250810_180444.pdf_29_2eea45df",
+          "score": 0.8638529777526855,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_29_2eea45df",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "4 EXCLUSIONS The Company shall not be liable to make any payment by the Policy, in respect of any expenses incurred in connection with or in respect of: 4.1. Pre-Existing Diseases (Excl 01) a) Expenses related to the treatment of a Pre-Existing Disease (PED) and its direct complications shall be excluded until the expiry of thirty six (36) months of continuous coverage after the date of inception of the first policy with us. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of thirty six (36) months for any pre-existing disease is subject to the same being declared at the time of application and accepted by us. 4.2. Specified disease/procedure waiting period (Excl 02) a) Expenses related to the treatment of the listed Conditions, surgeries/treatments shall be excluded until the expiry of 90 days/ one year/ two year/ three years (as specified against specific disease/ procedure) of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident",
+            "content_length": 1396,
+            "section": "content",
+            "chunk_index": 29,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "2eea45df9618812c3dcc8727bbbdf5cf",
+            "timestamp": 1754829293.9369051,
+            "char_count": 1396,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00021654405,
+          "original_similarity_score": 0.8638529777526855
+        },
+        {
+          "id": "input_20250810_175729.pdf_29_2eea45df",
+          "score": 0.8638529777526855,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_29_2eea45df",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "4 EXCLUSIONS The Company shall not be liable to make any payment by the Policy, in respect of any expenses incurred in connection with or in respect of: 4.1. Pre-Existing Diseases (Excl 01) a) Expenses related to the treatment of a Pre-Existing Disease (PED) and its direct complications shall be excluded until the expiry of thirty six (36) months of continuous coverage after the date of inception of the first policy with us. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of thirty six (36) months for any pre-existing disease is subject to the same being declared at the time of application and accepted by us. 4.2. Specified disease/procedure waiting period (Excl 02) a) Expenses related to the treatment of the listed Conditions, surgeries/treatments shall be excluded until the expiry of 90 days/ one year/ two year/ three years (as specified against specific disease/ procedure) of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident",
+            "content_length": 1396,
+            "section": "content",
+            "chunk_index": 29,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "2eea45df9618812c3dcc8727bbbdf5cf",
+            "timestamp": 1754828857.0981889,
+            "char_count": 1396,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00021654405,
+          "original_similarity_score": 0.8638529777526855
+        },
+        {
+          "id": "input_20250810_175024.pdf_29_2eea45df",
+          "score": 0.8638529777526855,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_29_2eea45df",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "4 EXCLUSIONS The Company shall not be liable to make any payment by the Policy, in respect of any expenses incurred in connection with or in respect of: 4.1. Pre-Existing Diseases (Excl 01) a) Expenses related to the treatment of a Pre-Existing Disease (PED) and its direct complications shall be excluded until the expiry of thirty six (36) months of continuous coverage after the date of inception of the first policy with us. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of thirty six (36) months for any pre-existing disease is subject to the same being declared at the time of application and accepted by us. 4.2. Specified disease/procedure waiting period (Excl 02) a) Expenses related to the treatment of the listed Conditions, surgeries/treatments shall be excluded until the expiry of 90 days/ one year/ two year/ three years (as specified against specific disease/ procedure) of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident",
+            "content_length": 1396,
+            "section": "content",
+            "chunk_index": 29,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "2eea45df9618812c3dcc8727bbbdf5cf",
+            "timestamp": 1754828432.4751332,
+            "char_count": 1396,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00021654405,
+          "original_similarity_score": 0.8638529777526855
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_181554.pdf_22_c64c6045",
+          "score": 0.845467209815979,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_22_c64c6045",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "3.1.15 Infertility The Company shall pay to the hospital or reimburse the insured, in respect of the medical expenses of the insured and his spouse, if covered by the Policy, for treatment undergone as an in-patient or as a day care treatment, for procedures and/ or treatment of infertility, provided the Policy has been continuously in force for twenty four (24) months from the inception of the Policy or from the date of inclusion of the insured person, whichever is later. The medical expenses for either or both the insured person shall be subject to the limit as shown in the Table of Benefits. Exclusions The Company shall not be liable to make any payment in respect of any expenses incurred in connection with or in respect of 1. Insured and insured persons above forty five years of age. 2. Diagnostic tests related to infertility 3. Reversing a tubal ligation or vasectomy 4. Preserving and storing sperms, eggs and embryos 5. An egg donor or sperm donor 6. Experimental treatments 7. Any disease/ injury, other than traceable to maternity, of the surrogate mother. Conditions 1. Expenses for advanced procedures, including IVF, GIFT, ZIFT or ICSI, shall be payable only if the Insured person has been unable to attain or sustain a successful pregnancy through reasonable, and medically necessary infertility treatment. 2. Maternity expenses of the surrogate mother shall be payable under Section 3.1.14 (Maternity). Legal affidavit regarding intimation of surrogacy shall be submitted to the Company.",
+            "content_length": 1513,
+            "section": "content",
+            "chunk_index": 22,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "c64c6045ccb7e724f304b9c88793c814",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1513,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 0.000115017356,
+          "original_similarity_score": 0.845467209815979
+        },
+        {
+          "id": "input_20250810_175824.pdf_22_c64c6045",
+          "score": 0.845467209815979,
+          "metadata": {
+            "chunk_id": "input_20250810_175824.pdf_22_c64c6045",
+            "document_name": "input_20250810_175824.pdf",
+            "page_number": 0,
+            "content": "3.1.15 Infertility The Company shall pay to the hospital or reimburse the insured, in respect of the medical expenses of the insured and his spouse, if covered by the Policy, for treatment undergone as an in-patient or as a day care treatment, for procedures and/ or treatment of infertility, provided the Policy has been continuously in force for twenty four (24) months from the inception of the Policy or from the date of inclusion of the insured person, whichever is later. The medical expenses for either or both the insured person shall be subject to the limit as shown in the Table of Benefits. Exclusions The Company shall not be liable to make any payment in respect of any expenses incurred in connection with or in respect of 1. Insured and insured persons above forty five years of age. 2. Diagnostic tests related to infertility 3. Reversing a tubal ligation or vasectomy 4. Preserving and storing sperms, eggs and embryos 5. An egg donor or sperm donor 6. Experimental treatments 7. Any disease/ injury, other than traceable to maternity, of the surrogate mother. Conditions 1. Expenses for advanced procedures, including IVF, GIFT, ZIFT or ICSI, shall be payable only if the Insured person has been unable to attain or sustain a successful pregnancy through reasonable, and medically necessary infertility treatment. 2. Maternity expenses of the surrogate mother shall be payable under Section 3.1.14 (Maternity). Legal affidavit regarding intimation of surrogacy shall be submitted to the Company.",
+            "content_length": 1513,
+            "section": "content",
+            "chunk_index": 22,
+            "source_document": "input_20250810_175824.pdf",
+            "content_hash": "c64c6045ccb7e724f304b9c88793c814",
+            "timestamp": 1754828911.0358565,
+            "char_count": 1513,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175824.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175824.pdf",
+          "page_number": 0,
+          "rerank_score": 0.000115017356,
+          "original_similarity_score": 0.845467209815979
+        },
+        {
+          "id": "input_20250810_181554.pdf_6_614f976b",
+          "score": 0.8348609805107117,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_6_614f976b",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 0.000115017356,
+          "original_similarity_score": 0.8348609805107117
+        },
+        {
+          "id": "input_20250810_175824.pdf_6_614f976b",
+          "score": 0.8348609805107117,
+          "metadata": {
+            "chunk_id": "input_20250810_175824.pdf_6_614f976b",
+            "document_name": "input_20250810_175824.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_175824.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754828911.0358565,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175824.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175824.pdf",
+          "page_number": 0,
+          "rerank_score": 0.000115017356,
+          "original_similarity_score": 0.8348609805107117
+        },
+        {
+          "id": "input_20250810_180444.pdf_22_c64c6045",
+          "score": 0.8455318808555603,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_22_c64c6045",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "3.1.15 Infertility The Company shall pay to the hospital or reimburse the insured, in respect of the medical expenses of the insured and his spouse, if covered by the Policy, for treatment undergone as an in-patient or as a day care treatment, for procedures and/ or treatment of infertility, provided the Policy has been continuously in force for twenty four (24) months from the inception of the Policy or from the date of inclusion of the insured person, whichever is later. The medical expenses for either or both the insured person shall be subject to the limit as shown in the Table of Benefits. Exclusions The Company shall not be liable to make any payment in respect of any expenses incurred in connection with or in respect of 1. Insured and insured persons above forty five years of age. 2. Diagnostic tests related to infertility 3. Reversing a tubal ligation or vasectomy 4. Preserving and storing sperms, eggs and embryos 5. An egg donor or sperm donor 6. Experimental treatments 7. Any disease/ injury, other than traceable to maternity, of the surrogate mother. Conditions 1. Expenses for advanced procedures, including IVF, GIFT, ZIFT or ICSI, shall be payable only if the Insured person has been unable to attain or sustain a successful pregnancy through reasonable, and medically necessary infertility treatment. 2. Maternity expenses of the surrogate mother shall be payable under Section 3.1.14 (Maternity). Legal affidavit regarding intimation of surrogacy shall be submitted to the Company.",
+            "content_length": 1513,
+            "section": "content",
+            "chunk_index": 22,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "c64c6045ccb7e724f304b9c88793c814",
+            "timestamp": 1754829293.9369051,
+            "char_count": 1513,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00011412239,
+          "original_similarity_score": 0.8455318808555603
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_175824.pdf_31_9305f16d",
+          "score": 0.8353840112686157,
+          "metadata": {
+            "chunk_id": "input_20250810_175824.pdf_31_9305f16d",
+            "document_name": "input_20250810_175824.pdf",
+            "page_number": 0,
+            "content": "f. Piles (Haemorrhoids) arising from accident g. Sinusitis and related disorders h. Polycystic ovarian disease i. Non-infective arthritis p. Surgery of varicose vein q. Hysterectomy r. Refractive error of the eye more than 7.5 dioptres s. Congenital Internal Anomaly (not applicable for new born baby) k. Gout and Rheumatism l. Calculus diseases Above diseases/treatments under 4.2.f).i, ii, iii shall be covered after the specified Waiting Period, provided they are not Pre Existing Diseases. iv. Three years waiting period Following diseases shall be covered after three years of continuous cover from the inception of the policy: a. Treatment for joint replacement unless arising from accident b. Osteoarthritis and osteoporosis c. Morbid Obesity and its complications d. Stem Cell Therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 4.3. First 30 days waiting period (Excl 03) a) Expenses related to the treatment of any illness within thirty (30) days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than twelve (12) months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently.",
+            "content_length": 1408,
+            "section": "content",
+            "chunk_index": 31,
+            "source_document": "input_20250810_175824.pdf",
+            "content_hash": "9305f16df27a738c1c78c9f26e5caa80",
+            "timestamp": 1754828911.0358565,
+            "char_count": 1408,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175824.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175824.pdf",
+          "page_number": 0,
+          "rerank_score": 8.7503e-05,
+          "original_similarity_score": 0.8353840112686157
+        },
+        {
+          "id": "input_20250810_181554.pdf_31_9305f16d",
+          "score": 0.8353509902954102,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_31_9305f16d",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "f. Piles (Haemorrhoids) arising from accident g. Sinusitis and related disorders h. Polycystic ovarian disease i. Non-infective arthritis p. Surgery of varicose vein q. Hysterectomy r. Refractive error of the eye more than 7.5 dioptres s. Congenital Internal Anomaly (not applicable for new born baby) k. Gout and Rheumatism l. Calculus diseases Above diseases/treatments under 4.2.f).i, ii, iii shall be covered after the specified Waiting Period, provided they are not Pre Existing Diseases. iv. Three years waiting period Following diseases shall be covered after three years of continuous cover from the inception of the policy: a. Treatment for joint replacement unless arising from accident b. Osteoarthritis and osteoporosis c. Morbid Obesity and its complications d. Stem Cell Therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 4.3. First 30 days waiting period (Excl 03) a) Expenses related to the treatment of any illness within thirty (30) days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than twelve (12) months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently.",
+            "content_length": 1408,
+            "section": "content",
+            "chunk_index": 31,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "9305f16df27a738c1c78c9f26e5caa80",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1408,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 8.7503e-05,
+          "original_similarity_score": 0.8353509902954102
+        },
+        {
+          "id": "input_20250810_180444.pdf_31_9305f16d",
+          "score": 0.8353191614151001,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_31_9305f16d",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "f. Piles (Haemorrhoids) arising from accident g. Sinusitis and related disorders h. Polycystic ovarian disease i. Non-infective arthritis p. Surgery of varicose vein q. Hysterectomy r. Refractive error of the eye more than 7.5 dioptres s. Congenital Internal Anomaly (not applicable for new born baby) k. Gout and Rheumatism l. Calculus diseases Above diseases/treatments under 4.2.f).i, ii, iii shall be covered after the specified Waiting Period, provided they are not Pre Existing Diseases. iv. Three years waiting period Following diseases shall be covered after three years of continuous cover from the inception of the policy: a. Treatment for joint replacement unless arising from accident b. Osteoarthritis and osteoporosis c. Morbid Obesity and its complications d. Stem Cell Therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 4.3. First 30 days waiting period (Excl 03) a) Expenses related to the treatment of any illness within thirty (30) days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than twelve (12) months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently.",
+            "content_length": 1408,
+            "section": "content",
+            "chunk_index": 31,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "9305f16df27a738c1c78c9f26e5caa80",
+            "timestamp": 1754829293.9378881,
+            "char_count": 1408,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 8.7503e-05,
+          "original_similarity_score": 0.8353191614151001
+        },
+        {
+          "id": "input_20250810_175729.pdf_31_9305f16d",
+          "score": 0.8353191614151001,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_31_9305f16d",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "f. Piles (Haemorrhoids) arising from accident g. Sinusitis and related disorders h. Polycystic ovarian disease i. Non-infective arthritis p. Surgery of varicose vein q. Hysterectomy r. Refractive error of the eye more than 7.5 dioptres s. Congenital Internal Anomaly (not applicable for new born baby) k. Gout and Rheumatism l. Calculus diseases Above diseases/treatments under 4.2.f).i, ii, iii shall be covered after the specified Waiting Period, provided they are not Pre Existing Diseases. iv. Three years waiting period Following diseases shall be covered after three years of continuous cover from the inception of the policy: a. Treatment for joint replacement unless arising from accident b. Osteoarthritis and osteoporosis c. Morbid Obesity and its complications d. Stem Cell Therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 4.3. First 30 days waiting period (Excl 03) a) Expenses related to the treatment of any illness within thirty (30) days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than twelve (12) months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently.",
+            "content_length": 1408,
+            "section": "content",
+            "chunk_index": 31,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "9305f16df27a738c1c78c9f26e5caa80",
+            "timestamp": 1754828857.0981889,
+            "char_count": 1408,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 8.7503e-05,
+          "original_similarity_score": 0.8353191614151001
+        },
+        {
+          "id": "input_20250810_175024.pdf_31_9305f16d",
+          "score": 0.8353191614151001,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_31_9305f16d",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "f. Piles (Haemorrhoids) arising from accident g. Sinusitis and related disorders h. Polycystic ovarian disease i. Non-infective arthritis p. Surgery of varicose vein q. Hysterectomy r. Refractive error of the eye more than 7.5 dioptres s. Congenital Internal Anomaly (not applicable for new born baby) k. Gout and Rheumatism l. Calculus diseases Above diseases/treatments under 4.2.f).i, ii, iii shall be covered after the specified Waiting Period, provided they are not Pre Existing Diseases. iv. Three years waiting period Following diseases shall be covered after three years of continuous cover from the inception of the policy: a. Treatment for joint replacement unless arising from accident b. Osteoarthritis and osteoporosis c. Morbid Obesity and its complications d. Stem Cell Therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 4.3. First 30 days waiting period (Excl 03) a) Expenses related to the treatment of any illness within thirty (30) days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than twelve (12) months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently.",
+            "content_length": 1408,
+            "section": "content",
+            "chunk_index": 31,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "9305f16df27a738c1c78c9f26e5caa80",
+            "timestamp": 1754828432.4751332,
+            "char_count": 1408,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 8.7503e-05,
+          "original_similarity_score": 0.8353191614151001
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_181554.pdf_18_22febf09",
+          "score": 0.8444163799285889,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_18_22febf09",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "Exclusions The Company shall not be liable to make payment for any claim under this Cover which arises for or in connection with any of the following: i. Pre-hospitalization Medical Expenses or Post- Hospitalization Medical Expenses of the organ donor. ii. Costs directly or indirectly associated with the acquisition of the donors organ. iii. Medical Expenses where the organ transplant is experimental or investigational. iv. Any medical treatment or complication in respect of the donor, consequent to harvesting. v. Any expenses related to organ transportation or preservation. 3.1.8 Hospital Cash The Company shall pay the insured a daily hospital cash allowance up to the limit as shown in the Table of Benefits for a maximum of five days, provided: i. the hospitalisation exceeds three days. ii. a claim has been admitted under In-patient Treatment Section Hospital Cash shall be payable for each day from the 4th day of Hospitalisation up to the 8th day of Hospitalisation only. Hospitalisation of less than 24 hours shall not be considered for the purpose of payment of Hospital Cash 3.1.9 Ambulance",
+            "content_length": 1108,
+            "section": "content",
+            "chunk_index": 18,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "22febf09dcd153e2ae40314ce09f8d88",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1108,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00014539114,
+          "original_similarity_score": 0.8444163799285889
+        },
+        {
+          "id": "input_20250810_175824.pdf_18_22febf09",
+          "score": 0.8444163799285889,
+          "metadata": {
+            "chunk_id": "input_20250810_175824.pdf_18_22febf09",
+            "document_name": "input_20250810_175824.pdf",
+            "page_number": 0,
+            "content": "Exclusions The Company shall not be liable to make payment for any claim under this Cover which arises for or in connection with any of the following: i. Pre-hospitalization Medical Expenses or Post- Hospitalization Medical Expenses of the organ donor. ii. Costs directly or indirectly associated with the acquisition of the donors organ. iii. Medical Expenses where the organ transplant is experimental or investigational. iv. Any medical treatment or complication in respect of the donor, consequent to harvesting. v. Any expenses related to organ transportation or preservation. 3.1.8 Hospital Cash The Company shall pay the insured a daily hospital cash allowance up to the limit as shown in the Table of Benefits for a maximum of five days, provided: i. the hospitalisation exceeds three days. ii. a claim has been admitted under In-patient Treatment Section Hospital Cash shall be payable for each day from the 4th day of Hospitalisation up to the 8th day of Hospitalisation only. Hospitalisation of less than 24 hours shall not be considered for the purpose of payment of Hospital Cash 3.1.9 Ambulance",
+            "content_length": 1108,
+            "section": "content",
+            "chunk_index": 18,
+            "source_document": "input_20250810_175824.pdf",
+            "content_hash": "22febf09dcd153e2ae40314ce09f8d88",
+            "timestamp": 1754828911.0358565,
+            "char_count": 1108,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175824.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175824.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00014539114,
+          "original_similarity_score": 0.8444163799285889
+        },
+        {
+          "id": "input_20250810_180444.pdf_18_22febf09",
+          "score": 0.8443835973739624,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_18_22febf09",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "Exclusions The Company shall not be liable to make payment for any claim under this Cover which arises for or in connection with any of the following: i. Pre-hospitalization Medical Expenses or Post- Hospitalization Medical Expenses of the organ donor. ii. Costs directly or indirectly associated with the acquisition of the donors organ. iii. Medical Expenses where the organ transplant is experimental or investigational. iv. Any medical treatment or complication in respect of the donor, consequent to harvesting. v. Any expenses related to organ transportation or preservation. 3.1.8 Hospital Cash The Company shall pay the insured a daily hospital cash allowance up to the limit as shown in the Table of Benefits for a maximum of five days, provided: i. the hospitalisation exceeds three days. ii. a claim has been admitted under In-patient Treatment Section Hospital Cash shall be payable for each day from the 4th day of Hospitalisation up to the 8th day of Hospitalisation only. Hospitalisation of less than 24 hours shall not be considered for the purpose of payment of Hospital Cash 3.1.9 Ambulance",
+            "content_length": 1108,
+            "section": "content",
+            "chunk_index": 18,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "22febf09dcd153e2ae40314ce09f8d88",
+            "timestamp": 1754829293.9369051,
+            "char_count": 1108,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00014539114,
+          "original_similarity_score": 0.8443835973739624
+        },
+        {
+          "id": "input_20250810_175729.pdf_18_22febf09",
+          "score": 0.8443835973739624,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_18_22febf09",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "Exclusions The Company shall not be liable to make payment for any claim under this Cover which arises for or in connection with any of the following: i. Pre-hospitalization Medical Expenses or Post- Hospitalization Medical Expenses of the organ donor. ii. Costs directly or indirectly associated with the acquisition of the donors organ. iii. Medical Expenses where the organ transplant is experimental or investigational. iv. Any medical treatment or complication in respect of the donor, consequent to harvesting. v. Any expenses related to organ transportation or preservation. 3.1.8 Hospital Cash The Company shall pay the insured a daily hospital cash allowance up to the limit as shown in the Table of Benefits for a maximum of five days, provided: i. the hospitalisation exceeds three days. ii. a claim has been admitted under In-patient Treatment Section Hospital Cash shall be payable for each day from the 4th day of Hospitalisation up to the 8th day of Hospitalisation only. Hospitalisation of less than 24 hours shall not be considered for the purpose of payment of Hospital Cash 3.1.9 Ambulance",
+            "content_length": 1108,
+            "section": "content",
+            "chunk_index": 18,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "22febf09dcd153e2ae40314ce09f8d88",
+            "timestamp": 1754828857.0981889,
+            "char_count": 1108,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00014539114,
+          "original_similarity_score": 0.8443835973739624
+        },
+        {
+          "id": "input_20250810_175024.pdf_18_22febf09",
+          "score": 0.8443835973739624,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_18_22febf09",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "Exclusions The Company shall not be liable to make payment for any claim under this Cover which arises for or in connection with any of the following: i. Pre-hospitalization Medical Expenses or Post- Hospitalization Medical Expenses of the organ donor. ii. Costs directly or indirectly associated with the acquisition of the donors organ. iii. Medical Expenses where the organ transplant is experimental or investigational. iv. Any medical treatment or complication in respect of the donor, consequent to harvesting. v. Any expenses related to organ transportation or preservation. 3.1.8 Hospital Cash The Company shall pay the insured a daily hospital cash allowance up to the limit as shown in the Table of Benefits for a maximum of five days, provided: i. the hospitalisation exceeds three days. ii. a claim has been admitted under In-patient Treatment Section Hospital Cash shall be payable for each day from the 4th day of Hospitalisation up to the 8th day of Hospitalisation only. Hospitalisation of less than 24 hours shall not be considered for the purpose of payment of Hospital Cash 3.1.9 Ambulance",
+            "content_length": 1108,
+            "section": "content",
+            "chunk_index": 18,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "22febf09dcd153e2ae40314ce09f8d88",
+            "timestamp": 1754828432.4751332,
+            "char_count": 1108,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 0.00014539114,
+          "original_similarity_score": 0.8443835973739624
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_181554.pdf_51_00697c51",
+          "score": 0.8196983337402344,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_51_00697c51",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754829973.1062994,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0006190417,
+          "original_similarity_score": 0.8196983337402344
+        },
+        {
+          "id": "input_20250810_180444.pdf_51_00697c51",
+          "score": 0.8196860551834106,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_51_00697c51",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754829293.9378881,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0006190417,
+          "original_similarity_score": 0.8196860551834106
+        },
+        {
+          "id": "input_20250810_175729.pdf_51_00697c51",
+          "score": 0.8196860551834106,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_51_00697c51",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754828857.0981889,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0006190417,
+          "original_similarity_score": 0.8196860551834106
+        },
+        {
+          "id": "input_20250810_175024.pdf_51_00697c51",
+          "score": 0.8196860551834106,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_51_00697c51",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "established fraud by the insured person by giving 15 days written notice. There would be no refund of premium on cancellation on grounds of misrepresentation, non-disclosure of material facts or fraud. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 15 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 ii. The policyholder may cancel his/her policy at any time during the term, by giving 7 days notice in writing. The Insurer shall: a) refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. b) refund premium for the unexpired policy period, in respect of policies with term more than 1 year and risk coverage for such policy years has not commenced and refund proportionate premium for unexpired policy period for the current policy year.",
+            "content_length": 907,
+            "section": "content",
+            "chunk_index": 51,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "00697c510282d5270fe00b8423eee3c3",
+            "timestamp": 1754828432.4751332,
+            "char_count": 907,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0006190417,
+          "original_similarity_score": 0.8196860551834106
+        },
+        {
+          "id": "input_20250810_175024.pdf_68_5fd8cef3",
+          "score": 0.8251317739486694,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_68_5fd8cef3",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "i. Any amount payable under the optional covers will not affect the sum insured applicable to Section 3.1 and entitlement to No Claim Discount (Section 3.1). ii. Any amount payable shall not be subject to co-payment. Notification of Claim In the event of a claim, the insured person/insured persons representative shall intimate the Company in writing, providing all relevant information within fifteen days of diagnosis of the illness. National Insurance Co. Ltd. Premises No. 18-0374, Plot no. CBD-81, New Town, Kolkata - 700156 Page 20 of 25 National Parivar Mediclaim Plus Policy UIN: NICHLIP25039V032425 Claims Procedure Documents as mentioned above, supporting the diagnosis shall be submitted to the Company within sixty days from the date of diagnosis of the critical illness. Documents The claim has to be supported by the following original documents i. Doctors certificate confirming diagnosis of the critical illness along with date of diagnosis. ii. Pathological/other diagnostic test reports confirming the diagnosis of the critical illness. iii. Any other documents required by the Company Cessation of Cover 1 upon payment of the benefit amount on the occurrence of a critical illness the cover shall cease and no further claim shall be paid for any other critical illness during the policy year. 2 On renewal, no claim shall be paid for a critical illness for which a claim has already been made Enhancement of Benefit Amount i. Benefit amount can be enhanced only at the time of renewal.",
+            "content_length": 1505,
+            "section": "content",
+            "chunk_index": 68,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "5fd8cef3e48941baad144424e2eb8376",
+            "timestamp": 1754828432.4761336,
+            "char_count": 1505,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0006142272,
+          "original_similarity_score": 0.8251317739486694
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_180444.pdf_57_6aeccf61",
+          "score": 0.7872216701507568,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_57_6aeccf61",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "ii. Portability benefit will be offered to the extent of Sum Insured of the previous policy. Portability benefit shall not apply to any other additional increased Sum Insured. 5.20 Withdrawal of Product i. In the likelihood of this product being withdrawn in future, the Company will intimate the insured person about the same 90 days prior to expiry of the policy. ii. Insured Person will have the option to migrate to similar health insurance product available with the Company at the time of renewal with all the accrued continuity benefits such as cumulative bonus, waiver of waiting period as per IRDAI guidelines, provided the policy has been maintained without a break.",
+            "content_length": 676,
+            "section": "content",
+            "chunk_index": 57,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "6aeccf61ef5f4dd73244a17f1e483e7d",
+            "timestamp": 1754829293.9378881,
+            "char_count": 676,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0013993983,
+          "original_similarity_score": 0.7872216701507568
+        },
+        {
+          "id": "input_20250810_175729.pdf_57_6aeccf61",
+          "score": 0.7872216701507568,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_57_6aeccf61",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "ii. Portability benefit will be offered to the extent of Sum Insured of the previous policy. Portability benefit shall not apply to any other additional increased Sum Insured. 5.20 Withdrawal of Product i. In the likelihood of this product being withdrawn in future, the Company will intimate the insured person about the same 90 days prior to expiry of the policy. ii. Insured Person will have the option to migrate to similar health insurance product available with the Company at the time of renewal with all the accrued continuity benefits such as cumulative bonus, waiver of waiting period as per IRDAI guidelines, provided the policy has been maintained without a break.",
+            "content_length": 676,
+            "section": "content",
+            "chunk_index": 57,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "6aeccf61ef5f4dd73244a17f1e483e7d",
+            "timestamp": 1754828857.0981889,
+            "char_count": 676,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0013993983,
+          "original_similarity_score": 0.7872216701507568
+        },
+        {
+          "id": "input_20250810_175024.pdf_57_6aeccf61",
+          "score": 0.7872216701507568,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_57_6aeccf61",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "ii. Portability benefit will be offered to the extent of Sum Insured of the previous policy. Portability benefit shall not apply to any other additional increased Sum Insured. 5.20 Withdrawal of Product i. In the likelihood of this product being withdrawn in future, the Company will intimate the insured person about the same 90 days prior to expiry of the policy. ii. Insured Person will have the option to migrate to similar health insurance product available with the Company at the time of renewal with all the accrued continuity benefits such as cumulative bonus, waiver of waiting period as per IRDAI guidelines, provided the policy has been maintained without a break.",
+            "content_length": 676,
+            "section": "content",
+            "chunk_index": 57,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "6aeccf61ef5f4dd73244a17f1e483e7d",
+            "timestamp": 1754828432.4751332,
+            "char_count": 676,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0013993983,
+          "original_similarity_score": 0.7872216701507568
+        },
+        {
+          "id": "input_20250810_174856.pdf_57_6aeccf61",
+          "score": 0.7872216701507568,
+          "metadata": {
+            "chunk_id": "input_20250810_174856.pdf_57_6aeccf61",
+            "document_name": "input_20250810_174856.pdf",
+            "page_number": 0,
+            "content": "ii. Portability benefit will be offered to the extent of Sum Insured of the previous policy. Portability benefit shall not apply to any other additional increased Sum Insured. 5.20 Withdrawal of Product i. In the likelihood of this product being withdrawn in future, the Company will intimate the insured person about the same 90 days prior to expiry of the policy. ii. Insured Person will have the option to migrate to similar health insurance product available with the Company at the time of renewal with all the accrued continuity benefits such as cumulative bonus, waiver of waiting period as per IRDAI guidelines, provided the policy has been maintained without a break.",
+            "content_length": 676,
+            "section": "content",
+            "chunk_index": 57,
+            "source_document": "input_20250810_174856.pdf",
+            "content_hash": "6aeccf61ef5f4dd73244a17f1e483e7d",
+            "timestamp": 1754828345.8184488,
+            "char_count": 676,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_174856.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_174856.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0013993983,
+          "original_similarity_score": 0.7872216701507568
+        },
+        {
+          "id": "input_20250810_181554.pdf_35_56385dfa",
+          "score": 0.7893993854522705,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_35_56385dfa",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "Expenses for hormone replacement therapy, unless part of Medically Necessary Treatment, except for Puberty and Menopause related Disorders 4.18. General Debility, Congenital External Anomaly General debility, Congenital external anomaly. 4.19. Self Inflicted Injury Treatment for intentional self-inflicted injury, attempted suicide. 4.20. Stem Cell Surgery Stem Cell Surgery (except Hematopoietic stem cells for bone marrow transplant for haematological conditions). 4.21. Circumcision Circumcision unless necessary for treatment of a disease (if not excluded otherwise) or necessitated due to an accident. 4.22. Vaccination or Inoculation. Vaccination or inoculation unless forming part of treatment and requires Hospitalisation, except as and to the extent provided for under Section 3.1.13 (Anti Rabies Vaccination), Section 3.1.14.iv and Section 3.1.16 (Vaccination for Children). 4.23. Massages, Steam Bath, Alternative Treatment (Other than AYUSH treatment) Massages, steam bath, expenses for alternative treatments (other than AYUSH treatment), acupuncture, acupressure, magneto- therapy and similar treatment. 4.24. Dental treatment Dental treatment, unless necessitated due to an Injury. 4.25. Out Patient Department (OPD) Any expenses incurred on OPD. 4.26. Stay in Hospital which is not Medically Necessary. Stay in hospital which is not medically necessary. 4.27. Spectacles, Contact Lens, Hearing Aid, Cochlear Implants Spectacles, contact lens, hearing aid, cochlear implants. 4.28. Non Prescription Drug",
+            "content_length": 1519,
+            "section": "content",
+            "chunk_index": 35,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "56385dfa95d263b993fd371042008bd8",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1519,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 0.0013831174,
+          "original_similarity_score": 0.7893993854522705
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_180444.pdf_6_614f976b",
+          "score": 0.8241788148880005,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_6_614f976b",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754829293.9369051,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 4.50446e-05,
+          "original_similarity_score": 0.8241788148880005
+        },
+        {
+          "id": "input_20250810_175729.pdf_6_614f976b",
+          "score": 0.8241788148880005,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_6_614f976b",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754828857.0981889,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 4.50446e-05,
+          "original_similarity_score": 0.8241788148880005
+        },
+        {
+          "id": "input_20250810_175024.pdf_6_614f976b",
+          "score": 0.8241788148880005,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_6_614f976b",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754828432.4751332,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 4.50446e-05,
+          "original_similarity_score": 0.8241788148880005
+        },
+        {
+          "id": "input_20250810_174856.pdf_6_614f976b",
+          "score": 0.8241788148880005,
+          "metadata": {
+            "chunk_id": "input_20250810_174856.pdf_6_614f976b",
+            "document_name": "input_20250810_174856.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_174856.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754828345.8184488,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_174856.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_174856.pdf",
+          "page_number": 0,
+          "rerank_score": 4.50446e-05,
+          "original_similarity_score": 0.8241788148880005
+        },
+        {
+          "id": "input_20250810_181554.pdf_6_614f976b",
+          "score": 0.8241568803787231,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_6_614f976b",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "2.18 Domiciliary Hospitalisation means medical treatment for an illness /injury which in the normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances. i. the condition of the patient is such that he/she is not in a condition to be removed to a hospital, or ii. the patient takes treatment at home on account of non availability of bed/ room in a hospital. 2.19 Family members means spouse, children and parents of the insured, covered by the Policy. 2.20 Floater Sum Insured means the sum insured, as mentioned in the Schedule, available to all the insured persons, for any and all claims made in the aggregate during each policy year. 2.21 Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to Waiting Periods and coverage of Pre-Existing Diseases. The Grace Period for payment of the premium shall be thirty days. Coverage shall not be available during the period for which no premium is received. 2.22 Hospital means any institution established for in-patient care and day care treatment of disease/ injuries and which has been registered as a hospital with the local authorities under the Clinical Establishments (Registration and Regulation) Act, 2010 or under the enactments specified under Schedule of Section 56(1) of the said Act, OR complies with all minimum criteria as under:",
+            "content_length": 1545,
+            "section": "content",
+            "chunk_index": 6,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "614f976bf85f2ddc8802869172d2571e",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1545,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 4.50446e-05,
+          "original_similarity_score": 0.8241568803787231
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_180444.pdf_2_81dfc2d0",
+          "score": 0.8536797761917114,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_2_81dfc2d0",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "caused by Human Immunodeficiency Virus (HIV), which attacks and weakens the bodys immune system making the HIV- positive person susceptible to life threatening conditions or other conditions, as may be specified from time to time. 2.4 Any One Illness means continuous period of illness and it includes relapse within forty five days from the date of last consultation with the hospital where treatment has been taken. 2.5 AYUSH Day Care Centre means and includes Community Health Centre (CHC), Primary Health Centre (PHC), Dispensary, Clinic, Polyclinic or any such health centre which is registered with the local authorities, wherever applicable and having facilities for carrying out treatment procedures and medical or surgical / para-surgical interventions or both under the supervision of registered AYUSH Medical Practitioner(s) on day care basis without in-patient services and must comply with all the following criterion: i. Having qualified registered AYUSH Medical Practitioner in charge round the clock; ii. Having dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out; iii. Maintaining daily records of the patients and making them accessible to the insurance companys authorized 2.6 AYUSH Treatment refers to the medical and / or Hospitalisation treatments given Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. 2.7 AYUSH Hospital is a healthcare facility wherein medical/surgical/para-surgical treatment procedures and interventions are",
+            "content_length": 1550,
+            "section": "content",
+            "chunk_index": 2,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "81dfc2d092f7a9b0f6ad7bd1ec328fc2",
+            "timestamp": 1754829293.9369051,
+            "char_count": 1550,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 2.8409744e-05,
+          "original_similarity_score": 0.8536797761917114
+        },
+        {
+          "id": "input_20250810_175729.pdf_2_81dfc2d0",
+          "score": 0.8536797761917114,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_2_81dfc2d0",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "caused by Human Immunodeficiency Virus (HIV), which attacks and weakens the bodys immune system making the HIV- positive person susceptible to life threatening conditions or other conditions, as may be specified from time to time. 2.4 Any One Illness means continuous period of illness and it includes relapse within forty five days from the date of last consultation with the hospital where treatment has been taken. 2.5 AYUSH Day Care Centre means and includes Community Health Centre (CHC), Primary Health Centre (PHC), Dispensary, Clinic, Polyclinic or any such health centre which is registered with the local authorities, wherever applicable and having facilities for carrying out treatment procedures and medical or surgical / para-surgical interventions or both under the supervision of registered AYUSH Medical Practitioner(s) on day care basis without in-patient services and must comply with all the following criterion: i. Having qualified registered AYUSH Medical Practitioner in charge round the clock; ii. Having dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out; iii. Maintaining daily records of the patients and making them accessible to the insurance companys authorized 2.6 AYUSH Treatment refers to the medical and / or Hospitalisation treatments given Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. 2.7 AYUSH Hospital is a healthcare facility wherein medical/surgical/para-surgical treatment procedures and interventions are",
+            "content_length": 1550,
+            "section": "content",
+            "chunk_index": 2,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "81dfc2d092f7a9b0f6ad7bd1ec328fc2",
+            "timestamp": 1754828857.0981889,
+            "char_count": 1550,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 2.8409744e-05,
+          "original_similarity_score": 0.8536797761917114
+        },
+        {
+          "id": "input_20250810_175024.pdf_2_81dfc2d0",
+          "score": 0.8536797761917114,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_2_81dfc2d0",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "caused by Human Immunodeficiency Virus (HIV), which attacks and weakens the bodys immune system making the HIV- positive person susceptible to life threatening conditions or other conditions, as may be specified from time to time. 2.4 Any One Illness means continuous period of illness and it includes relapse within forty five days from the date of last consultation with the hospital where treatment has been taken. 2.5 AYUSH Day Care Centre means and includes Community Health Centre (CHC), Primary Health Centre (PHC), Dispensary, Clinic, Polyclinic or any such health centre which is registered with the local authorities, wherever applicable and having facilities for carrying out treatment procedures and medical or surgical / para-surgical interventions or both under the supervision of registered AYUSH Medical Practitioner(s) on day care basis without in-patient services and must comply with all the following criterion: i. Having qualified registered AYUSH Medical Practitioner in charge round the clock; ii. Having dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out; iii. Maintaining daily records of the patients and making them accessible to the insurance companys authorized 2.6 AYUSH Treatment refers to the medical and / or Hospitalisation treatments given Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. 2.7 AYUSH Hospital is a healthcare facility wherein medical/surgical/para-surgical treatment procedures and interventions are",
+            "content_length": 1550,
+            "section": "content",
+            "chunk_index": 2,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "81dfc2d092f7a9b0f6ad7bd1ec328fc2",
+            "timestamp": 1754828432.4751332,
+            "char_count": 1550,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 2.8409744e-05,
+          "original_similarity_score": 0.8536797761917114
+        },
+        {
+          "id": "input_20250810_174856.pdf_2_81dfc2d0",
+          "score": 0.8536797761917114,
+          "metadata": {
+            "chunk_id": "input_20250810_174856.pdf_2_81dfc2d0",
+            "document_name": "input_20250810_174856.pdf",
+            "page_number": 0,
+            "content": "caused by Human Immunodeficiency Virus (HIV), which attacks and weakens the bodys immune system making the HIV- positive person susceptible to life threatening conditions or other conditions, as may be specified from time to time. 2.4 Any One Illness means continuous period of illness and it includes relapse within forty five days from the date of last consultation with the hospital where treatment has been taken. 2.5 AYUSH Day Care Centre means and includes Community Health Centre (CHC), Primary Health Centre (PHC), Dispensary, Clinic, Polyclinic or any such health centre which is registered with the local authorities, wherever applicable and having facilities for carrying out treatment procedures and medical or surgical / para-surgical interventions or both under the supervision of registered AYUSH Medical Practitioner(s) on day care basis without in-patient services and must comply with all the following criterion: i. Having qualified registered AYUSH Medical Practitioner in charge round the clock; ii. Having dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out; iii. Maintaining daily records of the patients and making them accessible to the insurance companys authorized 2.6 AYUSH Treatment refers to the medical and / or Hospitalisation treatments given Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. 2.7 AYUSH Hospital is a healthcare facility wherein medical/surgical/para-surgical treatment procedures and interventions are",
+            "content_length": 1550,
+            "section": "content",
+            "chunk_index": 2,
+            "source_document": "input_20250810_174856.pdf",
+            "content_hash": "81dfc2d092f7a9b0f6ad7bd1ec328fc2",
+            "timestamp": 1754828345.8184488,
+            "char_count": 1550,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_174856.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_174856.pdf",
+          "page_number": 0,
+          "rerank_score": 2.8409744e-05,
+          "original_similarity_score": 0.8536797761917114
+        },
+        {
+          "id": "input_20250810_181554.pdf_35_56385dfa",
+          "score": 0.8321784138679504,
+          "metadata": {
+            "chunk_id": "input_20250810_181554.pdf_35_56385dfa",
+            "document_name": "input_20250810_181554.pdf",
+            "page_number": 0,
+            "content": "Expenses for hormone replacement therapy, unless part of Medically Necessary Treatment, except for Puberty and Menopause related Disorders 4.18. General Debility, Congenital External Anomaly General debility, Congenital external anomaly. 4.19. Self Inflicted Injury Treatment for intentional self-inflicted injury, attempted suicide. 4.20. Stem Cell Surgery Stem Cell Surgery (except Hematopoietic stem cells for bone marrow transplant for haematological conditions). 4.21. Circumcision Circumcision unless necessary for treatment of a disease (if not excluded otherwise) or necessitated due to an accident. 4.22. Vaccination or Inoculation. Vaccination or inoculation unless forming part of treatment and requires Hospitalisation, except as and to the extent provided for under Section 3.1.13 (Anti Rabies Vaccination), Section 3.1.14.iv and Section 3.1.16 (Vaccination for Children). 4.23. Massages, Steam Bath, Alternative Treatment (Other than AYUSH treatment) Massages, steam bath, expenses for alternative treatments (other than AYUSH treatment), acupuncture, acupressure, magneto- therapy and similar treatment. 4.24. Dental treatment Dental treatment, unless necessitated due to an Injury. 4.25. Out Patient Department (OPD) Any expenses incurred on OPD. 4.26. Stay in Hospital which is not Medically Necessary. Stay in hospital which is not medically necessary. 4.27. Spectacles, Contact Lens, Hearing Aid, Cochlear Implants Spectacles, contact lens, hearing aid, cochlear implants. 4.28. Non Prescription Drug",
+            "content_length": 1519,
+            "section": "content",
+            "chunk_index": 35,
+            "source_document": "input_20250810_181554.pdf",
+            "content_hash": "56385dfa95d263b993fd371042008bd8",
+            "timestamp": 1754829973.1062994,
+            "char_count": 1519,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_181554.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_181554.pdf",
+          "page_number": 0,
+          "rerank_score": 2.8409744e-05,
+          "original_similarity_score": 0.8321784138679504
+        }
+      ],
+      [
+        {
+          "id": "input_20250810_180444.pdf_26_05da5fc8",
+          "score": 0.8439573049545288,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_26_05da5fc8",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "============================================================\nTABLE:\n============================================================ | Modern Treatment              | Coverage                                           |\n| ----------------------------- | -------------------------------------------------- |\n| UAE & HIFU                    | Limit is for Procedure cost only                   |\n| Balloon Sinuplasty            | Limit is for Balloon cost only                     |\n| Deep Brain Stimulation        | Limit is for implants including batteries only     |\n| Oral Chemotherapy             | Only cost of medicines payable under this limit... |\n| Immunotherapy                 | Limit is for cost of injections only.              |\n| Intravitreal injections       | Limit is for complete treatment, including Pre ... |\n| Robotic Surgery               | Limit is for robotic component only.               |\n| Stereotactic Radio surgeri... | Limit is for radiation procedure.                  |\n| Bronchial Thermoplasty        | Limit is for complete treatment, including Pre ... |\n| Vaporization of the prostr... | Limit is for LASER component only.                 |\n| IONM                          | Limit is for IONM procedure only.                  |\n| Stem cell therapy             | Limit is for complete treatment, including Pre ... | ============================================================",
+            "content_length": 1407,
+            "section": "content",
+            "chunk_index": 26,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "05da5fc85ef54de35b97d0dae934448d",
+            "timestamp": 1754829293.9369051,
+            "char_count": 1407,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 5.0250615e-05,
+          "original_similarity_score": 0.8439573049545288
+        },
+        {
+          "id": "input_20250810_175729.pdf_26_05da5fc8",
+          "score": 0.8439573049545288,
+          "metadata": {
+            "chunk_id": "input_20250810_175729.pdf_26_05da5fc8",
+            "document_name": "input_20250810_175729.pdf",
+            "page_number": 0,
+            "content": "============================================================\nTABLE:\n============================================================ | Modern Treatment              | Coverage                                           |\n| ----------------------------- | -------------------------------------------------- |\n| UAE & HIFU                    | Limit is for Procedure cost only                   |\n| Balloon Sinuplasty            | Limit is for Balloon cost only                     |\n| Deep Brain Stimulation        | Limit is for implants including batteries only     |\n| Oral Chemotherapy             | Only cost of medicines payable under this limit... |\n| Immunotherapy                 | Limit is for cost of injections only.              |\n| Intravitreal injections       | Limit is for complete treatment, including Pre ... |\n| Robotic Surgery               | Limit is for robotic component only.               |\n| Stereotactic Radio surgeri... | Limit is for radiation procedure.                  |\n| Bronchial Thermoplasty        | Limit is for complete treatment, including Pre ... |\n| Vaporization of the prostr... | Limit is for LASER component only.                 |\n| IONM                          | Limit is for IONM procedure only.                  |\n| Stem cell therapy             | Limit is for complete treatment, including Pre ... | ============================================================",
+            "content_length": 1407,
+            "section": "content",
+            "chunk_index": 26,
+            "source_document": "input_20250810_175729.pdf",
+            "content_hash": "05da5fc85ef54de35b97d0dae934448d",
+            "timestamp": 1754828857.0981889,
+            "char_count": 1407,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175729.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175729.pdf",
+          "page_number": 0,
+          "rerank_score": 5.0250615e-05,
+          "original_similarity_score": 0.8439573049545288
+        },
+        {
+          "id": "input_20250810_175024.pdf_26_05da5fc8",
+          "score": 0.8439573049545288,
+          "metadata": {
+            "chunk_id": "input_20250810_175024.pdf_26_05da5fc8",
+            "document_name": "input_20250810_175024.pdf",
+            "page_number": 0,
+            "content": "============================================================\nTABLE:\n============================================================ | Modern Treatment              | Coverage                                           |\n| ----------------------------- | -------------------------------------------------- |\n| UAE & HIFU                    | Limit is for Procedure cost only                   |\n| Balloon Sinuplasty            | Limit is for Balloon cost only                     |\n| Deep Brain Stimulation        | Limit is for implants including batteries only     |\n| Oral Chemotherapy             | Only cost of medicines payable under this limit... |\n| Immunotherapy                 | Limit is for cost of injections only.              |\n| Intravitreal injections       | Limit is for complete treatment, including Pre ... |\n| Robotic Surgery               | Limit is for robotic component only.               |\n| Stereotactic Radio surgeri... | Limit is for radiation procedure.                  |\n| Bronchial Thermoplasty        | Limit is for complete treatment, including Pre ... |\n| Vaporization of the prostr... | Limit is for LASER component only.                 |\n| IONM                          | Limit is for IONM procedure only.                  |\n| Stem cell therapy             | Limit is for complete treatment, including Pre ... | ============================================================",
+            "content_length": 1407,
+            "section": "content",
+            "chunk_index": 26,
+            "source_document": "input_20250810_175024.pdf",
+            "content_hash": "05da5fc85ef54de35b97d0dae934448d",
+            "timestamp": 1754828432.4751332,
+            "char_count": 1407,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_175024.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_175024.pdf",
+          "page_number": 0,
+          "rerank_score": 5.0250615e-05,
+          "original_similarity_score": 0.8439573049545288
+        },
+        {
+          "id": "input_20250810_174856.pdf_26_05da5fc8",
+          "score": 0.8439573049545288,
+          "metadata": {
+            "chunk_id": "input_20250810_174856.pdf_26_05da5fc8",
+            "document_name": "input_20250810_174856.pdf",
+            "page_number": 0,
+            "content": "============================================================\nTABLE:\n============================================================ | Modern Treatment              | Coverage                                           |\n| ----------------------------- | -------------------------------------------------- |\n| UAE & HIFU                    | Limit is for Procedure cost only                   |\n| Balloon Sinuplasty            | Limit is for Balloon cost only                     |\n| Deep Brain Stimulation        | Limit is for implants including batteries only     |\n| Oral Chemotherapy             | Only cost of medicines payable under this limit... |\n| Immunotherapy                 | Limit is for cost of injections only.              |\n| Intravitreal injections       | Limit is for complete treatment, including Pre ... |\n| Robotic Surgery               | Limit is for robotic component only.               |\n| Stereotactic Radio surgeri... | Limit is for radiation procedure.                  |\n| Bronchial Thermoplasty        | Limit is for complete treatment, including Pre ... |\n| Vaporization of the prostr... | Limit is for LASER component only.                 |\n| IONM                          | Limit is for IONM procedure only.                  |\n| Stem cell therapy             | Limit is for complete treatment, including Pre ... | ============================================================",
+            "content_length": 1407,
+            "section": "content",
+            "chunk_index": 26,
+            "source_document": "input_20250810_174856.pdf",
+            "content_hash": "05da5fc85ef54de35b97d0dae934448d",
+            "timestamp": 1754828345.8184488,
+            "char_count": 1407,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_174856.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_174856.pdf",
+          "page_number": 0,
+          "rerank_score": 5.0250615e-05,
+          "original_similarity_score": 0.8439573049545288
+        },
+        {
+          "id": "input_20250810_180444.pdf_70_55892585",
+          "score": 0.8415743112564087,
+          "metadata": {
+            "chunk_id": "input_20250810_180444.pdf_70_55892585",
+            "document_name": "input_20250810_180444.pdf",
+            "page_number": 0,
+            "content": "============================================================\nTABLE:\n============================================================ | Features                                           | Plans                                              | Col_3                                          | Col_4                                          |\n| -------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |\n|                                                    | PLAN A                                             | PLAN B                                         | PLAN C                                         |\n| Sum insured (SI) (as Floater)                      | INR 6/ 7/ 8/ 9 /10 Lac                             | INR 15/ 20 /25 Lac                             | INR 30/ 40/ 50 Lac                             |\n| Treatment                                          |                                                    |                                                |                                                |\n| In built Covers (subject to the SI)                |                                                    |                                                |                                                |\n| In patient Treatment (as Floater)                  | Up to SI                                           | Up to SI                                       | Up to SI                                       |\n| Pre Hospitalisation                                | 30 days                                            | 30 days                                        | 30 days                                        |\n| Post Hospitalisation                               | 60 days                                            | 60 days                                        | 60 days                                        |\n| Pre-existing Di",
+            "content_length": 10222,
+            "section": "content",
+            "chunk_index": 70,
+            "source_document": "input_20250810_180444.pdf",
+            "content_hash": "55892585ee89df1624ab5b8a78447268",
+            "timestamp": 1754829293.9378881,
+            "char_count": 10222,
+            "metadata": {
+              "chunking_method": "optimized_text",
+              "source_document": "input_20250810_180444.pdf",
+              "chunk_size_config": 800,
+              "overlap_config": 150
+            }
+          },
+          "text": "",
+          "document_name": "input_20250810_180444.pdf",
+          "page_number": 0,
+          "rerank_score": 4.947159e-05,
+          "original_similarity_score": 0.8415743112564087
+        }
+      ]
+    ],
+    "total_time_taken": 30.79682421684265,
+    "timing_breakdown": {
+      "pdf_download": 11.264147996902466,
+      "pdf_processing": 6.534549951553345,
+      "embedding_time": 1.289616346359253,
+      "query_processing_time": 11.704888105392456,
+      "cleanup_time": 0.0
+    },
+    "multithreading_performance": {
+      "embedding_workers": 10,
+      "query_workers": 10,
+      "individual_embedding_times": [
+        1.2773866653442383,
+        1.288611888885498,
+        1.261580228805542,
+        1.2826135158538818,
+        1.2802517414093018,
+        1.2822563648223877,
+        1.276914119720459,
+        1.265413761138916,
+        1.263418197631836,
+        1.2567834854125977
+      ],
+      "individual_query_times": [
+        6.015894174575806,
+        6.225374460220337,
+        11.70331358909607,
+        5.90772008895874,
+        8.023244380950928,
+        6.059985637664795,
+        9.318710803985596,
+        6.237830877304077,
+        7.025667667388916,
+        6.88825249671936
+      ],
+      "bottleneck_analysis": {
+        "slowest_query_time": 11.70331358909607,
+        "fastest_query_time": 5.90772008895874,
+        "time_variance": 5.795593500137329,
+        "parallel_efficiency": 0.6271396489732045
+      },
+      "embedding_speedup": 9.875208239239363,
+      "query_speedup": 6.271396489732045
+    },
+    "vector_info": {
+      "total_queries": 10,
+      "query_embedding_dimension": 1024,
+      "embedding_model": "multilingual-e5-large",
+      "total_similarity_results": 50,
+      "context_info": {
+        "total_contexts_provided": 10,
+        "average_context_length": 1656.1,
+        "total_source_vectors": 50
+      }
+    }
+  },
+  "processing_summary": {
+    "success": true,
+    "total_questions": 10,
+    "total_time_seconds": 30.79682421684265,
+    "pdf_processing_time": 6.534549951553345,
+    "embedding_time": 1.289616346359253,
+    "query_processing_time": 11.704888105392456
+  }
+}

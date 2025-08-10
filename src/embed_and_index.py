@@ -1,10 +1,14 @@
 """
 Module: embed_and_index.py
-Functionality: Advanced embedding generation using Pinecone's text embeddings and vector indexing with smart document management.
+Functionality: Advanced embedding generation using Pinecone's text embeddings and FAISS vector indexing with smart document management.
 """
 from typing import List, Dict, Optional, Callable, Any
 import time
 import os
+import json
+import pickle
+import numpy as np
+import faiss
 from pinecone import Pinecone, ServerlessSpec
 try:
     from .document_registry import DocumentRegistry
@@ -107,16 +111,40 @@ def generate_query_embedding_pinecone(query: str, api_key: str) -> List[float]:
 
 def clear_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index') -> int:
     """
-    Clear all vectors from a Pinecone index.
+    Clear all vectors from FAISS index.
     """
-    pc = Pinecone(api_key=pinecone_api_key)
-    if index_name not in pc.list_indexes().names():
+    try:
+        storage_dir = 'faiss_storage'
+        index_path = os.path.join(storage_dir, f"{index_name}.faiss")
+        metadata_path = os.path.join(storage_dir, f"{index_name}_metadata.json")
+        id_map_path = os.path.join(storage_dir, f"{index_name}_id_map.pkl")
+        
+        total_vectors = 0
+        if os.path.exists(index_path):
+            index = faiss.read_index(index_path)
+            total_vectors = index.ntotal
+        
+        # Remove files to clear index
+        for path in [index_path, metadata_path, id_map_path]:
+            if os.path.exists(path):
+                os.remove(path)
+        
+        # Create new empty index
+        index = faiss.IndexFlatIP(1024)
+        faiss.write_index(index, index_path)
+        
+        # Create empty metadata
+        with open(metadata_path, 'w', encoding='utf-8') as f:
+            json.dump({}, f)
+        
+        id_map_data = {'id_to_idx': {}, 'idx_to_id': {}, 'next_idx': 0}
+        with open(id_map_path, 'wb') as f:
+            pickle.dump(id_map_data, f)
+        
+        return total_vectors
+    except Exception as e:
+        print(f"❌ Error clearing FAISS index: {e}")
         return 0
-    index = pc.Index(index_name)
-    stats = index.describe_index_stats()
-    total_vectors = stats.get('total_vector_count', 0)
-    index.delete(delete_all=True)
-    return total_vectors
 
 def delete_duplicate_vectors(pinecone_api_key: str, index_name: str = 'policy-index', dry_run: bool = True):
     """
@@ -245,68 +273,92 @@ def get_index_stats(pinecone_api_key: str, index_name: str = 'policy-index'):
 
 def check_or_create_pinecone_index(pinecone_api_key: str, index_name: str = 'policy-index', required_dimension: int = 1024, progress_callback: Optional[Callable] = None) -> bool:
     """
-    Check if index exists with correct dimensions, delete and recreate if needed.
+    Check if FAISS index exists with correct dimensions, create if needed.
     """
     try:
-        pc = Pinecone(api_key=pinecone_api_key)
-        existing_indexes = pc.list_indexes().names()
-        if index_name in existing_indexes:
-            index = pc.Index(index_name)
-            stats = index.describe_index_stats()
-            current_dimension = stats.get('dimension', 0)
-            if current_dimension != required_dimension:
-                print(f"⚠️ Index '{index_name}' has {current_dimension} dimensions, but we need {required_dimension}")
-                if progress_callback:
-                    progress_callback(f"Deleting old index ({current_dimension}D)...", 10)
-                pc.delete_index(index_name)
-                time.sleep(15)
-                if progress_callback:
-                    progress_callback(f"Creating new index ({required_dimension}D)...", 20)
-                pc.create_index(
-                    name=index_name,
-                    dimension=required_dimension,
-                    metric="cosine",
-                    spec=ServerlessSpec(cloud='aws', region='us-east-1')
-                )
-                time.sleep(20)
-                print(f"✅ Successfully recreated index '{index_name}' with {required_dimension} dimensions")
-                return True
-            else:
-                print(f"✅ Index '{index_name}' already exists with correct {required_dimension} dimensions")
+        storage_dir = 'faiss_storage'
+        os.makedirs(storage_dir, exist_ok=True)
+        index_path = os.path.join(storage_dir, f"{index_name}.faiss")
+        
+        if os.path.exists(index_path):
+            # Load and check dimension
+            try:
+                index = faiss.read_index(index_path)
+                current_dimension = index.d
+                
+                if current_dimension != required_dimension:
+                    print(f"⚠️ FAISS index '{index_name}' has {current_dimension} dimensions, but we need {required_dimension}")
+                    if progress_callback:
+                        progress_callback(f"Recreating index ({required_dimension}D)...", 20)
+                    
+                    # Remove old files
+                    metadata_path = os.path.join(storage_dir, f"{index_name}_metadata.json")
+                    id_map_path = os.path.join(storage_dir, f"{index_name}_id_map.pkl")
+                    
+                    for path in [index_path, metadata_path, id_map_path]:
+                        if os.path.exists(path):
+                            os.remove(path)
+                    
+                    # Create new index
+                    index = faiss.IndexFlatIP(required_dimension)
+                    faiss.write_index(index, index_path)
+                    
+                    print(f"✅ Successfully recreated FAISS index '{index_name}' with {required_dimension} dimensions")
+                    return True
+                else:
+                    print(f"✅ FAISS index '{index_name}' already exists with correct {required_dimension} dimensions")
+                    return True
+                    
+            except Exception as e:
+                print(f"⚠️ Error reading existing index, creating new one: {e}")
+                index = faiss.IndexFlatIP(required_dimension)
+                faiss.write_index(index, index_path)
                 return True
         else:
             if progress_callback:
-                progress_callback(f"Creating new index ({required_dimension}D)...", 15)
-            pc.create_index(
-                name=index_name,
-                dimension=required_dimension,
-                metric="cosine",
-                spec=ServerlessSpec(cloud='aws', region='us-east-1')
-            )
-            time.sleep(15)
-            print(f"✅ Successfully created index '{index_name}' with {required_dimension} dimensions")
+                progress_callback(f"Creating new FAISS index ({required_dimension}D)...", 15)
+            
+            index = faiss.IndexFlatIP(required_dimension)
+            faiss.write_index(index, index_path)
+            print(f"✅ Successfully created FAISS index '{index_name}' with {required_dimension} dimensions")
             return True
+            
     except Exception as e:
-        print(f"❌ Error managing Pinecone index: {e}")
+        print(f"❌ Error managing FAISS index: {e}")
         if progress_callback:
             progress_callback(f"Index creation failed: {e}", -1)
         return False
 
 def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone_env: str, index_name: str = 'policy-index', progress_callback: Optional[Callable] = None):
     """
-    Generate embeddings and upsert to Pinecone with metadata.
+    Generate embeddings and store in enhanced FAISS with metadata.
     """
     if progress_callback:
-        progress_callback("Initializing Pinecone...", 0)
-    if not check_or_create_pinecone_index(pinecone_api_key, index_name, 1024, progress_callback):
-        print("❌ Failed to create or verify Pinecone index")
+        progress_callback("Initializing enhanced FAISS storage...", 0)
+    
+    try:
+        from .faiss_storage import FAISSVectorStore, check_or_create_faiss_index
+        
+        # Check/create FAISS index
+        if not check_or_create_faiss_index(index_name, 1024):
+            print("❌ Failed to create or verify FAISS index")
+            if progress_callback:
+                progress_callback("Failed to create index", -1)
+            return {"success": False, "error": "Failed to create FAISS index"}
+        
+        # Initialize FAISS vector store
+        vector_store = FAISSVectorStore(index_name)
+        
+    except ImportError as e:
+        print(f"❌ FAISS storage import error: {e}")
         if progress_callback:
-            progress_callback("Failed to create index", -1)
-        return False
-    pc = Pinecone(api_key=pinecone_api_key)
-    index = pc.Index(index_name)
+            progress_callback("FAISS import failed", -1)
+        return {"success": False, "error": f"FAISS import failed: {e}"}
+    
     if progress_callback:
         progress_callback("Generating embeddings with Pinecone inference...", 15)
+    
+    # Generate embeddings using Pinecone (same as before)
     texts = [chunk['content'] for chunk in chunks]
     try:
         embeddings = generate_embeddings_pinecone(texts, pinecone_api_key)
@@ -314,37 +366,32 @@ def index_chunks_in_pinecone(chunks: List[Dict], pinecone_api_key: str, pinecone
         print(f"❌ Error generating embeddings: {e}")
         if progress_callback:
             progress_callback(f"Error generating embeddings: {e}", -1)
-        return False
+        return {"success": False, "error": f"Embedding generation failed: {e}"}
+    
     if progress_callback:
-        progress_callback("Preparing vectors for indexing...", 60)
-    vectors = []
-    for chunk, embedding in zip(chunks, embeddings):
-        meta = {
-            'text': chunk['content'][:1000],
-            'document_name': chunk['document_name'],
-            'page_number': chunk.get('page_number', 0),
-            'chunk_id': chunk['chunk_id']
-        }
-        embedding_list = embedding if isinstance(embedding, list) else list(map(float, embedding))
-        vectors.append((chunk['chunk_id'], embedding_list, meta))
+        progress_callback("Preparing vectors for enhanced FAISS storage...", 60)
+    
+    # Convert embeddings to numpy array
+    embedding_matrix = np.array(embeddings, dtype=np.float32)
+    
     if progress_callback:
-        progress_callback("Upserting to Pinecone...", 70)
-    batch_size = 100
-    total_batches = len(vectors) // batch_size + (1 if len(vectors) % batch_size > 0 else 0)
-    for i in range(0, len(vectors), batch_size):
-        batch = vectors[i:i+batch_size]
-        try:
-            index.upsert(vectors=batch)
-            if progress_callback:
-                batch_num = i // batch_size + 1
-                progress = 70 + (batch_num / total_batches) * 25
-                progress_callback(f"Indexed batch {batch_num}/{total_batches}", progress)
-        except Exception as e:
-            print(f"Error upserting batch {i//batch_size + 1}: {str(e)}")
-            raise
+        progress_callback("Storing vectors in enhanced FAISS...", 70)
+    
+    # Add vectors to FAISS store
+    success = vector_store.add_vectors(embedding_matrix, chunks)
+    
+    if not success:
+        if progress_callback:
+            progress_callback("Failed to store vectors", -1)
+        return {"success": False, "error": "Failed to store vectors in FAISS"}
+    
+    # Save the vector store
+    vector_store.save()
+    
     if progress_callback:
-        progress_callback("Indexing complete!", 100)
-    print(f"Successfully indexed {len(chunks)} chunks into Pinecone index '{index_name}'.")
+        progress_callback("Enhanced FAISS indexing complete!", 100)
+    
+    print(f"Successfully indexed {len(chunks)} chunks into enhanced FAISS index '{index_name}'.")
     return {"success": True, "indexed_count": len(chunks)}
 
 def smart_index_documents(docs_folder: str, pinecone_api_key: str, index_name: str = 'policy-index', progress_callback: Optional[Callable] = None, save_parsed_text: bool = False) -> Dict[str, Any]:

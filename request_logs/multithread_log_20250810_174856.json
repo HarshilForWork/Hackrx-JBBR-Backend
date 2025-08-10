@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-08-10T17:49:14.781759",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_174856.pdf"
+  },
+  "response": {
+    "answers": [
+      "The provided policy documents do not contain information regarding the grace period for premium payment under the National Parivar Mediclaim Plus Policy. The context provided consists only of source citations without any textual content.",
+      "The provided policy documents do not contain any text content regarding the waiting period for pre-existing diseases (PED) to be covered. Therefore, the information is not available in the given context.",
+      "Based on the provided policy documents (Sources 1-5), there is no information available regarding whether this policy covers maternity expenses or any associated conditions. The provided context does not contain details about maternity coverage.",
+      "The provided policy documents do not contain information regarding a specific waiting period for cataract surgery. Therefore, based on the given context, the waiting period for cataract surgery cannot be determined.",
+      "Based on the provided context, the policy documents do not contain information regarding the coverage of medical expenses for an organ donor. Therefore, it is not possible to determine if these expenses are covered under this policy from the given sources.",
+      "The provided policy documents do not contain any information regarding the No Claim Discount (NCD) offered. Therefore, the specific NCD details cannot be determined from the given context.",
+      "Based on the provided policy documents, there is no information available regarding a benefit for preventive health check-ups. The context provided from all sources is empty, preventing any determination of coverage for such services.",
+      "The policy defines a 'Hospital' as \"an institution established for in-patient care and day care of sick, injured or infirmed persons\" (Source 1, Page 0). To qualify, it must possess specific facilities including a minimum of 10 or 15 in-patient beds (depending on town population), a fully equipped operation theatre, and round-the-clock employment of fully qualified nursing staff and doctors (Source 1, Page 0). Furthermore, it must maintain daily records of each patient, accessible to the Company's authorized personnel (Source 1, Page 0).",
+      "I apologize, but the provided context from the policy documents (Source 1-5: input_20250810_174856.pdf, Page 0) does not contain any information regarding the extent of coverage for AYUSH treatments. Therefore, I cannot provide a specific answer based on the given documents.",
+      "Yes, for Plan A, there are sub-limits on room rent and ICU charges. Room Rent, Boarding & Nursing Expenses are \"Covered up to 1% of Sum Insured per day,\" and ICU Charges are \"Covered up to 2% of Sum Insured per day\" (Source 1: input_20250810_174856.pdf, Page 0). While the policy states \"No sub-limits on specific diseases or procedures\" (Source 3: input_20250810_174856.pdf, Page 0), this does not apply to the daily limits on room rent and ICU charges."
+    ],
+    "similarity_vectors": [
+      [
+        0.8824295401573181,
+        0.876313328742981,
+        0.8754510879516602,
+        0.8696599006652832,
+        0.8695584535598755
+      ],
+      [
+        0.8638529777526855,
+        0.840893566608429,
+        0.8358030319213867,
+        0.8350436687469482,
+        0.8300544023513794
+      ],
+      [
+        0.8168327808380127,
+        0.8167861104011536,
+        0.815671443939209,
+        0.8147534132003784,
+        0.8237552046775818
+      ],
+      [
+        0.8353191614151001,
+        0.8186277747154236,
+        0.8156862854957581,
+        0.8142282366752625,
+        0.8142118453979492
+      ],
+      [
+        0.8443835973739624,
+        0.8427172303199768,
+        0.837125837802887,
+        0.8261109590530396,
+        0.8236575126647949
+      ],
+      [
+        0.8072164058685303,
+        0.806464433670044,
+        0.805966854095459,
+        0.8052582740783691,
+        0.8156622052192688
+      ],
+      [
+        0.7793687582015991,
+        0.77843177318573,
+        0.7773919105529785,
+        0.7765151858329773,
+        0.7892590165138245
+      ],
+      [
+        0.8241788148880005,
+        0.8120719790458679,
+        0.8101596236228943,
+        0.8085939884185791,
+        0.8003901243209839
+      ],
+      [
+        0.8101409077644348,
+        0.8074836730957031,
+        0.8028597831726074,
+        0.8009952306747437,
+        0.7995462417602539
+      ],
+      [
+        0.8288429975509644,
+        0.8252193927764893,
+        0.8228451609611511,
+        0.8210373520851135,
+        0.8208997249603271
+      ]
+    ],
+    "total_time_taken": 18.173054695129395,
+    "timing_breakdown": {
+      "pdf_download": 0.4124903678894043,
+      "pdf_processing": 7.41886305809021,
+      "embedding_time": 1.382838487625122,
+      "query_processing_time": 8.95609426498413,
+      "cleanup_time": 0.0
+    },
+    "multithreading_performance": {
+      "embedding_workers": 10,
+      "query_workers": 10,
+      "individual_embedding_times": [
+        1.338484525680542,
+        1.345008373260498,
+        1.356074333190918,
+        1.3808555603027344,
+        1.352010726928711,
+        1.3470394611358643,
+        1.3540747165679932,
+        1.3659074306488037,
+        1.3517296314239502,
+        1.3537898063659668
+      ],
+      "individual_query_times": [
+        6.442178010940552,
+        6.648548126220703,
+        6.607328414916992,
+        6.248305082321167,
+        6.969963312149048,
+        6.371740341186523,
+        6.45707368850708,
+        8.948593616485596,
+        6.089664459228516,
+        8.792849063873291
+      ],
+      "bottleneck_analysis": {
+        "slowest_query_time": 8.948593616485596,
+        "fastest_query_time": 6.089664459228516,
+        "time_variance": 2.85892915725708,
+        "parallel_efficiency": 0.7768592207414953
+      },
+      "embedding_speedup": 9.795051762529429,
+      "query_speedup": 7.768592207414953
+    },
+    "vector_info": {
+      "total_queries": 10,
+      "query_embedding_dimension": 1024,
+      "embedding_model": "multilingual-e5-large",
+      "total_similarity_results": 50
+    }
+  },
+  "processing_summary": {
+    "success": true,
+    "total_questions": 10,
+    "total_time_seconds": 18.173054695129395,
+    "pdf_processing_time": 7.41886305809021,
+    "embedding_time": 1.382838487625122,
+    "query_processing_time": 8.95609426498413
+  }
+}

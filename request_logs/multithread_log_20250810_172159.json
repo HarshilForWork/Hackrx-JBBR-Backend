@@ -1,0 +1,273 @@
+{
+  "timestamp": "2025-08-10T17:22:09.688122",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_172159.pdf",
+    "pdf_stored_path": "stored_pdfs\\input_20250810_172159.pdf"
+  },
+  "comprehensive_response": {
+    "answers": [
+      {
+        "success": false,
+        "error": "Query processing error: No module named 'src.faiss_storage'",
+        "query": "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: No module named 'src.faiss_storage'",
+        "query": "What is the waiting period for pre-existing diseases (PED) to be covered?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: No module named 'src.faiss_storage'",
+        "query": "Does this policy cover maternity expenses, and what are the conditions?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: cannot import name 'FAISSQueryProcessor' from 'src.faiss_query_processor' (C:\\PF\\Projects\\Hackrx-backend\\src\\faiss_query_processor.py)",
+        "query": "What is the waiting period for cataract surgery?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: cannot import name 'FAISSQueryProcessor' from 'src.faiss_query_processor' (C:\\PF\\Projects\\Hackrx-backend\\src\\faiss_query_processor.py)",
+        "query": "Are the medical expenses for an organ donor covered under this policy?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: cannot import name 'FAISSQueryProcessor' from 'src.faiss_query_processor' (C:\\PF\\Projects\\Hackrx-backend\\src\\faiss_query_processor.py)",
+        "query": "What is the No Claim Discount (NCD) offered in this policy?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: cannot import name 'FAISSQueryProcessor' from 'src.faiss_query_processor' (C:\\PF\\Projects\\Hackrx-backend\\src\\faiss_query_processor.py)",
+        "query": "Is there a benefit for preventive health check-ups?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: No module named 'src.faiss_storage'",
+        "query": "How does the policy define a 'Hospital'?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: No module named 'src.faiss_storage'",
+        "query": "What is the extent of coverage for AYUSH treatments?",
+        "status": "error"
+      },
+      {
+        "success": false,
+        "error": "Query processing error: cannot import name 'FAISSQueryProcessor' from 'src.faiss_query_processor' (C:\\PF\\Projects\\Hackrx-backend\\src\\faiss_query_processor.py)",
+        "query": "Are there any sub-limits on room rent and ICU charges for Plan A?",
+        "status": "error"
+      }
+    ],
+    "timings": {
+      "download_pdf": 1.22226881980896,
+      "query_embedding": {
+        "total": 1.1792502403259277,
+        "individual": [
+          1.1098885536193848,
+          1.1519882678985596,
+          1.1762571334838867,
+          1.1363906860351562,
+          1.145902395248413,
+          1.1100327968597412,
+          1.1272859573364258,
+          1.1262950897216797,
+          1.138383388519287,
+          1.1383700370788574
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 20308",
+          "Query 2: Thread 27276",
+          "Query 3: Thread 3868",
+          "Query 4: Thread 12668",
+          "Query 5: Thread 20948",
+          "Query 6: Thread 22844",
+          "Query 7: Thread 16520",
+          "Query 8: Thread 32224",
+          "Query 9: Thread 11436",
+          "Query 10: Thread 17092"
+        ]
+      },
+      "pdf_processing_and_indexing": 5.53754997253418,
+      "query_processor_initialization": 2.0984578132629395,
+      "query_processing": {
+        "total": 0.02430558204650879,
+        "parallel_execution_time": 0.00791788101196289,
+        "average": 0.002430558204650879,
+        "individual": [
+          0.002107858657836914,
+          0.002107858657836914,
+          0.004558563232421875,
+          0.00421452522277832,
+          0.0010809898376464844,
+          0.0,
+          0.0,
+          0.0028252601623535156,
+          0.00458526611328125,
+          0.0028252601623535156
+        ],
+        "thread_assignments": [
+          "Query 1: Thread 31592",
+          "Query 2: Thread 11240",
+          "Query 3: Thread 29192",
+          "Query 4: Thread 6352",
+          "Query 5: Thread 22412",
+          "Query 6: Thread 33208",
+          "Query 7: Thread 32476",
+          "Query 8: Thread 31888",
+          "Query 9: Thread 29348",
+          "Query 10: Thread 30948"
+        ]
+      },
+      "cleanup_index": 0.0010457038879394531,
+      "total_execution_time": 10.048127174377441
+    },
+    "cleanup_status": "Vectors deleted from Pinecone index",
+    "temp_directory": "C:\\Users\\harsh\\AppData\\Local\\Temp\\tmpzzeouhwg",
+    "api_version": "2.2",
+    "model_info": {
+      "embedding_model": "multilingual-e5-large",
+      "temperature": 0.7,
+      "multithreading": true,
+      "max_embedding_workers": 10,
+      "max_query_workers": 10
+    }
+  },
+  "processing_summary": {
+    "total_questions": 10,
+    "total_time_seconds": 10.048127174377441,
+    "pdf_processing_time": 5.53754997253418,
+    "embedding_time": 1.1792502403259277,
+    "query_processing_time": 0.02430558204650879,
+    "parallel_execution_time": 0.00791788101196289,
+    "max_individual_query_time": 0.00458526611328125
+  },
+  "multithreading_metrics": {
+    "queries_processed": 10,
+    "embedding_workers": 10,
+    "query_workers": 10,
+    "embedding_speedup_ratio": 9.633913072310616,
+    "query_speedup_ratio": 3.069707919301415,
+    "individual_embedding_times": [
+      1.1098885536193848,
+      1.1519882678985596,
+      1.1762571334838867,
+      1.1363906860351562,
+      1.145902395248413,
+      1.1100327968597412,
+      1.1272859573364258,
+      1.1262950897216797,
+      1.138383388519287,
+      1.1383700370788574
+    ],
+    "individual_query_times": [
+      0.002107858657836914,
+      0.002107858657836914,
+      0.004558563232421875,
+      0.00421452522277832,
+      0.0010809898376464844,
+      0.0,
+      0.0,
+      0.0028252601623535156,
+      0.00458526611328125,
+      0.0028252601623535156
+    ],
+    "embedding_thread_assignments": [
+      "Query 1: Thread 20308",
+      "Query 2: Thread 27276",
+      "Query 3: Thread 3868",
+      "Query 4: Thread 12668",
+      "Query 5: Thread 20948",
+      "Query 6: Thread 22844",
+      "Query 7: Thread 16520",
+      "Query 8: Thread 32224",
+      "Query 9: Thread 11436",
+      "Query 10: Thread 17092"
+    ],
+    "query_thread_assignments": [
+      "Query 1: Thread 31592",
+      "Query 2: Thread 11240",
+      "Query 3: Thread 29192",
+      "Query 4: Thread 6352",
+      "Query 5: Thread 22412",
+      "Query 6: Thread 33208",
+      "Query 7: Thread 32476",
+      "Query 8: Thread 31888",
+      "Query 9: Thread 29348",
+      "Query 10: Thread 30948"
+    ],
+    "query_timing_details": [
+      {
+        "query_index": 0,
+        "query": "What is the grace period for premium payment under...",
+        "time_seconds": 0.002107858657836914
+      },
+      {
+        "query_index": 1,
+        "query": "What is the waiting period for pre-existing diseas...",
+        "time_seconds": 0.002107858657836914
+      },
+      {
+        "query_index": 2,
+        "query": "Does this policy cover maternity expenses, and wha...",
+        "time_seconds": 0.004558563232421875
+      },
+      {
+        "query_index": 3,
+        "query": "What is the waiting period for cataract surgery?",
+        "time_seconds": 0.00421452522277832
+      },
+      {
+        "query_index": 4,
+        "query": "Are the medical expenses for an organ donor covere...",
+        "time_seconds": 0.0010809898376464844
+      },
+      {
+        "query_index": 5,
+        "query": "What is the No Claim Discount (NCD) offered in thi...",
+        "time_seconds": 0.0
+      },
+      {
+        "query_index": 6,
+        "query": "Is there a benefit for preventive health check-ups...",
+        "time_seconds": 0.0
+      },
+      {
+        "query_index": 7,
+        "query": "How does the policy define a 'Hospital'?",
+        "time_seconds": 0.0028252601623535156
+      },
+      {
+        "query_index": 8,
+        "query": "What is the extent of coverage for AYUSH treatment...",
+        "time_seconds": 0.00458526611328125
+      },
+      {
+        "query_index": 9,
+        "query": "Are there any sub-limits on room rent and ICU char...",
+        "time_seconds": 0.0028252601623535156
+      }
+    ]
+  }
+}

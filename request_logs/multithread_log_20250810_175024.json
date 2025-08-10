@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-08-10T17:50:43.675333",
+  "request": {
+    "pdf_url": "https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D",
+    "questions": [
+      "What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?",
+      "What is the waiting period for pre-existing diseases (PED) to be covered?",
+      "Does this policy cover maternity expenses, and what are the conditions?",
+      "What is the waiting period for cataract surgery?",
+      "Are the medical expenses for an organ donor covered under this policy?",
+      "What is the No Claim Discount (NCD) offered in this policy?",
+      "Is there a benefit for preventive health check-ups?",
+      "How does the policy define a 'Hospital'?",
+      "What is the extent of coverage for AYUSH treatments?",
+      "Are there any sub-limits on room rent and ICU charges for Plan A?"
+    ],
+    "pdf_filename": "input_20250810_175024.pdf"
+  },
+  "response": {
+    "answers": [
+      "The provided policy documents do not contain information regarding the grace period for premium payment under the National Parivar Mediclaim Plus Policy. Therefore, it is not possible to determine the grace period from the given context.",
+      "The waiting period for Pre-Existing Diseases (PED) is 24 months or 2 years from the policy inception date. Specifically, \"A 24-month waiting period applies for Pre-Existing Diseases (PED) from the policy inception date\" (Source 1: input_20250810_175024.pdf, Page 0) and \"There is a 2-year waiting period for all pre-existing diseases from the first policy inception date\" (Source 2: input_20250810_174856.pdf, Page 0). During this period, \"any illness, injury, or condition that existed before the policy was purchased will not be covered\" (Source 1: input_20250810_175024.pdf, Page 0), meaning \"No claims related to PED will be entertained during this period\" (Source 2: input_20250810_174856.pdf, Page 0).",
+      "Based on the provided policy documents, there is no information available regarding coverage for maternity expenses or any associated conditions. The context provided does not contain any text from the policy documents to answer this query.",
+      "The waiting period for cataract surgery is 24 months from the policy's inception date. This is explicitly stated under the 'Waiting Period for Specific Diseases/Procedures' or 'Specific Disease Waiting Period' clauses. For instance, \"A waiting period of 24 months applies for specific diseases and procedures, including cataract surgery...\" (input_20250810_175024.pdf, Page 0) and \"A 24-month waiting period applies for certain specified diseases and procedures, such as cataract surgery...\" (input_20250810_174856.pdf, Page 0).",
+      "No, the medical expenses for an organ donor are not covered under this policy. The policy explicitly states an exclusion for \"expenses incurred for organ transplants, except for the recipient of the organ\" [Source 1, Page 0; Source 2, Page 0]. This means that only the medical costs for the person receiving the organ are covered, not the donor.",
+      "The provided policy documents do not contain any information regarding the No Claim Discount (NCD) offered. The context from the policy documents is empty, preventing an answer to this query.",
+      "Yes, this policy provides a benefit for preventive health check-ups. After every four consecutive claim-free policy years, the insured is eligible for a reimbursement of up to 1% of the Sum Insured, subject to a maximum of ₹5,000, for expenses incurred on preventive health check-ups, as detailed under \"Preventive Health Check-up Benefit\" [Source 1: input_20250810_175024.pdf, Page 0].",
+      "The provided policy documents do not contain any text defining what constitutes a 'Hospital'. Therefore, based on the given context, the policy's definition of 'Hospital' cannot be determined.",
+      "The provided context from the policy documents (input_20250810_175024.pdf and input_20250810_174856.pdf) does not contain the specific details regarding the extent of coverage for AYUSH treatments. Therefore, I cannot determine the coverage limits, conditions, or specific inclusions/exclusions for AYUSH treatments based on the information provided.",
+      "No, Plan A does not impose any specific sub-limits on room rent and ICU charges. The policy clearly states, \"This plan does not impose any specific sub-limits on these categories\" [Source 1: input_20250810_175024.pdf, Page 0] and \"For Plan A, there are no sub-limits on room rent or ICU charges\" [Source 2: input_20250810_174856.pdf, Page 0]. These expenses are covered up to the actual costs incurred, subject to the overall Sum Insured."
+    ],
+    "similarity_vectors": [
+      [
+        0.8824295401573181,
+        0.8824295401573181,
+        0.876313328742981,
+        0.876313328742981,
+        0.8754510879516602
+      ],
+      [
+        0.8638529777526855,
+        0.8638529777526855,
+        0.840893566608429,
+        0.840893566608429,
+        0.8358030319213867
+      ],
+      [
+        0.8272889852523804,
+        0.8272889852523804,
+        0.8264632225036621,
+        0.8264632225036621,
+        0.8293212056159973
+      ],
+      [
+        0.8353191614151001,
+        0.8353191614151001,
+        0.8186277747154236,
+        0.8186277747154236,
+        0.8156862854957581
+      ],
+      [
+        0.8443835973739624,
+        0.8443835973739624,
+        0.8427172303199768,
+        0.8427172303199768,
+        0.837125837802887
+      ],
+      [
+        0.8132010698318481,
+        0.8132010698318481,
+        0.8128068447113037,
+        0.8128068447113037,
+        0.8196860551834106
+      ],
+      [
+        0.7817568778991699,
+        0.7817568778991699,
+        0.7808545827865601,
+        0.7808545827865601,
+        0.7892590165138245
+      ],
+      [
+        0.8241788148880005,
+        0.8241788148880005,
+        0.8120719790458679,
+        0.8120719790458679,
+        0.8101596236228943
+      ],
+      [
+        0.8186568021774292,
+        0.8186568021774292,
+        0.8167492747306824,
+        0.8167492747306824,
+        0.8151763677597046
+      ],
+      [
+        0.8332703113555908,
+        0.8332703113555908,
+        0.8323262929916382,
+        0.8323262929916382,
+        0.8295103907585144
+      ]
+    ],
+    "total_time_taken": 19.27150821685791,
+    "timing_breakdown": {
+      "pdf_download": 0.4357798099517822,
+      "pdf_processing": 6.424665927886963,
+      "embedding_time": 1.2188897132873535,
+      "query_processing_time": 11.189837217330933,
+      "cleanup_time": 0.0
+    },
+    "multithreading_performance": {
+      "embedding_workers": 10,
+      "query_workers": 10,
+      "individual_embedding_times": [
+        1.217883825302124,
+        1.2124073505401611,
+        1.1971766948699951,
+        1.1540732383728027,
+        1.1967368125915527,
+        1.1964917182922363,
+        1.1879539489746094,
+        1.158193588256836,
+        1.1960432529449463,
+        1.203423261642456
+      ],
+      "individual_query_times": [
+        5.8859453201293945,
+        10.469482898712158,
+        6.759226322174072,
+        9.360229969024658,
+        8.677812576293945,
+        6.240118741989136,
+        9.150188446044922,
+        4.984441518783569,
+        11.18571162223816,
+        7.968328237533569
+      ],
+      "bottleneck_analysis": {
+        "slowest_query_time": 11.18571162223816,
+        "fastest_query_time": 4.984441518783569,
+        "time_variance": 6.20127010345459,
+        "parallel_efficiency": 0.7210246591251862
+      },
+      "embedding_speedup": 9.779706532790705,
+      "query_speedup": 7.210246591251862
+    },
+    "vector_info": {
+      "total_queries": 10,
+      "query_embedding_dimension": 1024,
+      "embedding_model": "multilingual-e5-large",
+      "total_similarity_results": 50
+    }
+  },
+  "processing_summary": {
+    "success": true,
+    "total_questions": 10,
+    "total_time_seconds": 19.27150821685791,
+    "pdf_processing_time": 6.424665927886963,
+    "embedding_time": 1.2188897132873535,
+    "query_processing_time": 11.189837217330933
+  }
+}

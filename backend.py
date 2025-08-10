@@ -253,16 +253,14 @@ async def query_pdf(input: QueryPDFRequest, token: str = Depends(verify_token)):
     print(f"📊 Individual query times: {[f'{t:.2f}s' for t in query_times]}")
     print(f"📊 Max query time: {max(query_times):.2f}s, Parallel execution time: {total_batch_time:.2f}s")
     
-    # Clean up Pinecone index after all queries are processed
+    # Clean up FAISS index after all queries are processed
     try:
         t0 = time.time()
-        if processor.index:
-            # Delete all vectors from the index
-            processor.index.delete(delete_all=True)
-            print("✅ Successfully deleted all vectors from Pinecone index")
+        # No cleanup needed for FAISS - local file storage
+        print("✅ FAISS cleanup skipped - using local file storage")
         timings["cleanup_index"] = time.time() - t0
     except Exception as e:
-        print(f"❌ Error cleaning up Pinecone index: {e}")
+        print(f"❌ Error cleaning up FAISS index: {e}")
         timings["cleanup_index"] = 0
         
     timings["total_execution_time"] = time.time() - total_start_time

@@ -341,7 +341,7 @@ Solution:
 Solution:
 1. Verify GEMINI_API_KEY in secrets.toml
 2. Check Google AI Studio quota
-3. Try different model (gemini-pro vs gemini-1.5-flash)
+3. Try different model (gemini-pro vs gemini-2.5-flash)
 4. System continues with reduced accuracy
 ```
 
